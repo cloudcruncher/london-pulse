@@ -47,7 +47,7 @@ const inited = {};
 let current = null;
 
 function route() {
-  const [name, arg] = (location.hash.replace('#', '') || 'overview').split('/');
+  const [name, ...rest] = (location.hash.replace('#', '') || 'overview').split('/'), arg = rest.join('/') || undefined;
   const view = VIEWS.includes(name) ? name : 'overview';
   VIEWS.forEach(v => { $('v-' + v).hidden = v !== view; });
   document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === view));
@@ -55,6 +55,7 @@ function route() {
   document.body.dataset.view = view;
   if (!inited[view]) { inited[view] = true; init[view]?.(); }
   if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(decodeURIComponent(arg)); });
+  if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
   window.scrollTo({ top: 0 });
 }
@@ -85,6 +86,22 @@ init.overview = async () => {
     card('Coffee country', `${esc(hiC.name)} has the most venues with "coffee" or similar in the name: ${hiC.coffee_named}.`, '#craft'),
     card('Most low ratings', `${esc(hiL.name)} has ${hiL.low_rated} venues rated 0–2, the most of any borough.`, `#map/${encodeURIComponent(hiL.name)}`),
   ].join('');
+
+  // data stories (computed in the pipeline; each links to the query behind it)
+  const st = sum.stories;
+  if (st) {
+    const [t1, t2] = [st.by_type[0], st.by_type[st.by_type.length - 1]];
+    const nm = x => esc(TYPE_SHORT[x.type] || x.type).toLowerCase(), cap = t => t[0].toUpperCase() + t.slice(1);
+    const story = (big, h, p, key) => `<a class="insight" href="#sql/${key}" style="text-decoration:none;color:inherit"><span class="big">${big}</span><h3>${h}</h3><p>${p}</p></a>`;
+    $('stories').innerHTML = [
+      story(`${st.stale.london_pct}%`, 'Of ratings are over two years old', `${esc(st.stale.worst[0].name)} is the stalest at ${st.stale.worst[0].pct_stale}%, followed by ${esc(st.stale.worst[1].name)} and ${esc(st.stale.worst[2].name)}. ${esc(st.stale.best.name)} is the freshest at ${st.stale.best.pct_stale}%. A rating is only as current as its last visit.`, 'stale'),
+      story(`${t1.five_star_pct}% vs ${t2.five_star_pct}%`, 'The hygiene gap between venue types', `${cap(nm(t1))} score 5 ${t1.five_star_pct}% of the time; ${nm(t2)} only ${t2.five_star_pct}%, and are ${(t2.low_pct / t1.low_pct).toFixed(1)}x as likely to be rated 0–2.`, 'by-type'),
+      story(`${st.takeaway.highest.takeaway_pct}%`, 'Takeaway share, high to low', `${esc(st.takeaway.highest.name)} is ${st.takeaway.highest.takeaway_pct}% takeaways; ${esc(st.takeaway.lowest.name)} just ${st.takeaway.lowest.takeaway_pct}%. A quick read on what a high street is for.`, 'takeaway'),
+      story(esc(st.awaiting_hotspots[0].district), 'Where new openings cluster', `${esc(st.awaiting_hotspots[0].district)} has ${st.awaiting_hotspots[0].awaiting} venues awaiting a first inspection, then ${st.awaiting_hotspots.slice(1, 4).map(d => esc(d.district)).join(', ')}.`, 'awaiting'),
+      story(`${st.weak_districts[0].low_pct}%`, 'Weakest postcode district', `${esc(st.weak_districts[0].district)} has ${st.weak_districts[0].low_pct}% of rated venues at 0–2, against ${Math.min(...st.by_type.map(t => t.low_pct))}–${Math.max(...st.by_type.map(t => t.low_pct))}% across venue types. Districts with 150+ rated venues only.`, 'weak-districts'),
+      story(`${st.top_names_share}%`, 'No brand dominates', `The five most common names (${st.top_names.map(n => esc(n.name.toLowerCase().replace(/\b\w/g, c => c.toUpperCase()))).slice(0, 3).join(', ')} …) together make up just ${st.top_names_share}% of venues, so London's food scene is a long tail of independents. (Counts exact names, so it understates chains with varied names.)`, 'names'),
+    ].join('');
+  }
 
   // changes
   const e = ev.events;
@@ -208,7 +225,8 @@ init.changes = async () => {
   draw();
 };
 
-init.sql = () => import('./sql.js').then(m => m.initSql()).catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; });
+let sqlMod;
+init.sql = () => { sqlMod = import('./sql.js').then(m => { m.initSql(); return m; }); sqlMod.catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; }); };
 
 // ---------- map ----------
 const M = { ready: false, v: null, pts: [], idx: [], groups: [], scale: 1, ox: 0, oy: 0, mode: 'rating', types: new Set(), borough: '', q: '', grid: new Map(), hover: -1, dirty: true };

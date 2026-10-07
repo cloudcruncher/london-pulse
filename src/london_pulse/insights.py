@@ -45,8 +45,11 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     rating_dist = rows("""SELECT rating, count(*) n FROM fd GROUP BY 1 ORDER BY
         CASE WHEN rating ~ '^[0-5]$' THEN rating::INT ELSE 9 END""")
     by_type = rows("SELECT business_type AS type, count(*) n FROM s GROUP BY 1 ORDER BY n DESC LIMIT 10")
-    newest_unrated = rows("""SELECT name, business_type AS type, authority, postcode FROM fd
-        WHERE rating = 'AwaitingInspection' ORDER BY fhrsid DESC LIMIT 25""")
+    # FHRS ids are issued per authority, so "newest" is only meaningful within a borough: newest awaiting venue in each.
+    newest_unrated = rows("""SELECT name, business_type AS type, authority, postcode FROM (
+        SELECT *, row_number() OVER (PARTITION BY authority ORDER BY fhrsid DESC) rn FROM fd
+        WHERE rating = 'AwaitingInspection') WHERE rn = 1 ORDER BY authority""")
+    stories = build_stories(con, rows)
 
     events: dict = {"days": 0, "by_day": [], "recent": {"new": [], "removed": [], "rating_changed": []}}
     csvs = sorted(events_dir.glob("*.csv"))[-RECENT_DAYS:]
@@ -78,7 +81,7 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
         (api_dir / name).write_text(json.dumps({**meta, **payload}, default=str, ensure_ascii=False, separators=(",", ":")))
 
     write("summary.json", {"totals": totals, "rating_distribution": rating_dist, "business_types": by_type,
-                           "newest_unrated": newest_unrated})
+                           "newest_unrated": newest_unrated, "stories": stories})
     write("boroughs.json", {"boroughs": boroughs})
     write("events.json", {"events": events})
     write("history.json", {"history": history})
@@ -139,3 +142,35 @@ def export_parquet(con, events_dir: Path, history_csv: Path, api_dir: Path) -> N
             TO '{api_dir / "events.parquet"}' (FORMAT parquet)""")
     if history_csv.exists():
         con.execute(f"""COPY (SELECT * FROM read_csv('{history_csv}', header=true)) TO '{api_dir / "history.parquet"}' (FORMAT parquet)""")
+
+
+def build_stories(con, rows) -> dict:
+    """Headline findings for the home page. Every number is computed here so the page can state it plainly."""
+    rated = "rating ~ '^[0-5]$'"
+    stale = rows(f"""SELECT authority AS name, count(*) rated,
+        round(100.0 * count(*) FILTER (rating_date < current_date - INTERVAL 2 YEAR) / count(*), 1) pct_stale
+        FROM fd WHERE {rated} AND rating_date IS NOT NULL GROUP BY 1 HAVING count(*) >= 300 ORDER BY pct_stale DESC""")
+    london_stale = rows(f"""SELECT round(100.0 * count(*) FILTER (rating_date < current_date - INTERVAL 2 YEAR) / count(*), 1) p
+        FROM fd WHERE {rated} AND rating_date IS NOT NULL""")[0]["p"]
+    by_type = rows(f"""SELECT business_type AS type, count(*) rated,
+        round(100.0 * count(*) FILTER (rating = '5') / count(*), 1) five_star_pct,
+        round(100.0 * count(*) FILTER (rating IN ('0','1','2')) / count(*), 1) low_pct
+        FROM fd WHERE {rated} GROUP BY 1 ORDER BY five_star_pct DESC""")
+    names = rows("""SELECT upper(trim(name)) AS name, count(*) n FROM fd GROUP BY 1 ORDER BY n DESC LIMIT 5""")
+    total_fd = rows("SELECT count(*) n FROM fd")[0]["n"]
+    takeaway = rows("""SELECT authority AS name, count(*) venues,
+        round(100.0 * count(*) FILTER (business_type = 'Takeaway/sandwich shop') / count(*), 1) takeaway_pct
+        FROM fd GROUP BY 1 HAVING count(*) >= 300 ORDER BY takeaway_pct DESC""")
+    hot = rows("""SELECT split_part(postcode, ' ', 1) AS district, count(*) awaiting FROM fd
+        WHERE rating = 'AwaitingInspection' AND postcode <> '' GROUP BY 1 ORDER BY awaiting DESC LIMIT 5""")
+    weak = rows(f"""SELECT split_part(postcode, ' ', 1) AS district, count(*) rated,
+        round(100.0 * count(*) FILTER (rating IN ('0','1','2')) / count(*), 1) low_pct
+        FROM fd WHERE {rated} AND postcode <> '' GROUP BY 1 HAVING count(*) >= 150 ORDER BY low_pct DESC LIMIT 5""")
+    return {
+        "stale": {"london_pct": london_stale, "worst": stale[:3], "best": stale[-1]},
+        "by_type": by_type,
+        "top_names": names, "top_names_share": round(100.0 * sum(n["n"] for n in names) / total_fd, 1),
+        "takeaway": {"highest": takeaway[0], "lowest": takeaway[-1]},
+        "awaiting_hotspots": hot,
+        "weak_districts": weak,
+    }

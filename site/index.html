@@ -40,11 +40,14 @@
     <div class="kpis" id="kpis"></div>
     <h2>What stands out</h2>
     <div class="insights" id="insights"></div>
+    <h2>What the data says</h2>
+    <p class="note">Findings computed fresh from today's register. Tap one to run the query behind it.</p>
+    <div class="insights" id="stories"></div>
     <h2>What changed</h2>
     <div class="card" id="changes"></div>
     <div class="cols">
       <div><h2>Hygiene ratings</h2><div class="card"><div class="dist" id="dist"></div></div></div>
-      <div><h2>Latest registered, awaiting inspection</h2><div class="card"><ul class="list" id="newest"></ul></div></div>
+      <div><h2>Newest awaiting inspection, by borough</h2><div class="card"><ul class="list" id="newest"></ul></div></div>
     </div>
   </section>
 
@@ -85,11 +88,22 @@
 
   <section class="view" id="v-sql" hidden>
     <h2 class="first">SQL lab</h2>
-    <p class="note">Ask your own questions. This runs DuckDB in your browser against the same open data as the rest of the site. Tables: <code>venues</code>, <code>events</code>, <code>history</code>. Nothing leaves your device.</p>
-    <div class="chips" id="sqlpresets"></div>
+    <p class="note">Ask your own questions. DuckDB runs in your browser against the same open data as the rest of the site, and nothing leaves your device. No SQL? Use the question builder or tap a ready-made question.</p>
+    <details class="card builder" id="builder" open><summary>Question builder (no SQL needed)</summary>
+      <div class="row filters">
+        <label>Show <select id="b-measure"></select></label>
+        <label>by <select id="b-group"></select></label>
+        <label>for <select id="b-type"><option value="">all venue types</option></select></label>
+        <label>in <select id="b-borough"><option value="">all of London</option></select></label>
+        <label>top <select id="b-limit"><option>10</option><option selected>25</option><option>100</option></select></label>
+        <button class="btn primary" id="b-go">Build and run</button>
+      </div>
+    </details>
+    <div id="sqlpresets"></div>
     <textarea id="sqlbox" spellcheck="false" rows="7" aria-label="SQL query"></textarea>
-    <div class="row"><button class="btn primary" id="sqlrun">Run (⌘/Ctrl+Enter)</button><button class="btn" id="sqlcsv" hidden>Download CSV</button><span class="count" id="sqlstat">Loads on first run (~10 MB)</span></div>
+    <div class="row"><button class="btn primary" id="sqlrun">Run (⌘/Ctrl+Enter)</button><button class="btn" id="sqlcsv" hidden>Download CSV</button><button class="btn" id="sqlshare">Copy link</button><span class="count" id="sqlstat">Loads on first run (~10 MB)</span></div>
     <div class="tablewrap"><table id="sqlout"></table></div>
+    <details class="card schema"><summary>Tables and columns</summary><div id="schema"></div></details>
   </section>
 
   <section class="view" id="v-boroughs" hidden>

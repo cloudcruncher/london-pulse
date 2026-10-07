@@ -127,3 +127,6 @@ code{font-size:.92em}
 #gltoggle{align-self:flex-start}
 .lp-hover .mapboxgl-popup-content{padding:4px 8px;font-size:12px;color:#111}.mapboxgl-popup-content{color:#111;font:13px/1.4 system-ui,sans-serif}.mapboxgl-popup-content a{color:#b4532a}
 #gltoggle,#glheat{align-self:flex-start;width:auto}
+.pgroup{margin:8px 0}.pgroup small{display:block;opacity:.65;text-transform:uppercase;letter-spacing:.06em;font-size:11px;margin-bottom:4px}
+.builder summary,.schema summary{cursor:pointer;font-weight:600}.builder label{display:flex;flex-direction:column;gap:2px;font-size:12px;opacity:.9}
+.cols-list{padding-left:18px;font-size:13px}.insight .big{font-size:26px;font-weight:700;display:block;margin-bottom:2px}
