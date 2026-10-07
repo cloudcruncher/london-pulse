@@ -25,7 +25,12 @@ export async function showGl(el, token, v, onFail) {
       properties: { name, pc, rating: v.ratings[r], type: v.types[t], borough: v.boroughs[b] } })) };
     const add = () => {
       map.addSource('v', { type: 'geojson', data });
-      map.addLayer({ id: 'heat', type: 'heatmap', source: 'v', maxzoom: 12, paint: { 'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 10, .7, 12, 0], 'heatmap-intensity': .6 } });
+      map.addLayer({ id: 'heat', type: 'heatmap', source: 'v', maxzoom: 12, paint: {
+        'heatmap-weight': 1,
+        'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 8, .04, 12, .25],
+        'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 8, 3, 12, 14],
+        'heatmap-color': ['interpolate', ['linear'], ['heatmap-density'], 0, 'rgba(0,0,0,0)', .2, 'rgba(59,130,196,.45)', .5, 'rgba(232,134,58,.7)', .8, 'rgba(240,200,80,.85)', 1, 'rgba(255,245,200,.95)'],
+        'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 10, .85, 12, 0] } });
       map.addLayer({ id: 'dots', type: 'circle', source: 'v', minzoom: 10, paint: {
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, 1.5, 15, 6],
         'circle-color': ['match', ['get', 'rating'], ...Object.entries(RATING_COLOR).flat(), '#8a8a8a'],

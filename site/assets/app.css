@@ -124,3 +124,4 @@ body[data-view=map]{overflow-x:hidden}
 code{font-size:.92em}
 .mapbox .row+.chips{margin-top:6px}
 .evtoggle{white-space:nowrap}
+#gltoggle{align-self:flex-start}
