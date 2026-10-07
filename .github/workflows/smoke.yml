@@ -1,0 +1,28 @@
+name: Smoke test (live site)
+
+on:
+  workflow_run:
+    workflows: ["Daily update"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    # only after a successful deploy (or when run by hand)
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+      - name: Install browser
+        run: |
+          uv sync --locked
+          uv run --locked playwright install --with-deps chromium
+      - name: Smoke test the deployed site
+        env:
+          SMOKE_URL: https://cloudcruncher.github.io/london-pulse/
+        run: PYTHONPATH=src uv run --locked pytest tests/smoke -q

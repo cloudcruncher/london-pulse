@@ -58,7 +58,8 @@
       <canvas id="map" aria-label="Map of London food venues"></canvas>
       <div id="gl" hidden></div>
       <div class="maptools">
-        <input id="q" type="search" placeholder="Search a venue or postcode" autocomplete="off" aria-label="Search venues">
+        <div class="mt-top"><input id="q" type="search" placeholder="Search a venue or postcode" autocomplete="off" aria-label="Search venues"><button class="chip" id="mt-toggle" aria-expanded="true" aria-controls="mt-body">Filters ▾</button></div>
+        <div class="mt-body" id="mt-body">
         <div class="row">
           <select id="f-borough" aria-label="Borough"><option value="">All of London</option></select>
           <select id="f-mode" aria-label="Colour by">
@@ -70,8 +71,9 @@
         <select id="gl-layer" aria-label="Map layer" hidden></select>
         <p class="note" id="gl-note" hidden></p>
         <div class="chips" id="f-types"></div>
-        <label class="evtoggle"><input type="checkbox" id="f-ev"> Ring latest changes</label>
-        <button class="chip on" id="glheat" hidden>Heatmap</button>
+        <div class="chips"><label class="chip evtoggle" title="Circle venues that opened, closed or were re-rated in the latest daily comparison"><input type="checkbox" id="f-ev"> Ring latest changes</label>
+        <button class="chip on" id="glheat" hidden>Heatmap</button></div>
+        </div>
         <div class="count" id="mapcount"></div>
       </div>
       <div class="legend" id="legend"></div>

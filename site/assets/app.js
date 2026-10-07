@@ -413,6 +413,10 @@ init.map = async () => {
   bindGestures(canvas);
   getApi('events').then(e => { M.evRaw = e.events.latest || []; M.ev = M.evRaw.map(r => { const [x, y] = world(r.lon, r.lat); return { x, y, k: r.event }; }); glSync(); });
   $('f-ev').onchange = e => { M.showEv = e.target.checked; mapRedraw(); glSync(); };
+  // filters panel: collapsible so it never hides the map; starts closed on phones
+  const mtSet = open => { $('mt-body').hidden = !open; $('mt-toggle').setAttribute('aria-expanded', open); $('mt-toggle').textContent = open ? 'Filters ▾' : 'Filters ▸'; };
+  $('mt-toggle').onclick = () => mtSet($('mt-body').hidden);
+  mtSet(!matchMedia('(max-width:760px)').matches);
   const tok = window.LP_CONFIG?.mapboxToken;
   if (tok) startGl(tok);   // Mapbox is the map when a token is configured; the canvas map is only the fallback
   M.ready = true;

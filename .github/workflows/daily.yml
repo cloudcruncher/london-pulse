@@ -45,6 +45,9 @@ jobs:
           [ -f work/prev.parquet ] && args="--prev work/prev.parquet"
           PYTHONPATH=src uv run --locked python -m london_pulse.run $args
 
+      - name: Data contract checks (fail before anything is committed or deployed)
+        run: PYTHONPATH=src uv run --locked pytest tests/test_contract.py -q
+
       - name: Store today's snapshot
         run: |
           today=$(date -u +%F)
