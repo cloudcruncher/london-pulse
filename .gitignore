@@ -1,0 +1,5 @@
+data/fsa/
+work/
+scratch/
+__pycache__/
+.venv/

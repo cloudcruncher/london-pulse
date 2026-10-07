@@ -1,0 +1,79 @@
+name: Daily update
+
+on:
+  schedule:
+    - cron: "30 6 * * *"   # 06:30 UTC every day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: london-pulse
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Download previous snapshot
+        run: |
+          mkdir -p work
+          today=$(date -u +%F)
+          # newest snapshot asset from an earlier day (so same-day reruns still diff against yesterday)
+          prev=$(gh release view snapshots --json assets -q '.assets[].name' 2>/dev/null \
+                 | grep -E '^fsa-[0-9-]{10}\.parquet$' | sort | awk -v t="fsa-$today.parquet" '$0 < t' | tail -1 || true)
+          if [ -n "$prev" ]; then
+            gh release download snapshots -p "$prev" -D work --clobber
+            mv "work/$prev" work/prev.parquet
+            echo "previous snapshot: $prev"
+          else
+            echo "no previous snapshot (baseline run)"
+          fi
+
+      - name: Run pipeline
+        run: |
+          args=""
+          [ -f work/prev.parquet ] && args="--prev work/prev.parquet"
+          PYTHONPATH=src uv run python -m london_pulse.run $args
+
+      - name: Store today's snapshot
+        run: |
+          today=$(date -u +%F)
+          gh release view snapshots >/dev/null 2>&1 || \
+            gh release create snapshots --title "Daily snapshots" --notes "Daily FSA snapshots used to compute day-over-day changes. Last 14 days kept."
+          cp work/latest.parquet "work/fsa-$today.parquet"
+          gh release upload snapshots "work/fsa-$today.parquet" --clobber
+          # keep the newest 14
+          gh release view snapshots --json assets -q '.assets[].name' | grep -E '^fsa-' | sort | head -n -14 | \
+            while read -r old; do gh release delete-asset snapshots "$old" -y; done
+
+      - name: Commit data
+        run: |
+          git config user.name "london-pulse-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data site/data
+          git diff --cached --quiet || git commit -m "data: $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

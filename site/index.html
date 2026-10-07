@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>London Pulse</title>
+<meta name="description" content="Daily open-data signals of what is opening, closing and changing across London's 33 boroughs.">
+<style>
+  :root {
+    --bg: #faf8f5; --surface: #ffffff; --ink: #1d1b19; --muted: #6b655e; --line: #e8e2d9;
+    --accent: #b4532a; --accent-soft: #f3e3d8; --good: #2f7d4f; --warn: #b7791f; --bad: #b3372f; --bar: #d9cfc2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151311; --surface: #1e1b18; --ink: #f1ece5; --muted: #a39b91; --line: #302b26;
+      --accent: #e08a5f; --accent-soft: #33261e; --good: #6fc08b; --warn: #e0b253; --bad: #e58077; --bar: #3a342e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151311; --surface: #1e1b18; --ink: #f1ece5; --muted: #a39b91; --line: #302b26;
+    --accent: #e08a5f; --accent-soft: #33261e; --good: #6fc08b; --warn: #e0b253; --bad: #e58077; --bar: #3a342e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 64px; }
+  header { padding: 40px 0 8px; }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0; letter-spacing: -0.02em; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); max-width: 62ch; margin: 8px 0 0; }
+  .asof { display: inline-block; margin-top: 12px; font-size: .85rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 24px; }
+  .kpi, .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .kpi b { display: block; font-size: 1.9rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .kpi small { color: var(--muted); }
+  .insights { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .insight { background: var(--accent-soft); border-radius: 12px; padding: 16px; }
+  .insight h3 { margin: 0 0 4px; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+  .insight p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); cursor: pointer; user-select: none; position: sticky; top: 0; background: var(--surface); }
+  th.sorted::after { content: " \25BE"; color: var(--accent); }
+  .tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+  .bar { display: inline-block; height: 8px; border-radius: 4px; background: var(--accent); vertical-align: middle; margin-left: 8px; }
+  .dist { display: flex; flex-direction: column; gap: 8px; }
+  .dist div { display: grid; grid-template-columns: 150px 1fr 70px; gap: 12px; align-items: center; font-size: .92rem; }
+  .dist .track { background: var(--bar); height: 12px; border-radius: 6px; overflow: hidden; }
+  .dist .fill { height: 100%; background: var(--accent); }
+  .dist .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  ul.list { list-style: none; padding: 0; margin: 0; }
+  ul.list li { padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; }
+  ul.list li:last-child { border: 0; }
+  ul.list span { color: var(--muted); font-size: .88rem; text-align: right; }
+  .note { color: var(--muted); font-size: .9rem; }
+  .pill { font-size: .75rem; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+  footer { margin-top: 56px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 16px; }
+  a { color: var(--accent); }
+  @media (max-width: 560px) { .dist div { grid-template-columns: 110px 1fr 56px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>London <span>Pulse</span></h1>
+    <p class="sub">What is opening, closing and changing across London's 33 boroughs, tracked daily from open data. Built in public.</p>
+    <span class="asof" id="asof">Loading…</span>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>What stands out</h2>
+  <div class="insights" id="insights"></div>
+
+  <h2>What changed</h2>
+  <div class="card" id="changes"></div>
+
+  <h2>Boroughs</h2>
+  <p class="note">Eating and drinking premises only (restaurants, cafés, takeaways, pubs). Click a column to sort.</p>
+  <div class="tablewrap"><table id="boroughs"></table></div>
+
+  <h2>Hygiene ratings across London</h2>
+  <div class="card"><div class="dist" id="dist"></div></div>
+
+  <div class="cols">
+    <div>
+      <h2>Latest registered, awaiting first inspection</h2>
+      <div class="card"><ul class="list" id="newest"></ul></div>
+    </div>
+    <div>
+      <h2>Premises by type</h2>
+      <div class="card"><ul class="list" id="types"></ul></div>
+    </div>
+  </div>
+
+  <footer>
+    <p><b>How to read this.</b> The signals come from Food Standards Agency hygiene-rating registers, snapshotted daily. A premises appearing is a food-business registration, and one disappearing may be a closure, a change of owner or an administrative removal. "Awaiting inspection" means a registered business with no rating yet, which includes recent openings but is not a count of them. "Coffee-named" matches business names only. Treat everything here as a signal, not a verdict.</p>
+    <p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Source: <a href="https://ratings.food.gov.uk/open-data">Food Standards Agency</a>. Not affiliated with the FSA or any council.</p>
+  </footer>
+</div>
+
+<script>
+const fmt = n => Number(n).toLocaleString('en-GB');
+const el = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const RATING_LABEL = { '5':'5 – very good', '4':'4 – good', '3':'3 – generally satisfactory', '2':'2 – improvement necessary', '1':'1 – major improvement', '0':'0 – urgent improvement', 'AwaitingInspection':'Awaiting inspection', 'Exempt':'Exempt', 'AwaitingPublication':'Awaiting publication' };
+
+fetch('data/insights.json').then(r => r.json()).then(d => {
+  const date = new Date(d.as_of).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+  el('asof').textContent = `Updated ${date}`;
+  const t = d.totals;
+  const rated = d.rating_distribution.filter(r => /^[0-5]$/.test(r.rating)).reduce((a, r) => a + r.n, 0);
+  const five = d.rating_distribution.find(r => r.rating === '5')?.n ?? 0;
+  const avgAwait = d.boroughs.reduce((a, b) => a + b.awaiting, 0) / d.boroughs.reduce((a, b) => a + b.premises, 0) * 100;
+  el('kpis').innerHTML = [
+    [fmt(t.premises), 'food businesses registered'],
+    [fmt(t.eating_drinking), 'restaurants, cafés, takeaways and pubs'],
+    [(five / rated * 100).toFixed(0) + '%', 'of rated eating and drinking premises score 5'],
+    [fmt(t.awaiting), 'registered, awaiting first inspection'],
+    [fmt(t.low_rated), 'rated 0–2 (improvement needed)'],
+  ].map(([b, s]) => `<div class="kpi"><b>${b}</b><small>${s}</small></div>`).join('');
+
+  // Auto-generated insights
+  const B = d.boroughs.filter(b => b.premises >= 300);
+  const by = (k, dir = -1) => [...B].sort((a, b) => dir * (a[k] - b[k]))[0];
+  const hiAwait = by('awaiting_pct'), loFive = by('five_star_pct', 1), hiFive = by('five_star_pct'),
+        hiCoffee = [...B].sort((a, b) => b.coffee_named - a.coffee_named)[0], hiLow = by('low_rated');
+  const cards = [
+    ['Newest-looking borough', `${hiAwait.name} has the highest share of premises still awaiting a first inspection: ${hiAwait.awaiting_pct}% of its eating and drinking venues, against ${avgAwait.toFixed(1)}% across London.`],
+    ['Highest hygiene standard', `${hiFive.name} leads on top ratings, with ${hiFive.five_star_pct}% of rated venues scoring 5. ${loFive.name} is lowest at ${loFive.five_star_pct}%.`],
+    ['Coffee country', `${hiCoffee.name} has the most venues with "coffee" or similar in the name: ${hiCoffee.coffee_named}.`],
+    ['Most low ratings', `${hiLow.name} has ${hiLow.low_rated} venues rated 0–2, the most of any borough.`],
+  ];
+  el('insights').innerHTML = cards.map(([h, p]) => `<div class="insight"><h3>${h}</h3><p>${p}</p></div>`).join('');
+
+  // Changes
+  const ev = d.events;
+  if (!ev.days) {
+    el('changes').innerHTML = `<p style="margin:0"><b>Tracking started ${date}.</b> This page compares each day's register with the day before. Once there are two snapshots, new premises, removals and rating changes will appear here, by borough. Check back tomorrow.</p>`;
+  } else {
+    const sum = k => ev.by_day.filter(r => r.event === k).reduce((a, r) => a + Number(r.n), 0);
+    let html = `<p style="margin-top:0">Last ${ev.days} day${ev.days > 1 ? 's' : ''}: <b>${fmt(sum('new'))}</b> new, <b>${fmt(sum('removed'))}</b> removed, <b>${fmt(sum('rating_changed'))}</b> re-rated (all premises).</p><div class="cols">`;
+    for (const [kind, label] of [['new', 'New eating and drinking premises'], ['removed', 'Removed from register'], ['rating_changed', 'Re-rated']]) {
+      const items = ev.recent[kind];
+      html += `<div><h3 style="margin:0 0 8px;font-size:1rem">${label}</h3><ul class="list">` + (items.length
+        ? items.slice(0, 8).map(i => `<li>${esc(i.name)}<span>${esc(i.authority)}${kind === 'rating_changed' ? ` · ${esc(i.old_rating)} → ${esc(i.new_rating)}` : ''}</span></li>`).join('')
+        : '<li><span>None yet</span></li>') + '</ul></div>';
+    }
+    el('changes').innerHTML = html + '</div>';
+  }
+
+  // Borough table
+  const cols = [['name', 'Borough'], ['premises', 'Venues'], ['five_star_pct', '% rated 5'], ['low_rated', 'Rated 0–2'], ['awaiting', 'Awaiting'], ['awaiting_pct', '% awaiting'], ['coffee_named', 'Coffee-named']];
+  let sortKey = 'premises', dir = -1;
+  const max = k => Math.max(...d.boroughs.map(b => b[k]));
+  const render = () => {
+    const rows = [...d.boroughs].sort((a, b) => sortKey === 'name' ? dir * a.name.localeCompare(b.name) * -1 : dir * (a[sortKey] - b[sortKey]));
+    el('boroughs').innerHTML = '<thead><tr>' + cols.map(([k, l]) => `<th data-k="${k}" class="${k === sortKey ? 'sorted' : ''}">${l}</th>`).join('') + '</tr></thead><tbody>' +
+      rows.map(b => '<tr>' + cols.map(([k]) => k === 'name' ? `<td>${esc(b.name)}</td>` :
+        (k === 'premises' || k === 'coffee_named') ? `<td>${fmt(b[k])}<span class="bar" style="width:${Math.round(b[k] / max(k) * 60)}px"></span></td>` :
+        `<td>${k.endsWith('pct') ? b[k] + '%' : fmt(b[k])}</td>`).join('') + '</tr>').join('') + '</tbody>';
+    el('boroughs').querySelectorAll('th').forEach(th => th.onclick = () => {
+      const k = th.dataset.k; dir = (k === sortKey) ? -dir : -1; sortKey = k; render();
+    });
+  };
+  render();
+
+  // Rating distribution
+  const total = d.rating_distribution.reduce((a, r) => a + r.n, 0);
+  el('dist').innerHTML = d.rating_distribution.map(r =>
+    `<div><span>${RATING_LABEL[r.rating] ?? r.rating}</span><span class="track"><span class="fill" style="display:block;width:${(r.n / total * 100).toFixed(1)}%"></span></span><span class="n">${fmt(r.n)}</span></div>`).join('');
+
+  el('newest').innerHTML = d.newest_unrated.slice(0, 10).map(n => `<li>${esc(n.name)}<span>${esc(n.authority)} · ${esc(n.postcode)}</span></li>`).join('');
+  el('types').innerHTML = d.business_types.map(x => `<li>${esc(x.type)}<span>${fmt(x.n)}</span></li>`).join('');
+}).catch(() => { el('asof').textContent = 'Data unavailable'; });
+</script>
+</body>
+</html>
