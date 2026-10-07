@@ -256,7 +256,7 @@ async function areaOpen([q, rad]) {
   if (!hits.length) { const b = AV.boroughs.findIndex(n => n.toLowerCase() === q.toLowerCase()); if (b >= 0) hits = V.filter(v => v[4] === b); }
   if (!hits.length) { $('areaout').innerHTML = `<p class="note">Couldn't place "${esc(q)}". Try a postcode such as E8 3QW, or a district such as E8, N16 or SW11.</p>`; return; }
   const med = a => { const s = [...a].sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
-  areaRun({ lon: med(hits.map(h => h[0])), lat: med(hits.map(h => h[1])), label, approx }, +(rad || 1000));
+  await areaRun({ lon: med(hits.map(h => h[0])), lat: med(hits.map(h => h[1])), label, approx }, +(rad || 1000)).catch(e => { $('areaout').innerHTML = `<p class="note">Something went wrong building this area (${esc(e.message)}). Please try again.</p>`; });
 }
 async function areaRun(c, radiusM) {
   AV ??= await fetch('api/v1/venues.json').then(r => r.json());
@@ -281,6 +281,7 @@ async function areaRun(c, radiusM) {
   const takeaways = near.filter(n => n.type === 'Takeaway/sandwich shop').length;
   const awaiting = near.filter(n => n.rating === 'AwaitingInspection').length;
   const indie = near.filter(n => !n.brand && n.rating === '5' && n.type === 'Restaurant/Cafe/Canteen');
+  const kpi = (b, s, extra = '') => `<div class="kpi"><b>${b}</b><small>${s}</small>${extra}</div>`;
   // transport: nearest stations, walking at ~80 m/min
   const stations = stn ? stn.stations.map(x => ({ ...x, d: km(c.lon, c.lat, x.lon, x.lat) })).sort((a, b) => a.d - b.d).slice(0, 5) : [];
   const walk = d => Math.max(1, Math.round(d * 1000 / 80)) + ' min walk';
@@ -304,7 +305,6 @@ async function areaRun(c, radiusM) {
   const dist = d => d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
   const li = (n, extra = '') => `<li>${esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
   const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
-  const kpi = (b, s, extra = '') => `<div class="kpi"><b>${b}</b><small>${s}</small>${extra}</div>`;
   const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
   $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}
     <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains')}${kpi(awaiting, 'newly registered, awaiting inspection')}${stations.length ? kpi(Math.max(1, Math.round(stations[0].d * 1000 / 80)) + ' min', 'walk to ' + esc(stations[0].name)) : ''}${crimeKpi}</div>
