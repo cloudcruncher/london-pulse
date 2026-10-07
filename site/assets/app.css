@@ -150,3 +150,4 @@ code{font-size:.92em}
 #gl-layer{background:var(--surface,transparent);color:inherit;border:1px solid var(--line,#8884);border-radius:10px;padding:8px 10px;font:inherit;width:100%}
 
 #legend[hidden],#f-mode[hidden],#gl-layer[hidden],#gl-note[hidden],#glheat[hidden]{display:none!important}
+.win{color:var(--accent);font-weight:700}

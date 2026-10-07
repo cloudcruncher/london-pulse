@@ -11,8 +11,12 @@ import json
 import re
 from pathlib import Path
 
+from .brands import CURATED
+
 H3_RES = 8
 MIN_VENUES = 5  # hide hexagons too sparse to say anything about
+SPECIALTY_RE = "|".join(rx for _, _, kind, rx in CURATED if kind in ("Specialty coffee", "Bakery"))
+CHAIN_RE = "|".join(rx for _, _, kind, rx in CURATED if kind in ("Chain", "Coffee chain"))
 COFFEE_RE = "coffee|espresso|roastery|barista|caffe|caffè"
 
 
@@ -25,7 +29,7 @@ def build_geo(con, api_dir: Path, meta: dict) -> None:
     con.execute("INSTALL spatial; LOAD spatial; INSTALL h3 FROM community; LOAD h3;")
     rows = con.execute(f"""
         WITH v AS (
-            SELECT *, h3_latlng_to_cell(lat, lon, {H3_RES}) AS cell FROM fd
+            SELECT *, lp_norm(name) AS nn, h3_latlng_to_cell(lat, lon, {H3_RES}) AS cell FROM fd
             WHERE lat BETWEEN 51.2 AND 51.8 AND lon BETWEEN -0.6 AND 0.4)
         SELECT h3_h3_to_string(cell) AS id, h3_cell_to_boundary_wkt(cell) AS wkt, count(*) AS n,
             count(*) FILTER (rating ~ '^[0-5]$') AS rated,
@@ -35,6 +39,8 @@ def build_geo(con, api_dir: Path, meta: dict) -> None:
             count(*) FILTER (regexp_matches(lower(name), '{COFFEE_RE}')) AS coffee,
             count(*) FILTER (business_type = 'Takeaway/sandwich shop') AS takeaway,
             count(*) FILTER (business_type = 'Pub/bar/nightclub') AS pubs,
+            count(*) FILTER (regexp_matches(nn, '{SPECIALTY_RE.replace(chr(39), chr(39)*2)}')) AS specialty,
+            count(*) FILTER (regexp_matches(nn, '{CHAIN_RE.replace(chr(39), chr(39)*2)}')) AS chains,
             mode(authority) AS borough
         FROM v GROUP BY cell HAVING count(*) >= {MIN_VENUES}""").fetchall()
     feats = []
@@ -49,6 +55,8 @@ def build_geo(con, api_dir: Path, meta: dict) -> None:
         coffee,
         takeaway,
         pubs,
+        specialty,
+        chains,
         borough,
     ) in rows:
         feats.append(
@@ -65,6 +73,8 @@ def build_geo(con, api_dir: Path, meta: dict) -> None:
                     "coffee": coffee,
                     "takeaway_pct": round(100 * takeaway / n, 1),
                     "pubs": pubs,
+                    "specialty": specialty,
+                    "chain_pct": round(100 * chains / n, 1),
                     "borough": borough,
                 },
             }
