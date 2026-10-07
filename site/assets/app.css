@@ -125,3 +125,5 @@ code{font-size:.92em}
 .mapbox .row+.chips{margin-top:6px}
 .evtoggle{white-space:nowrap}
 #gltoggle{align-self:flex-start}
+.lp-hover .mapboxgl-popup-content{padding:4px 8px;font-size:12px;color:#111}.mapboxgl-popup-content{color:#111;font:13px/1.4 system-ui,sans-serif}.mapboxgl-popup-content a{color:#b4532a}
+#gltoggle,#glheat{align-self:flex-start;width:auto}

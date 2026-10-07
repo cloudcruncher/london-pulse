@@ -228,22 +228,29 @@ init.map = async () => {
   let tmr; $('q').oninput = e => { clearTimeout(tmr); tmr = setTimeout(() => { M.q = e.target.value.trim().toLowerCase(); refilter(); if (M.q.length >= 3) fitFiltered(); }, 250); };
   $('zin').onclick = () => zoomBy(1.5); $('zout').onclick = () => zoomBy(1 / 1.5); $('zreset').onclick = fitAll;
   bindGestures(canvas);
-  getApi('events').then(e => { M.ev = (e.events.latest || []).map(r => { const [x, y] = world(r.lon, r.lat); return { x, y, k: r.event }; }); });
-  $('f-ev').onchange = e => { M.showEv = e.target.checked; mapRedraw(); };
+  getApi('events').then(e => { M.evRaw = e.events.latest || []; M.ev = M.evRaw.map(r => { const [x, y] = world(r.lon, r.lat); return { x, y, k: r.event }; }); glSync(); });
+  $('f-ev').onchange = e => { M.showEv = e.target.checked; mapRedraw(); glSync(); };
   const tok = window.LP_CONFIG?.mapboxToken;
   if (tok) {
     const gl = $('gl'), btn = $('gltoggle'); btn.hidden = false;
     btn.onclick = async () => {
       const on = gl.hidden; gl.hidden = !on; canvas.style.visibility = on ? 'hidden' : '';
       btn.classList.toggle('on', on); btn.textContent = on ? 'Basic view' : 'Mapbox view';
-      if (on) (await import('./mapbox.js')).showGl(gl, tok, M.v, msg => { gl.hidden = true; canvas.style.visibility = ''; btn.hidden = true; toast(msg); });
+      M.glOn = on; $('glheat').hidden = !on;
+      if (on) (await import('./mapbox.js')).showGl(gl, tok, M, msg => { gl.hidden = true; canvas.style.visibility = ''; btn.hidden = true; toast(msg); });
     };
   }
+  $('glheat').onclick = e => { e.target.classList.toggle('on'); import('./mapbox.js').then(m => m.glHeat(e.target.classList.contains('on'))); };
   M.ready = true;
   mapResize(); fitAll(); refilter(); legend();
   const arg = (location.hash.split('/')[1]); if (arg) mapFocusBorough(decodeURIComponent(arg));
   addEventListener('resize', () => { if (current === 'map') mapResize(); });
 };
+
+function glSync(fit = false) {   // keep the Mapbox view in step with the shared filters
+  if (!M.glOn) return;
+  import('./mapbox.js').then(m => { m.glUpdate(M); if (fit) m.glFit(M); });
+}
 
 function mapResize() {
   if (!M.ready) return;
@@ -264,7 +271,7 @@ function robustBounds(arr) {   // trim 0.5% outliers each side so a few stray po
   return { x0: xs[lo], x1: xs[hi], y0: ys[lo], y1: ys[hi] };
 }
 function fitAll() { if (M.pts.length && M.w) fitBounds(robustBounds(M.pts)); }
-function fitFiltered() { const f = M.idx.map(i => M.pts[i]); if (f.length) fitBounds(f.length > 200 ? robustBounds(f) : bounds(f)); }
+function fitFiltered() { glSync(true); const f = M.idx.map(i => M.pts[i]); if (f.length) fitBounds(f.length > 200 ? robustBounds(f) : bounds(f)); }
 function mapFocusBorough(name) {
   if (!M.ready) return;
   if (!M.v.boroughs.includes(name)) return;
@@ -305,7 +312,7 @@ function refilter(rebuildIndex = true) {
   for (const i of M.idx) { const c = color(M.pts[i]); (byColor.get(c ?? 'dim') || byColor.set(c ?? 'dim', []).get(c ?? 'dim')).push(i); }
   M.groups = [...byColor.entries()];
   $('mapcount').textContent = `${fmt(M.idx.length)} venue${M.idx.length === 1 ? '' : 's'}`;
-  mapRedraw();
+  mapRedraw(); glSync();
 }
 function mapRedraw() {
   if (!M.ready || !M.w) return;
