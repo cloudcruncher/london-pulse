@@ -54,8 +54,12 @@ async function boot(stat) {
   for (const t of ['venues', 'events', 'history']) {
     const buf = new Uint8Array(await (await fetch(`api/v1/${t}.parquet`)).arrayBuffer());
     await db.registerFileBuffer(`${t}.parquet`, buf);
-    await conn.query(`CREATE VIEW ${t} AS SELECT * FROM parquet_scan('${t}.parquet')`);
+    await conn.query(`CREATE TABLE ${t} AS SELECT * FROM parquet_scan('${t}.parquet')`);
   }
+  // Tables are in memory now, so external access can be switched off: visitor SQL (including shared links) must
+  // not reach the network or load extensions.
+  try { await conn.query(`SET autoinstall_known_extensions=false; SET autoload_known_extensions=false; SET enable_external_access=false; SET lock_configuration=true;`); }
+  catch (e) { console.warn('could not lock DuckDB configuration', e); }
   return conn;
 }
 
@@ -63,7 +67,8 @@ async function boot(stat) {
 const cell = (col, v) => v instanceof Date ? v.toISOString().slice(0, 10) : (/date/i.test(col) && typeof v === 'number' && v > 1e11 ? new Date(v).toISOString().slice(0, 10) : v);
 
 function csv() {
-  const q = v => { const s = String(v ?? ''); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  // spreadsheet formula injection: neutralise text cells that begin with = + - @
+  const q = v => { let s = String(v ?? ''); if (typeof v === 'string' && /^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const text = [lastCols.join(','), ...lastRows.map(r => lastCols.map(c => q(cell(c, r[c]))).join(','))].join('\n');
   const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([text], { type: 'text/csv' })), download: 'london-pulse-query.csv' });
   a.click(); URL.revokeObjectURL(a.href);
@@ -72,7 +77,8 @@ function csv() {
 let run;
 export function openArg(arg) {   // #sql/<preset-key> or #sql/q=<encoded sql>
   if (!arg || !run) return;
-  if (arg.startsWith('q=')) { try { $('sqlbox').value = decodeURIComponent(arg.slice(2)); run(); } catch { /* bad link */ } return; }
+  // shared links fill the box but never run on their own: the visitor reviews the SQL and presses Run
+  if (arg.startsWith('q=')) { try { $('sqlbox').value = decodeURIComponent(arg.slice(2)); $('sqlstat').textContent = 'Shared query loaded. Check it, then press Run.'; } catch { /* bad link */ } return; }
   const p = PRESETS.find(x => x[0] === arg);
   if (p) { $('sqlbox').value = p[3]; run(); }
 }
@@ -126,7 +132,8 @@ export function initSql() {
       const conn = await dbp;
       stat('Running…');
       const t0 = performance.now();
-      const res = await conn.query(box.value);
+      const sqlText = box.value.trim().replace(/;+\s*$/, ''), capped = /^(select|with)\b/i.test(sqlText);
+      const res = await conn.query(capped ? `SELECT * FROM (${sqlText}) LIMIT 20001` : sqlText);
       lastRows = res.toArray().map(r => Object.fromEntries(Object.entries(r.toJSON()).map(([k, v]) => [k, typeof v === 'bigint' ? Number(v) : v])));
       lastCols = res.schema.fields.map(f => f.name);
       const shown = lastRows.slice(0, 500);

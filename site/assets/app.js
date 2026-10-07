@@ -54,10 +54,10 @@ function route() {
   current = view;
   document.body.dataset.view = view;
   if (!inited[view]) { inited[view] = true; init[view]?.(); }
-  if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(decodeURIComponent(arg)); });
+  if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(dec(arg)); });
   if (view === 'brands' && inited.brandsReady) brandOpen(arg);
   if (view === 'area' && inited.areaReady) areaOpen((arg || '').split('/'));
-  if (view === 'map' && arg?.startsWith('q=')) { mapSearch(decodeURIComponent(arg.slice(2))); }
+  if (view === 'map' && arg?.startsWith('q=')) { mapSearch(dec(arg.slice(2))); }
   if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
   window.scrollTo({ top: 0 });
@@ -229,6 +229,7 @@ init.changes = async () => {
 };
 
 // ---------- area guide ----------
+const dec = s => { try { return decodeURIComponent(s); } catch { return s; } };
 const km = (a, b, c, d) => { const r = Math.PI / 180, x = (c - a) * r * Math.cos((b + d) / 2 * r), y = (d - b) * r; return 6371 * Math.hypot(x, y); };
 const BEER_RE = /brew|taproom|tap room|beer|ale house|alehouse|craft/i;
 let AV = null, AB = null;
@@ -245,7 +246,7 @@ init.area = () => {
 };
 async function areaOpen([q, rad]) {
   if (!q) return;
-  q = decodeURIComponent(q); $('areaq').value = q; if (rad) $('arearad').value = rad;
+  q = dec(q); $('areaq').value = q; if (rad) $('arearad').value = rad;
   $('areaout').innerHTML = '<p class="note">Loading…</p>';
   const c = await areaLocate(q);
   if (!c) { $('areaout').innerHTML = `<p class="note">Couldn't place "${esc(q)}". Try a postcode such as E8 3QW, or a district such as E8, N16 or SW11.</p>`; return; }
@@ -416,7 +417,7 @@ init.map = async () => {
   if (tok) startGl(tok);   // Mapbox is the map when a token is configured; the canvas map is only the fallback
   M.ready = true;
   mapResize(); fitAll(); refilter(); legend();
-  const arg = (location.hash.split('/')[1]); if (arg) mapFocusBorough(decodeURIComponent(arg));
+  const arg = (location.hash.split('/')[1]); if (arg) mapFocusBorough(dec(arg));
   addEventListener('resize', () => { if (current === 'map') mapResize(); });
 };
 

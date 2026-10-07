@@ -19,8 +19,8 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
 
       - name: Latest FSA snapshot (for London postcode districts)
         run: |
@@ -45,7 +45,7 @@ jobs:
           echo "CSV=$(ls work/ch/*.csv | head -1)" >> "$GITHUB_ENV"
 
       - name: Build companies.json
-        run: PYTHONPATH=src uv run python -m london_pulse.companies --csv "$CSV" --fsa work/latest.parquet --as-of "$ASOF"
+        run: PYTHONPATH=src uv run --locked python -m london_pulse.companies --csv "$CSV" --fsa work/latest.parquet --as-of "$ASOF"
 
       - name: Commit and republish
         run: |

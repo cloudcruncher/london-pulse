@@ -5,8 +5,8 @@ let map, loading, ready = false, V_, last, layerMode = 'dots';
 
 function load() {
   return loading ??= new Promise((ok, fail) => {
-    const l = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: BASE + '.css' });
-    const s = Object.assign(document.createElement('script'), { src: BASE + '.js', onload: ok, onerror: () => fail(new Error('Mapbox failed to load')) });
+    const l = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: BASE + '.css', integrity: 'sha384-XUbQaovfoSbaMso2Q1a1bLMGwU+1h7twi9V0vkuM6eOCZd0i52f6iAuxtHaP1nDO', crossOrigin: 'anonymous' });
+    const s = Object.assign(document.createElement('script'), { src: BASE + '.js', integrity: 'sha384-zISDt21I0YwhTG3+pbVatm8HWRUzSPOGUn7O8zZhCmqD3PTTZC0OefBAT2TDkSJd', crossOrigin: 'anonymous', onload: ok, onerror: () => fail(new Error('Mapbox failed to load')) });
     document.head.append(l, s);
   });
 }

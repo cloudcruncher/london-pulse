@@ -1,10 +1,10 @@
 // Offline shell + stale-while-revalidate for data. Bump VERSION when shell files change.
-const VERSION = 'v14';
+const VERSION = 'lp-v15';
 const SHELL = ['./', 'index.html', 'assets/app.css', 'assets/app.js', 'assets/sql.js', 'assets/mapbox.js', 'config.js', 'assets/icon.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(
-  caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim())));
+  caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('lp-') && k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 
 self.addEventListener('fetch', e => {
   const req = e.request;
