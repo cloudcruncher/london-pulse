@@ -16,7 +16,7 @@ const style = () => {
   return `mapbox://styles/mapbox/${dark ? 'dark' : 'light'}-v11`;
 };
 
-const TYPE_COLOR = ['#d9794b', '#3b82c4', '#7a5cc4'];
+const TYPE_COLOR = ['#d9794b', '#3b82c4', '#7a5cc4', '#4aa89a'];
 const EV_COLOR = { new: '#1a8a4a', removed: '#c0392b', rating_changed: '#d4a017' };
 
 // Build GeoJSON for the venues the map controls currently select (M.idx), coloured per mode.
@@ -24,7 +24,7 @@ function venueData(M) {
   const dim = M.mode === 'awaiting';
   return { type: 'FeatureCollection', features: M.idx.map(i => {
     const [lon, lat, t, r, b, name, pc] = M.v.venues[i], rating = M.v.ratings[r];
-    const c = M.mode === 'type' ? TYPE_COLOR[t % 3] : dim ? (rating === 'AwaitingInspection' ? RATING_COLOR.AwaitingInspection : '#6b6b6b') : (RATING_COLOR[rating] || '#8a8a8a');
+    const c = M.mode === 'type' ? TYPE_COLOR[t % 4] : dim ? (rating === 'AwaitingInspection' ? RATING_COLOR.AwaitingInspection : '#6b6b6b') : (RATING_COLOR[rating] || '#8a8a8a');
     return { type: 'Feature', geometry: { type: 'Point', coordinates: [lon, lat] }, properties: { name, pc, rating, type: M.v.types[t], borough: M.v.boroughs[b], c, o: dim && rating !== 'AwaitingInspection' ? .25 : .9 } };
   }) };
 }

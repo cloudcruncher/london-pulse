@@ -8,7 +8,12 @@ import duckdb
 from .brands import build_brands
 from .geo import build_geo
 
-EAT_DRINK = ("Restaurant/Cafe/Canteen", "Takeaway/sandwich shop", "Pub/bar/nightclub")
+EAT_DRINK = (
+    "Restaurant/Cafe/Canteen",
+    "Takeaway/sandwich shop",
+    "Pub/bar/nightclub",
+    "Other catering premises",  # delivery-only kitchens, caterers and the like
+)
 COFFEE_RE = "coffee|espresso|roastery|barista|caffe|caffè"
 RECENT_DAYS = 30
 

@@ -11,8 +11,8 @@ const dateLong = iso => new Date(iso).toLocaleDateString('en-GB', { day: 'numeri
 
 const RATING_LABEL = { '5': '5 · very good', '4': '4 · good', '3': '3 · satisfactory', '2': '2 · improvement needed', '1': '1 · major improvement', '0': '0 · urgent improvement', AwaitingInspection: 'Awaiting inspection', Exempt: 'Exempt', AwaitingPublication: 'Awaiting publication' };
 const RATING_VAR = { '5': '--r5', '4': '--r4', '3': '--r3', '2': '--r2', '1': '--r1', '0': '--r0', AwaitingInspection: '--raw', Exempt: '--rex', AwaitingPublication: '--rex' };
-const TYPE_COLORS = ['#d9794b', '#3b82c4', '#7a5cc4'];
-const TYPE_SHORT = { 'Restaurant/Cafe/Canteen': 'Restaurants & cafés', 'Takeaway/sandwich shop': 'Takeaways', 'Pub/bar/nightclub': 'Pubs & bars' };
+const TYPE_COLORS = ['#d9794b', '#3b82c4', '#7a5cc4', '#4aa89a'];
+const TYPE_SHORT = { 'Restaurant/Cafe/Canteen': 'Restaurants & cafés', 'Takeaway/sandwich shop': 'Takeaways', 'Pub/bar/nightclub': 'Pubs & bars', 'Other catering premises': 'Delivery & other catering' };
 
 // ---------- theme ----------
 (() => {
@@ -465,14 +465,14 @@ function zoomBy(f, cx = M.w / 2, cy = M.h / 2) {
 }
 
 function color(p) {
-  if (M.mode === 'type') return TYPE_COLORS[p.t % 3];
+  if (M.mode === 'type') return TYPE_COLORS[p.t % 4];
   const key = M.v.ratings[p.r];
   if (M.mode === 'awaiting') return key === 'AwaitingInspection' ? css('--raw') : null;
   return css(RATING_VAR[key] || '--rex');
 }
 function legend() {
   let items;
-  if (M.mode === 'type') items = M.v.types.map((t, i) => [TYPE_COLORS[i % 3], TYPE_SHORT[t] || t]);
+  if (M.mode === 'type') items = M.v.types.map((t, i) => [TYPE_COLORS[i % 4], TYPE_SHORT[t] || t]);
   else if (M.mode === 'awaiting') items = [[css('--raw'), 'Awaiting first inspection'], [css('--rex'), 'Other venues (faded)']];
   else items = ['5', '4', '3', '2', '1', '0', 'AwaitingInspection'].map(k => [css(RATING_VAR[k]), k === 'AwaitingInspection' ? 'Awaiting' : k]);
   $('legend').innerHTML = items.map(([c, l]) => `<span><i style="background:${c}"></i>${esc(l)}</span>`).join('');

@@ -3,7 +3,7 @@ const DUCK = 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0/+esm';
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const RATED = `rating IN ('0','1','2','3','4','5')`;
-const EAT = `business_type IN ('Restaurant/Cafe/Canteen','Takeaway/sandwich shop','Pub/bar/nightclub')`;
+const EAT = `business_type IN ('Restaurant/Cafe/Canteen','Takeaway/sandwich shop','Pub/bar/nightclub','Other catering premises')`;
 const COFFEE = `regexp_matches(lower(name), 'coffee|espresso|roastery|barista|caffe|caffè')`;
 
 // [key, group, label, sql]
@@ -87,7 +87,7 @@ export function initSql() {
   // builder
   $('b-measure').innerHTML = Object.entries(MEASURES).map(([k, [l]]) => `<option value="${k}">${esc(l)}</option>`).join('');
   $('b-group').innerHTML = Object.entries(GROUPS).map(([k, [l]]) => `<option value="${k}">${esc(l)}</option>`).join('');
-  $('b-type').insertAdjacentHTML('beforeend', ['Restaurant/Cafe/Canteen', 'Takeaway/sandwich shop', 'Pub/bar/nightclub'].map(t => `<option>${esc(t)}</option>`).join(''));
+  $('b-type').insertAdjacentHTML('beforeend', ['Restaurant/Cafe/Canteen', 'Takeaway/sandwich shop', 'Pub/bar/nightclub', 'Other catering premises'].map(t => `<option>${esc(t)}</option>`).join(''));
   fetch('api/v1/boroughs.json').then(r => r.json()).then(d => $('b-borough').insertAdjacentHTML('beforeend', d.boroughs.map(b => `<option>${esc(b.name)}</option>`).join('')));
   $('b-go').onclick = () => {
     const [, m] = MEASURES[$('b-measure').value], [, g] = GROUPS[$('b-group').value];
