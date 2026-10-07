@@ -42,7 +42,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'map', 'changes', 'boroughs', 'craft', 'sql', 'about'];
+const VIEWS = ['overview', 'map', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 
@@ -55,6 +55,8 @@ function route() {
   document.body.dataset.view = view;
   if (!inited[view]) { inited[view] = true; init[view]?.(); }
   if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(decodeURIComponent(arg)); });
+  if (view === 'brands' && inited.brandsReady) brandOpen(arg);
+  if (view === 'map' && arg?.startsWith('q=')) { mapSearch(decodeURIComponent(arg.slice(2))); }
   if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
   window.scrollTo({ top: 0 });
@@ -224,6 +226,49 @@ init.changes = async () => {
   $('chtrend').innerHTML = keys.length ? `<table><thead><tr><th>Day</th><th>New</th><th>Removed</th><th>Re-rated</th></tr></thead><tbody>${keys.reverse().slice(0, 14).map(d => `<tr><td>${dateLong(d)}</td><td>${fmt(days[d].new || 0)}</td><td>${fmt(days[d].removed || 0)}</td><td>${fmt(days[d].rating_changed || 0)}</td></tr>`).join('')}</tbody></table>` : '';
   draw();
 };
+
+// ---------- brands ----------
+let BR = null, brandKind = '';
+init.brands = async () => {
+  BR = (await getApi('brands')).brands;
+  const kinds = ['', ...new Set(BR.map(b => b.kind))];
+  $('brandkinds').innerHTML = kinds.map(k => `<button class="chip${k === brandKind ? ' on' : ''}" data-k="${esc(k)}">${esc(k || 'All')}</button>`).join('');
+  $('brandkinds').onclick = e => { const b = e.target.closest('[data-k]'); if (!b) return; brandKind = b.dataset.k; $('brandkinds').querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === b)); brandGrid(); };
+  let t; $('brandq').oninput = () => { clearTimeout(t); t = setTimeout(brandGrid, 150); };
+  inited.brandsReady = true;
+  brandGrid();
+  brandOpen(location.hash.split('/')[1]);
+};
+function brandGrid() {
+  const q = $('brandq').value.trim().toLowerCase();
+  let list = BR.filter(b => (!brandKind || b.kind === brandKind) && (!q || b.name.toLowerCase().includes(q)));
+  const shown = list.slice(0, 60);
+  $('brandgrid').innerHTML = shown.map(b => `<button class="bcard" data-id="${esc(b.id)}"><span class="n">${fmt(b.n)}</span><b>${esc(b.name)}</b><small>${b.boroughs} borough${b.boroughs === 1 ? '' : 's'} · ${esc(b.kind)}</small></button>`).join('')
+    + (list.length > shown.length ? `<p class="note" style="grid-column:1/-1">Showing the biggest ${shown.length} of ${fmt(list.length)}. Search to narrow down.</p>` : '')
+    + (!list.length ? '<p class="note" style="grid-column:1/-1">No brand with that name has 3+ sites. Try the SQL lab for a one-off name search.</p>' : '');
+  $('brandgrid').onclick = e => { const c = e.target.closest('[data-id]'); if (c) { location.hash = '#brands/' + c.dataset.id; } };
+}
+function brandOpen(id) {
+  const d = $('branddetail'), b = BR && BR.find(x => x.id === id);
+  if (!b) { d.hidden = true; return; }
+  const max = b.top[0][1];
+  const rated = b.five_star_pct == null ? '–' : b.five_star_pct + '%';
+  d.hidden = false;
+  d.innerHTML = `<h3>${esc(b.name)}</h3><small>${esc(b.kind)} · FSA-registered sites today</small>
+    <div class="bstats"><div><b>${fmt(b.n)}</b>sites</div><div><b>${b.boroughs}</b>of 33 boroughs</div><div><b>${rated}</b>rated 5</div><div><b>${b.avg_rating ?? '–'}</b>avg rating</div></div>
+    <div class="bbars">${b.top.map(([n, c]) => `<div><span>${esc(n)}</span><span class="t"><span class="f" style="width:${c / max * 100}%"></span></span><span>${c}</span></div>`).join('')}</div>
+    <div class="row" style="margin-top:10px"><a class="btn primary" href="#map/q=${encodeURIComponent(b.name.replace(/[’'].*$/, '').toLowerCase())}">Show on map</a>
+    <a class="btn" href="#sql/q=${encodeURIComponent(`SELECT name, postcode, authority, rating, rating_date FROM venues\nWHERE ${b.sql}\nORDER BY authority, name`)}">Query in SQL lab</a>
+    <button class="btn" id="bclose">Close</button></div>
+    <div class="sites"><ul class="list">${b.sites.slice(0, 120).map(s => `<li>${esc(s[0])}<span>${esc(s[3])} · ${esc(s[1])} · ${esc(RATING_LABEL[s[2]]?.split(' ')[0] ?? s[2])}</span></li>`).join('')}</ul>${b.n > 120 ? `<p class="note">First 120 of ${fmt(b.n)} sites. Use the SQL lab for the full list.</p>` : ''}</div>
+    <p class="note">By name on the FSA register; ${b.curated ? 'hand-picked brand' : 'automatically found repeated name'}. Counts are premises, not company ownership.</p>`;
+  $('bclose').onclick = () => { location.hash = '#brands'; };
+  d.scrollIntoView({ block: 'nearest' });
+}
+function mapSearch(text) {   // used by brand links: prefill the map search once the map is ready
+  const go = () => { if (!M.ready) return setTimeout(go, 150); $('q').value = text; M.q = text.toLowerCase(); refilter(); if (M.q.length >= 3) fitFiltered(); };
+  go();
+}
 
 let sqlMod;
 init.sql = () => { sqlMod = import('./sql.js').then(m => { m.initSql(); return m; }); sqlMod.catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; }); };

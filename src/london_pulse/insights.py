@@ -5,6 +5,8 @@ from pathlib import Path
 
 import duckdb
 
+from .brands import build_brands
+
 EAT_DRINK = ("Restaurant/Cafe/Canteen", "Takeaway/sandwich shop", "Pub/bar/nightclub")
 COFFEE_RE = "coffee|espresso|roastery|barista|caffe|caffè"
 RECENT_DAYS = 30
@@ -86,6 +88,7 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     write("events.json", {"events": events})
     write("history.json", {"history": history})
     export_venues(con, api_dir / "venues.json", meta)
+    build_brands(con, api_dir, meta)
     export_parquet(con, events_dir, history_csv, api_dir)
 
 

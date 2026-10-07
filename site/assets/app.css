@@ -130,3 +130,11 @@ code{font-size:.92em}
 .pgroup{margin:8px 0}.pgroup small{display:block;opacity:.65;text-transform:uppercase;letter-spacing:.06em;font-size:11px;margin-bottom:4px}
 .builder summary,.schema summary{cursor:pointer;font-weight:600}.builder label{display:flex;flex-direction:column;gap:2px;font-size:12px;opacity:.9}
 .cols-list{padding-left:18px;font-size:13px}.insight .big{font-size:26px;font-weight:700;display:block;margin-bottom:2px}
+#brandq{width:100%;box-sizing:border-box;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#8884);background:var(--card,transparent);color:inherit;font:inherit;margin:8px 0}
+.brandgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:12px}
+.bcard{text-align:left;padding:12px;border-radius:12px;border:1px solid var(--line,#8884);background:var(--card,transparent);color:inherit;font:inherit;cursor:pointer}
+.bcard:hover{border-color:var(--accent,#b4532a)}.bcard b{display:block;font-size:15px}.bcard .n{font-size:24px;font-weight:700}.bcard small{opacity:.7}
+#branddetail{margin:12px 0}#branddetail h3{margin:0 0 4px}.bstats{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0}.bstats div b{display:block;font-size:22px}
+.bbars div{display:grid;grid-template-columns:150px 1fr 32px;gap:8px;align-items:center;font-size:13px;margin:3px 0}
+.bbars .t{height:8px;border-radius:4px;background:var(--bar,#8883)}.bbars .f{display:block;height:100%;border-radius:4px;background:var(--accent,#b4532a)}
+.sites{max-height:260px;overflow:auto;font-size:13px;margin-top:8px}

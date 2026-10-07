@@ -59,9 +59,12 @@ async function boot(stat) {
   return conn;
 }
 
+// Arrow DATE columns arrive as epoch milliseconds; show them as ISO dates.
+const cell = (col, v) => v instanceof Date ? v.toISOString().slice(0, 10) : (/date/i.test(col) && typeof v === 'number' && v > 1e11 ? new Date(v).toISOString().slice(0, 10) : v);
+
 function csv() {
   const q = v => { const s = String(v ?? ''); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
-  const text = [lastCols.join(','), ...lastRows.map(r => lastCols.map(c => q(r[c])).join(','))].join('\n');
+  const text = [lastCols.join(','), ...lastRows.map(r => lastCols.map(c => q(cell(c, r[c]))).join(','))].join('\n');
   const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([text], { type: 'text/csv' })), download: 'london-pulse-query.csv' });
   a.click(); URL.revokeObjectURL(a.href);
 }
@@ -109,7 +112,7 @@ export function initSql() {
       lastRows = res.toArray().map(r => Object.fromEntries(Object.entries(r.toJSON()).map(([k, v]) => [k, typeof v === 'bigint' ? Number(v) : v])));
       lastCols = res.schema.fields.map(f => f.name);
       const shown = lastRows.slice(0, 500);
-      $('sqlout').innerHTML = `<thead><tr>${lastCols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${shown.map(r => `<tr>${lastCols.map(c => `<td>${esc(r[c] instanceof Date ? r[c].toISOString().slice(0, 10) : r[c])}</td>`).join('')}</tr>`).join('')}</tbody>`;
+      $('sqlout').innerHTML = `<thead><tr>${lastCols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${shown.map(r => `<tr>${lastCols.map(c => `<td>${esc(cell(c, r[c]))}</td>`).join('')}</tr>`).join('')}</tbody>`;
       stat(`${lastRows.length.toLocaleString('en-GB')} rows${lastRows.length > 500 ? ' (first 500 shown)' : ''} · ${Math.round(performance.now() - t0)} ms`);
       $('sqlcsv').hidden = !lastRows.length;
     } catch (err) {

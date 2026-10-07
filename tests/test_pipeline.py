@@ -39,3 +39,14 @@ def _prev(tmp, n):
     con = duckdb.connect()
     con.execute(f"COPY (SELECT range AS fhrsid FROM range({n})) TO '{tmp / 'big.parquet'}' (FORMAT parquet)")
     return tmp / "big.parquet"
+
+
+def test_brand_patterns_match_variants_not_lookalikes():
+    import re
+    from london_pulse.brands import CURATED, norm
+    rx = {i: re.compile(p) for i, _, _, p in CURATED}
+    for n in ["GAIL’s Bakery Putney", "Gails Cheapside", "Gail's", "GAILS Hammersmith"]:
+        assert rx["gails"].search(norm(n)), n
+    assert not rx["gails"].search(norm("Gail Bennett"))
+    assert rx["caffe-nero"].search(norm("Caffè Nero")) and rx["costa"].search(norm("COSTA"))
+    assert not rx["costa"].search(norm("Costa Rican Grill"))

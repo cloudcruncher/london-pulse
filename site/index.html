@@ -20,6 +20,7 @@
       <a href="#map" data-tab="map"><i>◉</i><span>Map</span></a>
       <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
       <a href="#boroughs" data-tab="boroughs"><i>▤</i><span>Boroughs</span></a>
+      <a href="#brands" data-tab="brands"><i>⌂</i><span>Brands</span></a>
       <a href="#craft" data-tab="craft"><i>☕</i><span>Craft drinks</span></a>
       <a href="#sql" data-tab="sql"><i>⌗</i><span>SQL lab</span></a>
       <a href="#about" data-tab="about"><i>ⓘ</i><span>About</span></a>
@@ -84,6 +85,15 @@
       <select id="c-type" aria-label="Type"><option value="">All types</option></select></div>
     <div class="card" id="chtrend"></div>
     <div class="card" id="chlist"></div>
+  </section>
+
+  <section class="view" id="v-brands" hidden>
+    <h2 class="first">Brand tracker</h2>
+    <p class="note">Who is everywhere, and who is just getting started? Sites registered on the FSA register by name: London's specialty coffee roasters, bakeries and big chains, plus any name that appears at three or more sites. Matching is by name, so franchises and company-named sites can be missed.</p>
+    <input id="brandq" type="search" placeholder="Search a brand, e.g. caravan, gail, pret" autocomplete="off" aria-label="Search brands">
+    <div class="chips" id="brandkinds"></div>
+    <div id="branddetail" class="card" hidden></div>
+    <div class="brandgrid" id="brandgrid"></div>
   </section>
 
   <section class="view" id="v-sql" hidden>
