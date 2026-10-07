@@ -24,7 +24,17 @@ SCHEMA_VERSION = 1
 def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: date) -> None:
     """Write the versioned static JSON API (consumed by the website and any future app)."""
     con = duckdb.connect()
-    con.execute(f"CREATE VIEW s AS SELECT * FROM '{curr}'")
+    # ~18% of FSA premises carry no coordinates. Place them at the median of venues sharing their postcode, else
+    # their postcode sector (postcode minus the last two characters), so they can appear on the map and in area counts.
+    con.execute(f"""CREATE VIEW s AS
+        WITH raw AS (SELECT *, upper(replace(postcode, ' ', '')) AS pk FROM '{curr}'),
+        located AS (SELECT * FROM raw WHERE lon BETWEEN -0.6 AND 0.4 AND lat BETWEEN 51.2 AND 51.8),
+        by_pc AS (SELECT pk, median(lon) AS lon, median(lat) AS lat FROM located GROUP BY 1),
+        by_sec AS (SELECT left(pk, length(pk) - 2) AS pk, median(lon) AS lon, median(lat) AS lat
+                   FROM located WHERE length(pk) >= 5 GROUP BY 1)
+        SELECT raw.* EXCLUDE (pk) REPLACE (coalesce(raw.lon, p.lon, c.lon) AS lon, coalesce(raw.lat, p.lat, c.lat) AS lat)
+        FROM raw LEFT JOIN by_pc p ON raw.pk = p.pk
+                 LEFT JOIN by_sec c ON length(raw.pk) >= 5 AND left(raw.pk, length(raw.pk) - 2) = c.pk""")
     types = ",".join(f"'{t}'" for t in EAT_DRINK)
     con.execute(f"CREATE VIEW fd AS SELECT * FROM s WHERE business_type IN ({types})")
 

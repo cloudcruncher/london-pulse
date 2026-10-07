@@ -158,3 +158,4 @@ code{font-size:.92em}
 .hbars em{font-style:normal;color:var(--muted);font-variant-numeric:tabular-nums}
 .vbars{display:flex;align-items:flex-end;gap:2px;height:180px}
 .vbars i{flex:1;min-width:2px;background:var(--accent);border-radius:2px 2px 0 0}
+.ratio{margin-left:6px;font-weight:400;color:var(--muted)}.ratio.down{color:#d9534f}.ratio.up{color:#2e9e5b}
