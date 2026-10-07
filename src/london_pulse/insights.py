@@ -1,4 +1,4 @@
-"""Build site/data/insights.json from the latest snapshot, change events and history."""
+"""Build the versioned static JSON API (site/api/v1) from the latest snapshot, events and history."""
 import json
 from datetime import date
 from pathlib import Path
@@ -10,7 +10,11 @@ COFFEE_RE = "coffee|espresso|roastery|barista|caffe|caffè"
 RECENT_DAYS = 30
 
 
-def build(curr: Path, events_dir: Path, history_csv: Path, out_json: Path, on: date) -> None:
+SCHEMA_VERSION = 1
+
+
+def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: date) -> None:
+    """Write the versioned static JSON API (consumed by the website and any future app)."""
     con = duckdb.connect()
     con.execute(f"CREATE VIEW s AS SELECT * FROM '{curr}'")
     types = ",".join(f"'{t}'" for t in EAT_DRINK)
@@ -62,11 +66,34 @@ def build(curr: Path, events_dir: Path, history_csv: Path, out_json: Path, on: d
     if history_csv.exists():
         history = rows(f"SELECT * FROM read_csv('{history_csv}', header=true) ORDER BY snapshot_date")
 
-    out_json.parent.mkdir(parents=True, exist_ok=True)
-    out_json.write_text(json.dumps({
-        "as_of": on.isoformat(), "totals": totals, "boroughs": boroughs, "rating_distribution": rating_dist,
-        "business_types": by_type, "newest_unrated": newest_unrated, "events": events, "history": history,
-    }, default=str, ensure_ascii=False))
+    api_dir.mkdir(parents=True, exist_ok=True)
+    meta = {"schema_version": SCHEMA_VERSION, "as_of": on.isoformat()}
+
+    def write(name: str, payload: dict) -> None:
+        (api_dir / name).write_text(json.dumps({**meta, **payload}, default=str, ensure_ascii=False, separators=(",", ":")))
+
+    write("summary.json", {"totals": totals, "rating_distribution": rating_dist, "business_types": by_type,
+                           "newest_unrated": newest_unrated})
+    write("boroughs.json", {"boroughs": boroughs})
+    write("events.json", {"events": events})
+    write("history.json", {"history": history})
+    export_venues(con, api_dir / "venues.json", meta)
+
+
+def export_venues(con, out: Path, meta: dict) -> None:
+    """Compact point list for the map. Dictionary-encoded to keep it small (generated, not committed)."""
+    types = list(EAT_DRINK)
+    ratings = ["5", "4", "3", "2", "1", "0", "AwaitingInspection", "Exempt", "AwaitingPublication"]
+    auths = [r[0] for r in con.execute("SELECT DISTINCT authority FROM fd ORDER BY 1").fetchall()]
+    rows = con.execute("""SELECT round(lon, 5), round(lat, 5), business_type, rating, authority, name, postcode
+                          FROM fd WHERE lon IS NOT NULL AND lat IS NOT NULL AND lon BETWEEN -0.6 AND 0.4
+                          AND lat BETWEEN 51.2 AND 51.75""").fetchall()
+    ti = {t: i for i, t in enumerate(types)}
+    ri = {r: i for i, r in enumerate(ratings)}
+    ai = {a: i for i, a in enumerate(auths)}
+    v = [[lo, la, ti[t], ri.get(r, 7), ai[a], n, pc] for lo, la, t, r, a, n, pc in rows]
+    out.write_text(json.dumps({**meta, "types": types, "ratings": ratings, "boroughs": auths, "venues": v},
+                              ensure_ascii=False, separators=(",", ":")))
 
 
 def append_history(curr: Path, history_csv: Path, on: date) -> None:
@@ -85,3 +112,4 @@ def append_history(curr: Path, history_csv: Path, on: date) -> None:
         src = "h"
     history_csv.parent.mkdir(parents=True, exist_ok=True)
     con.execute(f"COPY (SELECT * FROM {src} ORDER BY snapshot_date, authority) TO '{history_csv}' (HEADER)")
+

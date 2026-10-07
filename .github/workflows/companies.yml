@@ -1,0 +1,58 @@
+name: Monthly Companies House update
+
+on:
+  schedule:
+    - cron: "0 8 3 * *"   # 3rd of each month, after the 1st-of-month bulk file is published
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: london-pulse
+  cancel-in-progress: false
+
+jobs:
+  companies:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Latest FSA snapshot (for London postcode districts)
+        run: |
+          mkdir -p work
+          latest=$(gh release view snapshots --json assets -q '.assets[].name' | grep -E '^fsa-' | sort | tail -1)
+          gh release download snapshots -p "$latest" -D work --clobber
+          mv "work/$latest" work/latest.parquet
+
+      - name: Download Companies House monthly snapshot
+        run: |
+          for month in $(date -u +%Y-%m) $(date -u -d "$(date -u +%Y-%m-01) -1 month" +%Y-%m); do
+            url="https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-$month-01.zip"
+            if curl -sfI "$url" >/dev/null; then
+              echo "using $url"
+              curl -sf -o work/ch.zip "$url"
+              echo "ASOF=$month-01" >> "$GITHUB_ENV"
+              break
+            fi
+          done
+          [ -f work/ch.zip ] || { echo "no Companies House file found"; exit 1; }
+          unzip -q work/ch.zip -d work/ch
+          echo "CSV=$(ls work/ch/*.csv | head -1)" >> "$GITHUB_ENV"
+
+      - name: Build companies.json
+        run: PYTHONPATH=src uv run python -m london_pulse.companies --csv "$CSV" --fsa work/latest.parquet --as-of "$ASOF"
+
+      - name: Commit and republish
+        run: |
+          git config user.name "london-pulse-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/api/v1/companies.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "data: companies house $ASOF"
+          git push
+          gh workflow run daily.yml

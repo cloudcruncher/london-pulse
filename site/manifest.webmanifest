@@ -1,0 +1,11 @@
+{
+  "name": "London Pulse",
+  "short_name": "London Pulse",
+  "description": "What is opening, closing and changing across London, tracked daily from open data.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#b4532a",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

@@ -28,7 +28,7 @@ def main() -> None:
     else:
         print("no previous snapshot: baseline day, no diff")
     append_history(args.out, ROOT / "data" / "history.csv", today)
-    build(args.out, ROOT / "data" / "events", ROOT / "data" / "history.csv", ROOT / "site" / "data" / "insights.json", today)
+    build(args.out, ROOT / "data" / "events", ROOT / "data" / "history.csv", ROOT / "site" / "api" / "v1", today)
     print("insights written")
 
 
