@@ -1,1 +1,1 @@
-{"schema_version": 1, "generated_at": "2026-10-07T19:19:39+00:00", "as_of": "2026-10-07", "rows": 81620, "previous_rows": null, "changes": {}, "schedule": {"fsa": "daily 06:30 UTC", "companies_house": "monthly, 3rd"}}
+{"schema_version": 1, "generated_at": "2026-10-07T19:22:38+00:00", "as_of": "2026-10-07", "rows": 81620, "previous_rows": null, "changes": {}, "schedule": {"fsa": "daily 06:30 UTC", "companies_house": "monthly, 3rd"}}
