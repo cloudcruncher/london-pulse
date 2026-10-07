@@ -6,3 +6,4 @@ __pycache__/
 site/api/v1/venues.json
 site/api/v1/*.parquet
 *.env
+site/api/v1/venues-geo.parquet

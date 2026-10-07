@@ -1,7 +1,7 @@
 // Optional Mapbox GL view. Only used when config.js supplies a (URL-restricted, public) token.
 const V = '3.29.0', BASE = `https://api.mapbox.com/mapbox-gl-js/v${V}/mapbox-gl`;
 const RATING_COLOR = { '5': '#2e9e5b', '4': '#7bbf4a', '3': '#e0b93a', '2': '#e8863a', '1': '#d9534f', '0': '#a31d1d', AwaitingInspection: '#3b82c4' };
-let map, loading, ready = false, V_, last;
+let map, loading, ready = false, V_, last, layerMode = 'dots';
 
 function load() {
   return loading ??= new Promise((ok, fail) => {
@@ -39,7 +39,6 @@ export function glUpdate(M) {
   if (!map || !ready) return;
   map.getSource('v')?.setData(venueData(M));
   map.getSource('ev')?.setData(eventData(M));
-  map.setLayoutProperty('heat', 'visibility', M.glHeat === false ? 'none' : 'visible');
 }
 export function glFit(M) {
   if (!map || !M.idx.length) return;
@@ -48,7 +47,7 @@ export function glFit(M) {
   const lons = M.idx.map(i => M.v.venues[i][0]).sort((a, b) => a - b), lats = M.idx.map(i => M.v.venues[i][1]).sort((a, b) => a - b);
   map.fitBounds([[lons[trim], lats[trim]], [lons[n - 1 - trim], lats[n - 1 - trim]]], { padding: 60, duration: 900, maxZoom: 15 });
 }
-export function glHeat(on) { if (map && ready) map.setLayoutProperty('heat', 'visibility', on ? 'visible' : 'none'); }
+export function glHeat(on) { if (map && ready && layerMode === 'dots') map.setLayoutProperty('heat', 'visibility', on ? 'visible' : 'none'); }
 
 export async function showGl(el, token, M, onFail) {
   try {
@@ -67,6 +66,9 @@ export async function showGl(el, token, M, onFail) {
       map.addLayer({ id: 'dots', type: 'circle', source: 'v', minzoom: 10, paint: {
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, 1.5, 15, 6, 18, 11],
         'circle-color': ['get', 'c'], 'circle-opacity': ['get', 'o'], 'circle-stroke-width': .5, 'circle-stroke-color': 'rgba(0,0,0,.4)' } });
+      map.addSource('hex', { type: 'geojson', data: 'api/v1/hex.geojson' });
+      map.addLayer({ id: 'hex3d', type: 'fill-extrusion', source: 'hex', layout: { visibility: 'none' }, paint: {
+        'fill-extrusion-opacity': .82, 'fill-extrusion-height': 0, 'fill-extrusion-color': '#888' } });
       map.addLayer({ id: 'rings', type: 'circle', source: 'ev', paint: {
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 3, 15, 12], 'circle-color': 'rgba(0,0,0,0)',
         'circle-stroke-width': 2.5, 'circle-stroke-color': ['get', 'c'] } });
@@ -85,7 +87,14 @@ export async function showGl(el, token, M, onFail) {
       map.on('mouseleave', 'dots', () => { map.getCanvas().style.cursor = ''; hover.remove(); });
       map.on('mouseenter', 'rings', () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', 'rings', () => { map.getCanvas().style.cursor = ''; });
+      map.on('click', 'hex3d', e => {
+        const p = e.features[0].properties;
+        pop(e, `<b>${esc(p.borough)}</b> · ~0.7 km² area<br>${p.n} food and drink venues<br>Rated 5: ${p.five_pct ?? '–'}% · rated 0–2: ${p.low_pct ?? '–'}%<br>Awaiting inspection: ${p.awaiting} (${p.awaiting_pct}%)<br>Coffee-named: ${p.coffee} · pubs: ${p.pubs} · takeaways: ${p.takeaway_pct}%`);
+      });
+      map.on('mouseenter', 'hex3d', () => { map.getCanvas().style.cursor = 'pointer'; });
+      map.on('mouseleave', 'hex3d', () => { map.getCanvas().style.cursor = ''; });
       ready = true;
+      glLayer(layerMode);
       glUpdate(last || M);
     };
     map = new mapboxgl.Map({ container: el, style: style(), center: [-0.1276, 51.507], zoom: 9.6, attributionControl: true });
@@ -100,3 +109,26 @@ export async function showGl(el, token, M, onFail) {
 }
 export function restyleGl() { if (map) map.setStyle(style()); }
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+// Analysis layers: H3 hexagons computed in DuckDB (spatial + h3 extensions), drawn as 3D columns or flat choropleths.
+const RAMP = (prop, lo, hi, cols) => ['interpolate', ['linear'], ['coalesce', ['get', prop], lo], ...cols.flatMap((c, i) => [lo + (hi - lo) * i / (cols.length - 1), c])];
+export const LAYERS = {
+  dots: { label: 'Venues (dots and heatmap)' },
+  density: { label: '3D: venue density', height: ['*', ['get', 'n'], 3], color: RAMP('n', 0, 400, ['#2b3a67', '#6a5acd', '#d9794b', '#ffd27a']), legend: ['Fewer venues', 'More venues'], tip: 'Column height and colour show how many food and drink businesses sit in each ~0.7 km² hexagon.' },
+  five: { label: 'Hygiene: share rated 5', height: ['*', ['coalesce', ['get', 'five_pct'], 0], 6], color: RAMP('five_pct', 30, 90, ['#a31d1d', '#e8863a', '#e0b93a', '#7bbf4a', '#2e9e5b']), legend: ['30% rated 5', '90%'], tip: 'Red hexagons have the lowest share of top-rated venues; green the highest. Hexagons with fewer than 5 rated venues are blank.' },
+  awaiting: { label: 'New openings: awaiting inspection', height: ['*', ['get', 'awaiting'], 40], color: RAMP('awaiting_pct', 0, 12, ['#2b3a67', '#3b82c4', '#7fd1f0', '#fff3b0']), legend: ['0% awaiting', '12%+'], tip: 'Venues registered but not yet inspected, a proxy for recent openings. Taller means more of them.' },
+  coffee: { label: 'Coffee-named venues', height: ['*', ['get', 'coffee'], 90], color: RAMP('coffee', 0, 20, ['#3a2a20', '#7a4a2a', '#c27a3a', '#ffd27a']), legend: ['No coffee-named venues', '20+'], tip: 'Venues with coffee, espresso, roastery or similar in the name. Tall brown columns are coffee hotspots; flat dark ones are dense areas with none.' },
+  takeaway: { label: 'Takeaway share', height: ['*', ['get', 'takeaway_pct'], 12], color: RAMP('takeaway_pct', 0, 60, ['#2b3a67', '#6a5acd', '#d9794b', '#ff6b4a']), legend: ['0% takeaways', '60%+'], tip: 'Share of venues that are takeaways or sandwich shops.' },
+};
+export function glLayer(mode) {
+  layerMode = mode;
+  if (!map || !ready) return;
+  const L = LAYERS[mode], hexOn = mode !== 'dots';
+  map.setLayoutProperty('hex3d', 'visibility', hexOn ? 'visible' : 'none');
+  for (const id of ['dots', 'heat']) map.setLayoutProperty(id, 'visibility', hexOn ? 'none' : 'visible');
+  if (hexOn) {
+    map.setPaintProperty('hex3d', 'fill-extrusion-height', L.height);
+    map.setPaintProperty('hex3d', 'fill-extrusion-color', L.color);
+  }
+  map.easeTo({ pitch: hexOn ? 58 : 0, bearing: hexOn ? -18 : 0, duration: 900 });
+}

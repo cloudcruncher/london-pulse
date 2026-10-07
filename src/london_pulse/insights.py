@@ -6,6 +6,7 @@ from pathlib import Path
 import duckdb
 
 from .brands import build_brands
+from .geo import build_geo
 
 EAT_DRINK = ("Restaurant/Cafe/Canteen", "Takeaway/sandwich shop", "Pub/bar/nightclub")
 COFFEE_RE = "coffee|espresso|roastery|barista|caffe|caffè"
@@ -89,6 +90,10 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     write("history.json", {"history": history})
     export_venues(con, api_dir / "venues.json", meta)
     build_brands(con, api_dir, meta)
+    try:
+        build_geo(con, api_dir, meta)
+    except Exception as exc:  # noqa: BLE001 - spatial/H3 extensions need a download; never block the daily publish
+        print(f"geo outputs skipped: {exc}")
     export_parquet(con, events_dir, history_csv, api_dir)
 
 

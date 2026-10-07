@@ -145,3 +145,8 @@ code{font-size:.92em}
 @media(max-width:1300px) and (min-width:761px){.tabs a{padding:7px 8px}.tabs a i{display:none}}
 .tabs a span{white-space:nowrap}
 #arearad,#b-measure,#b-group,#b-type,#b-borough,#b-limit,#c-borough,#c-event,#c-type{background:var(--surface,transparent);color:inherit;border:1px solid var(--line,#8884);border-radius:10px;padding:9px 10px;font:inherit}
+.mapbox.gl .zoom{display:none}.mapbox.gl .tip{display:none}
+.ramp{display:grid;grid-template-columns:1fr 1fr;gap:2px 8px;margin-top:6px}.ramp i{grid-column:1/-1;height:6px;border-radius:3px}.ramp small:last-child{text-align:right}
+#gl-layer{background:var(--surface,transparent);color:inherit;border:1px solid var(--line,#8884);border-radius:10px;padding:8px 10px;font:inherit;width:100%}
+
+#legend[hidden],#f-mode[hidden],#gl-layer[hidden],#gl-note[hidden],#glheat[hidden]{display:none!important}

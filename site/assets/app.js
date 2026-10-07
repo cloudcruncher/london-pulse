@@ -262,6 +262,7 @@ async function areaRun(c, radiusM) {
   AV ??= await fetch('api/v1/venues.json').then(r => r.json());
   AB ??= (await getApi('brands')).brands;
   const sum = await getApi('summary');
+  const [stn, crm] = await Promise.all([getApi('stations').catch(() => null), getApi('crime').catch(() => null)]);
   const r = radiusM / 1000, T = AV.types, R = AV.ratings;
   // brand lookup by name+postcode (brands.json lists every matched site)
   const brandOf = new Map();
@@ -280,13 +281,34 @@ async function areaRun(c, radiusM) {
   const takeaways = near.filter(n => n.type === 'Takeaway/sandwich shop').length;
   const awaiting = near.filter(n => n.rating === 'AwaitingInspection').length;
   const indie = near.filter(n => !n.brand && n.rating === '5' && n.type === 'Restaurant/Cafe/Canteen');
+  // transport: nearest stations, walking at ~80 m/min
+  const stations = stn ? stn.stations.map(x => ({ ...x, d: km(c.lon, c.lat, x.lon, x.lat) })).sort((a, b) => a.d - b.d).slice(0, 5) : [];
+  const walk = d => Math.max(1, Math.round(d * 1000 / 80)) + ' min walk';
+  // crime: sum grid cells whose centre falls inside the radius (counts only; no individual incidents)
+  let crimeHtml = '', crimeKpi = '';
+  if (crm) {
+    const cs = crm.cell, inR = crm.cells.filter(([ix, iy]) => km(c.lon, c.lat, (ix + .5) * cs, (iy + .5) * cs) <= r);
+    const tot = inR.reduce((a, row) => a + row[2].reduce((x, y) => x + y, 0), 0);
+    const prev = inR.reduce((a, row) => a + (row[row.length - 1] || 0), 0);
+    const byCat = crm.categories.map((cat, i) => [cat, inR.reduce((a, row) => a + row[2][i], 0)]).filter(x => x[1]).sort((a, b) => b[1] - a[1]);
+    const cellTot = crm.cells.map(row => row[2].reduce((x, y) => x + y, 0)).sort((a, b) => a - b), med = cellTot[Math.floor(cellTot.length / 2)] || 1;
+    const ratio = inR.length ? tot / (inR.length * med) : 0;
+    const label = n => n.replace(/-/g, ' ').replace(/^./, ch => ch.toUpperCase());
+    const mName = new Date(crm.as_of + '-01').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+    const trend = prev ? Math.round((tot - prev) / prev * 100) : null;
+    crimeKpi = kpi(fmt(tot), `crimes recorded, ${mName}`, trend == null ? '' : `<span class="cmp">${trend >= 0 ? '▲' : '▼'} ${Math.abs(trend)}% vs previous month</span>`);
+    crimeHtml = `<div><h3 style="margin-top:0">Recorded crime, ${mName}</h3><ul class="list">${byCat.slice(0, 5).map(([cat, n]) => `<li>${esc(label(cat))}<span>${fmt(n)}</span></li>`).join('')}</ul>
+      <p class="note">About ${ratio.toFixed(1)}x a typical populated 500 m patch of London. Police-recorded counts by area, not a measure of how safe a street feels; busy centres, nightlife and stations record more. Source: data.police.uk.</p></div>`;
+  }
+  const stnHtml = stations.length ? `<div><h3 style="margin-top:0">Nearest stations</h3><ul class="list">${stations.map(x => `<li>${esc(x.name)}<span>${walk(x.d)} · ${esc(x.lines.slice(0, 3).join(', '))}${x.lines.length > 3 ? '…' : ''}</span></li>`).join('')}</ul><p class="note">Straight-line distance; walking time is an estimate. Source: TfL.</p></div>` : '';
   const dist = d => d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
   const li = (n, extra = '') => `<li>${esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
   const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
   const kpi = (b, s, extra = '') => `<div class="kpi"><b>${b}</b><small>${s}</small>${extra}</div>`;
   const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
   $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}
-    <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains')}${kpi(awaiting, 'newly registered, awaiting inspection')}</div>
+    <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains')}${kpi(awaiting, 'newly registered, awaiting inspection')}${stations.length ? kpi(Math.max(1, Math.round(stations[0].d * 1000 / 80)) + ' min', 'walk to ' + esc(stations[0].name)) : ''}${crimeKpi}</div>
+    ${stnHtml || crimeHtml ? `<div class="cols">${stnHtml}${crimeHtml}</div>` : ''}
     <div class="cols">${list('Specialty coffee and bakeries', spec, '', 10)}${list('Pubs and bars nearby', pubs.filter(n => n.rating === '5' || n.rating === '4'), '<p class="note">Rated 4 or 5, nearest first.</p>')}</div>
     <div class="cols" style="margin-top:14px">${list('Breweries, taprooms and beer venues', beer)}${list('Independent restaurants and cafés rated 5', indie, '<p class="note">Not part of a tracked brand, nearest first.</p>')}</div>
     <p class="note" style="margin-top:14px">${takeaways} of ${near.length} are takeaways (${Math.round(takeaways / near.length * 100)}%); ${low} rated venue${low === 1 ? ' is' : 's are'} at 0–2. <a href="#map/q=${encodeURIComponent(c.label.split(' ')[0].toLowerCase())}">See this area on the map</a>.
@@ -360,21 +382,31 @@ init.map = async () => {
   getApi('events').then(e => { M.evRaw = e.events.latest || []; M.ev = M.evRaw.map(r => { const [x, y] = world(r.lon, r.lat); return { x, y, k: r.event }; }); glSync(); });
   $('f-ev').onchange = e => { M.showEv = e.target.checked; mapRedraw(); glSync(); };
   const tok = window.LP_CONFIG?.mapboxToken;
-  if (tok) {
-    const gl = $('gl'), btn = $('gltoggle'); btn.hidden = false;
-    btn.onclick = async () => {
-      const on = gl.hidden; gl.hidden = !on; canvas.style.visibility = on ? 'hidden' : '';
-      btn.classList.toggle('on', on); btn.textContent = on ? 'Basic view' : 'Mapbox view';
-      M.glOn = on; $('glheat').hidden = !on;
-      if (on) (await import('./mapbox.js')).showGl(gl, tok, M, msg => { gl.hidden = true; canvas.style.visibility = ''; btn.hidden = true; toast(msg); });
-    };
-  }
-  $('glheat').onclick = e => { e.target.classList.toggle('on'); import('./mapbox.js').then(m => m.glHeat(e.target.classList.contains('on'))); };
+  if (tok) startGl(tok);   // Mapbox is the map when a token is configured; the canvas map is only the fallback
   M.ready = true;
   mapResize(); fitAll(); refilter(); legend();
   const arg = (location.hash.split('/')[1]); if (arg) mapFocusBorough(decodeURIComponent(arg));
   addEventListener('resize', () => { if (current === 'map') mapResize(); });
 };
+
+async function startGl(tok) {
+  const gl = $('gl'), box = document.querySelector('.mapbox'), canvas = $('map');
+  const fallback = msg => { M.glOn = false; box.classList.remove('gl'); gl.hidden = true; canvas.style.visibility = ''; $('gl-layer').hidden = true; $('gl-note').hidden = true; $('glheat').hidden = true; toast(msg + ' Showing the basic map.'); mapRedraw(); };
+  try {
+    const mb = await import('./mapbox.js');
+    M.glOn = true; box.classList.add('gl'); gl.hidden = false; canvas.style.visibility = 'hidden';
+    const sel = $('gl-layer'); sel.hidden = false;
+    sel.innerHTML = Object.entries(mb.LAYERS).map(([k, l]) => `<option value="${k}">${esc(l.label)}</option>`).join('');
+    const layer = () => {
+      const L = mb.LAYERS[sel.value]; mb.glLayer(sel.value);
+      $('glheat').hidden = sel.value !== 'dots'; $('f-mode').hidden = sel.value !== 'dots'; $('legend').hidden = sel.value !== 'dots';
+      const n = $('gl-note'); n.hidden = !L.tip; n.innerHTML = L.tip ? `${esc(L.tip)}<span class="ramp"><i style="background:linear-gradient(90deg,${L.color.slice(3).filter((_, i) => i % 2 === 1).join(',')})"></i><small>${esc(L.legend[0])}</small><small>${esc(L.legend[1])}</small></span>` : '';
+    };
+    sel.onchange = layer; $('glheat').hidden = false;
+    await mb.showGl(gl, tok, M, fallback);
+    layer();
+  } catch (err) { fallback(err.message || 'Mapbox failed to load.'); }
+}
 
 function glSync(fit = false) {   // keep the Mapbox view in step with the shared filters
   if (!M.glOn) return;

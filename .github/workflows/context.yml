@@ -1,0 +1,46 @@
+name: Monthly area context (crime and stations)
+
+on:
+  schedule:
+    - cron: "0 9 5 * *"   # 5th of each month; police data for the previous month is published by then
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: london-pulse
+  cancel-in-progress: false
+
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Latest FSA snapshot (defines which grid cells to query)
+        run: |
+          mkdir -p work
+          latest=$(gh release view snapshots --json assets -q '.assets[].name' | grep -E '^fsa-' | sort | tail -1)
+          gh release download snapshots -p "$latest" -D work --clobber
+          mv "work/$latest" work/latest.parquet
+
+      - name: Build stations.json and crime.json
+        run: |
+          PYTHONPATH=src uv run python -m london_pulse.transport
+          PYTHONPATH=src uv run python -m london_pulse.crime
+
+      - name: Commit and republish
+        run: |
+          git config user.name "london-pulse-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/api/v1/stations.json site/api/v1/crime.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "data: stations and crime $(date -u +%F)"
+          git pull --rebase -X theirs -q && git push
+          gh workflow run daily.yml
