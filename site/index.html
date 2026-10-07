@@ -18,6 +18,7 @@
     <nav class="tabs" id="tabs" aria-label="Sections">
       <a href="#overview" data-tab="overview"><i>◧</i><span>Overview</span></a>
       <a href="#map" data-tab="map"><i>◉</i><span>Map</span></a>
+      <a href="#area" data-tab="area"><i>⌖</i><span>Area guide</span></a>
       <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
       <a href="#boroughs" data-tab="boroughs"><i>▤</i><span>Boroughs</span></a>
       <a href="#brands" data-tab="brands"><i>⌂</i><span>Brands</span></a>
@@ -36,7 +37,7 @@
       <p class="eyebrow" id="asof">Loading…</p>
       <h1>What's opening, closing and changing across London.</h1>
       <p class="lead">Every food business in the capital, tracked daily from open data and compared with the day before. Explore the map, drill into a borough, or follow craft coffee and beer.</p>
-      <div class="cta"><a class="btn primary" href="#map">Explore the map</a><a class="btn" href="#craft">Craft drinks</a></div>
+      <div class="cta"><a class="btn primary" href="#map">Explore the map</a><a class="btn" href="#area">Explore an area</a><a class="btn" href="#craft">Craft drinks</a></div>
     </div>
     <div class="kpis" id="kpis"></div>
     <h2>What stands out</h2>
@@ -75,6 +76,15 @@
       <div class="tip" id="tip" hidden></div>
       <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="zreset" aria-label="Reset view">⌂</button></div>
     </div>
+  </section>
+
+  <section class="view" id="v-area" hidden>
+    <h2 class="first">Area guide</h2>
+    <p class="note">Thinking of moving somewhere? Enter a postcode or district and see what is around: cafés, specialty coffee, pubs, how they score on food hygiene, and what is new. Everything is worked out in your browser from open data.</p>
+    <div class="row filters"><input id="areaq" type="search" placeholder="Postcode or district, e.g. E8 3QW, N16, SW11" autocomplete="off" aria-label="Postcode or district">
+      <select id="arearad" aria-label="Radius"><option value="500">500 m</option><option value="1000" selected>1 km</option><option value="2000">2 km</option></select>
+      <button class="btn primary" id="areago">Explore</button><button class="btn" id="arealoc">Use my location</button></div>
+    <div id="areaout"></div>
   </section>
 
   <section class="view" id="v-changes" hidden>

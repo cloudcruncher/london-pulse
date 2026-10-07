@@ -42,7 +42,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'map', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
+const VIEWS = ['overview', 'map', 'area', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 
@@ -56,6 +56,7 @@ function route() {
   if (!inited[view]) { inited[view] = true; init[view]?.(); }
   if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(decodeURIComponent(arg)); });
   if (view === 'brands' && inited.brandsReady) brandOpen(arg);
+  if (view === 'area' && inited.areaReady) areaOpen((arg || '').split('/'));
   if (view === 'map' && arg?.startsWith('q=')) { mapSearch(decodeURIComponent(arg.slice(2))); }
   if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
@@ -226,6 +227,71 @@ init.changes = async () => {
   $('chtrend').innerHTML = keys.length ? `<table><thead><tr><th>Day</th><th>New</th><th>Removed</th><th>Re-rated</th></tr></thead><tbody>${keys.reverse().slice(0, 14).map(d => `<tr><td>${dateLong(d)}</td><td>${fmt(days[d].new || 0)}</td><td>${fmt(days[d].removed || 0)}</td><td>${fmt(days[d].rating_changed || 0)}</td></tr>`).join('')}</tbody></table>` : '';
   draw();
 };
+
+// ---------- area guide ----------
+const km = (a, b, c, d) => { const r = Math.PI / 180, x = (c - a) * r * Math.cos((b + d) / 2 * r), y = (d - b) * r; return 6371 * Math.hypot(x, y); };
+const BEER_RE = /brew|taproom|tap room|beer|ale house|alehouse|craft/i;
+let AV = null, AB = null;
+init.area = () => {
+  const go = () => { const v = $('areaq').value.trim(); if (v) location.hash = '#area/' + encodeURIComponent(v) + '/' + $('arearad').value; };
+  $('areago').onclick = go; $('areaq').onkeydown = e => { if (e.key === 'Enter') go(); };
+  $('arearad').onchange = () => { if ($('areaq').value.trim()) go(); };
+  $('arealoc').onclick = () => navigator.geolocation
+    ? navigator.geolocation.getCurrentPosition(p => areaRun({ lon: p.coords.longitude, lat: p.coords.latitude, label: 'your location' }, +$('arearad').value),
+        () => { $('areaout').innerHTML = '<p class="note">Location permission was declined. Type a postcode instead.</p>'; })
+    : null;
+  inited.areaReady = true;
+  areaOpen(location.hash.split('/').slice(1));
+};
+async function areaOpen([q, rad]) {
+  if (!q) return;
+  q = decodeURIComponent(q); $('areaq').value = q; if (rad) $('arearad').value = rad;
+  $('areaout').innerHTML = '<p class="note">Loading…</p>';
+  AV ??= await fetch('api/v1/venues.json').then(r => r.json());
+  const key = q.toUpperCase().replace(/\s+/g, ''), pc = x => (x || '').toUpperCase().replace(/\s+/g, '');
+  const V = AV.venues;
+  let hits = V.filter(v => pc(v[6]) === key), approx = false, label = q.toUpperCase();
+  if (!hits.length) { hits = V.filter(v => pc(v[6]).startsWith(key) && /^[A-Z]{1,2}\d[A-Z\d]?$/.test(key)); approx = hits.length > 0 && !/\d[A-Z]{2}$/.test(key) ? false : true; }
+  if (!hits.length && /\d[A-Z]{2}$/.test(key)) { const d = key.slice(0, -3); hits = V.filter(v => pc(v[6]).startsWith(d) && pc(v[6]).length === d.length + 3); approx = hits.length > 0; label = d + ' (nearest district)'; }
+  if (!hits.length) { const b = AV.boroughs.findIndex(n => n.toLowerCase() === q.toLowerCase()); if (b >= 0) hits = V.filter(v => v[4] === b); }
+  if (!hits.length) { $('areaout').innerHTML = `<p class="note">Couldn't place "${esc(q)}". Try a postcode such as E8 3QW, or a district such as E8, N16 or SW11.</p>`; return; }
+  const med = a => { const s = [...a].sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
+  areaRun({ lon: med(hits.map(h => h[0])), lat: med(hits.map(h => h[1])), label, approx }, +(rad || 1000));
+}
+async function areaRun(c, radiusM) {
+  AV ??= await fetch('api/v1/venues.json').then(r => r.json());
+  AB ??= (await getApi('brands')).brands;
+  const sum = await getApi('summary');
+  const r = radiusM / 1000, T = AV.types, R = AV.ratings;
+  // brand lookup by name+postcode (brands.json lists every matched site)
+  const brandOf = new Map();
+  for (const b of AB) if (b.curated) for (const s of b.sites) brandOf.set(s[0] + '|' + s[1], b);
+  const near = AV.venues.map(v => ({ v, d: km(c.lon, c.lat, v[0], v[1]) })).filter(x => x.d <= r).sort((a, b) => a.d - b.d)
+    .map(({ v, d }) => ({ d, name: v[5], pc: v[6], type: T[v[2]], rating: R[v[3]], borough: AV.boroughs[v[4]], brand: brandOf.get(v[5] + '|' + v[6]) }));
+  if (!near.length) { $('areaout').innerHTML = `<p class="note">No registered food businesses within ${radiusM} m of ${esc(c.label)}. Try a larger radius.</p>`; return; }
+  const rated = near.filter(n => /^[0-5]$/.test(n.rating)), five = rated.filter(n => n.rating === '5').length, low = rated.filter(n => +n.rating <= 2).length;
+  const pctFive = rated.length ? Math.round(five / rated.length * 100) : null;
+  const lonFive = (() => { const t = sum.rating_distribution.filter(x => /^[0-5]$/.test(x.rating)); const all = t.reduce((a, x) => a + x.n, 0); return Math.round((t.find(x => x.rating === '5')?.n || 0) / all * 100); })();
+  const kind = n => n.brand?.kind;
+  const spec = near.filter(n => ['Specialty coffee', 'Bakery'].includes(kind(n)));
+  const chains = near.filter(n => ['Chain', 'Coffee chain', 'Restaurant group'].includes(kind(n)));
+  const pubs = near.filter(n => n.type === 'Pub/bar/nightclub');
+  const beer = near.filter(n => BEER_RE.test(n.name) && n.type !== 'Takeaway/sandwich shop');
+  const takeaways = near.filter(n => n.type === 'Takeaway/sandwich shop').length;
+  const awaiting = near.filter(n => n.rating === 'AwaitingInspection').length;
+  const indie = near.filter(n => !n.brand && n.rating === '5' && n.type === 'Restaurant/Cafe/Canteen');
+  const dist = d => d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
+  const li = (n, extra = '') => `<li>${esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
+  const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
+  const kpi = (b, s, extra = '') => `<div class="kpi"><b>${b}</b><small>${s}</small>${extra}</div>`;
+  const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
+  $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}
+    <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains')}${kpi(awaiting, 'newly registered, awaiting inspection')}</div>
+    <div class="cols">${list('Specialty coffee and bakeries', spec, '', 10)}${list('Pubs and bars nearby', pubs.filter(n => n.rating === '5' || n.rating === '4'), '<p class="note">Rated 4 or 5, nearest first.</p>')}</div>
+    <div class="cols" style="margin-top:14px">${list('Breweries, taprooms and beer venues', beer)}${list('Independent restaurants and cafés rated 5', indie, '<p class="note">Not part of a tracked brand, nearest first.</p>')}</div>
+    <p class="note" style="margin-top:14px">${takeaways} of ${near.length} are takeaways (${Math.round(takeaways / near.length * 100)}%); ${low} rated venue${low === 1 ? ' is' : 's are'} at 0–2. <a href="#map/q=${encodeURIComponent(c.label.split(' ')[0].toLowerCase())}">See this area on the map</a>.
+    Hygiene ratings measure food safety, not taste or quality. Brand matching is by name and can miss sites. Data: Food Standards Agency, Open Government Licence.</p>`;
+}
 
 // ---------- brands ----------
 let BR = null, brandKind = '';

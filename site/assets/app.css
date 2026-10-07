@@ -32,6 +32,7 @@ h2{font-size:1.3rem;margin:36px 0 12px} h2.first{margin-top:24px} h3{font-size:1
   body{padding-bottom:calc(var(--nav) + env(safe-area-inset-bottom))}
   .tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);justify-content:space-around;
     padding:6px 6px calc(6px + env(safe-area-inset-bottom));gap:0}
+  .tabs{overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.tabs a{flex:0 0 auto}
   .tabs a{flex-direction:column;gap:1px;font-size:.68rem;padding:6px 8px;border-radius:12px;min-width:56px;text-align:center}
   .tabs a i{font-size:1.15rem;opacity:1}
 }
@@ -138,3 +139,9 @@ code{font-size:.92em}
 .bbars div{display:grid;grid-template-columns:150px 1fr 32px;gap:8px;align-items:center;font-size:13px;margin:3px 0}
 .bbars .t{height:8px;border-radius:4px;background:var(--bar,#8883)}.bbars .f{display:block;height:100%;border-radius:4px;background:var(--accent,#b4532a)}
 .sites{max-height:260px;overflow:auto;font-size:13px;margin-top:8px}
+#areaq{flex:1 1 220px;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#8884);background:var(--card,transparent);color:inherit;font:inherit}
+.areagrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.areagrid .kpi b{font-size:26px}.cmp{font-size:12px;opacity:.75;display:block}.up{color:#1a8a4a}.down{color:#c0392b}
+@media(max-width:1300px) and (min-width:761px){.tabs a{padding:7px 8px}.tabs a i{display:none}}
+.tabs a span{white-space:nowrap}
+#arearad,#b-measure,#b-group,#b-type,#b-borough,#b-limit,#c-borough,#c-event,#c-type{background:var(--surface,transparent);color:inherit;border:1px solid var(--line,#8884);border-radius:10px;padding:9px 10px;font:inherit}
