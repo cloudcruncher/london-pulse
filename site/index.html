@@ -18,14 +18,17 @@
     <nav class="tabs" id="tabs" aria-label="Sections">
       <a href="#overview" data-tab="overview"><i>◧</i><span>Overview</span></a>
       <a href="#map" data-tab="map"><i>◉</i><span>Map</span></a>
+      <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
       <a href="#boroughs" data-tab="boroughs"><i>▤</i><span>Boroughs</span></a>
       <a href="#craft" data-tab="craft"><i>☕</i><span>Craft drinks</span></a>
+      <a href="#sql" data-tab="sql"><i>⌗</i><span>SQL lab</span></a>
       <a href="#about" data-tab="about"><i>ⓘ</i><span>About</span></a>
     </nav>
     <button class="icon-btn" id="theme" aria-label="Toggle light and dark theme">◐</button>
   </div>
 </header>
 
+<div class="stale" id="stale" hidden></div>
 <main>
   <section class="view" id="v-overview" hidden>
     <div class="hero">
@@ -48,6 +51,7 @@
   <section class="view" id="v-map" hidden>
     <div class="mapbox">
       <canvas id="map" aria-label="Map of London food venues"></canvas>
+      <div id="gl" hidden></div>
       <div class="maptools">
         <input id="q" type="search" placeholder="Search a venue or postcode" autocomplete="off" aria-label="Search venues">
         <div class="row">
@@ -59,12 +63,33 @@
           </select>
         </div>
         <div class="chips" id="f-types"></div>
+        <label class="evtoggle"><input type="checkbox" id="f-ev"> Ring latest changes</label>
+        <button class="chip" id="gltoggle" hidden>Mapbox view</button>
         <div class="count" id="mapcount"></div>
       </div>
       <div class="legend" id="legend"></div>
       <div class="tip" id="tip" hidden></div>
       <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="zreset" aria-label="Reset view">⌂</button></div>
     </div>
+  </section>
+
+  <section class="view" id="v-changes" hidden>
+    <h2 class="first">Day-over-day changes</h2>
+    <p class="note" id="chnote"></p>
+    <div class="row filters"><select id="c-borough" aria-label="Borough"><option value="">All boroughs</option></select>
+      <select id="c-event" aria-label="Event"><option value="">All events</option><option value="new">New</option><option value="removed">Removed</option><option value="rating_changed">Re-rated</option></select>
+      <select id="c-type" aria-label="Type"><option value="">All types</option></select></div>
+    <div class="card" id="chtrend"></div>
+    <div class="card" id="chlist"></div>
+  </section>
+
+  <section class="view" id="v-sql" hidden>
+    <h2 class="first">SQL lab</h2>
+    <p class="note">Ask your own questions. This runs DuckDB in your browser against the same open data as the rest of the site. Tables: <code>venues</code>, <code>events</code>, <code>history</code>. Nothing leaves your device.</p>
+    <div class="chips" id="sqlpresets"></div>
+    <textarea id="sqlbox" spellcheck="false" rows="7" aria-label="SQL query"></textarea>
+    <div class="row"><button class="btn primary" id="sqlrun">Run (⌘/Ctrl+Enter)</button><button class="btn" id="sqlcsv" hidden>Download CSV</button><span class="count" id="sqlstat">Loads on first run (~10 MB)</span></div>
+    <div class="tablewrap"><table id="sqlout"></table></div>
   </section>
 
   <section class="view" id="v-boroughs" hidden>
@@ -97,6 +122,7 @@
 </main>
 
 <div class="toast" id="toast" hidden></div>
+<script src="config.js"></script>
 <script src="assets/app.js" defer></script>
 </body>
 </html>

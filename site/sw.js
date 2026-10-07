@@ -1,6 +1,6 @@
 // Offline shell + stale-while-revalidate for data. Bump VERSION when shell files change.
-const VERSION = 'v1';
-const SHELL = ['./', 'index.html', 'assets/app.css', 'assets/app.js', 'assets/icon.svg', 'manifest.webmanifest'];
+const VERSION = 'v2';
+const SHELL = ['./', 'index.html', 'assets/app.css', 'assets/app.js', 'assets/sql.js', 'assets/mapbox.js', 'config.js', 'assets/icon.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(
@@ -9,7 +9,7 @@ self.addEventListener('activate', e => e.waitUntil(
 self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
-  const isData = req.url.includes('/api/v1/');
+  if (req.url.endsWith('.parquet')) return;   // large; leave to the HTTP cache
   e.respondWith(caches.open(VERSION).then(async cache => {
     const hit = await cache.match(req);
     const refresh = fetch(req).then(res => { if (res.ok) cache.put(req, res.clone()); return res; });

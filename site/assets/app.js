@@ -25,7 +25,7 @@ const TYPE_SHORT = { 'Restaurant/Cafe/Canteen': 'Restaurants & cafés', 'Takeawa
     const next = dark ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     try { localStorage.setItem('lp-theme', next); } catch { /* private mode */ }
-    if (current === 'map') mapRedraw();
+    if (current === 'map') { mapRedraw(); import('./mapbox.js').then(m => m.restyleGl()); }
   };
 })();
 
@@ -42,7 +42,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'map', 'boroughs', 'craft', 'about'];
+const VIEWS = ['overview', 'map', 'changes', 'boroughs', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 
@@ -180,6 +180,36 @@ init.craft = async () => {
   seg(); body();
 };
 
+// ---------- freshness banner ----------
+fetch('api/v1/status.json').then(r => r.json()).then(st => {
+  const age = (Date.now() - new Date(st.generated_at)) / 36e5;
+  if (age > 48) { $('stale').hidden = false; $('stale').textContent = `Data last refreshed ${dateLong(st.generated_at)}. The daily update may be delayed.`; }
+}).catch(() => {});
+
+// ---------- changes ----------
+init.changes = async () => {
+  const ev = (await getApi('events')).events;
+  const rows = ev.latest || [];
+  $('chnote').textContent = ev.days
+    ? `Premises added to, removed from or re-rated on the FSA register on ${dateLong(ev.latest_date)}, compared with the day before. A removal is a signal, not proof of closure.`
+    : 'Tracking has just started. Each day the register is compared with the day before; changes will appear here from the next daily update.';
+  const uniq = k => [...new Set(rows.map(r => r[k]))].filter(Boolean).sort();
+  $('c-borough').insertAdjacentHTML('beforeend', uniq('authority').map(a => `<option>${esc(a)}</option>`).join(''));
+  $('c-type').insertAdjacentHTML('beforeend', uniq('type').map(a => `<option value="${esc(a)}">${esc(TYPE_SHORT[a] || a)}</option>`).join(''));
+  const draw = () => {
+    const f = ['c-borough:authority', 'c-event:event', 'c-type:type'].map(x => x.split(':')).map(([id, k]) => [$(id).value, k]);
+    const out = rows.filter(r => f.every(([v, k]) => !v || r[k] === v));
+    $('chlist').innerHTML = out.length ? `<ul class="list">${out.slice(0, 200).map(r => `<li><div><b class="ev-${r.event}">${{ new: '＋ New', removed: '− Removed', rating_changed: '↻ Re-rated' }[r.event]}</b> ${esc(r.name)}</div><span>${esc(r.authority)} · ${esc(r.postcode)}${r.event === 'rating_changed' ? ` · ${esc(r.old_rating)} → ${esc(r.new_rating)}` : ''}</span></li>`).join('')}</ul>${out.length > 200 ? `<p class="note">Showing 200 of ${fmt(out.length)}. Use the SQL lab for the rest.</p>` : ''}` : '<p style="margin:0">Nothing to show yet.</p>';
+  };
+  ['c-borough', 'c-event', 'c-type'].forEach(id => $(id).onchange = draw);
+  const days = {}; (ev.by_day || []).forEach(r => { (days[r.event_date] ??= {})[r.event] = Number(r.n); });
+  const keys = Object.keys(days).sort();
+  $('chtrend').innerHTML = keys.length ? `<table><thead><tr><th>Day</th><th>New</th><th>Removed</th><th>Re-rated</th></tr></thead><tbody>${keys.reverse().slice(0, 14).map(d => `<tr><td>${dateLong(d)}</td><td>${fmt(days[d].new || 0)}</td><td>${fmt(days[d].removed || 0)}</td><td>${fmt(days[d].rating_changed || 0)}</td></tr>`).join('')}</tbody></table>` : '';
+  draw();
+};
+
+init.sql = () => import('./sql.js').then(m => m.initSql()).catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; });
+
 // ---------- map ----------
 const M = { ready: false, v: null, pts: [], idx: [], groups: [], scale: 1, ox: 0, oy: 0, mode: 'rating', types: new Set(), borough: '', q: '', grid: new Map(), hover: -1, dirty: true };
 const COS = Math.cos(51.5 * Math.PI / 180);
@@ -198,6 +228,17 @@ init.map = async () => {
   let tmr; $('q').oninput = e => { clearTimeout(tmr); tmr = setTimeout(() => { M.q = e.target.value.trim().toLowerCase(); refilter(); if (M.q.length >= 3) fitFiltered(); }, 250); };
   $('zin').onclick = () => zoomBy(1.5); $('zout').onclick = () => zoomBy(1 / 1.5); $('zreset').onclick = fitAll;
   bindGestures(canvas);
+  getApi('events').then(e => { M.ev = (e.events.latest || []).map(r => { const [x, y] = world(r.lon, r.lat); return { x, y, k: r.event }; }); });
+  $('f-ev').onchange = e => { M.showEv = e.target.checked; mapRedraw(); };
+  const tok = window.LP_CONFIG?.mapboxToken;
+  if (tok) {
+    const gl = $('gl'), btn = $('gltoggle'); btn.hidden = false;
+    btn.onclick = async () => {
+      const on = gl.hidden; gl.hidden = !on; canvas.style.visibility = on ? 'hidden' : '';
+      btn.classList.toggle('on', on); btn.textContent = on ? 'Basic view' : 'Mapbox view';
+      if (on) (await import('./mapbox.js')).showGl(gl, tok, M.v, msg => { gl.hidden = true; canvas.style.visibility = ''; btn.hidden = true; toast(msg); });
+    };
+  }
   M.ready = true;
   mapResize(); fitAll(); refilter(); legend();
   const arg = (location.hash.split('/')[1]); if (arg) mapFocusBorough(decodeURIComponent(arg));
@@ -291,6 +332,15 @@ function mapRedraw() {
     }
     for (const [c, list] of M.groups) if (c !== 'dim') draw(c, list);
     ctx.globalAlpha = 1;
+    if (M.showEv && M.ev) {
+      ctx.lineWidth = 2;
+      for (const p of M.ev) {
+        const x = p.x * M.scale + M.ox, y = p.y * M.scale + M.oy;
+        if (x < -12 || y < -12 || x > M.w + 12 || y > M.h + 12) continue;
+        ctx.strokeStyle = p.k === 'new' ? '#1a8a4a' : p.k === 'removed' ? '#c0392b' : '#d4a017';
+        ctx.beginPath(); ctx.arc(x, y, sz + 5, 0, 7); ctx.stroke();
+      }
+    }
     if (M.hover >= 0) {
       const p = M.pts[M.hover], x = p.x * M.scale + M.ox, y = p.y * M.scale + M.oy;
       ctx.strokeStyle = css('--ink'); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, sz + 4, 0, 7); ctx.stroke();
@@ -335,6 +385,8 @@ function bindGestures(c) {
   c.addEventListener('wheel', e => { e.preventDefault(); zoomBy(Math.exp(-e.deltaY * 0.0015), e.offsetX, e.offsetY); }, { passive: false });
   function pinchDist() { if (ptrs.size < 2) return 0; const [a, b] = [...ptrs.values()]; return Math.hypot(a[0] - b[0], a[1] - b[1]); }
 }
+
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => { t.hidden = true; }, 5000); }
 
 // ---------- boot ----------
 route();

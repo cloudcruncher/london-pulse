@@ -111,3 +111,16 @@ body[data-view=map]{overflow-x:hidden}
 .chart text{fill:var(--muted);font-size:10px}
 .prose{max-width:70ch} .prose li{margin:6px 0}
 .toast{position:fixed;left:50%;bottom:calc(var(--nav) + 16px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;z-index:80;font-size:.9rem}
+
+/* changes, sql lab, stale banner, mapbox */
+.stale{background:#b4532a;color:#fff;padding:8px 16px;text-align:center;font-size:14px}
+.filters{margin:12px 0;gap:8px;flex-wrap:wrap}
+.evtoggle{font-size:13px;display:flex;gap:6px;align-items:center;margin-top:6px}
+#gl{position:absolute;inset:0}
+#gl[hidden]{display:none}
+.ev-new{color:#1a8a4a}.ev-removed{color:#c0392b}.ev-rating_changed{color:#b8860b}
+#sqlbox{width:100%;box-sizing:border-box;font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;padding:10px;border:1px solid var(--line,#8884);border-radius:8px;background:var(--card,transparent);color:inherit;margin:10px 0}
+#sqlout{font-size:13px}#sqlout td,#sqlout th{white-space:nowrap;padding:4px 10px;text-align:left}
+code{font-size:.92em}
+.mapbox .row+.chips{margin-top:6px}
+.evtoggle{white-space:nowrap}

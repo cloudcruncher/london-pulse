@@ -52,11 +52,16 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     csvs = sorted(events_dir.glob("*.csv"))[-RECENT_DAYS:]
     if csvs:
         glob = ",".join(f"'{p}'" for p in csvs)
-        con.execute(f"CREATE VIEW ev AS SELECT * FROM read_csv([{glob}], header=true, all_varchar=true)")
+        con.execute(f"CREATE VIEW ev AS SELECT * FROM read_csv([{glob}], header=true, all_varchar=true, union_by_name=true)")
         events["days"] = len(csvs)
         events["by_day"] = rows("""SELECT event_date, event, count(*) n FROM ev GROUP BY 1, 2 ORDER BY 1, 2""")
         events["by_borough"] = rows(f"""SELECT authority AS name, event, count(*) n FROM ev
             WHERE business_type IN ({types}) GROUP BY 1, 2 ORDER BY n DESC""")
+        latest = con.execute("SELECT max(event_date) FROM ev").fetchone()[0]
+        events["latest_date"] = latest
+        events["latest"] = rows(f"""SELECT event, name, business_type AS type, authority, postcode, old_rating, new_rating,
+            try_cast(lon AS DOUBLE) AS lon, try_cast(lat AS DOUBLE) AS lat FROM ev
+            WHERE event_date = '{latest}' AND lon IS NOT NULL AND lon <> '' LIMIT 3000""")
         for kind in events["recent"]:
             events["recent"][kind] = rows(f"""SELECT event_date, name, business_type AS type, authority, postcode,
                 old_rating, new_rating FROM ev WHERE event = '{kind}' AND business_type IN ({types})
@@ -78,6 +83,7 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     write("events.json", {"events": events})
     write("history.json", {"history": history})
     export_venues(con, api_dir / "venues.json", meta)
+    export_parquet(con, events_dir, history_csv, api_dir)
 
 
 def export_venues(con, out: Path, meta: dict) -> None:
@@ -113,3 +119,23 @@ def append_history(curr: Path, history_csv: Path, on: date) -> None:
     history_csv.parent.mkdir(parents=True, exist_ok=True)
     con.execute(f"COPY (SELECT * FROM {src} ORDER BY snapshot_date, authority) TO '{history_csv}' (HEADER)")
 
+
+
+def export_parquet(con, events_dir: Path, history_csv: Path, api_dir: Path) -> None:
+    """Parquet files the in-browser SQL lab loads (DuckDB-WASM). Generated on each run, not committed."""
+    con.execute(f"""COPY (SELECT fhrsid, name, business_type, address, postcode, rating, rating_date, authority, lon, lat
+                     FROM s ORDER BY authority, name) TO '{api_dir / "venues.parquet"}' (FORMAT parquet, COMPRESSION zstd)""")
+    csvs = sorted(events_dir.glob("*.csv"))
+    if csvs:
+        glob = ",".join(f"'{p}'" for p in csvs)
+        con.execute(f"""COPY (SELECT try_cast(event_date AS DATE) AS event_date, event, try_cast(fhrsid AS BIGINT) AS fhrsid, name,
+            business_type, authority, postcode, old_rating, new_rating, try_cast(lon AS DOUBLE) AS lon, try_cast(lat AS DOUBLE) AS lat
+            FROM read_csv([{glob}], header=true, all_varchar=true, union_by_name=true))
+            TO '{api_dir / "events.parquet"}' (FORMAT parquet, COMPRESSION zstd)""")
+    else:   # empty file with the right schema so the SQL lab's tables always exist
+        con.execute(f"""COPY (SELECT NULL::DATE AS event_date, NULL::VARCHAR AS event, NULL::BIGINT AS fhrsid, NULL::VARCHAR AS name,
+            NULL::VARCHAR AS business_type, NULL::VARCHAR AS authority, NULL::VARCHAR AS postcode, NULL::VARCHAR AS old_rating,
+            NULL::VARCHAR AS new_rating, NULL::DOUBLE AS lon, NULL::DOUBLE AS lat WHERE false)
+            TO '{api_dir / "events.parquet"}' (FORMAT parquet)""")
+    if history_csv.exists():
+        con.execute(f"""COPY (SELECT * FROM read_csv('{history_csv}', header=true)) TO '{api_dir / "history.parquet"}' (FORMAT parquet)""")

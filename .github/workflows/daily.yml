@@ -17,6 +17,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    environment: github-pages   # gives this job access to the MAPBOX_API_KEY environment secret
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
@@ -62,6 +63,14 @@ jobs:
           git add data site/api
           git diff --cached --quiet || git commit -m "data: $(date -u +%F)"
           git push
+
+      - name: Inject Mapbox token (public, URL-restricted; never committed)
+        env:
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+        run: |
+          if [ -n "$MAPBOX_API_KEY" ]; then
+            printf 'window.LP_CONFIG = { mapboxToken: "%s" };\n' "$MAPBOX_API_KEY" > site/config.js
+          fi
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
