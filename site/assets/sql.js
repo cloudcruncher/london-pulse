@@ -102,6 +102,24 @@ export function initSql() {
     <li><code>history</code>: snapshot_date, authority, premises, eating_drinking, five_star, awaiting</li></ul>
     <p class="note">Ratings are text: '0'-'5', 'AwaitingInspection', 'Exempt'. It's DuckDB SQL, so <code>FILTER</code>, <code>regexp_matches</code>, <code>split_part</code> and <code>INTERVAL</code> all work.</p>`;
 
+  // Charts: a label column plus a numeric column becomes bars (columns for dates), no library needed.
+  let tableOnly = false;
+  const chart = () => {
+    const box_ = $('sqlchart'), isNum = c => lastRows.length && lastRows.every(r => r[c] == null || typeof r[c] === 'number');
+    const val = lastCols.find((c, i) => i > 0 && isNum(c)), lab = lastCols[0];
+    const dated = /date|day|month|year/i.test(lab), max = dated ? 200 : 40;
+    const ok = val && lastRows.length >= 2 && lastRows.length <= max && !isNum(lab) || (val && dated && lastRows.length >= 2 && lastRows.length <= max);
+    $('sqlview').hidden = !ok;
+    if (!ok) { box_.hidden = true; $('sqlout').parentElement.hidden = false; return; }
+    const rows = lastRows.filter(r => r[val] != null), top = Math.max(...rows.map(r => Math.abs(r[val]))) || 1;
+    box_.innerHTML = dated
+      ? `<div class="vbars">${rows.map(r => `<i title="${esc(cell(lab, r[lab]))}: ${esc(cell(val, r[val]))}" style="height:${Math.max(2, Math.abs(r[val]) / top * 100)}%"></i>`).join('')}</div><p class="note">${esc(val)} by ${esc(lab)}. Hover a bar for the value.</p>`
+      : `<div class="hbars">${rows.map(r => `<div><span>${esc(cell(lab, r[lab]))}</span><b style="width:${Math.max(1, Math.abs(r[val]) / top * 100)}%"></b><em>${esc(cell(val, r[val]))}</em></div>`).join('')}</div><p class="note">${esc(val)} by ${esc(lab)}.</p>`;
+    box_.hidden = tableOnly; $('sqlout').parentElement.hidden = !tableOnly;
+    $('sqlview').textContent = tableOnly ? 'Show chart' : 'Show table';
+  };
+  $('sqlview').onclick = () => { tableOnly = !tableOnly; chart(); };
+
   run = async () => {
     try {
       boot_ ??= boot(stat); dbp = boot_;
@@ -115,6 +133,7 @@ export function initSql() {
       $('sqlout').innerHTML = `<thead><tr>${lastCols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${shown.map(r => `<tr>${lastCols.map(c => `<td>${esc(cell(c, r[c]))}</td>`).join('')}</tr>`).join('')}</tbody>`;
       stat(`${lastRows.length.toLocaleString('en-GB')} rows${lastRows.length > 500 ? ' (first 500 shown)' : ''} · ${Math.round(performance.now() - t0)} ms`);
       $('sqlcsv').hidden = !lastRows.length;
+      chart();
     } catch (err) {
       if (String(err).includes('fetch')) boot_ = null;
       stat('Error: ' + (err.message || err));

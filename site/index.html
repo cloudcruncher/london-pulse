@@ -123,7 +123,8 @@
     </details>
     <div id="sqlpresets"></div>
     <textarea id="sqlbox" spellcheck="false" rows="7" aria-label="SQL query"></textarea>
-    <div class="row"><button class="btn primary" id="sqlrun">Run (⌘/Ctrl+Enter)</button><button class="btn" id="sqlcsv" hidden>Download CSV</button><button class="btn" id="sqlshare">Copy link</button><span class="count" id="sqlstat">Loads on first run (~10 MB)</span></div>
+    <div class="row"><button class="btn primary" id="sqlrun">Run (⌘/Ctrl+Enter)</button><button class="btn" id="sqlcsv" hidden>Download CSV</button><button class="btn" id="sqlshare">Copy link</button><button class="btn" id="sqlview" hidden>Show table</button><span class="count" id="sqlstat">Loads on first run (~10 MB)</span></div>
+    <div class="card" id="sqlchart" hidden></div>
     <div class="tablewrap"><table id="sqlout"></table></div>
     <details class="card schema"><summary>Tables and columns</summary><div id="schema"></div></details>
   </section>
@@ -152,6 +153,8 @@
     </ul>
     <h3>How to read it</h3>
     <p>These are signals, not verdicts. A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. A company's registered office is not always where it trades, so district counts are approximate; mass-registration addresses are excluded from rankings. "Coffee-named" matches business names only.</p>
+    <h3>How it is built</h3>
+    <p>A scheduled GitHub Actions pipeline fetches the FSA register daily, checks it, compares it with yesterday and publishes Parquet and JSON, with DuckDB doing the analysis both in the pipeline and in your browser. See the <a href="https://github.com/cloudcruncher/london-pulse/blob/main/docs/ARCHITECTURE.md">architecture and design notes</a>.</p>
     <h3>Open data</h3>
     <p>Everything the site shows is available as JSON under <a href="api/v1/summary.json">/api/v1/</a>, so you can build on it. Analysts can also download the whole register as <a href="api/v1/venues.parquet">Parquet</a> or as <a href="api/v1/venues-geo.parquet">GeoParquet</a> (point geometry, opens in QGIS, GeoPandas or DuckDB). Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Not affiliated with the FSA, Companies House or any council.</p>
   </section>
