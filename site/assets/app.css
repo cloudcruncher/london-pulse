@@ -51,7 +51,7 @@ h2{font-size:1.3rem;margin:36px 0 12px} h2.first{margin-top:24px} h3{font-size:1
 .insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
 .insight{background:var(--accent-soft);border-radius:var(--radius);padding:16px}
 .insight h3{margin:0 0 4px;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--accent)} .insight p{margin:0}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
 .note{color:var(--muted);font-size:.92rem;margin:0 0 12px}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .view{animation:rise .35s both}
@@ -59,7 +59,7 @@ h2{font-size:1.3rem;margin:36px 0 12px} h2.first{margin-top:24px} h3{font-size:1
 
 /* lists, bars */
 .list{list-style:none;margin:0;padding:0} .list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
-.list li:last-child{border:0} .list span{color:var(--muted);font-size:.88rem;text-align:right} .list a{text-decoration:none}
+.list li:last-child{border:0} .list span{color:var(--muted);font-size:.88rem;text-align:right} .list a{text-decoration:none} .list li{flex-wrap:wrap;overflow-wrap:anywhere} .list li>span{min-width:0}
 .dist{display:flex;flex-direction:column;gap:9px}
 .dist>div{display:grid;grid-template-columns:150px 1fr 64px;gap:12px;align-items:center;font-size:.92rem}
 .track{background:var(--bar);height:12px;border-radius:6px;overflow:hidden} .fill{display:block;height:100%;border-radius:6px;transform-origin:left;animation:grow .8s both}
