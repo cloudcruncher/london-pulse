@@ -45,6 +45,8 @@ function countUp(el, to, suffix = '') {
 const VIEWS = ['overview', 'insights', 'map', 'area', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
+let tryApply = null;   // set by the overview story panel
+const initialTry = (location.hash.match(/^#overview\/(.+)$/) || [])[1];
 
 function route() {
   const [name, ...rest] = (location.hash.replace('#', '') || 'overview').split('/'), arg = rest.join('/') || undefined;
@@ -55,6 +57,7 @@ function route() {
   document.body.dataset.view = view;
   if (!inited[view]) { inited[view] = true; init[view]?.(); }
   if (view === 'map') requestAnimationFrame(() => { mapResize(); if (arg) mapFocusBorough(dec(arg)); });
+  if (view === 'overview' && arg && tryApply) tryApply(arg);
   if (view === 'brands' && inited.brandsReady) brandOpen(arg);
   if (view === 'area' && inited.areaReady) areaOpen((arg || '').split('/'));
   if (view === 'map' && arg?.startsWith('q=')) { mapSearch(dec(arg.slice(2))); }
@@ -101,9 +104,15 @@ init.overview = async () => {
     $('try-note').textContent = '"Awaiting inspection" includes recent openings but is not a count of them. Venue counts come from the public register, so a missing place may simply not be registered yet.';
   };
   sel.value = Object.keys(newBy).sort((x, y) => newBy[y] - newBy[x])[0] || 'Westminster';  // open on the borough with the most new registrations today
-  sel.onchange = drawTry;
-  $('trade').onclick = e => { const bt = e.target.closest('button'); if (!bt) return; trade = bt.dataset.trade; $('trade').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === bt)); drawTry(); };
+  const setTrade = t => { trade = TRADES[t] ? t : trade; $('trade').querySelectorAll('button').forEach(x => x.classList.toggle('on', x.dataset.trade === trade)); };
+  const tryLink = () => `${location.origin}${location.pathname}#overview/${encodeURIComponent(sel.value)}/${trade}`;
+  const syncUrl = () => { try { history.replaceState(null, '', tryLink()); } catch { /* sandboxed frame */ } };
+  tryApply = arg => { const [bn, tn] = (arg || '').split('/'); const name = dec(bn || ''); if (B.some(x => x.name === name)) sel.value = name; setTrade(tn); drawTry(); $('story').scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+  sel.onchange = () => { drawTry(); syncUrl(); };
+  $('trade').onclick = e => { const bt = e.target.closest('button'); if (!bt) return; setTrade(bt.dataset.trade); drawTry(); syncUrl(); };
+  $('try-share').onclick = async () => { try { await navigator.clipboard.writeText(tryLink()); toast('Link copied. It opens on this borough and trade.'); } catch { toast(tryLink()); } };
   drawTry();
+  if (initialTry) tryApply(initialTry);
   // reveal on scroll
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 }) : null;
   document.querySelectorAll('#story .reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
