@@ -48,6 +48,14 @@ jobs:
       - name: Data contract checks (fail before anything is committed or deployed)
         run: PYTHONPATH=src uv run --locked pytest tests/test_contract.py -q
 
+      - name: Browser smoke test of the built site (fail before anything is committed or deployed)
+        run: |
+          uv sync --locked
+          uv run --locked playwright install --with-deps chromium
+          python3 -m http.server 8080 --directory site >/dev/null 2>&1 &
+          sleep 2
+          SMOKE_URL=http://127.0.0.1:8080 PYTHONPATH=src uv run --locked pytest tests/smoke -q
+
       - name: Store today's snapshot
         run: |
           today=$(date -u +%F)
