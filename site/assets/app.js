@@ -78,6 +78,36 @@ init.overview = async () => {
   $('kpis').innerHTML = kp.map(([, s]) => `<div class="kpi"><b>0</b><small>${s}</small></div>`).join('');
   $('kpis').querySelectorAll('b').forEach((b, i) => countUp(b, kp[i][0], kp[i][2]));
 
+  // storytelling: pick a trade and a borough, see what that patch looks like today
+  const TRADES = {
+    roaster: { lead: 'awaiting', leadText: 'newly registered places awaiting a first inspection, a pool of possible new accounts', second: 'coffee_named', secondText: 'venues with coffee in the name, who your neighbours are already serving', cta: 'See who is opening' },
+    cafe: { lead: 'coffee_named', leadText: 'venues with coffee in the name: your nearest competition', second: 'awaiting', secondText: 'newly registered places awaiting a first inspection, who could join the street next', cta: 'Open the area guide' },
+    pub: { lead: 'premises', leadText: 'food and drink businesses registered in the borough', second: 'awaiting', secondText: 'newly registered places awaiting a first inspection', cta: 'See who is opening' },
+  };
+  const newBy = {}; for (const r of ev.events.by_borough) if (r.event === 'new') newBy[r.name] = r.n;
+  const sel = $('try-borough');
+  if (!sel.options.length) sel.innerHTML = [...B].sort((a, b) => a.name.localeCompare(b.name)).map(b => `<option>${esc(b.name)}</option>`).join('');
+  let trade = 'roaster';
+  const drawTry = () => {
+    const b = B.find(x => x.name === sel.value) || B[0], tr = TRADES[trade];
+    const mix = {}; for (const x of ev.events.recent.new) if (x.authority === b.name) { const k = TYPE_SHORT[x.type] || x.type; mix[k] = (mix[k] || 0) + 1; }
+    const names = Object.keys(mix).length ? Object.entries(mix).sort((x, y) => y[1] - x[1]).map(([k, n]) => `<li>${esc(k)}<span>${n}</span></li>`).join('') : '<li>No new registrations in the latest daily comparison.</li>';
+    $('try-out').innerHTML = `<div class="tcard hero-stat"><b>0</b><small>${tr.leadText}</small></div>
+      <div class="tcard"><b>0</b><small>${tr.secondText}</small></div>
+      <div class="tcard"><b>0</b><small>new on the register today in ${esc(b.name)}</small><ul class="list">${names}</ul></div>
+      <a class="btn primary" href="${trade === 'cafe' ? '#area' : '#map/' + encodeURIComponent(b.name)}">${tr.cta} in ${esc(b.name)}</a>`;
+    const vals = [b[tr.lead], b[tr.second], newBy[b.name] ?? 0];
+    $('try-out').querySelectorAll('.tcard b').forEach((el, i) => countUp(el, vals[i]));
+    $('try-note').textContent = '"Awaiting inspection" includes recent openings but is not a count of them. Venue counts come from the public register, so a missing place may simply not be registered yet.';
+  };
+  sel.value = Object.keys(newBy).sort((x, y) => newBy[y] - newBy[x])[0] || 'Westminster';  // open on the borough with the most new registrations today
+  sel.onchange = drawTry;
+  $('trade').onclick = e => { const bt = e.target.closest('button'); if (!bt) return; trade = bt.dataset.trade; $('trade').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === bt)); drawTry(); };
+  drawTry();
+  // reveal on scroll
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 }) : null;
+  document.querySelectorAll('#story .reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
   // auto-written insights
   const big = B.filter(b => b.premises >= 300);
   const top = (k, d = -1) => [...big].sort((a, b) => d * (a[k] - b[k]))[0];

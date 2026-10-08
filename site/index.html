@@ -42,6 +42,26 @@
     </div>
     <div class="kpis" id="kpis"></div>
     <p class="note prov" id="prov"></p>
+    <section class="story" id="story" aria-labelledby="story-h">
+      <p class="eyebrow">For cafés, roasters, pubs and breweries</p>
+      <h2 id="story-h" class="first">Know your patch before your competitors do.</h2>
+      <ol class="steps">
+        <li class="reveal"><span class="step-n">1</span><b>Every council updates a public register.</b><small>Each new food business has to register. It lands in an open dataset, usually within days.</small></li>
+        <li class="reveal"><span class="step-n">2</span><b>We compare today with yesterday.</b><small>New places, places gone, ratings changed, for all 33 boroughs, every morning.</small></li>
+        <li class="reveal"><span class="step-n">3</span><b>You see your area change.</b><small>Who is opening near you, how crowded it is, and where to look next.</small></li>
+      </ol>
+      <div class="try reveal">
+        <div class="try-head"><b>Try it on your own patch</b><svg class="pulse-line" viewBox="0 0 160 28" aria-hidden="true"><path d="M0 14h38l8-11 10 22 9-17 6 6h89" /></svg></div>
+        <div class="seg" id="trade" role="tablist" aria-label="What do you run?">
+          <button class="on" data-trade="roaster" role="tab">I roast coffee</button>
+          <button data-trade="cafe" role="tab">I run a café</button>
+          <button data-trade="pub" role="tab">I run a pub or brewery</button>
+        </div>
+        <label class="try-pick">in <select id="try-borough" aria-label="Your borough"></select></label>
+        <div class="try-out" id="try-out" aria-live="polite"></div>
+        <p class="note" id="try-note"></p>
+      </div>
+    </section>
     <h2>What stands out</h2>
     <div class="insights" id="insights"></div>
     <h2>What the data says</h2>
