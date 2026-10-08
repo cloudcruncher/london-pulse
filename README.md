@@ -1,3 +1,4 @@
+[![Daily update](https://github.com/cloudcruncher/london-pulse/actions/workflows/daily.yml/badge.svg)](https://github.com/cloudcruncher/london-pulse/actions/workflows/daily.yml)
 # London Pulse
 
 Daily, neighbourhood-level signals of what is opening, closing and changing across London's 33 boroughs, built from open data. Live dashboard: https://cloudcruncher.github.io/london-pulse/
