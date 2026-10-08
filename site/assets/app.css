@@ -283,6 +283,9 @@ a.insight.k:hover{transform:translateY(-2px);box-shadow:0 0 0 2px var(--accent),
 .tcard b{display:block;font-size:2.2rem;letter-spacing:-.035em;line-height:1.1} .tcard small{color:var(--muted);display:block;margin-top:4px}
 .tcard .list li{padding:6px 0;font-size:.88rem}
 .try-out .btn{align-self:end;justify-self:start;grid-column:1/-1}
+.brief{margin:18px 0 6px;border:1px dashed color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:var(--radius-sm);background:var(--surface);padding:16px 18px;max-width:640px;animation:rise .5s var(--spring) both}
+.brief header{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:8px} .brief header span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:700}
+.brief ul{margin:0 0 10px;padding-left:18px} .brief li{margin:5px 0} .brief p{margin:0 0 8px} .brief footer{font-size:.8rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.pulse-line path{stroke-dashoffset:0}}
 
 /* print: a clean, professional one-page brief */

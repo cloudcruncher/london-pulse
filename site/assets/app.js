@@ -94,13 +94,31 @@ init.overview = async () => {
   const drawTry = () => {
     const b = B.find(x => x.name === sel.value) || B[0], tr = TRADES[trade];
     const mix = {}; for (const x of ev.events.recent.new) if (x.authority === b.name) { const k = TYPE_SHORT[x.type] || x.type; mix[k] = (mix[k] || 0) + 1; }
-    const names = Object.keys(mix).length ? Object.entries(mix).sort((x, y) => y[1] - x[1]).map(([k, n]) => `<li>${esc(k)}<span>${n}</span></li>`).join('') : '<li>No new registrations in the latest daily comparison.</li>';
+    const partial = Object.values(mix).reduce((t, n) => t + n, 0) < (newBy[b.name] ?? 0);
+    const names = Object.keys(mix).length ? Object.entries(mix).sort((x, y) => y[1] - x[1]).map(([k, n]) => `<li>${esc(k)}<span>${n}</span></li>`).join('') + (partial ? '<li>and others</li>' : '') : ((newBy[b.name] ?? 0) ? '<li>Business types not in today\'s sample.</li>' : '<li>No new registrations in the latest daily comparison.</li>');
     $('try-out').innerHTML = `<div class="tcard hero-stat"><b>0</b><small>${tr.leadText}</small></div>
       <div class="tcard"><b>0</b><small>${tr.secondText}</small></div>
       <div class="tcard"><b>0</b><small>new on the register today in ${esc(b.name)}</small><ul class="list">${names}</ul></div>
       <a class="btn primary" href="${trade === 'cafe' ? '#area' : '#map/' + encodeURIComponent(b.name)}">${tr.cta} in ${esc(b.name)}</a>`;
     const vals = [b[tr.lead], b[tr.second], newBy[b.name] ?? 0];
     $('try-out').querySelectorAll('.tcard b').forEach((el, i) => countUp(el, vals[i]));
+    // sample brief: what a weekly note to this owner could look like, written from today's numbers
+    const avg = k => B.reduce((t, x) => t + x[k], 0) / B.length, ldn = { five: avg('five_star_pct'), coffee: avg('coffee_named'), awaitPct: B.reduce((t, x) => t + x.awaiting, 0) / B.reduce((t, x) => t + x.premises, 0) * 100 };
+    const newN = newBy[b.name] ?? 0, mixSum = Object.values(mix).reduce((t, n) => t + n, 0), mixTxt = Object.entries(mix).sort((x, y) => y[1] - x[1]).map(([k, n]) => `${n} ${k.toLowerCase()}`).join(', ');
+    const rel = (v, base) => v >= base * 1.15 ? 'above' : v <= base * .85 ? 'below' : 'close to';
+    const ACTION = {
+      roaster: 'Worth a call or a sample drop: the newest registrations here. Some will already have a supplier, so ask before assuming.',
+      cafe: 'Before a price or menu change, open the Area guide on your postcode and see how many coffee-named neighbours sit within 500 m.',
+      pub: 'If you are weighing a new site or a late licence, check how many new places are registering nearby before you commit.',
+    };
+    $('brief').innerHTML = `<header><span>Sample brief</span><b>Your Monday read: ${esc(b.name)}</b></header>
+      <ul>
+        <li><b>${newN}</b> place${newN === 1 ? '' : 's'} registered here in the latest daily comparison${mixTxt ? (mixSum >= newN ? ' (' + esc(mixTxt) + ')' : ', including ' + esc(mixTxt)) : ''}.</li>
+        <li>Awaiting a first inspection: <b>${b.awaiting_pct}%</b> of venues, ${rel(b.awaiting_pct, ldn.awaitPct)} the London figure of ${ldn.awaitPct.toFixed(1)}%.</li>
+        <li>Coffee-named venues: <b>${b.coffee_named}</b>, ${rel(b.coffee_named, ldn.coffee)} the borough average of ${Math.round(ldn.coffee)}. Rated 5 for hygiene: <b>${b.five_star_pct}%</b> against ${ldn.five.toFixed(1)}%.</li>
+      </ul>
+      <p><b>This week:</b> ${ACTION[trade]}</p>
+      <footer>Written automatically from today's open data. A real brief would add your own sales and footfall.</footer>`;
     $('try-note').textContent = '"Awaiting inspection" includes recent openings but is not a count of them. Venue counts come from the public register, so a missing place may simply not be registered yet.';
   };
   sel.value = Object.keys(newBy).sort((x, y) => newBy[y] - newBy[x])[0] || 'Westminster';  // open on the borough with the most new registrations today
