@@ -1,4 +1,22 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-08,new,1999254,Al Gamal Trading,Restaurant/Cafe/Canteen,Redbridge,IG2 7AZ,,AwaitingInspection,,
+2026-10-08,new,1999263,Colin Gill,Restaurant/Cafe/Canteen,Redbridge,E11,,AwaitingInspection,,
+2026-10-08,new,1999265,Dragon’s Den,Takeaway/sandwich shop,Redbridge,IG8 7QQ,,AwaitingInspection,,
+2026-10-08,new,1999252,Endy’s Catering Services,Restaurant/Cafe/Canteen,Redbridge,IG3,,AwaitingInspection,,
+2026-10-08,new,1999260,Ghar ka Fresh Khana,Restaurant/Cafe/Canteen,Redbridge,IG3,,AwaitingInspection,,
+2026-10-08,new,1999259,MKitchen,Restaurant/Cafe/Canteen,Redbridge,IG1,,AwaitingInspection,,
+2026-10-08,new,1999261,Meat Lab,Takeaway/sandwich shop,Redbridge,IG1 1TY,,AwaitingInspection,,
+2026-10-08,new,1999266,Metro’s Fried Chicken,Takeaway/sandwich shop,Redbridge,IG5 0EW,,AwaitingInspection,,
+2026-10-08,new,1999258,Pakhtoonkhwa cuisine ltd,Restaurant/Cafe/Canteen,Redbridge,IG1 2LZ,,AwaitingInspection,,
+2026-10-08,new,1999257,Reesa,Restaurant/Cafe/Canteen,Redbridge,IG8 9EF,,AwaitingInspection,,
+2026-10-08,new,1999255,Roam & Sip,Restaurant/Cafe/Canteen,Redbridge,IG5,,AwaitingInspection,,
+2026-10-08,new,1999268,Sala K peper sauce and food buiness,Restaurant/Cafe/Canteen,Redbridge,IG2,,AwaitingInspection,,
+2026-10-08,new,1999262,Sam’s Bakes,Restaurant/Cafe/Canteen,Redbridge,IG9,,AwaitingInspection,,
+2026-10-08,new,1999256,Sangz Chicken,Restaurant/Cafe/Canteen,Redbridge,IG1 4AA,,AwaitingInspection,,
+2026-10-08,new,1999264,Smashh house,Restaurant/Cafe/Canteen,Redbridge,IG6 2AJ,,AwaitingInspection,,
+2026-10-08,new,1999267,Soleil & Spice,Restaurant/Cafe/Canteen,Redbridge,IG7,,AwaitingInspection,,
+2026-10-08,new,1999253,Uban Spice Co,Restaurant/Cafe/Canteen,Redbridge,IG1,,AwaitingInspection,,
+2026-10-08,new,1999269,ZRG Holdings,Restaurant/Cafe/Canteen,Redbridge,IG8,,AwaitingInspection,,
 2026-10-08,new,1999119,AMM Katal Bazar,Retailers - other,Tower Hamlets,E1 2PH,,AwaitingInspection,,
 2026-10-08,new,1986041,B Kitchen,Takeaway/sandwich shop,Tower Hamlets,E1 6BF,,AwaitingInspection,,
 2026-10-08,new,1999117,B Kitchen,Takeaway/sandwich shop,Tower Hamlets,E1 2BT,,AwaitingInspection,,
@@ -26,7 +44,13 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-08,rating_changed,1206185,Lockes,Restaurant/Cafe/Canteen,Camden,WC2B 5AA,5,4,-0.1216369,51.515342
 2026-10-08,rating_changed,1648455,PAPA JOHN'S,Takeaway/sandwich shop,Camden,EC1M 3JB,2,4,-0.1064206,51.5208078
 2026-10-08,rating_changed,1290542,THE SHELL,Restaurant/Cafe/Canteen,Camden,WC1B 5AA,2,0,-0.1226534,51.5207629
+2026-10-08,rating_changed,1959979,Boberjob70,Manufacturers/packers,Croydon,CR0,Exempt,AwaitingInspection,,
+2026-10-08,rating_changed,293454,Boots The Chemist,Retailers - other,Croydon,CR5 2ND,Exempt,5,-0.1375537,51.3216661
 2026-10-08,rating_changed,1176067,Elroy's Chicken And Pizza,Takeaway/sandwich shop,Croydon,CR0 2JG,3,1,-0.0978264,51.3848149
+2026-10-08,rating_changed,1534479,Real Digital International,Distributors/Transporters,Croydon,CR0 4BD,Exempt,AwaitingInspection,,
+2026-10-08,rating_changed,1706312,Sports Direct,Retailers - other,Croydon,CR0 4YJ,Exempt,5,-0.1269897,51.3798078
+2026-10-08,rating_changed,2417,WH Smith,Retailers - other,Croydon,CR0 1LF,Exempt,5,-0.0928979963064194,51.3749885559082
+2026-10-08,rating_changed,190077,WH Smith & Son Ltd,Retailers - other,Croydon,CR0 1UB,Exempt,5,-0.100046999752522,51.3740882873535
 2026-10-08,rating_changed,1032743,Boston Manor Hotel,Hotel/bed & breakfast/guest house,Ealing,W7 2HJ,4,2,-0.3332496,51.5037733
 2026-10-08,rating_changed,1032928,Chilli Spice & Wine,Takeaway/sandwich shop,Ealing,W3 7SH,0,1,-0.247043,51.506509
 2026-10-08,rating_changed,1981926,Penang Tiffin,Restaurant/Cafe/Canteen,Ealing,W7 2HJ,AwaitingInspection,2,-0.3332496,51.5037733
@@ -42,6 +66,9 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-08,rating_changed,1092953,Fab Thai Street Food,Takeaway/sandwich shop,Islington,EC2A 4JJ,2,1,-0.0846238,51.522567
 2026-10-08,rating_changed,1975661,Accent Catering @ Coombe Boys School,School/college/university,Kingston-Upon-Thames,KT3 6NT,AwaitingInspection,4,,
 2026-10-08,rating_changed,1533849,Manor Park Over 50's Social Club,Restaurant/Cafe/Canteen,Newham,E12 6QN,1,3,0.048087,51.550197
+2026-10-08,rating_changed,444179,BP Newbury Centre Service Station,Retailers - other,Redbridge,IG2 7HU,3,5,,
+2026-10-08,rating_changed,444263,Ocean Delight,Takeaway/sandwich shop,Redbridge,IG8 8AA,4,5,,
+2026-10-08,rating_changed,443712,Ray Park Cafe,Restaurant/Cafe/Canteen,Redbridge,IG8 7JQ,4,5,,
 2026-10-08,rating_changed,1730469,@homepizza,Restaurant/Cafe/Canteen,Tower Hamlets,E14 4SG,5,AwaitingInspection,,
 2026-10-08,rating_changed,1786978,Bow Grill,Restaurant/Cafe/Canteen,Tower Hamlets,E3 3EW,4,5,,
 2026-10-08,rating_changed,148894,Elizabeth Selby Nursery/Infants Kitchen,School/college/university,Tower Hamlets,E2 6PP,5,2,,
@@ -64,6 +91,20 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-08,removed,1979220,Basecamp Childcare,Caring Premises,Bexley,DA1 4RS,AwaitingInspection,,0.183041006326675,51.4552459716797
 2026-10-08,removed,1950812,Blend And Bite,Mobile caterer,Bexley,DA6 7JN,AwaitingInspection,,,
 2026-10-08,removed,1837780,Send-IIT,Caring Premises,Bexley,DA17 5HH,AwaitingInspection,,0.1453778,51.491039
+2026-10-08,removed,1768212,Akaira Akit Wisdom,Caring Premises,Croydon,CR0 2WB,Exempt,,-0.093461,51.3770808
+2026-10-08,removed,17982,Eko Tedo Big Mama,Takeaway/sandwich shop,Croydon,SE25 4XB,2,,-0.066600002348423,51.3931350708008
+2026-10-08,removed,1387975,Jalal Halal Butchers And Grocers,Retailers - other,Croydon,CR7 8RZ,4,,-0.0983060002326965,51.3987693786621
+2026-10-08,removed,22136,K Veg Wholesale,Importers/Exporters,Croydon,CR5 2HR,Exempt,,-0.1316298,51.3169855
+2026-10-08,removed,1969306,Lah Lah's Kitchen,Other catering premises,Croydon,SE19,AwaitingInspection,,,
+2026-10-08,removed,1959971,Londis Whitgift,Retailers - other,Croydon,CR2 6EE,AwaitingInspection,,-0.0975620001554489,51.3591804504395
+2026-10-08,removed,1718367,MediRush,Distributors/Transporters,Croydon,CR5 2HT,Exempt,,-0.133652,51.3202012
+2026-10-08,removed,1930519,Midnight Crumb,Other catering premises,Croydon,CR7,AwaitingInspection,,,
+2026-10-08,removed,1941084,Mobkilishi,Mobile caterer,Croydon,SE25,AwaitingInspection,,,
+2026-10-08,removed,1971636,Play Place New Addington,Caring Premises,Croydon,CR0 9AZ,AwaitingInspection,,,
+2026-10-08,removed,982949,Purley Social Club Ltd,Restaurant/Cafe/Canteen,Croydon,CR8 2AW,Exempt,,-0.1123126,51.3390418
+2026-10-08,removed,1567,Purley United Reformed Church,Restaurant/Cafe/Canteen,Croydon,CR8 2LN,Exempt,,-0.115689001977444,51.3395652770996
+2026-10-08,removed,1855442,Roberts Fresh Green,Distributors/Transporters,Croydon,CR5 2HR,Exempt,,-0.134865999221802,51.3163185119629
+2026-10-08,removed,1332403,Stuff In Jars,Other catering premises,Croydon,SE19,5,,,
 2026-10-08,removed,1697584,Abedin's Fruit & Veg,Retailers - other,Tower Hamlets,E2 0AH,4,,-0.062558,51.5265387
 2026-10-08,removed,1941917,"BowBurgers,BackyardBurgers,ProjectBurger,BurgerYard,Urbun,BunYum",Other catering premises,Tower Hamlets,E3 4UR,AwaitingInspection,,-0.0231079,51.5240191
 2026-10-08,removed,1737482,"Brick Boi Burgers,Bricks Biryani, Nawabi,Sizzle & Stack",Takeaway/sandwich shop,Tower Hamlets,E1 6SB,5,,-0.0718281,51.524534
