@@ -190,14 +190,24 @@
     <h3>Sources</h3>
     <ul>
       <li><b>Food Standards Agency</b> hygiene ratings, snapshotted every day for all 33 boroughs. New and removed premises are found by comparing consecutive days.</li>
-      <li><b>Companies House</b> monthly company data, for new coffee roasting, brewing, distilling and pub companies in London postcode districts.</li>
+      <li><b>Companies House</b> monthly company data for London postcode districts: new craft-drinks companies, and company formation across food and drink, craft makers, creative, wellness, retail and tech.</li>
+      <li><b>Transport for London</b> stations and lines, and <b>police-recorded crime</b> (counts only, grouped into map cells), refreshed monthly for the Area guide.</li>
     </ul>
     <h3>How to read it</h3>
     <p>These are signals, not verdicts. A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. A company's registered office is not always where it trades, so district counts are approximate; mass-registration addresses are excluded from rankings. "Coffee-named" matches business names only.</p>
+    <h3>How the Insights are worked out</h3>
+    <p>Every Insights figure is a proxy, and the page says so where it matters.</p>
+    <ul>
+      <li><b>Signature and scene.</b> Venue types are matched from premises names (for example "bakery", "ramen", "plant"), so a misleading name can mislead. Signature means at least 1.5 times London's share, with enough venues to count. Scene is specialty coffee, bakeries, wine and craft bars and plant-based places per 100 venues.</li>
+      <li><b>Stage.</b> Each area is placed by its scene against its share of premises awaiting a first inspection (new premises or a change of operator): <i>established</i>, <i>hot and still growing</i>, <i>emerging</i> or <i>steady</i>. It is a signal of change, not a measure of gentrification or a judgement of an area.</li>
+      <li><b>Momentum.</b> New companies in the last 6 months against the 6 before. Companies on the register today are survivors, so the older half is slightly depleted. A trend is only called with enough companies behind it, and pace of change in premises needs 14 days of daily snapshots.</li>
+      <li><b>Who is opening.</b> The free Companies House data has no directors, so "linked to other food and drink companies" means a shared distinctive name or small shared address, and "likely first venue" means a new company with no such link. New premises are matched to a company by name within a postcode district, only when exactly one company fits. Sole traders and partnerships are not on the register, so only a minority of premises match.</li>
+      <li><b>Winding down.</b> Companies marked for strike-off, in liquidation or administration. Many are shells that never traded, so read it as a churn signal.</li>
+    </ul>
     <h3>How it is built</h3>
-    <p>A scheduled GitHub Actions pipeline fetches the FSA register daily, checks it, compares it with yesterday and publishes Parquet and JSON, with DuckDB doing the analysis both in the pipeline and in your browser. See the <a href="https://github.com/cloudcruncher/london-pulse/blob/main/docs/ARCHITECTURE.md">architecture and design notes</a>.</p>
+    <p>A GitHub Actions pipeline fetches the FSA register daily, checks it, compares it with yesterday and publishes Parquet and JSON. A data check and a headless-browser test must pass before anything is committed or deployed, so a bad fetch leaves yesterday's site live. DuckDB does the analysis both in the pipeline and in your browser. See the <a href="https://github.com/cloudcruncher/london-pulse/blob/main/docs/ARCHITECTURE.md">architecture and design notes</a>.</p>
     <h3>Open data</h3>
-    <p>Everything the site shows is available as JSON under <a href="api/v1/summary.json">/api/v1/</a>, so you can build on it. Analysts can also download the whole register as <a href="api/v1/venues.parquet">Parquet</a> or as <a href="api/v1/venues-geo.parquet">GeoParquet</a> (point geometry, opens in QGIS, GeoPandas or DuckDB). Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Not affiliated with the FSA, Companies House or any council.</p>
+    <p>Everything the site shows is available as JSON under <a href="api/v1/summary.json">/api/v1/</a>, so you can build on it. Analysts can also download the whole register as <a href="api/v1/venues.parquet">Parquet</a> or as <a href="api/v1/venues-geo.parquet">GeoParquet</a> (point geometry, opens in QGIS, GeoPandas or DuckDB). Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Not affiliated with the FSA, Companies House, TfL, the police or any council.</p>
   </section>
 </main>
 
