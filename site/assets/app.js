@@ -69,6 +69,7 @@ const init = {};
 init.overview = async () => {
   const [sum, bor, ev] = await Promise.all([getApi('summary'), getApi('boroughs'), getApi('events')]);
   $('asof').textContent = `Updated ${dateLong(sum.as_of)}`;
+  $('prov').textContent = `Data as of ${dateLong(sum.as_of)}. Source: Food Standards Agency hygiene register (Open Government Licence v3.0). Counts show premises on the register; a removal is not confirmed as a closure.`;
   const t = sum.totals, B = bor.boroughs;
   const rated = sum.rating_distribution.filter(r => /^[0-5]$/.test(r.rating)).reduce((a, r) => a + r.n, 0);
   const five = sum.rating_distribution.find(r => r.rating === '5')?.n ?? 0;

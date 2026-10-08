@@ -49,6 +49,3 @@ Small deliverables to offer first, free:
 - "Removed" from the register is not "closed".
 - Brand matching is by name, so it is a good guide, not a census.
 - Crime figures are counts by area, not a verdict on a street.
-
-## Before any paid work
-Check the NatWest outside-work policy first. Free, public, open-source work is the safe route until then.
