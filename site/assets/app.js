@@ -42,7 +42,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'map', 'area', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
+const VIEWS = ['overview', 'insights', 'map', 'area', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 
@@ -198,6 +198,93 @@ init.craft = async () => {
       <p class="note" style="margin-top:14px">${esc(data.note)} Snapshot ${dateLong(data.as_of)}. Source: Companies House.</p>`;
   };
   seg(); body();
+};
+
+// ---------- insights ----------
+const KIND_LABEL = { signature: 'Signature', stage: 'Where it is heading', chains: 'Chains and independents', fresh: 'Fresh supply', pace: 'Pace of change',
+  momentum: 'Momentum', district: 'Hotspot', mix: 'Changing mix', season: 'Seasonality', survival: 'Survival', who: 'Who is opening' };
+const STAGE_CLASS = { 'Hot and still growing': 'stg-hot', 'Established scene': 'stg-est', Emerging: 'stg-emerging', Steady: '' };
+const STAGE_HELP = { 'Hot and still growing': 'strong specialty scene and lots of new supply', 'Established scene': 'strong scene, little new supply',
+  Emerging: 'lots of new supply, scene not formed yet', Steady: 'no strong signal either way' };
+const signed = n => (n > 0 ? '+' : '') + n;
+const headlineCard = h => {
+  const inner = `<h3>${esc(KIND_LABEL[h.kind] || 'Insight')}</h3><p>${esc(h.text)}</p>`;
+  return h.area ? `<a class="insight k" href="#area/${encodeURIComponent(h.area)}">${inner}</a>` : `<div class="insight k">${inner}</div>`;
+};
+init.insights = async () => {
+  const [ch, op] = await Promise.all([getApi('character').catch(() => null), getApi('operators').catch(() => null)]);
+  if (!ch && !op) { $('ins-reads').innerHTML = '<div class="card">Insights are not available yet. They appear after the next daily update.</div>'; return; }
+  const reads = [...(ch?.headlines || []), ...(op?.headlines || [])];
+  const drawReads = all => { $('ins-reads').innerHTML = (all ? reads : reads.slice(0, 9)).map(headlineCard).join('');
+    $('ins-reads-more').innerHTML = !all && reads.length > 9 ? `<p><button class="btn" id="ins-reads-all">Show all ${reads.length} reads</button></p>` : '';
+    if ($('ins-reads-all')) $('ins-reads-all').onclick = () => drawReads(true); };
+  drawReads(false);
+
+  if (ch) {
+    let level = 'boroughs', stage = 'All', showAll = false;
+    const draw = () => {
+      $('ins-level').innerHTML = [['boroughs', 'Boroughs'], ['districts', 'Postcode districts']].map(([k, l]) => `<button class="${k === level ? 'on' : ''}" data-k="${k}">${l}</button>`).join('');
+      $('ins-level').querySelectorAll('button').forEach(b => b.onclick = () => { level = b.dataset.k; stage = 'All'; showAll = false; draw(); });
+      const all = ch[level], stages = ['All', ...Object.keys(STAGE_CLASS)];
+      $('ins-stages').innerHTML = stages.map(st => `<button class="chip ${st === stage ? 'on' : ''}" data-s="${esc(st)}" title="${esc(STAGE_HELP[st] || '')}">${esc(st)}${st === 'All' ? '' : ' · ' + all.filter(a => a.stage === st).length}</button>`).join('');
+      $('ins-stages').querySelectorAll('button').forEach(b => b.onclick = () => { stage = b.dataset.s; showAll = false; draw(); });
+      const rows = all.filter(a => stage === 'All' || a.stage === stage);
+      const shown = showAll ? rows : rows.slice(0, 25);
+      $('ins-areas').innerHTML = shown.map(a => `<li><div class="at"><a href="#area/${encodeURIComponent(a.name)}"><b>${esc(a.name)}</b></a><span class="stg ${STAGE_CLASS[a.stage]}">${esc(a.stage)}</span></div>
+        <div class="sig">${a.signature.length ? a.signature.map(m => `<span class="sigchip">${esc(m.label)} ${m.lq}×</span>`).join('') : '<span class="note" style="margin:0">No standout type</span>'}</div>
+        <div class="ameta">${fmt(a.venues)} venues · scene ${a.scene_per_100} per 100 · new supply ${a.fresh_pct}% · tracked chains ${a.chain_pct}%</div></li>`).join('') || '<li><span>None</span></li>';
+      $('ins-more').innerHTML = rows.length > 25 && !showAll ? `<p><button class="btn" id="ins-all">Show all ${rows.length}</button></p>` : '';
+      if ($('ins-all')) $('ins-all').onclick = () => { showAll = true; draw(); };
+    };
+    draw();
+  } else { $('ins-areas').innerHTML = '<li><span>Not available yet</span></li>'; }
+
+  if (op) {
+    const M = op.momentum, keys = Object.keys(M);
+    $('ins-mom').innerHTML = keys.map(k => {
+      const m = M[k], max = Math.max(1, ...m.by_month.map(x => x.n)), bw = 100 / Math.max(m.by_month.length, 1);
+      const bars = m.by_month.map((x, i) => `<rect x="${(i * bw + bw * .12).toFixed(2)}%" y="${56 - x.n / max * 52}" width="${(bw * .76).toFixed(2)}%" height="${x.n / max * 52}"><title>${esc(x.month)}: ${x.n}</title></rect>`).join('');
+      return `<div class="card mom"><h3>${esc(m.label.split(' (')[0])}</h3>
+        <b class="big ${m.change_pct >= 0 ? 'up' : 'down'}">${m.change_pct == null ? '–' : signed(m.change_pct) + '%'}</b>
+        <span class="verdict ${m.verdict || ''}">${m.verdict || 'too few to call'}</span>
+        <small>${fmt(m.last6)} new companies in 6 months vs ${fmt(m.prior6)} before · ${m.yoy_pct == null ? '' : signed(m.yoy_pct) + '% on the year · '}${m.prior_cohort_winding_pct ?? '–'}% of last year's cohort already winding down</small>
+        <svg class="chart" width="100%" height="56" aria-hidden="true">${bars}</svg></div>`;
+    }).join('');
+    const D = op.districts.filter(d => d.change_pct != null && d.formed_12m >= 40);
+    const li = (d, right) => `<li><a href="#area/${encodeURIComponent(d.district)}">${esc(d.district)}</a><span>${right}</span></li>`;
+    $('ins-up').innerHTML = [...D].sort((a, b) => b.change_pct - a.change_pct).slice(0, 8).map(d => li(d, `${d.last6} vs ${d.prior6} · ${signed(d.change_pct)}%`)).join('');
+    $('ins-down').innerHTML = [...D].sort((a, b) => a.change_pct - b.change_pct).slice(0, 8).map(d => li(d, `${d.last6} vs ${d.prior6} · ${signed(d.change_pct)}%`)).join('');
+    $('ins-mix').innerHTML = op.districts.filter(d => d.formed_12m >= 40).sort((a, b) => b.mix_shift_pts - a.mix_shift_pts).slice(0, 8)
+      .map(d => li(d, `${d.mix_new_pct}% of new vs ${d.mix_stock_pct}% of existing`)).join('');
+    $('ins-wind').innerHTML = op.districts.filter(d => d.winding_pct != null).sort((a, b) => b.winding_pct - a.winding_pct).slice(0, 8)
+      .map(d => li(d, `${d.winding_pct}% of food and drink companies`)).join('');
+
+    const p = op.new_company_profile, w = op.who_is_opening;
+    $('ins-who-note').textContent = `From Companies House. ${w.matched} of ${fmt(w.new_premises_awaiting)} new premises (${w.match_rate_pct}%) could be matched to a limited company by name and district; sole traders and partnerships are not on the register. Labels such as "linked" and "likely first venue" are inferred, because the free data carries no directors.`;
+    $('ins-who-kpis').innerHTML = [[fmt(p.companies), 'food and drink companies formed in the last year'], [p.standalone_pct + '%', 'stand alone: no shared name or address with another'],
+      [p.linked_pct + '%', 'look linked to other food and drink companies (groups, serial operators)'], [p.prior_cohort_winding_pct + '%', 'of the year before already struck off or wound up']]
+      .map(([b, s]) => `<div class="kpi"><b>${esc(b)}</b><small>${esc(s)}</small></div>`).join('');
+    const bar = (rows, color) => { const max = Math.max(1, ...rows.map(r => r[1])); return rows.map(([l, n]) => `<div><span>${esc(l)}</span><span class="track"><span class="fill" style="width:${n / max * 100}%;background:${color}"></span></span><span class="num">${fmt(n)}</span></div>`).join(''); };
+    const m = w.of_matched;
+    $('ins-match').innerHTML = bar([['New company (under 1 year)', m.new_entrant], ['Young (1 to 3 years)', m.young], ['Established (3+ years)', m.established], ['of which linked to others', m.linked]], css('--accent'));
+    $('ins-age').innerHTML = bar(p.stock_by_age.map(a => [a.age_band, a.n]), '#3b82c4');
+    $('ins-examples').innerHTML = w.examples.map(e => `<li><div><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)}</a><br><span class="note" style="margin:0">${esc(e.read)} · ${esc(e.company)}</span></div><span>${esc(e.postcode)}</span></li>`).join('');
+
+    const sk = Object.keys(op.seasonality);
+    let ssel = sk[0];
+    const sdraw = () => {
+      $('ins-season-seg').innerHTML = sk.map(k => `<button class="${k === ssel ? 'on' : ''}" data-k="${k}">${esc(op.seasonality[k].label.split(' (')[0])}</button>`).join('');
+      $('ins-season-seg').querySelectorAll('button').forEach(b => b.onclick = () => { ssel = b.dataset.k; sdraw(); });
+      const ms = op.seasonality[ssel].months, max = Math.max(120, ...ms.map(x => x.index)), bw = 100 / 12;
+      $('ins-season').innerHTML = ms.map((x, i) => { const h = x.index / max * 120;
+        return `<g><title>${MONTHS[x.month - 1]}: index ${x.index}</title><rect x="${(i * bw + bw * .15).toFixed(2)}%" y="${140 - h}" width="${(bw * .7).toFixed(2)}%" height="${h}"/>
+          <text x="${(i * bw + bw / 2).toFixed(2)}%" y="160" text-anchor="middle">${MONTHS[x.month - 1]}</text></g>`; }).join('');
+    };
+    sdraw();
+    $('ins-method').textContent = `${op.method} Companies House snapshot ${dateLong(op.as_of)}.` + (ch ? ` ${ch.method}` : '');
+  } else {
+    ['ins-mom', 'ins-up', 'ins-down', 'ins-mix', 'ins-wind'].forEach(id => { $(id).innerHTML = '<p class="note">Company data is not available yet.</p>'; });
+  }
 };
 
 // ---------- freshness banner ----------

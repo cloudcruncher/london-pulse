@@ -16,7 +16,7 @@ flowchart LR
   end
 
   subgraph "GitHub Actions (scheduled)"
-    D[daily.yml 06:30 UTC<br/>fetch, gate, diff, build]
+    D[daily.yml 06:17 UTC<br/>fetch, gate, diff, build]
     C[companies.yml 3rd]
     X[context.yml 5th]
   end
@@ -52,7 +52,7 @@ flowchart LR
   PAGES --> BROWSER
 ```
 
-## Daily run (06:30 UTC)
+## Daily run (06:17 UTC)
 
 1. **Fetch** every establishment for the 33 London boroughs from the FSA API (retries, paging).
 2. **Quality gate.** Refuse to publish if fewer than 70,000 rows, or if the row count moved more than 10% in a day.
@@ -67,6 +67,9 @@ flowchart LR
    breweries and chains plus auto-detected repeated names), H3 hexagons (spatial and h3 extensions) with density,
    hygiene, new-opening, coffee, specialty-coffee, chain-share and takeaway measures, and venues for the map.
    Eating and drinking includes "Other catering premises" (delivery-only kitchens).
+6b. **Area character** (`character.py`): venue mix by name keywords, location quotients against London, a specialty-scene
+   measure, share of premises awaiting first inspection, a stage per borough and postcode district, and generated headlines.
+   Pace of change is only called once 14 days of snapshots exist.
 7. **Publish** JSON under `site/api/v1/`, Parquet and GeoParquet for the browser and for analysts.
 8. **Contract gate.** `tests/test_contract.py` checks every published file (shape, London bounds, known brands with
    plausible counts, size budgets). A failure stops the run before anything is committed or deployed.
@@ -75,8 +78,13 @@ flowchart LR
 
 ## Monthly runs
 
-- **Companies House (3rd):** bulk company file, filtered to coffee roasting, brewing, distilling and pub SIC codes in
-  London postcode districts. A leading signal of openings, months before an FSA registration.
+- **Companies House (3rd):** bulk company file. `companies.py` filters it to coffee roasting, brewing, distilling and
+  pub SIC codes in London postcode districts, a leading signal of openings months before an FSA registration.
+  `operators.py` adds momentum (last 6 months against the 6 before) for food and drink, craft, creative, wellness,
+  retail and tech, seasonality, mix shift and winding-down rates by district, and a profile of who is opening: new
+  premises awaiting inspection are matched to a company by name within a postcode district, then labelled new entrant,
+  young or established, and linked or standalone. The free file has no directors, so "first-time founder" is a likely
+  label, not a fact. Mass-registration addresses are excluded.
 - **Area context (5th):** TfL stations and lines, plus police-recorded crime aggregated to a 0.005 degree grid.
   Counts only, no individual incidents.
 

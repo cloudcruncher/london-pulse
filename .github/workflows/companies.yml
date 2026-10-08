@@ -47,12 +47,19 @@ jobs:
       - name: Build companies.json
         run: PYTHONPATH=src uv run --locked python -m london_pulse.companies --csv "$CSV" --fsa work/latest.parquet --as-of "$ASOF"
 
+      - name: Build operators.json (momentum, who is opening, seasonality)
+        run: PYTHONPATH=src uv run --locked python -m london_pulse.operators --csv "$CSV" --fsa work/latest.parquet --as-of "$ASOF"
+
       - name: Commit and republish
         run: |
           git config user.name "london-pulse-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/api/v1/companies.json
+          git add site/api/v1/companies.json site/api/v1/operators.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "data: companies house $ASOF"
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            [ "$i" = 3 ] && { echo "::error::could not push"; exit 1; }
+            sleep $((i * 5))
+          done
           gh workflow run daily.yml

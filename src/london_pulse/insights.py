@@ -6,6 +6,7 @@ from pathlib import Path
 import duckdb
 
 from .brands import build_brands
+from .character import build_character
 from .geo import build_geo
 
 EAT_DRINK = (
@@ -109,6 +110,7 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
         build_geo(con, api_dir, meta)
     except Exception as exc:  # noqa: BLE001 - spatial/H3 extensions need a download; never block the daily publish
         print(f"geo outputs skipped: {exc}")
+    build_character(con, api_dir, meta, history_csv, events_dir)
     export_parquet(con, events_dir, history_csv, api_dir)
 
 

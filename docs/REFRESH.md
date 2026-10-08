@@ -2,7 +2,7 @@
 
 | Source | Cadence | Job | Output |
 |---|---|---|---|
-| FSA hygiene ratings (33 boroughs) | daily, 06:30 UTC | `daily.yml` | snapshot (release asset), events, `site/api/v1/*` |
+| FSA hygiene ratings (33 boroughs) | daily, 06:17 UTC | `daily.yml` | snapshot (release asset), events, `site/api/v1/*` |
 | Companies House bulk file | monthly, 3rd, 08:00 UTC | `companies.yml` | `companies.json`, then triggers `daily.yml` |
 
 ## Safeguards

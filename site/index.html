@@ -17,6 +17,7 @@
     <a class="brand" href="#overview" aria-label="London Pulse home"><span class="dot"></span>London <b>Pulse</b></a>
     <nav class="tabs" id="tabs" aria-label="Sections">
       <a href="#overview" data-tab="overview"><i>◧</i><span>Overview</span></a>
+      <a href="#insights" data-tab="insights"><i>✦</i><span>Insights</span></a>
       <a href="#map" data-tab="map"><i>◉</i><span>Map</span></a>
       <a href="#area" data-tab="area"><i>⌖</i><span>Area guide</span></a>
       <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
@@ -37,7 +38,7 @@
       <p class="eyebrow" id="asof">Loading…</p>
       <h1>What's opening, closing and changing across London.</h1>
       <p class="lead">Every food business in the capital, tracked daily from open data and compared with the day before. Explore the map, drill into a borough, or follow craft coffee and beer.</p>
-      <div class="cta"><a class="btn primary" href="#map">Explore the map</a><a class="btn" href="#area">Explore an area</a><a class="btn" href="#craft">Craft drinks</a></div>
+      <div class="cta"><a class="btn primary" href="#map">Explore the map</a><a class="btn" href="#insights">Insights</a><a class="btn" href="#area">Explore an area</a><a class="btn" href="#craft">Craft drinks</a></div>
     </div>
     <div class="kpis" id="kpis"></div>
     <h2>What stands out</h2>
@@ -51,6 +52,44 @@
       <div><h2>Hygiene ratings</h2><div class="card"><div class="dist" id="dist"></div></div></div>
       <div><h2>Newest awaiting inspection, by borough</h2><div class="card"><ul class="list" id="newest"></ul></div></div>
     </div>
+  </section>
+
+  <section class="view" id="v-insights" hidden>
+    <h2 class="first">Insights</h2>
+    <p class="note" id="ins-note">Ready-made reads on what London is becoming, where momentum is building or fading, and who is opening. Worked out fresh from open data.</p>
+    <div class="insights" id="ins-reads"></div>
+    <div id="ins-reads-more"></div>
+    <h2>What each area is becoming</h2>
+    <p class="note">Each area's signature (what it has far more of than London overall), its specialty scene, and how much new supply is arriving. Tap an area for its guide.</p>
+    <div class="seg" id="ins-level" role="tablist"></div>
+    <div class="chips" id="ins-stages" style="margin-bottom:12px"></div>
+    <div class="card"><ul class="list arealist" id="ins-areas"></ul></div>
+    <div id="ins-more"></div>
+    <h2>Is momentum building or slowing?</h2>
+    <p class="note">New companies registered in London, last 6 months against the 6 before. A leading signal: companies form before premises open.</p>
+    <div class="momgrid" id="ins-mom"></div>
+    <div class="cols">
+      <div><h2>Picking up</h2><div class="card"><ul class="list" id="ins-up"></ul></div></div>
+      <div><h2>Cooling</h2><div class="card"><ul class="list" id="ins-down"></ul></div></div>
+    </div>
+    <div class="cols">
+      <div><h2>Mix moving toward craft, creative, wellness and tech</h2><div class="card"><ul class="list" id="ins-mix"></ul></div></div>
+      <div><h2>Food and drink companies winding down</h2><div class="card"><ul class="list" id="ins-wind"></ul></div></div>
+    </div>
+    <h2>Who is opening</h2>
+    <p class="note" id="ins-who-note"></p>
+    <div class="kpis" id="ins-who-kpis" style="margin-top:0"></div>
+    <div class="cols">
+      <div><h2>New premises, by the company behind them</h2><div class="card"><div class="dist" id="ins-match"></div></div></div>
+      <div><h2>Age of today's food and drink companies</h2><div class="card"><div class="dist" id="ins-age"></div></div></div>
+    </div>
+    <h2>Examples</h2>
+    <div class="card"><ul class="list" id="ins-examples"></ul></div>
+    <h2>Seasonality</h2>
+    <p class="note">Which months new companies are registered in (2016 to last year). 100 is an average month.</p>
+    <div class="seg" id="ins-season-seg" role="tablist"></div>
+    <div class="card"><svg class="chart" id="ins-season" width="100%" height="170"></svg></div>
+    <p class="note" id="ins-method" style="margin-top:14px"></p>
   </section>
 
   <section class="view" id="v-map" hidden>

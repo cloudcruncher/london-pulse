@@ -78,9 +78,36 @@ def test_area_context_files():
     assert all(len(row[2]) == len(c["categories"]) for row in c["cells"][:200])
 
 
+def test_character_has_what_the_insights_tab_reads():
+    c = load("character.json")
+    assert len(c["boroughs"]) == 33 and len(c["districts"]) >= 50
+    assert c["headlines"] and all(h["text"] for h in c["headlines"])
+    stages = {"Hot and still growing", "Established scene", "Emerging", "Steady"}
+    for a in c["boroughs"] + c["districts"]:
+        assert a["stage"] in stages and a["venues"] > 0
+        assert 0 <= a["chain_pct"] <= 100 and 0 <= a["fresh_pct"] <= 100
+        assert all(m["lq"] >= 1.5 for m in a["signature"])
+    assert c["pace"]["days_covered"] >= 1
+
+
+def test_operators_has_what_the_insights_tab_reads():
+    o = load("operators.json")
+    assert {"food_drink", "craft", "creative", "tech"} <= set(o["momentum"])
+    f = o["momentum"]["food_drink"]
+    assert f["last6"] > 500 and f["prior6"] > 500, "food and drink formation implausibly low"
+    assert len(o["seasonality"]["food_drink"]["months"]) == 12
+    assert len(o["districts"]) >= 50 and o["headlines"]
+    p = o["new_company_profile"]
+    assert p["companies"] > 1000 and 0 <= p["linked_pct"] <= 100
+    w = o["who_is_opening"]
+    assert w["matched"] <= w["new_premises_awaiting"] and w["examples"]
+    assert all(e["url"].startswith("https://find-and-update.company-information.service.gov.uk/company/") for e in w["examples"])
+
+
 @pytest.mark.parametrize(
     "name,budget_kb",
-    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("summary.json", 40)],
+    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("summary.json", 40),
+     ("character.json", 450), ("operators.json", 150)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller
 def test_size_budgets(name, budget_kb):

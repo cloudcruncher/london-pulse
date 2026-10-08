@@ -14,7 +14,7 @@ import pytest
 pw = pytest.importorskip("playwright.sync_api")
 URL = os.environ.get("SMOKE_URL", "").rstrip("/") + "/"
 pytestmark = pytest.mark.skipif(not os.environ.get("SMOKE_URL"), reason="SMOKE_URL not set")
-TABS = ["overview", "map", "area", "changes", "boroughs", "brands", "craft", "sql", "about"]
+TABS = ["overview", "insights", "map", "area", "changes", "boroughs", "brands", "craft", "sql", "about"]
 
 
 @pytest.fixture(scope="module")

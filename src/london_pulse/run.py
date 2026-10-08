@@ -56,7 +56,7 @@ def main() -> None:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "as_of": today.isoformat(),
         "rows": n, "previous_rows": prev_n, "changes": counts,
-        "schedule": {"fsa": "daily 06:30 UTC", "companies_house": "monthly, 3rd"},
+        "schedule": {"fsa": "daily 06:17 UTC", "companies_house": "monthly, 3rd"},
     }))
 
 

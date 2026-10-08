@@ -173,3 +173,28 @@ code{font-size:.92em}
 .maptools .note{margin:0;font-size:.78rem;background:color-mix(in srgb,var(--surface) 92%,transparent);padding:6px 10px;border-radius:10px}
 @media (max-width:760px){.maptools{max-width:none}.maptools .row{grid-template-columns:1fr}}
 #v-sql .row{flex-wrap:wrap;align-items:center}#v-sql .count{max-width:100%;overflow-wrap:anywhere}
+
+/* insights */
+.insight.k{display:block;text-decoration:none;color:inherit} a.insight.k:hover{outline:2px solid var(--accent)}
+.arealist li{display:block} .arealist .at{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.arealist .ameta{color:var(--muted);font-size:.84rem;margin-top:4px;text-align:left}
+.arealist .sig{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.sigchip{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:2px 9px;font-size:.78rem;text-align:left}
+.stg{border-radius:999px;padding:2px 9px;font-size:.76rem;font-weight:600;border:1px solid var(--line);color:var(--muted)}
+.stg-hot{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.stg-est{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-soft)}
+.stg-emerging{border-color:var(--accent);color:var(--accent)}
+.momgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px}
+.mom b.big{display:block;font-size:1.9rem;letter-spacing:-.03em} .mom h3{margin:0 0 4px;font-size:.95rem}
+.mom small{color:var(--muted);display:block;margin-top:4px}
+.mom .chart{height:56px;margin-top:8px}
+.verdict{font-size:.76rem;font-weight:600;border-radius:999px;padding:2px 9px;border:1px solid var(--line);color:var(--muted)}
+.verdict.accelerating{color:#1a8a4a;border-color:#1a8a4a}.verdict.slowing{color:#c0392b;border-color:#c0392b}
+.list li>a{min-width:0}
+/* tablet widths: ten tabs do not fit beside the brand, so the bar scrolls inside itself instead of widening the page */
+@media (min-width:761px) and (max-width:1100px){
+  .top-in{gap:8px} .brand{margin-right:0}
+  .tabs{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none} .tabs::-webkit-scrollbar{display:none}
+  .tabs a{flex:0 0 auto;padding:7px 9px} .tabs a i{display:none}
+}
+.arealist .stg-hot{color:var(--accent-ink)} .arealist .stg-est,.arealist .stg-emerging{color:var(--accent)}
