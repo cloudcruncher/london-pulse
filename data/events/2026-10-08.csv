@@ -1,0 +1,76 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-08,new,1999119,AMM Katal Bazar,Retailers - other,Tower Hamlets,E1 2PH,,AwaitingInspection,,
+2026-10-08,new,1986041,B Kitchen,Takeaway/sandwich shop,Tower Hamlets,E1 6BF,,AwaitingInspection,,
+2026-10-08,new,1999117,B Kitchen,Takeaway/sandwich shop,Tower Hamlets,E1 2BT,,AwaitingInspection,,
+2026-10-08,new,1999122,Cheese Pass,Mobile caterer,Tower Hamlets,E1 6ST,,AwaitingInspection,,
+2026-10-08,new,1999124,Coqfighter,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5HD,,AwaitingInspection,,
+2026-10-08,new,1999118,Flavour Bros!,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2PX,,AwaitingInspection,,
+2026-10-08,new,1999116,Las locas de Mexico,Other catering premises,Tower Hamlets,E14,,AwaitingInspection,,
+2026-10-08,new,80611,Mad Cats,Other catering premises,Tower Hamlets,E2 7DL,,1,,
+2026-10-08,new,1999126,Mama Roberta London,Other catering premises,Tower Hamlets,E3 4,,AwaitingInspection,,
+2026-10-08,new,1711683,Meli Melo,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6TD,,1,,
+2026-10-08,new,1999120,Munshi Restaurants Ltd,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6BD,,AwaitingInspection,,
+2026-10-08,new,1999123,Niche Delivery & Events,Other catering premises,Tower Hamlets,E2 9DU,,AwaitingInspection,,
+2026-10-08,new,1999115,Shareeb Ltd,Retailers - other,Tower Hamlets,E1 5,,AwaitingInspection,,
+2026-10-08,new,1999125,Sushan,Manufacturers/packers,Tower Hamlets,E22,,AwaitingInspection,,
+2026-10-08,new,1999121,Zula Burger,Takeaway/sandwich shop,Tower Hamlets,E1 6EA,,AwaitingInspection,,
+2026-10-08,rating_changed,1972351,Dubai Restaurant,Restaurant/Cafe/Canteen,Barnet,HA8 0LT,AwaitingInspection,3,-0.2649976,51.6016858
+2026-10-08,rating_changed,1999051,Friends,Restaurant/Cafe/Canteen,Barnet,N12 9BD,AwaitingInspection,4,-0.1592753,51.6128928
+2026-10-08,rating_changed,1986885,Haida Fastfood,Restaurant/Cafe/Canteen,Barnet,N20 9BH,AwaitingInspection,4,-0.1754963,51.6333291
+2026-10-08,rating_changed,1620255,Woodhouse Tandoori,Takeaway/sandwich shop,Barnet,N12 9BD,4,2,-0.159204,51.612892
+2026-10-08,rating_changed,1738467,Sakhi,Other catering premises,Bexley,DA6,5,4,,
+2026-10-08,rating_changed,709085,The Co-Operative,Retailers - supermarkets/hypermarkets,Bexley,DA16 2PQ,5,4,0.093377,51.457402
+2026-10-08,rating_changed,1615846,East Street Coffee,Restaurant/Cafe/Canteen,Bromley,BR1 1QX,5,4,0.0156608,51.4062266
+2026-10-08,rating_changed,1756540,Miso Noodle Bar,Restaurant/Cafe/Canteen,Bromley,BR1 1QX,5,3,0.0159022,51.4064833
+2026-10-08,rating_changed,1945703,BOVINE BURGER,Restaurant/Cafe/Canteen,Camden,WC1E 7DH,AwaitingInspection,3,-0.1319125,51.5199395
+2026-10-08,rating_changed,1206185,Lockes,Restaurant/Cafe/Canteen,Camden,WC2B 5AA,5,4,-0.1216369,51.515342
+2026-10-08,rating_changed,1648455,PAPA JOHN'S,Takeaway/sandwich shop,Camden,EC1M 3JB,2,4,-0.1064206,51.5208078
+2026-10-08,rating_changed,1290542,THE SHELL,Restaurant/Cafe/Canteen,Camden,WC1B 5AA,2,0,-0.1226534,51.5207629
+2026-10-08,rating_changed,1176067,Elroy's Chicken And Pizza,Takeaway/sandwich shop,Croydon,CR0 2JG,3,1,-0.0978264,51.3848149
+2026-10-08,rating_changed,1032743,Boston Manor Hotel,Hotel/bed & breakfast/guest house,Ealing,W7 2HJ,4,2,-0.3332496,51.5037733
+2026-10-08,rating_changed,1032928,Chilli Spice & Wine,Takeaway/sandwich shop,Ealing,W3 7SH,0,1,-0.247043,51.506509
+2026-10-08,rating_changed,1981926,Penang Tiffin,Restaurant/Cafe/Canteen,Ealing,W7 2HJ,AwaitingInspection,2,-0.3332496,51.5037733
+2026-10-08,rating_changed,1453156,Taste Of Punjab,Restaurant/Cafe/Canteen,Ealing,UB1 2JW,1,3,-0.3728159,51.5138435
+2026-10-08,rating_changed,1787118,Hilal Restaurant,Restaurant/Cafe/Canteen,Enfield,N18 2TZ,4,1,-0.06446,51.616162
+2026-10-08,rating_changed,1966438,Star of Spice,Restaurant/Cafe/Canteen,Greenwich,SE18 3TB,AwaitingInspection,4,0.0697612,51.481166
+2026-10-08,rating_changed,694929,Tai Tip Mein,Restaurant/Cafe/Canteen,Greenwich,SE18 6EX,4,1,0.0700863,51.4905668
+2026-10-08,rating_changed,1170507,Hanoi Bistro & Kitchen,Restaurant/Cafe/Canteen,Hackney,E8 3QE,1,0,-0.0559043,51.5402499
+2026-10-08,rating_changed,1970338,Stubby's,Restaurant/Cafe/Canteen,Hammersmith and Fulham,SW6 4HS,AwaitingInspection,4,-0.201143,51.476265
+2026-10-08,rating_changed,422854,Highgate Golf Club,Pub/bar/nightclub,Haringey,N6 4AH,5,4,-0.160381,51.577733
+2026-10-08,rating_changed,276361,Open Nearly All Hours,Retailers - other,Harrow,HA2 6EQ,2,4,-0.363604,51.589303
+2026-10-08,rating_changed,547218,Sweetburys Local,Retailers - other,Harrow,HA3 7AF,2,3,-0.33502,51.594854
+2026-10-08,rating_changed,1092953,Fab Thai Street Food,Takeaway/sandwich shop,Islington,EC2A 4JJ,2,1,-0.0846238,51.522567
+2026-10-08,rating_changed,1975661,Accent Catering @ Coombe Boys School,School/college/university,Kingston-Upon-Thames,KT3 6NT,AwaitingInspection,4,,
+2026-10-08,rating_changed,1533849,Manor Park Over 50's Social Club,Restaurant/Cafe/Canteen,Newham,E12 6QN,1,3,0.048087,51.550197
+2026-10-08,rating_changed,1730469,@homepizza,Restaurant/Cafe/Canteen,Tower Hamlets,E14 4SG,5,AwaitingInspection,,
+2026-10-08,rating_changed,1786978,Bow Grill,Restaurant/Cafe/Canteen,Tower Hamlets,E3 3EW,4,5,,
+2026-10-08,rating_changed,148894,Elizabeth Selby Nursery/Infants Kitchen,School/college/university,Tower Hamlets,E2 6PP,5,2,,
+2026-10-08,rating_changed,1992816,Kinder Island,Caring Premises,Tower Hamlets,E3 2PS,AwaitingInspection,Exempt,,
+2026-10-08,rating_changed,41389,London Independent Hospital Restaurant,Caring Premises,Tower Hamlets,E1 4NL,5,3,,
+2026-10-08,rating_changed,1987976,"Smashio, The Sushi Co",Takeaway/sandwich shop,Tower Hamlets,E14 9RP,AwaitingInspection,4,,
+2026-10-08,rating_changed,634021,Spice Hut,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4TN,5,AwaitingInspection,,
+2026-10-08,rating_changed,1450804,The Sushi Co,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9RB,4,3,,
+2026-10-08,rating_changed,1690101,Tiella,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7RL,AwaitingInspection,3,-0.0682071,51.5303369
+2026-10-08,rating_changed,1780176,Yume Sushi,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6HP,3,2,,
+2026-10-08,rating_changed,1783351,Ruff's,Restaurant/Cafe/Canteen,Waltham Forest,E17 9NJ,5,1,-0.0131352,51.5825457
+2026-10-08,rating_changed,1984336,Syed's Kitchen & grill,Takeaway/sandwich shop,Waltham Forest,E4 8YJ,AwaitingInspection,4,-0.0250393,51.6082938
+2026-10-08,rating_changed,1571575,Buzz Bingo,Restaurant/Cafe/Canteen,Wandsworth,SW17 9NA,5,4,-0.1669272,51.426473
+2026-10-08,rating_changed,1571903,Panadam Deli,Other catering premises,Wandsworth,SW17 7QQ,1,2,-0.1558698,51.4402023
+2026-10-08,rating_changed,1987133,THE PURPLE OWL,Restaurant/Cafe/Canteen,Wandsworth,SW18 1EG,AwaitingInspection,1,-0.191936,51.4603241
+2026-10-08,rating_changed,1982129,Al Mustafa,Retailers - other,Westminster,W2 2HX,AwaitingInspection,3,-0.1647351,51.5159702
+2026-10-08,rating_changed,427946,Kentucky Fried Chicken,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,3,4,,
+2026-10-08,rating_changed,413707,Maui,Restaurant/Cafe/Canteen,Westminster,W1W 6HF,4,AwaitingPublication,-0.1420577,51.5200017
+2026-10-08,rating_changed,1728413,Sanderson Hotel,Hotel/bed & breakfast/guest house,Westminster,W1T 3NG,AwaitingPublication,5,-0.1373935,51.5177335
+2026-10-08,removed,1979220,Basecamp Childcare,Caring Premises,Bexley,DA1 4RS,AwaitingInspection,,0.183041006326675,51.4552459716797
+2026-10-08,removed,1950812,Blend And Bite,Mobile caterer,Bexley,DA6 7JN,AwaitingInspection,,,
+2026-10-08,removed,1837780,Send-IIT,Caring Premises,Bexley,DA17 5HH,AwaitingInspection,,0.1453778,51.491039
+2026-10-08,removed,1697584,Abedin's Fruit & Veg,Retailers - other,Tower Hamlets,E2 0AH,4,,-0.062558,51.5265387
+2026-10-08,removed,1941917,"BowBurgers,BackyardBurgers,ProjectBurger,BurgerYard,Urbun,BunYum",Other catering premises,Tower Hamlets,E3 4UR,AwaitingInspection,,-0.0231079,51.5240191
+2026-10-08,removed,1737482,"Brick Boi Burgers,Bricks Biryani, Nawabi,Sizzle & Stack",Takeaway/sandwich shop,Tower Hamlets,E1 6SB,5,,-0.0718281,51.524534
+2026-10-08,removed,1932678,Chamigos - Fusion Fruit Slush,Retailers - other,Tower Hamlets,E2 0EL,AwaitingInspection,,-0.055839,51.526472
+2026-10-08,removed,1659241,Fatchoy Canteen,Other catering premises,Tower Hamlets,E1 6PR,5,,-0.0719267,51.5190854
+2026-10-08,removed,1746009,Frequency Aldgate,Restaurant/Cafe/Canteen,Tower Hamlets,E1 8EN,5,,-0.0708385,51.5144812
+2026-10-08,removed,1901202,Geisha's Rice Ball,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EA,4,,-0.013793,51.511415
+2026-10-08,removed,1704610,Pandas Pot,Other catering premises,Tower Hamlets,E1 6SB,5,,-0.071702,51.523955
+2026-10-08,removed,1695904,Smash N'Dash,Takeaway/sandwich shop,Tower Hamlets,E1 6RL,5,,-0.071697,51.519638
+2026-10-08,removed,1699358,"Thai Lane, Sizzling Wok, Oriental Pot, Noodle King, Thai Central",Other catering premises,Tower Hamlets,E1 6SB,5,,-0.071702,51.523955
