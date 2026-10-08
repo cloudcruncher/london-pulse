@@ -10,7 +10,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: london-pulse
+  group: london-pulse-context
   cancel-in-progress: false
 
 jobs:
@@ -42,5 +42,9 @@ jobs:
           git add site/api/v1/stations.json site/api/v1/crime.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "data: stations and crime $(date -u +%F)"
-          git pull --rebase -X theirs -q && git push
+          for i in 1 2 3; do
+            git pull --rebase -X theirs -q && git push && break
+            [ "$i" = 3 ] && { echo "::error::could not push"; exit 1; }
+            sleep $((i * 5))
+          done
           gh workflow run daily.yml

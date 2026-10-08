@@ -10,7 +10,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: london-pulse
+  group: london-pulse-companies
   cancel-in-progress: false
 
 jobs:

@@ -8,7 +8,7 @@ on:
 permissions: {}   # least privilege: each job declares what it needs
 
 concurrency:
-  group: london-pulse
+  group: london-pulse-daily
   cancel-in-progress: false
 
 jobs:
