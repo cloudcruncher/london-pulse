@@ -5,6 +5,21 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,new,1999582,KFC London Ludgate Hill,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7DE,,AwaitingInspection,,
 2026-10-09,new,1999583,Magdalene,Restaurant/Cafe/Canteen,City of London Corporation,EC2N 1AR,,AwaitingInspection,,
 2026-10-09,new,1999580,St Barts,Pub/bar/nightclub,City of London Corporation,EC1A 9DY,,AwaitingInspection,,
+2026-10-09,new,1999823,Around the Table ? a Culinary studio,Other catering premises,Harrow,HA7,,AwaitingInspection,,
+2026-10-09,new,1999826,Dolce Pastry Cakes,Manufacturers/packers,Harrow,HA3,,AwaitingInspection,,
+2026-10-09,new,1999821,Freshly Cubed,Manufacturers/packers,Harrow,HA2,,AwaitingInspection,,
+2026-10-09,new,1999828,Girnar Cafe,Restaurant/Cafe/Canteen,Harrow,HA3 7BB,,AwaitingInspection,,
+2026-10-09,new,1999815,"Impact Food Group @ Weald Rise Primary School, Weald Rise Primary School",School/college/university,Harrow,HA3 7DH,,5,,
+2026-10-09,new,1999818,Leaf & Loop,Retailers - other,Harrow,HA5,,AwaitingInspection,,
+2026-10-09,new,1999825,Mae&Sonam,Other catering premises,Harrow,HA7,,AwaitingInspection,,
+2026-10-09,new,1999817,NARMADAS LOUNGE,Pub/bar/nightclub,Harrow,HA8 5QL,,AwaitingInspection,,
+2026-10-09,new,1999819,Parasmani sweet and Indian street food,Restaurant/Cafe/Canteen,Harrow,HA3 5QH,,AwaitingInspection,,
+2026-10-09,new,1999814,"Pinner & Grammarians Rugby F.C, Pinner Rugby Club Pavilion, Shaftesbury Playing Field",Restaurant/Cafe/Canteen,Harrow,HA5 4PW,,3,,
+2026-10-09,new,1999816,Shree Sai Stores,Retailers - other,Harrow,HA3 9HU,,AwaitingInspection,,
+2026-10-09,new,1999827,Sim & Spice,Other catering premises,Harrow,HA5,,AwaitingInspection,,
+2026-10-09,new,1999824,Siya's kitchen,Restaurant/Cafe/Canteen,Harrow,HA2 9SE,,AwaitingInspection,,
+2026-10-09,new,1999820,Trinco Bay,Restaurant/Cafe/Canteen,Harrow,HA2 7LU,,AwaitingInspection,,
+2026-10-09,new,1999822,Trivira,Retailers - other,Harrow,HA3,,AwaitingInspection,,
 2026-10-09,new,1999732,B Kitchen,Takeaway/sandwich shop,Lambeth,SW8 2LN,,AwaitingInspection,,
 2026-10-09,new,1999738,Black Sheep Coffee,Restaurant/Cafe/Canteen,Lambeth,SE1 7BH,,AwaitingInspection,,
 2026-10-09,new,1960578,Crafters Oasis,Pub/bar/nightclub,Lambeth,SW9 8JB,,5,,
@@ -37,8 +52,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,rating_changed,316126,Despina Foods,Retailers - other,Enfield,N11 1NL,3,1,-0.140412,51.616823
 2026-10-09,rating_changed,1532423,HI WOK,Restaurant/Cafe/Canteen,Enfield,N9 0TY,3,0,-0.0590749,51.6246889
 2026-10-09,rating_changed,695512,Mini Market,Retailers - other,Greenwich,SE7 8DA,4,3,0.0488816,51.4876839
+2026-10-09,rating_changed,1958188,Brewlato,Restaurant/Cafe/Canteen,Harrow,HA2 7HE,AwaitingInspection,5,,
+2026-10-09,rating_changed,1962580,Cedars Pharmacy,Retailers - other,Harrow,HA2 6ND,AwaitingInspection,Exempt,,
 2026-10-09,rating_changed,551743,Day 1 Express Ltd,Retailers - other,Harrow,HA1 4EY,3,4,-0.353897,51.5817141
+2026-10-09,rating_changed,277199,Drugsrus Limited,Distributors/Transporters,Harrow,HA1 1XD,Exempt,5,,
 2026-10-09,rating_changed,1948717,Pho & Co,Restaurant/Cafe/Canteen,Harrow,HA2 9AJ,AwaitingInspection,4,-0.3736223,51.5617087
+2026-10-09,rating_changed,1974208,Station express,Restaurant/Cafe/Canteen,Harrow,HA3 5BP,AwaitingInspection,3,,
 2026-10-09,rating_changed,518803,Tesco,Retailers - supermarkets/hypermarkets,Hillingdon,HA5 2PA,5,4,-0.409558,51.599053
 2026-10-09,rating_changed,490019,Singapore Garden,Restaurant/Cafe/Canteen,Hounslow,W4 5TT,5,2,-0.2684959,51.4930158
 2026-10-09,rating_changed,1615612,24 The Oval,Restaurant/Cafe/Canteen,Lambeth,SW9 0JG,3,5,,
@@ -72,6 +91,57 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,removed,898161,Marks & Spencer Food To Go Ludgate,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 2AF,5,,-0.104925,51.514343
 2026-10-09,removed,1666609,The City Bar,Restaurant/Cafe/Canteen,City of London Corporation,E16 2PX,5,,,
 2026-10-09,removed,1914087,The Livery,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QP,AwaitingInspection,,-0.0832566,51.5173649
+2026-10-09,removed,1948714,Aurelyn,Retailers - other,Harrow,HA4 0QL,AwaitingInspection,,-0.3796856,51.5587106
+2026-10-09,removed,1989440,Beetthejunk,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,1730643,Bunify Ltd.,Takeaway/sandwich shop,Harrow,HA3 7AB,5,,-0.3349022,51.5937429
+2026-10-09,removed,1724204,Burnt Oak Supermarket,Retailers - other,Harrow,HA8 5ED,2,,-0.2726226,51.604502
+2026-10-09,removed,1955982,CASA ELO & SAR,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,1945723,CHAI CHASKAA,Other catering premises,Harrow,HA1,AwaitingInspection,,,
+2026-10-09,removed,1948716,Carina's Kitchen,Other catering premises,Harrow,HA8,AwaitingInspection,,,
+2026-10-09,removed,457844,Cedars Pharmacy / Dental Practice,Retailers - other,Harrow,HA2 6ND,Exempt,,-0.355458,51.601391
+2026-10-09,removed,1969758,Ceyvora,Retailers - other,Harrow,HA8,AwaitingInspection,,,
+2026-10-09,removed,816527,Everest Abercorn,Restaurant/Cafe/Canteen,Harrow,HA7 3BU,5,,-0.3158234,51.6210466
+2026-10-09,removed,1984417,GURU KRUPA CREATION UK LTD,Retailers - other,Harrow,HA3 5RN,AwaitingInspection,,,
+2026-10-09,removed,1960473,Happy Berry Box,Other catering premises,Harrow,HA1,AwaitingInspection,,,
+2026-10-09,removed,1878243,Himalayan pink salt,Retailers - other,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,1604075,ISS Facility Services Education,Other catering premises,Harrow,HA1 3SB,5,,,
+2026-10-09,removed,276654,J&B Webber,Retailers - other,Harrow,HA1 1PG,Exempt,,-0.340924,51.583778
+2026-10-09,removed,276531,Jameson's Bar,Pub/bar/nightclub,Harrow,HA8 5QL,4,,-0.278564,51.597663
+2026-10-09,removed,1830283,Junior Adventures Group @ The Welldone Park HA2,School/college/university,Harrow,HA2 8LS,1,,-0.355676,51.560975
+2026-10-09,removed,1945726,KAVYA CONSULTANTS LIMITED,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,276562,KFC,Takeaway/sandwich shop,Harrow,HA3 6HF,5,,-0.339603,51.605359
+2026-10-09,removed,1987036,Kanpeki Pizza,Other catering premises,Harrow,HA1,AwaitingInspection,,,
+2026-10-09,removed,570676,Kapour Local,Retailers - other,Harrow,HA3 6NS,4,,-0.358458,51.6050718
+2026-10-09,removed,1732586,Karachi Grub ltd,Other catering premises,Harrow,HA1,5,,,
+2026-10-09,removed,1942855,Karizma Kitchen,Other catering premises,Harrow,HA5,AwaitingInspection,,,
+2026-10-09,removed,276799,Lloyds Pharmacy,Retailers - other,Harrow,HA3 8SA,Exempt,,-0.318066,51.600826
+2026-10-09,removed,1945729,MIDORI LAB,Other catering premises,Harrow,HA2,AwaitingInspection,,,
+2026-10-09,removed,1945728,MY ENDLESS ESSENTIALS LTD,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,1974210,Millets & Grains UK,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-10-09,removed,276649,Mr Chans,Restaurant/Cafe/Canteen,Harrow,HA2 9AJ,3,,-0.374294,51.561567
+2026-10-09,removed,1923989,Najib Halal Food,Mobile caterer,Harrow,HA2,AwaitingInspection,,,
+2026-10-09,removed,276696,Norwood Ravenswood,Caring Premises,Harrow,HA7 2RP,5,,-0.31026,51.610003
+2026-10-09,removed,277076,Overton & Pickup Pharmacy,Retailers - other,Harrow,HA3 8DQ,Exempt,,-0.305435,51.587165
+2026-10-09,removed,493159,Pizza Hut,Takeaway/sandwich shop,Harrow,HA1 3QN,4,,-0.335752,51.557816
+2026-10-09,removed,1337918,Poundwise Discount Goods,Retailers - other,Harrow,HA8 5EP,AwaitingInspection,,-0.2677054,51.6005091
+2026-10-09,removed,1211804,Principals by CH&CO,Other catering premises,Harrow,HA8 6JH,5,,,
+2026-10-09,removed,1966371,RAGA KITCHEN LTD,Retailers - other,Harrow,HA2,AwaitingInspection,,,
+2026-10-09,removed,1974214,Ray's tiramisu,Other catering premises,Harrow,HA2,AwaitingInspection,,,
+2026-10-09,removed,1942860,SALASAR SWEET,Retailers - other,Harrow,HA3 5QH,AwaitingInspection,,-0.3363887,51.5939667
+2026-10-09,removed,1913683,SIGMA UNION,Restaurant/Cafe/Canteen,Harrow,HA1 4JD,AwaitingInspection,,-0.3486851,51.5813212
+2026-10-09,removed,1761246,SUKHADI KITCHEN,Other catering premises,Harrow,HA3,5,,,
+2026-10-09,removed,1974218,Samatra,Retailers - other,Harrow,HA2 9TL,AwaitingInspection,,-0.3705793,51.5741325
+2026-10-09,removed,457842,Saville Pharmacy,Retailers - other,Harrow,HA2 7SR,Exempt,,-0.362207,51.585183
+2026-10-09,removed,547244,Shazans Food Limited,Retailers - other,Harrow,HA1 2TU,5,,,
+2026-10-09,removed,276791,Sohni Food & Wine,Retailers - other,Harrow,HA3 7HH,4,,-0.328471,51.604131
+2026-10-09,removed,1971806,"Station Express,",Retailers - other,Harrow,HA3 5BP,3,,-0.3344949,51.5924561
+2026-10-09,removed,1848817,Station Food Centre,Retailers - supermarkets/hypermarkets,Harrow,HA1 2DX,3,,-0.3331408,51.5812031
+2026-10-09,removed,1899139,Taste of Watan,Restaurant/Cafe/Canteen,Harrow,HA1 3QS,1,,,
+2026-10-09,removed,1927912,The Bodan's Kitchen,Other catering premises,Harrow,HA2,AwaitingInspection,,,
+2026-10-09,removed,1672048,The Pantry at Whitefriars Through School,Other catering premises,Harrow,HA3 5RQ,5,,-0.340726,51.598343
+2026-10-09,removed,1242514,Trinco Bay Cocktail Bar & Restaurant,Restaurant/Cafe/Canteen,Harrow,HA2 7LU,3,,-0.37036,51.577581
+2026-10-09,removed,1948723,VENSI TRADERS LIMITED,Retailers - other,Harrow,HA7,AwaitingInspection,,,
+2026-10-09,removed,1948715,the street food cafe,Restaurant/Cafe/Canteen,Harrow,HA7 4EB,AwaitingInspection,,-0.3116179,51.6181629
 2026-10-09,removed,777800,Bistro Union,Restaurant/Cafe/Canteen,Lambeth,SW4 9NG,5,,-0.139875,51.454176
 2026-10-09,removed,1976557,Brasa Brazao,Takeaway/sandwich shop,Lambeth,SW16,AwaitingInspection,,,
 2026-10-09,removed,483906,Elmwood School,School/college/university,Lambeth,SE27 9RR,5,,-0.092479,51.431698
