@@ -5,6 +5,20 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,new,1999582,KFC London Ludgate Hill,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7DE,,AwaitingInspection,,
 2026-10-09,new,1999583,Magdalene,Restaurant/Cafe/Canteen,City of London Corporation,EC2N 1AR,,AwaitingInspection,,
 2026-10-09,new,1999580,St Barts,Pub/bar/nightclub,City of London Corporation,EC1A 9DY,,AwaitingInspection,,
+2026-10-09,new,1999732,B Kitchen,Takeaway/sandwich shop,Lambeth,SW8 2LN,,AwaitingInspection,,
+2026-10-09,new,1999738,Black Sheep Coffee,Restaurant/Cafe/Canteen,Lambeth,SE1 7BH,,AwaitingInspection,,
+2026-10-09,new,1960578,Crafters Oasis,Pub/bar/nightclub,Lambeth,SW9 8JB,,5,,
+2026-10-09,new,1999740,Duke Of Sussex,Pub/bar/nightclub,Lambeth,SE1 7AY,,AwaitingInspection,,
+2026-10-09,new,1999737,Gail's Bakery Brixton,Restaurant/Cafe/Canteen,Lambeth,SW9 8HE,,AwaitingInspection,,
+2026-10-09,new,1999742,Heart Eats Ltd,Other catering premises,Lambeth,"",,AwaitingInspection,,
+2026-10-09,new,1999739,JoGa Catering,Other catering premises,Lambeth,SE1 8SS,,AwaitingInspection,,
+2026-10-09,new,1989393,Mien Lounge,Restaurant/Cafe/Canteen,Lambeth,SE11 5AW,,5,,
+2026-10-09,new,1999743,Roam Community Cafe,Restaurant/Cafe/Canteen,Lambeth,SE11 5NL,,AwaitingInspection,,
+2026-10-09,new,1999727,Smarty Kitchen,Other catering premises,Lambeth,SW12,,AwaitingInspection,,
+2026-10-09,new,1989401,The Prepbank,Restaurant/Cafe/Canteen,Lambeth,SW8 2LD,,AwaitingInspection,,
+2026-10-09,new,1999734,The Seasoned Table,Other catering premises,Lambeth,SW9,,AwaitingInspection,,
+2026-10-09,new,1999729,The Seychelles Kitchen Ltd,Other catering premises,Lambeth,SW9 8BP,,AwaitingInspection,,
+2026-10-09,new,1999730,The Sound Bank,Takeaway/sandwich shop,Lambeth,SE11 4PT,,AwaitingInspection,,
 2026-10-09,new,1999590,Jade Pavilion,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7TD,,AwaitingInspection,,
 2026-10-09,rating_changed,1639016,Aces Brunch,Restaurant/Cafe/Canteen,Bexley,DA14 6EN,1,4,0.1051841,51.4252964
 2026-10-09,rating_changed,1422443,Local Mini Market,Retailers - other,Bexley,DA7 6HD,4,2,0.157818,51.465523
@@ -27,6 +41,20 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,rating_changed,1948717,Pho & Co,Restaurant/Cafe/Canteen,Harrow,HA2 9AJ,AwaitingInspection,4,-0.3736223,51.5617087
 2026-10-09,rating_changed,518803,Tesco,Retailers - supermarkets/hypermarkets,Hillingdon,HA5 2PA,5,4,-0.409558,51.599053
 2026-10-09,rating_changed,490019,Singapore Garden,Restaurant/Cafe/Canteen,Hounslow,W4 5TT,5,2,-0.2684959,51.4930158
+2026-10-09,rating_changed,1615612,24 The Oval,Restaurant/Cafe/Canteen,Lambeth,SW9 0JG,3,5,,
+2026-10-09,rating_changed,1931136,Brazilian Centre,Retailers - other,Lambeth,SE27 9AU,AwaitingInspection,5,,
+2026-10-09,rating_changed,483174,Crown Lane Primary School,School/college/university,Lambeth,SW16 3HX,4,5,,
+2026-10-09,rating_changed,1986521,Jones The Grocer,Restaurant/Cafe/Canteen,Lambeth,SE1 7LY,AwaitingInspection,5,,
+2026-10-09,rating_changed,1071964,Kishmish,Restaurant/Cafe/Canteen,Lambeth,SE19 1UA,3,5,,
+2026-10-09,rating_changed,911508,Liquor Supply,Retailers - other,Lambeth,SW9 8LF,4,AwaitingInspection,,
+2026-10-09,rating_changed,858103,Mesmer Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 9PY,0,2,,
+2026-10-09,rating_changed,1107545,Okan,Restaurant/Cafe/Canteen,Lambeth,SE1 7PB,5,4,,
+2026-10-09,rating_changed,1558891,Pear Tree Cafe Clapham,Restaurant/Cafe/Canteen,Lambeth,"",4,5,,
+2026-10-09,rating_changed,1199330,Peri Peri Marleys,Takeaway/sandwich shop,Lambeth,SW16 6NN,3,5,,
+2026-10-09,rating_changed,1942982,Pizza Express,Restaurant/Cafe/Canteen,Lambeth,SW9 8FP,AwaitingInspection,5,,
+2026-10-09,rating_changed,1836749,Pizzafad,Takeaway/sandwich shop,Lambeth,SW9 9AE,4,5,,
+2026-10-09,rating_changed,1986526,Polish Deli,Retailers - other,Lambeth,SE1 8XX,AwaitingInspection,5,,
+2026-10-09,rating_changed,1982961,Tesco,Retailers - supermarkets/hypermarkets,Lambeth,SE1 7TJ,AwaitingInspection,5,,
 2026-10-09,rating_changed,1823209,AJS Atwal Supermarket,Retailers - other,Newham,E13 9BA,1,4,0.033986,51.534472
 2026-10-09,rating_changed,1961931,New Tin Tin,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 1NH,AwaitingInspection,4,,
 2026-10-09,rating_changed,1752746,B.Bakery,Mobile caterer,Tower Hamlets,E14 9TS,5,0,-0.0130936,51.499416
@@ -44,3 +72,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,removed,898161,Marks & Spencer Food To Go Ludgate,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 2AF,5,,-0.104925,51.514343
 2026-10-09,removed,1666609,The City Bar,Restaurant/Cafe/Canteen,City of London Corporation,E16 2PX,5,,,
 2026-10-09,removed,1914087,The Livery,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QP,AwaitingInspection,,-0.0832566,51.5173649
+2026-10-09,removed,777800,Bistro Union,Restaurant/Cafe/Canteen,Lambeth,SW4 9NG,5,,-0.139875,51.454176
+2026-10-09,removed,1976557,Brasa Brazao,Takeaway/sandwich shop,Lambeth,SW16,AwaitingInspection,,,
+2026-10-09,removed,483906,Elmwood School,School/college/university,Lambeth,SE27 9RR,5,,-0.092479,51.431698
+2026-10-09,removed,484730,Gourmet Pizza,Restaurant/Cafe/Canteen,Lambeth,SE1 9PP,5,,,
+2026-10-09,removed,1766852,Holroyd Howe @ Rosemead Pre-Prep School,Other catering premises,Lambeth,SE21 8HZ,5,,-0.1016442,51.4394267
+2026-10-09,removed,1289626,No56 Ltd,Restaurant/Cafe/Canteen,Lambeth,SW4 7BG,5,,-0.1353923,51.4601215
+2026-10-09,removed,482983,The Duke Of Sussex,Pub/bar/nightclub,Lambeth,SE1 7AY,5,,-0.11026,51.501048
+2026-10-09,removed,729733,The Shrub & Shutter,Pub/bar/nightclub,Lambeth,SW9 8QH,3,,-0.108348,51.463024
+2026-10-09,removed,1113402,Young People Matter - After School Club,Other catering premises,Lambeth,SW16 5AN,5,,-0.141742,51.414216
