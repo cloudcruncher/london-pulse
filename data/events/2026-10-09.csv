@@ -1,0 +1,24 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-09,rating_changed,1639016,Aces Brunch,Restaurant/Cafe/Canteen,Bexley,DA14 6EN,1,4,0.1051841,51.4252964
+2026-10-09,rating_changed,1422443,Local Mini Market,Retailers - other,Bexley,DA7 6HD,4,2,0.157818,51.465523
+2026-10-09,rating_changed,426138,City News,Retailers - other,Camden,NW1 1JD,0,1,-0.1290268,51.5284456
+2026-10-09,rating_changed,1813663,Kiki Restaurant,Restaurant/Cafe/Canteen,Camden,NW5 2JT,3,0,-0.1414892,51.5484636
+2026-10-09,rating_changed,426431,Sensations Cafe,Restaurant/Cafe/Canteen,Camden,W1T 6NL,3,4,-0.1409741,51.5225384
+2026-10-09,rating_changed,1756312,Social Pantry,Other catering premises,City of London Corporation,EC4N 8BH,5,4,-0.089494,51.513221
+2026-10-09,rating_changed,1955611,Pizza Hut,Takeaway/sandwich shop,Croydon,CR2 6AJ,AwaitingInspection,4,-0.0992849990725517,51.3515396118164
+2026-10-09,rating_changed,1934833,RKS Crepe & Spicy,Takeaway/sandwich shop,Croydon,CR8 2AY,AwaitingInspection,4,-0.115110002458096,51.3379173278809
+2026-10-09,rating_changed,1733294,Balaji Foods,Manufacturers/packers,Ealing,UB1 2FJ,3,1,-0.3737833,51.5320568
+2026-10-09,rating_changed,316126,Despina Foods,Retailers - other,Enfield,N11 1NL,3,1,-0.140412,51.616823
+2026-10-09,rating_changed,1532423,HI WOK,Restaurant/Cafe/Canteen,Enfield,N9 0TY,3,0,-0.0590749,51.6246889
+2026-10-09,rating_changed,695512,Mini Market,Retailers - other,Greenwich,SE7 8DA,4,3,0.0488816,51.4876839
+2026-10-09,rating_changed,551743,Day 1 Express Ltd,Retailers - other,Harrow,HA1 4EY,3,4,-0.353897,51.5817141
+2026-10-09,rating_changed,1948717,Pho & Co,Restaurant/Cafe/Canteen,Harrow,HA2 9AJ,AwaitingInspection,4,-0.3736223,51.5617087
+2026-10-09,rating_changed,518803,Tesco,Retailers - supermarkets/hypermarkets,Hillingdon,HA5 2PA,5,4,-0.409558,51.599053
+2026-10-09,rating_changed,490019,Singapore Garden,Restaurant/Cafe/Canteen,Hounslow,W4 5TT,5,2,-0.2684959,51.4930158
+2026-10-09,rating_changed,1823209,AJS Atwal Supermarket,Retailers - other,Newham,E13 9BA,1,4,0.033986,51.534472
+2026-10-09,rating_changed,1961931,New Tin Tin,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 1NH,AwaitingInspection,4,,
+2026-10-09,rating_changed,1752746,B.Bakery,Mobile caterer,Tower Hamlets,E14 9TS,5,0,-0.0130936,51.499416
+2026-10-09,rating_changed,65628,Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4AL,2,1,-0.026236,51.517947
+2026-10-09,rating_changed,1966143,Hopers' Base,Restaurant/Cafe/Canteen,Westminster,WC2N 4JS,AwaitingInspection,3,-0.1268511,51.5112077
+2026-10-09,rating_changed,1243405,PAD THAI HOUSE,Takeaway/sandwich shop,Westminster,W1K 6ZA,3,2,,
+2026-10-09,rating_changed,1846192,SHREE KRISHNA VADA PAV,Restaurant/Cafe/Canteen,Westminster,W1W 8DS,2,3,-0.1393133,51.5166039
