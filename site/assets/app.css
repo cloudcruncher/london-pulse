@@ -304,3 +304,5 @@ a.insight.k:hover{transform:translateY(-2px);box-shadow:0 0 0 2px var(--accent),
 }
 
 .prov{margin:14px 0 0;font-size:.82rem}
+
+.proof{margin:14px 0;border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 14px;background:var(--surface-2)}.proof summary{cursor:pointer;font-weight:600}.proof h4{margin:14px 0 6px}.proof small{color:var(--muted)}

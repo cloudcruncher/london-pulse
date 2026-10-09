@@ -32,6 +32,36 @@ IMD_CSV = ("https://assets.publishing.service.gov.uk/media/691ded56d140bbbaa59a2
            "File_7_IoD2025_All_Ranks_Scores_Deciles_Population_Denominators.csv")
 INCOME_XLSX = ("https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/"
                "smallareaincomeestimatesformiddlelayersuperoutputareasenglandandwales/financialyearending2023/datasetfinal.xlsx")
+SOURCES = [
+    {"id": "tenure", "name": "Census 2021, TS054 Tenure (households, by LSOA)", "publisher": "Office for National Statistics, via Nomis",
+     "url": "https://www.nomisweb.co.uk/census/2021/ts054", "licence": "OGL v3.0", "vintage": "Census day 21 March 2021",
+     "caveat": "A count of households on census day. Council stock changes (right to buy, sales, new build), so today's figure can differ."},
+    {"id": "deprivation", "name": "English Indices of Deprivation 2025: income score, deciles and population (File 7)",
+     "publisher": "Ministry of Housing, Communities and Local Government",
+     "url": "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025", "licence": "OGL v3.0",
+     "vintage": "Published 2025; population is the mid-2022 estimate",
+     "caveat": "Ranks areas against each other (England-wide); it does not measure how much more deprived one is than another."},
+    {"id": "income", "name": "Income estimates for small areas, England and Wales, FYE 2023 (MSOA)", "publisher": "Office for National Statistics",
+     "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/smallareaincomeestimatesformiddlelayersuperoutputareasenglandandwales",
+     "licence": "OGL v3.0", "vintage": "Financial year April 2022 to March 2023",
+     "caveat": "Model-based estimate (survey data modelled to small areas), not a count. Published for areas of ~8,000 people, so every neighbourhood inherits its MSOA's figure; a confidence interval is published and shown."},
+    {"id": "crime", "name": "Street-level crime", "publisher": "data.police.uk (police forces of England and Wales)",
+     "url": "https://data.police.uk/data/", "licence": "OGL v3.0", "vintage": "The three months in crime_months",
+     "caveat": "Crimes recorded by police, not all crimes committed. Locations are snapped to the nearest anonymised street point. Counted here by the neighbourhood that point falls in. Busy centres record visitors' crimes; it says little about how safe a street feels."},
+    {"id": "venues", "name": "Food Hygiene Rating Scheme establishments", "publisher": "Food Standards Agency",
+     "url": "https://ratings.food.gov.uk/open-data", "licence": "OGL v3.0", "vintage": "Daily snapshot",
+     "caveat": "Used only as a footfall proxy to flag busy centres (food premises per resident); not a count of people."},
+    {"id": "boundaries", "name": "LSOA (December 2021) boundaries, generalised (BGC V5)", "publisher": "ONS Open Geography Portal",
+     "url": "https://geoportal.statistics.gov.uk/", "licence": "OGL v3.0", "vintage": "2021 boundaries",
+     "caveat": "Generalised (simplified) outlines, accurate to a few tens of metres; crimes right on an edge can land in the neighbouring area."},
+]
+# URL templates a reader can click to check a neighbourhood's figures at source ({code} = LSOA code, {lat},{lng},{month} for crime)
+PROOF = {
+    "tenure": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2072_1.data.csv?date=latest&geography={code}&c2021_tenure_9=0,4,5,1001,1004&measures=20100&select=geography_name,c2021_tenure_9_name,obs_value",
+    "crime": "https://data.police.uk/api/crimes-street/all-crime?lat={lat}&lng={lng}&date={month}",
+    "deprivation": "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025",
+    "income": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/smallareaincomeestimatesformiddlelayersuperoutputareasenglandandwales",
+}
 MIN_POP = 500             # below this a rate per 1,000 residents is noise (central business districts)
 BANDS = [(0, 5), (5, 15), (15, 30), (30, 101)]   # council share of households, %
 
@@ -99,7 +129,8 @@ def load_reference(con: duckdb.DuckDBPyConnection, work: Path) -> None:
     con.execute(f"""
         CREATE TABLE income AS
         SELECT b."MSOA name" AS msoa, b."Disposable (net) annual income before housing costs (£)"::INT AS net_bhc,
-               a."Disposable (net) annual income after housing costs (£)"::INT AS net_ahc
+               a."Disposable (net) annual income after housing costs (£)"::INT AS net_ahc,
+               a."Confidence interval (£)"::INT AS ci_ahc
         FROM {sheet("Net income before housing costs")} b
         JOIN {sheet("Net income after housing costs")} a USING ("MSOA code")
         WHERE b."MSOA code" IS NOT NULL""")
@@ -196,18 +227,18 @@ def build(fsa_parquet: Path, points_parquet: Path, api_dir: Path, work: Path, mo
         crimes.setdefault(code, [0] * len(cats))[cats.index(cat)] = n
     recs = con.execute("""
         SELECT i.code, i.name, i.borough, i.pop, i.imd_decile, i.income_dep, i.income_decile, t.hh, t.council, t.other_social, t.private, t.owned,
-               inc.net_bhc, inc.net_ahc, coalesce(v.n, 0) AS venues, ST_X(ST_Centroid(l.geom)) AS lon, ST_Y(ST_Centroid(l.geom)) AS lat
+               inc.net_bhc, inc.net_ahc, inc.ci_ahc, coalesce(v.n, 0) AS venues, ST_X(ST_Centroid(l.geom)) AS lon, ST_Y(ST_Centroid(l.geom)) AS lat
         FROM imd i JOIN lsoa l USING (code) JOIN tenure t USING (code)
         LEFT JOIN income inc ON inc.msoa = regexp_replace(i.name, '[A-Z]$', '')
         LEFT JOIN venue_lsoa v USING (code) ORDER BY i.code""").fetchall()
     rows = []
-    for code, name, borough, pop, dec, dep, idec, hh, council, other, private, owned, bhc, ahc, venues, lon, lat in recs:
+    for code, name, borough, pop, dec, dep, idec, hh, council, other, private, owned, bhc, ahc, ci, venues, lon, lat in recs:
         c = crimes.get(code, [0] * len(cats))
         total = sum(c)
         pct = lambda x: round(100 * x / hh, 1) if hh else 0.0  # noqa: E731
         rows.append({"code": code, "name": name, "borough": borough, "pop": pop, "imd_decile": dec, "income_decile": idec, "income_dep": dep, "hh": hh,
                      "council_pct": pct(council), "other_social_pct": pct(other), "private_pct": pct(private), "owned_pct": pct(owned),
-                     "net_bhc": bhc, "net_ahc": ahc, "venues": venues, "venues_per_1000": venues / pop * 1000 if pop else 0,
+                     "net_bhc": bhc, "net_ahc": ahc, "ci_ahc": ci, "venues": venues, "venues_per_1000": venues / pop * 1000 if pop else 0,
                      "lon": lon, "lat": lat, "crimes": c, "total": total,
                      "rate": total * (12 / len(months)) / pop * 1000 if pop >= MIN_POP else None})
     # a busy centre has many food premises per resident: its recorded crime comes from visitors as much as residents
@@ -215,17 +246,15 @@ def build(fsa_parquet: Path, points_parquet: Path, api_dir: Path, work: Path, mo
     for r in rows:
         r["busy"] = r["venues_per_1000"] >= busy_at
     fields = ["code", "name", "borough", "lon", "lat", "pop", "households", "council_pct", "other_social_pct", "private_pct",
-              "owned_pct", "imd_decile", "income_dep_pct", "net_income_bhc", "net_income_ahc", "venues", "busy", "crimes"]
+              "owned_pct", "imd_decile", "income_dep_pct", "net_income_bhc", "net_income_ahc", "income_ci_ahc", "venues", "busy", "crimes"]
     data = [[r["code"], r["name"], r["borough"], round(r["lon"], 4), round(r["lat"], 4), r["pop"], r["hh"], r["council_pct"],
              r["other_social_pct"], r["private_pct"], r["owned_pct"], r["imd_decile"], round(r["income_dep"] * 100, 1),
-             r["net_bhc"], r["net_ahc"], r["venues"], int(r["busy"]), r["crimes"]] for r in rows]
+             r["net_bhc"], r["net_ahc"], r["ci_ahc"], r["venues"], int(r["busy"]), r["crimes"]] for r in rows]
     (api_dir / "areas.json").write_text(json.dumps({
         "schema_version": 1, "generated": date.today().isoformat(), "crime_months": months, "categories": cats,
         "busy_venues_per_1000": round(busy_at, 1), "min_pop_for_rate": MIN_POP, "fields": fields, "areas": data,
         "analysis": analyse(rows),
-        "sources": ["Census 2021 TS054 tenure (ONS, Nomis)", "English Indices of Deprivation 2025 (MHCLG)",
-                    "Small area income estimates FYE 2023, MSOA (ONS)", "data.police.uk", "FSA hygiene ratings",
-                    "LSOA 2021 boundaries (ONS Open Geography)"],
+        "sources": SOURCES, "proof": PROOF,
     }, separators=(",", ":")))
     print(f"{len(rows)} LSOAs written; analysis: {json.dumps(analyse(rows)['spearman'])}")
 

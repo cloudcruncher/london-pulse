@@ -91,6 +91,8 @@ def test_areas_join_tenure_deprivation_income_and_crime():
     assert sum(1 for r in rs if r["council_pct"] >= 30) > 300           # London has plenty of council-majority LSOAs
     assert all(len(r["crimes"]) == len(a["categories"]) for r in rs[:200])
     assert sum(sum(r["crimes"]) for r in rs) > 100_000                 # three months of London crime, joined
+    assert all({"name", "publisher", "url", "licence", "vintage", "caveat"} <= set(x) and x["url"].startswith("https://") for x in a["sources"])
+    assert {"tenure", "crime"} <= set(a["proof"]) and "{code}" in a["proof"]["tenure"]
     s = a["analysis"]["spearman"]
     assert all(v is None or -1 <= v <= 1 for v in s.values()) and len(a["analysis"]["bands"]) == 4
 

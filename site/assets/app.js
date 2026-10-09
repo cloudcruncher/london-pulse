@@ -424,7 +424,8 @@ async function whoNearby(c, r) {
   const crimes = inR.reduce((t, x) => t + x.a[f.crimes].reduce((p, q) => p + q, 0), 0);
   const busyShare = pop ? inR.reduce((t, x) => t + (x.a[f.busy] ? x.a[f.pop] : 0), 0) / pop : 0;
   ar._med ??= { inc: (() => { const v = ar.areas.map(a => a[f.net_income_ahc]).filter(Boolean).sort((p, q) => p - q); return v[Math.floor(v.length / 2)]; })() };
-  return { ar, n: inR.length, single, pop, hh: sum('households'), busy: busyShare >= .5, busyShare,
+  const rows = [...inR].sort((p, q) => p.d - q.d).map(x => Object.fromEntries(ar.fields.map((k, i) => [k, x.a[i]])));
+  return { ar, rows, ci: wavg('income_ci_ahc', 'pop'), n: inR.length, single, pop, hh: sum('households'), busy: busyShare >= .5, busyShare,
     council: wavg('council_pct', 'households'), social: wavg('other_social_pct', 'households'), rent: wavg('private_pct', 'households'), owned: wavg('owned_pct', 'households'),
     incAhc: wavg('net_income_ahc', 'pop'), incBhc: wavg('net_income_bhc', 'pop'), incDep: wavg('income_dep_pct', 'pop'),
     rate: pop >= ar.min_pop_for_rate ? crimes * 12 / months / pop * 1000 : null, londonInc: ar._med.inc };
@@ -450,13 +451,25 @@ function whoHtml(w, kpi) {
     why = `<p class="note"><b>What London's data says.</b> Crimes recorded in neighbourhoods with ${hi.from}%+ council homes run at a median ${Math.round(hi.median_rate)} per 1,000 residents a year, against ${Math.round(lo.median_rate)} where council homes are under ${lo.to}% (${x1(rawX)}; ${fmt(an.n)} residential neighbourhoods). Those are also the more income-deprived places (${Math.round(hi.median_income_dep_pct)}% of residents income-deprived against ${Math.round(lo.median_income_dep_pct)}%), and deprivation tracks recorded crime more closely than tenure does (rank correlation ${sp.income_deprivation_vs_crime.toFixed(2)}, against ${sp.council_vs_crime.toFixed(2)} for council share).
       ${explained ? `Among ${sd.group}, the gap is ${x1(sdX)} (${Math.round(sd.bands[3].median_rate)} against ${Math.round(sd.bands[0].median_rate)}), and the council-share correlation falls to ${adj.toFixed(2)} once income deprivation is held fixed, so deprivation accounts for most of the difference. ` : (sd ? `Among ${sd.group} the gap is ${x1(sdX)}. ` : '')}These are London-wide medians; individual streets differ a lot.</p>`;
   }
+
+  const fill = (tpl, o) => tpl.replace(/\{(\w+)\}/g, (_, k) => encodeURIComponent(o[k]));
+  const month = w.ar.crime_months[w.ar.crime_months.length - 1], P = w.ar.proof;
+  const shown = w.rows.slice(0, 40);
+  const crimeTotal = r => r.crimes.reduce((p, q) => p + q, 0);
+  const proof = `<details class="proof"><summary>Show the working: where these numbers come from</summary>
+    <p class="note">Every figure above is computed from the rows below, which come straight from the published datasets. Households-weighted for tenure, residents-weighted for income and deprivation; crimes are summed over ${w.ar.crime_months.join(', ')} and scaled to a year. Each row links to the original source so you can check it yourself.</p>
+    <div class="tablewrap"><table><thead><tr><th>Neighbourhood (LSOA)</th><th>Households</th><th>Council</th><th>Residents</th><th>Crimes, 3 months</th><th>Check at source</th></tr></thead><tbody>${shown.map(r => `<tr><th>${esc(r.name)}<br><small>${esc(r.code)}</small></th><td>${fmt(r.households)}</td><td>${r.council_pct}%</td><td>${fmt(r.pop)}</td><td>${fmt(crimeTotal(r))}</td><td><a href="${esc(fill(P.tenure, r))}" target="_blank" rel="noopener">Census tenure</a> · <a href="${esc(fill(P.crime, { lat: r.lat, lng: r.lon, month }))}" target="_blank" rel="noopener">police data nearby</a></td></tr>`).join('')}</tbody></table></div>
+    ${w.rows.length > shown.length ? `<p class="note">Showing the nearest ${shown.length} of ${w.rows.length} neighbourhoods.</p>` : ''}
+    <h4>Sources, dates and limits</h4><ul class="list">${w.ar.sources.map(x => `<li><span><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> · ${esc(x.publisher)} · ${esc(x.vintage)} · ${esc(x.licence)}<br><small>${esc(x.caveat)}</small></span></li>`).join('')}</ul>
+    <p class="note">The "police data nearby" link returns every crime the police API holds within about a mile of the neighbourhood's centre for ${esc(month)}, so it will show more crimes than we count (we count only those inside the neighbourhood boundary). IMD and income: open the dataset page and look up the LSOA code (deprivation) or the MSOA name (income, the neighbourhood name without its final letter).</p></details>`;
   return `<h3>Who lives nearby</h3>
     <p class="note">${w.single ? 'The nearest neighbourhood' : `${w.n} neighbourhood${w.n === 1 ? '' : 's'} (about ${fmt(Math.round(w.pop / 100) * 100)} residents, ${fmt(w.hh)} households)`}, from Census 2021, ONS income estimates and the 2025 deprivation index. Neighbourhoods are ~1,700 people, so edges blur at small radii.</p>
-    <div class="areagrid">${kpi(pct(w.council), 'of homes rented from the council', `<span class="cmp">London typical ${pct(an.median_council_pct)}</span>`)}${kpi(w.incAhc ? '£' + fmt(Math.round(w.incAhc / 100) * 100) : '–', 'typical household income after housing costs, a year', w.londonInc ? `<span class="cmp">London typical £${fmt(Math.round(w.londonInc / 100) * 100)}</span>` : '')}${kpi(w.incDep == null ? '–' : w.incDep.toFixed(0) + '%', 'of residents in income-deprived households')}${kpi(w.rate == null ? '–' : fmt(Math.round(w.rate)), 'recorded crimes per 1,000 residents, a year', rateVs)}</div>
+    <div class="areagrid">${kpi(pct(w.council), 'of homes rented from the council (Census 2021)', `<span class="cmp">London typical ${pct(an.median_council_pct)}</span>`)}${kpi(w.incAhc ? '£' + fmt(Math.round(w.incAhc / 100) * 100) : '–', 'estimated household income after housing costs, a year', (w.ci ? `<span class="cmp">95% range £${fmt(Math.round((w.incAhc - w.ci / 2) / 100) * 100)} to £${fmt(Math.round((w.incAhc + w.ci / 2) / 100) * 100)}</span>` : '') + (w.londonInc ? `<span class="cmp">London typical £${fmt(Math.round(w.londonInc / 100) * 100)}</span>` : ''))}${kpi(w.incDep == null ? '–' : w.incDep.toFixed(0) + '%', 'of residents in income-deprived households')}${kpi(w.rate == null ? '–' : fmt(Math.round(w.rate)), 'police-recorded crimes per 1,000 residents, a year', rateVs)}</div>
     ${bar}
     ${w.busy ? '<p class="note"><b>Busy area.</b> Most of this is a commercial or nightlife centre, so recorded crime reflects visitors and workers as much as residents; the per-resident rate overstates risk to people living here.</p>' : ''}
     ${why}
-    <p class="note">Income is a model-based estimate for the wider ~8,000-resident area, net of tax, adjusted for household size. Tenure and recorded crime describe places, not the people in them, and police-recorded counts say little about how safe a particular street feels. Use them to compare areas, then visit.</p>`;
+    <p class="note">Income is a modelled estimate, not a count: it is published for the wider ~8,000-resident area, net of tax and adjusted for household size, so treat the range as the answer. Census tenure dates from March 2021. Tenure and recorded crime describe places, not the people in them, and police-recorded counts say little about how safe a particular street feels. Use them to compare areas, then visit.</p>
+    ${proof}`;
 }
 async function areaRun(c, radiusM, quiet = false) {
   AV ??= await fetch('api/v1/venues.json').then(r => r.json());
