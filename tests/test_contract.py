@@ -138,7 +138,7 @@ def test_operators_has_what_the_insights_tab_reads():
 @pytest.mark.parametrize(
     "name,budget_kb",
     [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("summary.json", 40),
-     ("character.json", 450), ("operators.json", 150)],
+     ("character.json", 450), ("operators.json", 150), ("report.json", 150)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller
 def test_size_budgets(name, budget_kb):
@@ -153,7 +153,7 @@ MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.jso
 
 @pytest.mark.parametrize("name", ["summary.json", "boroughs.json", "events.json", "history.json", "venues.json", "brands.json",
                                   "character.json", "hex.geojson", "companies.json", "operators.json", "stations.json", "crime.json",
-                                  "areas.json", "status.json"])
+                                  "areas.json", "report.json", "status.json"])
 def test_provenance_fields(name):
     if name in MONTHLY_FILES and not MONTHLY:
         pytest.skip("written by the monthly context workflow; checked there")
@@ -163,3 +163,14 @@ def test_provenance_fields(name):
         assert d.get("generated") and d.get("licence"), f"{name}: generated/licence missing"
     if name == "stations.json":
         assert "TfL" in d["licence"] and "Open Government" not in d["licence"]
+
+
+def test_report_json_meta():
+    r = load("report.json")
+    assert {"schema_version", "as_of", "generated", "source", "licence", "method", "catchment_m", "months", "metrics", "sources", "checks"} <= set(r)
+    assert r["catchment_m"] == 800 and len(r["checks"]) == 3
+    assert set(r["metrics"]) == {"crime_rate", "income_dep_pct", "venues_800", "five_pct_800", "walk_min", "lines_1km", "income_ahc", "fresh_pct"}
+    for m in r["metrics"].values():
+        assert len(m["q"]) == 21 and len(m["hist"]["edges"]) == 21 and len(m["hist"]["counts"]) == 20
+    for c in r["checks"]:
+        assert set(c["values"]) == set(r["metrics"])

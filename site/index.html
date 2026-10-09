@@ -20,6 +20,7 @@
       <a href="#insights" data-tab="insights"><i>✦</i><span>Insights</span></a>
       <a href="#map" data-tab="map"><i>◉</i><span>Map</span></a>
       <a href="#area" data-tab="area"><i>⌖</i><span>Area guide</span></a>
+      <a href="#report" data-tab="report"><i>▦</i><span>Report card</span></a>
       <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
       <a href="#boroughs" data-tab="boroughs"><i>▤</i><span>Boroughs</span></a>
       <a href="#brands" data-tab="brands"><i>⌂</i><span>Brands</span></a>
@@ -152,6 +153,16 @@
       <select id="arearad" aria-label="Radius"><option value="500">500 m</option><option value="1000" selected>1 km</option><option value="2000">2 km</option></select>
       <button class="btn primary" id="areago">Explore</button><button class="btn" id="arealoc">Use my location</button></div>
     <div id="areaout"></div>
+  </section>
+
+  <section class="view" id="v-report" hidden>
+    <h2 class="first">Report card</h2>
+    <p class="note">Six plain-English readings of a postcode against the rest of London: recorded crime, who lives nearby, food and nightlife, transport, affordability and what is changing. There is no overall rating. Add up to two more postcodes to compare.</p>
+    <div class="row filters rp-form"><label class="sr" for="rpq">Postcode</label><input id="rpq" class="rpq" type="search" placeholder="E8 3QW" autocomplete="off"><button class="btn primary" id="rpgo" type="button">Get report</button><button class="btn" id="rpadd" type="button">+ compare</button></div>
+    <div id="rpextra"></div>
+    <p class="note">Your postcode is sent to postcodes.io to find its location.</p>
+    <p id="rpstatus" class="sr" role="status" aria-live="polite"></p>
+    <div id="rpout"></div>
   </section>
 
   <section class="view" id="v-changes" hidden>

@@ -16,6 +16,7 @@ Changes within v1 are additive only; a breaking change ships as `/api/v2/` along
 | `crime.json` | Recorded crime per ~550 x 350 m grid cell; `queried_cells` / `failed_cells` count API areas requested and not returned (the run fails above 0.5%) | monthly |
 | `stations.json` | London rail stations with `naptan` id (https://api.tfl.gov.uk/StopPoint/{naptan}) | occasional |
 | `companies.json` | Companies House company formation for coffee roasting, brewing, distilling, pubs and bars | monthly |
+| `report.json` | London distributions (percentiles, histogram, tercile cut-offs) of the eight postcode report card metrics, plus three check points | daily |
 | `areas.json` | One record per London LSOA: council-rented share of households, deprivation, small-area income, recent recorded crime by category, food-premises count; plus an `analysis` block | monthly |
 
 ### `areas.json`
@@ -46,3 +47,20 @@ Tenure is Census 2021 (March 2021), so it can lag stock changes. Income is model
 Describes areas, not estates or residents.
 
 Data: FSA hygiene ratings, Companies House, ONS (Census 2021, income estimates), MHCLG (IMD 2025) and data.police.uk, all under the Open Government Licence v3.0. Attribute the sources.
+
+### `report.json`
+
+Reference distributions for the postcode report card; the page computes one postcode's metrics live and places it on these.
+Derived from `areas.json`, `venues.json`, `stations.json` and `character.json`; rebuilt daily from the committed monthly files
+(skipped with a warning if one is missing).
+
+- `catchment_m` (800) and `months` (crime months counted). Each metric is computed for the 800 m catchment of every LSOA centre
+  (about 5,000 values): LSOA centres within the catchment, else the nearest within 2 km, weighted by population; venues and
+  stations by straight-line distance; walking at 80 m a minute.
+- `metrics`: keys `crime_rate`, `income_dep_pct`, `venues_800`, `five_pct_800`, `walk_min`, `lines_1km`, `income_ahc`, `fresh_pct`.
+  Each has `label`, `unit`, `direction` (`+` higher is favourable, `-` lower is, `0` never rated), `badge` (`measured`, `modelled`,
+  `proxy`), `n`, `q` (21 percentiles, p0 to p100 in steps of 5), `hist` (`edges` 21 and `counts` 20, clipped at p1 and p99),
+  `lo` / `hi` (p33 / p67), `as_of`, `source_ids` (into `sources`). `crime_rate` uses residential (non-busy) neighbourhoods only;
+  `fresh_pct` is distributed across postcode districts.
+- `checks`: three real LSOA centres with `code`, `lon`, `lat`, `outcode` (postcode district of the nearest venue, used for `fresh_pct`)
+  and `values` for every metric, so the page's calculation can be tested against this one.

@@ -44,7 +44,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'insights', 'map', 'area', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
+const VIEWS = ['overview', 'insights', 'map', 'area', 'report', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 let tryApply = null;   // set by the overview story panel
@@ -63,6 +63,7 @@ function route() {
   if (view === 'brands' && inited.brandsReady) brandOpen(arg);
   if (view === 'area' && inited.areaReady) areaOpen((arg || '').split('/'));
   if (view === 'map' && arg?.startsWith('q=')) { mapSearch(dec(arg.slice(2))); }
+  if (view === 'report') reportMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
   window.scrollTo({ top: 0 });
@@ -536,7 +537,7 @@ async function areaRun(c, radiusM, quiet = false) {
   const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive, crimeMonth };
   if (quiet) return metrics;
   const approxPct = near.length ? Math.round(near.filter(n => n.approx).length / near.length * 100) : 0;
-  $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}
+  $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}${c.label === 'your location' ? '' : `<p class="note"><a href="#report/${encodeURIComponent(c.label.replace(/ \(.*$/, ''))}">See the report card for ${esc(c.label.replace(/ \(.*$/, ''))}</a></p>`}
     <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries', '<span class="cmp" title="Named sites of about 20 tracked specialty brands (Caravan, Monmouth, GAIL\'s and others). Independent cafés are not counted.">~20 tracked brands</span>')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains', '<span class="cmp" title="Share matching about 20 tracked chain names. Other chains count as independent.">~20 tracked names</span>')}${kpi(awaiting, 'newly registered, awaiting inspection')}${stations.length ? kpi(Math.max(1, Math.round(stations[0].d * 1000 / 80)) + ' min', 'walk to ' + esc(stations[0].name)) + kpi(lineSet.size, `rail and tube lines within ${Math.max(r, 1)} km`) : ''}${crimeKpi}</div>
     <p class="note">Specialty coffee and bakeries are named sites of ~20 tracked brands (Caravan, Monmouth, GAIL's…); independent cafés are not counted. Chains are the ~20 tracked chain names; other chains count as independent. ${approxPct > 15 ? `About ${approxPct}% of these premises have no published location and are placed at their postcode's centre.` : "Premises with no published location are placed at their postcode's centre."}</p>
     ${stnHtml || crimeHtml ? `<div class="cols">${stnHtml}${crimeHtml}</div>` : ''}
@@ -604,7 +605,8 @@ function mapSearch(text) {   // used by brand links: prefill the map search once
   go();
 }
 
-let sqlMod;
+let sqlMod, reportMod;
+init.report = () => { reportMod = import('./report.js').then(m => { m.initReport(); return m; }); reportMod.catch(e => { $('rpout').innerHTML = '<p class="note">Could not load the report card: ' + esc(e.message) + '</p>'; }); };
 init.sql = () => { sqlMod = import('./sql.js').then(m => { m.initSql(); return m; }); sqlMod.catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; }); };
 
 // ---------- map ----------

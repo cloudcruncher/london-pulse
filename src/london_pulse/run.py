@@ -13,6 +13,7 @@ from pathlib import Path
 from .diff import diff_snapshots
 from .fsa import fetch_snapshot
 from .insights import append_history, build
+from .report import MissingInput, write as write_report
 
 ROOT = Path(__file__).resolve().parents[2]
 MIN_ROWS = 70_000          # London has ~80k FSA establishments; far fewer means a partial fetch
@@ -51,6 +52,10 @@ def main() -> None:
     build(args.out, ROOT / "data" / "events", ROOT / "data" / "history.csv", ROOT / "site" / "api" / "v1", today)
     print("insights written")
     api = ROOT / "site" / "api" / "v1"
+    try:  # derived from the committed monthly files (areas, stations) plus today's venues; never blocks the daily run
+        print(f"report card data written: {write_report(api)}")
+    except Exception as e:  # noqa: BLE001 - the report card must never fail the daily data run
+        print(f"::warning::report.json skipped: {e}")
     (api / "status.json").write_text(json.dumps({
         "schema_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
