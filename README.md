@@ -13,6 +13,6 @@ Daily, neighbourhood-level signals of what is opening, closing and changing acro
 Run locally: `PYTHONPATH=src uv run python -m london_pulse.run [--prev previous.parquet]`
 
 ## Caveats
-A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. A monthly workflow adds Companies House company formation (coffee roasting, brewing, distilling, pubs and bars) for London postcode districts. Licensing applications are planned. An evaluation of Overture Maps places found it unusable for closures in the 2026-09-23 release (3 of 496,244 London places marked permanently closed, the rest null).
+A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. A monthly workflow adds Companies House company formation (coffee roasting, brewing, distilling, pubs and bars) for London postcode districts. The same monthly workflow publishes `areas.json`: per-LSOA council-rented share (Census 2021), deprivation, income and recent recorded crime. Licensing applications are planned. An evaluation of Overture Maps places found it unusable for closures in the 2026-09-23 release (3 of 496,244 London places marked permanently closed, the rest null).
 
 Not affiliated with the Food Standards Agency or any council.

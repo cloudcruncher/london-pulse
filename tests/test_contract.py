@@ -78,6 +78,23 @@ def test_area_context_files():
     assert all(len(row[2]) == len(c["categories"]) for row in c["cells"][:200])
 
 
+def test_areas_join_tenure_deprivation_income_and_crime():
+    a = load("areas.json")
+    f = a["fields"]
+    assert 4900 <= len(a["areas"]) <= 5100 and all(len(r) == len(f) for r in a["areas"][:200])
+    row = lambda r: dict(zip(f, r))  # noqa: E731
+    rs = [row(r) for r in a["areas"]]
+    assert all(LONDON[0] <= r["lon"] <= LONDON[1] and LONDON[2] <= r["lat"] <= LONDON[3] for r in rs)
+    assert all(0 <= r["council_pct"] <= 100 and 0 <= r["owned_pct"] <= 100 and 1 <= r["imd_decile"] <= 10 for r in rs)
+    assert all(r["council_pct"] + r["other_social_pct"] + r["private_pct"] + r["owned_pct"] <= 100.5 for r in rs)
+    assert sum(1 for r in rs if r["net_income_bhc"]) > 4900            # income is MSOA-level but covers every LSOA
+    assert sum(1 for r in rs if r["council_pct"] >= 30) > 300           # London has plenty of council-majority LSOAs
+    assert all(len(r["crimes"]) == len(a["categories"]) for r in rs[:200])
+    assert sum(sum(r["crimes"]) for r in rs) > 100_000                 # three months of London crime, joined
+    s = a["analysis"]["spearman"]
+    assert all(v is None or -1 <= v <= 1 for v in s.values()) and len(a["analysis"]["bands"]) == 4
+
+
 def test_character_has_what_the_insights_tab_reads():
     c = load("character.json")
     assert len(c["boroughs"]) == 33 and len(c["districts"]) >= 50
@@ -106,7 +123,7 @@ def test_operators_has_what_the_insights_tab_reads():
 
 @pytest.mark.parametrize(
     "name,budget_kb",
-    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("summary.json", 40),
+    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("summary.json", 40),
      ("character.json", 450), ("operators.json", 150)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller

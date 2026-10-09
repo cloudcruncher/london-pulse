@@ -13,6 +13,7 @@ flowchart LR
     CH[Companies House<br/>monthly bulk CSV]
     TFL[TfL Unified API<br/>monthly]
     POL[data.police.uk<br/>monthly]
+    ONS[ONS Census 2021, IMD 2025,<br/>small-area income, LSOA boundaries<br/>monthly]
   end
 
   subgraph "GitHub Actions (scheduled)"
@@ -41,6 +42,7 @@ flowchart LR
   CH --> C
   TFL --> X
   POL --> X
+  ONS --> X
   D --> DIFF --> MODEL --> PQ
   SNAP <--> D
   D --> REPO
@@ -86,7 +88,11 @@ flowchart LR
   young or established, and linked or standalone. The free file has no directors, so "first-time founder" is a likely
   label, not a fact. Mass-registration addresses are excluded.
 - **Area context (5th):** TfL stations and lines, plus police-recorded crime aggregated to a 0.005 degree grid.
-  Counts only, no individual incidents.
+  Counts only, no individual incidents. `crime.py` also keeps the crime points in `work/` (not published). Then
+  `neighbourhoods.py` joins crime points and FSA venues to LSOA boundaries, with Census 2021 tenure, IMD 2025 and ONS
+  small-area income, into `areas.json`, and computes how crime varies with council share, with and without holding
+  deprivation fixed. Reference downloads are cached in `work/reference` between runs. The contract test for `areas.json`
+  runs before commit.
 
 ## Serving and analytics
 

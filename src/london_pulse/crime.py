@@ -30,7 +30,7 @@ def month_list(last: str, n: int) -> list[str]:
     return out[::-1]   # oldest first
 
 
-def fetch_cell(lat0: float, lon0: float, size: float, month: str, depth: int = 0) -> list[tuple[int, int, str]]:
+def fetch_cell(lat0: float, lon0: float, size: float, month: str, depth: int = 0) -> list[tuple[int, int, str, float, float]]:
     lat1, lon1 = lat0 + size, lon0 + size
     poly = f"{lat0:.5f},{lon0:.5f}:{lat0:.5f},{lon1:.5f}:{lat1:.5f},{lon1:.5f}:{lat1:.5f},{lon0:.5f}"
     try:
@@ -44,7 +44,8 @@ def fetch_cell(lat0: float, lon0: float, size: float, month: str, depth: int = 0
     for c in crimes:
         loc = c.get("location") or {}
         try:
-            out.append((math.floor(float(loc["longitude"]) / CELL), math.floor(float(loc["latitude"]) / CELL), c["category"]))
+            lon, lat = float(loc["longitude"]), float(loc["latitude"])
+            out.append((math.floor(lon / CELL), math.floor(lat / CELL), c["category"], lon, lat))
         except (KeyError, TypeError, ValueError):
             continue
     return out
@@ -60,12 +61,14 @@ def build(fsa_parquet: Path, api_dir: Path, months: int = MONTHS) -> None:
     print(f"months {ms}; {len(cells)} query cells in {bbox}")
     counts: dict[tuple, dict] = {}
     cats: list[str] = []
+    points: list[tuple[float, float, str]] = []   # kept in work/ for neighbourhoods.py, never published
     for mi, month in enumerate(ms):
         with ThreadPoolExecutor(max_workers=6) as ex:
             results = list(ex.map(lambda c: fetch_cell(c[1] * QUERY_CELL, c[0] * QUERY_CELL, QUERY_CELL, month), cells))
         total = 0
         for rows in results:
-            for ix, iy, cat in rows:
+            for ix, iy, cat, lon, lat in rows:
+                points.append((lon, lat, cat))
                 if cat not in cats:
                     cats.append(cat)
                 rec = counts.setdefault((ix, iy), {"m": [0] * len(ms), "c": {}})
@@ -81,6 +84,11 @@ def build(fsa_parquet: Path, api_dir: Path, months: int = MONTHS) -> None:
          "categories": cats, "cells": rows, "source": "data.police.uk (Open Government Licence)"},
         separators=(",", ":")))
     print(f"{len(rows)} grid cells written")
+    con = duckdb.connect()
+    con.execute("CREATE TABLE p (lon DOUBLE, lat DOUBLE, cat VARCHAR)")
+    con.executemany("INSERT INTO p VALUES (?, ?, ?)", points)
+    con.execute(f"COPY p TO '{fsa_parquet.parent / 'crime_points.parquet'}' (FORMAT parquet)")
+    (fsa_parquet.parent / "crime_months.json").write_text(json.dumps(ms))
 
 
 if __name__ == "__main__":

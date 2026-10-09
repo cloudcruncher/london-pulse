@@ -198,6 +198,9 @@ code{font-size:.92em;background:var(--surface-2);border:1px solid var(--line);bo
 .bbars .t{height:8px;border-radius:999px;background:var(--bar,#8883);overflow:hidden}.bbars .f{display:block;height:100%;border-radius:999px;background:var(--grad)}
 .sites{max-height:260px;overflow:auto;font-size:13px;margin-top:8px}
 #areaq{flex:1 1 220px;min-width:0;padding:11px 14px;border-radius:var(--radius-sm);border:1px solid var(--line,#8884);background:var(--surface);color:inherit;font:inherit;box-shadow:var(--shadow)}
+.tenure{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--bar);margin:6px 0 8px}.tenure span{display:block;height:100%}
+.tenure-key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;color:var(--muted);margin-bottom:12px}.tenure-key i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.t-council{background:var(--accent)}.t-social{background:var(--accent-2)}.t-rent{background:var(--warn)}.t-other{background:var(--line)}.t-own{background:color-mix(in srgb,var(--muted) 55%,var(--bar))}
 .areagrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
 .areagrid .kpi b{font-size:26px}.cmp{font-size:12px;opacity:.8;display:block}.up{color:var(--good)}.down{color:var(--bad)}
 @media(max-width:1300px) and (min-width:761px){.tabs a{padding:7px 9px}.tabs a i{display:none}}

@@ -409,6 +409,55 @@ async function areaLocate(q) {
   const med = a => { const s = [...a].sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
   return { lon: med(hits.map(h => h[0])), lat: med(hits.map(h => h[1])), label, approx };
 }
+// who lives nearby: LSOAs (neighbourhoods of ~1,700 people) whose centre is inside the radius, weighted by households.
+// "Council" is the Census 2021 share of households renting from the council; housing associations are counted apart.
+async function whoNearby(c, r) {
+  const ar = await getApi('areas').catch(() => null);
+  if (!ar) return null;
+  const f = Object.fromEntries(ar.fields.map((k, i) => [k, i]));
+  const ranked = ar.areas.map(a => ({ a, d: km(c.lon, c.lat, a[f.lon], a[f.lat]) }));
+  let inR = ranked.filter(x => x.d <= r), single = false;
+  if (!inR.length) { const n = ranked.reduce((m, x) => x.d < m.d ? x : m); if (n.d > 2) return null; inR = [n]; single = true; }
+  const sum = k => inR.reduce((t, x) => t + (x.a[f[k]] || 0), 0);
+  const wavg = (k, w) => { let n = 0, d = 0; for (const x of inR) { const v = x.a[f[k]], wt = x.a[f[w]]; if (v != null && wt) { n += v * wt; d += wt; } } return d ? n / d : null; };
+  const pop = sum('pop'), months = ar.crime_months.length;
+  const crimes = inR.reduce((t, x) => t + x.a[f.crimes].reduce((p, q) => p + q, 0), 0);
+  const busyShare = pop ? inR.reduce((t, x) => t + (x.a[f.busy] ? x.a[f.pop] : 0), 0) / pop : 0;
+  ar._med ??= { inc: (() => { const v = ar.areas.map(a => a[f.net_income_ahc]).filter(Boolean).sort((p, q) => p - q); return v[Math.floor(v.length / 2)]; })() };
+  return { ar, n: inR.length, single, pop, hh: sum('households'), busy: busyShare >= .5, busyShare,
+    council: wavg('council_pct', 'households'), social: wavg('other_social_pct', 'households'), rent: wavg('private_pct', 'households'), owned: wavg('owned_pct', 'households'),
+    incAhc: wavg('net_income_ahc', 'pop'), incBhc: wavg('net_income_bhc', 'pop'), incDep: wavg('income_dep_pct', 'pop'),
+    rate: pop >= ar.min_pop_for_rate ? crimes * 12 / months / pop * 1000 : null, londonInc: ar._med.inc };
+}
+function whoHtml(w, kpi) {
+  if (!w) return '';
+  const an = w.ar.analysis, pct = x => x == null ? '–' : Math.round(x) + '%';
+  const seg = (v, cls, nm) => v >= 1 ? `<span class="${cls}" style="width:${v}%" title="${nm} ${Math.round(v)}%"></span>` : '';
+  const other = Math.max(0, 100 - (w.council + w.social + w.rent + w.owned));
+  const bar = `<div class="tenure" role="img" aria-label="Homes by tenure: council ${pct(w.council)}, housing association ${pct(w.social)}, private rent ${pct(w.rent)}, owned ${pct(w.owned)}">${seg(w.council, 't-council', 'Council')}${seg(w.social, 't-social', 'Housing association')}${seg(w.rent, 't-rent', 'Private rent')}${seg(w.owned, 't-own', 'Owned')}${seg(other, 't-other', 'Shared ownership and other')}</div>
+    <div class="tenure-key"><span><i class="t-council"></i>Council ${pct(w.council)}</span><span><i class="t-social"></i>Housing association ${pct(w.social)}</span><span><i class="t-rent"></i>Private rent ${pct(w.rent)}</span><span><i class="t-own"></i>Owned ${pct(w.owned)}</span>${other >= 1 ? `<span><i class="t-other"></i>Shared ownership and other ${pct(other)}</span>` : ''}</div>`;
+  const rateVs = w.rate == null ? '' : `<span class="cmp ${w.busyShare >= .25 ? '' : w.rate > an.median_rate * 1.15 ? 'down' : w.rate < an.median_rate * .85 ? 'up' : ''}">London residential typical ${Math.round(an.median_rate)}</span>`;
+  const bands = an.bands.filter(b => b.median_rate != null);
+  const sp = an.spearman, x1 = n => n.toFixed(1) + '×';
+  let why = '';
+  if (bands.length > 1) {
+    const lo = bands[0], hi = bands[bands.length - 1];
+    const sd = an.same_deprivation.filter(g => g.bands[0].median_rate != null && g.bands[3].median_rate != null)
+      .sort((x, y) => Math.min(y.bands[0].n, y.bands[3].n) - Math.min(x.bands[0].n, x.bands[3].n))[0];
+    const rawX = hi.median_rate / lo.median_rate, sdX = sd ? sd.bands[3].median_rate / sd.bands[0].median_rate : null;
+    const adj = sp.council_vs_crime_same_deprivation;
+    const explained = sdX != null && adj != null && sdX < rawX && Math.abs(adj) < Math.abs(sp.council_vs_crime);
+    why = `<p class="note"><b>What London's data says.</b> Crimes recorded in neighbourhoods with ${hi.from}%+ council homes run at a median ${Math.round(hi.median_rate)} per 1,000 residents a year, against ${Math.round(lo.median_rate)} where council homes are under ${lo.to}% (${x1(rawX)}; ${fmt(an.n)} residential neighbourhoods). Those are also the more income-deprived places (${Math.round(hi.median_income_dep_pct)}% of residents income-deprived against ${Math.round(lo.median_income_dep_pct)}%), and deprivation tracks recorded crime more closely than tenure does (rank correlation ${sp.income_deprivation_vs_crime.toFixed(2)}, against ${sp.council_vs_crime.toFixed(2)} for council share).
+      ${explained ? `Among ${sd.group}, the gap is ${x1(sdX)} (${Math.round(sd.bands[3].median_rate)} against ${Math.round(sd.bands[0].median_rate)}), and the council-share correlation falls to ${adj.toFixed(2)} once income deprivation is held fixed, so deprivation accounts for most of the difference. ` : (sd ? `Among ${sd.group} the gap is ${x1(sdX)}. ` : '')}These are London-wide medians; individual streets differ a lot.</p>`;
+  }
+  return `<h3>Who lives nearby</h3>
+    <p class="note">${w.single ? 'The nearest neighbourhood' : `${w.n} neighbourhood${w.n === 1 ? '' : 's'} (about ${fmt(Math.round(w.pop / 100) * 100)} residents, ${fmt(w.hh)} households)`}, from Census 2021, ONS income estimates and the 2025 deprivation index. Neighbourhoods are ~1,700 people, so edges blur at small radii.</p>
+    <div class="areagrid">${kpi(pct(w.council), 'of homes rented from the council', `<span class="cmp">London typical ${pct(an.median_council_pct)}</span>`)}${kpi(w.incAhc ? '£' + fmt(Math.round(w.incAhc / 100) * 100) : '–', 'typical household income after housing costs, a year', w.londonInc ? `<span class="cmp">London typical £${fmt(Math.round(w.londonInc / 100) * 100)}</span>` : '')}${kpi(w.incDep == null ? '–' : w.incDep.toFixed(0) + '%', 'of residents in income-deprived households')}${kpi(w.rate == null ? '–' : fmt(Math.round(w.rate)), 'recorded crimes per 1,000 residents, a year', rateVs)}</div>
+    ${bar}
+    ${w.busy ? '<p class="note"><b>Busy area.</b> Most of this is a commercial or nightlife centre, so recorded crime reflects visitors and workers as much as residents; the per-resident rate overstates risk to people living here.</p>' : ''}
+    ${why}
+    <p class="note">Income is a model-based estimate for the wider ~8,000-resident area, net of tax, adjusted for household size. Tenure and recorded crime describe places, not the people in them, and police-recorded counts say little about how safe a particular street feels. Use them to compare areas, then visit.</p>`;
+}
 async function areaRun(c, radiusM, quiet = false) {
   AV ??= await fetch('api/v1/venues.json').then(r => r.json());
   AB ??= (await getApi('brands')).brands;
@@ -462,16 +511,18 @@ async function areaRun(c, radiusM, quiet = false) {
     crimeHtml = `<div><h3 style="margin-top:0">Recorded crime, ${mName}</h3><ul class="list">${byCat.slice(0, 5).map(([cat, n]) => `<li>${esc(label(cat))}<span>${fmt(n)} ${vsLon(cat, n)}</span></li>`).join('')}</ul>
       <p class="note"><b>Overall ${band[0]} the London average</b> (${ratio.toFixed(1)}x): this area records ${ratio.toFixed(1)} crimes for every 1 in an average populated 500 m grid square of London. Police-recorded counts, not a measure of how safe a street feels; busy centres, nightlife and stations record far more than quiet residential streets, so compare with similar places using the compare box below. Source: data.police.uk.</p></div>`;
   }
+  const who = await whoNearby(c, r);
   const stnHtml = stations.length ? `<div><h3 style="margin-top:0">Nearest stations</h3><ul class="list">${stations.map(x => `<li>${esc(x.name)}<span>${walk(x.d)} · ${esc(x.lines.slice(0, 3).join(', '))}${x.lines.length > 3 ? '…' : ''}</span></li>`).join('')}</ul><h3>By type of service</h3><ul class="list">${nearestMode.map(([nm, x]) => `<li>${nm}<span>${esc(x.name)} · ${walk(x.d)}</span></li>`).join('') || '<li><span>None within 3 km</span></li>'}</ul><p class="note">${stnIn.length} station${stnIn.length === 1 ? '' : 's'} and ${lineSet.size} line${lineSet.size === 1 ? '' : 's'} within ${Math.max(r, 1)} km. Straight-line distance; walking time is an estimate. Source: TfL.</p></div>` : '';
   const dist = d => d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
   const li = (n, extra = '') => `<li>${esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
   const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
   const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
-  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, lines: lineSet.size, stns: stnIn.length, lonFive };
+  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive };
   if (quiet) return metrics;
   $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}
     <div class="areagrid">${kpi(fmt(near.length), 'food and drink businesses')}${kpi(pctFive == null ? '–' : pctFive + '%', 'of rated venues score 5', diff)}${kpi(spec.length, 'specialty coffee and bakeries')}${kpi(pubs.length, 'pubs and bars')}${kpi(Math.round(chains.length / near.length * 100) + '%', 'are well-known chains')}${kpi(awaiting, 'newly registered, awaiting inspection')}${stations.length ? kpi(Math.max(1, Math.round(stations[0].d * 1000 / 80)) + ' min', 'walk to ' + esc(stations[0].name)) + kpi(lineSet.size, `rail and tube lines within ${Math.max(r, 1)} km`) : ''}${crimeKpi}</div>
     ${stnHtml || crimeHtml ? `<div class="cols">${stnHtml}${crimeHtml}</div>` : ''}
+    ${whoHtml(who, kpi)}
     <div class="cols">${list('Specialty coffee and bakeries', spec, '', 10)}${list('Pubs and bars nearby', pubs.filter(n => n.rating === '5' || n.rating === '4'), '<p class="note">Rated 4 or 5, nearest first.</p>')}</div>
     <div class="cols" style="margin-top:14px">${list('Breweries, taprooms and beer venues', beer)}${list('Independent restaurants and cafés rated 5', indie, '<p class="note">Not part of a tracked brand, nearest first.</p>')}</div>
     <p class="note" style="margin-top:14px">${takeaways} of ${near.length} are takeaways (${Math.round(takeaways / near.length * 100)}%); ${low} rated venue${low === 1 ? ' is' : 's are'} at 0–2. <a href="#map/q=${encodeURIComponent(c.label.split(' ')[0].toLowerCase())}">See this area on the map</a>.
@@ -489,7 +540,7 @@ async function areaCompare(c1, radiusM, q2) {
   const [a, b] = await Promise.all([areaRun(c1, radiusM, true), areaRun(c2, radiusM, true)]);
   const row = (name, k, f = x => x, better) => { const x = a[k], y = b[k]; const win = z => better && x != null && y != null && x !== y && ((better === 'hi' ? z > (z === x ? y : x) : z < (z === x ? y : x))) ? ' class="win"' : ''; return `<tr><th>${name}</th><td${win(x)}>${x == null ? '–' : f(x)}</td><td${win(y)}>${y == null ? '–' : f(y)}</td></tr>`; };
   out.innerHTML = `<div class="tablewrap"><table><thead><tr><th></th><th>${esc(a.label)}</th><th>${esc(b.label)}</th></tr></thead><tbody>
-    ${row('Food and drink businesses', 'n', fmt)}${row('Rated 5 for hygiene', 'pctFive', x => x + '%', 'hi')}${row('Specialty coffee and bakeries', 'spec', fmt, 'hi')}${row('Pubs and bars', 'pubs', fmt)}${row('Well-known chains', 'chainPct', x => x + '%', 'lo')}${row('Takeaway share', 'takeawayPct', x => x + '%')}${row('Awaiting inspection', 'awaiting', fmt)}${row('Walk to nearest station (min)', 'walk', x => x, 'lo')}${row('Crimes recorded last month', 'crime', fmt, 'lo')}${row('Crime vs London average', 'crimeX', x => x.toFixed(1) + 'x', 'lo')}${row('Rail and tube lines nearby', 'lines', fmt, 'hi')}${row('Stations nearby', 'stns', fmt, 'hi')}</tbody></table></div><p class="note">Highlighted cells lead on that measure. Crime counts rise with footfall, so compare similar places. Within ${radiusM >= 1000 ? radiusM / 1000 + ' km' : radiusM + ' m'} of each.</p>`;
+    ${row('Food and drink businesses', 'n', fmt)}${row('Rated 5 for hygiene', 'pctFive', x => x + '%', 'hi')}${row('Specialty coffee and bakeries', 'spec', fmt, 'hi')}${row('Pubs and bars', 'pubs', fmt)}${row('Well-known chains', 'chainPct', x => x + '%', 'lo')}${row('Takeaway share', 'takeawayPct', x => x + '%')}${row('Awaiting inspection', 'awaiting', fmt)}${row('Walk to nearest station (min)', 'walk', x => x, 'lo')}${row('Council-rented homes', 'council', x => Math.round(x) + '%')}${row('Household income after housing costs', 'income', x => '£' + fmt(Math.round(x / 100) * 100), 'hi')}${row('Residents in income-deprived households', 'incDep', x => Math.round(x) + '%', 'lo')}${row('Crimes per 1,000 residents a year', 'rate', x => fmt(Math.round(x)), 'lo')}${row('Crimes recorded last month', 'crime', fmt, 'lo')}${row('Crime vs London average', 'crimeX', x => x.toFixed(1) + 'x', 'lo')}${row('Rail and tube lines nearby', 'lines', fmt, 'hi')}${row('Stations nearby', 'stns', fmt, 'hi')}</tbody></table></div><p class="note">Highlighted cells lead on that measure. Crime counts rise with footfall, so compare similar places. Within ${radiusM >= 1000 ? radiusM / 1000 + ' km' : radiusM + ' m'} of each.</p>`;
 }
 
 // ---------- brands ----------
