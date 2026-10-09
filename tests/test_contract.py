@@ -138,7 +138,7 @@ def test_operators_has_what_the_insights_tab_reads():
 @pytest.mark.parametrize(
     "name,budget_kb",
     [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("summary.json", 40),
-     ("character.json", 450), ("operators.json", 150), ("report.json", 150)],
+     ("character.json", 450), ("operators.json", 150), ("report.json", 150), ("prices.json", 300)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller
 def test_size_budgets(name, budget_kb):
@@ -153,7 +153,7 @@ MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.jso
 
 @pytest.mark.parametrize("name", ["summary.json", "boroughs.json", "events.json", "history.json", "venues.json", "brands.json",
                                   "character.json", "hex.geojson", "companies.json", "operators.json", "stations.json", "crime.json",
-                                  "areas.json", "report.json", "status.json"])
+                                  "areas.json", "report.json", "prices.json", "status.json"])
 def test_provenance_fields(name):
     if name in MONTHLY_FILES and not MONTHLY:
         pytest.skip("written by the monthly context workflow; checked there")
@@ -169,8 +169,36 @@ def test_report_json_meta():
     r = load("report.json")
     assert {"schema_version", "as_of", "generated", "source", "licence", "method", "catchment_m", "months", "metrics", "sources", "checks"} <= set(r)
     assert r["catchment_m"] == 800 and len(r["checks"]) == 3
-    assert set(r["metrics"]) == {"crime_rate", "income_dep_pct", "venues_800", "five_pct_800", "walk_min", "lines_1km", "income_ahc", "fresh_pct"}
+    base = {"crime_rate", "income_dep_pct", "venues_800", "five_pct_800", "walk_min", "lines_1km", "income_ahc", "fresh_pct"}
+    assert set(r["metrics"]) in (base, base | {"median_price", "rent_2bed"})
     for m in r["metrics"].values():
         assert len(m["q"]) == 21 and len(m["hist"]["edges"]) == 21 and len(m["hist"]["counts"]) == 20
     for c in r["checks"]:
         assert set(c["values"]) == set(r["metrics"])
+
+
+def test_prices_json_meta_and_plausibility():
+    p = load("prices.json")
+    assert {"schema_version", "as_of", "generated", "source", "licence", "method", "caveats", "window", "min_sales", "sectors",
+            "districts", "rents"} <= set(p)
+    assert "HM Land Registry" in p["licence"] and "Open Government Licence" in p["licence"]
+    assert p["min_sales"] == 10 and p["window"]["to"] == p["as_of"] and p["caveats"]
+    assert len(p["sectors"]) > 500 and len(p["districts"]) > 100
+    medians = []
+    for k, (m_all, n_all, m_flat, n_flat, m_house, n_house) in p["sectors"].items():
+        assert " " in k and n_all >= n_flat + 0 and n_all >= 1
+        for m, n in ((m_all, n_all), (m_flat, n_flat), (m_house, n_house)):
+            assert (m is None) == (n < p["min_sales"]), (k, m, n)
+            if m is not None:
+                medians.append(m)
+    assert medians and all(50_000 <= m <= 10_000_000 for m in medians), (min(medians), max(medians))   # flat/house splits
+    alls = [v[0] for v in p["sectors"].values() if v[0] is not None]
+    assert all(100_000 <= m <= 10_000_000 for m in alls) and 300_000 <= sorted(alls)[len(alls) // 2] <= 900_000
+    assert all(len(v) == 2 for v in p["districts"].values())
+    b = p["rents"]["boroughs"]
+    assert len(b) in (32, 33) and (len(b) == 33 or "E09000001" not in b)
+    assert p["rents"]["as_of"] and p["rents"]["caveat"] and p["rents"]["licence"]
+    for x in b.values():
+        for f in ("all", "one_bed", "two_bed", "three_bed"):
+            assert x[f] is None or 500 <= x[f] <= 6000, (x["name"], f, x[f])
+    assert sum(1 for x in b.values() if x["two_bed"]) >= 30

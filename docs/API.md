@@ -16,7 +16,8 @@ Changes within v1 are additive only; a breaking change ships as `/api/v2/` along
 | `crime.json` | Recorded crime per ~550 x 350 m grid cell; `queried_cells` / `failed_cells` count API areas requested and not returned (the run fails above 0.5%) | monthly |
 | `stations.json` | London rail stations with `naptan` id (https://api.tfl.gov.uk/StopPoint/{naptan}) | occasional |
 | `companies.json` | Companies House company formation for coffee roasting, brewing, distilling, pubs and bars | monthly |
-| `report.json` | London distributions (percentiles, histogram, tercile cut-offs) of the eight postcode report card metrics, plus three check points | daily |
+| `report.json` | London distributions (percentiles, histogram, tercile cut-offs) of the postcode report card metrics (eight, plus `median_price` and `rent_2bed` when `prices.json` exists), plus three check points | daily |
+| `prices.json` | Median sale price per postcode sector and district (HM Land Registry, last 12 months) and the latest private rent per borough (ONS PIPR) | monthly |
 | `areas.json` | One record per London LSOA: council-rented share of households, deprivation, small-area income, recent recorded crime by category, food-premises count; plus an `analysis` block | monthly |
 
 ### `areas.json`
@@ -48,6 +49,26 @@ Describes areas, not estates or residents.
 
 Data: FSA hygiene ratings, Companies House, ONS (Census 2021, income estimates), MHCLG (IMD 2025) and data.police.uk, all under the Open Government Licence v3.0. Attribute the sources.
 
+### `prices.json`
+
+Sale prices and private rents for the postcode report card. Built monthly by `python -m london_pulse.prices`; `report.json` reads it.
+
+- `window` (`from`, `to`, `YYYY-MM`; the 12 months to the latest sale month `as_of`), `min_sales` (10), `caveats`, `method`.
+- `columns`: `median_all, n_all, median_flat, n_flat, median_house, n_house`. `sectors` maps a postcode sector (outward code, a space,
+  the first inward digit: `"E8 1"`) to those six values; `districts` maps an outward code (`"E8"`) to `[median_all, n_all]`. A median is
+  `null` when its `n` is under `min_sales`; `n` is always present. Medians are of individual sale prices, not averages of areas.
+  Flats are type F; houses are detached, semi-detached and terraced.
+- Sales are Greater London (county `GREATER LONDON`, which includes the City of London), standard market sales only (Price Paid category A; category B is left out: repossessions, buy-to-lets where identified by a mortgage, transfers to companies and other non-private buyers),
+  deleted records dropped and corrections applied. The latest month is thinner because Land Registry records arrive with a lag.
+- `rents`: `as_of`, `source`, `url`, `licence`, `caveat`, `boroughs` keyed by ONS area code (`E09000012`) with `name`, `all`, `one_bed`,
+  `two_bed`, `three_bed` (GBP a month, `null` if not published) and `annual_change_pct`. The City of London is not published by ONS, so there
+  are 32 boroughs. Official statistics in development: read as trends; a modelled borough average, not a specific street; private rent only.
+- A sector's typical price mostly reflects its mix of flats and houses and of leasehold and freehold homes. A postcode district alone gets the district figure; a borough name gets no sale price.
+- `proof.ppd`: the Land Registry price paid search, to look up the individual sales behind a postcode's median.
+- `sources`: `lr_ppd` and `ons_pipr` entries (also copied into `report.json`).
+
+Data: contains HM Land Registry data (c) Crown copyright and database right 2026, licensed under the Open Government Licence v3.0; ONS data under OGL v3.0.
+
 ### `report.json`
 
 Reference distributions for the postcode report card; the page computes one postcode's metrics live and places it on these.
@@ -62,5 +83,9 @@ Derived from `areas.json`, `venues.json`, `stations.json` and `character.json`; 
   `proxy`), `n`, `q` (21 percentiles, p0 to p100 in steps of 5), `hist` (`edges` 21 and `counts` 20, clipped at p1 and p99),
   `lo` / `hi` (p33 / p67), `as_of`, `source_ids` (into `sources`). `crime_rate` uses residential (non-busy) neighbourhoods only;
   `fresh_pct` is distributed across postcode districts.
-- `checks`: three real LSOA centres with `code`, `lon`, `lat`, `outcode` (postcode district of the nearest venue, used for `fresh_pct`)
+- `median_price` (distribution of sector medians with at least `min_sales` sales, GBP) and `rent_2bed` (distribution of the 32 boroughs'
+  two-bed monthly rent): direction `0` (never rated; cheaper is not better), badges `measured` and `proxy`, sources `lr_ppd` / `ons_pipr`.
+  Both are left out, with a warning, if `prices.json` is absent.
+- `checks`: three real LSOA centres with `code`, `lon`, `lat`, `outcode` (postcode district of the nearest venue, used for `fresh_pct`),
+  `sector` (its postcode sector, used for `median_price`; the borough of the nearest LSOA gives `rent_2bed`)
   and `values` for every metric, so the page's calculation can be tested against this one.

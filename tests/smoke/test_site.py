@@ -121,9 +121,14 @@ def test_report_card_renders(page):
     open_tab(page, "report", "/E8%203QW")
     page.wait_for_selector("#rpout .rc-row", timeout=30000)
     assert page.locator(".rc-row").count() == 6
+    # Affordability carries two extra lines (price, rent) when prices.json and its metrics exist
+    extra = 2 if page.locator("#rc-afford .rc-sub").count() else 0
     for row in page.locator(".rc-row").all():
-        assert row.locator(".pill").count() >= 1 and row.locator(".badge").count() == 1
-        assert row.locator("svg[role=img]").count() == 1 and row.locator("details").count() == 1
+        n = 1 + (extra if (row.get_attribute("id") == "rc-afford") else 0)
+        assert row.locator(".pill").count() >= 1 and row.locator(".badge").count() == n
+        assert row.locator("svg[role=img]").count() == n and row.locator("details").count() == n
+    for sub in page.locator(".rc-sub").all():
+        assert sub.locator(".badge").count() == 1 and sub.locator("summary", has_text="Show the working").count() == 1
     assert "No overall score" in page.inner_text("#rpout")
     assert not page.errors, page.errors
 
@@ -167,3 +172,30 @@ def test_report_matches_python_checks(page):
     for c, got in res:
         for k, want in c["values"].items():
             assert got[k] is not None and abs(got[k] - want) <= max(0.005 * abs(want), 0.05), (c["code"], k, got[k], want)
+
+
+def test_report_prices_lines_and_graceful_absence(page):
+    mock_pc(page)
+    open_tab(page, "report", "/E8%203QW,N16%205AA")
+    page.wait_for_selector("#rpout .rc-row", timeout=30000)
+    have = page.evaluate("fetch('api/v1/prices.json').then(r => r.ok).catch(() => false)")
+    subs = page.locator("#rc-afford .rc-sub")
+    if have:
+        assert subs.count() == 2
+        txt = page.inner_text("#rc-afford")
+        assert "Typical sale price" in txt and "two-bed private rent" in txt and "official statistics in development" in txt
+        assert "Council tax, service charges, what is currently advertised" in txt
+        for sub in subs.all():
+            assert sub.locator("svg .mk").count() >= 1
+    else:
+        assert subs.count() == 0
+    assert not page.errors, page.errors
+
+
+def test_report_without_prices_omits_lines(page):
+    page.route("**/api/v1/prices.json", lambda route: route.fulfill(status=404, body="nope"))
+    mock_pc(page)
+    open_tab(page, "report", "/E8%203QW")
+    page.wait_for_selector("#rpout .rc-row", timeout=30000)
+    assert page.locator(".rc-sub").count() == 0
+    assert not [e for e in page.errors if "prices" not in str(e)], page.errors

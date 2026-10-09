@@ -7,6 +7,7 @@ import pytest
 from london_pulse.report import API, Context, MissingInput, build_report, km, percentile
 
 KEYS = {"crime_rate", "income_dep_pct", "venues_800", "five_pct_800", "walk_min", "lines_1km", "income_ahc", "fresh_pct"}
+PRICE_KEYS = {"median_price", "rent_2bed"}
 
 
 @pytest.fixture(scope="module")
@@ -17,7 +18,7 @@ def report():
 
 
 def test_distributions_are_well_formed(report):
-    assert set(report["metrics"]) == KEYS
+    assert set(report["metrics"]) in (KEYS, KEYS | PRICE_KEYS)
     for k, m in report["metrics"].items():
         assert len(m["q"]) == 21 and m["q"] == sorted(m["q"]), k
         assert len(m["hist"]["edges"]) == 21 and len(m["hist"]["counts"]) == 20 and sum(m["hist"]["counts"]) == m["n"], k
@@ -29,10 +30,11 @@ def test_distributions_are_well_formed(report):
 def test_checks_recompute_to_published(report):
     ids = {s["id"] for s in report["sources"]}
     assert all(i in ids for m in report["metrics"].values() for i in m["source_ids"])
-    ctx = Context(*(json.loads((API / n).read_text()) for n in ("areas.json", "venues.json", "stations.json", "character.json")))
+    names = ("areas.json", "venues.json", "stations.json", "character.json") + (("prices.json",) if (API / "prices.json").exists() else ())
+    ctx = Context(*(json.loads((API / n).read_text()) for n in names))
     assert len(report["checks"]) == 3
     for c in report["checks"]:
-        m = ctx.metrics(c["lon"], c["lat"], c["outcode"])
+        m = ctx.metrics(c["lon"], c["lat"], c["outcode"], c["sector"])
         for k, v in c["values"].items():
             assert m[k] == pytest.approx(v, rel=1e-4, abs=1e-4), (c["code"], k)
 

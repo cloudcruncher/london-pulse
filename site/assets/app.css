@@ -321,6 +321,7 @@ a.insight.k:hover{transform:translateY(-2px);box-shadow:0 0 0 2px var(--accent),
 .pill.a{color:var(--warn);border-color:currentColor;background:color-mix(in srgb,var(--warn) 12%,var(--surface))}
 .pill.n{color:var(--muted)}
 .rc-facts li{font-size:.92rem;color:var(--muted);margin:2px 0}.rc-facts .rc-who{font-weight:700;color:var(--ink)}.rc-key{font-size:.82rem;color:var(--muted)}
+.rc-sub{border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}.rc-subhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.rc-subhead h4{margin:0}
 .rc-dont{font-size:.88rem;color:var(--muted);margin:8px 0}
 .strip{display:block;width:100%;height:auto;max-width:560px;margin:6px 0}
 .strip .bar{fill:var(--bar)}.strip .bg-g{fill:color-mix(in srgb,var(--good) 14%,transparent)}.strip .bg-a{fill:color-mix(in srgb,var(--warn) 16%,transparent)}

@@ -30,7 +30,11 @@ METRICS = {  # key: (label, unit, direction, badge, source ids)
     "lines_1km": ("Rail and tube lines within 1 km", "lines", "0", "modelled", ["tfl"]),
     "income_ahc": ("Modelled household income after housing costs", "GBP a year", "0", "modelled", ["income"]),
     "fresh_pct": ("New food premises awaiting inspection, share of the district's venues", "%", "0", "proxy", ["venues"]),
+    # prices.json metrics: never rated, because cheaper is not better; skipped when prices.json is absent
+    "median_price": ("Median sale price in the postcode sector, last 12 months", "£", "0", "measured", ["lr_ppd"]),
+    "rent_2bed": ("Average two-bed private rent in the borough", "£/month", "0", "proxy", ["ons_pipr"]),
 }
+PRICE_KEYS = ("median_price", "rent_2bed")
 SOURCES = [
     {"id": "tfl", "name": "TfL station and line data (Unified API)", "publisher": "Transport for London", "vintage": "Monthly refresh",
      "licence": "Powered by TfL Open Data", "url": "https://api.tfl.gov.uk/",
@@ -99,7 +103,7 @@ def percentile(sorted_xs, p):
 
 
 class Context:
-    def __init__(self, areas, venues, stations, character):
+    def __init__(self, areas, venues, stations, character, prices=None):
         self.f = {k: i for i, k in enumerate(areas["fields"])}
         self.areas = areas["areas"]
         self.months = len(areas["crime_months"])
@@ -114,14 +118,22 @@ class Context:
         # lines are unioned across stations, so merging same-named platforms (as the page does) changes nothing
         self.stn_grid = Grid((s["lon"], s["lat"], s["lines"]) for s in stations["stations"])
         self.districts = {d["name"]: d for d in character["districts"]}
-        pc = lambda p: (p or "").upper().replace(" ", "")  # noqa: E731
+        pc = lambda p: (p or "").upper().replace(" ", "")
         self.pc_grid = Grid((v[0], v[1], pc(v[6])) for v in venues["venues"] if v[6])
+        self.has_prices = bool(prices)
+        self.sector_price = {k: v[0] for k, v in (prices or {}).get("sectors", {}).items()}
+        self.borough_rent = {b["name"]: b["two_bed"] for b in (prices or {}).get("rents", {}).get("boroughs", {}).values()}
 
     def outcode_at(self, lon, lat):
         hit = self.pc_grid.nearest(lon, lat)
         return hit[1][:-3] if hit and len(hit[1]) > 3 else None
 
-    def metrics(self, lon, lat, outcode=None):
+    def sector_at(self, lon, lat):
+        """Postcode sector of the nearest venue's postcode, e.g. "E8 1" (outward code, space, first inward digit)."""
+        hit = self.pc_grid.nearest(lon, lat)
+        return f"{hit[1][:-3]} {hit[1][-3]}" if hit and len(hit[1]) > 4 else None
+
+    def metrics(self, lon, lat, outcode=None, sector=None):
         f = self.f
         inr = [a for _, a in self.lsoa_grid.within(lon, lat, CATCH_M / 1000)]
         if not inr:
@@ -152,6 +164,9 @@ class Context:
         s = self.stn_grid.nearest(lon, lat)
         out["walk_min"] = s[0] * 1000 / WALK_M_PER_MIN if s else None
         out["lines_1km"] = len({ln for _, lines in self.stn_grid.within(lon, lat, LINES_KM) for ln in lines})
+        near_lsoa = self.lsoa_grid.nearest(lon, lat)
+        out["median_price"] = self.sector_price.get(sector) if sector else None
+        out["rent_2bed"] = self.borough_rent.get(near_lsoa[1][f["borough"]]) if near_lsoa else None
         d = self.districts.get(outcode) if outcode else None
         out["fresh_pct"] = d["fresh_pct"] if d else None
         return out
@@ -168,7 +183,7 @@ def distribution(key, values):
     for v in xs:
         counts[min(19, max(0, int((v - lo1) / (hi1 - lo1) * 20))) if hi1 > lo1 else 0] += 1
     label, unit, direction, badge, src = METRICS[key]
-    r = lambda x: round(x, 3)  # noqa: E731
+    r = lambda x: round(x, 3)
     return {"label": label, "unit": unit, "direction": direction, "badge": badge, "n": len(xs), "q": [r(x) for x in q],
             "hist": {"edges": [r(e) for e in edges], "counts": counts}, "lo": r(percentile(xs, 33)), "hi": r(percentile(xs, 67)),
             "source_ids": src}
@@ -182,10 +197,12 @@ def pick_checks(ctx: Context):
         for _, a in sorted(ctx.lsoa_grid.within(lon, lat, 3.0), key=lambda t: t[0]):
             la, lo = a[f["lat"]], a[f["lon"]]
             oc = ctx.outcode_at(lo, la)
-            m = ctx.metrics(lo, la, oc)
+            sec = ctx.sector_at(lo, la)
+            m = ctx.metrics(lo, la, oc, sec)
             m.pop("_busy_share")
-            if all(v is not None for v in m.values()):
-                out.append({"code": a[f["code"]], "lon": lo, "lat": la, "outcode": oc, "values": {k: round(v, 4) for k, v in m.items()}})
+            if all(v is not None for k, v in m.items() if ctx.has_prices or k not in PRICE_KEYS):
+                m = {k: v for k, v in m.items() if ctx.has_prices or k not in PRICE_KEYS}
+                out.append({"code": a[f["code"]], "lon": lo, "lat": la, "outcode": oc, "sector": sec, "values": {k: round(v, 4) for k, v in m.items()}})
                 break
         else:
             raise MissingInput(f"no complete check point near {name}")
@@ -194,7 +211,12 @@ def pick_checks(ctx: Context):
 
 def build_report(api: Path = API) -> dict:
     ar, ve, st, ch = (load(api, n) for n in ("areas.json", "venues.json", "stations.json", "character.json"))
-    ctx = Context(ar, ve, st, ch)
+    try:
+        pr = load(api, "prices.json")
+    except MissingInput:
+        print("warning: prices.json not found; skipping median_price and rent_2bed")
+        pr = None
+    ctx = Context(ar, ve, st, ch, pr)
     f = ctx.f
     series = {k: [] for k in METRICS}
     for a in ctx.areas:
@@ -202,27 +224,32 @@ def build_report(api: Path = API) -> dict:
         m = ctx.metrics(lon, lat)
         m.pop("_busy_share", None)
         for k, v in m.items():
-            if k == "fresh_pct":
+            if k == "fresh_pct" or k in PRICE_KEYS:
                 continue
             if k == "crime_rate" and (a[f["busy"]] or v is None):
                 continue  # as analysis does: residential neighbourhoods only
             series[k].append(v)
     series["fresh_pct"] = [d["fresh_pct"] for d in ch["districts"] if d.get("fresh_pct") is not None]
+    if pr:
+        series["median_price"] = [v[0] for v in pr["sectors"].values() if v[0] is not None and v[1] >= pr["min_sales"]]
+        series["rent_2bed"] = [b["two_bed"] for b in pr["rents"]["boroughs"].values() if b["two_bed"] is not None]
     vintage = {"crime_rate": ar.get("as_of"), "income_dep_pct": "IMD 2025", "income_ahc": "ONS FYE2023",
                "walk_min": st.get("as_of"), "lines_1km": st.get("as_of")}
+    if pr:
+        vintage.update(median_price=pr["as_of"], rent_2bed=pr["rents"]["as_of"])
     metrics = {}
     for k in METRICS:  # a metric with no values at all is left out; the page skips its row
         d = distribution(k, series[k])
         if d:
             metrics[k] = {**d, "as_of": vintage.get(k) or ve.get("as_of")}
-    srcs = [s for s in ar["sources"] if s["id"] in {"deprivation", "income", "crime", "venues"}] + SOURCES
+    srcs = [s for s in ar["sources"] if s["id"] in {"deprivation", "income", "crime", "venues"}] + SOURCES + (pr["sources"] if pr else [])
     return {
         "schema_version": 1, "as_of": ve.get("as_of") or date.today().isoformat(), "generated": date.today().isoformat(),
-        "source": "Derived from areas.json (police, IMD 2025, ONS income), venues.json (FSA), stations.json (TfL) and character.json",
+        "source": "Derived from areas.json (police, IMD 2025, ONS income), venues.json (FSA), stations.json (TfL), character.json and, when present, prices.json (Land Registry sales, ONS rents)",
         "licence": "Open Government Licence v3.0; station data Powered by TfL Open Data",
         "method": (f"Each metric is computed for the {CATCH_M} m catchment of every London LSOA centre, exactly as the page does for a "
                    "postcode: LSOA centres within the catchment (else the nearest within 2 km) weighted by population; venues and "
-                   "stations by straight-line distance. Crime uses residential neighbourhoods only. lo and hi are the 33rd and 67th percentiles."),
+                   "stations by straight-line distance. Crime uses residential neighbourhoods only. median_price is distributed across postcode sectors with enough sales and rent_2bed across boroughs. lo and hi are the 33rd and 67th percentiles."),
         "catchment_m": CATCH_M, "months": ctx.months,
         "metrics": metrics,
         "sources": srcs, "checks": pick_checks(ctx),

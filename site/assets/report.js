@@ -16,6 +16,10 @@ const money = n => '£' + fmt(Math.round(n / 100) * 100);
 const ord = n => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
 const tenths = p => { const t = Math.round(p / 10); return t <= 0 ? 'fewer than 1 in 10' : t >= 10 ? 'nearly all' : `about ${t} in 10`; };
 const num1 = n => (Math.round(n * 10) / 10).toLocaleString('en-GB');
+const priceK = n => n >= 1e6 ? '£' + num1(n / 1e6) + 'm' : '£' + fmt(Math.round(n / 1000)) + 'k';
+const rentFmt = n => '£' + fmt(Math.round(n));
+const monthName = ym => /^\d{4}-\d\d$/.test(ym || '') ? new Date(ym + '-15').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : String(ym || '');
+const boroKey = n => String(n || '').toLowerCase().replace(/&/g, 'and').replace(/^(the )?(london|royal) borough of /, '').replace(/^city of (?!london)/, '').replace(/[^a-z]+/g, ' ').trim();
 
 let R = null, token = 0, lastArg = null;
 
@@ -50,7 +54,7 @@ async function locate(q) {
 export async function metricsFor(c, outcode) {
   R ??= await getApi('report');
   const r = (R.catchment_m || 800) / 1000;
-  const [V, S, CH, w] = await Promise.all([getApi('venues'), getApi('stations'), getApi('character').catch(() => null), whoNearby(c, r)]);
+  const [V, S, CH, w, P] = await Promise.all([getApi('venues'), getApi('stations'), getApi('character').catch(() => null), whoNearby(c, r), getApi('prices').catch(() => { delete api.prices; return null; })]);
   const v = {};
   if (w) { v.crime_rate = w.rate; v.income_dep_pct = w.incDep; v.income_ahc = w.incAhc; }
   const near = [];
@@ -66,7 +70,32 @@ export async function metricsFor(c, outcode) {
   v.fresh_pct = district ? district.fresh_pct : null;
   const pubs = near.filter(n => V.types[n.x[2]] === 'Pub/bar/nightclub').length;
   near.sort((a, b) => a.d - b.d);
-  return { values: v, w, near: near.slice(0, 6).map(n => ({ name: n.x[5], pc: n.x[6], d: n.d, id: n.x[7] })), pubs, nStn: in1.length, stn: stn[0] || null, stnIn: in1, district, V };
+  const price = P && R.metrics.median_price ? priceFor(P, c.label, outcode, near[0]?.x[6]) : null, rent = P?.rents && R.metrics.rent_2bed ? rentFor(P.rents, c.admin || w?.rows[0]?.borough) : null;
+  if (price) v.median_price = price.level === 'sector' ? price.all : null;
+  if (rent) v.rent_2bed = rent.two_bed;
+  return { values: v, price, rent, prices: P, w, near: near.slice(0, 6).map(n => ({ name: n.x[5], pc: n.x[6], d: n.d, id: n.x[7] })), pubs, nStn: in1.length, stn: stn[0] || null, stnIn: in1, district, V };
+}
+
+// ---------- prices and rents (api/v1/prices.json; absent file means the two lines are left out) ----------
+// Sector = postcode without its last two letters ("E8 3QW" -> "E8 3"). A typed district alone gives the district figure.
+function priceFor(P, label, outcode, nearestPc) {
+  const lab = String(label || '').trim().toUpperCase();
+  if (lab && !FULL_PC.test(lab) && !OUTCODE.test(lab)) return { level: 'borough', name: label }; // a borough name: no sale price, not a nearby sector
+  let full = null, dName = outcode;
+  if (FULL_PC.test(lab)) full = lab;
+  else if (OUTCODE.test(lab)) dName = lab;
+  else if (FULL_PC.test(String(nearestPc || '').toUpperCase().replace(/\s+/g, ''))) full = normPc(nearestPc); // no label at all (Python parity path)
+  const sector = full ? full.slice(0, -2) : null;
+  if (full) dName = full.split(' ')[0];
+  const s = sector && P.sectors?.[sector], d = P.districts?.[dName];
+  if (s && s[0] != null) return { level: 'sector', name: sector, all: s[0], n: s[1], flat: s[2], nf: s[3], house: s[4], nh: s[5] };
+  if (d && d[0] != null) return { level: 'district', name: dName, all: d[0], n: d[1], sectorTooFew: !!sector, sectorN: s ? s[1] : null };
+  return { level: 'none', name: sector || dName, n: s ? s[1] : d ? d[1] : null };
+}
+function rentFor(rents, borough) {
+  if (!borough) return null;
+  const k = boroKey(borough), code = Object.keys(rents.boroughs || {}).find(c => boroKey(rents.boroughs[c].name) === k);
+  return code ? { code, ...rents.boroughs[code] } : { name: borough, two_bed: null, unmatched: true };
 }
 
 // ---------- distribution helpers ----------
@@ -143,7 +172,8 @@ const ROWS = [
       out.push(`<div class="tenure" role="img" aria-label="Homes by tenure, not rated: council ${pc(w.council)}, housing association ${pc(w.social)}, private rent ${pc(w.rent)}, owned ${pc(w.owned)}">${seg(w.council, 't-council', 'Council')}${seg(w.social, 't-social', 'Housing association')}${seg(w.rent, 't-rent', 'Private rent')}${seg(w.owned, 't-own', 'Owned')}${seg(other, 't-other', 'Other')}</div><span class="rc-key">Homes by tenure (Census 2021, not rated): council ${pc(w.council)} · housing association ${pc(w.social)} · private rent ${pc(w.rent)} · owned ${pc(w.owned)}</span>`);
       return out;
     },
-    dont: 'House prices and rents are not covered yet. Also council tax and service charges.',
+    dont: 'Council tax, service charges, what is currently advertised, the condition of homes, and rents for a specific street.',
+    sub: true,
     cols: M => { const c = [['Residents', r => fmt(r.pop)], ['Income after housing', r => r.net_income_ahc ? money(r.net_income_ahc) : '–'], ['MSOA', r => esc(r.msoa || '–')]]; c.src = (r, P) => link(P.income, 'ONS income estimates (MSOA ' + esc(r.msoa || '') + ')'); return c; } },
   { id: 'changing', title: 'What is changing', key: 'fresh_pct', noun: 'postcode districts',
     phrase: v => `The share of venues newly registered and awaiting inspection (${num1(v)}%)`, fv: v => num1(v) + '%',
@@ -181,6 +211,64 @@ function workingHtml(row, cx) {
 }
 const items = cx => `<h4>${cx.multi ? LETTERS[cx.i] + ': ' : ''}${esc(cx.label)}</h4>`;
 
+// Sale price and private rent lines under Affordability. Never rated; each has its own badge, strip and working.
+const PRICE_ROW = { key: 'median_price', noun: 'postcode sectors', fv: priceK };
+const RENT_ROW = { key: 'rent_2bed', noun: 'London boroughs', fv: rentFmt };
+function priceBlocks(cxs, multi) {
+  const P = cxs[0].M.prices; if (!P) return '';
+  const who = cx => multi ? `<span class="mkkey" aria-hidden="true">${SHAPES[cx.i]} ${LETTERS[cx.i]}</span> <span class="sr">${LETTERS[cx.i]}: ${esc(cx.label)}. </span>` : '';
+  const srcOf = key => (R.metrics[key].source_ids || []).map(id => R.sources.find(s => s.id === id)).filter(Boolean);
+  const srcList = key => `<ul class="list">${srcOf(key).map(s => `<li><span>${link(s.url, '<b>' + esc(s.name) + '</b>')} · ${esc(s.publisher)} · ${esc(s.vintage)} · ${esc(s.licence)}<br><small>${esc(s.caveat)}</small></span></li>`).join('')}</ul>`;
+  const out = [];
+  if (R.metrics.median_price) {
+    const m = R.metrics.median_price, win = P.window ? `${monthName(P.window.from)} to ${monthName(P.window.to)}` : `the 12 months to ${monthName(P.as_of)}`, to = monthName(P.window?.to || P.as_of);
+    const lis = cxs.map(cx => {
+      const p = cx.M.price; let head, cav = '';
+      if (p && p.level === 'borough') head = 'No sale price is shown for a whole borough. Type a postcode or a postcode district such as E8 to see one.';
+      else if (!p || p.level === 'none') head = `Too few sales to show a typical price${p?.n != null ? ` (${p.n} in the 12 months to ${to})` : ''}.`;
+      else if (p.level === 'sector') {
+        head = `Typical sale price, this postcode sector (${esc(p.name)}): ${money(p.all)}, from ${fmt(p.n)} sales in the 12 months to ${to}.`;
+        cav = [p.flat != null ? `Flats ${money(p.flat)} (${fmt(p.nf)} sales)` : `Flats: too few sales to show a typical price`, p.house != null ? `houses ${money(p.house)} (${fmt(p.nh)} sales)` : `houses: too few sales to show a typical price`].join(' · ');
+      } else {
+        head = p.sectorTooFew ? `Too few sales in this postcode sector to show a typical price. Postcode district ${esc(p.name)}: ${money(p.all)}, from ${fmt(p.n)} sales in the 12 months to ${to}.` : `Typical sale price, postcode district ${esc(p.name)}: ${money(p.all)}, from ${fmt(p.n)} sales in the 12 months to ${to}.`;
+        cav = 'This is the wider district, so it is not placed on the bar chart.';
+      }
+      return `<li>${who(cx)}<span class="rc-head">${head}</span>${cav ? `<small class="rc-cav">${cav}</small>` : ''}</li>`;
+    }).join('');
+    const work = cxs.map(cx => { const p = cx.M.price, val = cx.vals.median_price;
+      return `<div class="rc-work">${items({ ...cx, multi })}${p && p.level !== 'none' && p.level !== 'borough' ? `<p><b>Area used:</b> ${p.level === 'sector' ? 'postcode sector' : 'postcode district'} ${esc(p.name)}${p.level === 'sector' ? ' (the postcode without its last two letters)' : ''}; ${fmt(p.n)} sales, ${esc(win)}.</p>` : `<p><b>Area used:</b> ${p?.name ? esc(p.name) : 'none'}; fewer than ${P.min_sales || 10} sales, so no typical price is shown.</p>`}
+        ${val != null ? `<p><b>Where it sits:</b> ${esc(priceK(val))} is higher than about ${Math.round(pctOf('median_price', val))}% of ${m.n.toLocaleString('en-GB')} London postcode sectors (${esc(m.as_of)}).</p>` : ''}</div>`; }).join('');
+    out.push(`<section class="rc-sub" aria-labelledby="rc-price-h"><div class="rc-subhead"><h4 id="rc-price-h">Typical sale price</h4><span class="badge" title="${esc(BADGE_HELP[m.badge])}">${esc(m.badge)}</span></div>
+      <ul class="rc-vals">${lis}</ul>${stripSvg(PRICE_ROW, cxs.map(cx => ({ i: cx.i, val: cx.vals.median_price })))}
+      <p class="note">Sale prices are for homes that sold, not all homes; a few sales can swing a small area. A sector's typical price mostly reflects its mix of flats and houses and of leasehold and freehold homes.</p>
+      <details class="proof"><summary>Show the working</summary>
+        <p><b>How it is worked out:</b> the median of individual sale prices (the middle sale, not the average) for standard market sales recorded by HM Land Registry in the postcode sector, ${esc(win)}. A typical price is shown only where there are at least ${P.min_sales || 10} sales. The bar chart spreads the sector medians across London postcode sectors with enough sales. It is never rated: a lower price is not better or worse.</p>
+        ${work}<p class="note">Check it yourself: ${link(P.proof?.ppd || 'https://landregistry.data.gov.uk/app/ppd/', 'search sold prices by postcode at HM Land Registry')}. Data to ${esc(monthName(P.as_of))}.</p>${srcList('median_price')}</details></section>`);
+  }
+  if (R.metrics.rent_2bed && P.rents) {
+    const m = R.metrics.rent_2bed, RT = P.rents;
+    const lis = cxs.map(cx => {
+      const r = cx.M.rent; let head, cav = '';
+      if (!r || r.two_bed == null) head = `No two-bed private rent figure for ${r?.name ? esc(r.name) : 'this borough'}.`;
+      else {
+        head = `Average two-bed private rent, ${esc(r.name)}: ${rentFmt(r.two_bed)} a month (ONS, borough average, official statistics in development).`;
+        cav = [r.one_bed != null ? `One-bed ${rentFmt(r.one_bed)}` : null, r.three_bed != null ? `three-bed ${rentFmt(r.three_bed)}` : null, r.annual_change_pct != null ? `${num1(r.annual_change_pct)}% change over the year (all private rents)` : null].filter(Boolean).join(' · ');
+      }
+      return `<li>${who(cx)}<span class="rc-head">${head}</span>${cav ? `<small class="rc-cav">${cav}</small>` : ''}</li>`;
+    }).join('');
+    const work = cxs.map(cx => { const r = cx.M.rent, val = cx.vals.rent_2bed;
+      return `<div class="rc-work">${items({ ...cx, multi })}<p><b>Area used:</b> ${r?.name ? 'borough ' + esc(r.name) : 'none'} (from the postcode lookup, or the nearest neighbourhood if that was unavailable).</p>
+        ${val != null ? `<p><b>Where it sits:</b> ${esc(rentFmt(val))} a month is higher than about ${Math.round(pctOf('rent_2bed', val))}% of ${m.n.toLocaleString('en-GB')} London boroughs (${esc(m.as_of)}).</p>` : ''}</div>`; }).join('');
+    out.push(`<section class="rc-sub" aria-labelledby="rc-rent-h"><div class="rc-subhead"><h4 id="rc-rent-h">Private rent, two-bed</h4><span class="badge" title="${esc(BADGE_HELP[m.badge])}">${esc(m.badge)}</span></div>
+      <ul class="rc-vals">${lis}</ul>${stripSvg(RENT_ROW, cxs.map(cx => ({ i: cx.i, val: cx.vals.rent_2bed })))}
+      <p class="note">Official statistics in development: local-authority estimates are best read as trends. This is a modelled borough average, not a specific street, and covers private rents only (shared and social rent are excluded).</p>
+      <details class="proof"><summary>Show the working</summary>
+        <p><b>How it is worked out:</b> the ONS Price Index of Private Rents publishes an average monthly private rent for each borough by number of bedrooms; the latest month is ${esc(monthName(RT.as_of))}. The bar chart spreads the two-bed figure across the ${m.n.toLocaleString('en-GB')} London boroughs with one. It is never rated.</p>
+        ${work}${RT.caveat ? `<p class="note">${esc(RT.caveat)}</p>` : ''}${srcList('rent_2bed')}</details></section>`);
+  }
+  return out.join('');
+}
+
 function rowHtml(row, cxs) {
   const m = R.metrics[row.key], multi = cxs.length > 1;
   const vals = cxs.map(cx => {
@@ -191,7 +279,7 @@ function rowHtml(row, cxs) {
   }).join('');
   const facts = cxs.map(cx => row.facts ? `<ul class="rc-facts">${multi ? `<li class="rc-who">${SHAPES[cx.i]} ${LETTERS[cx.i]}</li>` : ''}${(row.facts ? row.facts(cx.M, cx.vals) : []).map(f => `<li>${f}</li>`).join('')}</ul>` : '').join('');
   return `<article class="rc-row" id="rc-${row.id}" aria-labelledby="rc-${row.id}-h"><header><h3 id="rc-${row.id}-h">${row.title}</h3><span class="badge" title="${esc(BADGE_HELP[m.badge])}">${esc(m.badge)}</span></header>
-    <ul class="rc-vals">${vals}</ul>${stripSvg(row, cxs.map(cx => ({ i: cx.i, val: cx.vals[row.key] })))}${facts}
+    <ul class="rc-vals">${vals}</ul>${stripSvg(row, cxs.map(cx => ({ i: cx.i, val: cx.vals[row.key] })))}${facts}${row.sub ? priceBlocks(cxs, multi) : ''}
     <p class="rc-dont"><b>What we don't cover:</b> ${row.dont}</p>
     <details class="proof"><summary>Show the working</summary>${cxs.map(cx => workingHtml(row, { ...cx, multi })).join('')}</details></article>`;
 }
