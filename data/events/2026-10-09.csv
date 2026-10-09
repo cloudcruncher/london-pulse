@@ -1,10 +1,22 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-09,new,1999578,B Penhale,Restaurant/Cafe/Canteen,City of London Corporation,EC1A 9DS,,AwaitingInspection,,
+2026-10-09,new,1999579,"Bartlett Mitchell Ltd, 15th Floor C/O Lightsource BP",Restaurant/Cafe/Canteen,City of London Corporation,EC2Y 5AS,,AwaitingInspection,,
+2026-10-09,new,1999581,Bull & Hide,Pub/bar/nightclub,City of London Corporation,EC2M 4RH,,AwaitingInspection,,
+2026-10-09,new,1999582,KFC London Ludgate Hill,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7DE,,AwaitingInspection,,
+2026-10-09,new,1999583,Magdalene,Restaurant/Cafe/Canteen,City of London Corporation,EC2N 1AR,,AwaitingInspection,,
+2026-10-09,new,1999580,St Barts,Pub/bar/nightclub,City of London Corporation,EC1A 9DY,,AwaitingInspection,,
+2026-10-09,new,1999590,Jade Pavilion,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7TD,,AwaitingInspection,,
 2026-10-09,rating_changed,1639016,Aces Brunch,Restaurant/Cafe/Canteen,Bexley,DA14 6EN,1,4,0.1051841,51.4252964
 2026-10-09,rating_changed,1422443,Local Mini Market,Retailers - other,Bexley,DA7 6HD,4,2,0.157818,51.465523
 2026-10-09,rating_changed,426138,City News,Retailers - other,Camden,NW1 1JD,0,1,-0.1290268,51.5284456
 2026-10-09,rating_changed,1813663,Kiki Restaurant,Restaurant/Cafe/Canteen,Camden,NW5 2JT,3,0,-0.1414892,51.5484636
 2026-10-09,rating_changed,426431,Sensations Cafe,Restaurant/Cafe/Canteen,Camden,W1T 6NL,3,4,-0.1409741,51.5225384
+2026-10-09,rating_changed,1972407,BaxterStorey - Aviva Direct Line RBH,Restaurant/Cafe/Canteen,City of London Corporation,EC4R 3AD,AwaitingInspection,5,,
+2026-10-09,rating_changed,986861,Blacklock Restaurant,Restaurant/Cafe/Canteen,City of London Corporation,EC3M 8AA,4,5,,
+2026-10-09,rating_changed,1907778,Mumbai Square,Restaurant/Cafe/Canteen,City of London Corporation,E1 7AA,1,4,,
 2026-10-09,rating_changed,1756312,Social Pantry,Other catering premises,City of London Corporation,EC4N 8BH,5,4,-0.089494,51.513221
+2026-10-09,rating_changed,1985566,The India - Best of The City,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 2EJ,AwaitingInspection,5,,
+2026-10-09,rating_changed,1214017,The Salad Kitchen,Takeaway/sandwich shop,City of London Corporation,EC4N 4SJ,1,5,,
 2026-10-09,rating_changed,1955611,Pizza Hut,Takeaway/sandwich shop,Croydon,CR2 6AJ,AwaitingInspection,4,-0.0992849990725517,51.3515396118164
 2026-10-09,rating_changed,1934833,RKS Crepe & Spicy,Takeaway/sandwich shop,Croydon,CR8 2AY,AwaitingInspection,4,-0.115110002458096,51.3379173278809
 2026-10-09,rating_changed,1733294,Balaji Foods,Manufacturers/packers,Ealing,UB1 2FJ,3,1,-0.3737833,51.5320568
@@ -18,7 +30,17 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-09,rating_changed,1823209,AJS Atwal Supermarket,Retailers - other,Newham,E13 9BA,1,4,0.033986,51.534472
 2026-10-09,rating_changed,1961931,New Tin Tin,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 1NH,AwaitingInspection,4,,
 2026-10-09,rating_changed,1752746,B.Bakery,Mobile caterer,Tower Hamlets,E14 9TS,5,0,-0.0130936,51.499416
+2026-10-09,rating_changed,45300,Banglatown Cash & Carry,Distributors/Transporters,Tower Hamlets,E1 5JP,1,5,,
+2026-10-09,rating_changed,1947648,Chinese Gourmet Food Ltd,Other catering premises,Tower Hamlets,E14 9GE,2,4,,
+2026-10-09,rating_changed,1227620,Noodle & Beer,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7LA,2,5,,
 2026-10-09,rating_changed,65628,Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4AL,2,1,-0.026236,51.517947
+2026-10-09,rating_changed,1979328,Snack Store Ltd,Other catering premises,Tower Hamlets,E1 7TD,4,AwaitingInspection,,
 2026-10-09,rating_changed,1966143,Hopers' Base,Restaurant/Cafe/Canteen,Westminster,WC2N 4JS,AwaitingInspection,3,-0.1268511,51.5112077
 2026-10-09,rating_changed,1243405,PAD THAI HOUSE,Takeaway/sandwich shop,Westminster,W1K 6ZA,3,2,,
 2026-10-09,rating_changed,1846192,SHREE KRISHNA VADA PAV,Restaurant/Cafe/Canteen,Westminster,W1W 8DS,2,3,-0.1393133,51.5166039
+2026-10-09,removed,294273,Club Gascon,Pub/bar/nightclub,City of London Corporation,EC1A 9DS,5,,-0.100151,51.518601
+2026-10-09,removed,1901147,La Spezia/Spit,Restaurant/Cafe/Canteen,City of London Corporation,EC3A 4AF,5,,-0.0807624,51.51361
+2026-10-09,removed,294274,Le Bar,Restaurant/Cafe/Canteen,City of London Corporation,EC1A 9DS,5,,-0.100151,51.518601
+2026-10-09,removed,898161,Marks & Spencer Food To Go Ludgate,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 2AF,5,,-0.104925,51.514343
+2026-10-09,removed,1666609,The City Bar,Restaurant/Cafe/Canteen,City of London Corporation,E16 2PX,5,,,
+2026-10-09,removed,1914087,The Livery,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QP,AwaitingInspection,,-0.0832566,51.5173649

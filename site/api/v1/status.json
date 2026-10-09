@@ -1,1 +1,1 @@
-{"schema_version": 1, "generated_at": "2026-10-09T07:43:20+00:00", "as_of": "2026-10-09", "rows": 81640, "previous_rows": 81640, "changes": {"rating_changed": 23}, "schedule": {"fsa": "daily 06:17 UTC", "companies_house": "monthly, 3rd"}}
+{"schema_version": 1, "generated_at": "2026-10-09T09:33:42+00:00", "as_of": "2026-10-09", "rows": 81641, "previous_rows": 81640, "changes": {"new": 7, "removed": 6, "rating_changed": 32}, "schedule": {"fsa": "daily 06:17 UTC", "companies_house": "monthly, 3rd"}}
