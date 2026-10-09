@@ -41,6 +41,10 @@ def test_boroughs_cover_london():
     assert all(x["name"] for x in b) if "name" in b[0] else True
 
 
+# Files owned by the monthly workflow only carry the newest fields once that has run (it sets MONTHLY_CONTRACT=1).
+MONTHLY = bool(os.environ.get("MONTHLY_CONTRACT"))
+
+
 def test_venues_shape_and_bounds():
     v = load("venues.json")
     assert len(v["boroughs"]) == 33
@@ -49,10 +53,12 @@ def test_venues_shape_and_bounds():
     assert len(rows) > 30_000
     lo, hi, la, lb = LONDON
     sample = rows[:: max(1, len(rows) // 2000)]
-    for lon, lat, t, r, b, name, pc in sample:
+    assert v["venue_columns"] == ["lon", "lat", "type", "rating", "borough", "name", "postcode", "fhrsid", "approx_loc"]
+    for lon, lat, t, r, b, name, pc, fhrsid, approx in sample:
         assert lo <= lon <= hi and la <= lat <= lb, (name, lon, lat)
         assert 0 <= t < len(v["types"]) and 0 <= r < len(v["ratings"]) and 0 <= b < len(v["boroughs"])
-        assert name
+        assert name and int(fhrsid) > 0 and approx in (0, 1)
+    assert 0 < sum(r[8] for r in rows) < len(rows) / 2, "approx_loc share should be a minority"
 
 
 def test_hex_layer_has_every_map_measure():
@@ -73,9 +79,13 @@ def test_brands_include_known_names_with_plausible_counts():
 def test_area_context_files():
     st = load("stations.json")["stations"]
     assert len(st) > 500 and all("lines" in s and "modes" in s for s in st[:50])
+    if MONTHLY:
+        assert all(s["naptan"] for s in st[:50])
     c = load("crime.json")
     assert len(c["cells"]) > 3000 and len(c["categories"]) >= 10
     assert all(len(row[2]) == len(c["categories"]) for row in c["cells"][:200])
+    if MONTHLY:
+        assert c["failed_cells"] <= 0.005 * c["queried_cells"] and c["queried_cells"] > 1000
 
 
 def test_areas_join_tenure_deprivation_income_and_crime():
@@ -87,6 +97,8 @@ def test_areas_join_tenure_deprivation_income_and_crime():
     assert all(LONDON[0] <= r["lon"] <= LONDON[1] and LONDON[2] <= r["lat"] <= LONDON[3] for r in rs)
     assert all(0 <= r["council_pct"] <= 100 and 0 <= r["owned_pct"] <= 100 and 1 <= r["imd_decile"] <= 10 for r in rs)
     assert all(r["council_pct"] + r["other_social_pct"] + r["private_pct"] + r["owned_pct"] <= 100.5 for r in rs)
+    assert a["as_of"] == a["crime_months"][-1]
+    assert all(r["msoa"].startswith("E02") and r["income_lo_ahc"] <= r["net_income_ahc"] <= r["income_hi_ahc"] for r in rs)
     assert sum(1 for r in rs if r["net_income_bhc"]) > 4900            # income is MSOA-level but covers every LSOA
     assert sum(1 for r in rs if r["council_pct"] >= 30) > 300           # London has plenty of council-majority LSOAs
     assert all(len(r["crimes"]) == len(a["categories"]) for r in rs[:200])
@@ -134,3 +146,20 @@ def test_size_budgets(name, budget_kb):
     if not p.exists():
         pytest.skip(f"{name} not present")
     assert p.stat().st_size <= budget_kb * KB, f"{name} is {p.stat().st_size // KB} KB, budget {budget_kb} KB"
+
+
+MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.json"}
+
+
+@pytest.mark.parametrize("name", ["summary.json", "boroughs.json", "events.json", "history.json", "venues.json", "brands.json",
+                                  "character.json", "hex.geojson", "companies.json", "operators.json", "stations.json", "crime.json",
+                                  "areas.json", "status.json"])
+def test_provenance_fields(name):
+    if name in MONTHLY_FILES and not MONTHLY:
+        pytest.skip("written by the monthly context workflow; checked there")
+    d = load(name)
+    assert d.get("source") or name == "areas.json" and d.get("sources"), f"{name}: source missing"
+    if name != "status.json":
+        assert d.get("generated") and d.get("licence"), f"{name}: generated/licence missing"
+    if name == "stations.json":
+        assert "TfL" in d["licence"] and "Open Government" not in d["licence"]

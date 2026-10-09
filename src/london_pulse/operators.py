@@ -20,9 +20,9 @@ SECTORS = {
         "Craft makers (bakers, roasters, brewers, distillers)",
         ("10710", "10832", "11010", "11020", "11050", "10520"),
     ),
-    "creative": ("Creative and culture", ("59", "74", "90")),
+    "creative": ("Creative and culture (includes SIC 74, all other professional, scientific and technical services)", ("59", "74", "90")),
     "wellness": ("Wellness and personal care", ("9313", "9604", "9602")),
-    "retail": ("Independent retail", ("47",)),
+    "retail": ("Retail (all)", ("47",)),
     "tech": ("Software and tech", ("62",)),
 }
 SHIFT_SECTORS = (
@@ -30,7 +30,7 @@ SHIFT_SECTORS = (
     "creative",
     "wellness",
     "tech",
-)  # the mix that tends to move into a changing neighbourhood
+)  # sectors whose share of new registrations is compared with their share of the existing stock (no causal claim)
 HUB_MIN = 150  # registered addresses with this many companies are formation agents or virtual offices
 MIN_DISTRICT_RECENT = (
     12  # formations in the last 12 months before a district can be ranked
@@ -361,7 +361,9 @@ def build(csv: Path, fsa_parquet: Path, out: Path, on: date) -> None:
     result = {
         "schema_version": 1,
         "as_of": on.isoformat(),
+        "generated": date.today().isoformat(),
         "source": "Companies House free company data product",
+        "licence": "Open Government Licence v3.0",
         "sectors": {k: v[0] for k, v in SECTORS.items()},
         "momentum": momentum,
         "seasonality": seasonality,
@@ -449,7 +451,7 @@ def _headlines(r: dict) -> list[dict]:
             {
                 "kind": "mix",
                 "area": sh[0]["district"],
-                "text": "The local mix is moving toward craft, creative, wellness and tech in "
+                "text": "Craft, creative, wellness and tech companies make up a higher share of new registrations than of existing ones in "
                 + ", ".join(x["district"] for x in sh)
                 + f": {sh[0]['district']}'s new companies are {sh[0]['mix_new_pct']}% in those sectors against {sh[0]['mix_stock_pct']}% of what is there already.",
             }

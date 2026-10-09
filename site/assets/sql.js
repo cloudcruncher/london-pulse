@@ -22,7 +22,7 @@ const PRESETS = [
   ['growth', 'Day over day', 'Venue count over time', `SELECT snapshot_date, sum(premises) AS premises, sum(eating_drinking) AS eating_drinking\nFROM history GROUP BY 1 ORDER BY 1`],
   ['takeaway', 'High street character', 'Takeaway share by borough', `SELECT authority, count(*) AS venues,\n  round(100.0 * count(*) FILTER (business_type = 'Takeaway/sandwich shop') / count(*), 1) AS pct_takeaway\nFROM venues WHERE ${EAT} GROUP BY 1 HAVING count(*) >= 300 ORDER BY 3 DESC`],
   ['coffee', 'High street character', 'Coffee-named venues by borough', `SELECT authority, count(*) AS coffee_named FROM venues\nWHERE ${COFFEE}\nGROUP BY 1 ORDER BY 2 DESC`],
-  ['names', 'High street character', 'Most common venue names', `SELECT upper(name) AS name, count(*) AS n FROM venues\nGROUP BY 1 ORDER BY 2 DESC LIMIT 25`],
+  ['names', 'High street character', 'Most common venue names', `SELECT upper(trim(name)) AS name, count(*) AS n FROM venues\nWHERE ${EAT} GROUP BY 1 ORDER BY 2 DESC LIMIT 25`],
   ['pubs', 'High street character', 'Pubs and bars per borough', `SELECT authority, count(*) AS pubs FROM venues\nWHERE business_type = 'Pub/bar/nightclub' GROUP BY 1 ORDER BY 2 DESC`],
   ['district', 'Explore', 'Everything in one postcode district (edit E8)', `SELECT name, business_type, rating, postcode FROM venues\nWHERE split_part(postcode, ' ', 1) = 'E8' ORDER BY name LIMIT 200`],
 ];
@@ -103,7 +103,7 @@ export function initSql() {
   };
 
   $('schema').innerHTML = `<p class="note"><code>venues</code> one row per FSA-registered business today (~82k). <code>events</code> every new / removed / re-rated premises since tracking began. <code>history</code> daily counts by borough.</p>
-    <ul class="cols-list"><li><code>venues</code>: fhrsid, name, business_type, address, postcode, rating, rating_date, authority, lon, lat</li>
+    <ul class="cols-list"><li><code>venues</code>: fhrsid, name, business_type, address, postcode, rating, rating_date, authority, lon, lat, approx_loc (1 = location imputed from the postcode)</li>
     <li><code>events</code>: event_date, event (new | removed | rating_changed), fhrsid, name, business_type, authority, postcode, old_rating, new_rating, lon, lat</li>
     <li><code>history</code>: snapshot_date, authority, premises, eating_drinking, five_star, awaiting</li></ul>
     <p class="note">Ratings are text: '0'-'5', 'AwaitingInspection', 'Exempt'. It's DuckDB SQL, so <code>FILTER</code>, <code>regexp_matches</code>, <code>split_part</code> and <code>INTERVAL</code> all work.</p>`;

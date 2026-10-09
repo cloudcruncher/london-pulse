@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>London Pulse</title>
-<meta name="description" content="What is opening, closing and changing across London's 33 boroughs, tracked daily from open data.">
+<meta name="description" content="What is opening, closing and changing across London's 33 local authorities, tracked daily from open data.">
 <meta name="theme-color" content="#4338ca">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -37,7 +37,7 @@
     <div class="hero">
       <p class="eyebrow" id="asof">Loading…</p>
       <h1>What's opening, closing and changing across London.</h1>
-      <p class="lead">Every food business in the capital, tracked daily from open data and compared with the day before. Explore the map, drill into a borough, or follow craft coffee and beer.</p>
+      <p class="lead">Every premises on the Food Standards Agency register in London, tracked daily from open data and compared with the day before. Explore the map, drill into a borough, or follow craft coffee and beer.</p>
       <div class="cta"><a class="btn primary" href="#map">Explore the map</a><a class="btn" href="#insights">Insights</a><a class="btn" href="#area">Explore an area</a><a class="btn" href="#craft">Craft drinks</a></div>
     </div>
     <div class="kpis" id="kpis"></div>
@@ -46,8 +46,8 @@
       <p class="eyebrow">For cafés, roasters, pubs and breweries</p>
       <h2 id="story-h" class="first">Know your patch before your competitors do.</h2>
       <ol class="steps">
-        <li class="reveal"><span class="step-n">1</span><b>Every council updates a public register.</b><small>Each new food business has to register. It lands in an open dataset, usually within days.</small></li>
-        <li class="reveal"><span class="step-n">2</span><b>We compare today with yesterday.</b><small>New places, places gone, ratings changed, for all 33 boroughs, every morning.</small></li>
+        <li class="reveal"><span class="step-n">1</span><b>Every council updates a public register.</b><small>Each new food business has to register. It then appears in the open dataset; how soon varies by council.</small></li>
+        <li class="reveal"><span class="step-n">2</span><b>We compare today with yesterday.</b><small>New places, places gone, ratings changed, for all 33 London local authorities (32 boroughs and the City), every morning.</small></li>
         <li class="reveal"><span class="step-n">3</span><b>You see your area change.</b><small>Who is opening near you, how crowded it is, and where to look next.</small></li>
       </ol>
       <div class="try reveal">
@@ -73,13 +73,13 @@
     <div class="card" id="changes"></div>
     <div class="cols">
       <div><h2>Hygiene ratings</h2><div class="card"><div class="dist" id="dist"></div></div></div>
-      <div><h2>Newest awaiting inspection, by borough</h2><div class="card"><ul class="list" id="newest"></ul></div></div>
+      <div><h2>Newest awaiting inspection, by borough</h2><div class="card"><ul class="list" id="newest"></ul></div><p class="note">Highest FHRS id in each borough, a proxy for most recently added.</p></div>
     </div>
   </section>
 
   <section class="view" id="v-insights" hidden>
     <h2 class="first">Insights</h2>
-    <p class="note" id="ins-note">Ready-made reads on what London is becoming, where momentum is building or fading, and who is opening. Worked out fresh from open data.</p>
+    <p class="note" id="ins-note">Ready-made reads on what London is becoming, where momentum is building or fading, and who is opening. Worked out fresh from open data. The headline reads are proxies, based on keywords in premises names and Companies House registered offices; method at the foot of the page.</p>
     <div class="insights" id="ins-reads"></div>
     <div id="ins-reads-more"></div>
     <h2>What each area is becoming</h2>
@@ -89,14 +89,14 @@
     <div class="card"><ul class="list arealist" id="ins-areas"></ul></div>
     <div id="ins-more"></div>
     <h2>Is momentum building or slowing?</h2>
-    <p class="note">New companies registered in London, last 6 months against the 6 before. A leading signal: companies form before premises open.</p>
+    <p class="note">New companies registered in London, last 6 months against the 6 before. A leading signal: companies can form before premises open. Districts on the London edge (e.g. KT, EN, RM, TW, CR) include companies outside Greater London.</p>
     <div class="momgrid" id="ins-mom"></div>
     <div class="cols">
       <div><h2>Picking up</h2><div class="card"><ul class="list" id="ins-up"></ul></div></div>
       <div><h2>Cooling</h2><div class="card"><ul class="list" id="ins-down"></ul></div></div>
     </div>
     <div class="cols">
-      <div><h2>Mix moving toward craft, creative, wellness and tech</h2><div class="card"><ul class="list" id="ins-mix"></ul></div></div>
+      <div><h2>Share of new companies in craft, creative, wellness and tech</h2><div class="card"><ul class="list" id="ins-mix"></ul></div></div>
       <div><h2>Food and drink companies winding down</h2><div class="card"><ul class="list" id="ins-wind"></ul></div></div>
     </div>
     <h2>Who is opening</h2>
@@ -137,6 +137,7 @@
         <button class="chip on" id="glheat" hidden>Heatmap</button></div>
         </div>
         <div class="count" id="mapcount"></div>
+        <p class="note" id="mapapprox"></p>
       </div>
       <div class="legend" id="legend"></div>
       <div class="tip" id="tip" hidden></div>
@@ -202,7 +203,7 @@
 
   <section class="view" id="v-craft" hidden>
     <h2 class="first">Craft drinks</h2>
-    <p class="note">New company formation in London, from Companies House. A leading signal of who is about to open, months before an FSA registration.</p>
+    <p class="note">New company formation in London, from Companies House. A signal of who may be about to open: companies can precede an FSA registration by months. Districts on the London edge (e.g. KT, EN, RM, TW, CR) include companies outside Greater London.</p>
     <div class="seg" id="cseg" role="tablist"></div>
     <div id="cbody"></div>
   </section>
@@ -212,7 +213,7 @@
     <p>London Pulse turns open data into a daily picture of what is changing on London's high streets. It is built in public by <a href="https://cloudcruncher.github.io/">Robin Saini</a>, a data engineer in London, and the code is on <a href="https://github.com/cloudcruncher/london-pulse">GitHub</a>.</p>
     <h3>Sources</h3>
     <ul>
-      <li><b>Food Standards Agency</b> hygiene ratings, snapshotted every day for all 33 boroughs. New and removed premises are found by comparing consecutive days.</li>
+      <li><b>Food Standards Agency</b> hygiene ratings, snapshotted every day for all 33 London local authorities (32 boroughs and the City). New and removed premises are found by comparing consecutive days.</li>
       <li><b>Companies House</b> monthly company data for London postcode districts: new craft-drinks companies, and company formation across food and drink, craft makers, creative, wellness, retail and tech.</li>
       <li><b>Transport for London</b> stations and lines, and <b>police-recorded crime</b> (counts only, grouped into map cells), refreshed monthly for the Area guide. <b>Who lives nearby</b> combines Census 2021 tenure (ONS), the 2025 Indices of Deprivation (MHCLG) and ONS small-area household income estimates.</li>
     </ul>

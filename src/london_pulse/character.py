@@ -264,7 +264,7 @@ def _headlines(
                 "kind": "stage",
                 "area": top["name"],
                 "text": f"{top['name']} looks like a scene that is still growing: {top['scene_per_100']} specialty, bakery, craft or "
-                f"plant-based places per 100 venues and {top['fresh_pct']}% of venues new or newly run.",
+                f"plant-based places per 100 venues and {top['fresh_pct']}% of venues awaiting a first inspection (new premises, new operators or backlog).",
             }
         )
     emerging = sorted(

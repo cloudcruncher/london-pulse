@@ -10,6 +10,7 @@ from .http import get_json
 
 TFL = "https://api.tfl.gov.uk"
 BBOX = (51.28, 51.70, -0.52, 0.34)   # lat min/max, lon min/max (Greater London)
+TFL_LICENCE = "TfL open data licence (tfl.gov.uk/corporate/terms-and-conditions/transport-data-service). Powered by TfL Open Data"
 SUFFIX = (" Underground Station", " Rail Station", " DLR Station", " Tram Stop", " (London)")
 
 
@@ -32,13 +33,14 @@ def build(api_dir: Path) -> int:
             if not (BBOX[0] < lat < BBOX[1] and BBOX[2] < lon < BBOX[3]):
                 continue
             e = st.setdefault(s.get("stationNaptan") or s["naptanId"],
-                              {"name": clean(s["commonName"]), "lon": round(lon, 5), "lat": round(lat, 5), "lines": set(), "modes": set()})
+                              {"name": clean(s["commonName"]), "naptan": s.get("stationNaptan") or s["naptanId"], "lon": round(lon, 5), "lat": round(lat, 5), "lines": set(), "modes": set()})
             e["lines"].add(ln["name"])
             e["modes"].add(ln["modeName"])
     out = [{**v, "lines": sorted(v["lines"]), "modes": sorted(v["modes"])} for v in st.values()]
     out.sort(key=lambda s: s["name"])
     (api_dir / "stations.json").write_text(json.dumps(
-        {"schema_version": 1, "as_of": date.today().isoformat(), "source": "Transport for London Unified API", "stations": out},
+        {"schema_version": 1, "as_of": date.today().isoformat(), "generated": date.today().isoformat(),
+         "source": "Transport for London Unified API", "licence": TFL_LICENCE, "stations": out},
         ensure_ascii=False, separators=(",", ":")))
     return len(out)
 

@@ -20,6 +20,8 @@ RECENT_DAYS = 30
 
 
 SCHEMA_VERSION = 1
+FSA_SOURCE = "Food Standards Agency Food Hygiene Rating Scheme (FHRS) open data, ratings.food.gov.uk"
+FSA_LICENCE = "Open Government Licence v3.0"
 
 
 def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: date) -> None:
@@ -33,7 +35,8 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
         by_pc AS (SELECT pk, median(lon) AS lon, median(lat) AS lat FROM located GROUP BY 1),
         by_sec AS (SELECT left(pk, length(pk) - 2) AS pk, median(lon) AS lon, median(lat) AS lat
                    FROM located WHERE length(pk) >= 5 GROUP BY 1)
-        SELECT raw.* EXCLUDE (pk) REPLACE (coalesce(raw.lon, p.lon, c.lon) AS lon, coalesce(raw.lat, p.lat, c.lat) AS lat)
+        SELECT raw.* EXCLUDE (pk) REPLACE (coalesce(raw.lon, p.lon, c.lon) AS lon, coalesce(raw.lat, p.lat, c.lat) AS lat),
+               (raw.lon IS NULL OR raw.lat IS NULL)::INT AS approx_loc
         FROM raw LEFT JOIN by_pc p ON raw.pk = p.pk
                  LEFT JOIN by_sec c ON length(raw.pk) >= 5 AND left(raw.pk, length(raw.pk) - 2) = c.pk""")
     types = ",".join(f"'{t}'" for t in EAT_DRINK)
@@ -94,16 +97,17 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
         history = rows(f"SELECT * FROM read_csv('{history_csv}', header=true) ORDER BY snapshot_date")
 
     api_dir.mkdir(parents=True, exist_ok=True)
-    meta = {"schema_version": SCHEMA_VERSION, "as_of": on.isoformat()}
+    meta = {"schema_version": SCHEMA_VERSION, "as_of": on.isoformat(), "generated": date.today().isoformat(),
+            "source": FSA_SOURCE, "licence": FSA_LICENCE}
 
     def write(name: str, payload: dict) -> None:
         (api_dir / name).write_text(json.dumps({**meta, **payload}, default=str, ensure_ascii=False, separators=(",", ":")))
 
-    write("summary.json", {"totals": totals, "rating_distribution": rating_dist, "business_types": by_type,
+    write("summary.json", {"method": "Counts computed from the FHRS snapshot; coordinates missing from FHRS are imputed (see venues.json approx_loc).", "totals": totals, "rating_distribution": rating_dist, "business_types": by_type,
                            "newest_unrated": newest_unrated, "stories": stories})
-    write("boroughs.json", {"boroughs": boroughs})
-    write("events.json", {"events": events})
-    write("history.json", {"history": history})
+    write("boroughs.json", {"method": "Per-authority counts from the FHRS snapshot, eating and drinking premises only.", "boroughs": boroughs})
+    write("events.json", {"method": "Day-over-day diff of FHRS snapshots: new, removed, rating_changed.", "events": events})
+    write("history.json", {"method": "One row per authority per snapshot day, appended from each FHRS snapshot.", "history": history})
     export_venues(con, api_dir / "venues.json", meta)
     build_brands(con, api_dir, meta)
     try:
@@ -114,19 +118,25 @@ def build(curr: Path, events_dir: Path, history_csv: Path, api_dir: Path, on: da
     export_parquet(con, events_dir, history_csv, api_dir)
 
 
+VENUE_COLUMNS = ["lon", "lat", "type", "rating", "borough", "name", "postcode", "fhrsid", "approx_loc"]
+
+
 def export_venues(con, out: Path, meta: dict) -> None:
     """Compact point list for the map. Dictionary-encoded to keep it small (generated, not committed)."""
     types = list(EAT_DRINK)
     ratings = ["5", "4", "3", "2", "1", "0", "AwaitingInspection", "Exempt", "AwaitingPublication"]
     auths = [r[0] for r in con.execute("SELECT DISTINCT authority FROM fd ORDER BY 1").fetchall()]
-    rows = con.execute("""SELECT round(lon, 5), round(lat, 5), business_type, rating, authority, name, postcode
+    rows = con.execute("""SELECT round(lon, 5), round(lat, 5), business_type, rating, authority, name, postcode,
+                          fhrsid, approx_loc
                           FROM fd WHERE lon IS NOT NULL AND lat IS NOT NULL AND lon BETWEEN -0.6 AND 0.4
                           AND lat BETWEEN 51.2 AND 51.75""").fetchall()
     ti = {t: i for i, t in enumerate(types)}
     ri = {r: i for i, r in enumerate(ratings)}
     ai = {a: i for i, a in enumerate(auths)}
-    v = [[lo, la, ti[t], ri.get(r, 7), ai[a], n, pc] for lo, la, t, r, a, n, pc in rows]
-    out.write_text(json.dumps({**meta, "types": types, "ratings": ratings, "boroughs": auths, "venues": v},
+    v = [[lo, la, ti[t], ri.get(r, 7), ai[a], n, pc, fid, ap] for lo, la, t, r, a, n, pc, fid, ap in rows]
+    out.write_text(json.dumps({**meta, "method": "approx_loc=1 means FHRS published no coordinates and the point is placed "
+                               "at the median of venues in the same postcode, else the postcode sector.",
+                               "venue_columns": VENUE_COLUMNS, "types": types, "ratings": ratings, "boroughs": auths, "venues": v},
                               ensure_ascii=False, separators=(",", ":")))
 
 
@@ -151,7 +161,7 @@ def append_history(curr: Path, history_csv: Path, on: date) -> None:
 
 def export_parquet(con, events_dir: Path, history_csv: Path, api_dir: Path) -> None:
     """Parquet files the in-browser SQL lab loads (DuckDB-WASM). Generated on each run, not committed."""
-    con.execute(f"""COPY (SELECT fhrsid, name, business_type, address, postcode, rating, rating_date, authority, lon, lat
+    con.execute(f"""COPY (SELECT fhrsid, name, business_type, address, postcode, rating, rating_date, authority, lon, lat, approx_loc
                      FROM s ORDER BY authority, name) TO '{api_dir / "venues.parquet"}' (FORMAT parquet, COMPRESSION zstd)""")
     csvs = sorted(events_dir.glob("*.csv"))
     if csvs:

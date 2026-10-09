@@ -95,12 +95,16 @@ def norm(name: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+# SQL form of norm(); also inlined into the published "sql" of repeated-name brands so the SQL lab reproduces the grouping.
+LP_NORM_SQL = r"""trim(regexp_replace(regexp_replace(regexp_replace(regexp_replace(
+        replace(replace(lower(x), '’', ''''), '‘', ''''), '\(.*?\)', ' ', 'g'),
+        '\b(ltd|limited|uk|london)\b\.?', ' ', 'g'), '[^a-z0-9&+'' ]', ' ', 'g'), '\s+', ' ', 'g'))"""
+
+
 def build_brands(con, api_dir, meta: dict) -> None:
     """Needs view `s` (the snapshot). Writes brands.json."""
     # name normalisation in SQL (mirrors norm() below), so no Python UDF / numpy is needed
-    con.execute(r"""CREATE OR REPLACE TEMP MACRO lp_norm(x) AS trim(regexp_replace(regexp_replace(regexp_replace(regexp_replace(
-        replace(replace(lower(x), '’', ''''), '‘', ''''), '\(.*?\)', ' ', 'g'),
-        '\b(ltd|limited|uk|london)\b\.?', ' ', 'g'), '[^a-z0-9&+'' ]', ' ', 'g'), '\s+', ' ', 'g'))""")
+    con.execute(f"CREATE OR REPLACE TEMP MACRO lp_norm(x) AS {LP_NORM_SQL}")
     bt = ",".join(f"'{t}'" for t in BRAND_TYPES)
     at = ",".join(f"'{t}'" for t in AUTO_TYPES)
     con.execute(
@@ -169,12 +173,13 @@ def build_brands(con, api_dir, meta: dict) -> None:
             )
             if brands and brands[-1]["id"] == bid:
                 brands[-1]["sql"] = (
-                    "lower(name) = '" + disp.lower().replace("'", "''") + "'"
+                    LP_NORM_SQL.replace("lower(x)", "lower(name)").replace("\n        ", " ")
+                    + " = '" + nn.replace("'", "''") + "' AND business_type IN (" + at + ")"
                 )
     brands.sort(key=lambda b: -b["n"])
     (api_dir / "brands.json").write_text(
         json.dumps(
-            {**meta, "brands": brands},
+            {**meta, "method": "Curated brands match a regex on the normalised premises name; repeated names are normalised names shared by several eating or drinking premises. Each brand carries the SQL that reproduces its count.", "brands": brands},
             ensure_ascii=False,
             separators=(",", ":"),
             default=str,

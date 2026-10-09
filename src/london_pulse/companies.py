@@ -63,7 +63,8 @@ def build(csv: Path, fsa_parquet: Path, out: Path, on: date) -> None:
         }
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({
-        "schema_version": 1, "as_of": on.isoformat(), "source": "Companies House free company data product",
+        "schema_version": 1, "as_of": on.isoformat(), "generated": date.today().isoformat(),
+        "source": "Companies House free company data product", "licence": "Open Government Licence v3.0",
         "note": "Active companies with a London postcode district. Registered offices are not always trading premises; district rankings exclude mass-registration addresses.",
         "groups": result,
     }, ensure_ascii=False, separators=(",", ":")))

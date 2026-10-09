@@ -45,7 +45,7 @@ jobs:
         run: PYTHONPATH=src uv run --locked python -m london_pulse.neighbourhoods
 
       - name: Contract tests (areas and the rest of the API)
-        run: API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py -q
+        run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py -q
 
       - name: Commit and republish
         run: |

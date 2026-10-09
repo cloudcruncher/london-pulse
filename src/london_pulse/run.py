@@ -55,6 +55,7 @@ def main() -> None:
         "schema_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "as_of": today.isoformat(),
+        "source": "Food Standards Agency FHRS open data (ratings.food.gov.uk), Open Government Licence v3.0",
         "rows": n, "previous_rows": prev_n, "changes": counts,
         "schedule": {"fsa": "daily 06:17 UTC", "companies_house": "monthly, 3rd"},
     }))

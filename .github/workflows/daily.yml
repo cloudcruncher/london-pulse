@@ -75,7 +75,7 @@ jobs:
           git diff --cached --quiet || git commit -m "data: $(date -u +%F)"
           # humans may push while the ~3 min run is in flight: rebase onto their work, retry on a race
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            (git pull --rebase -X theirs -q origin main || { git rebase --abort; false; }) && git push && exit 0
             sleep $((i * 5))
           done
           echo "::error::could not push data commit"; exit 1

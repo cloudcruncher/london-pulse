@@ -25,6 +25,7 @@ from .http import download, get_json
 
 ARCGIS = "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services"
 BOUNDARIES = f"{ARCGIS}/Lower_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V5/FeatureServer/0/query"
+LSOA_MSOA = f"{ARCGIS}/OA21_LAD23_LSOA21_MSOA21_LEP23_EN_LU/FeatureServer/0/query"
 LONDON_BBOX = "-0.52,51.28,0.34,51.70"
 NOMIS_TENURE = ("https://www.nomisweb.co.uk/api/v01/dataset/NM_2072_1.data.csv?date=latest&geography=TYPE151"
                 "&c2021_tenure_9=0,4,5,1001,1004&measures=20100&select=geography_code,c2021_tenure_9,obs_value")
@@ -44,7 +45,7 @@ SOURCES = [
     {"id": "income", "name": "Income estimates for small areas, England and Wales, FYE 2023 (MSOA)", "publisher": "Office for National Statistics",
      "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/smallareaincomeestimatesformiddlelayersuperoutputareasenglandandwales",
      "licence": "OGL v3.0", "vintage": "Financial year April 2022 to March 2023",
-     "caveat": "Model-based estimate (survey data modelled to small areas), not a count. Published for areas of ~8,000 people, so every neighbourhood inherits its MSOA's figure; a confidence interval is published and shown."},
+     "caveat": "Model-based estimate (survey data modelled to small areas), not a count. Published for areas of ~8,000 people, so every neighbourhood inherits its MSOA's figure. ONS publishes lower and upper 95% confidence limits for the MSOA (not symmetric around the estimate); they are published as income_lo_ahc and income_hi_ahc (after housing costs) and describe the wider MSOA, not this neighbourhood."},
     {"id": "crime", "name": "Street-level crime", "publisher": "data.police.uk (police forces of England and Wales)",
      "url": "https://data.police.uk/data/", "licence": "OGL v3.0", "vintage": "The three months in crime_months",
      "caveat": "Crimes recorded by police, not all crimes committed. Locations are snapped to the nearest anonymised street point. Counted here by the neighbourhood that point falls in. Busy centres record visitors' crimes; it says little about how safe a street feels."},
@@ -80,6 +81,22 @@ def fetch_boundaries(dest: Path) -> None:
     dest.write_text(json.dumps({"type": "FeatureCollection", "features": feats}))
 
 
+def fetch_lsoa_msoa(dest: Path) -> None:
+    """LSOA -> MSOA codes from the ONS lookup, for the London LSOAs in dest's sibling lsoa.geojson (queried in pages of 100)."""
+    codes = [f["properties"]["LSOA21CD"] for f in json.loads(dest.with_name("lsoa.geojson").read_text())["features"]]
+    out: dict[str, str] = {}
+    for i in range(0, len(codes), 100):
+        inlist = ",".join(f"'{c}'" for c in codes[i:i + 100])
+        page = get_json(f"{LSOA_MSOA}?where=LSOA21CD%20IN%20({inlist})&outFields=LSOA21CD,MSOA21CD&returnDistinctValues=true"
+                        "&returnGeometry=false&f=json")
+        for f in page["features"]:
+            out[f["attributes"]["LSOA21CD"]] = f["attributes"]["MSOA21CD"]
+    missing = [c for c in codes if c not in out]
+    if missing:
+        raise RuntimeError(f"{len(missing)} LSOAs missing from the ONS LSOA-MSOA lookup, e.g. {missing[:3]}")
+    dest.write_text(json.dumps(out))
+
+
 def fetch_tenure(dest: Path) -> None:
     """Nomis returns at most 25,000 rows a request, so page through England and Wales (~175k rows)."""
     lines, offset = [], 0
@@ -98,7 +115,7 @@ def fetch_tenure(dest: Path) -> None:
 def load_reference(con: duckdb.DuckDBPyConnection, work: Path) -> None:
     """Fetch (cached in work/) the open datasets and build tables lsoa, ref."""
     work.mkdir(exist_ok=True)
-    files = {"lsoa.geojson": fetch_boundaries, "tenure.csv": fetch_tenure,
+    files = {"lsoa.geojson": fetch_boundaries, "lsoa_msoa.json": fetch_lsoa_msoa, "tenure.csv": fetch_tenure,
              "imd.csv": lambda p: download(IMD_CSV, p), "income.xlsx": lambda p: download(INCOME_XLSX, p)}
     for name, fn in files.items():
         if not (work / name).exists():
@@ -125,12 +142,16 @@ def load_reference(con: duckdb.DuckDBPyConnection, work: Path) -> None:
                max(obs_value) FILTER (c2021_tenure_9 = 1001) AS owned,
                max(obs_value) FILTER (c2021_tenure_9 = 1004) AS private
         FROM read_csv('{work / "tenure.csv"}', header=true) GROUP BY 1""")
+    lm = json.loads((work / "lsoa_msoa.json").read_text())
+    con.execute("CREATE TABLE lsoa_msoa (code VARCHAR, msoa_code VARCHAR)")
+    con.executemany("INSERT INTO lsoa_msoa VALUES (?, ?)", list(lm.items()))
     sheet = lambda name: f"read_xlsx('{work / 'income.xlsx'}', sheet='{name}', range='A4:J9000', header=true)"  # noqa: E731
     con.execute(f"""
         CREATE TABLE income AS
-        SELECT b."MSOA name" AS msoa, b."Disposable (net) annual income before housing costs (£)"::INT AS net_bhc,
+        SELECT b."MSOA code" AS msoa_code, b."MSOA name" AS msoa, b."Disposable (net) annual income before housing costs (£)"::INT AS net_bhc,
                a."Disposable (net) annual income after housing costs (£)"::INT AS net_ahc,
-               a."Confidence interval (£)"::INT AS ci_ahc
+               a."Confidence interval (£)"::INT AS ci_ahc,
+               a."Lower confidence limit (£)"::INT AS lo_ahc, a."Upper confidence limit (£)"::INT AS hi_ahc
         FROM {sheet("Net income before housing costs")} b
         JOIN {sheet("Net income after housing costs")} a USING ("MSOA code")
         WHERE b."MSOA code" IS NOT NULL""")
@@ -227,18 +248,19 @@ def build(fsa_parquet: Path, points_parquet: Path, api_dir: Path, work: Path, mo
         crimes.setdefault(code, [0] * len(cats))[cats.index(cat)] = n
     recs = con.execute("""
         SELECT i.code, i.name, i.borough, i.pop, i.imd_decile, i.income_dep, i.income_decile, t.hh, t.council, t.other_social, t.private, t.owned,
-               inc.net_bhc, inc.net_ahc, inc.ci_ahc, coalesce(v.n, 0) AS venues, ST_X(ST_Centroid(l.geom)) AS lon, ST_Y(ST_Centroid(l.geom)) AS lat
+               inc.net_bhc, inc.net_ahc, inc.ci_ahc, inc.lo_ahc, inc.hi_ahc, m.msoa_code, coalesce(v.n, 0) AS venues, ST_X(ST_Centroid(l.geom)) AS lon, ST_Y(ST_Centroid(l.geom)) AS lat
         FROM imd i JOIN lsoa l USING (code) JOIN tenure t USING (code)
-        LEFT JOIN income inc ON inc.msoa = regexp_replace(i.name, '[A-Z]$', '')
+        LEFT JOIN lsoa_msoa m USING (code)
+        LEFT JOIN income inc ON inc.msoa_code = m.msoa_code
         LEFT JOIN venue_lsoa v USING (code) ORDER BY i.code""").fetchall()
     rows = []
-    for code, name, borough, pop, dec, dep, idec, hh, council, other, private, owned, bhc, ahc, ci, venues, lon, lat in recs:
+    for code, name, borough, pop, dec, dep, idec, hh, council, other, private, owned, bhc, ahc, ci, lo, hi, msoa, venues, lon, lat in recs:
         c = crimes.get(code, [0] * len(cats))
         total = sum(c)
         pct = lambda x: round(100 * x / hh, 1) if hh else 0.0  # noqa: E731
         rows.append({"code": code, "name": name, "borough": borough, "pop": pop, "imd_decile": dec, "income_decile": idec, "income_dep": dep, "hh": hh,
                      "council_pct": pct(council), "other_social_pct": pct(other), "private_pct": pct(private), "owned_pct": pct(owned),
-                     "net_bhc": bhc, "net_ahc": ahc, "ci_ahc": ci, "venues": venues, "venues_per_1000": venues / pop * 1000 if pop else 0,
+                     "net_bhc": bhc, "net_ahc": ahc, "ci_ahc": ci, "lo_ahc": lo, "hi_ahc": hi, "msoa": msoa, "venues": venues, "venues_per_1000": venues / pop * 1000 if pop else 0,
                      "lon": lon, "lat": lat, "crimes": c, "total": total,
                      "rate": total * (12 / len(months)) / pop * 1000 if pop >= MIN_POP else None})
     # a busy centre has many food premises per resident: its recorded crime comes from visitors as much as residents
@@ -246,12 +268,15 @@ def build(fsa_parquet: Path, points_parquet: Path, api_dir: Path, work: Path, mo
     for r in rows:
         r["busy"] = r["venues_per_1000"] >= busy_at
     fields = ["code", "name", "borough", "lon", "lat", "pop", "households", "council_pct", "other_social_pct", "private_pct",
-              "owned_pct", "imd_decile", "income_dep_pct", "net_income_bhc", "net_income_ahc", "income_ci_ahc", "venues", "busy", "crimes"]
+              "owned_pct", "imd_decile", "income_dep_pct", "net_income_bhc", "net_income_ahc", "income_ci_ahc", "venues", "busy", "crimes",
+              "income_lo_ahc", "income_hi_ahc", "msoa"]
     data = [[r["code"], r["name"], r["borough"], round(r["lon"], 4), round(r["lat"], 4), r["pop"], r["hh"], r["council_pct"],
              r["other_social_pct"], r["private_pct"], r["owned_pct"], r["imd_decile"], round(r["income_dep"] * 100, 1),
-             r["net_bhc"], r["net_ahc"], r["ci_ahc"], r["venues"], int(r["busy"]), r["crimes"]] for r in rows]
+             r["net_bhc"], r["net_ahc"], r["ci_ahc"], r["venues"], int(r["busy"]), r["crimes"],
+             r["lo_ahc"], r["hi_ahc"], r["msoa"]] for r in rows]
     (api_dir / "areas.json").write_text(json.dumps({
-        "schema_version": 1, "generated": date.today().isoformat(), "crime_months": months, "categories": cats,
+        "schema_version": 1, "as_of": months[-1], "generated": date.today().isoformat(),
+        "licence": "Open Government Licence v3.0", "method": "Per-LSOA join of Census 2021 tenure, IMD 2025, ONS MSOA income (joined by MSOA code via the ONS LSOA-MSOA lookup) and police-recorded crime counted by LSOA; see sources.", "crime_months": months, "categories": cats,
         "busy_venues_per_1000": round(busy_at, 1), "min_pop_for_rate": MIN_POP, "fields": fields, "areas": data,
         "analysis": analyse(rows),
         "sources": SOURCES, "proof": PROOF,
