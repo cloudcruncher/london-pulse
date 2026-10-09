@@ -13,7 +13,7 @@ from pathlib import Path
 from .diff import diff_snapshots
 from .fsa import fetch_snapshot
 from .insights import append_history, build
-from .report import MissingInput, write as write_report
+from .report import write as write_report
 
 ROOT = Path(__file__).resolve().parents[2]
 MIN_ROWS = 70_000          # London has ~80k FSA establishments; far fewer means a partial fetch

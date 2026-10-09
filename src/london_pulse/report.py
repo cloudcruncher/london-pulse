@@ -200,7 +200,7 @@ def build_report(api: Path = API) -> dict:
     for a in ctx.areas:
         lon, lat = a[f["lon"]], a[f["lat"]]
         m = ctx.metrics(lon, lat)
-        busy = m.pop("_busy_share", 0)
+        m.pop("_busy_share", None)
         for k, v in m.items():
             if k == "fresh_pct":
                 continue

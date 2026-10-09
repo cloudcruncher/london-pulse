@@ -28,6 +28,7 @@ async function locate(q) {
   const approx = async why => {
     const c = await areaLocate(q).catch(() => null);
     if (!c) return { label, err: `Could not place "${q}". Try a full postcode such as E8 3QW, or a district such as E8.` };
+    if (/\(nearest district\)$/.test(c.label || '')) why = why.replace('the middle of the postcode from venue locations', 'the middle of the postcode district');
     return { label, lon: c.lon, lat: c.lat, method: 'approx', note: why, outcode: label.split(' ')[0] };
   };
   if (!FULL_PC.test(label)) return approx(OUTCODE.test(label) ? 'Approximate location: the middle of the postcode district, from venue locations.' : "Approximate location: the middle of the borough's venues.");
