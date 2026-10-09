@@ -48,8 +48,6 @@ jobs:
         continue-on-error: true
         run: PYTHONPATH=src uv run --locked python -m london_pulse.prices
 
-      - name: Build report.json (distributions for the postcode report card)
-        run: PYTHONPATH=src uv run --locked python -m london_pulse.report
 
       - name: Contract tests (areas and the rest of the API)
         run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py tests/test_prices.py -q
@@ -62,7 +60,7 @@ jobs:
         run: |
           git config user.name "london-pulse-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json site/api/v1/report.json
+          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "data: stations, crime and areas $(date -u +%F)"
           for i in 1 2 3; do
