@@ -1,0 +1,88 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-10,new,1999923,Al's Food 2.0 Products,Other catering premises,Greenwich,SE28,,AwaitingInspection,,
+2026-10-10,new,1999917,Blackheath Fish & Grill,Restaurant/Cafe/Canteen,Greenwich,SE3 9LA,,AwaitingInspection,0.0094552,51.46579
+2026-10-10,new,1999921,Classy Chick,Other catering premises,Greenwich,SE10,,AwaitingInspection,,
+2026-10-10,new,1999922,Fireaway Pizza,Takeaway/sandwich shop,Greenwich,SE9 6SY,,AwaitingInspection,0.0496122,51.4584312
+2026-10-10,new,1193265,Funbella Ltd,Retailers - other,Greenwich,SE7,,4,,
+2026-10-10,new,1999919,Papa Johns,Takeaway/sandwich shop,Greenwich,SE9 6BZ,,AwaitingInspection,0.049356,51.4597588
+2026-10-10,new,1999920,Radha Shrikhand,Other catering premises,Greenwich,SE10 0BA,,AwaitingInspection,0.0135545,51.4943703
+2026-10-10,new,1999918,TANNY,Other catering premises,Greenwich,SE28,,AwaitingInspection,,
+2026-10-10,new,1999916,The Chimney Stack,Retailers - other,Greenwich,SE10 9HZ,,AwaitingInspection,-0.0094414,51.4817779
+2026-10-10,new,2000090,Anytime childcare cic,Caring Premises,Redbridge,IG1 1FY,,AwaitingInspection,0.07146,51.557296
+2026-10-10,new,2000094,Auresta,Restaurant/Cafe/Canteen,Redbridge,IG1,,AwaitingInspection,,
+2026-10-10,new,2000088,Cake Paradise,Manufacturers/packers,Redbridge,E18 2PB,,AwaitingInspection,0.0202325,51.5992168
+2026-10-10,new,2000092,Cheat Daze,Restaurant/Cafe/Canteen,Redbridge,IG1 1TE,,AwaitingInspection,0.0821516,51.5609021
+2026-10-10,new,2000087,Danhina Kitchen,Restaurant/Cafe/Canteen,Redbridge,"",,AwaitingInspection,,
+2026-10-10,new,1492828,Hellims on Wheels,Restaurant/Cafe/Canteen,Redbridge,IG1,,5,,
+2026-10-10,new,2000086,Mama’s Twin Delights,Restaurant/Cafe/Canteen,Redbridge,RM6,,AwaitingInspection,,
+2026-10-10,new,2000093,Mobeen’s,Takeaway/sandwich shop,Redbridge,IG3 9RY,,AwaitingInspection,0.1153,51.5629437
+2026-10-10,new,2000095,Netleys,Restaurant/Cafe/Canteen,Redbridge,IG6,,AwaitingInspection,,
+2026-10-10,new,2000085,Noor Brands Group LTD,Restaurant/Cafe/Canteen,Redbridge,IG4,,AwaitingInspection,,
+2026-10-10,new,2000089,Plant Avenue W10,Importers/Exporters,Redbridge,E18 1AN,,AwaitingInspection,0.026477,51.5927307
+2026-10-10,new,2000091,Shri Hershne (Imports) Ltd,Importers/Exporters,Redbridge,"",,AwaitingInspection,0.1198346,51.6064417
+2026-10-10,new,2000084,Polpettas,Other catering premises,Tower Hamlets,E1 1QR,,AwaitingInspection,,
+2026-10-10,rating_changed,875256,Premier Colyers Lane Supermarket,Retailers - other,Bexley,DA8 3PB,2,4,0.17022,51.471409
+2026-10-10,rating_changed,1937580,Clip 'N Climb Croydon,Restaurant/Cafe/Canteen,Croydon,CR0 1NB,AwaitingInspection,4,-0.1017918,51.3779745
+2026-10-10,rating_changed,1945778,Amelia's House,Restaurant/Cafe/Canteen,Ealing,W3 6UP,0,3,-0.2583114,51.5229631
+2026-10-10,rating_changed,1125505,Tennessee Fried Chicken,Takeaway/sandwich shop,Enfield,N9 8DX,5,3,-0.041671,51.636511
+2026-10-10,rating_changed,999144,Hollywood Bowl,Restaurant/Cafe/Canteen,Greenwich,SE10 0DY,4,5,0.0032419,51.5038045
+2026-10-10,rating_changed,1626115,KSN meat Ltd,Retailers - other,Greenwich,SE18 6EX,2,0,0.0698679,51.4905167
+2026-10-10,rating_changed,1924061,Mama Le’s Do An,Mobile caterer,Greenwich,SE9,AwaitingInspection,5,,
+2026-10-10,rating_changed,1976649,Prawn Society,Other catering premises,Greenwich,SE7,AwaitingInspection,5,,
+2026-10-10,rating_changed,1924070,Roots & Zest,Other catering premises,Greenwich,SE18,AwaitingInspection,4,,
+2026-10-10,rating_changed,469214,Lubavitch Girl's Primary School,Restaurant/Cafe/Canteen,Hackney,N16 5RP,1,3,-0.0732726,51.5722359
+2026-10-10,rating_changed,669105,Lamezia,Restaurant/Cafe/Canteen,Islington,N7 8LX,2,4,-0.1088242,51.5497581
+2026-10-10,rating_changed,997013,CJ,Restaurant/Cafe/Canteen,Lambeth,SW9 8LD,4,2,-0.11328,51.461763
+2026-10-10,rating_changed,1957001,1st Point Restaurant,Restaurant/Cafe/Canteen,Lewisham,SE14 5AA,AwaitingInspection,3,-0.046889,51.474849
+2026-10-10,rating_changed,1977099,Coffee Delight,Restaurant/Cafe/Canteen,Newham,E13 8HL,AwaitingInspection,1,0.0209258,51.5213596
+2026-10-10,rating_changed,1616489,Don Rigos,Restaurant/Cafe/Canteen,Newham,E16 4ST,1,3,0.0037924,51.5177893
+2026-10-10,rating_changed,1969389,Nature's Superfood,Takeaway/sandwich shop,Newham,E13 9JY,AwaitingInspection,1,0.0309901,51.5268443
+2026-10-10,rating_changed,640968,Novelty Bakery,Retailers - other,Newham,E12 6PG,0,2,0.049283,51.545033
+2026-10-10,rating_changed,1955716,The Labanist,Restaurant/Cafe/Canteen,Newham,E7 9PA,AwaitingInspection,4,0.026279,51.54501
+2026-10-10,rating_changed,1834740,Smoke & Pepper,Takeaway/sandwich shop,Redbridge,IG2 6HE,3,5,0.065807,51.575822
+2026-10-10,rating_changed,1756075,Veggie Master Ilford,Retailers - other,Redbridge,IG1 1TF,3,5,0.082945,51.561121
+2026-10-10,rating_changed,1941603,Wellspring Care Homes,Caring Premises,Redbridge,IG2 7AJ,AwaitingInspection,5,0.0935464,51.5680642
+2026-10-10,rating_changed,1939780,Wellspring Care Homes,Caring Premises,Redbridge,IG1 3NL,AwaitingInspection,5,0.0536822,51.5720243
+2026-10-10,rating_changed,1941602,Wellspring Care Homes,Caring Premises,Redbridge,IG3,AwaitingInspection,5,,
+2026-10-10,rating_changed,1025493,So noodle,Restaurant/Cafe/Canteen,Southwark,SE1 0SW,5,4,-0.101868,51.506417
+2026-10-10,rating_changed,1714297,Caffe Arabica Ltd,Restaurant/Cafe/Canteen,Tower Hamlets,E3 3QX,5,4,-0.019128,51.520974
+2026-10-10,rating_changed,100285,Devons Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E3 3QX,5,4,-0.019128,51.520974
+2026-10-10,rating_changed,1736342,Farmhouse Pizza,Takeaway/sandwich shop,Tower Hamlets,E3 3LR,5,0,-0.011057,51.523275
+2026-10-10,rating_changed,1752052,Hello Bubbles,Takeaway/sandwich shop,Tower Hamlets,E14 6AH,5,AwaitingPublication,-0.015142,51.5132
+2026-10-10,rating_changed,1982876,La Nina Culinary Experiences,Other catering premises,Tower Hamlets,E14 9TS,AwaitingInspection,5,,
+2026-10-10,rating_changed,1967199,Mr.Pesto,Other catering premises,Tower Hamlets,E3 3,AwaitingInspection,4,,
+2026-10-10,rating_changed,1989136,Gulliver London,Retailers - other,Waltham Forest,E17 7BX,AwaitingInspection,0,-0.0257275,51.5837564
+2026-10-10,rating_changed,1714266,Popeyes,Restaurant/Cafe/Canteen,Waltham Forest,E17 7BH,5,3,-0.0211233,51.58474
+2026-10-10,rating_changed,1572259,Anjappar,Restaurant/Cafe/Canteen,Wandsworth,SW17 0NY,0,4,,
+2026-10-10,rating_changed,1721245,Rama Thai,Restaurant/Cafe/Canteen,Wandsworth,SW18 4LT,4,1,-0.1923632,51.4468049
+2026-10-10,rating_changed,1955305,Kawan by Uncle Roger,Restaurant/Cafe/Canteen,Westminster,W1D 5BP,2,4,-0.131156,51.5120138
+2026-10-10,rating_changed,411157,Paradise Indian Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1V 2HF,4,3,-0.1400863,51.4919761
+2026-10-10,removed,1774358,Greenford Supermarket,Retailers - other,Ealing,UB6 0HH,2,,-0.339402,51.549901
+2026-10-10,removed,1958004,Afro-Caribbean Meals on Wheels,Other catering premises,Greenwich,SE2,AwaitingInspection,,,
+2026-10-10,removed,1972706,Antiaging Nutritional Supplements,Other catering premises,Greenwich,SE18,AwaitingInspection,,,
+2026-10-10,removed,1950492,CHAIWAALI,Mobile caterer,Greenwich,SE3,AwaitingInspection,,,
+2026-10-10,removed,1718801,CRAVINGS BY CHEF JOJO,Other catering premises,Greenwich,SE28,5,,,
+2026-10-10,removed,1974194,Carla Pagot Cakes,Other catering premises,Greenwich,SE10,AwaitingInspection,,,
+2026-10-10,removed,1734839,Cha Mo Takeaway,Other catering premises,Greenwich,SE28,4,,,
+2026-10-10,removed,1456135,Ecowas Restaurant Ltd,Other catering premises,Greenwich,SE18 6EP,4,,0.0697374,51.4893597
+2026-10-10,removed,1958001,Elan Skincare,Other catering premises,Greenwich,SE9,AwaitingInspection,,,
+2026-10-10,removed,1812155,Fireaway Pizza Eltham,Takeaway/sandwich shop,Greenwich,SE9 6SY,4,,0.0496122,51.4584312
+2026-10-10,removed,1983324,Haveli,Other catering premises,Greenwich,SE7,AwaitingInspection,,,
+2026-10-10,removed,1950506,Hey Joe Burger,Mobile caterer,Greenwich,SE10 9HZ,AwaitingInspection,,-0.0087311,51.4815091
+2026-10-10,removed,1966446,Littleuns,Other catering premises,Greenwich,SE10,AwaitingInspection,,,
+2026-10-10,removed,1856016,MOALYN,Other catering premises,Greenwich,SE10,AwaitingInspection,,,
+2026-10-10,removed,1111351,Meridian Pharmacy Ltd,Retailers - other,Greenwich,SE10 8NB,Exempt,,-0.0104858,51.4792385
+2026-10-10,removed,1711315,Mora's Taste,Other catering premises,Greenwich,SE28,5,,,
+2026-10-10,removed,1924076,Pantera Vending,Retailers - other,Greenwich,SE3,AwaitingInspection,,,
+2026-10-10,removed,1223638,Papa Johns,Takeaway/sandwich shop,Greenwich,SE9 6BZ,4,,0.049356,51.4597588
+2026-10-10,removed,1917228,Peninsula Table,Other catering premises,Greenwich,SE10,AwaitingInspection,,,
+2026-10-10,removed,1950491,Sai Gon Cafe,Retailers - other,Greenwich,SE10 9HZ,AwaitingInspection,,-0.0094414,51.4817779
+2026-10-10,removed,1526000,Sam's Jams,Other catering premises,Greenwich,SE10,4,,,
+2026-10-10,removed,1917225,Silk Route Kitchen,Retailers - other,Greenwich,SE10 9HZ,AwaitingInspection,,-0.0094414,51.4817779
+2026-10-10,removed,1919656,Slice of London,Takeaway/sandwich shop,Greenwich,SE10 9HZ,AwaitingInspection,,,
+2026-10-10,removed,1966442,Smokay BBQ,Other catering premises,Greenwich,SE28,AwaitingInspection,,,
+2026-10-10,removed,1933057,Steak out,Retailers - other,Greenwich,SE10 9HZ,AwaitingInspection,,-0.0094414,51.4817779
+2026-10-10,removed,1980539,The Flexible Fridge,Other catering premises,Greenwich,SE18,AwaitingInspection,,,
+2026-10-10,removed,1903701,ÀMÀLÀ BUKA,Restaurant/Cafe/Canteen,Greenwich,SE7 8LE,AwaitingInspection,,0.0401175,51.4887266
+2026-10-10,removed,1805201,Caroline's Kitchen,Takeaway/sandwich shop,Redbridge,IG4 5DX,4,,0.0589399,51.5781111
+2026-10-10,removed,1970758,Sweet Opulence,Restaurant/Cafe/Canteen,Redbridge,IG3,AwaitingInspection,,,
