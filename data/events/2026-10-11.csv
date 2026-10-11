@@ -1,0 +1,18 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-11,rating_changed,1960747,KOH-I-NOOR Express,Mobile caterer,Barnet,NW9 5ES,AwaitingInspection,4,-0.2542371,51.593119
+2026-10-11,rating_changed,1214105,L'Antica Pizzeria,Restaurant/Cafe/Canteen,Camden,NW3 1DN,5,4,-0.1780989,51.5574097
+2026-10-11,rating_changed,1801893,Aoki sushi,Takeaway/sandwich shop,Haringey,N8 9BE,5,2,-0.1162953,51.5836452
+2026-10-11,rating_changed,1224848,Cobbs Sandwich Bar,Takeaway/sandwich shop,Haringey,N8 7PR,5,4,-0.1189841,51.5877439
+2026-10-11,rating_changed,1405972,Noodle King,Takeaway/sandwich shop,Haringey,N17 8AH,5,4,-0.0684467,51.6053442
+2026-10-11,rating_changed,1385481,The Grey Horse,Pub/bar/nightclub,Kingston-Upon-Thames,KT2 5EE,5,3,-0.3004093,51.4143302
+2026-10-11,rating_changed,1288184,Bouquets And Beans,Mobile caterer,Lambeth,SE11 5DU,5,4,-0.112159997224808,51.4885520935059
+2026-10-11,rating_changed,1797947,Jatra Flavour In The Pan,Restaurant/Cafe/Canteen,Lambeth,SW8 1XW,5,2,-0.123112,51.47756
+2026-10-11,rating_changed,484449,Lisboa,Retailers - other,Lambeth,SW8 1XN,4,2,-0.123203,51.478155
+2026-10-11,rating_changed,1982960,ON Cafe @ The Garden Vauxhall,Takeaway/sandwich shop,Lambeth,SW8 1SP,AwaitingInspection,2,-0.123662002384663,51.4855613708496
+2026-10-11,rating_changed,1984401,Hyd Alpha Bar And Restaurant,Restaurant/Cafe/Canteen,Newham,E6 2LT,AwaitingInspection,1,0.0642158,51.5337551
+2026-10-11,rating_changed,1964371,Lumikha Ltd,Restaurant/Cafe/Canteen,Newham,E16 1DH,AwaitingInspection,4,0.0108837,51.5115973
+2026-10-11,rating_changed,1957260,Twinkie Cookies,Other catering premises,Newham,E16,AwaitingInspection,4,,
+2026-10-11,rating_changed,1959753,Beeches Brunch House,Restaurant/Cafe/Canteen,Sutton,SM5 3LF,AwaitingInspection,3,-0.17006,51.356883
+2026-10-11,rating_changed,1823740,Pulse and Pickle,Restaurant/Cafe/Canteen,Waltham Forest,E17 6BX,AwaitingInspection,4,-0.038738,51.5920495
+2026-10-11,rating_changed,1967260,The Holy Paella & Desserts,Retailers - other,Wandsworth,SW11 6QE,AwaitingInspection,4,-0.163984,51.4543227
+2026-10-11,rating_changed,411111,Petit Dejeuner,Restaurant/Cafe/Canteen,Westminster,W1F 9EA,3,1,-0.1370537,51.5108756
