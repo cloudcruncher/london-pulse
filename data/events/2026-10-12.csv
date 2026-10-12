@@ -1,0 +1,6 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-12,rating_changed,1710050,Holland Park Cafe by Daisy Green,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6LU,3,4,-0.2031508,51.5020233
+2026-10-12,rating_changed,1092094,Budgens,Retailers - other,Lambeth,SE19 1TS,4,3,-0.080301,51.419844
+2026-10-12,rating_changed,1092095,Dabit Trader,Retailers - other,Lambeth,SE19 1TS,5,3,-0.080301,51.419844
+2026-10-12,rating_changed,1984408,Instant Fresh Juice,Mobile caterer,Newham,E13,AwaitingInspection,1,,
+2026-10-12,rating_changed,1794933,Urban Crust,Takeaway/sandwich shop,Sutton,KT4 8EB,5,4,-0.240387,51.377691
