@@ -1,7 +1,7 @@
 [![Daily update](https://github.com/cloudcruncher/london-pulse/actions/workflows/daily.yml/badge.svg)](https://github.com/cloudcruncher/london-pulse/actions/workflows/daily.yml)
 # London Pulse
 
-Daily, neighbourhood-level signals of what is opening, closing and changing across London's 33 boroughs, built from open data. Live dashboard: https://cloudcruncher.github.io/london-pulse/
+London Pulse puts London's public data in one place, in plain English: check a postcode before you move (prices, rents, who lives there, recorded crime, flood, noise and parks), watch your high street change daily, and spot which areas are heating up. Free, no sign-up, built only from open data. Live site: https://cloudcruncher.github.io/london-pulse/
 
 ## What the site shows
 Tabs: Overview, Insights, Map, Area guide, Report card, Changes, Boroughs, Brands, Craft drinks, SQL lab, About.
