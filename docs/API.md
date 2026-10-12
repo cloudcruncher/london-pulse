@@ -1,7 +1,7 @@
 # Static JSON API (v1)
 
-Everything the website shows is served as static JSON under `/api/v1/`. Each file carries `schema_version`, `as_of`, `generated` (ISO date of the run), `source` and `licence`; derived files also carry a `method` sentence.
-`stations.json` is under the TfL open data licence ("Powered by TfL Open Data"), not the OGL; every other file is OGL v3.0.
+Everything the website shows is served as static JSON under `/api/v1/`. Each file carries `schema_version`, `as_of`, `generated` (ISO date of the run), `source` and `licence`; derived files also carry a `method` sentence. Exceptions: `status.json` uses `generated_at` (UTC timestamp) and `environment.json` has no `as_of` (its sources carry a `vintage`).
+`stations.json` is under the TfL open data licence ("Powered by TfL Open Data"), not the OGL. `environment.json` is mixed (each entry in `sources` carries its licence and the attribution wording to show). Every other file is OGL v3.0.
 Changes within v1 are additive only; a breaking change ships as `/api/v2/` alongside v1.
 
 | File | Contents | Updated |
@@ -14,11 +14,16 @@ Changes within v1 are additive only; a breaking change ships as `/api/v2/` along
 | `character.json` | What each borough and postcode district is becoming: venue mix, specialty scene, fresh supply, stage, plus plain-English headlines | daily |
 | `operators.json` | Company momentum by sector and district, seasonality, who is opening (age and linkage of the company behind new premises) | monthly |
 | `crime.json` | Recorded crime per ~550 x 350 m grid cell; `queried_cells` / `failed_cells` count API areas requested and not returned (the run fails above 0.5%) | monthly |
-| `stations.json` | London rail stations with `naptan` id (https://api.tfl.gov.uk/StopPoint/{naptan}) | occasional |
+| `stations.json` | London rail stations: `name`, `naptan` (https://api.tfl.gov.uk/StopPoint/{naptan}), `lon`, `lat`, `lines`, `modes` | monthly |
 | `companies.json` | Companies House company formation for coffee roasting, brewing, distilling, pubs and bars | monthly |
 | `report.json` | London distributions (percentiles, histogram, tercile cut-offs) of the postcode report card metrics (eight, plus `median_price` and `rent_2bed` when `prices.json` exists), plus three check points | daily |
 | `prices.json` | Median sale price per postcode sector and district (HM Land Registry, last 12 months) and the latest private rent per borough (ONS PIPR) | monthly |
 | `areas.json` | One record per London LSOA: council-rented share of households, deprivation, small-area income, recent recorded crime by category, food-premises count; plus an `analysis` block | monthly |
+| `environment.json` | One record per London LSOA: flood (rivers and sea, surface water), road/rail/aircraft noise, green space and park distance | monthly |
+| `brands.json` | Brand tracker: curated roasters, breweries and chains plus auto-detected repeated names, with every matched site | daily |
+| `hex.geojson` | H3 hexagons for the map (density, hygiene, new openings, coffee, specialty, chains, takeaways); `resolution` names the H3 level | daily |
+| `status.json` | Run metadata: `generated_at`, `as_of`, `rows`, `previous_rows`, `changes`; drives the stale-data banner | daily |
+| `*.parquet` | `venues`, `venues-geo` (GeoParquet), `events`, `history` for the SQL lab and analysts. `venues.json` and the venue Parquet files are produced by the daily run and not committed | daily |
 
 ### `areas.json`
 
@@ -48,6 +53,29 @@ Tenure is Census 2021 (March 2021), so it can lag stock changes. Income is model
 Describes areas, not estates or residents.
 
 Data: FSA hygiene ratings, Companies House, ONS (Census 2021, income estimates), MHCLG (IMD 2025) and data.police.uk, all under the Open Government Licence v3.0. Attribute the sources.
+
+### `environment.json`
+
+Flood, noise and green space per LSOA, built monthly by `python -m london_pulse.environment` from `flood.py`, `noise.py` and `green.py`. Same columnar layout as `areas.json`: `fields` (first is `code`, the LSOA code, which joins to `areas.json`) and `areas` (rows in that order; `null` where a topic has no value). Top level: `schema_version`, `generated`, `licence`, `method`, `topics` (built topics), `skipped` (topics that failed, with error), `medians`, `guidelines`, `sources`. Every metric is a percentage of the LSOA's own land area, 1 decimal place, capped at 100, except `park_m` (metres).
+
+| Field | Meaning |
+|---|---|
+| `rivers_sea_z3_pct` | Flood Zone 3: at least 1 in 100 yearly chance (rivers) or 1 in 200 (sea) |
+| `rivers_sea_z2_pct` | Flood Zones 2 and 3 together (at least 1 in 1,000); always >= `rivers_sea_z3_pct` |
+| `surface_water_high_pct` | Surface-water ponding at least 1 in 30 yearly chance |
+| `surface_water_med_pct` | High and medium together (at least 1 in 100) |
+| `road_noise_55_pct`, `road_noise_65_pct` | Land at or above 55 / 65 dB Lden from major roads |
+| `rail_noise_55_pct`, `rail_noise_65_pct` | Same, major railways |
+| `air_noise_55_pct`, `air_noise_65_pct` | Same, airports (Heathrow, London City, Gatwick, Luton, Stansted, Southend) |
+| `green_pct` | Land covered by green space: parks and gardens, playing fields, cemeteries, allotments, play spaces (overlaps unioned) |
+| `park_m` | Straight-line metres from the LSOA centroid to the edge of the nearest public park or garden of 2 ha or more (0 if inside one) |
+
+- `medians`: London median of each metric across the LSOAs present (the page compares a postcode's area against these). Many are 0, since most land has no modelled flood or rail/air noise.
+- `sources`: `id`, `name`, `publisher`, `url`, `licence`, `vintage`, `caveat`, `attribution` for `flood_rivers_sea`, `flood_surface_water`, `noise_road`, `noise_rail`, `noise_air`, `greenspace`. Show the `attribution` text with the data.
+- Flood zones are modelled ignoring flood defences, so they overstate risk where the Thames Barrier and walls exist. Surface water is read from 10 m map pixels (estimates). Noise covers major roads, railways and airports only (Defra round 4, published 2022, modelled for 2021) and is a 24-hour weighted average, not a measurement at an address. Green space includes some private or restricted sites; distance is not a walking route. Shares of area, not of homes or people; not a survey of any address and not a prediction.
+- The monthly job only replaces the committed file if all three topics built and `skipped` is empty; otherwise the previous month's file stays. Air quality (LAEI) is not included: its London Datastore licence is "Not Specified".
+
+Data: Environment Agency flood data, Defra noise data and OS Open Greenspace, all under the Open Government Licence v3.0. Use the `attribution` strings in `sources`.
 
 ### `prices.json`
 

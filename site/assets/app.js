@@ -490,6 +490,49 @@ async function envNearby(w) {
   const floodN = 'rivers_sea_z3_pct' in f ? inR.filter(x => x.e[f.rivers_sea_z3_pct] >= 25).length : 0;
   return { en, v, n: inR.length, floodN, has: k => k in f };
 }
+// What the environment numbers mean for a move: a triage of what to check at the address, not a rating or a verdict.
+// Flood zones use fixed cut-offs (the London middle is 0%); surface water is judged against London's own distribution.
+const EA_FLOOD = 'https://check-long-term-flood-risk.service.gov.uk/', FLOOD_RE = 'https://www.floodre.co.uk/';
+function envAdvice(e) {
+  const { en, v, has, floodN, n } = e, items = [], p0 = x => Math.round(x) + '%';
+  const f = Object.fromEntries(en.fields.map((k, i) => [k, i]));
+  const p90 = k => (en._p ??= {})[k] ??= (() => { const x = en.areas.map(a => a[f[k]]).filter(y => y != null).sort((a, b) => a - b); return x[Math.floor(x.length * .9)]; })();
+  const link = (u, t) => `<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+  if (has('rivers_sea_z3_pct')) {
+    const z3 = v.rivers_sea_z3_pct, z2 = v.rivers_sea_z2_pct;
+    if (floodN > 0 || z3 >= 10) items.push({ flag: true, head: 'Rivers and sea', text: `${p0(z3)} of this land is in flood zone 3${floodN ? `, and ${floodN} of ${n} neighbourhood${n === 1 ? '' : 's'} ${floodN === 1 ? 'is' : 'are'} over a quarter in it` : ''}. Zone 3 shows where flooding is modelled as possible if there were no defences. Much of London's is protected by the Thames Barrier and river walls, so it is a reason to look closely, not a forecast. Before you commit: check the exact address on the ${link(EA_FLOOD, "Environment Agency's long-term flood risk service")} (it takes defences into account), ask the owner or agent about past flooding and any flood protection fitted, get a home insurance quote before you make an offer (${link(FLOOD_RE, 'Flood Re')} helps keep cover affordable for many older homes), and tell your lender.` });
+    else if (z2 >= 0.5 || z3 >= 0.5) items.push({ flag: true, head: 'Rivers and sea', text: `${p0(z2)} of this land is in flood zone 2 or 3. Small shares like this usually mean a few streets near a river, not the whole area. Check the specific address on the ${link(EA_FLOOD, "Environment Agency's service")} before you commit.` });
+    else items.push({ flag: false, head: 'Rivers and sea', text: 'None of this land is in a modelled river or sea flood zone. Surface water can still flood anywhere (below).' });
+  }
+  if (has('surface_water_med_pct')) {
+    const sw = v.surface_water_med_pct, hi = p90('surface_water_med_pct');
+    if (sw >= hi) items.push({ flag: true, head: 'Heavy rain', text: `${p0(sw)} of this land is at 1-in-100-year or higher surface-water flood risk, more than in 9 in 10 London neighbourhoods. This is rain that cannot drain away fast enough, pooling on roads and low ground. Lower-ground and basement flats are the most exposed. Ask how the street has coped in heavy rain, whether the home is below street level, and check the address on the ${link(EA_FLOOD, "Environment Agency's service")}, which covers surface water too.` });
+    else items.push({ flag: false, head: 'Heavy rain', text: `${p0(sw)} of this land is at 1-in-100-year or higher surface-water risk, within the usual London range (the middle is ${m0(en.medians.surface_water_med_pct)}). If you are looking at a basement or lower-ground flat, still check the address.` });
+  }
+  if (has('road_noise_55_pct')) {
+    const road = v.road_noise_55_pct, rail = v.rail_noise_55_pct ?? 0, air = v.air_noise_55_pct ?? 0, src = [];
+    if (road >= 50) src.push(`major roads (${p0(road)} of the land)`);
+    if (rail >= 25) src.push(`railways (${p0(rail)})`);
+    if (air >= 10) src.push(`aircraft (${p0(air)})`);
+    if (src.length) items.push({ flag: true, head: 'Noise', text: `A large share of this land is at or above 55 dB from ${src.join(', ')}. The WHO's guidelines are lower than that (53 dB for roads, 54 for rail, 45 for aircraft). Visit at the morning rush hour, in the evening and late at night, ask which side the bedrooms face, and check the glazing. Aircraft noise depends on wind direction, so ask people who live there.` });
+    else items.push({ flag: false, head: 'Noise', text: `Little of this land is in the mapped noise from major roads, railways or airports (road ${p0(road)}, rail ${p0(rail)}, aircraft ${p0(air)}). Local traffic, pubs and building work are not mapped, so still visit at different times of day.` });
+  }
+  if (has('park_m') && v.park_m != null) {
+    const mins = Math.max(1, Math.round(v.park_m / 80));
+    items.push(v.park_m >= 800 ? { flag: true, head: 'Green space', text: `The nearest park of 2 hectares or more is about ${mins} minutes' walk on average (straight line). If outdoor space matters to you, look for smaller green spaces, a garden or a balcony.` }
+      : { flag: false, head: 'Green space', text: `The nearest park of 2 hectares or more is about ${mins} minutes' walk on average (straight line).` });
+  }
+  return items;
+}
+const m0 = x => x == null ? '–' : (Math.round(x * 10) / 10) + '%';
+function envDecision(e) {
+  const items = envAdvice(e), flagged = items.filter(x => x.flag);
+  if (!items.length) return '';
+  const li = x => `<li><b>${x.flag ? 'Worth checking' : 'Nothing flagged'} · ${esc(x.head)}.</b> ${x.text}</li>`;
+  return `<h4>What this means for a move</h4>
+    <p class="note">${flagged.length ? `${flagged.length} of ${items.length} topics are worth a closer look at the address: ${flagged.map(x => esc(x.head.toLowerCase())).join(', ')}.` : `Nothing here stands out against London as a whole.`} This is a checklist of what to look into, not a rating: these figures describe the surrounding land, and the deciding evidence is at the address itself.</p>
+    <ul class="advice">${[...flagged, ...items.filter(x => !x.flag)].map(li).join('')}</ul>`;
+}
 function envHtml(e, kpi) {
   if (!e) return '';
   const { en, v, has } = e, m = en.medians;
@@ -512,6 +555,9 @@ function envHtml(e, kpi) {
   return `<h3>Environment nearby</h3>
     <p class="note">Flood risk, noise and green space for the same ${e.n} neighbourhood${e.n === 1 ? '' : 's'}, averaged by residents. Flood zones show where flooding is modelled to be possible if defences such as the Thames Barrier did not exist; most of that land is protected.</p>
     <div class="areagrid">${k.join('')}</div>
+    ${envDecision(e)}
+    <details class="proof"><summary>What these terms mean</summary>
+    <p class="note"><b>Flood zone 3</b> is land the Environment Agency models as having a 1-in-100 or greater chance of river flooding in any year (1-in-200 for the sea), ignoring defences. <b>Zone 2</b> is a lower chance, between 1-in-100 and 1-in-1,000. Outside both is zone 1. <b>Surface-water flooding</b> is heavy rain overwhelming drains and running downhill, and it can happen far from any river. <b>Lden</b> is a day-evening-night average noise level in decibels, with extra weight on evening and night; 55 dB is the level the EU uses when mapping noise. <b>Green space</b> is mapped parks, playing fields, cemeteries and allotments; private gardens are not counted, so central London looks low. A "1-in-100" chance is not once a century: it is a 1% chance each year, about 26% over a 30-year mortgage.</p></details>
     <details class="proof"><summary>Sources, dates and limits</summary><ul class="list">${src}</ul>
     <p class="note">Each figure is a modelled or mapped value for a ~1,700-resident neighbourhood, so a single street can differ a lot (a busy road inside a quiet area is averaged out). It is not a flood, air or noise survey of any address and does not predict a flood. Check a specific property with the Environment Agency's long-term flood risk service and ask your insurer.</p></details>`;
 }

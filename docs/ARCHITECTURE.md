@@ -14,10 +14,12 @@ flowchart LR
     TFL[TfL Unified API<br/>monthly]
     POL[data.police.uk<br/>monthly]
     ONS[ONS Census 2021, IMD 2025,<br/>small-area income, LSOA boundaries<br/>monthly]
+    LR[HM Land Registry sales,<br/>ONS private rents<br/>monthly]
+    ENV[Environment Agency flood, Defra noise,<br/>OS Open Greenspace<br/>monthly]
   end
 
   subgraph "GitHub Actions (scheduled)"
-    D[daily.yml 06:17 UTC<br/>fetch, gate, diff, build]
+    D[daily.yml 06:17 and 12:17 UTC<br/>fetch, gate, diff, build]
     C[companies.yml 3rd]
     X[context.yml 5th]
   end
@@ -43,6 +45,8 @@ flowchart LR
   TFL --> X
   POL --> X
   ONS --> X
+  LR --> X
+  ENV --> X
   D --> DIFF --> MODEL --> PQ
   SNAP <--> D
   D --> REPO
@@ -54,7 +58,9 @@ flowchart LR
   PAGES --> BROWSER
 ```
 
-## Daily run (06:17 UTC)
+## Daily run (06:17 and 12:17 UTC)
+
+The FSA data sometimes lands after the first run (12 Oct 2026: 6 changes at 07:40, 92 by 11:31), so the workflow runs twice. The second run is idempotent: it diffs against the newest snapshot from an earlier day, so it replaces the day's events and snapshot rather than adding to them.
 
 1. **Fetch** every establishment for the 33 London boroughs from the FSA API (retries, paging).
 2. **Quality gate.** Refuse to publish if fewer than 70,000 rows, or if the row count moved more than 10% in a day.
@@ -72,6 +78,7 @@ flowchart LR
 6b. **Area character** (`character.py`): venue mix by name keywords, location quotients against London, a specialty-scene
    measure, share of premises awaiting first inspection, a stage per borough and postcode district, and generated headlines.
    Pace of change is only called once 14 days of snapshots exist.
+6c. **Report card** (`report.py`): distributions of the postcode report card metrics from the committed monthly files (`areas`, `stations`, `prices`) and today's venues. Skipped with a warning if an input is missing; it never fails the daily run.
 7. **Publish** JSON under `site/api/v1/`, Parquet and GeoParquet for the browser and for analysts.
 8. **Contract gate.** `tests/test_contract.py` checks every published file (shape, London bounds, known brands with
    plausible counts, size budgets). A failure stops the run before anything is committed or deployed.
@@ -87,12 +94,24 @@ flowchart LR
   premises awaiting inspection are matched to a company by name within a postcode district, then labelled new entrant,
   young or established, and linked or standalone. The free file has no directors, so "first-time founder" is a likely
   label, not a fact. Mass-registration addresses are excluded.
-- **Area context (5th):** TfL stations and lines, plus police-recorded crime aggregated to a 0.005 degree grid.
-  Counts only, no individual incidents. `crime.py` also keeps the crime points in `work/` (not published). Then
-  `neighbourhoods.py` joins crime points and FSA venues to LSOA boundaries, with Census 2021 tenure, IMD 2025 and ONS
-  small-area income, into `areas.json`, and computes how crime varies with council share, with and without holding
-  deprivation fixed. Reference downloads are cached in `work/reference` between runs. The contract test for `areas.json`
-  runs before commit.
+- **Area context (`context.yml`, 5th):** builds `stations.json`, `crime.json`, `areas.json`, `prices.json` and
+  `environment.json`, runs the monthly contract tests, commits, then triggers `daily.yml`.
+  - `transport.py` and `crime.py`: TfL stations and lines, and police-recorded crime aggregated to a 0.005 degree grid.
+    Counts only, no individual incidents. `crime.py` also keeps the crime points in `work/` (not published).
+  - `neighbourhoods.py` joins crime points and FSA venues to LSOA boundaries, with Census 2021 tenure, IMD 2025 and ONS
+    small-area income, into `areas.json`, and computes how crime varies with council share, with and without holding
+    deprivation fixed.
+  - `prices.py`: HM Land Registry Price Paid medians per postcode sector and district, and ONS private rents per borough.
+    Best-effort (`continue-on-error`).
+  - `environment.py` merges per-LSOA topics from `flood.py` (Environment Agency flood zones, vector overlay, and
+    surface-water risk read from map pixels), `noise.py` (Defra round 4 Lden rasters for road, rail and air, share of land
+    at 55 and 65 dB) and `green.py` (OS Open Greenspace: green share and distance to a 2 ha park) into `environment.json`.
+    A topic that fails is listed under `skipped` rather than failing the build. The step is best-effort, and a follow-up
+    step restores the committed file if any topic is missing, so a partial or failed build keeps last month's file.
+  - Reference downloads are cached in `work/reference` between runs (separate Actions caches for census, deprivation and
+    income data, and for the flood, noise and green-space downloads). The large Price Paid files are deleted before the cache saves.
+  - Licence rule: no dataset ships without a confirmed open licence and attribution. Air quality (LAEI) was evaluated and
+    left out because the London Datastore lists its licence as "Not Specified".
 
 ## Serving and analytics
 
@@ -104,8 +123,14 @@ flowchart LR
 - **Map.** Mapbox GL (loaded with SRI) with a dots and heatmap view and 3D H3 hexagon layers (density, hygiene, new
   openings, coffee, specialty, chains, takeaways). A collapsible filters panel and a "ring latest changes" overlay.
 - **Area guide.** Postcode in, nearby venues, brands, stations (nearest by Tube, Overground, Elizabeth line, DLR,
-  National Rail, with walk times and line counts) and crime out, computed client side. Crime is compared with the
-  London average per category and overall. Two areas can be compared side by side.
+  National Rail, with walk times and line counts), crime, who lives nearby (council tenure, income, deprivation) and an
+  "Environment nearby" block (flood, noise, green space, from `environment.json`, averaged by residents) out, computed
+  client side. Crime is compared with the London average per category and overall. Two areas can be compared side by side.
+- **Report card.** A postcode placed on the London distributions in `report.json` (crime, deprivation, venues, walking
+  time to a station, lines, income, fresh openings, sale price and rent). The page computes the postcode's values live.
+- **Framing.** Signals, not verdicts: no safe or unsafe label, tenure and crime shown as separate facts (association is not
+  cause), flood zones described as modelled ignoring defences such as the Thames Barrier, and every source's caveat and
+  attribution one click away.
 
 ## Design decisions an engineer will ask about
 
@@ -120,7 +145,9 @@ flowchart LR
 | Contract tests as a publish gate | The row-count gate catches a partial fetch; the contract catches a schema or coverage regression |
 | Smoke test after deploy | Static sites fail at the browser, not the server; a headless run catches broken tabs, the SQL lab and the map |
 | Tables in memory, then lock DuckDB config | Shared SQL links are untrusted input; locking after load stops network reads and extension installs |
-| Best-effort optional stages (geo, crime) | An extension download failure must not block the core daily publish |
+| Best-effort optional stages (geo, report card, prices, environment) | A failed extension download or upstream source must not block the core daily publish; a failed monthly build keeps the committed file |
+| Two daily runs, idempotent | Upstream data sometimes lands late; a rerun diffs against the previous day's snapshot, so it cannot invent changes |
+| Open licence gate per dataset | Unconfirmed licence means the dataset does not ship (air quality) |
 | Static JSON with a version prefix | Lets the schema evolve without breaking consumers |
 
 ## Data quality and limits
@@ -137,8 +164,8 @@ flowchart LR
 
 ## Tests and observability
 
-- **Unit tests** cover diffing, the sanity gate and brand matching (`PYTHONPATH=src uv run pytest`).
-- **Data contract** (`tests/test_contract.py`) runs in the daily workflow before commit and deploy.
+- **Unit tests** cover diffing, the sanity gate, brand matching and the area, price, report, flood, noise, green and environment builders (`PYTHONPATH=src uv run pytest`).
+- **Data contract** (`tests/test_contract.py`) runs in the daily workflow before commit and deploy, and in `context.yml` (with `MONTHLY_CONTRACT=1`) before the monthly files are committed.
 - **Smoke test** (`tests/smoke`, Playwright and Chromium) runs after every deploy via `smoke.yml`, and by hand with
   `SMOKE_URL=https://cloudcruncher.github.io/london-pulse/ uv run pytest tests/smoke`. It checks every tab, the Area
   guide and compare, the SQL lab (shared link does not auto-run, outside reads refused, chart renders), the Mapbox

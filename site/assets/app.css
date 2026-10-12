@@ -333,3 +333,5 @@ a.insight.k:hover{transform:translateY(-2px);box-shadow:0 0 0 2px var(--accent),
 
 /* report card tenure bar: neutral greys, no coloured accent for any tenure */
 .rc .t-council{background:#3d3d3d}.rc .t-social{background:#6b6b6b}.rc .t-rent{background:#9a9a9a}.rc .t-own{background:#c4c4c4}.rc .t-other{background:#e4e4e4}
+
+.advice{list-style:none;margin:8px 0 14px;padding:0}.advice li{margin:0 0 10px;padding:10px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface-2);font-size:.92rem;line-height:1.5}.advice a{text-decoration:underline}

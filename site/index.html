@@ -149,6 +149,16 @@
   <section class="view" id="v-area" hidden>
     <h2 class="first">Area guide</h2>
     <p class="note">Thinking of moving somewhere? Enter a postcode or district and see what is around: cafés, specialty coffee, pubs, how they score on food hygiene, and what is new. Everything is worked out in your browser from open data.</p>
+    <details class="proof"><summary>How to use this to decide where to move</summary>
+      <ol>
+        <li><b>Decide what you cannot live with first.</b> For example a flood-prone street (it affects insurance and your mortgage), a loud main road, no park within a short walk, or a long walk to the station. Then use the rest to compare.</li>
+        <li><b>Compare two or three postcodes side by side</b> with the compare box under the results, and read the figures against the "London middle" shown beside them.</li>
+        <li><b>Read each number for what it is.</b> Recorded crime is counts of police-recorded incidents, and busy centres record visitors' crimes. Income and tenure describe the neighbourhood, not any household. Flood zones show where flooding is modelled to be possible if there were no defences, not a forecast. None of it is a safe or unsafe verdict.</li>
+        <li><b>Follow the "worth checking" list</b> in "What this means for a move". It tells you what to check at the address itself, which is where the real answer is: the Environment Agency's address-level flood service, an insurance quote before you offer, a visit at rush hour and late at night.</li>
+        <li><b>Visit, and ask.</b> Walk the street at different times, talk to neighbours, and ask the owner or agent about flooding, noise, damp, and what the building insurance excludes.</li>
+      </ol>
+      <p class="note">This site shows open data for a neighbourhood. It does not know the property, and it is not survey, legal, mortgage or insurance advice.</p>
+    </details>
     <div class="row filters"><input id="areaq" type="search" placeholder="Postcode or district, e.g. E8 3QW, N16, SW11" autocomplete="off" aria-label="Postcode or district">
       <select id="arearad" aria-label="Radius"><option value="500">500 m</option><option value="1000" selected>1 km</option><option value="2000">2 km</option></select>
       <button class="btn primary" id="areago">Explore</button><button class="btn" id="arealoc">Use my location</button></div>
@@ -224,10 +234,13 @@
     <p>London Pulse turns open data into a daily picture of what is changing on London's high streets. It is built in public by <a href="https://cloudcruncher.github.io/">Robin Saini</a>, a data engineer in London, and the code is on <a href="https://github.com/cloudcruncher/london-pulse">GitHub</a>.</p>
     <h3>Sources</h3>
     <ul>
-      <li><b>Food Standards Agency</b> hygiene ratings, snapshotted every day for all 33 London local authorities (32 boroughs and the City). New and removed premises are found by comparing consecutive days.</li>
+      <li><b>Food Standards Agency</b> hygiene ratings, snapshotted twice a day (about 06:17 and 12:17 UTC, because some days the data lands after the first run) for all 33 London local authorities (32 boroughs and the City). New and removed premises are found by comparing consecutive days.</li>
       <li><b>Companies House</b> monthly company data for London postcode districts: new craft-drinks companies, and company formation across food and drink, craft makers, creative, wellness, retail and tech.</li>
-      <li><b>Transport for London</b> stations and lines, and <b>police-recorded crime</b> (counts only, grouped into map cells), refreshed monthly for the Area guide. <b>Who lives nearby</b> combines Census 2021 tenure (ONS), the 2025 Indices of Deprivation (MHCLG) and ONS small-area household income estimates.</li>
+      <li><b>Transport for London</b> stations and lines, and <b>police-recorded crime</b> (counts only, grouped into map cells), refreshed monthly for the Area guide. <b>Who lives nearby</b> combines Census 2021 tenure (ONS), the 2025 Indices of Deprivation (MHCLG) and ONS small-area household income estimates. <b>Environment nearby</b> adds flood zones for rivers and the sea and surface-water flood risk (Environment Agency), road, rail and aircraft noise (Defra, round 4 noise maps) and green space and distance to the nearest park (Ordnance Survey Open Greenspace). Air quality is left out for now because its licence is not confirmed as open.</li>
+      <li><b>HM Land Registry</b> sale prices and <b>ONS</b> private rents feed the postcode report card.</li>
     </ul>
+    <h3>How to read the environment layer</h3>
+    <p>Each figure is a modelled or mapped value for a neighbourhood of about 1,700 people, averaged across the neighbourhoods around your postcode, so a single street can differ a lot. Flood zones ignore defences such as the Thames Barrier: much of the land shown in zone 3 is protected, so the figure is a reason to check the address, not a forecast. Noise covers major roads, railways and airports only. Green space excludes private gardens. The "What this means for a move" list turns the numbers into things to check at the address: it flags, it does not rate, and nothing here replaces the Environment Agency's address-level flood service, an insurance quote or a visit.</p>
     <h3>How to read it</h3>
     <p>These are signals, not verdicts. A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. A company's registered office is not always where it trades, so district counts are approximate; mass-registration addresses are excluded from rankings. "Coffee-named" matches business names only.</p>
     <h3>How the Insights are worked out</h3>
@@ -240,7 +253,7 @@
       <li><b>Winding down.</b> Companies marked for strike-off, in liquidation or administration. Many are shells that never traded, so read it as a churn signal.</li>
     </ul>
     <h3>How it is built</h3>
-    <p>A GitHub Actions pipeline fetches the FSA register daily, checks it, compares it with yesterday and publishes Parquet and JSON. A data check and a headless-browser test must pass before anything is committed or deployed, so a bad fetch leaves yesterday's site live. DuckDB does the analysis both in the pipeline and in your browser. See the <a href="https://github.com/cloudcruncher/london-pulse/blob/main/docs/ARCHITECTURE.md">architecture and design notes</a>.</p>
+    <p>A GitHub Actions pipeline fetches the FSA register twice a day and the area context (crime, stations, deprivation, prices, environment) monthly, checks it, compares it with yesterday and publishes Parquet and JSON. A data check and a headless-browser test must pass before anything is committed or deployed, so a bad fetch leaves yesterday's site live. DuckDB does the analysis both in the pipeline and in your browser. See the <a href="https://github.com/cloudcruncher/london-pulse/blob/main/docs/ARCHITECTURE.md">architecture and design notes</a>.</p>
     <h3>Open data</h3>
     <p>Everything the site shows is available as JSON under <a href="api/v1/summary.json">/api/v1/</a>, so you can build on it. Analysts can also download the whole register as <a href="api/v1/venues.parquet">Parquet</a> or as <a href="api/v1/venues-geo.parquet">GeoParquet</a> (point geometry, opens in QGIS, GeoPandas or DuckDB). Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Environment layer: © Environment Agency copyright and/or database right 2026; contains OS data © Crown copyright and database right 2026; noise maps © Crown copyright, Defra. Not affiliated with the FSA, Companies House, TfL, the police or any council.</p>
   </section>

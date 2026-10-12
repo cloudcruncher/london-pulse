@@ -1,6 +1,6 @@
-"""Environmental conditions around an area: flood risk, air quality, noise and green space per LSOA.
+"""Environmental conditions around an area: flood risk, noise and green space per LSOA.
 
-Each topic lives in its own module (flood, air, noise, green) exposing compute(lsoa_geojson, ref_dir) ->
+Each topic lives in its own module (flood, noise, green) exposing compute(lsoa_geojson, ref_dir) ->
 (metrics by LSOA code, source dicts). This merges them into site/api/v1/environment.json, one row per LSOA in
 the same order as the 'fields' list, joined to areas.json by LSOA code in the browser.
 
@@ -90,7 +90,7 @@ def build(
                 "schema_version": 1,
                 "generated": date.today().isoformat(),
                 "licence": "Mixed: see the licence and attribution of each entry in sources",
-                "method": "Per-LSOA overlay of public flood, air-quality, noise and green-space datasets; see sources.",
+                "method": "Per-LSOA overlay of public flood, noise and green-space datasets; see sources.",
                 "topics": list(results),
                 "skipped": skipped,
                 "fields": ["code"] + fields,
