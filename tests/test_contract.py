@@ -109,6 +109,27 @@ def test_areas_join_tenure_deprivation_income_and_crime():
     assert all(v is None or -1 <= v <= 1 for v in s.values()) and len(a["analysis"]["bands"]) == 4
 
 
+def test_environment_joins_areas_and_stays_physical():
+    e, a = load("environment.json"), load("areas.json")
+    f = e["fields"]
+    assert f[0] == "code" and all(len(r) == len(f) for r in e["areas"])
+    assert {"flood", "air", "noise", "green"} <= set(e["topics"]) and not e["skipped"]
+    assert {r[0] for r in e["areas"]} == {r[0] for r in a["areas"]}              # one row per London neighbourhood, no spill-over
+    rows = [dict(zip(f, r)) for r in e["areas"]]
+    pct = [k for k in f if k.endswith("_pct")]
+    assert all(0 <= r[k] <= 100 for r in rows for k in pct if r[k] is not None)
+    assert all(r["rivers_sea_z3_pct"] <= r["rivers_sea_z2_pct"] and r["surface_water_high_pct"] <= r["surface_water_med_pct"] for r in rows)
+    assert all(r["road_noise_65_pct"] <= r["road_noise_55_pct"] for r in rows)
+    assert sum(1 for r in rows if r["rivers_sea_z3_pct"] >= 50) > 300            # Thames, Lea and Wandle floodplains are in
+    assert sum(1 for r in rows if r["rivers_sea_z3_pct"] == 0) > 2000            # and most of London is not
+    assert sum(1 for r in rows if r["no2"] is not None) > 4900
+    assert 5 <= e["medians"]["pm25"] <= 20 and 10 <= e["medians"]["no2"] <= 40
+    assert all({"name", "publisher", "url", "licence", "vintage", "caveat", "attribution"} <= set(x) and x["url"].startswith("https://") for x in e["sources"])
+    assert len(e["sources"]) >= 6                                                # flood x2, air, noise x3, green
+    assert sum(1 for r in rows if r["surface_water_med_pct"] == 0) < 0.02 * len(rows)   # a blank WMS tile would zero out a whole 20 km square
+    assert all(any(r[k] is not None for r in rows) for k in ("rail_noise_55_pct", "air_noise_55_pct"))
+
+
 def test_character_has_what_the_insights_tab_reads():
     c = load("character.json")
     assert len(c["boroughs"]) == 33 and len(c["districts"]) >= 50
@@ -137,7 +158,7 @@ def test_operators_has_what_the_insights_tab_reads():
 
 @pytest.mark.parametrize(
     "name,budget_kb",
-    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("summary.json", 40),
+    [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("environment.json", 550), ("summary.json", 40),
      ("character.json", 450), ("operators.json", 150), ("report.json", 150), ("prices.json", 300)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller
@@ -148,17 +169,17 @@ def test_size_budgets(name, budget_kb):
     assert p.stat().st_size <= budget_kb * KB, f"{name} is {p.stat().st_size // KB} KB, budget {budget_kb} KB"
 
 
-MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.json"}
+MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.json", "environment.json"}
 
 
 @pytest.mark.parametrize("name", ["summary.json", "boroughs.json", "events.json", "history.json", "venues.json", "brands.json",
                                   "character.json", "hex.geojson", "companies.json", "operators.json", "stations.json", "crime.json",
-                                  "areas.json", "report.json", "prices.json", "status.json"])
+                                  "areas.json", "environment.json", "report.json", "prices.json", "status.json"])
 def test_provenance_fields(name):
     if name in MONTHLY_FILES and not MONTHLY:
         pytest.skip("written by the monthly context workflow; checked there")
     d = load(name)
-    assert d.get("source") or name == "areas.json" and d.get("sources"), f"{name}: source missing"
+    assert d.get("source") or name in ("areas.json", "environment.json") and d.get("sources"), f"{name}: source missing"
     if name != "status.json":
         assert d.get("generated") and d.get("licence"), f"{name}: generated/licence missing"
     if name == "stations.json":

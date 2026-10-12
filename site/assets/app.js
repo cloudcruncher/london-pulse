@@ -475,6 +475,50 @@ function whoHtml(w, kpi) {
     <p class="note">Income is a modelled estimate, not a count: it is published for the wider ~8,000-resident area (ONS 95% interval for the MSOA), not for this radius, net of tax and adjusted for household size, so treat the range as the answer. Census tenure dates from March 2021. Tenure and recorded crime describe places, not the people in them, and police-recorded counts say little about how safe a particular street feels. Use them to compare areas, then visit.</p>
     ${proof}`;
 }
+// environment nearby: flood, air, noise and green space for the same neighbourhoods as "Who lives nearby", residents-weighted.
+// Modelled or mapped conditions per neighbourhood (flood zones ignore defences), not a survey of any address.
+async function envNearby(w) {
+  if (!w) return null;
+  const en = await getApi('environment').catch(() => null);
+  if (!en) return null;
+  const f = Object.fromEntries(en.fields.map((k, i) => [k, i]));
+  en._by ??= new Map(en.areas.map(a => [a[0], a]));
+  const inR = w.rows.map(r => ({ r, e: en._by.get(r.code) })).filter(x => x.e);
+  if (!inR.length) return null;
+  const avg = k => { let n = 0, d = 0; for (const x of inR) { const v = x.e[f[k]]; if (v != null && x.r.pop) { n += v * x.r.pop; d += x.r.pop; } } return d ? n / d : null; };
+  const v = Object.fromEntries(en.fields.slice(1).map(k => [k, avg(k)]));
+  const floodN = 'rivers_sea_z3_pct' in f ? inR.filter(x => x.e[f.rivers_sea_z3_pct] >= 25).length : 0;
+  return { en, v, n: inR.length, floodN, has: k => k in f };
+}
+function envHtml(e, kpi) {
+  if (!e) return '';
+  const { en, v, has } = e, m = en.medians, g = en.guidelines || {};
+  const p0 = x => x == null ? '–' : Math.round(x) + '%';
+  const vs = (k, unit = '') => m[k] == null ? '' : `<span class="cmp" title="Median across London neighbourhoods">London middle ${m[k]}${unit}</span>`;
+  const lim = k => g[k] ? `<span class="cmp" title="WHO 2021 guideline and UK legal limit, annual mean">WHO ${g[k].who} · UK limit ${g[k].uk_limit}</span>` : '';
+  const k = [];
+  if (has('rivers_sea_z3_pct')) k.push(kpi(p0(v.rivers_sea_z3_pct), 'of land in river or sea flood zone 3 (modelled at 1 in 100 a year for rivers or 1 in 200 for the sea, or more likely; ignores defences)',
+    `<span class="cmp" title="Environment Agency Flood Zone 2 and 3 together">${p0(v.rivers_sea_z2_pct)} in zones 2 or 3</span>` + (e.floodN ? `<span class="cmp down">${e.floodN} of ${e.n} neighbourhood${e.n === 1 ? '' : 's'} over a quarter in zone 3</span>` : '') + vs('rivers_sea_z3_pct', '%')));
+  if (has('surface_water_med_pct')) k.push(kpi(p0(v.surface_water_med_pct), 'of land at 1-in-100-year or higher surface-water (heavy rain) flood risk',
+    `<span class="cmp">${p0(v.surface_water_high_pct)} at 1-in-30 or higher</span>` + vs('surface_water_med_pct', '%')));
+  if (has('no2')) k.push(kpi(v.no2 == null ? '–' : v.no2.toFixed(0) + ' µg/m³', 'nitrogen dioxide (NO₂), annual average', lim('no2') + vs('no2')));
+  if (has('pm25')) k.push(kpi(v.pm25 == null ? '–' : v.pm25.toFixed(1) + ' µg/m³', 'fine particles (PM2.5), annual average', lim('pm25') + vs('pm25')));
+  if (has('road_noise_55_pct')) {
+    const rail = v.rail_noise_55_pct, air = v.air_noise_55_pct;
+    k.push(kpi(p0(v.road_noise_55_pct), 'of land at or above 55 dB Lden from major roads (the noise-mapping threshold; WHO advises lower levels)',
+      (rail != null ? `<span class="cmp">rail ${p0(rail)}</span>` : '') + (air != null ? `<span class="cmp">aircraft ${p0(air)}</span>` : '') + vs('road_noise_55_pct', '%')));
+  }
+  if (has('green_pct')) k.push(kpi(p0(v.green_pct), 'of land is green space (parks, playing fields, cemeteries, allotments; some not open to all)',
+    (v.park_m != null ? `<span class="cmp">${fmt(Math.round(v.park_m / 10) * 10)} m to a park of 2 ha or more</span>` : '') + vs('green_pct', '%')));
+  if (!k.length) return '';
+  const src = en.sources.map(x => `<li><span><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> · ${esc(x.publisher)} · ${esc(x.vintage)} · ${esc(x.licence)}<br><small>${esc(x.caveat)}</small><br><small>${esc(x.attribution || '')}</small></span></li>`).join('');
+  const above = ['no2', 'pm25'].filter(x => v[x] != null && g[x] && v[x] > g[x].who).map(x => x === 'no2' ? 'NO₂' : 'PM2.5');
+  return `<h3>Environment nearby</h3>
+    <p class="note">Flood risk, air quality, noise and green space for the same ${e.n} neighbourhood${e.n === 1 ? '' : 's'}, averaged by residents. Flood zones show where flooding is modelled to be possible if defences such as the Thames Barrier did not exist; most of that land is protected. ${above.length ? `${above.join(' and ')} ${above.length === 1 ? 'is' : 'are'} above the WHO guideline here, as in nearly all of London.` : ''}</p>
+    <div class="areagrid">${k.join('')}</div>
+    <details class="proof"><summary>Sources, dates and limits</summary><ul class="list">${src}</ul>
+    <p class="note">Each figure is a modelled or mapped value for a ~1,700-resident neighbourhood, so a single street can differ a lot (a busy road inside a quiet area is averaged out). It is not a flood, air or noise survey of any address and does not predict a flood. Check a specific property with the Environment Agency's long-term flood risk service and ask your insurer.</p></details>`;
+}
 async function areaRun(c, radiusM, quiet = false) {
   AV ??= await fetch('api/v1/venues.json').then(r => r.json());
   AB ??= (await getApi('brands')).brands;
@@ -529,12 +573,13 @@ async function areaRun(c, radiusM, quiet = false) {
       <p class="note"><b>Overall ${band[0]} the London average</b> (${ratio.toFixed(1)}x): this area records ${ratio.toFixed(1)} crimes for every 1 in an average London grid cell (about 350 × 550 m) that has any recorded crime. Police-recorded counts, not a measure of how safe a street feels; busy centres, nightlife and stations record far more than quiet residential streets, so compare with similar places using the compare box below. Source: data.police.uk.</p></div>`;
   }
   const who = await whoNearby(c, r);
+  const env = await envNearby(who);
   const stnHtml = stations.length ? `<div><h3 style="margin-top:0">Nearest stations</h3><ul class="list">${stations.map(x => `<li>${esc(x.name)}<span>${walk(x.d)} · ${esc(x.lines.slice(0, 3).join(', '))}${x.lines.length > 3 ? '…' : ''}</span></li>`).join('')}</ul><h3>By type of service</h3><ul class="list">${nearestMode.map(([nm, x]) => `<li>${nm}<span>${esc(x.name)} · ${walk(x.d)}</span></li>`).join('') || '<li><span>None within 3 km</span></li>'}</ul><p class="note">${stnIn.length} station${stnIn.length === 1 ? '' : 's'} and ${lineSet.size} line${lineSet.size === 1 ? '' : 's'} within ${Math.max(r, 1)} km. Straight-line distance; walking time is an estimate. Source: TfL.</p></div>` : '';
   const dist = d => d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
   const li = (n, extra = '') => `<li>${n.fhrsid ? `<a href="https://ratings.food.gov.uk/business/${esc(n.fhrsid)}" target="_blank" rel="noopener" title="Open the FSA record">${esc(n.name)}</a>` : esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
   const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
   const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
-  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive, crimeMonth };
+  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive, crimeMonth, flood: env?.v.rivers_sea_z3_pct, sw: env?.v.surface_water_med_pct, no2: env?.v.no2, pm25: env?.v.pm25, roadNoise: env?.v.road_noise_55_pct, green: env?.v.green_pct };
   if (quiet) return metrics;
   const approxPct = near.length ? Math.round(near.filter(n => n.approx).length / near.length * 100) : 0;
   $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}${c.label === 'your location' ? '' : `<p class="note"><a href="#report/${encodeURIComponent(c.label.replace(/ \(.*$/, ''))}">See the report card for ${esc(c.label.replace(/ \(.*$/, ''))}</a></p>`}
@@ -542,6 +587,7 @@ async function areaRun(c, radiusM, quiet = false) {
     <p class="note">Specialty coffee and bakeries are named sites of ~20 tracked brands (Caravan, Monmouth, GAIL's…); independent cafés are not counted. Chains are the ~20 tracked chain names; other chains count as independent. ${approxPct > 15 ? `About ${approxPct}% of these premises have no published location and are placed at their postcode's centre.` : "Premises with no published location are placed at their postcode's centre."}</p>
     ${stnHtml || crimeHtml ? `<div class="cols">${stnHtml}${crimeHtml}</div>` : ''}
     ${whoHtml(who, kpi)}
+    ${envHtml(env, kpi)}
     <div class="cols">${list('Specialty coffee and bakeries', spec, '<p class="note">Tracked brands only, nearest first.</p>', 10)}${list('Pubs and bars nearby', pubs.filter(n => n.rating === '5' || n.rating === '4'), '<p class="note">Rated 4 or 5, nearest first.</p>')}</div>
     <div class="cols" style="margin-top:14px">${list('Breweries, taprooms and beer venues', beer, '<p class="note">Name contains brew, beer, taproom or ale house; a name can mislead.</p>')}${list('Restaurants and cafés rated 5, not a tracked brand', indie, '<p class="note">Nearest first. Chains outside the tracked list (for example KFC or Leon) count here.</p>')}</div>
     <p class="note" style="margin-top:14px">${takeaways} of ${near.length} are takeaways (${Math.round(takeaways / near.length * 100)}%); ${low} rated venue${low === 1 ? ' is' : 's are'} at 0–2. <a href="#map/q=${encodeURIComponent(c.label.split(' ')[0].toLowerCase())}">See this area on the map</a>.
@@ -559,7 +605,7 @@ async function areaCompare(c1, radiusM, q2) {
   const [a, b] = await Promise.all([areaRun(c1, radiusM, true), areaRun(c2, radiusM, true)]);
   const row = (name, k, f = x => x, better) => { const x = a[k], y = b[k]; const win = z => better && x != null && y != null && x !== y && ((better === 'hi' ? z > (z === x ? y : x) : z < (z === x ? y : x))) ? ' class="win"' : ''; return `<tr><th>${name}</th><td${win(x)}>${x == null ? '–' : f(x)}</td><td${win(y)}>${y == null ? '–' : f(y)}</td></tr>`; };
   out.innerHTML = `<div class="tablewrap"><table><thead><tr><th></th><th>${esc(a.label)}</th><th>${esc(b.label)}</th></tr></thead><tbody>
-    ${row('Food and drink businesses', 'n', fmt)}${row('Rated 5 for hygiene', 'pctFive', x => x + '%', 'hi')}${row('Specialty coffee and bakeries (tracked brands)', 'spec', fmt, 'hi')}${row('Pubs and bars', 'pubs', fmt)}${row('Well-known chains (tracked names)', 'chainPct', x => x + '%', 'lo')}${row('Takeaway share', 'takeawayPct', x => x + '%')}${row('Awaiting inspection', 'awaiting', fmt)}${row('Walk to nearest station (min)', 'walk', x => x, 'lo')}${row('Council-rented homes', 'council', x => Math.round(x) + '%')}${row('Household income after housing costs', 'income', x => '£' + fmt(Math.round(x / 100) * 100), 'hi')}${row('Residents in income-deprived households', 'incDep', x => Math.round(x) + '%', 'lo')}${row('Crimes per 1,000 residents a year', 'rate', x => fmt(Math.round(x)), 'lo')}${row(`Crimes recorded, ${a.crimeMonth || 'latest month'}`, 'crime', fmt, 'lo')}${row('Crime vs London average', 'crimeX', x => x.toFixed(1) + 'x', 'lo')}${row('Rail and tube lines nearby', 'lines', fmt, 'hi')}${row('Stations nearby', 'stns', fmt, 'hi')}</tbody></table></div><p class="note">Highlighted cells lead on that measure. Crime counts rise with footfall, so compare similar places. Within ${radiusM >= 1000 ? radiusM / 1000 + ' km' : radiusM + ' m'} of each.</p>`;
+    ${row('Food and drink businesses', 'n', fmt)}${row('Rated 5 for hygiene', 'pctFive', x => x + '%', 'hi')}${row('Specialty coffee and bakeries (tracked brands)', 'spec', fmt, 'hi')}${row('Pubs and bars', 'pubs', fmt)}${row('Well-known chains (tracked names)', 'chainPct', x => x + '%', 'lo')}${row('Takeaway share', 'takeawayPct', x => x + '%')}${row('Awaiting inspection', 'awaiting', fmt)}${row('Walk to nearest station (min)', 'walk', x => x, 'lo')}${row('Council-rented homes', 'council', x => Math.round(x) + '%')}${row('Household income after housing costs', 'income', x => '£' + fmt(Math.round(x / 100) * 100), 'hi')}${row('Residents in income-deprived households', 'incDep', x => Math.round(x) + '%', 'lo')}${row('Crimes per 1,000 residents a year', 'rate', x => fmt(Math.round(x)), 'lo')}${row(`Crimes recorded, ${a.crimeMonth || 'latest month'}`, 'crime', fmt, 'lo')}${row('Crime vs London average', 'crimeX', x => x.toFixed(1) + 'x', 'lo')}${row('Land in river or sea flood zone 3 (ignores defences)', 'flood', x => Math.round(x) + '%')}${row('Land at surface-water flood risk (1 in 100 a year)', 'sw', x => Math.round(x) + '%')}${row('Nitrogen dioxide (µg/m³)', 'no2', x => x.toFixed(0), 'lo')}${row('Fine particles PM2.5 (µg/m³)', 'pm25', x => x.toFixed(1), 'lo')}${row('Land at or above 55 dB Lden from major roads', 'roadNoise', x => Math.round(x) + '%', 'lo')}${row('Green space', 'green', x => Math.round(x) + '%', 'hi')}${row('Rail and tube lines nearby', 'lines', fmt, 'hi')}${row('Stations nearby', 'stns', fmt, 'hi')}</tbody></table></div><p class="note">Highlighted cells lead on that measure. Flood rows are not highlighted: flood zones are modelled without defences and describe land, not a verdict on a place. Crime counts rise with footfall, so compare similar places. Within ${radiusM >= 1000 ? radiusM / 1000 + ' km' : radiusM + ' m'} of each.</p>`;
 }
 
 // ---------- brands ----------
