@@ -3,11 +3,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-12,new,1920931,Astha?s,Restaurant/Cafe/Canteen,Westminster,NW8 0QY,,AwaitingInspection,,
 2026-10-12,new,2000240,B Kitchen,Takeaway/sandwich shop,Westminster,W1W 6XH,,AwaitingInspection,,
 2026-10-12,new,1976112,Blank Street,Restaurant/Cafe/Canteen,Westminster,WC2E 9JN,,AwaitingInspection,,
+2026-10-12,new,1982105,Blue Note London,Restaurant/Cafe/Canteen,Westminster,WC2N 4EJ,,AwaitingInspection,,
 2026-10-12,new,1991813,Bolo by Gennaro,Restaurant/Cafe/Canteen,Westminster,W1B 5AF,,AwaitingInspection,,
+2026-10-12,new,1991806,Caffe Nero,Restaurant/Cafe/Canteen,Westminster,WC2H 9PW,,AwaitingInspection,,
 2026-10-12,new,2000221,Cana Café & Lounge,Restaurant/Cafe/Canteen,Westminster,W1K 3AH,,AwaitingInspection,,
 2026-10-12,new,1991801,Central Food and Drink,Retailers - other,Westminster,WC2H 7NA,,AwaitingInspection,,
+2026-10-12,new,1983606,Community Cafe- Hope in The Community,Restaurant/Cafe/Canteen,Westminster,SW1V 2RH,,AwaitingInspection,,
 2026-10-12,new,1986223,Deli by Chai Guys,Retailers - other,Westminster,W1A 1AB,,AwaitingInspection,,
 2026-10-12,new,2000250,Drunch,Restaurant/Cafe/Canteen,Westminster,W1W 6RB,,1,,
+2026-10-12,new,2000263,Duchess,Restaurant/Cafe/Canteen,Westminster,W1U 1LP,,5,,
 2026-10-12,new,1991808,Grablocal,Retailers - other,Westminster,SW1V 1AU,,AwaitingInspection,,
 2026-10-12,new,1991827,KOKORO ( Sushi on the quad),Takeaway/sandwich shop,Westminster,WC2R 2LS,,AwaitingInspection,,
 2026-10-12,new,1988733,KotoGohan,Other catering premises,Westminster,W2 3DT,,Exempt,,
@@ -16,6 +20,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-12,new,1991820,Motorino,Restaurant/Cafe/Canteen,Westminster,W1T 3BF,,AwaitingInspection,,
 2026-10-12,new,1978223,Pearl Mayfair,Restaurant/Cafe/Canteen,Westminster,W1K 8UH,,AwaitingInspection,,
 2026-10-12,new,1991817,Piccadilly Food & Wine,Retailers - other,Westminster,W1J 0DA,,5,,
+2026-10-12,new,1991826,Pimlico Coffee,Restaurant/Cafe/Canteen,Westminster,SW1V 1RU,,AwaitingInspection,,
 2026-10-12,new,2000222,Saffron Soho,Restaurant/Cafe/Canteen,Westminster,W1D 6HT,,AwaitingInspection,,
 2026-10-12,new,1982137,Solis,Restaurant/Cafe/Canteen,Westminster,W1B 5QD,,AwaitingInspection,,
 2026-10-12,new,1982117,THE CHEESE DOT BAKERY,Retailers - other,Westminster,W1T 1QE,,AwaitingInspection,,
@@ -28,6 +33,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-12,new,2000252,The Princess Royal,Pub/bar/nightclub,Westminster,W2 5AH,,5,,
 2026-10-12,new,2000254,The Thomas Cubitt,Pub/bar/nightclub,Westminster,SW1W 9PA,,3,,
 2026-10-12,new,1924110,West Cornwall Pasty,Restaurant/Cafe/Canteen,Westminster,W2 1HB,,AwaitingInspection,,
+2026-10-12,new,2000262,voco london marylebone,Hotel/bed & breakfast/guest house,Westminster,NW1 5QT,,AwaitingInspection,,
 2026-10-12,rating_changed,1710050,Holland Park Cafe by Daisy Green,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6LU,3,4,-0.2031508,51.5020233
 2026-10-12,rating_changed,1092094,Budgens,Retailers - other,Lambeth,SE19 1TS,4,3,-0.080301,51.419844
 2026-10-12,rating_changed,1092095,Dabit Trader,Retailers - other,Lambeth,SE19 1TS,5,3,-0.080301,51.419844
@@ -60,6 +66,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-12,rating_changed,1982121,The Fountain School,School/college/university,Westminster,SW1E 6BS,AwaitingInspection,5,,
 2026-10-12,rating_changed,1839474,The July Hotel The Idler Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1V 1BB,2,5,,
 2026-10-12,rating_changed,411874,The London Clinic,Restaurant/Cafe/Canteen,Westminster,W1G 6BW,4,5,,
+2026-10-12,rating_changed,1633838,The Veg Box Cafe,Restaurant/Cafe/Canteen,Westminster,NW1 5PH,3,5,,
 2026-10-12,rating_changed,1686850,Thomas Franks @ Wetherby Senior Sixth Form,School/college/university,Westminster,W1U 2QU,5,AwaitingInspection,,
 2026-10-12,removed,413901,Alfred Tennyson,Restaurant/Cafe/Canteen,Westminster,SW1X 8LA,5,,-0.1564857,51.499681
 2026-10-12,removed,1666247,Arro Coffee,Restaurant/Cafe/Canteen,Westminster,W1D 2JD,5,,-0.1367717,51.5156643
@@ -83,6 +90,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-12,removed,1595436,St George Coffee,Restaurant/Cafe/Canteen,Westminster,WC2H 9PW,5,,-0.1246804,51.5135292
 2026-10-12,removed,1884175,St. Clement Hotel,Hotel/bed & breakfast/guest house,Westminster,WC2R 2PR,AwaitingInspection,,-0.1143685,51.5112595
 2026-10-12,removed,411598,The Coach Makers Arms,Restaurant/Cafe/Canteen,Westminster,W1U 2PY,5,,-0.1506333,51.5171786
+2026-10-12,removed,411406,The Duchess,Restaurant/Cafe/Canteen,Westminster,W1U 1LP,5,,-0.1514385,51.5147363
 2026-10-12,removed,411932,The Grazing Goat,Restaurant/Cafe/Canteen,Westminster,W1H 7RQ,5,,-0.1580601,51.5152991
 2026-10-12,removed,1976103,The Great Thai Rice and Noodle,Restaurant/Cafe/Canteen,Westminster,W1F 8GZ,1,,-0.1355964,51.515151
 2026-10-12,removed,427786,The Harcourt,Restaurant/Cafe/Canteen,Westminster,W1H 4HX,4,,-0.1641597,51.5195134
