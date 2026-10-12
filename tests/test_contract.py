@@ -113,7 +113,7 @@ def test_environment_joins_areas_and_stays_physical():
     e, a = load("environment.json"), load("areas.json")
     f = e["fields"]
     assert f[0] == "code" and all(len(r) == len(f) for r in e["areas"])
-    assert {"flood", "air", "noise", "green"} <= set(e["topics"]) and not e["skipped"]
+    assert {"flood", "noise", "green"} <= set(e["topics"]) and not e["skipped"]
     assert {r[0] for r in e["areas"]} == {r[0] for r in a["areas"]}              # one row per London neighbourhood, no spill-over
     rows = [dict(zip(f, r)) for r in e["areas"]]
     pct = [k for k in f if k.endswith("_pct")]
@@ -122,10 +122,10 @@ def test_environment_joins_areas_and_stays_physical():
     assert all(r["road_noise_65_pct"] <= r["road_noise_55_pct"] for r in rows)
     assert sum(1 for r in rows if r["rivers_sea_z3_pct"] >= 50) > 300            # Thames, Lea and Wandle floodplains are in
     assert sum(1 for r in rows if r["rivers_sea_z3_pct"] == 0) > 2000            # and most of London is not
-    assert sum(1 for r in rows if r["no2"] is not None) > 4900
-    assert 5 <= e["medians"]["pm25"] <= 20 and 10 <= e["medians"]["no2"] <= 40
+    assert "no2" not in f and "pm25" not in f                                    # LAEI licence unconfirmed: not republished
+    assert e["medians"]["green_pct"] > 0
     assert all({"name", "publisher", "url", "licence", "vintage", "caveat", "attribution"} <= set(x) and x["url"].startswith("https://") for x in e["sources"])
-    assert len(e["sources"]) >= 6                                                # flood x2, air, noise x3, green
+    assert len(e["sources"]) >= 6                                                # flood x2, noise x3, green
     assert sum(1 for r in rows if r["surface_water_med_pct"] == 0) < 0.02 * len(rows)   # a blank WMS tile would zero out a whole 20 km square
     assert all(any(r[k] is not None for r in rows) for k in ("rail_noise_55_pct", "air_noise_55_pct"))
 

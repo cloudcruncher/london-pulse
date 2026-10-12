@@ -19,7 +19,7 @@ def test_build_skips_a_failing_topic_and_records_why(tmp_path, monkeypatch):
     class Good:
         GUIDELINES = {"no2": 10}
         compute = staticmethod(
-            lambda g, r: ({"A": {"no2": 30.0}, "B": {"no2": 20.0}}, [{"id": "air"}])
+            lambda g, r: ({"A": {"no2": 30.0}, "B": {"no2": 20.0}}, [{"id": "noise_road"}])
         )
 
     class Bad:
@@ -27,12 +27,12 @@ def test_build_skips_a_failing_topic_and_records_why(tmp_path, monkeypatch):
         def compute(g, r):
             raise RuntimeError("download failed")
 
-    mods = {"london_pulse.air": Good, "london_pulse.flood": Bad}
+    mods = {"london_pulse.noise": Good, "london_pulse.flood": Bad}
     monkeypatch.setattr(environment.importlib, "import_module", lambda n: mods[n])
     environment.build(
-        tmp_path / "x.geojson", tmp_path, tmp_path, topics=["flood", "air"]
+        tmp_path / "x.geojson", tmp_path, tmp_path, topics=["flood", "noise"]
     )
     out = json.loads((tmp_path / "environment.json").read_text())
-    assert out["topics"] == ["air"] and out["skipped"][0]["topic"] == "flood"
+    assert out["topics"] == ["noise"] and out["skipped"][0]["topic"] == "flood"
     assert out["fields"] == ["code", "no2"] and out["medians"] == {"no2": 25.0}
     assert out["guidelines"] == {"no2": 10}

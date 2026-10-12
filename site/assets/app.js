@@ -475,7 +475,7 @@ function whoHtml(w, kpi) {
     <p class="note">Income is a modelled estimate, not a count: it is published for the wider ~8,000-resident area (ONS 95% interval for the MSOA), not for this radius, net of tax and adjusted for household size, so treat the range as the answer. Census tenure dates from March 2021. Tenure and recorded crime describe places, not the people in them, and police-recorded counts say little about how safe a particular street feels. Use them to compare areas, then visit.</p>
     ${proof}`;
 }
-// environment nearby: flood, air, noise and green space for the same neighbourhoods as "Who lives nearby", residents-weighted.
+// environment nearby: flood, noise and green space for the same neighbourhoods as "Who lives nearby", residents-weighted.
 // Modelled or mapped conditions per neighbourhood (flood zones ignore defences), not a survey of any address.
 async function envNearby(w) {
   if (!w) return null;
@@ -492,17 +492,14 @@ async function envNearby(w) {
 }
 function envHtml(e, kpi) {
   if (!e) return '';
-  const { en, v, has } = e, m = en.medians, g = en.guidelines || {};
+  const { en, v, has } = e, m = en.medians;
   const p0 = x => x == null ? '–' : Math.round(x) + '%';
   const vs = (k, unit = '') => m[k] == null ? '' : `<span class="cmp" title="Median across London neighbourhoods">London middle ${m[k]}${unit}</span>`;
-  const lim = k => g[k] ? `<span class="cmp" title="WHO 2021 guideline and UK legal limit, annual mean">WHO ${g[k].who} · UK limit ${g[k].uk_limit}</span>` : '';
   const k = [];
   if (has('rivers_sea_z3_pct')) k.push(kpi(p0(v.rivers_sea_z3_pct), 'of land in river or sea flood zone 3 (modelled at 1 in 100 a year for rivers or 1 in 200 for the sea, or more likely; ignores defences)',
     `<span class="cmp" title="Environment Agency Flood Zone 2 and 3 together">${p0(v.rivers_sea_z2_pct)} in zones 2 or 3</span>` + (e.floodN ? `<span class="cmp down">${e.floodN} of ${e.n} neighbourhood${e.n === 1 ? '' : 's'} over a quarter in zone 3</span>` : '') + vs('rivers_sea_z3_pct', '%')));
   if (has('surface_water_med_pct')) k.push(kpi(p0(v.surface_water_med_pct), 'of land at 1-in-100-year or higher surface-water (heavy rain) flood risk',
     `<span class="cmp">${p0(v.surface_water_high_pct)} at 1-in-30 or higher</span>` + vs('surface_water_med_pct', '%')));
-  if (has('no2')) k.push(kpi(v.no2 == null ? '–' : v.no2.toFixed(0) + ' µg/m³', 'nitrogen dioxide (NO₂), annual average', lim('no2') + vs('no2')));
-  if (has('pm25')) k.push(kpi(v.pm25 == null ? '–' : v.pm25.toFixed(1) + ' µg/m³', 'fine particles (PM2.5), annual average', lim('pm25') + vs('pm25')));
   if (has('road_noise_55_pct')) {
     const rail = v.rail_noise_55_pct, air = v.air_noise_55_pct;
     k.push(kpi(p0(v.road_noise_55_pct), 'of land at or above 55 dB Lden from major roads (the noise-mapping threshold; WHO advises lower levels)',
@@ -512,9 +509,8 @@ function envHtml(e, kpi) {
     (v.park_m != null ? `<span class="cmp">${fmt(Math.round(v.park_m / 10) * 10)} m to a park of 2 ha or more</span>` : '') + vs('green_pct', '%')));
   if (!k.length) return '';
   const src = en.sources.map(x => `<li><span><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> · ${esc(x.publisher)} · ${esc(x.vintage)} · ${esc(x.licence)}<br><small>${esc(x.caveat)}</small><br><small>${esc(x.attribution || '')}</small></span></li>`).join('');
-  const above = ['no2', 'pm25'].filter(x => v[x] != null && g[x] && v[x] > g[x].who).map(x => x === 'no2' ? 'NO₂' : 'PM2.5');
   return `<h3>Environment nearby</h3>
-    <p class="note">Flood risk, air quality, noise and green space for the same ${e.n} neighbourhood${e.n === 1 ? '' : 's'}, averaged by residents. Flood zones show where flooding is modelled to be possible if defences such as the Thames Barrier did not exist; most of that land is protected. ${above.length ? `${above.join(' and ')} ${above.length === 1 ? 'is' : 'are'} above the WHO guideline here, as in nearly all of London.` : ''}</p>
+    <p class="note">Flood risk, noise and green space for the same ${e.n} neighbourhood${e.n === 1 ? '' : 's'}, averaged by residents. Flood zones show where flooding is modelled to be possible if defences such as the Thames Barrier did not exist; most of that land is protected.</p>
     <div class="areagrid">${k.join('')}</div>
     <details class="proof"><summary>Sources, dates and limits</summary><ul class="list">${src}</ul>
     <p class="note">Each figure is a modelled or mapped value for a ~1,700-resident neighbourhood, so a single street can differ a lot (a busy road inside a quiet area is averaged out). It is not a flood, air or noise survey of any address and does not predict a flood. Check a specific property with the Environment Agency's long-term flood risk service and ask your insurer.</p></details>`;
@@ -579,7 +575,7 @@ async function areaRun(c, radiusM, quiet = false) {
   const li = (n, extra = '') => `<li>${n.fhrsid ? `<a href="https://ratings.food.gov.uk/business/${esc(n.fhrsid)}" target="_blank" rel="noopener" title="Open the FSA record">${esc(n.name)}</a>` : esc(n.name)}<span>${dist(n.d)} · ${esc(n.pc)}${extra}</span></li>`;
   const list = (title, arr, note = '', max = 8) => `<div><h3 style="margin-top:0">${title}</h3><ul class="list">${arr.length ? arr.slice(0, max).map(n => li(n, n.brand ? ' · ' + esc(n.brand.name) : '')).join('') : '<li><span>None found in this area</span></li>'}</ul>${note}</div>`;
   const diff = pctFive == null ? '' : `<span class="cmp ${pctFive >= lonFive ? 'up' : 'down'}">${pctFive >= lonFive ? '▲' : '▼'} London ${lonFive}%</span>`;
-  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive, crimeMonth, flood: env?.v.rivers_sea_z3_pct, sw: env?.v.surface_water_med_pct, no2: env?.v.no2, pm25: env?.v.pm25, roadNoise: env?.v.road_noise_55_pct, green: env?.v.green_pct };
+  const metrics = { label: c.label, n: near.length, pctFive, spec: spec.length, pubs: pubs.length, chainPct: Math.round(chains.length / near.length * 100), awaiting, takeawayPct: Math.round(takeaways / near.length * 100), walk: stations[0] ? Math.max(1, Math.round(stations[0].d * 1000 / 80)) : null, station: stations[0]?.name, crime: crimeTot, crimeX: crimeRatio, council: who?.council, income: who?.incAhc, incDep: who?.incDep, rate: who?.rate, lines: lineSet.size, stns: stnIn.length, lonFive, crimeMonth, flood: env?.v.rivers_sea_z3_pct, sw: env?.v.surface_water_med_pct, roadNoise: env?.v.road_noise_55_pct, green: env?.v.green_pct };
   if (quiet) return metrics;
   const approxPct = near.length ? Math.round(near.filter(n => n.approx).length / near.length * 100) : 0;
   $('areaout').innerHTML = `<h3 style="margin:14px 0 0">Within ${dist(r)} of ${esc(c.label)}</h3>${c.approx ? '<p class="note">Centred on the middle of the postcode district.</p>' : ''}${c.label === 'your location' ? '' : `<p class="note"><a href="#report/${encodeURIComponent(c.label.replace(/ \(.*$/, ''))}">See the report card for ${esc(c.label.replace(/ \(.*$/, ''))}</a></p>`}

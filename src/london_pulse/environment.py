@@ -17,13 +17,12 @@ import traceback
 from datetime import date
 from pathlib import Path
 
-TOPICS = ["flood", "air", "noise", "green"]
+TOPICS = ["flood", "noise", "green"]   # air quality (LAEI) is left out: its licence on the London Datastore is "Not Specified"
 # wording the data owners ask for when their data is republished; shown beside each source
 ATTRIBUTION = {
     "flood": "Contains public sector information licensed under the Open Government Licence v3.0. © Environment Agency copyright and/or database right 2026. All rights reserved.",
     "noise": "Contains public sector information licensed under the Open Government Licence v3.0. © Crown copyright and database rights, Defra.",
     "greenspace": "Contains OS data © Crown copyright and database right 2026. Contains public sector information licensed under the Open Government Licence v3.0.",
-    "air": "Contains data from the London Atmospheric Emissions Inventory (LAEI 2022), © Greater London Authority.",
 }
 
 
