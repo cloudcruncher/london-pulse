@@ -1,0 +1,38 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-13,rating_changed,1999040,Marigold Montessori,Caring Premises,Barnet,HA8 7LG,AwaitingInspection,3,-0.276738,51.614595
+2026-10-13,rating_changed,1986884,Sunny Mart,Retailers - other,Barnet,NW4 1JA,AwaitingInspection,4,-0.226098,51.598671
+2026-10-13,rating_changed,965371,Sydmar Lodge,Caring Premises,Barnet,HA8 9QH,5,4,-0.26488,51.617244
+2026-10-13,rating_changed,1990344,Expo International Supermarket,Retailers - supermarkets/hypermarkets,Bexley,DA15 9NP,AwaitingInspection,4,0.115836,51.448428
+2026-10-13,rating_changed,743610,Subway,Takeaway/sandwich shop,Bexley,DA16 3QB,5,4,0.102579,51.463441
+2026-10-13,rating_changed,423942,Oxford Arms,Pub/bar/nightclub,Camden,NW1 7BU,4,3,-0.144276,51.5405941
+2026-10-13,rating_changed,1519859,Magdalene,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 2PF,5,4,-0.0849601,51.5193621
+2026-10-13,rating_changed,1602942,Terra Rossa St Paul's,Restaurant/Cafe/Canteen,City of London Corporation,EC4V 5EA,5,4,-0.10161,51.513318
+2026-10-13,rating_changed,1756318,The Roast,Takeaway/sandwich shop,City of London Corporation,EC4V 5EA,4,3,-0.10161,51.513318
+2026-10-13,rating_changed,4827,Nisa Local,Retailers - other,Croydon,CR0 6RA,5,4,-0.0749429985880852,51.3796234130859
+2026-10-13,rating_changed,1553347,Oval Residential Home,Caring Premises,Croydon,CR0 6BN,AwaitingInspection,3,-0.0870812,51.3774547
+2026-10-13,rating_changed,1975219,Søstre,Mobile caterer,Ealing,UB1,AwaitingInspection,4,,
+2026-10-13,rating_changed,1994436,Vita Mia Pizzeria,Restaurant/Cafe/Canteen,Ealing,W5 5RA,AwaitingInspection,2,-0.304985,51.508044
+2026-10-13,rating_changed,317663,Fat Boys Cafe,Restaurant/Cafe/Canteen,Enfield,N9 0TY,5,0,-0.058968,51.624704
+2026-10-13,rating_changed,1979173,Srilankan Podi Kade o/s Asda,Mobile caterer,Enfield,N9 0,AwaitingInspection,1,,
+2026-10-13,rating_changed,896561,The Green Cafe,Restaurant/Cafe/Canteen,Enfield,N9 0EQ,5,4,-0.057434,51.625092
+2026-10-13,rating_changed,1974201,Sobelle,Restaurant/Cafe/Canteen,Greenwich,SE10 9UW,AwaitingInspection,4,0.0017068,51.4840563
+2026-10-13,rating_changed,1803253,AMMU EXPRESS,Restaurant/Cafe/Canteen,Harrow,HA2 8JA,1,0,-0.35563,51.562638
+2026-10-13,rating_changed,277169,One Stop Tropical Market,Retailers - other,Harrow,HA2 8EX,3,1,-0.358777,51.560604
+2026-10-13,rating_changed,1943959,The Pizzert and Grill,Takeaway/sandwich shop,Havering,RM14 2RB,AwaitingInspection,1,0.2382,51.558442
+2026-10-13,rating_changed,1584319,Chicken Pot,Takeaway/sandwich shop,Islington,N19 5QT,3,1,-0.1344111,51.5652933
+2026-10-13,rating_changed,1644560,You Me Sushi,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4EU,2,0,-0.2555081,51.4008198
+2026-10-13,rating_changed,896470,Shish,Restaurant/Cafe/Canteen,Redbridge,IG8 0HQ,4,3,0.034019,51.60795
+2026-10-13,rating_changed,1497456,The Sushi Co,Restaurant/Cafe/Canteen,Redbridge,IG8 0HL,5,3,0.0331352,51.6075421
+2026-10-13,rating_changed,1960429,Bloom works,Takeaway/sandwich shop,Southwark,SE5 8RW,AwaitingInspection,4,,
+2026-10-13,rating_changed,1733483,Pach Bhai,Other catering premises,Tower Hamlets,E1 1DB,4,1,-0.060978,51.519183
+2026-10-13,rating_changed,515002,Asda Supermarket,Retailers - supermarkets/hypermarkets,Waltham Forest,E17 7JR,3,1,,
+2026-10-13,rating_changed,514329,Aspray House,Caring Premises,Waltham Forest,E10 7EB,5,4,-0.0196315,51.572557
+2026-10-13,rating_changed,1091799,Koz Restaurant,Restaurant/Cafe/Canteen,Waltham Forest,E10 7DN,3,1,-0.0134833,51.5745573
+2026-10-13,rating_changed,1986188,AVI Bistrot Americain,Restaurant/Cafe/Canteen,Westminster,SW1X 9ES,AwaitingInspection,2,-0.1576367,51.4993664
+2026-10-13,rating_changed,413410,Al-Hayat Mediterranean Food Store,Retailers - other,Westminster,SW1V 3EN,1,2,-0.1402445,51.4877341
+2026-10-13,rating_changed,1223907,Chaun Royal China,Restaurant/Cafe/Canteen,Westminster,W1D 6JS,3,2,-0.1314657,51.5114882
+2026-10-13,rating_changed,1986189,Curiosity,Retailers - other,Westminster,SW1A 2DD,AwaitingInspection,4,-0.1271887,51.5071934
+2026-10-13,rating_changed,1007352,Rileys - (Snooker Club And American Pool Bar),Restaurant/Cafe/Canteen,Westminster,SW1W 9QJ,2,4,-0.1499891,51.4921777
+2026-10-13,rating_changed,1976083,STEFANIA,Restaurant/Cafe/Canteen,Westminster,W2 5SH,AwaitingInspection,1,-0.1917711,51.5156797
+2026-10-13,rating_changed,1978220,Sunday London Paddington Hotel,Hotel/bed & breakfast/guest house,Westminster,W2 3DP,AwaitingInspection,2,-0.1804012,51.5138222
+2026-10-13,rating_changed,412413,The Larrik Public House,Restaurant/Cafe/Canteen,Westminster,W1H 5NN,5,2,-0.1648848,51.5186973
