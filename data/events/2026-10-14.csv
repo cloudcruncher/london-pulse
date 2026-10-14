@@ -33,3 +33,5 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-14,rating_changed,1415417,Bilmonte,Restaurant/Cafe/Canteen,Westminster,W1D 7LW,1,2,-0.1347602,51.5116305
 2026-10-14,rating_changed,1592670,Karamay Uyghur Cuisine,Restaurant/Cafe/Canteen,Westminster,W1W 8LR,3,2,-0.1416954,51.516156
 2026-10-14,rating_changed,1791317,Santa Maria Pizzeria,Restaurant/Cafe/Canteen,Westminster,W2 1QJ,4,2,-0.1724348,51.5169717
+2026-10-14,removed,1994431,Slemani Restaurant,Restaurant/Cafe/Canteen,Ealing,W13 9AA,AwaitingInspection,,-0.318004,51.510992
+2026-10-14,removed,1902302,Slemani Restaurant,Restaurant/Cafe/Canteen,Ealing,W13 9AA,2,,-0.318004,51.510992
