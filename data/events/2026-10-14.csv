@@ -1,0 +1,35 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-14,rating_changed,123372,Bon Appetit,Restaurant/Cafe/Canteen,Barking and Dagenham,RM6 6PB,1,4,0.133554,51.571543
+2026-10-14,rating_changed,756936,Independent Jewish Day School,School/college/university,Barnet,NW4 2AH,5,3,-0.214697,51.585621
+2026-10-14,rating_changed,1950708,Mama Foodstore,Retailers - other,Barnet,NW11 8LL,AwaitingInspection,4,-0.197378,51.572417
+2026-10-14,rating_changed,1643250,Savastano,Restaurant/Cafe/Canteen,Barnet,NW11 7TH,4,3,-0.19843,51.581227
+2026-10-14,rating_changed,1987952,Dessert Haven,Takeaway/sandwich shop,Bexley,DA1 4JJ,AwaitingInspection,3,0.178678,51.4524308
+2026-10-14,rating_changed,1981947,Crofton Honey,Farmers/growers,Bromley,BR6,AwaitingInspection,4,,
+2026-10-14,rating_changed,1314178,TURPAN UYGHUR RESTAURANT,Restaurant/Cafe/Canteen,Camden,WC1B 3NA,4,1,-0.1293866,51.5175611
+2026-10-14,rating_changed,1178154,Everyman Broadgate,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 2PA,5,0,-0.084159,51.519789
+2026-10-14,rating_changed,1344307,An Diadan House,Caring Premises,Croydon,CR0 5HQ,5,4,-0.0509451,51.3634862
+2026-10-14,rating_changed,1087983,Delight Wedlinka,Retailers - other,Ealing,UB6 9PN,5,4,-0.355217,51.528102
+2026-10-14,rating_changed,1918689,London Curries,Other catering premises,Ealing,UB6,AwaitingInspection,4,,
+2026-10-14,rating_changed,316924,Hugh Myddelton House,Caring Premises,Enfield,N14 5QR,1,4,-0.132413,51.637136
+2026-10-14,rating_changed,1979172,Snack 'n' Chat Cafe,Restaurant/Cafe/Canteen,Enfield,N9 0PZ,AwaitingInspection,4,-0.063655,51.620132
+2026-10-14,rating_changed,470064,Tesco,Retailers - other,Hackney,N1 3JE,5,4,-0.085788,51.5381073
+2026-10-14,rating_changed,576552,Local,Retailers - other,Hammersmith and Fulham,W12 9BL,5,4,-0.243422,51.502894
+2026-10-14,rating_changed,276773,Fishes & Dishes Limited,Retailers - other,Harrow,HA2 9BN,4,3,-0.3656792,51.5647031
+2026-10-14,rating_changed,1976547,Kahumbo,Restaurant/Cafe/Canteen,Harrow,HA2 9TL,AwaitingInspection,4,-0.3705533,51.5744559
+2026-10-14,rating_changed,2000484,Still Standing,Restaurant/Cafe/Canteen,Havering,RM11 2SD,AwaitingInspection,3,0.2201635,51.5838644
+2026-10-14,rating_changed,373201,The Vindaloo / Manzil Tandoori,Restaurant/Cafe/Canteen,Havering,RM5 3SS,3,2,0.175319,51.60119
+2026-10-14,rating_changed,1978875,Doner Delight,Takeaway/sandwich shop,Hillingdon,UB4 8JG,AwaitingInspection,1,-0.434834,51.525693
+2026-10-14,rating_changed,1775654,Bold Food & Bar,Restaurant/Cafe/Canteen,Islington,N19 5HS,3,1,-0.1406431,51.5649695
+2026-10-14,rating_changed,1367117,SAI 8 Limited,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 4PP,5,4,-0.183451,51.49895
+2026-10-14,rating_changed,1527162,Cinnamon Bar & Restaurant,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT9 2AJ,5,3,-0.2948033,51.3589255
+2026-10-14,rating_changed,1963621,Samir's / Kebab Corner / Gyros Kingston,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1JE,AwaitingInspection,4,-0.3059095,51.4090954
+2026-10-14,rating_changed,1474312,Horiya Foods,Retailers - other,Lambeth,SW9 8JP,2,1,-0.1130504,51.462219
+2026-10-14,rating_changed,1990322,Dulwich tandoori,Restaurant/Cafe/Canteen,Southwark,SE22 8HJ,AwaitingInspection,4,-0.075294,51.459258
+2026-10-14,rating_changed,1389539,French tacos uk,Takeaway/sandwich shop,Southwark,SE5 8BG,4,3,-0.086048,51.467833
+2026-10-14,rating_changed,1980707,Ruff n tumble soft play for dogs,Caring Premises,Sutton,SM7 3HR,AwaitingInspection,4,-0.1679566,51.3312552
+2026-10-14,rating_changed,94641,Baraka Eatery,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1JX,2,1,-0.065943,51.517331
+2026-10-14,rating_changed,1622297,Falafel Shack,Mobile caterer,Tower Hamlets,E1 7TP,5,2,-0.075307,51.5164747
+2026-10-14,rating_changed,150519,The Victory,Pub/bar/nightclub,Tower Hamlets,E2 9DQ,5,1,-0.05483,51.534575
+2026-10-14,rating_changed,1415417,Bilmonte,Restaurant/Cafe/Canteen,Westminster,W1D 7LW,1,2,-0.1347602,51.5116305
+2026-10-14,rating_changed,1592670,Karamay Uyghur Cuisine,Restaurant/Cafe/Canteen,Westminster,W1W 8LR,3,2,-0.1416954,51.516156
+2026-10-14,rating_changed,1791317,Santa Maria Pizzeria,Restaurant/Cafe/Canteen,Westminster,W2 1QJ,4,2,-0.1724348,51.5169717
