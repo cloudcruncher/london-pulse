@@ -1,0 +1,80 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-15,new,2001273,Cercles Matcha,Retailers - other,Kensington and Chelsea,W11,,AwaitingInspection,,
+2026-10-15,new,2001272,FORE! Drinks,Other catering premises,Kensington and Chelsea,W8 5,,AwaitingInspection,,
+2026-10-15,new,2001276,Impact Food Group @ Thomas Jones Primary School,Other catering premises,Kensington and Chelsea,W11 1RQ,,AwaitingInspection,-0.210386,51.51493
+2026-10-15,new,2001271,Norway Omega Scandinavia,Retailers - other,Kensington and Chelsea,SW7,,AwaitingInspection,,
+2026-10-15,new,2001277,OniOni,Retailers - other,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-10-15,new,1255889,Pan-n-Ice,Other catering premises,Kensington and Chelsea,W10 5BN,,5,-0.208141997456551,51.5260200500488
+2026-10-15,new,2001275,Swiss Butter,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 4SF,,AwaitingInspection,-0.183555,51.494509
+2026-10-15,new,2001270,THE UNCOMMON CAFE,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1HY,,AwaitingInspection,-0.1663113,51.498621
+2026-10-15,new,2001278,Wings&bun,Takeaway/sandwich shop,Kensington and Chelsea,"",,AwaitingInspection,-0.2029634,51.4979602
+2026-10-15,new,2001274,eyeam world,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 2RJ,,AwaitingInspection,-0.159184,51.493716
+2026-10-15,rating_changed,1999052,Koi Restaurant,Restaurant/Cafe/Canteen,Barnet,NW7 3DA,AwaitingInspection,4,-0.247702,51.614705
+2026-10-15,rating_changed,1745555,Schlagmans Kosher Butchers,Retailers - other,Barnet,NW7 3JN,3,1,-0.2536989,51.6207461
+2026-10-15,rating_changed,1974956,Chatoras food Limited,Takeaway/sandwich shop,Bromley,BR6 0NW,AwaitingInspection,2,0.0989697,51.3747827
+2026-10-15,rating_changed,987445,Sprinkles,Restaurant/Cafe/Canteen,Bromley,BR6,5,4,,
+2026-10-15,rating_changed,426085,Brazilian Gourmet,Restaurant/Cafe/Canteen,Camden,W1T 6LY,4,2,-0.1401805,51.5218514
+2026-10-15,rating_changed,1294830,Dukan 41,Restaurant/Cafe/Canteen,Camden,EC1N 8PJ,4,3,-0.1089465,51.5193377
+2026-10-15,rating_changed,943067,Knockbox Coffee,Restaurant/Cafe/Canteen,Camden,WC1N 3NG,3,2,-0.118578,51.521577
+2026-10-15,rating_changed,1251603,Maoz Flalfel Schnitzel,Restaurant/Cafe/Canteen,Camden,EC1N 8PJ,4,1,-0.108800001442432,51.5193901062012
+2026-10-15,rating_changed,1968642,PIZZA PARTY,Takeaway/sandwich shop,Camden,NW5 3EW,AwaitingInspection,4,-0.1431032,51.5502697
+2026-10-15,rating_changed,828890,Canto Corvino,Restaurant/Cafe/Canteen,City of London Corporation,E1 7LP,5,4,-0.077905,51.518706
+2026-10-15,rating_changed,294929,Pret A Manger,Takeaway/sandwich shop,City of London Corporation,EC3N 1LH,5,4,-0.076529,51.513414
+2026-10-15,rating_changed,5031,Kenley Kindergarten,Caring Premises,Croydon,CR3 0EX,4,1,-0.0863299965858459,51.3150329589844
+2026-10-15,rating_changed,1557865,Burger King,Restaurant/Cafe/Canteen,Ealing,W3 0PA,5,4,-0.281336,51.525334
+2026-10-15,rating_changed,1959432,Espin Zar,Restaurant/Cafe/Canteen,Ealing,NW10 6HZ,AwaitingInspection,1,-0.2601781,51.5295823
+2026-10-15,rating_changed,927626,Grillville,Restaurant/Cafe/Canteen,Ealing,W5 1QP,5,4,-0.312777,51.526501
+2026-10-15,rating_changed,1079787,Hamza Flavas,Restaurant/Cafe/Canteen,Ealing,UB1 1QF,0,4,-0.3817885,51.5120426
+2026-10-15,rating_changed,1985668,Kimabi,Restaurant/Cafe/Canteen,Ealing,W5 5AH,AwaitingInspection,4,-0.3065667,51.5126445
+2026-10-15,rating_changed,1160029,The Corner Terrace,Restaurant/Cafe/Canteen,Ealing,W5 3NN,0,2,-0.286309,51.509607
+2026-10-15,rating_changed,1434433,GoldieJoe's,Restaurant/Cafe/Canteen,Enfield,EN3 4GS,1,4,-0.0359537,51.6418282
+2026-10-15,rating_changed,316273,Hindu Tamil Cultural Association,Other catering premises,Enfield,N9 9PZ,3,2,-0.065702,51.627378
+2026-10-15,rating_changed,1980690,Triple R African and Caribbean Food,Retailers - other,Hackney,E9 6JA,AwaitingInspection,3,-0.0438486,51.5479812
+2026-10-15,rating_changed,1287470,Delta Bakery Limited,Manufacturers/packers,Haringey,N22 6BX,5,2,-0.104362,51.591732
+2026-10-15,rating_changed,1955050,Lovely sweet & snacks ltd,Takeaway/sandwich shop,Hillingdon,UB4 0RX,AwaitingInspection,1,-0.4136045,51.520067
+2026-10-15,rating_changed,1068758,New Wing Luck 109 LTD,Takeaway/sandwich shop,Hillingdon,UB7 7LT,4,1,-0.470929,51.507231
+2026-10-15,rating_changed,1710528,Sofia's Superstore,Retailers - other,Hillingdon,UB3 4DD,1,4,-0.419327,51.506008
+2026-10-15,rating_changed,1665702,Angel Food & News,Retailers - other,Islington,N1 8BW,3,1,-0.104651,51.5335668
+2026-10-15,rating_changed,416904,Budgens,Retailers - other,Islington,N1 1RL,3,4,-0.103485,51.5435748
+2026-10-15,rating_changed,1499467,The De Beauvoir Wholefoods,Retailers - other,Islington,N1 3JS,3,1,-0.0853435,51.5414812
+2026-10-15,rating_changed,416466,The Horseshoe Public House,Pub/bar/nightclub,Islington,EC1R 0AG,2,3,-0.1067973,51.5238893
+2026-10-15,rating_changed,803750,Argan Tree Cafe,Restaurant/Cafe/Canteen,Kensington and Chelsea,W10 6TJ,4,5,-0.217197,51.515816
+2026-10-15,rating_changed,1984482,Endo Chelsea,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 2SP,AwaitingInspection,5,-0.160976,51.491396
+2026-10-15,rating_changed,1958412,Frenchies by Young Ldn,Restaurant/Cafe/Canteen,Kensington and Chelsea,W11 2RH,AwaitingInspection,4,-0.2012885,51.5144591
+2026-10-15,rating_changed,1129615,Gold Notting Hill,Restaurant/Cafe/Canteen,Kensington and Chelsea,W11 2QB,5,4,-0.20247,51.51284
+2026-10-15,rating_changed,1343329,Layla Bakery,Manufacturers/packers,Kensington and Chelsea,W10 5RU,4,5,-0.2105237,51.5216901
+2026-10-15,rating_changed,1958408,Love Cocos,Other catering premises,Kensington and Chelsea,W10,AwaitingInspection,5,,
+2026-10-15,rating_changed,1965814,MPW Food,Other catering premises,Kensington and Chelsea,SW7 5JS,AwaitingInspection,5,-0.17955,51.495589
+2026-10-15,rating_changed,1984478,Millie's House Chelsea Waterfront,Other catering premises,Kensington and Chelsea,SW10 0QH,AwaitingInspection,5,-0.1803467,51.4786601
+2026-10-15,rating_changed,1883520,Portobello Launch Ltd,Mobile caterer,Kensington and Chelsea,W10 5BU,AwaitingInspection,5,-0.214452,51.526673
+2026-10-15,rating_changed,1271648,Paula's Bakery,Retailers - other,Lambeth,SW9 8EN,2,3,-0.116026,51.461511
+2026-10-15,rating_changed,1906204,MANOR HOUSE DAY CARE LTD,Caring Premises,Lewisham,SE13 5QL,AwaitingInspection,4,0.002088,51.456487
+2026-10-15,rating_changed,1977063,Bella Donna Restaurant,Restaurant/Cafe/Canteen,Merton,SM4 5HP,AwaitingInspection,4,-0.1954644,51.4009715
+2026-10-15,rating_changed,1537453,Kabul Bazaar,Retailers - other,Newham,E6 3PA,1,2,0.056559,51.526964
+2026-10-15,rating_changed,1691035,MBR Aashish Chinese,Restaurant/Cafe/Canteen,Newham,E7 9LW,1,3,0.025884,51.542966
+2026-10-15,rating_changed,1744836,Newham Fish Bazar,Retailers - other,Newham,E6 3BP,3,1,0.0384165,51.5301147
+2026-10-15,rating_changed,1257657,ADANA Green Lane,Takeaway/sandwich shop,Redbridge,IG1 1XW,4,2,0.089775,51.559039
+2026-10-15,rating_changed,1976464,Soufflé Garden,Restaurant/Cafe/Canteen,Redbridge,"",AwaitingInspection,1,0.06942579,51.55734559
+2026-10-15,rating_changed,1990700,Arancino of Sicily,Retailers - other,Tower Hamlets,E14 5AJ,AwaitingInspection,2,-0.019475,51.504344
+2026-10-15,rating_changed,40428,Eastenders Pie & Mash,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EA,5,4,-0.013793,51.511415
+2026-10-15,rating_changed,40740,JP's Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6AQ,4,1,-0.014297,51.512754
+2026-10-15,rating_changed,44795,Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0ED,5,1,-0.012384,51.5114097
+2026-10-15,rating_changed,99786,Real Taste,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EA,5,4,-0.013685,51.5114002
+2026-10-15,rating_changed,69895,St Elizabeth's Primary School Kitchen,School/college/university,Tower Hamlets,E2 9JY,5,1,-0.051261,51.532726
+2026-10-15,rating_changed,1411657,Taste of India,Takeaway/sandwich shop,Tower Hamlets,E14 0ED,5,4,-0.011962,51.511429
+2026-10-15,rating_changed,1779466,Like Home,Manufacturers/packers,Waltham Forest,E10 7BT,4,3,-0.0222866,51.5642476
+2026-10-15,rating_changed,1937072,Whitefield School,Caring Premises,Waltham Forest,E17 4AZ,1,4,,
+2026-10-15,rating_changed,1573027,Balti Kitchen,Takeaway/sandwich shop,Wandsworth,SW11 2PG,3,1,-0.1703698,51.4681364
+2026-10-15,rating_changed,1625056,Chatkhara,Restaurant/Cafe/Canteen,Wandsworth,SW17 7TS,1,4,-0.1602175,51.4352259
+2026-10-15,rating_changed,1988127,Tolians,Retailers - supermarkets/hypermarkets,Wandsworth,SW17 7PG,AwaitingInspection,4,-0.1603399,51.4355665
+2026-10-15,rating_changed,1976111,McCarthys,Distributors/Transporters,Westminster,WC2H 7JX,AwaitingInspection,4,-0.1292758,51.5107698
+2026-10-15,rating_changed,1728413,Sanderson Hotel,Hotel/bed & breakfast/guest house,Westminster,W1T 3NG,5,3,-0.1373935,51.5177335
+2026-10-15,rating_changed,1955311,The Bootlegger,Pub/bar/nightclub,Westminster,WC2E 7PX,AwaitingInspection,4,-0.1205185,51.5111743
+2026-10-15,rating_changed,414242,The Mayfair Hotel,Hotel/bed & breakfast/guest house,Westminster,W1J 8LT,5,4,,
+2026-10-15,removed,334915,Denbigh Under 5's Group,Caring Premises,Kensington and Chelsea,W11 2SJ,5,,-0.200962,51.513787
+2026-10-15,removed,1667809,H Krupa Wholesale,Retailers - other,Kensington and Chelsea,W11 1TX,5,,-0.2119569,51.5143794
+2026-10-15,removed,334170,JIA,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 3ES,4,,-0.175164,51.493965
+2026-10-15,removed,1732042,KetoBee,Takeaway/sandwich shop,Kensington and Chelsea,SW3 5UZ,2,,-0.176735,51.484206
+2026-10-15,removed,1651730,Kingston Catering,Other catering premises,Kensington and Chelsea,W10,AwaitingInspection,,,
+2026-10-15,removed,1489984,"Pane, Vino & Amore",Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 4HA,5,,-0.1874572,51.494889
+2026-10-15,removed,1762231,The Wee Sister,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW10 0LE,5,,-0.1805128,51.4820889
