@@ -9,6 +9,26 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-15,new,2001270,THE UNCOMMON CAFE,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1HY,,AwaitingInspection,-0.1663113,51.498621
 2026-10-15,new,2001278,Wings&bun,Takeaway/sandwich shop,Kensington and Chelsea,"",,AwaitingInspection,-0.2029634,51.4979602
 2026-10-15,new,2001274,eyeam world,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 2RJ,,AwaitingInspection,-0.159184,51.493716
+2026-10-15,new,2001379,Adonis Dough,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 4HS,,AwaitingInspection,,
+2026-10-15,new,2001380,Cafe Chai Wala By Arshad Khan,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4HB,,AwaitingInspection,,
+2026-10-15,new,2001382,Dardania House,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 3LU,,AwaitingInspection,,
+2026-10-15,new,1386419,Dicky Birds Breakfast & After School Club,Caring Premises,Kingston-Upon-Thames,KT6 4AB,,5,,
+2026-10-15,new,2001381,Natural Health Shop,Retailers - other,Kingston-Upon-Thames,KT2 6ND,,AwaitingInspection,,
+2026-10-15,new,1963622,Sumer Restaurant Limited,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4EP,,2,,
+2026-10-15,new,1990304,Cafe Chaiwala Arshad Khan Sutton,Restaurant/Cafe/Canteen,Sutton,SM1 1LT,,AwaitingInspection,,
+2026-10-15,new,2001373,Clynt,Other catering premises,Sutton,SM3,,Exempt,,
+2026-10-15,new,2001377,Coffee Zone,Restaurant/Cafe/Canteen,Sutton,SM1 1JA,,AwaitingInspection,,
+2026-10-15,new,1828082,Costcutter,Retailers - other,Sutton,SM3 9BY,,AwaitingInspection,,
+2026-10-15,new,2001378,Cuppa Coffee Cafe,Restaurant/Cafe/Canteen,Sutton,SM1 2EJ,,AwaitingInspection,,
+2026-10-15,new,2001376,Figs & Zaitoon Caterers,Other catering premises,Sutton,SM6,,Exempt,,
+2026-10-15,new,2001375,"Leo Academy Trust, Foresters (WAC)",School/college/university,Sutton,SM6 9DP,,AwaitingInspection,,
+2026-10-15,new,1970754,Nana Beattie's Treat Shed,Other catering premises,Sutton,KT4,,Exempt,,
+2026-10-15,new,2001374,Shinto's Kitchen,Other catering premises,Sutton,SM5,,Exempt,,
+2026-10-15,new,1991837,Dari's Dinners,Other catering premises,Westminster,W9 3,,AwaitingInspection,,
+2026-10-15,new,2001315,I AM A COFFEEHOLIC LTD,Restaurant/Cafe/Canteen,Westminster,W9 3EF,,AwaitingInspection,,
+2026-10-15,new,2000230,London Laban,Takeaway/sandwich shop,Westminster,W2 1DH,,AwaitingInspection,,
+2026-10-15,new,1982125,London?s Cowgirl Cooks,Retailers - other,Westminster,W1D,,AwaitingInspection,,
+2026-10-15,new,1988744,PCA Booster Club,Restaurant/Cafe/Canteen,Westminster,NW8 0NP,,AwaitingInspection,,
 2026-10-15,rating_changed,1999052,Koi Restaurant,Restaurant/Cafe/Canteen,Barnet,NW7 3DA,AwaitingInspection,4,-0.247702,51.614705
 2026-10-15,rating_changed,1745555,Schlagmans Kosher Butchers,Retailers - other,Barnet,NW7 3JN,3,1,-0.2536989,51.6207461
 2026-10-15,rating_changed,1974956,Chatoras food Limited,Takeaway/sandwich shop,Bromley,BR6 0NW,AwaitingInspection,2,0.0989697,51.3747827
@@ -47,6 +67,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-15,rating_changed,1965814,MPW Food,Other catering premises,Kensington and Chelsea,SW7 5JS,AwaitingInspection,5,-0.17955,51.495589
 2026-10-15,rating_changed,1984478,Millie's House Chelsea Waterfront,Other catering premises,Kensington and Chelsea,SW10 0QH,AwaitingInspection,5,-0.1803467,51.4786601
 2026-10-15,rating_changed,1883520,Portobello Launch Ltd,Mobile caterer,Kensington and Chelsea,W10 5BU,AwaitingInspection,5,-0.214452,51.526673
+2026-10-15,rating_changed,1975660,Connect Catering Ltd. At St Philip's School,School/college/university,Kingston-Upon-Thames,KT9 2HR,AwaitingInspection,5,,
+2026-10-15,rating_changed,1796723,Korea Hero,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1HN,4,5,,
+2026-10-15,rating_changed,1977285,Madame Vy,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 5LR,3,5,,
+2026-10-15,rating_changed,1998798,Oh! Happy Cakes,Other catering premises,Kingston-Upon-Thames,KT3,AwaitingInspection,5,,
+2026-10-15,rating_changed,1977283,Stir Food Ltd,School/college/university,Kingston-Upon-Thames,KT1 3AR,AwaitingInspection,5,,
+2026-10-15,rating_changed,1998803,Tasty Bite Afghan Cuisine,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 2HT,AwaitingInspection,5,,
 2026-10-15,rating_changed,1271648,Paula's Bakery,Retailers - other,Lambeth,SW9 8EN,2,3,-0.116026,51.461511
 2026-10-15,rating_changed,1906204,MANOR HOUSE DAY CARE LTD,Caring Premises,Lewisham,SE13 5QL,AwaitingInspection,4,0.002088,51.456487
 2026-10-15,rating_changed,1977063,Bella Donna Restaurant,Restaurant/Cafe/Canteen,Merton,SM4 5HP,AwaitingInspection,4,-0.1954644,51.4009715
@@ -55,6 +81,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-15,rating_changed,1744836,Newham Fish Bazar,Retailers - other,Newham,E6 3BP,3,1,0.0384165,51.5301147
 2026-10-15,rating_changed,1257657,ADANA Green Lane,Takeaway/sandwich shop,Redbridge,IG1 1XW,4,2,0.089775,51.559039
 2026-10-15,rating_changed,1976464,Soufflé Garden,Restaurant/Cafe/Canteen,Redbridge,"",AwaitingInspection,1,0.06942579,51.55734559
+2026-10-15,rating_changed,570986,Checkers,Takeaway/sandwich shop,Sutton,KT4 8HT,4,5,,
+2026-10-15,rating_changed,1992172,Cladish & Co Limited,Retailers - other,Sutton,SM6,AwaitingInspection,Exempt,,
 2026-10-15,rating_changed,1990700,Arancino of Sicily,Retailers - other,Tower Hamlets,E14 5AJ,AwaitingInspection,2,-0.019475,51.504344
 2026-10-15,rating_changed,40428,Eastenders Pie & Mash,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EA,5,4,-0.013793,51.511415
 2026-10-15,rating_changed,40740,JP's Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6AQ,4,1,-0.014297,51.512754
@@ -67,8 +95,17 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-15,rating_changed,1573027,Balti Kitchen,Takeaway/sandwich shop,Wandsworth,SW11 2PG,3,1,-0.1703698,51.4681364
 2026-10-15,rating_changed,1625056,Chatkhara,Restaurant/Cafe/Canteen,Wandsworth,SW17 7TS,1,4,-0.1602175,51.4352259
 2026-10-15,rating_changed,1988127,Tolians,Retailers - supermarkets/hypermarkets,Wandsworth,SW17 7PG,AwaitingInspection,4,-0.1603399,51.4355665
+2026-10-15,rating_changed,1991801,Central Food and Drink,Retailers - other,Westminster,WC2H 7NA,AwaitingInspection,5,,
+2026-10-15,rating_changed,1099878,Everyman Cinema,Restaurant/Cafe/Canteen,Westminster,W9 1RU,4,5,,
+2026-10-15,rating_changed,1966138,Jaego's House,Restaurant/Cafe/Canteen,Westminster,W10 4RH,3,5,,
+2026-10-15,rating_changed,1056570,Le Bab,Takeaway/sandwich shop,Westminster,WC2H 9FA,4,5,,
+2026-10-15,rating_changed,411672,Little Venice Fish Bar,Restaurant/Cafe/Canteen,Westminster,W2 5ES,4,5,,
 2026-10-15,rating_changed,1976111,McCarthys,Distributors/Transporters,Westminster,WC2H 7JX,AwaitingInspection,4,-0.1292758,51.5107698
+2026-10-15,rating_changed,428031,Pizza Express,Restaurant/Cafe/Canteen,Westminster,W1U 6SF,5,AwaitingInspection,,
+2026-10-15,rating_changed,1786203,Regents Refectory,Other catering premises,Westminster,NW1 4NS,AwaitingPublication,4,,
+2026-10-15,rating_changed,1988734,Saltwater,Takeaway/sandwich shop,Westminster,W1F 0DR,AwaitingInspection,5,,
 2026-10-15,rating_changed,1728413,Sanderson Hotel,Hotel/bed & breakfast/guest house,Westminster,W1T 3NG,5,3,-0.1373935,51.5177335
+2026-10-15,rating_changed,988464,Sushi Atelier,Restaurant/Cafe/Canteen,Westminster,W1W 6PH,4,5,,
 2026-10-15,rating_changed,1955311,The Bootlegger,Pub/bar/nightclub,Westminster,WC2E 7PX,AwaitingInspection,4,-0.1205185,51.5111743
 2026-10-15,rating_changed,414242,The Mayfair Hotel,Hotel/bed & breakfast/guest house,Westminster,W1J 8LT,5,4,,
 2026-10-15,removed,334915,Denbigh Under 5's Group,Caring Premises,Kensington and Chelsea,W11 2SJ,5,,-0.200962,51.513787
@@ -78,3 +115,14 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-15,removed,1651730,Kingston Catering,Other catering premises,Kensington and Chelsea,W10,AwaitingInspection,,,
 2026-10-15,removed,1489984,"Pane, Vino & Amore",Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 4HA,5,,-0.1874572,51.494889
 2026-10-15,removed,1762231,The Wee Sister,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW10 0LE,5,,-0.1805128,51.4820889
+2026-10-15,removed,1488274,Blossom And Brew       Bloom Sandwiches,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT9 2PH,5,,,
+2026-10-15,removed,1386427,Busaba Eathai,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1QN,5,,-0.3079778,51.4106332
+2026-10-15,removed,1980872,Fox & Hounds Pub,Pub/bar/nightclub,Kingston-Upon-Thames,KT6 4HS,AwaitingInspection,,-0.311795,51.395836
+2026-10-15,removed,1845107,Shuva LTD (T/A Prithi),Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7AB,4,,-0.2936155,51.384861
+2026-10-15,removed,1419391,A To Z Fresh Sutton Limited,Retailers - other,Sutton,SM1 1NW,1,,-0.194403,51.365479
+2026-10-15,removed,1814679,Daily Fresh Foods,Retailers - other,Sutton,SM4 6BG,3,,,
+2026-10-15,removed,1744003,La Petite Epicerie,Retailers - other,Sutton,SM3 8BL,4,,-0.2170151,51.3591709
+2026-10-15,removed,1687998,Tasty King,Takeaway/sandwich shop,Sutton,SM1 4JD,1,,-0.17993900179863,51.3663635253906
+2026-10-15,removed,1608270,The Slade Cafe,Restaurant/Cafe/Canteen,Sutton,SM2 5PT,5,,-0.1909903,51.3438077
+2026-10-15,removed,1822595,Wraps and Wings,Takeaway/sandwich shop,Sutton,CR0 4TB,4,,-0.130737,51.373186
+2026-10-15,removed,411210,Taxi Cab Shelter,Restaurant/Cafe/Canteen,Westminster,W9 2PT,3,,,
