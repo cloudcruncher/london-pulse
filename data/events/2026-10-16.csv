@@ -1,4 +1,35 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-16,new,2001700,A Ashuq Meals,Other catering premises,Croydon,CR7,,AwaitingInspection,,
+2026-10-16,new,2001718,Afiyin,Manufacturers/packers,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001717,Atesh Restaurant,Restaurant/Cafe/Canteen,Croydon,CR0 1QR,,AwaitingInspection,,
+2026-10-16,new,2001703,Bun That,Other catering premises,Croydon,CR7,,AwaitingInspection,,
+2026-10-16,new,1079239,Cafe Ariana,Restaurant/Cafe/Canteen,Croydon,SW16 4BT,,2,,
+2026-10-16,new,2001727,Casa Focaccia,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001706,Cocoa Club,Other catering premises,Croydon,CR5,,AwaitingInspection,,
+2026-10-16,new,2001721,Croydon Food Gate,Retailers - supermarkets/hypermarkets,Croydon,CR0 1NA,,AwaitingInspection,,
+2026-10-16,new,1919561,Doff Bakery,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-10-16,new,2001702,Fat Dough,Mobile caterer,Croydon,CR7,,AwaitingInspection,,
+2026-10-16,new,2001699,Field Way Fried Chicken,Takeaway/sandwich shop,Croydon,CR0 9DX,,AwaitingInspection,,
+2026-10-16,new,2001725,Gordon Jerk Centre,Takeaway/sandwich shop,Croydon,CR0 8NG,,AwaitingInspection,,
+2026-10-16,new,2001728,Home Bakes By H,Other catering premises,Croydon,CR8,,AwaitingInspection,,
+2026-10-16,new,2001709,Kitty Leya Love & Layers,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001722,Lahoriwal,Restaurant/Cafe/Canteen,Croydon,CR7 6JG,,AwaitingInspection,,
+2026-10-16,new,2001723,Majitouk Ltd,Restaurant/Cafe/Canteen,Croydon,CR2 9LB,,AwaitingInspection,,
+2026-10-16,new,2001707,Minoshop,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001710,Neumuscle Limited,Retailers - other,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001698,Nightingale House,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-10-16,new,2001694,OneLove Bakery,Other catering premises,Croydon,SE25,,AwaitingInspection,,
+2026-10-16,new,2001715,Paper & Crumb,Other catering premises,Croydon,SE19,,AwaitingInspection,,
+2026-10-16,new,2001713,Pius Vita Superfoods,Retailers - other,Croydon,CR5 2HT,,AwaitingInspection,,
+2026-10-16,new,2001724,Rose & Crumb,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-10-16,new,2001726,Sacred Bloom / Sacred Essence / Sacred Recipes,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001697,Sharing Table,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001708,Sugar&Sall,Mobile caterer,Croydon,SW16,,AwaitingInspection,,
+2026-10-16,new,2001714,Taste Tropics Limited,Other catering premises,Croydon,CR8,,AwaitingInspection,,
+2026-10-16,new,2001695,The Bakehouse Edit,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001711,The Greatest Love Of All,Importers/Exporters,Croydon,CR0,,AwaitingInspection,,
+2026-10-16,new,2001716,Veltramart Limited,Mobile caterer,Croydon,SW16,,AwaitingInspection,,
+2026-10-16,new,2001712,VitaBridge UK,Importers/Exporters,Croydon,CR0,,AwaitingInspection,,
 2026-10-16,new,1526548,Lucky Cat,Takeaway/sandwich shop,Lambeth,SW9 6BP,,1,-0.112353,51.478655
 2026-10-16,new,2001586,85 studio cellar,Restaurant/Cafe/Canteen,Southwark,SE1 4TW,,AwaitingInspection,-0.0827739983797073,51.4964942932129
 2026-10-16,new,2001582,A and m pizza,Takeaway/sandwich shop,Southwark,SE16 7QW,,AwaitingInspection,-0.035164,51.497035
@@ -12,6 +43,18 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-16,new,2001585,Spicy kulture ltd,Retailers - other,Southwark,SE15,,AwaitingInspection,,
 2026-10-16,new,2001580,The naked ltd,Restaurant/Cafe/Canteen,Southwark,SE1 9SG,,AwaitingInspection,-0.086731,51.5046789
 2026-10-16,new,2001579,The tinned fish market,Distributors/Transporters,Southwark,SE16 3LL,,AwaitingInspection,-0.0544374,51.4894442
+2026-10-16,new,2001634,Bhook,Restaurant/Cafe/Canteen,Waltham Forest,E10 7EA,,AwaitingInspection,,
+2026-10-16,new,2001631,On Fries,Takeaway/sandwich shop,Waltham Forest,E17 7JR,,AwaitingInspection,,
+2026-10-16,new,2001632,Ouna,Restaurant/Cafe/Canteen,Waltham Forest,E17 7JN,,AwaitingInspection,,
+2026-10-16,new,2001630,Pradas Mediterranean Restaurant,Restaurant/Cafe/Canteen,Waltham Forest,E17 4AT,,AwaitingInspection,,
+2026-10-16,new,2001633,Rewayat Restaurant,Restaurant/Cafe/Canteen,Waltham Forest,E17 9AP,,AwaitingInspection,,
+2026-10-16,new,2001689,AMAZING By Mirko Ricci (Kiosk K3),Takeaway/sandwich shop,Wandsworth,SW18 4TG,,AwaitingInspection,,
+2026-10-16,new,2001687,Craft and Bec,Takeaway/sandwich shop,Wandsworth,SW12 9SG,,AwaitingInspection,,
+2026-10-16,new,1956261,Estate Art,Restaurant/Cafe/Canteen,Wandsworth,SW15 4LY,,5,,
+2026-10-16,new,2001685,Lown Wellness,Retailers - other,Wandsworth,SW11,,AwaitingInspection,,
+2026-10-16,new,2001686,Mori Matcha,Retailers - other,Wandsworth,SW11,,AwaitingInspection,,
+2026-10-16,new,2001688,OBI Chocs,Retailers - other,Wandsworth,SW18,,AwaitingInspection,,
+2026-10-16,new,2001684,Tao Tao Ju,Retailers - other,Wandsworth,SW18 5JS,,AwaitingInspection,,
 2026-10-16,rating_changed,1999050,Damoa,Restaurant/Cafe/Canteen,Barnet,NW11 8LL,AwaitingInspection,3,-0.197378,51.572417
 2026-10-16,rating_changed,1999047,Sahal Cafe Ltd,Restaurant/Cafe/Canteen,Barnet,NW9 7ED,AwaitingInspection,3,-0.239566,51.577832
 2026-10-16,rating_changed,1775839,Sheldon's Caribbean Delight,Restaurant/Cafe/Canteen,Barnet,N12 0EL,3,4,-0.176695,51.613264
@@ -22,10 +65,28 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-16,rating_changed,423939,Donmar Warehouse Theatre,Restaurant/Cafe/Canteen,Camden,WC2H 9LD,5,2,-0.126320004463196,51.5139617919922
 2026-10-16,rating_changed,1468664,HIERRO PLANO,Takeaway/sandwich shop,Camden,W1T 4SG,1,4,,
 2026-10-16,rating_changed,293920,El Vino Co Ltd,Pub/bar/nightclub,City of London Corporation,EC4Y 1BJ,4,1,-0.109192,51.51399
+2026-10-16,rating_changed,1913405,Ali's Kitchen,Takeaway/sandwich shop,Croydon,SW16 4RW,AwaitingInspection,5,,
+2026-10-16,rating_changed,1959993,Ava Dhydrated Fruits/Snacks,Mobile caterer,Croydon,SE25,AwaitingInspection,5,,
+2026-10-16,rating_changed,1979539,Booze & Essential Norbury,Retailers - other,Croydon,SW16 4AA,AwaitingInspection,5,,
+2026-10-16,rating_changed,1012420,Cafe Havana,Restaurant/Cafe/Canteen,Croydon,SW16 4BE,4,1,,
 2026-10-16,rating_changed,1945065,Canterbury Club @ St Thomas Becket Catholic,Caring Premises,Croydon,SE25 5BN,AwaitingInspection,4,,
+2026-10-16,rating_changed,1955583,Carlene House,Caring Premises,Croydon,CR8 3AL,AwaitingInspection,5,,
+2026-10-16,rating_changed,1984861,Dominic's Pizza,Takeaway/sandwich shop,Croydon,CR0 3HP,2,5,,
+2026-10-16,rating_changed,1975818,German Doner Kebab,Takeaway/sandwich shop,Croydon,CR0 1LB,4,5,,
+2026-10-16,rating_changed,1945052,Mayday Express,Retailers - other,Croydon,CR7 7HQ,AwaitingInspection,5,,
+2026-10-16,rating_changed,1107960,Pegasus Childrens Club At Beulah Nursery And Infant School,Caring Premises,Croydon,CR7 8NJ,4,5,,
+2026-10-16,rating_changed,1107970,Pegasus Childrens Club At Whitehorse Manor Infant School,Caring Premises,Croydon,CR7 8SB,4,5,,
+2026-10-16,rating_changed,1934837,Pop Up Play Village Croydon,Other catering premises,Croydon,CR2,AwaitingInspection,5,,
 2026-10-16,rating_changed,1994092,Sabores Da Terra,Restaurant/Cafe/Canteen,Croydon,CR2 6ED,AwaitingInspection,3,-0.0976189970970154,51.3598747253418
+2026-10-16,rating_changed,1955601,Sara's Cakes And Bakes,Other catering premises,Croydon,CR0,AwaitingInspection,5,,
+2026-10-16,rating_changed,1159941,Simply Kids At Woodside Primary School,Caring Premises,Croydon,CR0 6NF,4,5,,
+2026-10-16,rating_changed,1960014,Slice A Day,Other catering premises,Croydon,CR2,AwaitingInspection,5,,
+2026-10-16,rating_changed,1650468,So Good Soap,Other catering premises,Croydon,CR0,3,5,,
+2026-10-16,rating_changed,1923641,Social Herbalists,Retailers - other,Croydon,CR0,AwaitingInspection,5,,
+2026-10-16,rating_changed,1955600,Somewhere Nice,Mobile caterer,Croydon,CR2,AwaitingInspection,5,,
 2026-10-16,rating_changed,1964056,The Chai Project,Restaurant/Cafe/Canteen,Croydon,CR0 2TD,AwaitingInspection,4,-0.105308003723621,51.3813400268555
 2026-10-16,rating_changed,1039609,The Cherry Tree,Pub/bar/nightclub,Croydon,SE25 5AG,2,4,-0.0755790024995804,51.3973655700684
+2026-10-16,rating_changed,1969316,Unic Coffee,Importers/Exporters,Croydon,CR0 4GE,AwaitingInspection,5,,
 2026-10-16,rating_changed,997835,Dormers Fish Bar,Takeaway/sandwich shop,Ealing,UB1 3JW,4,3,-0.362679,51.516606
 2026-10-16,rating_changed,1837138,M1's Kitchen / Kebab On Wheels,Mobile caterer,Ealing,UB2 4AE,1,3,-0.3709418,51.5034126
 2026-10-16,rating_changed,1435836,Soldeli,Retailers - other,Ealing,UB2 5FB,3,2,-0.3988324,51.502469
@@ -62,11 +123,43 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-16,rating_changed,1918147,Truly,Retailers - other,Southwark,SE1,AwaitingInspection,5,,
 2026-10-16,rating_changed,1987804,Waterloo road supermarket,Retailers - other,Southwark,SE1 8RQ,AwaitingInspection,5,-0.1066515,51.4991201
 2026-10-16,rating_changed,1974412,Yum studio ltd,Takeaway/sandwich shop,Southwark,SE5 7SW,AwaitingInspection,5,-0.0874564,51.479951
+2026-10-16,rating_changed,1714258,2020 Cafe & Restaurant,Restaurant/Cafe/Canteen,Waltham Forest,E17 7JS,1,5,,
 2026-10-16,rating_changed,1648271,Coccole Coffee & Tiramisu,Restaurant/Cafe/Canteen,Waltham Forest,E10 6RA,4,1,-0.0092106,51.5712746
+2026-10-16,rating_changed,1829824,GINA RESTAURANT,Restaurant/Cafe/Canteen,Waltham Forest,E4 7BA,1,4,,
+2026-10-16,rating_changed,1287158,Kathy's Cafe at Peter May Sports Centre,Restaurant/Cafe/Canteen,Waltham Forest,E17 4HR,4,5,,
+2026-10-16,rating_changed,1961970,Meal Rush/Shawarma Farmers,Takeaway/sandwich shop,Waltham Forest,E17 6JQ,1,4,,
+2026-10-16,rating_changed,1371596,Sho Foo Doh at Filly Brook,Restaurant/Cafe/Canteen,Waltham Forest,E11 4AP,4,5,,
+2026-10-16,rating_changed,1698806,Side Street,Restaurant/Cafe/Canteen,Waltham Forest,E17 9AP,1,4,,
 2026-10-16,rating_changed,1045282,Sklep Gulliver,Retailers - other,Waltham Forest,E10 6PY,3,4,-0.0087312,51.5687036
+2026-10-16,rating_changed,1950261,White Flour,Restaurant/Cafe/Canteen,Waltham Forest,E17 4AT,AwaitingInspection,5,,
+2026-10-16,rating_changed,1981396,Bites of eden,Takeaway/sandwich shop,Wandsworth,SW15 4HJ,AwaitingInspection,5,,
+2026-10-16,rating_changed,1573383,Hare & Tortoise,Other catering premises,Wandsworth,SW11 5BA,3,5,,
+2026-10-16,rating_changed,1844510,Little Asia Kitchen,Restaurant/Cafe/Canteen,Wandsworth,SW18 4DA,1,5,,
+2026-10-16,rating_changed,1941867,Londis Upper Tooting Road,Retailers - other,Wandsworth,SW17 7TG,AwaitingInspection,5,,
 2026-10-16,rating_changed,1572430,Ocean Fish Bar,Takeaway/sandwich shop,Wandsworth,SW8 3RE,3,1,-0.1508347,51.4674446
+2026-10-16,rating_changed,1862816,Pastries (Jamaican patties + cuisine),Restaurant/Cafe/Canteen,Wandsworth,SW8 5EL,AwaitingInspection,5,,
 2026-10-16,rating_changed,1967241,Rio’s Piri Piri,Restaurant/Cafe/Canteen,Wandsworth,SW11 1HW,AwaitingInspection,4,-0.1673198,51.4606823
+2026-10-16,rating_changed,1793064,Toast Stores Ltd,Restaurant/Cafe/Canteen,Wandsworth,SW17 0SL,1,5,,
 2026-10-16,rating_changed,1968798,Bali Bites,Restaurant/Cafe/Canteen,Westminster,SW1P 2HY,AwaitingInspection,1,-0.1336627,51.4972337
 2026-10-16,rating_changed,1562744,Ikoyi,Restaurant/Cafe/Canteen,Westminster,WC2R 1EA,5,4,-0.1150843,51.5124221
 2026-10-16,rating_changed,1763960,Mrs Bakery,Retailers - other,Westminster,WC2H 7JJ,4,1,-0.1289,51.51181
 2026-10-16,rating_changed,1907893,Vacherin @ PSP,Other catering premises,Westminster,SW1E 5DH,AwaitingInspection,4,-0.1425974,51.4981454
+2026-10-16,removed,1804642,Aither,Restaurant/Cafe/Canteen,Croydon,CR0 1NA,5,,-0.1005574,51.3712621
+2026-10-16,removed,1454332,Crown And Sceptre,Pub/bar/nightclub,Croydon,CR2 6RB,5,,-0.0963839963078499,51.3595123291016
+2026-10-16,removed,1871660,Grill & Chill,Restaurant/Cafe/Canteen,Croydon,CR7 6JG,4,,-0.1186726,51.4014372
+2026-10-16,removed,1489177,Little Rayes Daycare,Caring Premises,Croydon,SW16 4HT,3,,-0.12364500015974,51.4062919616699
+2026-10-16,removed,1694736,Mojito 49,Restaurant/Cafe/Canteen,Croydon,CR2 9LB,5,,-0.0758469998836517,51.3326950073242
+2026-10-16,removed,1919586,Suleymaniye Middle Eastern Restaurant,Restaurant/Cafe/Canteen,Croydon,CR0 2RF,1,,-0.104585997760296,51.3796920776367
+2026-10-16,removed,1704576,Tembi's Treats,Other catering premises,Croydon,CR0,4,,,
+2026-10-16,removed,1630890,W Lounge,Restaurant/Cafe/Canteen,Croydon,CR2 6PA,5,,-0.0978086,51.3633936
+2026-10-16,removed,1900917,Wings Hob,Takeaway/sandwich shop,Croydon,CR0 8NG,3,,-0.0302859991788864,51.3697891235352
+2026-10-16,removed,1845584,A & M Seafood,Retailers - other,Waltham Forest,E10 6JP,2,,-0.007933,51.5701288
+2026-10-16,removed,1959198,Anjali,Restaurant/Cafe/Canteen,Waltham Forest,E17 4PH,AwaitingInspection,,-0.0184996,51.5896414
+2026-10-16,removed,1930008,Fam Daily Care – Olive Grove Home,Caring Premises,Waltham Forest,E11 1EP,AwaitingInspection,,0.0069052,51.5741562
+2026-10-16,removed,1905690,Monkey Bite,Takeaway/sandwich shop,Waltham Forest,E17 7JR,5,,-0.0241228,51.5838104
+2026-10-16,removed,1683353,Scottalia,Restaurant/Cafe/Canteen,Waltham Forest,E10 6PR,4,,-0.0058927,51.5636644
+2026-10-16,removed,1838467,Sofra Bakery,Retailers - other,Waltham Forest,E17 9AP,5,,-0.014977,51.5763811
+2026-10-16,removed,1877797,Anema & Core Di Nando & Filippo,Restaurant/Cafe/Canteen,Wandsworth,SW18 4LT,1,,-0.1923632,51.4468049
+2026-10-16,removed,2001252,Fatboys Cocoa,Restaurant/Cafe/Canteen,Wandsworth,SW12 9AG,AwaitingInspection,,-0.1498627,51.4462703
+2026-10-16,removed,1981386,Kiras Kitchen Ldn,Other catering premises,Wandsworth,SW18,AwaitingInspection,,,
+2026-10-16,removed,1798010,Medirest @ compass group,Restaurant/Cafe/Canteen,Wandsworth,SW17 0YF,5,,-0.1722923,51.4385044
