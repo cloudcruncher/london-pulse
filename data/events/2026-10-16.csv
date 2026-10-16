@@ -1,0 +1,72 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-16,new,1526548,Lucky Cat,Takeaway/sandwich shop,Lambeth,SW9 6BP,,1,-0.112353,51.478655
+2026-10-16,new,2001586,85 studio cellar,Restaurant/Cafe/Canteen,Southwark,SE1 4TW,,AwaitingInspection,-0.0827739983797073,51.4964942932129
+2026-10-16,new,2001582,A and m pizza,Takeaway/sandwich shop,Southwark,SE16 7QW,,AwaitingInspection,-0.035164,51.497035
+2026-10-16,new,2001581,Caipi ltd,Retailers - other,Southwark,SE11,,AwaitingInspection,,
+2026-10-16,new,2001577,Craven foods uk ltd,Other catering premises,Southwark,SE15 1TF,,5,-0.0560513,51.4826633
+2026-10-16,new,2001584,Esmie's canteen ltd,Retailers - other,Southwark,SE1 2LJ,,AwaitingInspection,-0.0757012,51.503752
+2026-10-16,new,2001576,Frieday5 Chicken & Boba,Takeaway/sandwich shop,Southwark,SE1 6SE,,AwaitingInspection,-0.1005749,51.4925928
+2026-10-16,new,2001575,Gerry's hot subs,Restaurant/Cafe/Canteen,Southwark,SE1 3QX,,AwaitingInspection,-0.08352,51.50287
+2026-10-16,new,2001583,Old alleynians cafe,Restaurant/Cafe/Canteen,Southwark,SE21 7HA,,AwaitingInspection,-0.0749419,51.4426193
+2026-10-16,new,2001578,Reflexremedy refills,Takeaway/sandwich shop,Southwark,SE16 3UQ,,AwaitingInspection,-0.0639349967241287,51.4927291870117
+2026-10-16,new,2001585,Spicy kulture ltd,Retailers - other,Southwark,SE15,,AwaitingInspection,,
+2026-10-16,new,2001580,The naked ltd,Restaurant/Cafe/Canteen,Southwark,SE1 9SG,,AwaitingInspection,-0.086731,51.5046789
+2026-10-16,new,2001579,The tinned fish market,Distributors/Transporters,Southwark,SE16 3LL,,AwaitingInspection,-0.0544374,51.4894442
+2026-10-16,rating_changed,1999050,Damoa,Restaurant/Cafe/Canteen,Barnet,NW11 8LL,AwaitingInspection,3,-0.197378,51.572417
+2026-10-16,rating_changed,1999047,Sahal Cafe Ltd,Restaurant/Cafe/Canteen,Barnet,NW9 7ED,AwaitingInspection,3,-0.239566,51.577832
+2026-10-16,rating_changed,1775839,Sheldon's Caribbean Delight,Restaurant/Cafe/Canteen,Barnet,N12 0EL,3,4,-0.176695,51.613264
+2026-10-16,rating_changed,1523360,The Crown Hotel,Hotel/bed & breakfast/guest house,Barnet,NW2 3ED,3,2,-0.214864,51.556686
+2026-10-16,rating_changed,1957623,Khazana Spice,Restaurant/Cafe/Canteen,Bexley,DA14 6EP,AwaitingInspection,4,0.10618,51.425014
+2026-10-16,rating_changed,2001428,The Food Hub,Other catering premises,Bexley,DA7,AwaitingInspection,4,,
+2026-10-16,rating_changed,1842673,Tiya's Cafe,Restaurant/Cafe/Canteen,Bromley,BR3 3PS,3,4,-0.0364615,51.4028575
+2026-10-16,rating_changed,423939,Donmar Warehouse Theatre,Restaurant/Cafe/Canteen,Camden,WC2H 9LD,5,2,-0.126320004463196,51.5139617919922
+2026-10-16,rating_changed,1468664,HIERRO PLANO,Takeaway/sandwich shop,Camden,W1T 4SG,1,4,,
+2026-10-16,rating_changed,293920,El Vino Co Ltd,Pub/bar/nightclub,City of London Corporation,EC4Y 1BJ,4,1,-0.109192,51.51399
+2026-10-16,rating_changed,1945065,Canterbury Club @ St Thomas Becket Catholic,Caring Premises,Croydon,SE25 5BN,AwaitingInspection,4,,
+2026-10-16,rating_changed,1994092,Sabores Da Terra,Restaurant/Cafe/Canteen,Croydon,CR2 6ED,AwaitingInspection,3,-0.0976189970970154,51.3598747253418
+2026-10-16,rating_changed,1964056,The Chai Project,Restaurant/Cafe/Canteen,Croydon,CR0 2TD,AwaitingInspection,4,-0.105308003723621,51.3813400268555
+2026-10-16,rating_changed,1039609,The Cherry Tree,Pub/bar/nightclub,Croydon,SE25 5AG,2,4,-0.0755790024995804,51.3973655700684
+2026-10-16,rating_changed,997835,Dormers Fish Bar,Takeaway/sandwich shop,Ealing,UB1 3JW,4,3,-0.362679,51.516606
+2026-10-16,rating_changed,1837138,M1's Kitchen / Kebab On Wheels,Mobile caterer,Ealing,UB2 4AE,1,3,-0.3709418,51.5034126
+2026-10-16,rating_changed,1435836,Soldeli,Retailers - other,Ealing,UB2 5FB,3,2,-0.3988324,51.502469
+2026-10-16,rating_changed,1985654,Spice Mahal,Restaurant/Cafe/Canteen,Ealing,W5 5AS,AwaitingInspection,3,-0.305636,51.511866
+2026-10-16,rating_changed,1604215,Akimalans Ltd,Retailers - other,Greenwich,SE18 6JL,4,3,0.0635484,51.4922108
+2026-10-16,rating_changed,1989452,NEA Retail Limited,Retailers - other,Harrow,HA2 6EA,AwaitingInspection,4,-0.3612794,51.5867364
+2026-10-16,rating_changed,1932909,Raj Indian Fusion,Restaurant/Cafe/Canteen,Harrow,HA1 2TB,AwaitingInspection,4,,
+2026-10-16,rating_changed,1977736,Miah's Oriental Foods,Retailers - other,Havering,RM1 2JR,AwaitingInspection,4,0.1861805,51.5745778
+2026-10-16,rating_changed,1943985,Stadium Fish & Chips,Takeaway/sandwich shop,Havering,RM7 9QX,0,2,0.175624,51.575545
+2026-10-16,rating_changed,1857031,ALINA CAFE AND DELICATES Ltd,Restaurant/Cafe/Canteen,Hillingdon,UB3 3HL,1,4,-0.41488676,51.50965883
+2026-10-16,rating_changed,484406,Chicken District,Takeaway/sandwich shop,Lambeth,SE24 0JT,4,5,-0.102646,51.452968
+2026-10-16,rating_changed,484710,Iceland Foods,Retailers - supermarkets/hypermarkets,Lambeth,SE19 1TQ,4,5,-0.08229,51.420111
+2026-10-16,rating_changed,858103,Mesmer Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 9PY,2,0,-0.119476,51.469327
+2026-10-16,rating_changed,1987373,ABIGLOBAL FOODS,Retailers - other,Lewisham,SE14 6AT,AwaitingInspection,0,-0.035477,51.476016
+2026-10-16,rating_changed,552918,Morden Food Centre,Retailers - other,Merton,"",5,4,,
+2026-10-16,rating_changed,640587,Radha Krishna Temple,Restaurant/Cafe/Canteen,Newham,E15 4NE,3,4,0.00908800028264523,51.5453605651855
+2026-10-16,rating_changed,443632,Archies,Restaurant/Cafe/Canteen,Redbridge,IG5 0LQ,3,4,0.049825,51.590121
+2026-10-16,rating_changed,1293113,Dad’s Kitchen,Restaurant/Cafe/Canteen,Redbridge,IG3,AwaitingInspection,4,,
+2026-10-16,rating_changed,1988119,sarisa harvey,Importers/Exporters,Richmond-Upon-Thames,TW2 5RF,AwaitingInspection,3,-0.3452003,51.4421071
+2026-10-16,rating_changed,1987801,Ansam's african foods,Retailers - other,Southwark,SE15 4ST,AwaitingInspection,5,-0.0675999,51.4694628
+2026-10-16,rating_changed,1743916,Bubbly/day nursery,Caring Premises,Southwark,SE16 3PB,5,4,-0.060705,51.4914455
+2026-10-16,rating_changed,1340023,Cantinho da maya,Restaurant/Cafe/Canteen,Southwark,SE16 3TP,4,5,-0.061468,51.492356
+2026-10-16,rating_changed,1860734,Dynamic vines,Other catering premises,Southwark,SE22 8HX,AwaitingInspection,5,-0.075901,51.456112
+2026-10-16,rating_changed,1990323,Good dog,Mobile caterer,Southwark,SE15,AwaitingInspection,5,,
+2026-10-16,rating_changed,1980001,Greggs plc,Retailers - other,Southwark,SE1 5HG,AwaitingInspection,5,-0.076127,51.488749
+2026-10-16,rating_changed,1435845,Japanese yama sushi,Restaurant/Cafe/Canteen,Southwark,SE1 1DB,4,5,-0.095166,51.499546
+2026-10-16,rating_changed,1947454,Koraplus,Retailers - other,Southwark,SE17,AwaitingInspection,5,,
+2026-10-16,rating_changed,1980012,Leon restaurant,Restaurant/Cafe/Canteen,Southwark,SE1 9SP,AwaitingInspection,5,-0.0859797,51.5046757
+2026-10-16,rating_changed,1688956,Lyttle land,Caring Premises,Southwark,SE5,4,5,,
+2026-10-16,rating_changed,1980002,Old spike southwark,Takeaway/sandwich shop,Southwark,SE1 0BS,AwaitingInspection,5,-0.1009681,51.5035503
+2026-10-16,rating_changed,1983632,Phat bite tower bridge,Restaurant/Cafe/Canteen,Southwark,SE1 4TR,AwaitingInspection,5,-0.0832113,51.4954488
+2026-10-16,rating_changed,1979975,Shake shack,Restaurant/Cafe/Canteen,Southwark,SE1 2QN,AwaitingInspection,5,-0.0846064,51.5054086
+2026-10-16,rating_changed,1651054,Thames distillers ltd,Farmers/growers,Southwark,SE1 5AN,AwaitingInspection,5,-0.0712736,51.4847404
+2026-10-16,rating_changed,1918147,Truly,Retailers - other,Southwark,SE1,AwaitingInspection,5,,
+2026-10-16,rating_changed,1987804,Waterloo road supermarket,Retailers - other,Southwark,SE1 8RQ,AwaitingInspection,5,-0.1066515,51.4991201
+2026-10-16,rating_changed,1974412,Yum studio ltd,Takeaway/sandwich shop,Southwark,SE5 7SW,AwaitingInspection,5,-0.0874564,51.479951
+2026-10-16,rating_changed,1648271,Coccole Coffee & Tiramisu,Restaurant/Cafe/Canteen,Waltham Forest,E10 6RA,4,1,-0.0092106,51.5712746
+2026-10-16,rating_changed,1045282,Sklep Gulliver,Retailers - other,Waltham Forest,E10 6PY,3,4,-0.0087312,51.5687036
+2026-10-16,rating_changed,1572430,Ocean Fish Bar,Takeaway/sandwich shop,Wandsworth,SW8 3RE,3,1,-0.1508347,51.4674446
+2026-10-16,rating_changed,1967241,Rio’s Piri Piri,Restaurant/Cafe/Canteen,Wandsworth,SW11 1HW,AwaitingInspection,4,-0.1673198,51.4606823
+2026-10-16,rating_changed,1968798,Bali Bites,Restaurant/Cafe/Canteen,Westminster,SW1P 2HY,AwaitingInspection,1,-0.1336627,51.4972337
+2026-10-16,rating_changed,1562744,Ikoyi,Restaurant/Cafe/Canteen,Westminster,WC2R 1EA,5,4,-0.1150843,51.5124221
+2026-10-16,rating_changed,1763960,Mrs Bakery,Retailers - other,Westminster,WC2H 7JJ,4,1,-0.1289,51.51181
+2026-10-16,rating_changed,1907893,Vacherin @ PSP,Other catering premises,Westminster,SW1E 5DH,AwaitingInspection,4,-0.1425974,51.4981454
