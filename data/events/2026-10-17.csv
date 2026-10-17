@@ -1,0 +1,162 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-17,new,2002117,Anita's,Distributors/Transporters,Hackney,N16 0NY,,AwaitingInspection,-0.0741757,51.5610999
+2026-10-17,new,2002119,ChefKay’s,Restaurant/Cafe/Canteen,Hackney,E8 1FA,,AwaitingInspection,-0.0589039,51.5498248
+2026-10-17,new,2002120,Chickenish,Restaurant/Cafe/Canteen,Hackney,E8 3RR,,5,-0.0583748,51.5384474
+2026-10-17,new,2002106,Da Pino,Restaurant/Cafe/Canteen,Hackney,N16 8BP,,AwaitingInspection,-0.074707,51.5574112
+2026-10-17,new,1830455,Deluxe Diner,Restaurant/Cafe/Canteen,Hackney,N16,,5,,
+2026-10-17,new,2002107,Elif food centre Hoxton,Retailers - supermarkets/hypermarkets,Hackney,N1 6RA,,AwaitingInspection,-0.0803774,51.5323535
+2026-10-17,new,2002103,Floshow Catering,Restaurant/Cafe/Canteen,Hackney,E9 6NA,,5,-0.0545428,51.5458028
+2026-10-17,new,2002123,Hanimeli,Restaurant/Cafe/Canteen,Hackney,N16 8BJ,,AwaitingInspection,-0.0752983,51.5515861
+2026-10-17,new,2002121,Hemma Social,Restaurant/Cafe/Canteen,Hackney,E20 3AS,,AwaitingInspection,-0.0211088,51.545587
+2026-10-17,new,2002114,KUSHIS LTD,Manufacturers/packers,Hackney,E8 3LD,,AwaitingInspection,-0.073855,51.5413558
+2026-10-17,new,2002111,Late Snacks,Retailers - other,Hackney,N1 6EA,,AwaitingInspection,-0.0854826,51.5271763
+2026-10-17,new,2002104,Mango After School Club,Caring Premises,Hackney,E8 3EY,,AwaitingInspection,,
+2026-10-17,new,2002101,Patty&Bun,Restaurant/Cafe/Canteen,Hackney,E8 4AH,,AwaitingInspection,-0.0754118,51.5461179
+2026-10-17,new,2002102,Rose Garden,Takeaway/sandwich shop,Hackney,E9 5QA,,AwaitingInspection,-0.0361719,51.5497326
+2026-10-17,new,2002110,Stokey Cupcakes,Manufacturers/packers,Hackney,N16 7SD,,AwaitingInspection,-0.06976,51.5594175
+2026-10-17,new,2002115,TATAR BUNAR,Restaurant/Cafe/Canteen,Hackney,EC2A 3AT,,5,-0.0801604,51.5268914
+2026-10-17,new,2002112,Ted's Crazy Golf (London) Limited,Restaurant/Cafe/Canteen,Hackney,EC2A 3JL,,AwaitingInspection,-0.0825973,51.5258521
+2026-10-17,new,2002113,The 147 Club,Pub/bar/nightclub,Hackney,E8 1LP,,AwaitingInspection,-0.0606383,51.5483049
+2026-10-17,new,2002109,The Greedy Indian,Restaurant/Cafe/Canteen,Hackney,E8 4RG,,AwaitingInspection,,
+2026-10-17,new,2002118,The Indulgent Sugar Plum,Retailers - other,Hackney,E9 5JA,,AwaitingInspection,-0.0311292,51.5455924
+2026-10-17,new,2002116,The Taco house,Takeaway/sandwich shop,Hackney,E1 6GY,,AwaitingInspection,,
+2026-10-17,new,2002108,Tingle’s Island Juice,Manufacturers/packers,Hackney,E9 7LD,,AwaitingInspection,-0.04434,51.5366
+2026-10-17,new,2002124,Urban Social Coffee,Restaurant/Cafe/Canteen,Hackney,E8 1HA,,AwaitingInspection,-0.054897,51.546536
+2026-10-17,new,2002122,blah,Manufacturers/packers,Hackney,E9 7JF,,5,-0.0497665,51.5401211
+2026-10-17,new,2002105,clockhouse childcare,Caring Premises,Hackney,N16 5LG,,AwaitingInspection,-0.0729049,51.5741093
+2026-10-17,new,2002099,Bite & Co,Retailers - other,Haringey,N17 6TZ,,AwaitingInspection,-0.0768852,51.5933287
+2026-10-17,new,2002098,Crafted Kombucha Beverages LTD,Manufacturers/packers,Haringey,N22 6AG,,5,-0.0917616,51.5949117
+2026-10-17,new,2002097,Frankies Sandwich Bar,Takeaway/sandwich shop,Haringey,N17 8AH,,5,-0.0683104,51.6041945
+2026-10-17,new,2002100,Mama Ad's Kitchen,Manufacturers/packers,Haringey,N17 9SR,,Exempt,-0.0586046,51.5961028
+2026-10-17,rating_changed,1999083,Amaretto Ristorante & Pizzeria,Restaurant/Cafe/Canteen,Barnet,HA8 7JZ,AwaitingInspection,2,-0.275632,51.615982
+2026-10-17,rating_changed,1986891,Brio,Restaurant/Cafe/Canteen,Barnet,NW7 3BU,AwaitingInspection,2,-0.2462168,51.6151817
+2026-10-17,rating_changed,2001433,Rhino Mart,Retailers - other,Bexley,DA16 3AG,AwaitingInspection,3,0.110569,51.46623
+2026-10-17,rating_changed,1603701,The Fen Chinese Take Away,Takeaway/sandwich shop,Bexley,DA15 8PR,4,1,0.100549,51.451212
+2026-10-17,rating_changed,1377361,Pickhurst Infants School & NEST Nursery,School/college/university,Bromley,BR4 0HL,5,4,,
+2026-10-17,rating_changed,1660828,T4 BUBBLE TEA,Takeaway/sandwich shop,Camden,WC1N 1AE,5,1,-0.1239114,51.5241733
+2026-10-17,rating_changed,1648448,Thonglor Express,Restaurant/Cafe/Canteen,Camden,WC1B 3BQ,0,1,-0.1298197,51.5171903
+2026-10-17,rating_changed,1955589,Cuppa Chaii,Restaurant/Cafe/Canteen,Croydon,CR8 2AA,AwaitingInspection,4,-0.1153822,51.3380058
+2026-10-17,rating_changed,2188,Eldon Housing,Caring Premises,Croydon,CR0 1FA,5,2,-0.0960389971733093,51.3674850463867
+2026-10-17,rating_changed,1966274,Nile Food And Wine,Retailers - other,Croydon,CR0 1BG,AwaitingInspection,4,-0.098726,51.3648294
+2026-10-17,rating_changed,1032801,Bonne Bouche,Manufacturers/packers,Ealing,UB6 7LD,1,4,-0.3150737,51.5359495
+2026-10-17,rating_changed,1994427,Embrator Meats,Retailers - other,Ealing,W13 9BP,AwaitingInspection,4,-0.324833,51.509867
+2026-10-17,rating_changed,1994428,Finest,Retailers - other,Ealing,W13 9BP,AwaitingInspection,2,-0.324833,51.509867
+2026-10-17,rating_changed,1935132,BaxterStorey - Amazon LHR140,Restaurant/Cafe/Canteen,Hackney,EC21 3NG,AwaitingInspection,5,,
+2026-10-17,rating_changed,1937859,Butchies Shoreditch,Restaurant/Cafe/Canteen,Hackney,EC2A 3DY,AwaitingInspection,5,-0.0822451,51.5259993
+2026-10-17,rating_changed,1976396,Choqo,Mobile caterer,Hackney,E5 9,AwaitingInspection,5,,
+2026-10-17,rating_changed,1043809,Clemeira's Bakery,Retailers - other,Hackney,E5 8,5,AwaitingInspection,,
+2026-10-17,rating_changed,1914638,Cruise Coffee,Mobile caterer,Hackney,N16 9PR,AwaitingInspection,5,-0.085043,51.5524202
+2026-10-17,rating_changed,1935128,Hackney Cake Corner,Other catering premises,Hackney,E5 0DZ,AwaitingInspection,5,-0.0357366,51.5521353
+2026-10-17,rating_changed,470131,Hackney Fried Chicken,Takeaway/sandwich shop,Hackney,E9 5QG,4,5,-0.0347556,51.5518042
+2026-10-17,rating_changed,1988960,Homerton Hospital - Coffee Shop Education Centre,Restaurant/Cafe/Canteen,Hackney,E9 6SR,AwaitingInspection,5,-0.0457377,51.5512021
+2026-10-17,rating_changed,1988966,Homerton Hospital - Kitchen Works,Restaurant/Cafe/Canteen,Hackney,E9 6SR,AwaitingInspection,5,-0.0457377,51.5512021
+2026-10-17,rating_changed,1988959,Homerton University Hospital,Restaurant/Cafe/Canteen,Hackney,E9 6SR,AwaitingInspection,5,,
+2026-10-17,rating_changed,1993807,Hoxton fish house,Restaurant/Cafe/Canteen,Hackney,N1 6BU,AwaitingInspection,5,-0.08375,51.52906
+2026-10-17,rating_changed,1203756,Iva Pietrova,Takeaway/sandwich shop,Hackney,E5 8,5,AwaitingInspection,,
+2026-10-17,rating_changed,469482,Jazz Bar,Pub/bar/nightclub,Hackney,N16 8JN,1,3,-0.0761281,51.5486681
+2026-10-17,rating_changed,1980673,ORIGINAL FLAVA KITCHEN,Restaurant/Cafe/Canteen,Hackney,E8 1HE,AwaitingInspection,5,-0.054987,51.544857
+2026-10-17,rating_changed,1952545,Queen's Head,Pub/bar/nightclub,Hackney,E1 6PJ,AwaitingInspection,5,-0.0782865,51.522778
+2026-10-17,rating_changed,1914620,SWAY EDIT.,Takeaway/sandwich shop,Hackney,EC2A 3BS,AwaitingInspection,5,-0.0805382,51.5247663
+2026-10-17,rating_changed,1914636,Schnitzel Heaven,Restaurant/Cafe/Canteen,Hackney,E9 7HJ,AwaitingInspection,5,-0.0445827,51.5379216
+2026-10-17,rating_changed,1937854,Soak,Retailers - other,Hackney,N16 8QX,AwaitingInspection,5,-0.0825034,51.5551855
+2026-10-17,rating_changed,1988951,Solt Room,Pub/bar/nightclub,Hackney,E9 6LJ,AwaitingInspection,5,-0.04949971,51.54711822
+2026-10-17,rating_changed,1355995,Stokeys Delicatessen ltd,Restaurant/Cafe/Canteen,Hackney,N16 0JL,2,5,-0.0823686,51.561486
+2026-10-17,rating_changed,1988958,Sun Street Hotel,Hotel/bed & breakfast/guest house,Hackney,EC2A 2EP,AwaitingInspection,5,-0.08487,51.52042
+2026-10-17,rating_changed,468884,Sutton & Son Fish & Chips,Takeaway/sandwich shop,Hackney,N16 7NY,3,5,-0.0738411,51.5594577
+2026-10-17,rating_changed,1734311,The Apulian Corner,Restaurant/Cafe/Canteen,Hackney,EC2A 2BS,AwaitingInspection,5,-0.0845428,51.5214056
+2026-10-17,rating_changed,1904045,The Pantry Catering,School/college/university,Hackney,E15 2GW,AwaitingInspection,5,,
+2026-10-17,rating_changed,1864855,Unbound,Restaurant/Cafe/Canteen,Hackney,N1 6LS,AwaitingInspection,5,-0.0793894,51.5280838
+2026-10-17,rating_changed,1973632,Wunder Makes,Manufacturers/packers,Hackney,E8 4DT,AwaitingInspection,5,-0.0759434,51.5390251
+2026-10-17,rating_changed,1759409,Britpharm,Retailers - other,Haringey,N17 9EJ,AwaitingInspection,5,-0.0693463,51.5896438
+2026-10-17,rating_changed,422035,Indian Rasoi Restaurant,Restaurant/Cafe/Canteen,Haringey,N2 9HG,0,5,-0.155766,51.590825
+2026-10-17,rating_changed,1089186,Maud's Kitchen,Other catering premises,Haringey,N4 4,4,5,,
+2026-10-17,rating_changed,733232,Mega Grill,Takeaway/sandwich shop,Haringey,N6 4EJ,4,5,-0.148106,51.57789
+2026-10-17,rating_changed,1341406,Oz Sultan,Retailers - other,Haringey,N22 8JW,4,5,-0.1102049,51.6079886
+2026-10-17,rating_changed,1796060,PI,Restaurant/Cafe/Canteen,Haringey,N22 6BH,3,5,-0.1054693,51.5919866
+2026-10-17,rating_changed,1430697,Papa John's Pizza,Takeaway/sandwich shop,Haringey,N17 8HH,2,5,-0.0712561,51.6052232
+2026-10-17,rating_changed,1338226,Route Catering,Takeaway/sandwich shop,Haringey,N17 0UR,5,4,-0.0507506,51.6021593
+2026-10-17,rating_changed,422719,The Elbow Room,Pub/bar/nightclub,Haringey,N17 6QA,Exempt,5,-0.069991,51.593034
+2026-10-17,rating_changed,1595902,The Fox at Crouch End,Pub/bar/nightclub,Haringey,N8 8TD,4,5,-0.12479,51.580884
+2026-10-17,rating_changed,1738977,We Care Wiggly Worms Day Nursery,Caring Premises,Haringey,N8 9BD,4,5,-0.1154497,51.5845488
+2026-10-17,rating_changed,1977728,The Clove Hornchurch,Restaurant/Cafe/Canteen,Havering,RM11 2DX,AwaitingInspection,4,0.219944,51.583492
+2026-10-17,rating_changed,1427672,Bubba Oasis,Restaurant/Cafe/Canteen,Islington,N1 0NY,4,3,-0.1042654,51.535557
+2026-10-17,rating_changed,1989403,Fresha Bakery,Takeaway/sandwich shop,Lambeth,SE27 9NH,AwaitingInspection,3,-0.100808,51.428254
+2026-10-17,rating_changed,1720547,Al Yaseen Halal Meat,Retailers - other,Newham,E13 9BA,4,3,0.0334992,51.5346246
+2026-10-17,rating_changed,852773,Bargain World,Retailers - other,Newham,E6 1HZ,4,2,0.0525259,51.535444
+2026-10-17,rating_changed,1987666,First Care Lodge Limited,Caring Premises,Newham,E6 2QA,AwaitingInspection,3,0.0637618,51.5329628
+2026-10-17,rating_changed,864052,Jay's General Stores,Retailers - other,Newham,E16 3HX,5,1,0.033304,51.511722
+2026-10-17,rating_changed,1263277,La Magazin,Retailers - other,Newham,E6 2HT,4,1,0.0519236,51.537442
+2026-10-17,rating_changed,1969387,Lins Fish Bar & Chinese Takeaway,Takeaway/sandwich shop,Newham,E16 3JL,AwaitingInspection,3,0.032062,51.515216
+2026-10-17,rating_changed,640419,Smarty Pants Day Nursery,Caring Premises,Newham,E15 2SD,5,4,-0.0062288,51.5333213
+2026-10-17,rating_changed,1649980,The Meeting Point,Pub/bar/nightclub,Newham,E6 2JA,5,4,0.0513929,51.5394297
+2026-10-17,rating_changed,1745080,Dopi,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6DG,5,2,-0.071198,51.524953
+2026-10-17,rating_changed,1454231,Hydor,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6LT,5,2,-0.0740958,51.5182398
+2026-10-17,rating_changed,83260,Tasfirin Restaurant,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6DG,5,4,-0.0703071,51.5253447
+2026-10-17,rating_changed,1584791,Tofu Vegan Spitalfields,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6LT,5,4,-0.073302,51.51747
+2026-10-17,rating_changed,1086197,Incoming Coffee,Restaurant/Cafe/Canteen,Waltham Forest,E17 7PF,4,2,-0.0330077,51.5802996
+2026-10-17,rating_changed,1994009,Leyton Trinity Methodist Church Foodbank,Retailers - other,Waltham Forest,E10 5PW,AwaitingInspection,4,-0.0085116,51.5598601
+2026-10-17,rating_changed,1989137,Little Rainbows Handsworth,Caring Premises,Waltham Forest,E4 9PJ,AwaitingInspection,3,0.002505,51.6077011
+2026-10-17,rating_changed,514806,Outlook Care,Caring Premises,Waltham Forest,E11 3HZ,0,3,0.0074953,51.553481
+2026-10-17,rating_changed,1752391,Club Mexicana Mayfair,Restaurant/Cafe/Canteen,Westminster,W1K 6ZA,2,4,,
+2026-10-17,rating_changed,1849319,Punk Royale London Ltd,Restaurant/Cafe/Canteen,Westminster,W1S 3DD,5,1,-0.137767,51.5092863
+2026-10-17,removed,1752739,80-20 Shops,Retailers - other,Hackney,E2 8QY,4,,,
+2026-10-17,removed,1716204,AJ’S Dhaba,Takeaway/sandwich shop,Hackney,E8 2JS,3,,-0.0757723,51.5475292
+2026-10-17,removed,1726469,Accurx,Restaurant/Cafe/Canteen,Hackney,EC2A 3LT,5,,-0.0811569,51.5223934
+2026-10-17,removed,1740597,Aj smashed it,Takeaway/sandwich shop,Hackney,E8 2JS,5,,-0.0757723,51.5475292
+2026-10-17,removed,1816142,BLUE MARLIN IBIZA LONDON LTD,Pub/bar/nightclub,Hackney,EC2A 3PT,4,,-0.0806424,51.5237596
+2026-10-17,removed,1405792,Bagel buzz,Restaurant/Cafe/Canteen,Hackney,E1 6LG,3,,-0.0775397,51.5237369
+2026-10-17,removed,1903895,Bangers and spuds,Mobile caterer,Hackney,E5 8PY,AwaitingInspection,,-0.0619741,51.5565912
+2026-10-17,removed,1664314,Bulb Vendors,Restaurant/Cafe/Canteen,Hackney,E8 3ND,5,,,
+2026-10-17,removed,1845134,Burger Boi,Restaurant/Cafe/Canteen,Hackney,E8 2JS,5,,-0.0759858,51.5465705
+2026-10-17,removed,1942571,COCO(a) & PUFF,Takeaway/sandwich shop,Hackney,E5 8JF,AwaitingInspection,,-0.0636396,51.5577968
+2026-10-17,removed,1584618,Cafe Melo,Restaurant/Cafe/Canteen,Hackney,E8 2EB,4,,-0.0703534,51.5528896
+2026-10-17,removed,1864867,Capiz,Restaurant/Cafe/Canteen,Hackney,N1 6SG,4,,-0.0799864,51.5310251
+2026-10-17,removed,1864854,Doran Catering,Mobile caterer,Hackney,E8 4QN,AwaitingInspection,,,
+2026-10-17,removed,1182246,Family Kitchen,Takeaway/sandwich shop,Hackney,E9 6,5,,,
+2026-10-17,removed,1931105,Food bank,Retailers - other,Hackney,E5 8NB,AwaitingInspection,,-0.0595456,51.5594197
+2026-10-17,removed,1794626,Habibi Coffee,Other catering premises,Hackney,E2 8HF,5,,-0.0740552,51.5304692
+2026-10-17,removed,1220361,Hacha,Takeaway/sandwich shop,Hackney,E8 4AA,3,,-0.0760766,51.5409966
+2026-10-17,removed,950815,Hackney Fresh,Retailers - other,Hackney,E8 1HA,4,,-0.0548587,51.5468512
+2026-10-17,removed,1170513,Hanimeli Restaurant,Restaurant/Cafe/Canteen,Hackney,N16 8BJ,5,,-0.0752983,51.5515861
+2026-10-17,removed,1904037,Hazal's teahouse,Retailers - other,Hackney,E8 1DN,AwaitingInspection,,-0.0602761,51.5442702
+2026-10-17,removed,1796201,Hoofu,Takeaway/sandwich shop,Hackney,N1 7LP,3,,-0.0904269,51.5285699
+2026-10-17,removed,977030,Hoxton Fish House,Restaurant/Cafe/Canteen,Hackney,N1 6BU,5,,-0.08375,51.52906
+2026-10-17,removed,470248,Hoxton Fruit & Veg,Retailers - other,Hackney,N1 6RA,3,,-0.0803774,51.5323535
+2026-10-17,removed,1394321,Idia's Community Kitchen,Restaurant/Cafe/Canteen,Hackney,E2 8LR,1,,,
+2026-10-17,removed,1394343,Inka Poke Co (by Joya Kitchens),Restaurant/Cafe/Canteen,Hackney,EC2A 3JT,3,,-0.0821339,51.5255568
+2026-10-17,removed,468727,Jim's Butchers,Retailers - other,Hackney,E8 2NH,3,,-0.0706772,51.547958
+2026-10-17,removed,1043804,Jones & Sons,Other catering premises,Hackney,N16 8JH,4,,-0.07649,51.5493215
+2026-10-17,removed,1942574,Junkies,Retailers - other,Hackney,E2 8AA,AwaitingInspection,,-0.078285,51.5286322
+2026-10-17,removed,1405771,Kome Express,Restaurant/Cafe/Canteen,Hackney,E8 1BP,3,,-0.0563192,51.5465261
+2026-10-17,removed,1356959,LONDIS,Restaurant/Cafe/Canteen,Hackney,N1 6RA,3,,-0.0803774,51.5323535
+2026-10-17,removed,1487462,MEATliquor Shoreditch,Restaurant/Cafe/Canteen,Hackney,N1 6HG,4,,-0.0824394,51.5272075
+2026-10-17,removed,1172571,MOLO,Takeaway/sandwich shop,Hackney,E8 3RL,5,,-0.0586285,51.5375703
+2026-10-17,removed,1299381,Moss & Co,Other catering premises,Hackney,E5 8,3,,,
+2026-10-17,removed,1905963,Oishi Onigiri,Mobile caterer,Hackney,E5 8NF,AwaitingInspection,,-0.0609745,51.5590657
+2026-10-17,removed,468866,Oldhill Community School & Children's Centre,School/college/university,Hackney,N16 6LR,5,,,
+2026-10-17,removed,1903949,Papa's Grill,Distributors/Transporters,Hackney,E5 9BU,4,,-0.0599315,51.564073
+2026-10-17,removed,1957921,Posh Pita,Restaurant/Cafe/Canteen,Hackney,E1 6JE,AwaitingInspection,,-0.0783222,51.5264547
+2026-10-17,removed,1914608,Purple and green,Takeaway/sandwich shop,Hackney,E5 9ND,AwaitingInspection,,-0.0517791,51.5656128
+2026-10-17,removed,469705,Rose Garden,Takeaway/sandwich shop,Hackney,E9 5QA,5,,-0.0361719,51.5497326
+2026-10-17,removed,1012295,Salama Tea/Coffe And Snacks,Restaurant/Cafe/Canteen,Hackney,N16 8AZ,3,,-0.0765778,51.5487196
+2026-10-17,removed,1903942,Smoke & salt co,Manufacturers/packers,Hackney,N16 5SG,AwaitingInspection,,-0.0739439,51.5655654
+2026-10-17,removed,468797,Taste Of China,Takeaway/sandwich shop,Hackney,E2 7NX,4,,-0.076095,51.5282545
+2026-10-17,removed,521940,The Co-operative Food,Retailers - supermarkets/hypermarkets,Hackney,E9 6JA,5,,-0.0457596,51.5478152
+2026-10-17,removed,1584377,The RTG Kitchen,Mobile caterer,Hackney,E5 8,5,,,
+2026-10-17,removed,840631,Union Hse Coffee/Chatters Rest/Education Centre/Patient Catering,Restaurant/Cafe/Canteen,Hackney,E9 6SR,4,,-0.0457377,51.5512021
+2026-10-17,removed,1903983,Wild Natured,Manufacturers/packers,Hackney,N16 8RZ,AwaitingInspection,,-0.0825104,51.5553643
+2026-10-17,removed,1589692,Wingbay,Takeaway/sandwich shop,Hackney,N16 8DR,3,,-0.0746184,51.5584723
+2026-10-17,removed,1834913,YOKI SOCIAL TABLE Shoreditch,Restaurant/Cafe/Canteen,Hackney,E1 6GY,3,,,
+2026-10-17,removed,1872264,Young Nola,Restaurant/Cafe/Canteen,Hackney,E1 6GY,5,,-0.0763167,51.5234567
+2026-10-17,removed,1182245,Yum Yum Caribbean,Takeaway/sandwich shop,Hackney,E8 2AQ,4,,-0.0603618,51.5497211
+2026-10-17,removed,1910926,hour. coffee room,Restaurant/Cafe/Canteen,Hackney,E9 5LN,5,,-0.02396,51.54425
+2026-10-17,removed,1931093,jjstreatz,Other catering premises,Hackney,E8 4PD,AwaitingInspection,,-0.063588,51.536915
+2026-10-17,removed,1053094,Coral Pharmacy Ltd,Retailers - other,Haringey,N8 8LA,Exempt,,-0.1335177,51.5871128
+2026-10-17,removed,1502667,Gorillas,Retailers - other,Haringey,N8 0DD,5,,-0.1123525,51.5896247
+2026-10-17,removed,1290325,Hayat Kebab,Restaurant/Cafe/Canteen,Haringey,N4 2DE,5,,-0.1045849,51.5650039
+2026-10-17,removed,1616826,Maison de Jambavan @,Other catering premises,Haringey,N4 1TJ,5,,-0.0902253,51.5750762
+2026-10-17,removed,1405967,Mojo Kitchen @,Takeaway/sandwich shop,Haringey,N8 7NX,4,,-0.119485,51.587381
+2026-10-17,removed,1607957,The Happy Dolphin,Other catering premises,Haringey,N8 8,5,,,
+2026-10-17,removed,422241,The Paddock Bistro,Restaurant/Cafe/Canteen,Haringey,N10 1PL,5,,-0.146188,51.59312
+2026-10-17,removed,1646205,Wriggle at N4 Kitchen Hire,Mobile caterer,Haringey,N4 1TJ,5,,-0.0902253,51.5750762
+2026-10-17,removed,1919895,escs,Distributors/Transporters,Haringey,N17 0EB,5,,-0.0591887,51.6067865
