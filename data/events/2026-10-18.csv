@@ -1,0 +1,23 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-18,rating_changed,553092,Hainault Stores,Retailers - other,Barking and Dagenham,RM6 6AU,2,4,0.145772,51.572966
+2026-10-18,rating_changed,1048214,Local Bangla Bazaar,Retailers - other,Barking and Dagenham,RM6 6PB,3,2,0.133554,51.571543
+2026-10-18,rating_changed,1560146,Thai & Pie,Takeaway/sandwich shop,Barking and Dagenham,RM6 6NX,5,1,0.135093,51.571425
+2026-10-18,rating_changed,1979522,Chicken And Pizza Hub / Zaazi Grill & Pizza,Takeaway/sandwich shop,Croydon,CR7 8BB,AwaitingInspection,4,-0.105922996997833,51.4089126586914
+2026-10-18,rating_changed,1333893,Glory Sauce,Other catering premises,Croydon,SE25,5,4,,
+2026-10-18,rating_changed,1962134,KKs Pizza & Grill,Takeaway/sandwich shop,Croydon,CR0 3PW,AwaitingInspection,4,-0.11481299996376,51.3860969543457
+2026-10-18,rating_changed,1919597,Tamasha Club,Restaurant/Cafe/Canteen,Croydon,CR7 6JB,AwaitingInspection,2,-0.114153,51.3942334
+2026-10-18,rating_changed,1081600,Sushimo Japanese Restaurant,Restaurant/Cafe/Canteen,Haringey,N22 6BS,AwaitingInspection,2,-0.1029876,51.5909124
+2026-10-18,rating_changed,333488,Ranoush Juice,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 4SG,5,2,-0.19226,51.501712
+2026-10-18,rating_changed,1977279,Accent Catering @ Robin Hood Primary School,School/college/university,Kingston-Upon-Thames,SW15 3QL,AwaitingInspection,4,,
+2026-10-18,rating_changed,1385569,Fee-Ka,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 4PE,5,3,-0.3039357,51.3924661
+2026-10-18,rating_changed,1597925,876,Takeaway/sandwich shop,Lambeth,SW9 9JD,4,1,-0.1222012,51.467258
+2026-10-18,rating_changed,911508,Liquor Supply,Retailers - other,Lambeth,SW9 8LF,AwaitingInspection,4,-0.113088,51.461868
+2026-10-18,rating_changed,483423,Refill Caribbean,Takeaway/sandwich shop,Lambeth,SW9 8EQ,4,3,-0.11566,51.462
+2026-10-18,rating_changed,1989401,The Prepbank,Restaurant/Cafe/Canteen,Lambeth,SW8 2LD,AwaitingInspection,4,-0.1299122,51.478685
+2026-10-18,rating_changed,1977074,Brew & Bites,Takeaway/sandwich shop,Newham,E6 1,AwaitingInspection,3,,
+2026-10-18,rating_changed,1977098,Coalands Sweet Factory,Other catering premises,Newham,E7 0,AwaitingInspection,4,,
+2026-10-18,rating_changed,813706,Iceland,Retailers - supermarkets/hypermarkets,Newham,E16 1EN,5,4,0.012417,51.517514
+2026-10-18,rating_changed,1882178,Sabrin's Ltd,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-10-18,rating_changed,364275,Champor-champor,Restaurant/Cafe/Canteen,Southwark,SE1 3QJ,5,3,-0.085415,51.50257
+2026-10-18,rating_changed,1064462,SI5 Spy Missions,Restaurant/Cafe/Canteen,Waltham Forest,E17 4EZ,4,1,-0.0053635,51.5935733
+2026-10-18,rating_changed,515327,Sea Breeze Caribbean Kitchen,Takeaway/sandwich shop,Waltham Forest,E17 8AA,3,4,-0.0327011,51.57971
