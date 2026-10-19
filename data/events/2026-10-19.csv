@@ -1,2 +1,18 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-19,new,1929765,Cloth Cornhill,Pub/bar/nightclub,City of London Corporation,EC3V 9DR,,AwaitingInspection,,
+2026-10-19,new,2005422,Fika - MNK,Restaurant/Cafe/Canteen,City of London Corporation,EC2N 4AY,,AwaitingInspection,,
+2026-10-19,rating_changed,1983546,Costa Coffee,Restaurant/Cafe/Canteen,City of London Corporation,EC1A 4JA,AwaitingInspection,5,,
+2026-10-19,rating_changed,1974652,Natural Fitness Food,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7BW,AwaitingInspection,5,,
+2026-10-19,rating_changed,1979121,"The Eighteenth At Mode London, Genuine Dining Company",Restaurant/Cafe/Canteen,City of London Corporation,EC2Y 5AS,AwaitingInspection,5,,
+2026-10-19,rating_changed,1983550,Vacherin @ ServiceNow London,Other catering premises,City of London Corporation,EC4Y 8AP,AwaitingInspection,5,,
+2026-10-19,rating_changed,6643,Delight Kebab,Takeaway/sandwich shop,Croydon,SE25 5HQ,AwaitingPublication,2,,
+2026-10-19,rating_changed,1945068,Grillicious,Takeaway/sandwich shop,Croydon,CR0 2RE,AwaitingPublication,3,,
+2026-10-19,rating_changed,1012399,Holiday Inn Express - London Croydon Hotel,Hotel/bed & breakfast/guest house,Croydon,CR0 1TS,AwaitingPublication,1,,
+2026-10-19,rating_changed,1425926,Smokin' Grill Steakhouse,Restaurant/Cafe/Canteen,Croydon,CR8 5AA,AwaitingPublication,2,,
 2026-10-19,rating_changed,1945223,Boatemaa's Kitchen,Other catering premises,Newham,E20,AwaitingInspection,3,,
+2026-10-19,rating_changed,640283,Chicken City,Takeaway/sandwich shop,Newham,E13 8HL,1,4,,
+2026-10-19,removed,1792821,Dinner Ladies,Other catering premises,City of London Corporation,EC4V 6EL,5,,-0.10296,51.51308
+2026-10-19,removed,1972406,InHouse,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 9DQ,AwaitingInspection,,-0.094065,51.513493
+2026-10-19,removed,1761509,Little Ship Club,Restaurant/Cafe/Canteen,City of London Corporation,EC4R 3TB,5,,,
+2026-10-19,removed,295225,"Pret A Manger, Unit 3",Takeaway/sandwich shop,City of London Corporation,EC2Y 9AW,5,,-0.089608,51.519437
+2026-10-19,removed,1045686,Shanghai Wok,Takeaway/sandwich shop,Croydon,SE19 2EZ,1,,-0.080935001373291,51.4177665710449
