@@ -1,4 +1,24 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-20,new,2006240,Accept All Cookies,Other catering premises,Kingston-Upon-Thames,KT2,,AwaitingInspection,,
+2026-10-20,new,2006239,Coombe Food And Wine,Retailers - other,Kingston-Upon-Thames,KT2 7AE,,AwaitingInspection,,
+2026-10-20,new,2006230,Damyang Ltd T/A Treestone BBQ Restaurant,Mobile caterer,Kingston-Upon-Thames,"",,AwaitingInspection,,
+2026-10-20,new,2006232,Gogi Box,Manufacturers/packers,Kingston-Upon-Thames,KT3 3ST,,AwaitingInspection,,
+2026-10-20,new,2006233,Harshfoods,Importers/Exporters,Kingston-Upon-Thames,KT1,,AwaitingInspection,,
+2026-10-20,new,2006236,Lloyds Local,Retailers - other,Kingston-Upon-Thames,KT1 1QT,,5,,
+2026-10-20,new,2006231,Maison Marthe Ltd,Importers/Exporters,Kingston-Upon-Thames,KT9 2NP,,AwaitingInspection,,
+2026-10-20,new,1866716,Master Wok,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1HT,,3,,
+2026-10-20,new,2006235,Menkind,Retailers - other,Kingston-Upon-Thames,KT1 1RB,,AwaitingInspection,,
+2026-10-20,new,1941379,Mosaic Cafe,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 5AF,,AwaitingInspection,,
+2026-10-20,new,2006237,Subway,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 2HT,,AwaitingInspection,,
+2026-10-20,new,2006238,The Compleat Dish,Other catering premises,Kingston-Upon-Thames,KT2,,AwaitingInspection,,
+2026-10-20,new,1845106,The Secret Garden,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 6RJ,,AwaitingInspection,,
+2026-10-20,new,2006234,To Kefi,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 7AF,,AwaitingInspection,,
+2026-10-20,new,2006209,1) Westmead Halal Tandoori 2) Spice of India 3) Biryani Guyz,Takeaway/sandwich shop,Sutton,SM1 4HX,,AwaitingInspection,,
+2026-10-20,new,2006206,Burrells Bakes,Other catering premises,Sutton,SM6,,Exempt,,
+2026-10-20,new,2006210,Oak and Anchor,Pub/bar/nightclub,Sutton,SM1 1EZ,,AwaitingInspection,,
+2026-10-20,new,2006207,Organic Addict,Other catering premises,Sutton,SM6,,Exempt,,
+2026-10-20,new,2006205,Quiet Daily Limited,Other catering premises,Sutton,KT4,,Exempt,,
+2026-10-20,new,2006208,TASTY ROOTS,Restaurant/Cafe/Canteen,Sutton,SM1 1PQ,,AwaitingInspection,,
 2026-10-20,rating_changed,1866554,Chicken Valley,Takeaway/sandwich shop,Barnet,EN5 1ES,3,2,-0.186852,51.646531
 2026-10-20,rating_changed,595341,Premier Store,Retailers - other,Bexley,DA1 4NQ,4,3,0.19131,51.45598
 2026-10-20,rating_changed,812938,Dilieto Sandwich Bar,Takeaway/sandwich shop,City of London Corporation,EC4A 2EA,2,4,-0.108759,51.514361
@@ -9,10 +29,18 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-20,rating_changed,1950787,Edna's Kitchen,Mobile caterer,Havering,RM13,AwaitingInspection,1,,
 2026-10-20,rating_changed,1354273,Premier,Retailers - other,Havering,RM13 7XR,2,4,0.1925637,51.5338688
 2026-10-20,rating_changed,1209955,Vishal Corner,Retailers - other,Havering,RM1 2RX,4,3,0.193241998553276,51.5724487304688
+2026-10-20,rating_changed,1970750,Back to Basque,Other catering premises,Kingston-Upon-Thames,KT1,AwaitingInspection,5,,
+2026-10-20,rating_changed,1527162,Cinnamon Bar & Restaurant,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT9 2AJ,3,5,,
+2026-10-20,rating_changed,1970744,Em for Macaron,Other catering premises,Kingston-Upon-Thames,KT5,AwaitingInspection,5,,
+2026-10-20,rating_changed,1584681,New Malden Fish Bar    Traditional Tasty Bar,Takeaway/sandwich shop,Kingston-Upon-Thames,KT3 5ES,2,5,,
+2026-10-20,rating_changed,1771658,Warren House Hotel,Hotel/bed & breakfast/guest house,Kingston-Upon-Thames,KT2 7HY,2,5,,
 2026-10-20,rating_changed,1875170,S & B Childcare LTD,Restaurant/Cafe/Canteen,Lewisham,SE12 0BX,AwaitingInspection,4,0.0234876,51.4359575
 2026-10-20,rating_changed,1843927,SH Coffee And Sweet,Restaurant/Cafe/Canteen,Newham,E12 6AQ,0,3,0.0546608,51.5479516
 2026-10-20,rating_changed,1078118,Village Food Store,Retailers - other,Newham,E16 3DH,5,4,0.03336,51.510714
 2026-10-20,rating_changed,1910600,Fusion Cafe,Restaurant/Cafe/Canteen,Sutton,SM6 9BT,1,4,-0.138951,51.359352
+2026-10-20,rating_changed,730588,La Bella Luna,Restaurant/Cafe/Canteen,Sutton,KT4 8TL,4,5,,
+2026-10-20,rating_changed,1975628,Shahs Halal Food Sutton,Restaurant/Cafe/Canteen,Sutton,SM1 1PQ,AwaitingInspection,5,,
+2026-10-20,rating_changed,1993153,Taste Of Wheel,Mobile caterer,Sutton,SM5,Exempt,5,,
 2026-10-20,rating_changed,1889177,Corimint Bethnal Green,Takeaway/sandwich shop,Tower Hamlets,E2 0EJ,AwaitingInspection,3,-0.0563795,51.5263914
 2026-10-20,rating_changed,1490217,Hawksmoor,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,5,4,-0.0150199,51.5031628
 2026-10-20,rating_changed,1737485,Light Bento,Takeaway/sandwich shop,Tower Hamlets,E3 4AT,5,4,-0.0288734,51.5197007
@@ -24,3 +52,9 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-20,rating_changed,1939741,Magda Cafe,Restaurant/Cafe/Canteen,Westminster,W1W 7QR,AwaitingInspection,4,-0.1404926,51.5187898
 2026-10-20,rating_changed,1986213,The Base - Pimlico,Restaurant/Cafe/Canteen,Westminster,SW1V 2NA,AwaitingInspection,4,-0.138424,51.4917609
 2026-10-20,rating_changed,1350422,Vasco & Piero'S Pavilion Restaurant,Restaurant/Cafe/Canteen,Westminster,W1F 8DT,3,4,-0.1361772,51.5146926
+2026-10-20,removed,1499802,German Doner Kebab,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4BT,5,,-0.2565571,51.4015908
+2026-10-20,removed,1386024,Norbiton Wine Merchants,Retailers - other,Kingston-Upon-Thames,KT2 7AE,2,,-0.2864597,51.4124095
+2026-10-20,removed,1763690,Saffron Summer,Takeaway/sandwich shop,Kingston-Upon-Thames,KT9 1DR,4,,-0.3035363,51.3747159
+2026-10-20,removed,1983876,Table \& Thyme,Takeaway/sandwich shop,Kingston-Upon-Thames,KT6,AwaitingInspection,,,
+2026-10-20,removed,1418087,To Kefi,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 7AF,5,,-0.2876018,51.4122463
+2026-10-20,removed,1705674,Jaffna Spice,Restaurant/Cafe/Canteen,Sutton,SM1 1PQ,3,,-0.194984,51.368826
