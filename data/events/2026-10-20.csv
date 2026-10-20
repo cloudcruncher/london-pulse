@@ -1,0 +1,25 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-20,rating_changed,1866554,Chicken Valley,Takeaway/sandwich shop,Barnet,EN5 1ES,3,2,-0.186852,51.646531
+2026-10-20,rating_changed,595341,Premier Store,Retailers - other,Bexley,DA1 4NQ,4,3,0.19131,51.45598
+2026-10-20,rating_changed,812938,Dilieto Sandwich Bar,Takeaway/sandwich shop,City of London Corporation,EC4A 2EA,2,4,-0.108759,51.514361
+2026-10-20,rating_changed,1001668,Terra House,Retailers - other,Croydon,CR0 1NE,5,4,-0.100022003054619,51.3694839477539
+2026-10-20,rating_changed,1008293,Damas-Gate Food Centre,Retailers - other,Ealing,W13 9DA,5,2,-0.322541,51.510284
+2026-10-20,rating_changed,316702,Hertford Cafe and Restaurant,Takeaway/sandwich shop,Enfield,N9 8AH,3,1,-0.047561,51.639694
+2026-10-20,rating_changed,653580,Original Pizza Point Ltd,Restaurant/Cafe/Canteen,Enfield,EN3 4HB,4,2,-0.047377,51.646993
+2026-10-20,rating_changed,1950787,Edna's Kitchen,Mobile caterer,Havering,RM13,AwaitingInspection,1,,
+2026-10-20,rating_changed,1354273,Premier,Retailers - other,Havering,RM13 7XR,2,4,0.1925637,51.5338688
+2026-10-20,rating_changed,1209955,Vishal Corner,Retailers - other,Havering,RM1 2RX,4,3,0.193241998553276,51.5724487304688
+2026-10-20,rating_changed,1875170,S & B Childcare LTD,Restaurant/Cafe/Canteen,Lewisham,SE12 0BX,AwaitingInspection,4,0.0234876,51.4359575
+2026-10-20,rating_changed,1843927,SH Coffee And Sweet,Restaurant/Cafe/Canteen,Newham,E12 6AQ,0,3,0.0546608,51.5479516
+2026-10-20,rating_changed,1078118,Village Food Store,Retailers - other,Newham,E16 3DH,5,4,0.03336,51.510714
+2026-10-20,rating_changed,1910600,Fusion Cafe,Restaurant/Cafe/Canteen,Sutton,SM6 9BT,1,4,-0.138951,51.359352
+2026-10-20,rating_changed,1889177,Corimint Bethnal Green,Takeaway/sandwich shop,Tower Hamlets,E2 0EJ,AwaitingInspection,3,-0.0563795,51.5263914
+2026-10-20,rating_changed,1490217,Hawksmoor,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,5,4,-0.0150199,51.5031628
+2026-10-20,rating_changed,1737485,Light Bento,Takeaway/sandwich shop,Tower Hamlets,E3 4AT,5,4,-0.0288734,51.5197007
+2026-10-20,rating_changed,43801,Town of Ramsgate,Pub/bar/nightclub,Tower Hamlets,E1W 2PN,2,4,,
+2026-10-20,rating_changed,560535,Pizza Hut Delivery,Takeaway/sandwich shop,Waltham Forest,E4 9AA,3,0,-0.0177078,51.6111557
+2026-10-20,rating_changed,1982095,All Good Food & Wine,Retailers - other,Westminster,SW1E 6BS,AwaitingInspection,3,-0.1379197,51.4988301
+2026-10-20,rating_changed,1988742,Chocofruit St Christophers Place,Restaurant/Cafe/Canteen,Westminster,W1U 1LZ,AwaitingInspection,4,-0.1501864,51.5154288
+2026-10-20,rating_changed,1939741,Magda Cafe,Restaurant/Cafe/Canteen,Westminster,W1W 7QR,AwaitingInspection,4,-0.1404926,51.5187898
+2026-10-20,rating_changed,1986213,The Base - Pimlico,Restaurant/Cafe/Canteen,Westminster,SW1V 2NA,AwaitingInspection,4,-0.138424,51.4917609
+2026-10-20,rating_changed,1350422,Vasco & Piero'S Pavilion Restaurant,Restaurant/Cafe/Canteen,Westminster,W1F 8DT,3,4,-0.1361772,51.5146926
