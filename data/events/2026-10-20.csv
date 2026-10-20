@@ -16,6 +16,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-20,rating_changed,1889177,Corimint Bethnal Green,Takeaway/sandwich shop,Tower Hamlets,E2 0EJ,AwaitingInspection,3,-0.0563795,51.5263914
 2026-10-20,rating_changed,1490217,Hawksmoor,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,5,4,-0.0150199,51.5031628
 2026-10-20,rating_changed,1737485,Light Bento,Takeaway/sandwich shop,Tower Hamlets,E3 4AT,5,4,-0.0288734,51.5197007
+2026-10-20,rating_changed,1999123,Niche Delivery & Events,Other catering premises,Tower Hamlets,E2 9DU,AwaitingInspection,5,,
 2026-10-20,rating_changed,43801,Town of Ramsgate,Pub/bar/nightclub,Tower Hamlets,E1W 2PN,2,4,,
 2026-10-20,rating_changed,560535,Pizza Hut Delivery,Takeaway/sandwich shop,Waltham Forest,E4 9AA,3,0,-0.0177078,51.6111557
 2026-10-20,rating_changed,1982095,All Good Food & Wine,Retailers - other,Westminster,SW1E 6BS,AwaitingInspection,3,-0.1379197,51.4988301
