@@ -1,4 +1,5 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-21,new,2006319,Giggling Squid,Takeaway/sandwich shop,Hammersmith and Fulham,W10 6AU,,5,,
 2026-10-21,rating_changed,1999039,Afghan Market,Retailers - other,Barnet,N12 8JY,AwaitingInspection,3,-0.176956,51.6151867
 2026-10-21,rating_changed,1939925,FOL Catering @ Silkstream Building Site,Restaurant/Cafe/Canteen,Barnet,NW9 6FZ,AwaitingInspection,4,-0.2438447,51.5812661
 2026-10-21,rating_changed,756792,Finchley Reform Synagogue / FRS Kindergarten,Other catering premises,Barnet,N12 0BE,5,4,-0.179649,51.608013
@@ -26,9 +27,16 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-21,rating_changed,665520,Ali Butchers,Retailers - other,Hackney,E8 2NR,3,1,-0.0720465,51.5479805
 2026-10-21,rating_changed,1777293,DALSTON DONER AND GRILL,Restaurant/Cafe/Canteen,Hackney,E8 2NP,3,1,-0.0744838,51.5483263
 2026-10-21,rating_changed,469690,Partners Fish Bar,Takeaway/sandwich shop,Hackney,N16 7JD,5,4,-0.0734476,51.5619422
+2026-10-21,rating_changed,1986624,Amazon,Distributors/Transporters,Hammersmith and Fulham,W10 6AU,AwaitingInspection,5,,
+2026-10-21,rating_changed,1781179,Cobalto,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W14 9NU,4,5,,
+2026-10-21,rating_changed,1979246,Pepes Piri Piri,Restaurant/Cafe/Canteen,Hammersmith and Fulham,SW6 5UA,AwaitingInspection,5,,
+2026-10-21,rating_changed,345401,Savoy Fisheries,Takeaway/sandwich shop,Hammersmith and Fulham,W3 7DA,1,4,,
+2026-10-21,rating_changed,1040414,SushiDog,Other catering premises,Hammersmith and Fulham,W12 7GF,4,5,,
 2026-10-21,rating_changed,1793197,Jack & Jill Foods Limited,Restaurant/Cafe/Canteen,Harrow,HA2 8DU,2,0,-0.353708,51.564742
 2026-10-21,rating_changed,1978573,PRAMUKH FRUIT AND VEG LTD,Retailers - other,Harrow,HA2 8JD,AwaitingInspection,4,-0.3566254,51.5617082
 2026-10-21,rating_changed,1955984,SPICE OF ASIA,Retailers - other,Harrow,HA3 7AF,AwaitingInspection,4,-0.3346291,51.5951416
+2026-10-21,rating_changed,1824636,Midam Restaurant,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4BH,0,5,,
+2026-10-21,rating_changed,1644560,You Me Sushi,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4EU,0,3,,
 2026-10-21,rating_changed,1636139,JHAKAAS,Takeaway/sandwich shop,Lewisham,SE23 1LN,3,4,-0.040624,51.4480984
 2026-10-21,rating_changed,1150113,KUSH ACADEMY,Caring Premises,Lewisham,SE8 3PR,5,4,-0.0260925,51.4806877
 2026-10-21,rating_changed,1204833,Chicos Flame Grilled Chicken,Restaurant/Cafe/Canteen,Newham,E6 1LA,2,4,0.0526640005409718,51.5329856872559
