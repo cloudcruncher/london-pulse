@@ -1,0 +1,47 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-21,rating_changed,1999039,Afghan Market,Retailers - other,Barnet,N12 8JY,AwaitingInspection,3,-0.176956,51.6151867
+2026-10-21,rating_changed,1939925,FOL Catering @ Silkstream Building Site,Restaurant/Cafe/Canteen,Barnet,NW9 6FZ,AwaitingInspection,4,-0.2438447,51.5812661
+2026-10-21,rating_changed,756792,Finchley Reform Synagogue / FRS Kindergarten,Other catering premises,Barnet,N12 0BE,5,4,-0.179649,51.608013
+2026-10-21,rating_changed,1575673,Grodz,Retailers - other,Barnet,NW11 9ES,5,2,-0.20777,51.57789
+2026-10-21,rating_changed,1999060,Thai Kitchen,Restaurant/Cafe/Canteen,Barnet,N12 8NR,AwaitingInspection,4,-0.179861,51.611398
+2026-10-21,rating_changed,329585,Seabream Fish Bar,Takeaway/sandwich shop,Bexley,DA15 9JN,3,4,0.117603,51.447443
+2026-10-21,rating_changed,1961776,Lillie’s Bakes,Other catering premises,Bromley,BR5,AwaitingInspection,4,,
+2026-10-21,rating_changed,424138,Bi Won Restaurant,Restaurant/Cafe/Canteen,Camden,WC1A 1NT,4,0,-0.1258391,51.5172527
+2026-10-21,rating_changed,425541,Black Pot Catering,Other catering premises,Camden,NW6 2JX,4,3,-0.1992576,51.5451018
+2026-10-21,rating_changed,1975769,JAMON JAMON BELSIZE PARK,Restaurant/Cafe/Canteen,Camden,NW3 4QS,AwaitingInspection,4,-0.1649179,51.5501272
+2026-10-21,rating_changed,1768434,LOAF,Restaurant/Cafe/Canteen,Camden,EC1R 5DE,0,3,-0.1122433,51.5218728
+2026-10-21,rating_changed,1129755,Seoul Plaza,Takeaway/sandwich shop,Camden,W1T 2EH,1,3,-0.1335054,51.5194073
+2026-10-21,rating_changed,1792825,City Social,Restaurant/Cafe/Canteen,City of London Corporation,EC2N 1HQ,5,3,-0.0839934,51.5152636
+2026-10-21,rating_changed,4983,Superstore Food & Wine,Retailers - other,Croydon,CR0 3HP,5,4,-0.1228844,51.386019
+2026-10-21,rating_changed,1609712,Angel's Cafe,Restaurant/Cafe/Canteen,Ealing,W5 1UL,1,4,-0.296851,51.531414
+2026-10-21,rating_changed,1745600,Biryani Junction,Takeaway/sandwich shop,Ealing,W5 2PJ,1,2,-0.300357,51.514326
+2026-10-21,rating_changed,1033670,Bordars Superstore,Retailers - other,Ealing,W7 1AG,4,2,-0.338439,51.522497
+2026-10-21,rating_changed,1034242,Nelore Casa De Carnes,Retailers - other,Ealing,NW10 4XA,3,2,-0.2467254,51.5329882
+2026-10-21,rating_changed,1981929,Noi's Thai Tapas,Restaurant/Cafe/Canteen,Ealing,W7 2DG,AwaitingInspection,3,-0.325712,51.496913
+2026-10-21,rating_changed,1032425,Ramgarhia Sabha Temple,Other catering premises,Ealing,UB1 1HN,2,1,-0.381261,51.510803
+2026-10-21,rating_changed,1030275,Just Chicken & Kebabs,Restaurant/Cafe/Canteen,Enfield,N13 6JU,4,1,-0.10922,51.611388
+2026-10-21,rating_changed,1936681,Mussy's Kitchen,Other catering premises,Enfield,EN1,AwaitingInspection,1,,
+2026-10-21,rating_changed,1609584,Olivia Grill House,Restaurant/Cafe/Canteen,Enfield,N13 6JU,2,4,-0.10922,51.611388
+2026-10-21,rating_changed,1194720,Nando's Chickenland,Restaurant/Cafe/Canteen,Greenwich,SE10 0QJ,4,2,0.0128758,51.4902364
+2026-10-21,rating_changed,665520,Ali Butchers,Retailers - other,Hackney,E8 2NR,3,1,-0.0720465,51.5479805
+2026-10-21,rating_changed,1777293,DALSTON DONER AND GRILL,Restaurant/Cafe/Canteen,Hackney,E8 2NP,3,1,-0.0744838,51.5483263
+2026-10-21,rating_changed,469690,Partners Fish Bar,Takeaway/sandwich shop,Hackney,N16 7JD,5,4,-0.0734476,51.5619422
+2026-10-21,rating_changed,1793197,Jack & Jill Foods Limited,Restaurant/Cafe/Canteen,Harrow,HA2 8DU,2,0,-0.353708,51.564742
+2026-10-21,rating_changed,1978573,PRAMUKH FRUIT AND VEG LTD,Retailers - other,Harrow,HA2 8JD,AwaitingInspection,4,-0.3566254,51.5617082
+2026-10-21,rating_changed,1955984,SPICE OF ASIA,Retailers - other,Harrow,HA3 7AF,AwaitingInspection,4,-0.3346291,51.5951416
+2026-10-21,rating_changed,1636139,JHAKAAS,Takeaway/sandwich shop,Lewisham,SE23 1LN,3,4,-0.040624,51.4480984
+2026-10-21,rating_changed,1150113,KUSH ACADEMY,Caring Premises,Lewisham,SE8 3PR,5,4,-0.0260925,51.4806877
+2026-10-21,rating_changed,1204833,Chicos Flame Grilled Chicken,Restaurant/Cafe/Canteen,Newham,E6 1LA,2,4,0.0526640005409718,51.5329856872559
+2026-10-21,rating_changed,1961885,Dolce Sera,Restaurant/Cafe/Canteen,Redbridge,IG2,AwaitingInspection,4,,
+2026-10-21,rating_changed,781488,Eastern cuisine,Restaurant/Cafe/Canteen,Southwark,SE19 1PW,2,3,-0.083479,51.425013
+2026-10-21,rating_changed,1870114,Elephant butcher ltd,Retailers - other,Southwark,SE17 1LB,3,0,-0.0987214,51.493516
+2026-10-21,rating_changed,1522043,Horangee pocha,Pub/bar/nightclub,Southwark,SE1 6TU,4,3,-0.0938957,51.4938514
+2026-10-21,rating_changed,1613704,Accent Catering,School/college/university,Tower Hamlets,E1 0LB,4,2,-0.0493739992380142,51.5134696960449
+2026-10-21,rating_changed,1410136,Scallywags Parent Partner Nursery Kitchen,Caring Premises,Tower Hamlets,E2 9DL,5,4,-0.0549519993364811,51.5341453552246
+2026-10-21,rating_changed,1572415,Darby's & Bar Brasso,Restaurant/Cafe/Canteen,Wandsworth,SW11 7BG,2,3,-0.1307547,51.4820347
+2026-10-21,rating_changed,1986187,Dr Juice,Restaurant/Cafe/Canteen,Westminster,W2 2EH,AwaitingInspection,2,-0.1622711,51.5148795
+2026-10-21,rating_changed,414430,Giannis,Restaurant/Cafe/Canteen,Westminster,SW1P 2AF,3,1,-0.1276176,51.4949791
+2026-10-21,rating_changed,1226843,Grande Roma,Restaurant/Cafe/Canteen,Westminster,WC2H 7AT,4,1,-0.12938513,51.51002147
+2026-10-21,rating_changed,413796,L?Escargot,Restaurant/Cafe/Canteen,Westminster,W1D 4EF,5,2,-0.1310333,51.5139543
+2026-10-21,rating_changed,1415419,Sagar Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1Y 4EA,3,2,-0.1318894,51.5095885
+2026-10-21,removed,1672779,Zahid Foods,Retailers - other,Ealing,UB2 4DG,1,,-0.382361,51.501314
