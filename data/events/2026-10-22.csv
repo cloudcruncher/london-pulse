@@ -1,0 +1,81 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-22,new,2006597,African & Caribbean Jerk House,Mobile caterer,Bexley,SE2,,AwaitingInspection,,
+2026-10-22,new,2006598,Chrissies Cake Creations,Retailers - other,Bexley,DA15,,AwaitingInspection,,
+2026-10-22,new,1963813,Sushi Spot,Takeaway/sandwich shop,Enfield,N11 1NA,,4,-0.1428838,51.6158481
+2026-10-22,new,1991809,Argentinian Grill,Takeaway/sandwich shop,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,2001329,Cabman?s Shelter,Restaurant/Cafe/Canteen,Westminster,W9 2PT,,AwaitingInspection,,
+2026-10-22,new,1991800,Cafe Eighty-One,Restaurant/Cafe/Canteen,Westminster,SW1X 7RB,,AwaitingInspection,-0.1581899,51.5020818
+2026-10-22,new,1978206,HoAM at Lord?s,Restaurant/Cafe/Canteen,Westminster,NW8 8QN,,3,-0.1728006,51.5294322
+2026-10-22,new,1986218,Inamo Sukoshi,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,2006599,Joe Blake?s,Restaurant/Cafe/Canteen,Westminster,WC2N 6NQ,,AwaitingInspection,-0.1242772,51.508262
+2026-10-22,new,1988732,Jollof Mama,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,1978203,Made in Puglia ltd,Takeaway/sandwich shop,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,2006603,PRO TOUCH SA COMMUNITY INTEREST COMPANY,Caring Premises,Westminster,W9 2AN,,AwaitingInspection,,
+2026-10-22,new,2001328,Prezzo Italian,Restaurant/Cafe/Canteen,Westminster,WC2R 0NR,,AwaitingInspection,-0.1228015,51.5101538
+2026-10-22,new,2006616,Saffron Soho,Restaurant/Cafe/Canteen,Westminster,W1D 6HT,,AwaitingInspection,-0.132853,51.5124545
+2026-10-22,new,2000248,Steytler and co,Other catering premises,Westminster,W9 3AL,,Exempt,-0.2046428,51.5295732
+2026-10-22,new,1991835,Streat Latin food Victoria,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,1988735,Studio Bust,Retailers - other,Westminster,W2 2BS,,Exempt,-0.1651767,51.5150239
+2026-10-22,new,1986209,TASTY fusion home cuisine,Takeaway/sandwich shop,Westminster,W1F,,AwaitingInspection,,
+2026-10-22,new,1991799,THAI HOUSE,Takeaway/sandwich shop,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,1991815,The Duck Shed,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-10-22,new,1983600,Urban Baristas,Restaurant/Cafe/Canteen,Westminster,W9 1NJ,,AwaitingInspection,-0.1856693,51.5303064
+2026-10-22,new,1991804,Zain Tech,Retailers - other,Westminster,W2 2EA,,Exempt,-0.1637167,51.5158464
+2026-10-22,new,2000234,temper tantrums,Restaurant/Cafe/Canteen,Westminster,W1G 0EH,,AwaitingInspection,-0.147469,51.5159506
+2026-10-22,rating_changed,1968424,Gems Delight,Other catering premises,Barking and Dagenham,IG11,AwaitingInspection,4,,
+2026-10-22,rating_changed,1964658,Qurtubah Nursery,Caring Premises,Barking and Dagenham,RM9 6FN,AwaitingInspection,4,0.1466289,51.530123
+2026-10-22,rating_changed,1350038,Bread,Retailers - other,Barnet,NW11 0EA,1,3,-0.199621,51.582136
+2026-10-22,rating_changed,1291299,Hyper Food Centre,Retailers - supermarkets/hypermarkets,Barnet,NW4 2BP,2,1,-0.2196831,51.58659
+2026-10-22,rating_changed,329523,Carlton Day Service,Caring Premises,Bexley,DA14 6AH,4,5,0.0978,51.424219
+2026-10-22,rating_changed,1979211,Marabou Fish Bar,Takeaway/sandwich shop,Bexley,DA16 3RQ,AwaitingInspection,4,0.093286,51.464535
+2026-10-22,rating_changed,1990352,Really Awesome Coffee Dartford,Mobile caterer,Bexley,DA5,AwaitingInspection,5,,
+2026-10-22,rating_changed,358401,Concerto Catering Company,Other catering premises,Bromley,BR2,5,4,,
+2026-10-22,rating_changed,358116,The Best Kebab Ye,Takeaway/sandwich shop,Bromley,BR6 0JY,4,3,0.1029656,51.3798278
+2026-10-22,rating_changed,424901,Initial Asylum Accomodation Hotel,Hotel/bed & breakfast/guest house,Camden,NW3 5HS,2,3,-0.1805782,51.5484196
+2026-10-22,rating_changed,915153,Keren's Nursery,Caring Premises,Camden,NW3 4HX,5,4,-0.170344,51.547386
+2026-10-22,rating_changed,1994440,Belmont Food And Wine,Retailers - other,Ealing,UB2 5HE,AwaitingInspection,4,-0.3858446,51.5004444
+2026-10-22,rating_changed,1032317,CakeCo,Retailers - other,Ealing,UB2 4DD,0,4,-0.383628,51.4995686
+2026-10-22,rating_changed,1956450,The Plough Inn,Pub/bar/nightclub,Ealing,UB2 4LG,AwaitingInspection,3,-0.3659798,51.4951065
+2026-10-22,rating_changed,1981939,Velvet 66,Restaurant/Cafe/Canteen,Ealing,W5 5EX,AwaitingInspection,4,-0.3058875,51.5049282
+2026-10-22,rating_changed,317663,Fat Boys Cafe,Restaurant/Cafe/Canteen,Enfield,N9 0TY,0,2,-0.058968,51.624704
+2026-10-22,rating_changed,1977195,Leapfrog Nursery School @ St Mary Magdalene,Caring Premises,Enfield,EN2 7AJ,AwaitingInspection,4,-0.096417,51.654003
+2026-10-22,rating_changed,1998947,Pati & Lilly Market ltd,Retailers - supermarkets/hypermarkets,Enfield,N18 1RP,AwaitingInspection,1,-0.073665,51.616079
+2026-10-22,rating_changed,318151,Paya,Takeaway/sandwich shop,Enfield,N11 1NA,AwaitingInspection,4,-0.1428838,51.6158481
+2026-10-22,rating_changed,1965717,The Banc Brasserie,Restaurant/Cafe/Canteen,Enfield,EN1 1UY,AwaitingInspection,2,-0.0635184,51.6507432
+2026-10-22,rating_changed,470046,New Noodle Bar,Takeaway/sandwich shop,Hackney,E9 6ND,5,0,-0.0546202,51.5461662
+2026-10-22,rating_changed,1493654,Sultan Grill,Restaurant/Cafe/Canteen,Hackney,E9 6AS,3,0,-0.0414166,51.5488579
+2026-10-22,rating_changed,470027,Tomi's Kitchen Restaurant Limited,Restaurant/Cafe/Canteen,Hackney,E9 6NA,2,0,-0.0542826,51.5458165
+2026-10-22,rating_changed,1984425,Famous Shawarma UK,Restaurant/Cafe/Canteen,Harrow,HA1 2FS,AwaitingInspection,4,-0.3324446,51.5817923
+2026-10-22,rating_changed,1966367,Govindaam ltd,Other catering premises,Harrow,HA8,AwaitingInspection,4,,
+2026-10-22,rating_changed,1971817,Kothu Cartel,Takeaway/sandwich shop,Harrow,HA7 1EP,AwaitingInspection,4,-0.288548,51.5942051
+2026-10-22,rating_changed,1965642,Benchmark,Takeaway/sandwich shop,Islington,N1 1QP,AwaitingInspection,2,-0.1032038,51.5388941
+2026-10-22,rating_changed,1535298,KOA,Restaurant/Cafe/Canteen,Islington,N19 3QL,5,4,-0.1236843,51.5686024
+2026-10-22,rating_changed,416387,Khan Food Centre,Retailers - other,Islington,N1 1EF,3,4,-0.1172364,51.5402533
+2026-10-22,rating_changed,1650721,La Mia Cucina,Restaurant/Cafe/Canteen,Islington,N7 6JA,3,1,-0.1204779,51.5588751
+2026-10-22,rating_changed,1979783,Abm Catering @ Servite RC Primary School,Other catering premises,Kensington and Chelsea,SW10 9NA,AwaitingInspection,4,-0.183081,51.48505
+2026-10-22,rating_changed,1230206,Beaufort House,Pub/bar/nightclub,Kensington and Chelsea,SW3 5UZ,5,2,-0.176735,51.484206
+2026-10-22,rating_changed,849474,Chakra Kensington,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 4LX,5,3,-0.193985,51.5027104
+2026-10-22,rating_changed,1385279,Dinky Donuts,Mobile caterer,Kingston-Upon-Thames,"",5,4,-0.301977999515081,51.4101375006111
+2026-10-22,rating_changed,364540,Hing loong,Takeaway/sandwich shop,Southwark,SE1 4TL,1,2,-0.08392,51.495613
+2026-10-22,rating_changed,151069,Billingsgate Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5ST,5,AwaitingPublication,-0.0138999,51.5064124
+2026-10-22,rating_changed,89968,It's THECHA,Restaurant/Cafe/Canteen,Tower Hamlets,E14 8RR,AwaitingInspection,4,,
+2026-10-22,rating_changed,1662583,Mamma's Goodies &  Coffee Bar,Takeaway/sandwich shop,Tower Hamlets,E1 6EA,5,3,-0.0751859992742538,51.5200729370117
+2026-10-22,rating_changed,1283894,Memsaheb,Restaurant/Cafe/Canteen,Tower Hamlets,E14 3UU,AwaitingInspection,3,-0.0067956,51.4954961
+2026-10-22,rating_changed,1668872,Junglees Burgers Leyton,Restaurant/Cafe/Canteen,Waltham Forest,E10 6AE,5,0,-0.0110266,51.5746326
+2026-10-22,rating_changed,414510,LA BELLE BOUCHERIE,Retailers - other,Westminster,NW1 5BY,0,4,-0.1703572,51.5206173
+2026-10-22,rating_changed,1991826,Pimlico Coffee,Restaurant/Cafe/Canteen,Westminster,SW1V 1RU,AwaitingInspection,5,-0.1385077,51.4925356
+2026-10-22,rating_changed,988476,Pret A Manger,Restaurant/Cafe/Canteen,Westminster,"",4,5,-0.1483388,51.4923765
+2026-10-22,rating_changed,411668,Prince Charles Cinema,Restaurant/Cafe/Canteen,Westminster,WC2H 7BY,4,5,-0.1302116,51.5114952
+2026-10-22,rating_changed,1728413,Sanderson Hotel,Hotel/bed & breakfast/guest house,Westminster,W1T 3NG,3,5,-0.1373935,51.5177335
+2026-10-22,rating_changed,654328,Santa Maria Pizzeria,Restaurant/Cafe/Canteen,Westminster,W1W 6YR,1,4,-0.1393829,51.5205528
+2026-10-22,rating_changed,984657,Shake Shack,Restaurant/Cafe/Canteen,Westminster,SW1E 5LB,3,5,-0.1444851,51.4968545
+2026-10-22,rating_changed,1633864,Soor,Restaurant/Cafe/Canteen,Westminster,W2 1EA,1,4,-0.171008,51.5209242
+2026-10-22,rating_changed,1935997,The Arts at Marble Arch,Pub/bar/nightclub,Westminster,W1H 7DX,Exempt,5,,
+2026-10-22,rating_changed,1740527,The Counter Soho,Restaurant/Cafe/Canteen,Westminster,W1B 5PS,AwaitingInspection,2,-0.139226,51.5127356
+2026-10-22,rating_changed,1499842,The Sushi Co,Restaurant/Cafe/Canteen,Westminster,SW1V 1SW,4,5,-0.1394225,51.492712
+2026-10-22,rating_changed,2000262,Voco London Marylebone,Hotel/bed & breakfast/guest house,Westminster,NW1 5QT,AwaitingInspection,5,-0.1662123,51.5186641
+2026-10-22,rating_changed,1988737,WATKINS BOOKSHOP,Retailers - other,Westminster,WC2N 4EZ,AwaitingInspection,Exempt,-0.12781,51.51067
+2026-10-22,removed,2001444,Lingfield Micropub,Pub/bar/nightclub,Bexley,SE9 2RL,AwaitingInspection,,0.081118,51.459121
+2026-10-22,removed,1991806,Caffe Nero,Restaurant/Cafe/Canteen,Westminster,WC2H 9PW,AwaitingInspection,,-0.1246804,51.5135292
+2026-10-22,removed,1016804,Costa Coffee,Restaurant/Cafe/Canteen,Westminster,W2 4UA,5,,-0.190539,51.5154297
+2026-10-22,removed,2000222,Saffron Soho,Restaurant/Cafe/Canteen,Westminster,W1D 6HT,AwaitingInspection,,-0.132853,51.5124545
