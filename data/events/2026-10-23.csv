@@ -1,0 +1,36 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-23,rating_changed,1942751,Enjoy Cafe,Restaurant/Cafe/Canteen,Barking and Dagenham,RM10 7XD,5,3,0.165059,51.546676
+2026-10-23,rating_changed,756757,East End Tandoori,Restaurant/Cafe/Canteen,Barnet,N2 0RZ,3,2,-0.180569,51.592228
+2026-10-23,rating_changed,1980922,Karma Bakehouse,Retailers - other,Barnet,NW2 8AQ,AwaitingInspection,3,-0.2218897,51.5717563
+2026-10-23,rating_changed,1753057,Philippe Conticini,Restaurant/Cafe/Canteen,Barnet,N12 7HY,5,2,-0.190868,51.615354
+2026-10-23,rating_changed,1939894,St Margaret's Nursery School,School/college/university,Barnet,EN4 9NT,AwaitingInspection,4,-0.167497,51.649405
+2026-10-23,rating_changed,1083801,Crescent Cafe,Restaurant/Cafe/Canteen,Bromley,BR6 9LS,3,4,0.0875671,51.3603731
+2026-10-23,rating_changed,730608,Mamma Mia,Restaurant/Cafe/Canteen,Bromley,SE20 8AJ,4,3,-0.067054,51.41236
+2026-10-23,rating_changed,424170,Barretts Butchers,Retailers - other,Camden,NW3 4UE,4,3,-0.1624913,51.5459166
+2026-10-23,rating_changed,1246307,Leonardo Royal Hotel London St Pauls,Hotel/bed & breakfast/guest house,City of London Corporation,EC4V 5AJ,5,4,-0.099429,51.512744
+2026-10-23,rating_changed,1689552,Olive Dining At Kensington Avenue Primary School,School/college/university,Croydon,CR7 8BT,4,2,-0.112126998603344,51.4108467102051
+2026-10-23,rating_changed,1552757,H C L  Edmonton County Bury Campus,Other catering premises,Enfield,N9 9JZ,4,3,-0.079823,51.633086
+2026-10-23,rating_changed,847086,Intercontinental London - The O2 - H,Hotel/bed & breakfast/guest house,Greenwich,SE10 0TW,5,2,-0.0001133,51.5028455
+2026-10-23,rating_changed,1598106,Sefa Restaurant,Restaurant/Cafe/Canteen,Greenwich,SE10 9TX,4,3,0.0024281,51.4845919
+2026-10-23,rating_changed,694714,Sunset Chicken,Takeaway/sandwich shop,Greenwich,SE3 8RP,5,3,0.0352974,51.4744134
+2026-10-23,rating_changed,469861,Cafe Oto,Restaurant/Cafe/Canteen,Hackney,E8 3DL,4,2,-0.0747288,51.5469635
+2026-10-23,rating_changed,719744,Lavang Spice,Restaurant/Cafe/Canteen,Hackney,E9 7HD,2,3,-0.0440731,51.5383718
+2026-10-23,rating_changed,1366653,Outsider Tart @ The Lyric,Other catering premises,Hammersmith and Fulham,W6 0QL,5,4,-0.226807,51.492905
+2026-10-23,rating_changed,1012594,Pappa Ciccia Catering,Manufacturers/packers,Hammersmith and Fulham,SW6 5RG,5,4,-0.209042,51.475702
+2026-10-23,rating_changed,1686972,Sho's kitchen @,Takeaway/sandwich shop,Haringey,N22 6BS,4,2,-0.10275,51.5910704
+2026-10-23,rating_changed,1801860,Cinnamon Garden,Restaurant/Cafe/Canteen,Hillingdon,HA6 1LW,2,3,-0.409486,51.599897
+2026-10-23,rating_changed,1986654,Finsbury Business Centre Ltd Cafe,Restaurant/Cafe/Canteen,Islington,EC1R 0NE,AwaitingInspection,4,-0.1071013,51.5249014
+2026-10-23,rating_changed,1965617,The Sugar Shack,Restaurant/Cafe/Canteen,Islington,N19 4DX,AwaitingInspection,2,-0.1214075,51.566075
+2026-10-23,rating_changed,1974306,BBQ Drive,Takeaway/sandwich shop,Lambeth,SW4,AwaitingInspection,3,,
+2026-10-23,rating_changed,1974304,Elephant And Barrel,Pub/bar/nightclub,Lambeth,SW9 9BQ,AwaitingInspection,4,-0.123455,51.470974
+2026-10-23,rating_changed,1079214,Samiz Chicken & Pizza,Takeaway/sandwich shop,Newham,E12 5JY,5,3,0.054929,51.553504
+2026-10-23,rating_changed,1957252,Usman Halal Meat,Retailers - other,Newham,E12 5JR,AwaitingInspection,1,0.0583781,51.5545771
+2026-10-23,rating_changed,1492812,A's Coffee Shop Ltd,Takeaway/sandwich shop,Redbridge,IG2 6BN,AwaitingInspection,4,0.083435,51.5755201
+2026-10-23,rating_changed,1932813,The Sixth Element,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW14 8AH,AwaitingInspection,3,-0.2644322,51.4650785
+2026-10-23,rating_changed,1149270,Ethical Bean Company,Restaurant/Cafe/Canteen,Tower Hamlets,E3 2NG,5,4,-0.022929,51.538053
+2026-10-23,rating_changed,515189,Shernhall Street Market,Retailers - other,Waltham Forest,E17 3EY,1,0,-0.0080192,51.5873148
+2026-10-23,rating_changed,1964417,Beirut counter,Mobile caterer,Wandsworth,"",AwaitingInspection,1,,
+2026-10-23,rating_changed,1898842,Express Cleopatra restaurant uk,Restaurant/Cafe/Canteen,Westminster,W2 1RL,5,0,-0.1744474,51.5160229
+2026-10-23,rating_changed,411551,Franco's Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1Y 6LX,5,2,-0.1397395,51.507564
+2026-10-23,rating_changed,1982107,Noodle and Snack,Restaurant/Cafe/Canteen,Westminster,W1T 6QH,AwaitingInspection,4,-0.1418685,51.5228763
+2026-10-23,rating_changed,1986216,VE/LA,Restaurant/Cafe/Canteen,Westminster,W1S 1AY,AwaitingInspection,4,-0.1437713,51.5126008
