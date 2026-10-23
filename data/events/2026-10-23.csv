@@ -1,4 +1,31 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-23,new,2007227,Apex MetroCart also t/a Decimal Wholesale,Retailers - other,Harrow,HA1 4WL,,AwaitingInspection,,
+2026-10-23,new,2007228,GJ23 Chatpata,Restaurant/Cafe/Canteen,Harrow,HA2 6ED,,AwaitingInspection,,
+2026-10-23,new,2007232,HOMEORA,Retailers - other,Harrow,HA8,,AwaitingInspection,,
+2026-10-23,new,2007230,Padel Hub HA1 Ltd,Restaurant/Cafe/Canteen,Harrow,HA1 4TR,,AwaitingInspection,,
+2026-10-23,new,2007229,SanuCatering,Other catering premises,Harrow,HA2,,AwaitingInspection,,
+2026-10-23,new,2007231,Yona's Crisps,Retailers - other,Harrow,HA7,,AwaitingInspection,,
+2026-10-23,new,1987316,Ayami Sushi/Ayami Poke,Takeaway/sandwich shop,Lambeth,SE11 4LD,,AwaitingInspection,,
+2026-10-23,new,1287566,BARRY'S BAR,Restaurant/Cafe/Canteen,Lambeth,SE27 9JS,,4,,
+2026-10-23,new,1958278,Beijing Dragon,Restaurant/Cafe/Canteen,Lambeth,SW8 3JD,,2,,
+2026-10-23,new,2007099,Blackbird Bakery,Restaurant/Cafe/Canteen,Lambeth,SW4 7SS,,AwaitingInspection,,
+2026-10-23,new,1690352,Boulebar,Mobile caterer,Lambeth,SE1 9PP,,5,,
+2026-10-23,new,1999726,Chayan,Restaurant/Cafe/Canteen,Lambeth,SW8 1RZ,,5,,
+2026-10-23,new,2007091,Chicken World,Takeaway/sandwich shop,Lambeth,SE27 0QP,,4,,
+2026-10-23,new,2007093,Dipped Fried,Other catering premises,Lambeth,SE11,,AwaitingInspection,,
+2026-10-23,new,1877967,GoPuff,Distributors/Transporters,Lambeth,SE1 7LH,,5,,
+2026-10-23,new,2007100,Good Day Coffee And Break Fast,Hotel/bed & breakfast/guest house,Lambeth,SW2 4UN,,AwaitingInspection,,
+2026-10-23,new,1689853,Gopuff,Distributors/Transporters,Lambeth,SE1 7LH,,5,,
+2026-10-23,new,2007101,MPower,Restaurant/Cafe/Canteen,Lambeth,SW2 4QQ,,AwaitingInspection,,
+2026-10-23,new,2007094,Maison Abbeville,Retailers - other,Lambeth,SW4 9LA,,AwaitingInspection,,
+2026-10-23,new,2007096,Park Stories,Restaurant/Cafe/Canteen,Lambeth,SE19 1EA,,AwaitingInspection,,
+2026-10-23,new,2007103,Pasha Mediterranean Food,Restaurant/Cafe/Canteen,Lambeth,SW16 6HG,,AwaitingInspection,,
+2026-10-23,new,2007098,Peruana,Other catering premises,Lambeth,SW8,,AwaitingInspection,,
+2026-10-23,new,2007092,Stonefire Pizza Ltd,Takeaway/sandwich shop,Lambeth,SE27 9AZ,,AwaitingInspection,,
+2026-10-23,new,1986513,Sweet Home Bakery UK,Other catering premises,Lambeth,SW8,,AwaitingInspection,,
+2026-10-23,new,2007097,Terracotta,Restaurant/Cafe/Canteen,Lambeth,SE1 7LY,,AwaitingInspection,,
+2026-10-23,new,2007095,Waterloo Express,Retailers - other,Lambeth,SE1 7NW,,AwaitingInspection,,
+2026-10-23,new,2007168,Staycity Aparthotel,Other catering premises,Tower Hamlets,E1 1RD,,AwaitingInspection,,
 2026-10-23,rating_changed,1942751,Enjoy Cafe,Restaurant/Cafe/Canteen,Barking and Dagenham,RM10 7XD,5,3,0.165059,51.546676
 2026-10-23,rating_changed,756757,East End Tandoori,Restaurant/Cafe/Canteen,Barnet,N2 0RZ,3,2,-0.180569,51.592228
 2026-10-23,rating_changed,1980922,Karma Bakehouse,Retailers - other,Barnet,NW2 8AQ,AwaitingInspection,3,-0.2218897,51.5717563
@@ -19,19 +46,52 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-23,rating_changed,1366653,Outsider Tart @ The Lyric,Other catering premises,Hammersmith and Fulham,W6 0QL,5,4,-0.226807,51.492905
 2026-10-23,rating_changed,1012594,Pappa Ciccia Catering,Manufacturers/packers,Hammersmith and Fulham,SW6 5RG,5,4,-0.209042,51.475702
 2026-10-23,rating_changed,1686972,Sho's kitchen @,Takeaway/sandwich shop,Haringey,N22 6BS,4,2,-0.10275,51.5910704
+2026-10-23,rating_changed,1937592,ANDHRA ALLUDU,Restaurant/Cafe/Canteen,Harrow,HA2 8DU,AwaitingInspection,3,,
+2026-10-23,rating_changed,1958185,COSELENA,Retailers - other,Harrow,HA1 4WL,AwaitingInspection,5,,
+2026-10-23,rating_changed,1999826,Dolce Pastry Cakes,Manufacturers/packers,Harrow,HA3,AwaitingInspection,5,,
 2026-10-23,rating_changed,1801860,Cinnamon Garden,Restaurant/Cafe/Canteen,Hillingdon,HA6 1LW,2,3,-0.409486,51.599897
 2026-10-23,rating_changed,1986654,Finsbury Business Centre Ltd Cafe,Restaurant/Cafe/Canteen,Islington,EC1R 0NE,AwaitingInspection,4,-0.1071013,51.5249014
 2026-10-23,rating_changed,1965617,The Sugar Shack,Restaurant/Cafe/Canteen,Islington,N19 4DX,AwaitingInspection,2,-0.1214075,51.566075
+2026-10-23,rating_changed,1151560,AM2PM Food Store,Retailers - other,Lambeth,SE27 9TQ,3,5,,
 2026-10-23,rating_changed,1974306,BBQ Drive,Takeaway/sandwich shop,Lambeth,SW4,AwaitingInspection,3,,
+2026-10-23,rating_changed,484272,Dhanvik News,Retailers - other,Lambeth,SW16 2SB,3,5,,
 2026-10-23,rating_changed,1974304,Elephant And Barrel,Pub/bar/nightclub,Lambeth,SW9 9BQ,AwaitingInspection,4,-0.123455,51.470974
+2026-10-23,rating_changed,1937282,Go Local - Streatham,Retailers - other,Lambeth,SW16 1EX,AwaitingInspection,1,,
+2026-10-23,rating_changed,483415,Heron Academy,School/college/university,Lambeth,SE24 0HZ,5,4,,
+2026-10-23,rating_changed,483512,Kai Hung Chinese Takeaway,Takeaway/sandwich shop,Lambeth,SE24 0LD,3,5,,
+2026-10-23,rating_changed,484162,Kings Arms,Pub/bar/nightclub,Lambeth,SE11 4XD,4,3,,
+2026-10-23,rating_changed,1789265,Lala Cafe,Restaurant/Cafe/Canteen,Lambeth,SW2 4RD,3,5,,
+2026-10-23,rating_changed,1982971,Macatia And Coffee,Restaurant/Cafe/Canteen,Lambeth,SE24 9JU,AwaitingInspection,5,,
+2026-10-23,rating_changed,1937281,Maxxi Food Centre,Retailers - other,Lambeth,SE27 0QT,AwaitingInspection,1,,
+2026-10-23,rating_changed,1986520,Rice Studio,Restaurant/Cafe/Canteen,Lambeth,SE1 7AB,AwaitingInspection,5,,
+2026-10-23,rating_changed,1960581,The Chutney,Takeaway/sandwich shop,Lambeth,SE27 9BW,AwaitingInspection,5,,
+2026-10-23,rating_changed,830155,The Two Towers,Pub/bar/nightclub,Lambeth,SE27 9QY,4,3,,
+2026-10-23,rating_changed,1962028,Tipsy Hill,Retailers - other,Lambeth,SE19 1QS,AwaitingInspection,5,,
+2026-10-23,rating_changed,980802,Woodfield Grove Tennis Club,Restaurant/Cafe/Canteen,Lambeth,SW16 1LR,AwaitingInspection,5,,
 2026-10-23,rating_changed,1079214,Samiz Chicken & Pizza,Takeaway/sandwich shop,Newham,E12 5JY,5,3,0.054929,51.553504
 2026-10-23,rating_changed,1957252,Usman Halal Meat,Retailers - other,Newham,E12 5JR,AwaitingInspection,1,0.0583781,51.5545771
 2026-10-23,rating_changed,1492812,A's Coffee Shop Ltd,Takeaway/sandwich shop,Redbridge,IG2 6BN,AwaitingInspection,4,0.083435,51.5755201
 2026-10-23,rating_changed,1932813,The Sixth Element,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW14 8AH,AwaitingInspection,3,-0.2644322,51.4650785
+2026-10-23,rating_changed,1917001,"Bella Villa Authentic Italian Restaurant, Insalata di Roma",Restaurant/Cafe/Canteen,Tower Hamlets,E1 2DW,5,AwaitingInspection,,
+2026-10-23,rating_changed,41806,Candys Newsagents,Retailers - other,Tower Hamlets,E1 3BS,3,5,,
 2026-10-23,rating_changed,1149270,Ethical Bean Company,Restaurant/Cafe/Canteen,Tower Hamlets,E3 2NG,5,4,-0.022929,51.538053
+2026-10-23,rating_changed,1355412,Mackbear Coffee,Restaurant/Cafe/Canteen,Tower Hamlets,E1 4GL,4,5,,
+2026-10-23,rating_changed,1907068,New Grillfellaz,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6LG,0,AwaitingInspection,,
 2026-10-23,rating_changed,515189,Shernhall Street Market,Retailers - other,Waltham Forest,E17 3EY,1,0,-0.0080192,51.5873148
 2026-10-23,rating_changed,1964417,Beirut counter,Mobile caterer,Wandsworth,"",AwaitingInspection,1,,
 2026-10-23,rating_changed,1898842,Express Cleopatra restaurant uk,Restaurant/Cafe/Canteen,Westminster,W2 1RL,5,0,-0.1744474,51.5160229
 2026-10-23,rating_changed,411551,Franco's Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1Y 6LX,5,2,-0.1397395,51.507564
 2026-10-23,rating_changed,1982107,Noodle and Snack,Restaurant/Cafe/Canteen,Westminster,W1T 6QH,AwaitingInspection,4,-0.1418685,51.5228763
 2026-10-23,rating_changed,1986216,VE/LA,Restaurant/Cafe/Canteen,Westminster,W1S 1AY,AwaitingInspection,4,-0.1437713,51.5126008
+2026-10-23,removed,1939924,Arina Restaurant,Restaurant/Cafe/Canteen,Barnet,N12 8LJ,4,,-0.1770445,51.6142867
+2026-10-23,removed,2005666,Haleema kitchen,Other catering premises,Harrow,HA8,AwaitingInspection,,,
+2026-10-23,removed,1290400,Mardin supermarkets,Retailers - other,Harrow,HA2 9BN,4,,-0.3654027,51.5643666
+2026-10-23,removed,1682801,ZAHEER SUPERMARKET LTD,Retailers - other,Harrow,HA2 9BN,3,,-0.3654027,51.5643666
+2026-10-23,removed,1345461,A-Z Grocery,Retailers - other,Lambeth,SW9 7BJ,3,,-0.1066012,51.4759955
+2026-10-23,removed,1968845,Drippt Made It,Other catering premises,Lambeth,SW16,AwaitingInspection,,,
+2026-10-23,removed,1424410,Frutto Cafe,Takeaway/sandwich shop,Lambeth,SW9 7AE,2,,-0.1147688,51.4641891
+2026-10-23,removed,902840,Lambeth Pizza & Cheeky Panda,Takeaway/sandwich shop,Lambeth,SE11 6SF,4,,-0.110515,51.49421
+2026-10-23,removed,484226,Maxin Fried Chicken,Takeaway/sandwich shop,Lambeth,SE27 0QP,4,,-0.105752,51.423478
+2026-10-23,removed,1993265,Mucho Picante,Takeaway/sandwich shop,Lambeth,SW4 7BX,AwaitingInspection,,-0.134761,51.459581
+2026-10-23,removed,2001421,STONE FIRE PIZZA LTD,Takeaway/sandwich shop,Lambeth,SE27 9AZ,AwaitingInspection,,-0.1066489,51.4408836
+2026-10-23,removed,1437587,Detroit Pizza London,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6BD,2,,-0.073921,51.517499
