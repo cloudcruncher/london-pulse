@@ -10,6 +10,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-23,rating_changed,1246307,Leonardo Royal Hotel London St Pauls,Hotel/bed & breakfast/guest house,City of London Corporation,EC4V 5AJ,5,4,-0.099429,51.512744
 2026-10-23,rating_changed,1689552,Olive Dining At Kensington Avenue Primary School,School/college/university,Croydon,CR7 8BT,4,2,-0.112126998603344,51.4108467102051
 2026-10-23,rating_changed,1552757,H C L  Edmonton County Bury Campus,Other catering premises,Enfield,N9 9JZ,4,3,-0.079823,51.633086
+2026-10-23,rating_changed,1031014,Metro Food Centre,Retailers - other,Enfield,EN3 4HB,4,AwaitingPublication,-0.047377,51.646993
 2026-10-23,rating_changed,847086,Intercontinental London - The O2 - H,Hotel/bed & breakfast/guest house,Greenwich,SE10 0TW,5,2,-0.0001133,51.5028455
 2026-10-23,rating_changed,1598106,Sefa Restaurant,Restaurant/Cafe/Canteen,Greenwich,SE10 9TX,4,3,0.0024281,51.4845919
 2026-10-23,rating_changed,694714,Sunset Chicken,Takeaway/sandwich shop,Greenwich,SE3 8RP,5,3,0.0352974,51.4744134
