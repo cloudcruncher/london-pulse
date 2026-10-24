@@ -1,0 +1,30 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-24,rating_changed,1999069,Alaz Turkish Cuisine,Restaurant/Cafe/Canteen,Barnet,NW11 0AL,AwaitingInspection,4,-0.200084,51.587952
+2026-10-24,rating_changed,1960717,Oriental House / New Ocean Bar,Takeaway/sandwich shop,Barnet,NW9 5XB,AwaitingInspection,2,-0.2445278,51.6025939
+2026-10-24,rating_changed,1964054,Indian House,Takeaway/sandwich shop,Croydon,CR5 2RB,AwaitingInspection,4,-0.1399504,51.3202473
+2026-10-24,rating_changed,1973963,Punta Cana Bar & Restaurant,Restaurant/Cafe/Canteen,Croydon,CR7 8JJ,AwaitingInspection,4,-0.0996439978480339,51.4049797058105
+2026-10-24,rating_changed,1964053,Yardies Grill,Mobile caterer,Croydon,SE25,AwaitingInspection,4,,
+2026-10-24,rating_changed,1033045,Costa Coffee,Restaurant/Cafe/Canteen,Ealing,W5 5JY,5,4,-0.3029677,51.5125386
+2026-10-24,rating_changed,1399707,JiChickens,Restaurant/Cafe/Canteen,Haringey,N22 6HH,4,3,-0.106502,51.5931903
+2026-10-24,rating_changed,1604747,Besi Bar Restaurant,Restaurant/Cafe/Canteen,Havering,RM1 1DL,4,1,0.177232,51.581694
+2026-10-24,rating_changed,1838213,CREM Kitchen,Restaurant/Cafe/Canteen,Havering,RM2 5EB,5,3,0.192336,51.584524
+2026-10-24,rating_changed,519225,Bourne Food and Wine,Retailers - other,Hillingdon,UB3 1PS,4,3,-0.441014,51.502611
+2026-10-24,rating_changed,519657,Cranford Park Academy - Pabulum catering,School/college/university,Hillingdon,UB3 4LQ,5,4,-0.419676,51.495501
+2026-10-24,rating_changed,1692274,Evergreen,Restaurant/Cafe/Canteen,Hillingdon,TW6,5,3,,
+2026-10-24,rating_changed,1705584,Hungry Olive,Restaurant/Cafe/Canteen,Hillingdon,HA4 8JN,5,1,-0.423292011022568,51.5735397338867
+2026-10-24,rating_changed,1430833,Grown by nature,Retailers - other,Islington,EC1V 1LA,2,3,-0.0984766,51.5301845
+2026-10-24,rating_changed,1993266,Brixton Quality Fresh Fish & Seafood,Retailers - other,Lambeth,SW9 8JX,AwaitingInspection,1,-0.11430499702692,51.46240234375
+2026-10-24,rating_changed,483242,Ever Fresh Food & Wine,Retailers - other,Lambeth,SW9 6BT,2,1,-0.112001,51.479504
+2026-10-24,rating_changed,1982973,Harry Otto & Sons,Retailers - other,Lambeth,SW9 8PR,AwaitingInspection,4,-0.1126895,51.4626642
+2026-10-24,rating_changed,1704546,Jasmine Garden/ Grill Planet/ Red Planet Pizza,Takeaway/sandwich shop,Lewisham,SE14 6QJ,3,4,-0.031696,51.472859
+2026-10-24,rating_changed,1977069,CRMBL,Restaurant/Cafe/Canteen,Newham,E12 6DB,AwaitingInspection,4,0.0542491,51.5525811
+2026-10-24,rating_changed,1562107,Chill With Chai,Restaurant/Cafe/Canteen,Newham,E6 1DQ,1,4,0.0503225,51.5400677
+2026-10-24,rating_changed,1527113,Deano,Mobile caterer,Newham,"",5,3,-0.001962443374028,51.5418534586361
+2026-10-24,rating_changed,1725080,Shahs Halal Food,Mobile caterer,Newham,E15 1NG,5,4,0.0021976,51.5415663
+2026-10-24,rating_changed,950283,Bankside sandwich shop,Restaurant/Cafe/Canteen,Southwark,SE1 0SW,5,4,-0.101584,51.506313
+2026-10-24,rating_changed,1096381,Levan,Other catering premises,Southwark,SE15 4QL,5,4,-0.0703020021319389,51.4694366455078
+2026-10-24,rating_changed,102172,Franze & Evans,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7DL,5,1,-0.0726197,51.5248611
+2026-10-24,rating_changed,1570321,GreedyCow Bakes,Manufacturers/packers,Tower Hamlets,E2 8PP,5,2,-0.0627806,51.531821
+2026-10-24,rating_changed,78946,Leila's Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7JP,5,3,-0.076341,51.526081
+2026-10-24,rating_changed,411826,Bonne Bouche,Restaurant/Cafe/Canteen,Westminster,W2 1RL,4,2,-0.1736201,51.5165735
+2026-10-24,rating_changed,414470,Sofra Restaurant,Restaurant/Cafe/Canteen,Westminster,W1U 1LT,0,3,-0.1500894,51.5153085
