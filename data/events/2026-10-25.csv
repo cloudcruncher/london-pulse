@@ -1,0 +1,34 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-25,rating_changed,757396,Hendon Rugby Football Club,Pub/bar/nightclub,Barnet,NW4 1RL,0,3,-0.226415,51.603873
+2026-10-25,rating_changed,1993380,Jeevs Catering @ West Wickham FC,Takeaway/sandwich shop,Bromley,BR4 9BB,AwaitingInspection,1,,
+2026-10-25,rating_changed,1746904,Bachelors Kitchen,Other catering premises,Croydon,CR8,AwaitingInspection,4,,
+2026-10-25,rating_changed,1947292,CC's Cuisine / Carib-Nibbs,Other catering premises,Croydon,CR0,AwaitingInspection,4,,
+2026-10-25,rating_changed,1979517,Pillai's Kitchen,Mobile caterer,Croydon,CR0,AwaitingInspection,4,,
+2026-10-25,rating_changed,1973964,Vrindavan,Restaurant/Cafe/Canteen,Croydon,CR7 6BD,AwaitingInspection,4,-0.116466000676155,51.3923835754395
+2026-10-25,rating_changed,469062,Akdeniz Bakery,Retailers - other,Hackney,N16 7PB,4,2,-0.073882,51.5584872
+2026-10-25,rating_changed,468793,Atlantic Fish Bar,Takeaway/sandwich shop,Hackney,N4 2EX,4,2,-0.0928485,51.564112
+2026-10-25,rating_changed,469974,Cafe Z Bar,Restaurant/Cafe/Canteen,Hackney,N16 7PB,3,0,-0.0739992,51.5584441
+2026-10-25,rating_changed,470547,Dream Cafe,Restaurant/Cafe/Canteen,Hackney,N4 2EX,3,2,-0.0928747,51.5641754
+2026-10-25,rating_changed,1527049,Nemos Fish Barr LTD,Restaurant/Cafe/Canteen,Hackney,N16 9DL,5,2,-0.0901054,51.5572599
+2026-10-25,rating_changed,470632,The Brownswood Park Tavern,Pub/bar/nightclub,Hackney,N4 2EX,4,2,-0.0927677,51.5639758
+2026-10-25,rating_changed,1385259,Cafe Rosa,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT5 9AG,5,3,-0.2823225,51.3900199
+2026-10-25,rating_changed,484400,Bombay Bicycle Chef,Takeaway/sandwich shop,Lambeth,SW8 3RX,5,1,-0.150244,51.466858
+2026-10-25,rating_changed,1974308,Crust And Flame,Takeaway/sandwich shop,Lambeth,SW4 9EQ,AwaitingInspection,3,-0.140037,51.455861
+2026-10-25,rating_changed,1439840,Londis,Retailers - other,Lambeth,SW2 3BJ,4,3,-0.117837,51.4375477
+2026-10-25,rating_changed,1957851,Chamigos Upton Park Ltd,Restaurant/Cafe/Canteen,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-10-25,rating_changed,1987649,Chicking,Takeaway/sandwich shop,Newham,E6 1HW,AwaitingInspection,3,,
+2026-10-25,rating_changed,1977092,Crisp And Cloud,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-10-25,rating_changed,1981507,Delight Of Hyderabad,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,3,0.0360016,51.5368296
+2026-10-25,rating_changed,1544275,Hardies Peri Peri,Restaurant/Cafe/Canteen,Newham,E15 1XE,5,2,-0.0001274,51.5418219
+2026-10-25,rating_changed,1964375,Las Fierbinti,Retailers - other,Newham,E6 3HN,AwaitingInspection,4,0.0556987,51.5277716
+2026-10-25,rating_changed,1960159,Mughlai Town Ltd - Unit 11,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-10-25,rating_changed,1984397,Pista House London,Restaurant/Cafe/Canteen,Newham,E6 2JT,AwaitingInspection,2,0.0547942,51.5333
+2026-10-25,rating_changed,1991886,Tech N Talk Ltd,Retailers - other,Newham,E6 1AA,AwaitingInspection,4,0.040281,51.537572
+2026-10-25,rating_changed,1354371,The Whale Tea,Restaurant/Cafe/Canteen,Newham,E15 1XE,5,3,-0.0001274,51.5418219
+2026-10-25,rating_changed,941701,Cinar Grill,Takeaway/sandwich shop,Waltham Forest,E17 4QH,3,4,-0.020439,51.5865359
+2026-10-25,rating_changed,1001940,Island Spot Cuisine,Restaurant/Cafe/Canteen,Waltham Forest,E17 4PJ,3,1,-0.0171809,51.5907522
+2026-10-25,rating_changed,1994007,Maison Misba,Restaurant/Cafe/Canteen,Waltham Forest,E10 7DT,AwaitingInspection,1,-0.017919,51.5724472
+2026-10-25,rating_changed,514459,Tesco at Esso Filling Station,Retailers - supermarkets/hypermarkets,Waltham Forest,E17 9DZ,3,4,-0.0069749,51.5788442
+2026-10-25,rating_changed,941360,76 Dean Street,Restaurant/Cafe/Canteen,Westminster,W1D 3SQ,5,3,-0.133053,51.5139055
+2026-10-25,rating_changed,1812729,ICCO,Restaurant/Cafe/Canteen,Westminster,W1D 4DZ,5,2,-0.1304822,51.5136847
+2026-10-25,rating_changed,1939733,Yam - Yam,Restaurant/Cafe/Canteen,Westminster,W2 4QH,AwaitingInspection,4,-0.1877376,51.5124026
