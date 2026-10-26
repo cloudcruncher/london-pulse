@@ -12,6 +12,30 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-26,new,2007340,Papa Johns,Takeaway/sandwich shop,Greenwich,SE18 6DS,,AwaitingInspection,,
 2026-10-26,new,2007339,Papa Johns,Takeaway/sandwich shop,Greenwich,SE10 0RF,,AwaitingInspection,,
 2026-10-26,new,2007346,SweetMouthKitchen,Other catering premises,Greenwich,SE18,,AwaitingInspection,,
+2026-10-26,new,2007695,Aussie Gourmet Kitchen /  Aussie Catering,Retailers - other,Hounslow,TW8 0FJ,,AwaitingInspection,,
+2026-10-26,new,2007685,BROTHERS VAPE WHOLESALE LTD,Retailers - other,Hounslow,UB2 5NH,,AwaitingInspection,,
+2026-10-26,new,2007705,Bakebykeshi,Retailers - other,Hounslow,TW7,,AwaitingInspection,,
+2026-10-26,new,2007696,Beneva Health,Retailers - other,Hounslow,TW4 7LX,,AwaitingInspection,,
+2026-10-26,new,2007698,Brenn Ltd,Retailers - other,Hounslow,TW8,,AwaitingInspection,,
+2026-10-26,new,2007686,Flake & Ale,Retailers - other,Hounslow,W4 2,,AwaitingInspection,,
+2026-10-26,new,2007701,For Joy,Retailers - other,Hounslow,TW13,,AwaitingInspection,,
+2026-10-26,new,2007703,GenZero,Retailers - other,Hounslow,TW5 9EA,,AwaitingInspection,,
+2026-10-26,new,2007690,HF,Mobile caterer,Hounslow,TW13,,AwaitingInspection,,
+2026-10-26,new,2007704,Keo’s Mart Ltd,Retailers - other,Hounslow,UB2 5TT,,AwaitingInspection,,
+2026-10-26,new,2007697,LAHORE KARAHI,Restaurant/Cafe/Canteen,Hounslow,TW3 1EH,,AwaitingInspection,,
+2026-10-26,new,2007693,LUVÈ,Retailers - other,Hounslow,"",,AwaitingInspection,,
+2026-10-26,new,2007694,Londis – Hounslow,Retailers - other,Hounslow,TW4,,AwaitingInspection,,
+2026-10-26,new,2007702,Lumora Wellness,Retailers - other,Hounslow,TW4,,AwaitingInspection,,
+2026-10-26,new,490770,MAGIC CORN,Takeaway/sandwich shop,Hounslow,TW3 1LR,,AwaitingInspection,,
+2026-10-26,new,490321,Mehfil Mitran Di,Restaurant/Cafe/Canteen,Hounslow,TW5,,AwaitingInspection,,
+2026-10-26,new,2007691,N Sharma,Takeaway/sandwich shop,Hounslow,TW13,,AwaitingInspection,,
+2026-10-26,new,2007687,Nando's,Restaurant/Cafe/Canteen,Hounslow,TW13 4BU,,5,,
+2026-10-26,new,2007689,Okepounds and Chan’s Grill,Mobile caterer,Hounslow,TW5 9PP,,AwaitingInspection,,
+2026-10-26,new,2007688,Piroozi Grocery,Retailers - other,Hounslow,TW13 4DL,,AwaitingInspection,,
+2026-10-26,new,2007692,Puffology,Restaurant/Cafe/Canteen,Hounslow,TW3 3PB,,AwaitingInspection,,
+2026-10-26,new,2007700,Rubloo Toys,Retailers - other,Hounslow,TW8 8NN,,AwaitingInspection,,
+2026-10-26,new,2007706,Sandy Candy,Retailers - other,Hounslow,W4 1LW,,AwaitingInspection,,
+2026-10-26,new,2007699,hmoments.co Ltd,Mobile caterer,Hounslow,TW5,,AwaitingInspection,,
 2026-10-26,new,2007388,Bulve,Other catering premises,Newham,E6 5,,AwaitingInspection,,
 2026-10-26,new,2007383,Butter Theory,Other catering premises,Newham,E15,,AwaitingInspection,,
 2026-10-26,new,2007378,Crafted Bites,Other catering premises,Newham,E12,,AwaitingInspection,,
@@ -61,6 +85,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-26,rating_changed,1974196,Fat Chef Maxim Cakes Kitchen,Other catering premises,Greenwich,SE3,AwaitingInspection,5,,
 2026-10-26,rating_changed,847086,Intercontinental London - The O2 - H,Hotel/bed & breakfast/guest house,Greenwich,SE10 0TW,2,5,,
 2026-10-26,rating_changed,1606126,Fika,Restaurant/Cafe/Canteen,Hackney,E5 0LP,5,4,-0.0441462,51.5528152
+2026-10-26,rating_changed,1250950,Alexandra Montessori,Caring Premises,Hounslow,TW3 1LS,4,5,,
+2026-10-26,rating_changed,1466587,Cafe Treatz Feltham Ltd.,Restaurant/Cafe/Canteen,Hounslow,TW13 4BU,4,5,,
+2026-10-26,rating_changed,489833,Dusra Indian Restaurant,Restaurant/Cafe/Canteen,Hounslow,W4 2ED,AwaitingInspection,5,,
+2026-10-26,rating_changed,491200,Frankies Fish & Chips Ltd.,Takeaway/sandwich shop,Hounslow,TW13 5DL,3,0,,
+2026-10-26,rating_changed,491232,Gusto Italiano,Takeaway/sandwich shop,Hounslow,TW13 6AW,5,4,,
+2026-10-26,rating_changed,490348,Travelodge,Hotel/bed & breakfast/guest house,Hounslow,TW13 4GU,4,5,,
 2026-10-26,rating_changed,1965885,Bakd London,Other catering premises,Newham,E12,AwaitingInspection,5,,
 2026-10-26,rating_changed,860718,Caner Supermarket,Retailers - other,Newham,E7 9DU,4,5,,
 2026-10-26,rating_changed,1960158,Dharu Chini - Unit 8,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,2,0.0360016,51.5368296
@@ -80,6 +110,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-26,removed,1987420,Black Sheep Coffee,Restaurant/Cafe/Canteen,City of London Corporation,EC4R 1QS,AwaitingInspection,,-0.0932468,51.5107742
 2026-10-26,removed,1407953,Gordon Ramsay Street Burger,Restaurant/Cafe/Canteen,City of London Corporation,EC2V 6AG,5,,-0.095023,51.514021
 2026-10-26,removed,294424,Karaoke Box,Pub/bar/nightclub,City of London Corporation,EC1A 9LA,4,,-0.102714,51.517977
+2026-10-26,removed,1274895,Donburi And Co Croydon,Takeaway/sandwich shop,Croydon,CR0 1NG,4,,-0.0995170027017593,51.3681449890137
 2026-10-26,removed,694934,Anglesea Arms,Pub/bar/nightclub,Greenwich,SE18 6EF,5,,0.0671201,51.4886857
 2026-10-26,removed,694835,Bull Tavern,Pub/bar/nightclub,Greenwich,SE18 6RF,5,,0.0693761,51.4895182
 2026-10-26,removed,1587863,CookieHigh,Other catering premises,Greenwich,SE10,5,,,
@@ -92,8 +123,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-26,removed,1978842,Maya’s Kitchen,Other catering premises,Greenwich,SE7,AwaitingInspection,,,
 2026-10-26,removed,1983323,Mont Chard,Other catering premises,Greenwich,SE3,AwaitingInspection,,,
 2026-10-26,removed,717478,NUTRI on-the-go,Retailers - other,Greenwich,SE12 9AW,Exempt,,0.029029,51.4424985
-2026-10-26,removed,1223637,Papa Johns,Takeaway/sandwich shop,Greenwich,SE18 6DS,5,,0.0623221,51.4934464
 2026-10-26,removed,1845964,Papa Johns,Restaurant/Cafe/Canteen,Greenwich,SE10 0RF,5,,0.0128383,51.4863148
+2026-10-26,removed,1223637,Papa Johns,Takeaway/sandwich shop,Greenwich,SE18 6DS,5,,0.0623221,51.4934464
 2026-10-26,removed,1728035,Professional Project Catering,Restaurant/Cafe/Canteen,Greenwich,SE10 0JF,5,,0.0099113,51.4980077
 2026-10-26,removed,1598086,Star of Greenwich,Pub/bar/nightclub,Greenwich,SE10 9NY,5,,-0.0004901,51.4842107
 2026-10-26,removed,1653759,THE KITCHEN,Takeaway/sandwich shop,Greenwich,SE10 0NW,5,,,
