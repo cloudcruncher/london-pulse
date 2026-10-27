@@ -1,0 +1,35 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-27,rating_changed,1617062,Amin Charcoal & Pizza,Takeaway/sandwich shop,Barnet,NW9 5XA,2,1,-0.245009,51.602516
+2026-10-27,rating_changed,1570487,The Oval Brasserie,Restaurant/Cafe/Canteen,Bexley,DA15 9ER,3,0,0.1024,51.445127
+2026-10-27,rating_changed,1981212,CINNAMOOD LONDON,Restaurant/Cafe/Canteen,Camden,NW1 8QP,AwaitingInspection,3,-0.1431091,51.5398562
+2026-10-27,rating_changed,1784194,Tonkin Cafe,Restaurant/Cafe/Canteen,Camden,EC1N 7TE,AwaitingInspection,2,-0.1095815,51.5200134
+2026-10-27,rating_changed,1411746,Tonkotsu,Restaurant/Cafe/Canteen,Camden,NW5 2TJ,5,4,-0.1410053,51.5500746
+2026-10-27,rating_changed,859940,"Vacherin By Compass Group UK, SEB",Restaurant/Cafe/Canteen,City of London Corporation,EC4V 5ER,5,2,-0.097931,51.512711
+2026-10-27,rating_changed,1807042,Hungry Caterpillar Day Nurseries @ PureGym Northolt,Caring Premises,Ealing,UB5 6AG,5,4,-0.365057,51.542762
+2026-10-27,rating_changed,1033099,Mount Park Montessori,Caring Premises,Ealing,W5 1QP,4,1,-0.312777,51.526501
+2026-10-27,rating_changed,1974968,Nataly's,Takeaway/sandwich shop,Enfield,N13 4YE,AwaitingInspection,4,-0.109516,51.6176174
+2026-10-27,rating_changed,1730736,Rs Chicken,Takeaway/sandwich shop,Enfield,N13 5PE,1,2,-0.1059456,51.6207971
+2026-10-27,rating_changed,1977196,Whitestar Foundation,Other catering premises,Enfield,N18 2HN,AwaitingInspection,4,-0.057286,51.6168537
+2026-10-27,rating_changed,1501278,Ikeja Kitchen,Restaurant/Cafe/Canteen,Haringey,N15 4DJ,5,4,-0.069227,51.5842823
+2026-10-27,rating_changed,1625748,Chickaholic,Takeaway/sandwich shop,Havering,RM7 8BU,3,2,0.164675,51.582933
+2026-10-27,rating_changed,1992991,Afgani Burger,Restaurant/Cafe/Canteen,Hillingdon,UB3 3HA,AwaitingInspection,1,-0.4149459,51.5092495
+2026-10-27,rating_changed,491011,Flamingo Flames Ltd,Takeaway/sandwich shop,Hounslow,TW13 6SA,5,3,-0.3899528,51.430794
+2026-10-27,rating_changed,491148,Mann Traders,Retailers - other,Hounslow,TW13 4QZ,4,3,-0.42459,51.4372101
+2026-10-27,rating_changed,490330,Papas Pizza,Takeaway/sandwich shop,Hounslow,TW13 4HT,5,3,-0.4189805,51.4393719
+2026-10-27,rating_changed,1580158,Chip Inn,Takeaway/sandwich shop,Islington,N7 8DJ,4,2,-0.1098448,51.5505389
+2026-10-27,rating_changed,765705,Trinity Hall Kindergarden,Caring Premises,Redbridge,E18 1QQ,3,4,0.028899,51.588362
+2026-10-27,rating_changed,851685,MATE,Other catering premises,Richmond-Upon-Thames,TW2,AwaitingInspection,4,,
+2026-10-27,rating_changed,1960413,Rosiah group limited,Retailers - other,Southwark,SE5 0BA,AwaitingInspection,4,-0.0939403,51.4758086
+2026-10-27,rating_changed,363381,The swan,Restaurant/Cafe/Canteen,Southwark,SE1 9DT,1,4,-0.096609,51.508121
+2026-10-27,rating_changed,1920993,Ebb and Flow,Pub/bar/nightclub,Sutton,SM1 1DT,AwaitingInspection,3,-0.1925684,51.3616509
+2026-10-27,rating_changed,933551,Amkari Wine Bar,Retailers - other,Tower Hamlets,E2 8QB,5,4,-0.0651422,51.5329121
+2026-10-27,rating_changed,1802803,Hermanos Coffee Roasters,Restaurant/Cafe/Canteen,Tower Hamlets,E1 8PY,5,4,-0.067428,51.5126535
+2026-10-27,rating_changed,75598,Perfect Fried Chicken,Takeaway/sandwich shop,Tower Hamlets,E1 5DW,3,1,-0.060464,51.522807
+2026-10-27,rating_changed,1538300,King Tasty Kebab,Takeaway/sandwich shop,Waltham Forest,E17 7DB,4,3,-0.0269875,51.583328
+2026-10-27,rating_changed,1991798,Buns & Buns,Restaurant/Cafe/Canteen,Westminster,WC2E 8RA,5,1,-0.122802,51.512248
+2026-10-27,rating_changed,427835,Hilton London Paddington Hotel,Hotel/bed & breakfast/guest house,Westminster,W2 1EE,5,4,-0.1759569,51.5157586
+2026-10-27,rating_changed,413040,Kai Mayfair,Restaurant/Cafe/Canteen,Westminster,W1K 2QU,5,4,-0.1516957,51.5087422
+2026-10-27,rating_changed,1660522,Micky Star Day nursery,School/college/university,Westminster,W2 1QR,5,3,-0.1708222,51.517648
+2026-10-27,rating_changed,1650756,SushiDog,Restaurant/Cafe/Canteen,Westminster,W1U 6RP,5,2,-0.1573237,51.5210428
+2026-10-27,rating_changed,411272,Wigmore Hall Restaurant,Restaurant/Cafe/Canteen,Westminster,W1U 2BP,5,4,-0.1482619,51.5166556
+2026-10-27,removed,1032367,Poonam Sweet Centre,Restaurant/Cafe/Canteen,Ealing,UB2 5DZ,2,,-0.3880592,51.5005648
