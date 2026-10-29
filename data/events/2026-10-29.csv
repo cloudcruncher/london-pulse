@@ -1,4 +1,28 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-29,new,1955597,A Taste Of Home,Mobile caterer,Croydon,SE25,,AwaitingInspection,,
+2026-10-29,new,2008896,Amelia Sourdough,Other catering premises,Croydon,SE25,,AwaitingInspection,,
+2026-10-29,new,2008906,Amitabh Pan Video,Retailers - other,Croydon,SW16 4AD,,AwaitingInspection,,
+2026-10-29,new,2008893,BEYAZ,Mobile caterer,Croydon,SE19,,AwaitingInspection,,
+2026-10-29,new,1522904,Banana Island Lounge,Restaurant/Cafe/Canteen,Croydon,SE25 6EZ,,AwaitingInspection,,
+2026-10-29,new,2008900,Boulevard Restaurant,Restaurant/Cafe/Canteen,Croydon,CR2 6PW,,AwaitingInspection,,
+2026-10-29,new,1979515,Cake In A Jar,Mobile caterer,Croydon,SE25,,AwaitingInspection,,
+2026-10-29,new,2008905,Chaffinch Brook,Caring Premises,Croydon,CR0 6NA,,AwaitingInspection,,
+2026-10-29,new,1979519,Curry Leaf,Restaurant/Cafe/Canteen,Croydon,CR5 1EH,,5,,
+2026-10-29,new,2008908,Fresh Grill Peri Peri,Takeaway/sandwich shop,Croydon,CR0 6BE,,AwaitingInspection,,
+2026-10-29,new,1973969,Il Raviolo,Mobile caterer,Croydon,SW16,,AwaitingInspection,,
+2026-10-29,new,1975817,Jash Enterprise,Importers/Exporters,Croydon,CR7,,AwaitingInspection,,
+2026-10-29,new,2008898,My Moms Bakes,Mobile caterer,Croydon,CR2,,AwaitingInspection,,
+2026-10-29,new,2008897,Petit Flan,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-10-29,new,2008901,Pierogi&Pasta,Mobile caterer,Croydon,CR2,,AwaitingInspection,,
+2026-10-29,new,1900912,Rams Chicken,Takeaway/sandwich shop,Croydon,CR0 2HR,,AwaitingInspection,,
+2026-10-29,new,1959978,Saborelle,Other catering premises,Croydon,CR5,,5,,
+2026-10-29,new,2008899,Sanderstead Tandoori,Restaurant/Cafe/Canteen,Croydon,CR2 0PH,,AwaitingInspection,,
+2026-10-29,new,1984862,Sara Food & Wine,Retailers - other,Croydon,SW16 3SD,,AwaitingInspection,,
+2026-10-29,new,2008904,Spiced Wok,Mobile caterer,Croydon,CR0,,AwaitingInspection,,
+2026-10-29,new,2008907,The Bun Room,Mobile caterer,Croydon,SW16,,AwaitingInspection,,
+2026-10-29,new,2008902,The Party Plug,Restaurant/Cafe/Canteen,Croydon,SE25 4TA,,AwaitingInspection,,
+2026-10-29,new,1947278,Trava Botanicals,Retailers - other,Croydon,SE19,,AwaitingInspection,,
+2026-10-29,new,1960012,WiseRolls,Takeaway/sandwich shop,Croydon,SW16 4BT,,AwaitingInspection,,
 2026-10-29,new,2008858,All Kaps,Takeaway/sandwich shop,Hackney,E8 1AL,,AwaitingInspection,,
 2026-10-29,new,2008861,Amazing Pastry,Other catering premises,Hackney,E2 8PA,,AwaitingInspection,,
 2026-10-29,new,2008863,Berrico FoodCompany UK Limited,Distributors/Transporters,Hackney,N1 7UX,,AwaitingInspection,,
@@ -10,6 +34,16 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,new,2008868,Six Seconds,Pub/bar/nightclub,Hackney,E8 4AA,,AwaitingInspection,,
 2026-10-29,new,2008867,Tenma,Restaurant/Cafe/Canteen,Hackney,N16 7QA,,AwaitingInspection,,
 2026-10-29,new,2008862,all plants,Manufacturers/packers,Hackney,EC2A 3AY,,AwaitingInspection,,
+2026-10-29,new,2009109,175/Duchy & Alcock,Restaurant/Cafe/Canteen,Lambeth,SE11 5SS,,AwaitingInspection,,
+2026-10-29,new,2009111,Bedser,Other catering premises,Lambeth,SE11 5SS,,AwaitingInspection,,
+2026-10-29,new,2009114,Dee's Bakes,Other catering premises,Lambeth,SW9,,AwaitingInspection,,
+2026-10-29,new,2009113,Edible Clouds Ltd,Mobile caterer,Lambeth,SE5,,AwaitingInspection,,
+2026-10-29,new,2009110,JM Finn/Roof Terrace,Restaurant/Cafe/Canteen,Lambeth,SE11 5SS,,AwaitingInspection,,
+2026-10-29,new,902840,Lambeth Pizza & Cheeky Panda,Takeaway/sandwich shop,Lambeth,SE11 6SF,,4,,
+2026-10-29,new,2009115,Mariolina Fieramonti,Other catering premises,Lambeth,SW2,,AwaitingInspection,,
+2026-10-29,new,2009112,Pavilion,Other catering premises,Lambeth,SE11 5SS,,AwaitingInspection,,
+2026-10-29,new,2009116,Rajan News,Retailers - other,Lambeth,SW9 8BA,,AwaitingInspection,,
+2026-10-29,new,2009118,"Roti'soir, Dalila Kitchen, Tukki, Tak'eat, Frenchcook",Takeaway/sandwich shop,Lambeth,SW9 6EJ,,AwaitingInspection,,
 2026-10-29,new,1982872,Beam,Restaurant/Cafe/Canteen,Tower Hamlets,E22 3AA,,5,,
 2026-10-29,new,2008840,Gomz,Retailers - other,Tower Hamlets,E14,,AwaitingInspection,,
 2026-10-29,new,2008838,Gozeren,Other catering premises,Tower Hamlets,E2 7,,AwaitingInspection,,
@@ -19,6 +53,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,new,2008836,Phat for Life,Restaurant/Cafe/Canteen,Tower Hamlets,E2 0AA,,AwaitingInspection,,
 2026-10-29,new,2008841,Smarkets Limited,Other catering premises,Tower Hamlets,E1W 1AZ,,AwaitingInspection,,
 2026-10-29,new,2008839,The Naan Yard,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6QR,,5,,
+2026-10-29,new,2008920,Al Sudani Services,Restaurant/Cafe/Canteen,Westminster,W2 1BS,,AwaitingInspection,,
+2026-10-29,new,1988745,Benugo  cafe deli at Paddington station,Restaurant/Cafe/Canteen,Westminster,W2 1RL,,5,,
+2026-10-29,new,1988727,Busaba,Restaurant/Cafe/Canteen,Westminster,W1F 0TS,,5,,
+2026-10-29,new,2000236,Cordelia's Mayfair,Restaurant/Cafe/Canteen,Westminster,W1J 8AE,,5,,
+2026-10-29,new,2000261,Fusion treats,Mobile caterer,Westminster,W2 6AE,,AwaitingInspection,,
+2026-10-29,new,2006611,LDN Eats,Restaurant/Cafe/Canteen,Westminster,W9 3AZ,,Exempt,,
+2026-10-29,new,1988729,Late Night Food Harrow Road,Retailers - other,Westminster,W9 2HP,,1,,
+2026-10-29,new,1963002,Maryams Nursery,Caring Premises,Westminster,W1U 4EA,,5,,
+2026-10-29,new,1982100,Patchi Chocolate,Retailers - other,Westminster,W1A 1AB,,5,,
 2026-10-29,rating_changed,1987836,New Food Wine,Retailers - other,Barking and Dagenham,IG11 7NY,AwaitingInspection,1,0.082208,51.535838
 2026-10-29,rating_changed,1669157,McKinnons,Retailers - other,Barnet,EN4 8SX,4,3,-0.163065,51.642825
 2026-10-29,rating_changed,1980907,Sushimania Finchley,Restaurant/Cafe/Canteen,Barnet,N12 0NL,AwaitingInspection,4,-0.175379,51.611859
@@ -26,7 +69,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,rating_changed,1904404,Punjabi Kitchen,Takeaway/sandwich shop,Bexley,DA17 5DA,1,4,0.146624,51.491457
 2026-10-29,rating_changed,1746405,JAPES,Restaurant/Cafe/Canteen,Camden,NW1 7PG,3,2,-0.1436694,51.5384892
 2026-10-29,rating_changed,1251719,Mother at the Mosaic,Restaurant/Cafe/Canteen,Camden,NW3 2HP,2,3,-0.157031998038292,51.5536079406738
+2026-10-29,rating_changed,1865478,Backstreet Brownies Co,Other catering premises,Croydon,SE19,AwaitingInspection,5,,
+2026-10-29,rating_changed,1930515,Croydon Food,Retailers - other,Croydon,CR0 1ND,AwaitingInspection,5,,
+2026-10-29,rating_changed,1988938,HCL At Robert Fitzroy Academy,School/college/university,Croydon,CR0 6JN,AwaitingInspection,5,,
+2026-10-29,rating_changed,1012433,Harrison Catering Services At Beulah Junior School,School/college/university,Croydon,CR7 8JF,5,4,,
 2026-10-29,rating_changed,1955592,Little Bay,Restaurant/Cafe/Canteen,Croydon,CR2 6PB,AwaitingInspection,1,-0.0962639972567558,51.3620758056641
+2026-10-29,rating_changed,1636849,Lotus House,Caring Premises,Croydon,CR0 6AJ,3,5,,
+2026-10-29,rating_changed,1645269,Red Gates Primary School,School/college/university,Croydon,CR2 8HD,4,5,,
+2026-10-29,rating_changed,1606062,Tenderlinks Day Nursery,Caring Premises,Croydon,SW16 4DN,4,5,,
+2026-10-29,rating_changed,1962121,The Spruces,Caring Premises,Croydon,CR2 7PB,AwaitingInspection,5,,
 2026-10-29,rating_changed,2006910,Gokul Sweets & Savouries,Restaurant/Cafe/Canteen,Ealing,UB1 1SW,AwaitingInspection,3,-0.376097,51.509725
 2026-10-29,rating_changed,913463,Happy Choo Choo Nursery,Caring Premises,Ealing,W7 1AG,5,1,-0.338439,51.522497
 2026-10-29,rating_changed,1985665,Juice Planet,Takeaway/sandwich shop,Ealing,UB2 4DD,AwaitingInspection,4,-0.383628,51.4995686
@@ -46,14 +97,26 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,rating_changed,1914572,Chop N Chip,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W12 8ET,AwaitingInspection,4,-0.237647,51.499803
 2026-10-29,rating_changed,1438809,Hillingdon Fish Bar,Takeaway/sandwich shop,Hillingdon,UB10 0LR,4,2,-0.446779,51.530096
 2026-10-29,rating_changed,520153,Madeirinhas Portuguese Delicatessen,Retailers - other,Hillingdon,UB7 0DW,5,3,-0.454784,51.483128
+2026-10-29,rating_changed,1749627,Momo Rendezvous,Restaurant/Cafe/Canteen,Hillingdon,UB3 4FE,1,4,,
 2026-10-29,rating_changed,1742446,Radisson Blu London Heathrow,Hotel/bed & breakfast/guest house,Hillingdon,UB3 5AW,5,3,-0.4414122,51.4815301
 2026-10-29,rating_changed,1651079,ALB Lounge,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7HT,3,4,-0.2817728,51.3797422
 2026-10-29,rating_changed,1385939,Choc Box,Retailers - other,Kingston-Upon-Thames,KT9 2PH,5,4,-0.308369994163513,51.3628730773926
 2026-10-29,rating_changed,1759797,Koyal,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 5LR,5,3,-0.3108165,51.391801
+2026-10-29,rating_changed,1989392,Ah-Sigh-ee Limited,Restaurant/Cafe/Canteen,Lambeth,SW8 2JS,AwaitingInspection,5,,
 2026-10-29,rating_changed,484604,Best Kebab,Takeaway/sandwich shop,Lambeth,SW2 2TH,4,0,-0.113278,51.454831
+2026-10-29,rating_changed,483966,Bread & Roses,Pub/bar/nightclub,Lambeth,SW4 6DZ,3,5,,
+2026-10-29,rating_changed,576831,Costcutter,Retailers - other,Lambeth,SE5 8RX,4,5,,
+2026-10-29,rating_changed,1986511,El Sabor De Ramona LTD,Other catering premises,Lambeth,SW2,AwaitingInspection,5,,
+2026-10-29,rating_changed,958887,Firecracker,Restaurant/Cafe/Canteen,Lambeth,SE11 5DW,4,5,,
+2026-10-29,rating_changed,1999737,Gail's Bakery Brixton,Restaurant/Cafe/Canteen,Lambeth,SW9 8HE,AwaitingInspection,5,,
+2026-10-29,rating_changed,1730310,Godfather Stonebaked Pizza,Takeaway/sandwich shop,Lambeth,SE27 9AZ,3,1,,
+2026-10-29,rating_changed,1526548,Lucky Cat,Takeaway/sandwich shop,Lambeth,SW9 6BP,1,4,,
 2026-10-29,rating_changed,1986514,Lucky Chicken/One More Noodles,Restaurant/Cafe/Canteen,Lambeth,SE1 7JH,AwaitingInspection,2,-0.116821,51.495003
 2026-10-29,rating_changed,1987318,Merkato Spice,Restaurant/Cafe/Canteen,Lambeth,SW9 8BA,AwaitingInspection,3,-0.116537,51.4639027
+2026-10-29,rating_changed,1840604,Old Town Tandoori Indian/Clapham Noodles Bar,Takeaway/sandwich shop,Lambeth,SW4 0HD,AwaitingInspection,1,,
 2026-10-29,rating_changed,1937289,Smetra,Other catering premises,Lambeth,SW2 1NH,AwaitingInspection,4,-0.1164075,51.4576057
+2026-10-29,rating_changed,484052,Tasty House,Takeaway/sandwich shop,Lambeth,SE5 8RX,4,1,,
+2026-10-29,rating_changed,1493818,U Doma,Retailers - other,Lambeth,SE27 9RB,4,5,,
 2026-10-29,rating_changed,1991872,Desi delights,Retailers - other,Merton,SM4 5HJ,AwaitingInspection,3,-0.1969495,51.3993703
 2026-10-29,rating_changed,1844778,The Great Wall,Takeaway/sandwich shop,Newham,E6 3PG,2,1,0.057725,51.522763
 2026-10-29,rating_changed,1709974,Caroline's Pizza trading as Crush Burger,Takeaway/sandwich shop,Redbridge,IG4 5DX,5,1,0.058925,51.578424
@@ -79,10 +142,53 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,rating_changed,1659697,The Valley Cafe,Restaurant/Cafe/Canteen,Waltham Forest,E4 7PA,3,4,-0.0110864,51.6459885
 2026-10-29,rating_changed,1941866,Come and Chop,Other catering premises,Wandsworth,SW17,AwaitingInspection,4,,
 2026-10-29,rating_changed,413795,40 Greek Street,Restaurant/Cafe/Canteen,Westminster,W1D 4EB,5,2,-0.1304571,51.5132437
+2026-10-29,rating_changed,1991813,Bolo by Gennaro,Restaurant/Cafe/Canteen,Westminster,W1B 5AF,AwaitingInspection,5,,
 2026-10-29,rating_changed,413546,Brown's Hotel,Hotel/bed & breakfast/guest house,Westminster,W1S 4BP,5,4,-0.1423257,51.5091697
+2026-10-29,rating_changed,1991800,Cafe Eighty-One,Restaurant/Cafe/Canteen,Westminster,SW1X 7RB,AwaitingInspection,5,,
+2026-10-29,rating_changed,1986206,Chopa?s Kitchen,Other catering premises,Westminster,SW1W,AwaitingInspection,5,,
+2026-10-29,rating_changed,427980,Clarence Public House,Restaurant/Cafe/Canteen,Westminster,W1S 4LB,4,5,,
+2026-10-29,rating_changed,1581009,Cream Dream,Retailers - other,Westminster,WC2E 9HA,3,5,,
+2026-10-29,rating_changed,1893207,Damascus Bride,Restaurant/Cafe/Canteen,Westminster,W2 1BS,3,1,,
+2026-10-29,rating_changed,1986223,Deli by Chai Guys,Retailers - other,Westminster,W1A 1AB,AwaitingInspection,5,,
 2026-10-29,rating_changed,804085,Ember Yard,Restaurant/Cafe/Canteen,Westminster,W1F 8SU,5,4,-0.1366091,51.5154099
+2026-10-29,rating_changed,1991796,En Cuisine Cooking School (Kids En Cuisine limited),Other catering premises,Westminster,SW1V,AwaitingInspection,5,,
+2026-10-29,rating_changed,412639,Far East Restaurant,Restaurant/Cafe/Canteen,Westminster,W1D 5PS,2,5,,
+2026-10-29,rating_changed,414097,Gauthier,Restaurant/Cafe/Canteen,Westminster,W1D 5AF,4,5,,
+2026-10-29,rating_changed,1966155,Homey Espresso Bar,Restaurant/Cafe/Canteen,Westminster,W11 2RW,4,AwaitingInspection,,
+2026-10-29,rating_changed,1972949,JENKI,Restaurant/Cafe/Canteen,Westminster,W1F 0QB,AwaitingInspection,4,,
+2026-10-29,rating_changed,1991827,KOKORO ( Sushi on the quad),Takeaway/sandwich shop,Westminster,WC2R 2LS,AwaitingInspection,5,,
+2026-10-29,rating_changed,1978203,Made in Puglia ltd,Takeaway/sandwich shop,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-10-29,rating_changed,1966151,Milk Burger,Restaurant/Cafe/Canteen,Westminster,W2 5SH,AwaitingInspection,5,,
+2026-10-29,rating_changed,1982127,Mr Mughlai London,Restaurant/Cafe/Canteen,Westminster,W2 2HR,AwaitingInspection,5,,
+2026-10-29,rating_changed,1961573,NQ64,Pub/bar/nightclub,Westminster,W1D 4AR,AwaitingInspection,5,,
+2026-10-29,rating_changed,1932720,Sandwich Sandwich,Restaurant/Cafe/Canteen,Westminster,W2 1HB,2,5,,
+2026-10-29,rating_changed,1982137,Solis,Restaurant/Cafe/Canteen,Westminster,W1B 5QD,AwaitingInspection,5,,
+2026-10-29,rating_changed,1991835,Streat Latin food Victoria,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-10-29,rating_changed,1972938,SushiDog St. James's Park,Restaurant/Cafe/Canteen,Westminster,SW1H 0BF,AwaitingInspection,5,,
 2026-10-29,rating_changed,1982126,TASTE THE BEST TRADING LTD,Retailers - other,Westminster,SW1E 5ND,AwaitingInspection,4,-0.1438242,51.4964148
+2026-10-29,rating_changed,411900,The Colony Club Limited,Restaurant/Cafe/Canteen,Westminster,W1J 7SA,4,5,,
+2026-10-29,rating_changed,1982130,The Good Eating Company,Other catering premises,Westminster,SW1A 1LY,AwaitingInspection,5,,
+2026-10-29,rating_changed,411581,The Gore Hotel,Hotel/bed & breakfast/guest house,Westminster,SW7 5EX,3,5,,
+2026-10-29,rating_changed,1873485,Victoria Spice,Restaurant/Cafe/Canteen,Westminster,SW1P 1JU,1,2,,
+2026-10-29,rating_changed,411272,Wigmore Hall Restaurant,Restaurant/Cafe/Canteen,Westminster,W1U 2BP,4,5,,
 2026-10-29,rating_changed,412056,Yathu Food & Wine,Retailers - other,Westminster,W10 4BA,3,1,-0.2103877,51.531972
+2026-10-29,removed,1593392,Baking Away By A,Other catering premises,Croydon,CR0,5,,,
+2026-10-29,removed,563284,Bhavin News,Retailers - other,Croydon,CR7 7HQ,5,,-0.1111059,51.3879522
+2026-10-29,removed,1544980,Carters,Restaurant/Cafe/Canteen,Croydon,SE25 6EB,4,,-0.0751790031790733,51.3990135192871
+2026-10-29,removed,1288497,Chicken Valley,Takeaway/sandwich shop,Croydon,CR0 1ND,4,,-0.100234001874924,51.3702697753906
+2026-10-29,removed,1546128,Crims Day Nursery,Caring Premises,Croydon,CR0 2XU,5,,-0.0987215,51.3857557
+2026-10-29,removed,1685276,Croydon Charcoal Grill,Takeaway/sandwich shop,Croydon,CR0 6BE,5,,-0.0891750007867813,51.3791542053223
+2026-10-29,removed,1975819,Goodie,Other catering premises,Croydon,CR2,AwaitingInspection,,,
+2026-10-29,removed,1979540,Holy Guacamole & Vamos,Mobile caterer,Croydon,CR0 1BE,AwaitingInspection,,-0.0986507,51.3669955
+2026-10-29,removed,1979511,HongwanDuck,Mobile caterer,Croydon,CR0,AwaitingInspection,,,
+2026-10-29,removed,1678881,Jaai Community Canteen (Takeaway),Takeaway/sandwich shop,Croydon,CR0 2TG,4,,-0.107842996716499,51.3836364746094
+2026-10-29,removed,1748784,Sanderstead Tandoori,Restaurant/Cafe/Canteen,Croydon,CR2 0PH,2,,-0.0942099988460541,51.3482093811035
+2026-10-29,removed,1268087,Sarahssweetbakes,Other catering premises,Croydon,CR0,5,,,
+2026-10-29,removed,1988932,TT's,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-10-29,removed,1842570,Thaprobane Ltd,Other catering premises,Croydon,CR0,1,,,
+2026-10-29,removed,5522,The Boulevard,Restaurant/Cafe/Canteen,Croydon,CR2 6PW,5,,-0.0967240035533905,51.3627662658691
+2026-10-29,removed,1632381,Twilight Delivery,Distributors/Transporters,Croydon,CR0 4WF,5,,-0.1154921,51.3742459
+2026-10-29,removed,1475525,Woodside Court Supported Living,Caring Premises,Croydon,SE25 4BJ,5,,-0.0735318,51.4017197
 2026-10-29,removed,1952549,CHAI PURI,Restaurant/Cafe/Canteen,Hackney,EC2A 4RJ,AwaitingInspection,,-0.0837463,51.5232091
 2026-10-29,removed,1422609,Eat & More London Liverpool Street Ltd,Restaurant/Cafe/Canteen,Hackney,E8 4QN,5,,-0.0602162,51.5355014
 2026-10-29,removed,1791596,Piehole Shoreditch,Restaurant/Cafe/Canteen,Hackney,E1 6JE,5,,-0.0783978,51.5269794
@@ -90,3 +196,25 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-10-29,removed,1872289,ThegrillsandJollof,Distributors/Transporters,Hackney,E5 0LP,3,,-0.0436187,51.5519971
 2026-10-29,removed,1935137,Toucan Contact Centre,Retailers - other,Hackney,E2 8RA,AwaitingInspection,,-0.0648464,51.5330871
 2026-10-29,removed,1903984,yakisa sushi,Restaurant/Cafe/Canteen,Hackney,E5 0LT,4,,-0.0460365,51.5565067
+2026-10-29,removed,665369,Alcock Kitchen & Restaurant,Restaurant/Cafe/Canteen,Lambeth,SE11 5SS,5,,-0.114667,51.482964
+2026-10-29,removed,483782,Bedser Stand Players Kitchen - 3rd Floor,Other catering premises,Lambeth,SE11 5SS,5,,-0.114667,51.482964
+2026-10-29,removed,484043,Cafe Paradou,Restaurant/Cafe/Canteen,Lambeth,SE19 1UA,3,,-0.078713,51.42034
+2026-10-29,removed,484702,Costcutter,Retailers - other,Lambeth,SE1 7HR,4,,-0.113381,51.499094
+2026-10-29,removed,1551723,Deep Blue - Fixed Unit,Takeaway/sandwich shop,Lambeth,SE11 5SS,5,,-0.114667,51.482964
+2026-10-29,removed,1976556,Dees Kitchen,Other catering premises,Lambeth,SE27,AwaitingInspection,,,
+2026-10-29,removed,1956333,Eat To Live Not To Die,Retailers - other,Lambeth,SW9 8LD,5,,-0.1127479,51.4620454
+2026-10-29,removed,1871215,Eddvales,Manufacturers/packers,Lambeth,SW16,AwaitingInspection,,,
+2026-10-29,removed,1956328,IAteAllTheFood,Other catering premises,Lambeth,SE5,AwaitingInspection,,,
+2026-10-29,removed,981563,Jaralam Newsagent,Retailers - other,Lambeth,SW9 8BA,5,,-0.116242997348309,51.4639320373535
+2026-10-29,removed,484238,Lambeth Walk Day Centre,Other catering premises,Lambeth,SE11 6EE,4,,-0.116483,51.492705
+2026-10-29,removed,483778,OCS Stand 4th Flr - Roof  Kitchen \& Terrace,Other catering premises,Lambeth,SE11 5SS,4,,-0.114667,51.482964
+2026-10-29,removed,483772,OCS Stand Pakistan Kitchen & Terrace,Other catering premises,Lambeth,SE11 5SS,5,,-0.114667,51.482964
+2026-10-29,removed,484183,Oval Snack And Cafe Bar,Restaurant/Cafe/Canteen,Lambeth,SE11 4PP,5,,-0.113092,51.481679
+2026-10-29,removed,1982967,PER Kitchen,Other catering premises,Lambeth,SE21,AwaitingInspection,,,
+2026-10-29,removed,483779,Pavilion Stand Ground Floor Kitchen,Other catering premises,Lambeth,SE11 5SS,5,,-0.114667,51.482964
+2026-10-29,removed,1192678,Sustenance,Retailers - other,Lambeth,SE27 0HS,4,,-0.104104,51.430996
+2026-10-29,removed,517199,Tesco,Retailers - supermarkets/hypermarkets,Lambeth,SW16 3JG,5,,-0.106142,51.422747
+2026-10-29,removed,483143,The Nest Pre-School,Caring Premises,Lambeth,SE5 9QY,5,,-0.104654,51.471229
+2026-10-29,removed,1523771,Damascuse Bride,Restaurant/Cafe/Canteen,Westminster,W2 1BS,1,,-0.1740603,51.5224556
+2026-10-29,removed,411681,Late Night Food Harrow Road,Retailers - other,Westminster,W9 2HP,1,,-0.1935914,51.5224882
+2026-10-29,removed,1978223,Pearl Mayfair,Restaurant/Cafe/Canteen,Westminster,W1K 8UH,AwaitingInspection,,-0.1519281,51.5130614

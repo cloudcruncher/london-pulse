@@ -732,7 +732,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-29,Bromley,2494,1405,1674,103
 2026-10-29,Camden,4293,2807,1968,858
 2026-10-29,City of London Corporation,1851,1619,1502,89
-2026-10-29,Croydon,3121,1602,1854,218
+2026-10-29,Croydon,3128,1601,1854,232
 2026-10-29,Ealing,3870,1884,1837,449
 2026-10-29,Enfield,2432,1375,1280,259
 2026-10-29,Greenwich,2354,1309,1680,187
@@ -746,7 +746,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-29,Islington,2642,1824,1575,222
 2026-10-29,Kensington and Chelsea,2010,1333,1607,150
 2026-10-29,Kingston-Upon-Thames,1439,767,938,87
-2026-10-29,Lambeth,2703,1811,1527,187
+2026-10-29,Lambeth,2694,1807,1524,188
 2026-10-29,Lewisham,2465,1447,1311,333
 2026-10-29,Merton,1603,902,1059,252
 2026-10-29,Newham,2677,1487,1190,150
@@ -757,4 +757,4 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-29,Tower Hamlets,3199,2087,2045,210
 2026-10-29,Waltham Forest,1971,1008,941,52
 2026-10-29,Wandsworth,2944,1806,1924,378
-2026-10-29,Westminster,5779,4246,3743,154
+2026-10-29,Westminster,5785,4249,3770,141
