@@ -1,0 +1,38 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-30,rating_changed,329633,Loring Hall,Caring Premises,Bexley,DA14 5HG,5,4,0.758300006389618,51.1696586608887
+2026-10-30,rating_changed,940535,Creperie Chez Yves,Restaurant/Cafe/Canteen,Bromley,SE20 8HU,1,4,-0.055212,51.415231
+2026-10-30,rating_changed,1377368,Jamaica Flavour Spoon,Other catering premises,Bromley,SE20,5,3,,
+2026-10-30,rating_changed,1705841,BREAD & TRUFFLE,Restaurant/Cafe/Canteen,Camden,N1C 4QL,1,3,-0.1254169,51.531546
+2026-10-30,rating_changed,425239,The Lansdowne,Pub/bar/nightclub,Camden,NW1 8HX,5,1,-0.1533251,51.5414832
+2026-10-30,rating_changed,1979505,"Berlin Kebab, Fish & Chips (Purley)",Takeaway/sandwich shop,Croydon,CR8 4DB,AwaitingInspection,2,-0.1242725,51.3323541
+2026-10-30,rating_changed,1827061,Khanfood / SHARQ Traders,Takeaway/sandwich shop,Ealing,UB1 1RT,2,1,-0.376264,51.510671
+2026-10-30,rating_changed,1936694,Zubis Nursery Ltd,Retailers - other,Enfield,EN1 2PX,AwaitingInspection,1,-0.069409,51.641476
+2026-10-30,rating_changed,1973613,Munch Now,Manufacturers/packers,Hackney,E8 4QN,AwaitingInspection,1,-0.0602162,51.5355014
+2026-10-30,rating_changed,1747761,Cha Kee,Restaurant/Cafe/Canteen,Hammersmith and Fulham,SW6 1NN,5,3,-0.201912,51.484918
+2026-10-30,rating_changed,1153309,Salt & Vinegar,Takeaway/sandwich shop,Hammersmith and Fulham,SW6 6BU,5,3,-0.21223,51.479987
+2026-10-30,rating_changed,875899,Asanteman Market,Retailers - other,Haringey,N17 6SB,3,2,-0.0687344,51.5965849
+2026-10-30,rating_changed,423499,Bite To Eat,Restaurant/Cafe/Canteen,Haringey,N17 0AE,5,2,-0.0675458,51.6011154
+2026-10-30,rating_changed,423063,Cafe Marina,Restaurant/Cafe/Canteen,Haringey,N17 6XF,5,4,-0.0775343,51.5981323
+2026-10-30,rating_changed,1063212,Fieldseat,Restaurant/Cafe/Canteen,Haringey,N17 8AD,3,4,-0.0682413,51.6000388
+2026-10-30,rating_changed,733235,Old Captain Fish And Chips,Restaurant/Cafe/Canteen,Haringey,N17 6RU,5,4,-0.070802,51.5985613
+2026-10-30,rating_changed,1269319,Tennessee Express,Restaurant/Cafe/Canteen,Haringey,N17 8AD,5,4,-0.0681963,51.6007575
+2026-10-30,rating_changed,2005684,Maluch Express,Retailers - other,Harrow,HA2 7HE,AwaitingInspection,3,-0.3701295,51.5754122
+2026-10-30,rating_changed,1978871,Lebanese Hub,Restaurant/Cafe/Canteen,Hillingdon,UB10 0LH,AwaitingInspection,3,-0.448325,51.530845
+2026-10-30,rating_changed,1993000,Roosters Piri Piri,Restaurant/Cafe/Canteen,Hillingdon,UB4 0RX,AwaitingInspection,3,-0.413893,51.520178
+2026-10-30,rating_changed,1104347,Brix Fried Chicken,Takeaway/sandwich shop,Lambeth,SW9 8SD,4,2,-0.103377,51.465561
+2026-10-30,rating_changed,1993267,Cafe Aquarium Ltd,Restaurant/Cafe/Canteen,Lambeth,SW8 2JP,AwaitingInspection,3,-0.1330727,51.4735826
+2026-10-30,rating_changed,1816096,Fusion Grill 2,Takeaway/sandwich shop,Lambeth,SW9 9AE,3,1,-0.124601,51.4711
+2026-10-30,rating_changed,1669370,The Black Farmer Shop,Restaurant/Cafe/Canteen,Lambeth,SW9 8LB,5,0,-0.11328,51.461764
+2026-10-30,rating_changed,1599432,Olive Dining Limited,School/college/university,Lewisham,SE4 1SA,5,4,-0.0281151,51.451162
+2026-10-30,rating_changed,455491,Butterflies Childcare,Caring Premises,Merton,SW19 3SB,5,4,-0.2064709,51.4188709
+2026-10-30,rating_changed,1935585,Deccan Bahar / Hyderabadi Bawarchi / Hyderabadi Dum Biriyani,Takeaway/sandwich shop,Newham,E7 8JF,1,3,0.0319502,51.545173
+2026-10-30,rating_changed,443833,Dixy Chicken,Takeaway/sandwich shop,Redbridge,IG6 2AF,4,2,0.081893,51.590528
+2026-10-30,rating_changed,443957,Paradise,Retailers - other,Redbridge,IG6 2AH,3,1,0.082727,51.591395
+2026-10-30,rating_changed,2001569,Roman,Restaurant/Cafe/Canteen,Tower Hamlets,E2 0QN,AwaitingInspection,4,-0.049562,51.528625
+2026-10-30,rating_changed,100536,SME,Distributors/Transporters,Tower Hamlets,E1 2QE,5,2,-0.056458,51.51159
+2026-10-30,rating_changed,77114,Star Grill,Restaurant/Cafe/Canteen,Tower Hamlets,E2 0QN,AwaitingInspection,3,-0.0485162,51.5288956
+2026-10-30,rating_changed,150198,Suey Hong,Takeaway/sandwich shop,Tower Hamlets,E2 0JD,3,4,-0.051333,51.528339
+2026-10-30,rating_changed,1662136,Harrison Catetring Services Limited,Restaurant/Cafe/Canteen,Wandsworth,SW18 5JP,5,0,-0.1990706,51.4465491
+2026-10-30,rating_changed,1904282,Meraki,Restaurant/Cafe/Canteen,Westminster,W1W 7QT,4,1,-0.140517,51.5188981
+2026-10-30,rating_changed,1656570,The Dover,Restaurant/Cafe/Canteen,Westminster,W1S 4NF,5,2,-0.1430438,51.5088753
+2026-10-30,rating_changed,427973,Young Cheng Seafood Shop,Retailers - other,Westminster,W1D 6EY,2,0,-1.9379197,53.7131018
