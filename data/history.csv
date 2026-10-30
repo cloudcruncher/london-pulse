@@ -763,7 +763,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-30,Bexley,1792,862,1168,97
 2026-10-30,Brent,2502,1379,1630,228
 2026-10-30,Bromley,2494,1405,1673,103
-2026-10-30,Camden,4293,2807,1967,858
+2026-10-30,Camden,4308,2813,1979,869
 2026-10-30,City of London Corporation,1851,1619,1502,89
 2026-10-30,Croydon,3128,1601,1854,231
 2026-10-30,Ealing,3870,1884,1837,449
@@ -776,7 +776,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-30,Havering,2006,996,1247,110
 2026-10-30,Hillingdon,2250,1181,1273,142
 2026-10-30,Hounslow,2377,1146,1340,432
-2026-10-30,Islington,2642,1824,1575,222
+2026-10-30,Islington,2500,1715,1582,82
 2026-10-30,Kensington and Chelsea,2010,1333,1607,150
 2026-10-30,Kingston-Upon-Thames,1439,767,938,87
 2026-10-30,Lambeth,2694,1807,1523,187
@@ -788,6 +788,6 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-10-30,Southwark,3324,2077,2149,255
 2026-10-30,Sutton,1324,749,889,40
 2026-10-30,Tower Hamlets,3199,2087,2044,208
-2026-10-30,Waltham Forest,1971,1008,941,52
+2026-10-30,Waltham Forest,1972,1010,944,57
 2026-10-30,Wandsworth,2944,1806,1923,378
 2026-10-30,Westminster,5785,4249,3769,141
