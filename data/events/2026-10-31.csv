@@ -1,0 +1,30 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-10-31,rating_changed,1775821,Whetstone Coffee,Other catering premises,Barnet,N20 9HS,4,3,-0.175471,51.630834
+2026-10-31,rating_changed,1363449,OTE ( Original Turkish Eatery),Restaurant/Cafe/Canteen,Camden,W1T 1RS,1,4,-0.1357204,51.5191727
+2026-10-31,rating_changed,578601,Dirty Martini,Pub/bar/nightclub,City of London Corporation,EC2M 4LX,1,4,-0.080388,51.517254
+2026-10-31,rating_changed,1747384,Shah's Halal Food,Mobile caterer,Ealing,UB1 1SQ,5,2,-0.3765566,51.508814
+2026-10-31,rating_changed,1633671,The Bridge Hotel,Pub/bar/nightclub,Ealing,UB6 8ST,5,4,-0.346678,51.534996
+2026-10-31,rating_changed,1975227,Von Crumb,Takeaway/sandwich shop,Ealing,W3 7QE,AwaitingInspection,4,-0.2582483,51.5053548
+2026-10-31,rating_changed,1979178,Tacochick London Ltd,Restaurant/Cafe/Canteen,Enfield,EN1 2AA,AwaitingInspection,1,-0.07977,51.6518723
+2026-10-31,rating_changed,1983320,CCC Rock of Ages,Distributors/Transporters,Greenwich,SE18 6AP,AwaitingInspection,2,0.0715682,51.4902079
+2026-10-31,rating_changed,1973610,Brat x Climpsons Arch,Restaurant/Cafe/Canteen,Hackney,E8 3SB,AwaitingInspection,4,-0.0583382,51.5395806
+2026-10-31,rating_changed,1957948,Tavern,Restaurant/Cafe/Canteen,Hackney,EC1V 9LT,AwaitingInspection,4,-0.0796766,51.5270813
+2026-10-31,rating_changed,1903963,The Duke Of Richmond,Pub/bar/nightclub,Hackney,E8 3NH,AwaitingInspection,2,-0.0696586,51.5429337
+2026-10-31,rating_changed,1695601,YOHOME,Retailers - other,Hammersmith and Fulham,"",5,3,-0.21641453,51.47735588
+2026-10-31,rating_changed,1616938,Francino Pizza,Takeaway/sandwich shop,Islington,N7 0DD,3,4,-0.1294725,51.5492169
+2026-10-31,rating_changed,717223,Hammerton Taphouse,Manufacturers/packers,Islington,N7 8XH,3,4,-0.1144743,51.5432305
+2026-10-31,rating_changed,417179,Montes Delicatessen,Retailers - other,Islington,N1 2AS,3,4,-0.1027284,51.543041
+2026-10-31,rating_changed,334724,Johnnie's Fish Bar & Kebab House,Takeaway/sandwich shop,Kensington and Chelsea,SW10 0LE,1,4,-0.180709,51.482065
+2026-10-31,rating_changed,1598680,London Sivan Kovil,Restaurant/Cafe/Canteen,Lewisham,SE13 5ES,1,0,-0.007657,51.460781
+2026-10-31,rating_changed,1636957,Charminar Restaurant Ltd,Restaurant/Cafe/Canteen,Newham,E6 1EN,4,2,0.046772,51.534717
+2026-10-31,rating_changed,1589988,Childrens Garden Nursery,Caring Premises,Newham,E16 2RD,3,4,0.0648337,51.5075751
+2026-10-31,rating_changed,641015,Rebecca Cheetham Nursery School,School/college/university,Newham,E15 3JT,5,4,0.009927,51.535597
+2026-10-31,rating_changed,1422318,Gopuff,Retailers - other,Southwark,SE15 1NP,5,4,-0.0535641,51.4815429
+2026-10-31,rating_changed,1797150,The Chef Restaurant,Restaurant/Cafe/Canteen,Sutton,KT4 8HX,4,3,-0.240269,51.378139
+2026-10-31,rating_changed,1029746,Adana Turkish with Fusion,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6AH,5,2,-0.0660069,51.5264608
+2026-10-31,rating_changed,508915,Caffe-in,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7AX,5,4,-0.0662573,51.5310961
+2026-10-31,rating_changed,1537373,Yole,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6DG,5,2,-0.071199,51.524954
+2026-10-31,rating_changed,1994006,Bonjour Cafe & Patisserie,Restaurant/Cafe/Canteen,Waltham Forest,E10 5PS,AwaitingInspection,3,-0.0069847,51.558818
+2026-10-31,rating_changed,1594430,Joyau,Pub/bar/nightclub,Waltham Forest,E7 0AQ,5,0,0.0188636,51.555471
+2026-10-31,rating_changed,1991820,Motorino,Restaurant/Cafe/Canteen,Westminster,W1T 3BF,AwaitingInspection,1,-0.138281,51.518793
+2026-10-31,rating_changed,412590,The Farmers Club,Restaurant/Cafe/Canteen,Westminster,SW1A 2EL,5,3,-0.1243754,51.5055207
