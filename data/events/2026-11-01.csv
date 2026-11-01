@@ -1,0 +1,45 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-01,new,1907934,All Stars Breakfast & After School Club Ltd,Caring Premises,Redbridge,RM6 4EU,,5,0.121056996285915,51.5687484741211
+2026-11-01,new,2009762,Pathan Grill,Restaurant/Cafe/Canteen,Redbridge,IG6 2AD,,AwaitingInspection,0.0816049,51.5899944
+2026-11-01,new,443742,Pride of Asia,Retailers - other,Redbridge,RM6 4BD,,5,0.128398,51.56991
+2026-11-01,new,1865630,Rasoi,Restaurant/Cafe/Canteen,Redbridge,IG6,,AwaitingInspection,,
+2026-11-01,new,2009760,The Debrief Club LTD,Restaurant/Cafe/Canteen,Redbridge,E11,,AwaitingInspection,,
+2026-11-01,new,2009761,The Neon Kettle,Takeaway/sandwich shop,Redbridge,IG3 9NR,,AwaitingInspection,0.1105758,51.5650834
+2026-11-01,new,443727,The Royal Cafe,Restaurant/Cafe/Canteen,Redbridge,IG8 7HU,,5,0.037187,51.608057
+2026-11-01,rating_changed,1987187,Tradicao,Retailers - other,Croydon,CR7 7ND,AwaitingInspection,4,-0.117965,51.4011651
+2026-11-01,rating_changed,1966278,Yumi Dumpling,Takeaway/sandwich shop,Croydon,SE25 6RB,AwaitingInspection,4,-0.0866639986634254,51.3993988037109
+2026-11-01,rating_changed,1935151,Burger Nine,Restaurant/Cafe/Canteen,Hackney,N1 6SH,AwaitingInspection,3,-0.0798943,51.5315002
+2026-11-01,rating_changed,1931101,East West Pizza,Restaurant/Cafe/Canteen,Hackney,E2 8DA,AwaitingInspection,4,-0.0776977,51.5281999
+2026-11-01,rating_changed,1927847,Ivory Seasons By Enish,Restaurant/Cafe/Canteen,Hackney,E2 8GX,AwaitingInspection,4,-0.0747528,51.5301764
+2026-11-01,rating_changed,491230,Raaga Restaurant & Bar,Restaurant/Cafe/Canteen,Hounslow,TW14 9HF,AwaitingInspection,5,-0.4201261,51.4554239
+2026-11-01,rating_changed,1198320,Mezcalito,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 6NR,5,4,-0.169777,51.488549
+2026-11-01,rating_changed,1977078,Auntea Jenny,Restaurant/Cafe/Canteen,Newham,E20 1EP,AwaitingInspection,1,-0.0067405,51.543247
+2026-11-01,rating_changed,1978374,Hyderabadi Aroma,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-11-01,rating_changed,1957254,Kabab Bari,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,4,0.0360016,51.5368296
+2026-11-01,rating_changed,1862676,Margo's Jerk Grill Ltd,Mobile caterer,Newham,E16,AwaitingInspection,4,,
+2026-11-01,rating_changed,1985896,Havala cafe bistro,Restaurant/Cafe/Canteen,Redbridge,IG2 6LL,AwaitingInspection,3,0.067523,51.576745
+2026-11-01,rating_changed,1397400,Ilford Coffee House,Restaurant/Cafe/Canteen,Redbridge,IG1 1NR,4,5,0.0808439999818802,51.560661315918
+2026-11-01,rating_changed,1888932,K Nursery,Caring Premises,Redbridge,IG3,AwaitingInspection,5,,
+2026-11-01,rating_changed,1676138,KasturiI K Kitchen,Restaurant/Cafe/Canteen,Redbridge,IG1,AwaitingInspection,5,,
+2026-11-01,rating_changed,913749,Rey,Retailers - other,Redbridge,IG2 6RE,4,5,0.073183,51.579334
+2026-11-01,rating_changed,1921089,Stacktails & Co,Restaurant/Cafe/Canteen,Redbridge,IG1,AwaitingInspection,5,,
+2026-11-01,rating_changed,1888934,Sujathaa Impex Ltd,Importers/Exporters,Redbridge,IG6 3TU,AwaitingInspection,5,0.1197645,51.606488
+2026-11-01,rating_changed,1865628,Sushi Daily,Takeaway/sandwich shop,Redbridge,E18 2NA,AwaitingInspection,5,0.022437,51.595291
+2026-11-01,rating_changed,1985902,Tahlia Bentley Luxe Creations,Restaurant/Cafe/Canteen,Redbridge,RM6,AwaitingInspection,5,,
+2026-11-01,rating_changed,1941607,Talls and smalls,School/college/university,Redbridge,E18 2EN,AwaitingInspection,5,0.022894,51.586065
+2026-11-01,rating_changed,1886290,Tesco Express,Retailers - supermarkets/hypermarkets,Redbridge,E12 5DG,AwaitingInspection,5,0.042769,51.558653
+2026-11-01,rating_changed,444088,The Swan,Takeaway/sandwich shop,Redbridge,RM6 4AH,3,0,0.129957,51.570529
+2026-11-01,rating_changed,1934320,Toro’s Ilford – London,Takeaway/sandwich shop,Redbridge,IG1 4NF,AwaitingInspection,5,0.0700108,51.5604245
+2026-11-01,rating_changed,1754740,Costcutter,Retailers - other,Sutton,SM3 8ET,3,1,-0.227726,51.370288
+2026-11-01,rating_changed,1679429,Goni's Store,Retailers - other,Waltham Forest,E10 6AJ,4,1,-0.0115683,51.576773
+2026-11-01,rating_changed,1673021,PACA VIBEZZ,Takeaway/sandwich shop,Waltham Forest,E17 9AP,3,4,-0.0146055,51.5762939
+2026-11-01,rating_changed,727063,Caffe Concerto,Restaurant/Cafe/Canteen,Westminster,WC2N 5BW,4,3,-0.1269727,51.5071899
+2026-11-01,rating_changed,413711,GINO?S CAPPUCCINO BAR,Restaurant/Cafe/Canteen,Westminster,NW1 6JH,3,2,-0.1621771,51.522225
+2026-11-01,rating_changed,413256,Yeni,Restaurant/Cafe/Canteen,Westminster,"",4,2,-0.1371391,51.5126665
+2026-11-01,removed,1801455,Araaz Ltd,Retailers - other,Redbridge,IG1 1TR,1,,0.085656,51.561739
+2026-11-01,removed,1765177,Charger,Retailers - other,Redbridge,"",3,,,
+2026-11-01,removed,1279644,Crave Pizza,Takeaway/sandwich shop,Redbridge,IG1 4AA,4,,0.0829526,51.5645389
+2026-11-01,removed,444169,Maidstone Community,Caring Premises,Redbridge,IG2 7NA,5,,0.087862,51.576492
+2026-11-01,removed,1246658,Paul's Bakery,Retailers - other,Redbridge,IG1 2RJ,4,,0.071961,51.5553991
+2026-11-01,removed,443685,Taste of Lankians,Restaurant/Cafe/Canteen,Redbridge,IG1 4BX,0,,0.074716,51.560701
+2026-11-01,removed,1907940,Vertical Post Ltd,Retailers - other,Redbridge,IG1 4DU,AwaitingInspection,,0.0699757,51.5589161
