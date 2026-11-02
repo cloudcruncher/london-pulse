@@ -1,0 +1,3 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-02,rating_changed,1659090,Ji The Chicken Shop,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1SZ,4,3,-0.3035894,51.411175
+2026-11-02,rating_changed,1385803,Yoriya,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 1SS,3,2,-0.3017246,51.4110491
