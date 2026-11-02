@@ -220,6 +220,25 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-02,new,1980237,Zeno Labs (HCA),Other catering premises,Islington,EC1V,,AwaitingInspection,,
 2026-11-02,new,1986668,ZiZi Jollof Square (HCA),Other catering premises,Islington,EC1R,,AwaitingInspection,,
 2026-11-02,new,1994004,Zoya Sweets and Savouries,Retailers - other,Islington,N7 6AG,,AwaitingInspection,,
+2026-11-02,new,2010203,Blacksheep coffee,Restaurant/Cafe/Canteen,Southwark,SE1 9EU,,AwaitingInspection,,
+2026-11-02,new,2010195,Bosco centre college,School/college/university,Southwark,SE16 4RS,,AwaitingInspection,,
+2026-11-02,new,2010197,Buah limited,Restaurant/Cafe/Canteen,Southwark,SE15 4JR,,AwaitingInspection,,
+2026-11-02,new,2010191,Byte & brew,Restaurant/Cafe/Canteen,Southwark,SE1 0BE,,AwaitingInspection,,
+2026-11-02,new,2010188,Dishoom borough,Restaurant/Cafe/Canteen,Southwark,SE1 1TY,,AwaitingInspection,,
+2026-11-02,new,2010200,Jacks coffee,Restaurant/Cafe/Canteen,Southwark,SE1 5NA,,AwaitingInspection,,
+2026-11-02,new,2010193,Joy canteen,Restaurant/Cafe/Canteen,Southwark,SE15 1NZ,,AwaitingInspection,,
+2026-11-02,new,843066,L'opera,Other catering premises,Southwark,SE1 5LU,,4,,
+2026-11-02,new,2010190,Little lollies,Retailers - other,Southwark,SE22 8RR,,AwaitingInspection,,
+2026-11-02,new,2010192,N family club,School/college/university,Southwark,SE5 8QS,,5,,
+2026-11-02,new,2010199,Papa john's,Takeaway/sandwich shop,Southwark,SE1 4AG,,AwaitingInspection,,
+2026-11-02,new,364774,Price wise,Retailers - other,Southwark,SE1 3AL,,4,,
+2026-11-02,new,2010202,Pucker up juice co.,Takeaway/sandwich shop,Southwark,SE5 7SW,,AwaitingInspection,,
+2026-11-02,new,2010189,Rico alimurung,Retailers - other,Southwark,SE5,,AwaitingInspection,,
+2026-11-02,new,2010201,Sostrene grene,Retailers - supermarkets/hypermarkets,Southwark,SE1 6GP,,AwaitingInspection,,
+2026-11-02,new,2010194,Spice'd,Mobile caterer,Southwark,SE1 5XE,,AwaitingInspection,,
+2026-11-02,new,2010187,Swift,Restaurant/Cafe/Canteen,Southwark,SE1 1XF,,5,,
+2026-11-02,new,2010196,The salmon youth centre,School/college/university,Southwark,SE16 4TE,,AwaitingInspection,,
+2026-11-02,new,2010198,Winemasters,Retailers - other,Southwark,SE1 6SF,,AwaitingInspection,,
 2026-11-02,rating_changed,1998151,Amandas Sugar Shack,Retailers - other,Bexley,DA1,AwaitingInspection,5,,
 2026-11-02,rating_changed,1811374,New Phoenix,Takeaway/sandwich shop,Bexley,DA1 4JD,2,5,,
 2026-11-02,rating_changed,1979217,Royals,Retailers - other,Bexley,DA1 4AS,AwaitingInspection,5,,
@@ -275,10 +294,37 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-02,rating_changed,2000501,Zarana,Restaurant/Cafe/Canteen,Havering,RM11 1TP,AwaitingInspection,3,,
 2026-11-02,rating_changed,2000517,Zee's Kitchen,Restaurant/Cafe/Canteen,Havering,RM1,AwaitingInspection,5,,
 2026-11-02,rating_changed,2000480,Zoti Foods,Manufacturers/packers,Havering,RM11,AwaitingInspection,4,,
+2026-11-02,rating_changed,490570,Ahaa Dosa,Restaurant/Cafe/Canteen,Hounslow,TW3 3LF,3,5,,
+2026-11-02,rating_changed,490869,Beavers lane kebab fish and chips,Takeaway/sandwich shop,Hounslow,TW4 7NW,4,5,,
+2026-11-02,rating_changed,1374323,Butt Karahi,Restaurant/Cafe/Canteen,Hounslow,TW4 5AP,3,5,,
+2026-11-02,rating_changed,770425,Caffe Nero,Restaurant/Cafe/Canteen,Hounslow,TW3 1DH,4,5,,
+2026-11-02,rating_changed,490135,Chahal Sweet Centre,Restaurant/Cafe/Canteen,Hounslow,TW4 5BA,4,5,,
+2026-11-02,rating_changed,1766925,Euphrates Markets / Euphrates Restaurant,Retailers - other,Hounslow,TW7 5BG,3,5,,
+2026-11-02,rating_changed,689481,Kathmandu Zone Restaurant,Restaurant/Cafe/Canteen,Hounslow,TW3 3LF,4,5,,
+2026-11-02,rating_changed,1889955,Soulful Bowls,Retailers - other,Hounslow,TW4,AwaitingInspection,5,,
+2026-11-02,rating_changed,491305,The Black Horse,Pub/bar/nightclub,Hounslow,TW3 4EZ,4,5,,
+2026-11-02,rating_changed,491327,The George,Pub/bar/nightclub,Hounslow,TW3 1XH,4,5,,
 2026-11-02,rating_changed,1973819,BaMan,Restaurant/Cafe/Canteen,Islington,N1 9DX,AwaitingInspection,4,,
 2026-11-02,rating_changed,1947981,The Merge,Restaurant/Cafe/Canteen,Islington,N7 6LE,AwaitingInspection,3,,
 2026-11-02,rating_changed,1659090,Ji The Chicken Shop,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1SZ,4,3,-0.3035894,51.411175
 2026-11-02,rating_changed,1385803,Yoriya,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 1SS,3,2,-0.3017246,51.4110491
+2026-11-02,rating_changed,1804274,Ap food express,Retailers - other,Southwark,SE1 6FZ,4,5,,
+2026-11-02,rating_changed,1150014,Bao,Restaurant/Cafe/Canteen,Southwark,SE1 9AD,4,5,,
+2026-11-02,rating_changed,1979977,Blair grillz,Takeaway/sandwich shop,Southwark,SE1 8HW,AwaitingInspection,Exempt,,
+2026-11-02,rating_changed,692053,Brixton cake shop,Retailers - other,Southwark,SE24 9AA,4,5,,
+2026-11-02,rating_changed,1754502,Certitude,Caring Premises,Southwark,SE1 5TW,3,5,,
+2026-11-02,rating_changed,2001575,Gerry's hot subs,Restaurant/Cafe/Canteen,Southwark,SE1 3QX,AwaitingInspection,5,,
+2026-11-02,rating_changed,1941559,Get rid of and donate cic,Restaurant/Cafe/Canteen,Southwark,SE24 9JQ,AwaitingInspection,5,,
+2026-11-02,rating_changed,1110681,Greenzen,Restaurant/Cafe/Canteen,Southwark,SE16 2XU,3,5,,
+2026-11-02,rating_changed,1960412,Kebab kitchen ltd,Takeaway/sandwich shop,Southwark,SE1 6DR,AwaitingInspection,5,,
+2026-11-02,rating_changed,363788,L & i news,Retailers - other,Southwark,SE22 9EA,4,5,,
+2026-11-02,rating_changed,1979985,Leon restaurant,Restaurant/Cafe/Canteen,Southwark,SE1 9AN,AwaitingInspection,5,,
+2026-11-02,rating_changed,1980003,Magna extended schools at snowsfields,Restaurant/Cafe/Canteen,Southwark,SE1 3SX,AwaitingInspection,5,,
+2026-11-02,rating_changed,1808834,Pabulum limited,School/college/university,Southwark,SE5 9NF,4,5,,
+2026-11-02,rating_changed,1979993,Peche mignon londres,Restaurant/Cafe/Canteen,Southwark,SE22 8HD,AwaitingInspection,5,,
+2026-11-02,rating_changed,1990321,Smitas supperclub,Retailers - other,Southwark,SE15,AwaitingInspection,5,,
+2026-11-02,rating_changed,1965193,Vine bar,Restaurant/Cafe/Canteen,Southwark,SE1 3UN,AwaitingInspection,5,,
+2026-11-02,rating_changed,739780,Yama momo,Restaurant/Cafe/Canteen,Southwark,SE22 8HF,4,5,,
 2026-11-02,removed,1533343,Accent Catering Services At Hurstmere Secondary School,School/college/university,Bexley,DA15 9AW,5,,0.114438,51.438426
 2026-11-02,removed,1892531,Crayford Tandoori,Restaurant/Cafe/Canteen,Bexley,DA1 4JJ,3,,0.178439,51.452308
 2026-11-02,removed,1960847,The Hungry Pony,Mobile caterer,Bexley,SE2,AwaitingInspection,,,
@@ -295,8 +341,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-02,removed,2002077,Hollie’s Sweets Party cones and bags,Other catering premises,Bromley,BR2,AwaitingInspection,,,
 2026-11-02,removed,1925991,Melody's,Takeaway/sandwich shop,Bromley,BR3 3PS,3,,-0.0369487,51.4025599
 2026-11-02,removed,1501595,Palazzo,Restaurant/Cafe/Canteen,Bromley,SE19 2TF,2,,-0.078617,51.419538
-2026-11-02,removed,1767811,Papa John's Pizza,Takeaway/sandwich shop,Bromley,BR5 1EF,5,,0.076221,51.388902
 2026-11-02,removed,1767814,Papa John's Pizza,Takeaway/sandwich shop,Bromley,BR4 0RL,5,,-0.0108438,51.3749263
+2026-11-02,removed,1767811,Papa John's Pizza,Takeaway/sandwich shop,Bromley,BR5 1EF,5,,0.076221,51.388902
 2026-11-02,removed,1896332,SS Food & Wine,Retailers - supermarkets/hypermarkets,Bromley,BR6 0JS,AwaitingInspection,,0.1015923,51.3787104
 2026-11-02,removed,1993386,Shan’s Cakes,Other catering premises,Bromley,BR2,AwaitingInspection,,,
 2026-11-02,removed,358002,Snack Bar - Adult Education Centre,School/college/university,Bromley,SE20 7PR,5,,-0.0480976,51.4122066
@@ -335,3 +381,23 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-02,removed,1965646,The Beverage Bar,Mobile caterer,Islington,N4 2,AwaitingInspection,,,
 2026-11-02,removed,1965620,VP Game,Farmers/growers,Islington,N1 3,AwaitingInspection,,,
 2026-11-02,removed,1971501,Vavien,Restaurant/Cafe/Canteen,Islington,N1 1RA,AwaitingInspection,,,
+2026-11-02,removed,1874320,Ap food express,Retailers - other,Southwark,SE1 6FZ,5,,-0.0984073,51.4973356
+2026-11-02,removed,1983617,Blank street uk limited,Restaurant/Cafe/Canteen,Southwark,SE1 6TE,AwaitingInspection,,,
+2026-11-02,removed,1291946,Byo,Retailers - other,Southwark,SE15 3QF,4,,-0.0580512,51.4654212
+2026-11-02,removed,1737248,El rinconcito peruano la chalaquita ltd,Restaurant/Cafe/Canteen,Southwark,SE1 5NA,3,,-0.081018,51.490951
+2026-11-02,removed,2001576,Frieday5 Chicken & Boba,Takeaway/sandwich shop,Southwark,SE1 6SE,AwaitingInspection,,-0.1005749,51.4925928
+2026-11-02,removed,1761595,Gnd catering,Restaurant/Cafe/Canteen,Southwark,SE16 2BT,5,,,
+2026-11-02,removed,1796400,Henri's (tbc),Other catering premises,Southwark,"",AwaitingInspection,,,
+2026-11-02,removed,1594581,Jinli express bermondsey limited,Takeaway/sandwich shop,Southwark,SE1 5TJ,3,,-0.074665,51.492673
+2026-11-02,removed,1829883,Kato,Other catering premises,Southwark,SE15 4QL,3,,-0.070302,51.469437
+2026-11-02,removed,1918132,Khaatirdari,Takeaway/sandwich shop,Southwark,SE1,AwaitingInspection,,,
+2026-11-02,removed,1036892,Leon restaurants,Takeaway/sandwich shop,Southwark,SE1 9SP,5,,-0.0859797,51.5046757
+2026-11-02,removed,739758,Mirash tandoori,Restaurant/Cafe/Canteen,Southwark,SE22 8DT,2,,-0.077674,51.461554
+2026-11-02,removed,1664084,Mogul,Retailers - supermarkets/hypermarkets,Southwark,SE16 5SW,3,,-0.043539,51.506366
+2026-11-02,removed,1808825,Nics yard,Takeaway/sandwich shop,Southwark,SE16 3DH,AwaitingInspection,,-0.0600309,51.4849325
+2026-11-02,removed,1774221,Papa johns,Takeaway/sandwich shop,Southwark,SE1 4AG,4,,-0.0921560004353523,51.4943351745605
+2026-11-02,removed,1267972,Parseh,Takeaway/sandwich shop,Southwark,SE5 8RS,4,,-0.0927538,51.4718455
+2026-11-02,removed,1667006,Rice+co. ltd,Mobile caterer,Southwark,SE15,5,,,
+2026-11-02,removed,363864,The crooked well,Restaurant/Cafe/Canteen,Southwark,SE5 8SY,4,,-0.0904249995946884,51.4733963012695
+2026-11-02,removed,1941552,The daily tray ltd,Restaurant/Cafe/Canteen,Southwark,SE22 8HU,AwaitingInspection,,-0.0751221,51.4576453
+2026-11-02,removed,364633,The kentish drovers,Pub/bar/nightclub,Southwark,SE15 5RS,5,,-0.069309,51.473836
