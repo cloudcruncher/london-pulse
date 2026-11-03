@@ -30,6 +30,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-03,rating_changed,1522870,Midpoint Restaurant,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1JE,1,0,-0.063769,51.517961
 2026-11-03,rating_changed,1577877,New City College Attlee A Level Academy Kitchen,School/college/university,Tower Hamlets,E1 0PT,5,2,-0.046967,51.51449
 2026-11-03,rating_changed,99691,Rochelle Canteen,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7FA,5,1,-0.0741193,51.5257797
+2026-11-03,rating_changed,84850,Shamim's Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EG,0,AwaitingPublication,-0.0105796,51.5114781
 2026-11-03,rating_changed,1804606,Forno Leytonstone,Restaurant/Cafe/Canteen,Waltham Forest,E11 1HE,5,4,0.00924,51.5685228
 2026-11-03,rating_changed,1619562,Happy Lamb Hot Pot Bayswater,Restaurant/Cafe/Canteen,Westminster,W2 6BB,3,4,-0.1870798,51.5164242
 2026-11-03,rating_changed,1384923,Honi Poke,Restaurant/Cafe/Canteen,Westminster,SW1H 0PH,5,4,-0.1354684,51.4980928
