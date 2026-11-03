@@ -1,4 +1,6 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-03,new,2010292,Firepitt,Other catering premises,Enfield,N14 6PH,,5,,
+2026-11-03,new,2010291,The Loaded Box,Other catering premises,Enfield,N14 6BT,,3,,
 2026-11-03,rating_changed,1972345,Little Sparrow Canteen,Restaurant/Cafe/Canteen,Barnet,NW4 4BD,AwaitingInspection,4,-0.228291,51.588318
 2026-11-03,rating_changed,1576312,Gece Gunduz,Restaurant/Cafe/Canteen,Camden,NW6 2DG,4,3,-0.2010854,51.5448331
 2026-11-03,rating_changed,1417951,SOOR LEBANESE,Takeaway/sandwich shop,Camden,NW6 5UA,5,3,-0.1922961,51.537351
@@ -36,3 +38,4 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-03,rating_changed,413233,The Goring Hotel,Hotel/bed & breakfast/guest house,Westminster,SW1W 0JW,5,3,-0.1455388,51.4974761
 2026-11-03,rating_changed,411854,The Waterway,Restaurant/Cafe/Canteen,Westminster,W9 2JU,4,3,-0.1877577,51.5227399
 2026-11-03,rating_changed,1793482,Third coffee,Restaurant/Cafe/Canteen,Westminster,SW1V 3EE,3,4,-0.1387698,51.4882232
+2026-11-03,removed,1796175,Whetstone Pizza & Pasta,Takeaway/sandwich shop,Barnet,N20 0RA,3,,-0.174928,51.627076
