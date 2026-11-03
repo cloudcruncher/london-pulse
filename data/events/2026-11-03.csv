@@ -1,0 +1,38 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-03,rating_changed,1972345,Little Sparrow Canteen,Restaurant/Cafe/Canteen,Barnet,NW4 4BD,AwaitingInspection,4,-0.228291,51.588318
+2026-11-03,rating_changed,1576312,Gece Gunduz,Restaurant/Cafe/Canteen,Camden,NW6 2DG,4,3,-0.2010854,51.5448331
+2026-11-03,rating_changed,1417951,SOOR LEBANESE,Takeaway/sandwich shop,Camden,NW6 5UA,5,3,-0.1922961,51.537351
+2026-11-03,rating_changed,295076,Enoteca Da Luca Guildhall,Restaurant/Cafe/Canteen,City of London Corporation,EC2V 5BQ,2,1,-0.090859,51.515716
+2026-11-03,rating_changed,2006911,Chai Mast,Restaurant/Cafe/Canteen,Ealing,UB1 1LN,AwaitingInspection,1,-0.380734,51.511425
+2026-11-03,rating_changed,1021506,K M Laween Food & Wine,Retailers - other,Ealing,UB6 0HY,4,2,-0.33677,51.556032
+2026-11-03,rating_changed,1867529,Mizaaj,Takeaway/sandwich shop,Ealing,UB1 1SU,1,2,-0.3757545,51.5102956
+2026-11-03,rating_changed,1734835,MINT,Restaurant/Cafe/Canteen,Greenwich,SE10 0DX,5,2,,
+2026-11-03,rating_changed,1903965,Best Istanbul,Takeaway/sandwich shop,Hackney,E8 1LL,AwaitingInspection,3,-0.0595093,51.5490775
+2026-11-03,rating_changed,1743968,Bun & Sum,Restaurant/Cafe/Canteen,Hackney,E8 1BP,AwaitingInspection,4,-0.0562296,51.5464963
+2026-11-03,rating_changed,1983312,COFFEE CLUB,Restaurant/Cafe/Canteen,Hackney,E8 3AR,AwaitingInspection,2,-0.0696285,51.5441098
+2026-11-03,rating_changed,1978572,Al-Ghazaleen,Retailers - other,Harrow,HA3 8RF,AwaitingInspection,3,-0.3185882,51.6016022
+2026-11-03,rating_changed,1942862,CREATIVE BITES,Restaurant/Cafe/Canteen,Harrow,HA3 5QH,AwaitingInspection,3,-0.3367896,51.5939005
+2026-11-03,rating_changed,1931505,Masa Restaurant & Banqueting,Restaurant/Cafe/Canteen,Harrow,HA3 5QH,AwaitingInspection,4,,
+2026-11-03,rating_changed,1999816,Shree Sai Stores,Retailers - other,Harrow,HA3 9HU,AwaitingInspection,4,-0.29494,51.59489
+2026-11-03,rating_changed,1992970,beatsrhymesandspice,Other catering premises,Hillingdon,UB10,AwaitingInspection,4,,
+2026-11-03,rating_changed,570656,Pho,Restaurant/Cafe/Canteen,Islington,N1 0PN,3,4,,
+2026-11-03,rating_changed,531007,Willows Pre-School,Caring Premises,Merton,SW19 3QX,5,4,-0.2063354,51.4134512
+2026-11-03,rating_changed,1624191,Bismillah Fried Chicken Ltd T/A BFC,Takeaway/sandwich shop,Newham,E7 8DF,2,0,0.034452,51.547197
+2026-11-03,rating_changed,640401,Lahoori Spicy Biryani House,Restaurant/Cafe/Canteen,Newham,E7 8NW,1,3,0.038005,51.541803
+2026-11-03,rating_changed,1991905,Pandyas,Restaurant/Cafe/Canteen,Newham,E6 1JB,AwaitingInspection,3,0.05112,51.538094
+2026-11-03,rating_changed,443341,Old Parkonians,Pub/bar/nightclub,Redbridge,IG6 3HD,5,4,0.090581,51.59612
+2026-11-03,rating_changed,1921005,Peakelixir,Retailers - other,Southwark,SE1,AwaitingInspection,4,,
+2026-11-03,rating_changed,1990304,Cafe Chaiwala Arshad Khan Sutton,Restaurant/Cafe/Canteen,Sutton,SM1 1LT,AwaitingInspection,3,-0.1923693,51.3627865
+2026-11-03,rating_changed,1486120,Fresh Fry,Takeaway/sandwich shop,Sutton,CR0 4PJ,4,1,-0.1316141,51.3678764
+2026-11-03,rating_changed,78200,Best One Supermarket,Retailers - other,Tower Hamlets,E1W 2RL,4,2,-0.0585297,51.5053393
+2026-11-03,rating_changed,1522870,Midpoint Restaurant,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1JE,1,0,-0.063769,51.517961
+2026-11-03,rating_changed,1577877,New City College Attlee A Level Academy Kitchen,School/college/university,Tower Hamlets,E1 0PT,5,2,-0.046967,51.51449
+2026-11-03,rating_changed,99691,Rochelle Canteen,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7FA,5,1,-0.0741193,51.5257797
+2026-11-03,rating_changed,1804606,Forno Leytonstone,Restaurant/Cafe/Canteen,Waltham Forest,E11 1HE,5,4,0.00924,51.5685228
+2026-11-03,rating_changed,1619562,Happy Lamb Hot Pot Bayswater,Restaurant/Cafe/Canteen,Westminster,W2 6BB,3,4,-0.1870798,51.5164242
+2026-11-03,rating_changed,1384923,Honi Poke,Restaurant/Cafe/Canteen,Westminster,SW1H 0PH,5,4,-0.1354684,51.4980928
+2026-11-03,rating_changed,414572,La Piccola Deli,Retailers - other,Westminster,W9 1LU,2,3,-0.189645,51.5274902
+2026-11-03,rating_changed,411792,Lolita Kebab Shop,Restaurant/Cafe/Canteen,Westminster,W2 1JA,4,2,-0.1759964,51.5151297
+2026-11-03,rating_changed,413233,The Goring Hotel,Hotel/bed & breakfast/guest house,Westminster,SW1W 0JW,5,3,-0.1455388,51.4974761
+2026-11-03,rating_changed,411854,The Waterway,Restaurant/Cafe/Canteen,Westminster,W9 2JU,4,3,-0.1877577,51.5227399
+2026-11-03,rating_changed,1793482,Third coffee,Restaurant/Cafe/Canteen,Westminster,SW1V 3EE,3,4,-0.1387698,51.4882232
