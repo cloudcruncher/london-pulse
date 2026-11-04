@@ -1,0 +1,45 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-04,rating_changed,965291,28 Church Row,Restaurant/Cafe/Canteen,Camden,NW3 6UP,5,3,-0.1787816,51.5554869
+2026-11-04,rating_changed,1592193,GERMAN DONER KEBAB,Restaurant/Cafe/Canteen,Camden,WC1B 5HA,5,4,-0.1208541,51.5179014
+2026-11-04,rating_changed,1716654,HUS LONDON,Restaurant/Cafe/Canteen,Camden,WC2A 3HP,AwaitingInspection,0,-0.119078,51.5172794
+2026-11-04,rating_changed,571666,Homeslice,Restaurant/Cafe/Canteen,Camden,WC2H 9DP,1,3,-0.126376,51.514571
+2026-11-04,rating_changed,425778,Itadaki Zen,Restaurant/Cafe/Canteen,Camden,WC1X 9BJ,2,4,-0.1161299,51.529687
+2026-11-04,rating_changed,451448,Retsina,Restaurant/Cafe/Canteen,Camden,NW3 5AR,1,3,-0.1715044,51.5495376
+2026-11-04,rating_changed,424841,The Queen of Sheba,Restaurant/Cafe/Canteen,Camden,NW5 2EU,0,2,-0.140887,51.5522669
+2026-11-04,rating_changed,1989691,Top Soup,Restaurant/Cafe/Canteen,Camden,WC1R 4PS,AwaitingInspection,3,-0.1170659,51.5195852
+2026-11-04,rating_changed,1033367,Antonio's Takeaway Cabana,Mobile caterer,Ealing,NW10 6PW,3,4,-0.2595996,51.52692645
+2026-11-04,rating_changed,1034007,ND Superstore,Retailers - other,Ealing,W3 7RH,3,2,-0.2554554,51.5064193
+2026-11-04,rating_changed,1800608,Sapra Spice,Restaurant/Cafe/Canteen,Ealing,UB2 4DL,4,2,-0.381512,51.4991078
+2026-11-04,rating_changed,1972699,St Mary Magdalene School,School/college/university,Greenwich,SE10 0NF,AwaitingInspection,4,0.0098455,51.4945379
+2026-11-04,rating_changed,1903928,Bread Meats Sauce,Takeaway/sandwich shop,Hackney,E8 3RL,AwaitingInspection,3,-0.0586285,51.5375703
+2026-11-04,rating_changed,1811316,Jupiter Burger,Restaurant/Cafe/Canteen,Hackney,E8 3RL,AwaitingInspection,3,-0.0586285,51.5375703
+2026-11-04,rating_changed,1980688,Oaks Burger/Sigs Smashed Burger/Wingsters/Nashville Bird/On The Side,Distributors/Transporters,Hackney,E8 4RG,AwaitingInspection,2,,
+2026-11-04,rating_changed,1914607,kichiya,Manufacturers/packers,Hackney,E8 3PH,AwaitingInspection,3,-0.0577,51.54114
+2026-11-04,rating_changed,1978577,Hi Harrow Bridge House,Other catering premises,Harrow,HA3 5AB,AwaitingInspection,4,-0.33392,51.59231
+2026-11-04,rating_changed,520422,Codfather Fish and Chips,Takeaway/sandwich shop,Hillingdon,UB7 9AE,2,3,-0.457992,51.504589
+2026-11-04,rating_changed,1965657,Sushi Samurai,Restaurant/Cafe/Canteen,Islington,N7 6NJ,AwaitingInspection,1,-0.1144779,51.5546511
+2026-11-04,rating_changed,1979582,Collect 4 Retro,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 5JG,AwaitingInspection,4,-0.2960165,51.4189981
+2026-11-04,rating_changed,1385592,Momma's Kitchen,Mobile caterer,Kingston-Upon-Thames,KT1 1JS,2,0,-0.306264996528625,51.4097938537598
+2026-11-04,rating_changed,484110,Gipsy Plaice Fish Bar,Takeaway/sandwich shop,Lambeth,SE27 9QY,4,1,-0.087906,51.427513
+2026-11-04,rating_changed,1599135,Acorn Children's Club,Caring Premises,Lewisham,SE23 1DL,4,1,-0.0427692,51.4474059
+2026-11-04,rating_changed,1600000,Diamond Club,Restaurant/Cafe/Canteen,Lewisham,SE6 2LD,4,3,-0.0135066,51.4425342
+2026-11-04,rating_changed,1942604,Pizza Napoli,Takeaway/sandwich shop,Lewisham,SE13 5PR,AwaitingInspection,2,-0.003733,51.459311
+2026-11-04,rating_changed,843865,ALL SAINTS CENTRE,Other catering premises,Merton,SW19 1BZ,5,4,-0.1841444,51.4193268
+2026-11-04,rating_changed,486407,Cater Link at Cranmer Primary School,School/college/university,Merton,CR4 4XU,5,4,-0.1645815,51.3966211
+2026-11-04,rating_changed,1493208,BabaBoom,Restaurant/Cafe/Canteen,Newham,E20 1GN,4,1,-0.0061517,51.5432663
+2026-11-04,rating_changed,1579980,Just Homes Charity,Caring Premises,Newham,E12,5,4,,
+2026-11-04,rating_changed,1976465,The Constance Bridgeman Centre,School/college/university,Redbridge,IG1 2UT,AwaitingInspection,4,0.0871438,51.5496775
+2026-11-04,rating_changed,1574853,Caterlink at St Marys C of E Primary school,School/college/university,Richmond-Upon-Thames,TW1 3HE,5,4,,
+2026-11-04,rating_changed,1575029,Woodville Centre,Caring Premises,Richmond-Upon-Thames,TW10 7QW,5,4,-0.3188637,51.4377339
+2026-11-04,rating_changed,1687233,Lucky dog,Takeaway/sandwich shop,Southwark,SE17 2DH,4,1,-0.092383,51.488898
+2026-11-04,rating_changed,1993581,Nafsoor Somali Cuisine & Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6BT,AwaitingInspection,3,-0.014585,51.511734
+2026-11-04,rating_changed,515352,Horizon,Restaurant/Cafe/Canteen,Waltham Forest,E11 1HQ,3,1,0.0104791,51.5678271
+2026-11-04,rating_changed,1726666,J'Adore,Restaurant/Cafe/Canteen,Waltham Forest,E11 3AA,5,1,0.0110522,51.5680601
+2026-11-04,rating_changed,1572651,Pear Tree Cafe,Restaurant/Cafe/Canteen,Wandsworth,SW11 4NJ,5,2,-0.158787,51.4804728
+2026-11-04,rating_changed,412603,Company of Cooks by Compass Group UK @ Royal Opera House,Restaurant/Cafe/Canteen,Westminster,WC2B 5HZ,5,2,-0.1226537,51.5130471
+2026-11-04,rating_changed,414369,Heaven Nightclub,Restaurant/Cafe/Canteen,Westminster,WC2N 6NG,4,2,-0.124097,51.5080882
+2026-11-04,rating_changed,1373929,Pavilion Knightsbridge,Restaurant/Cafe/Canteen,Westminster,SW1X 7JF,5,3,-0.1595628,51.5023372
+2026-11-04,rating_changed,413178,The John Snow Public House,Restaurant/Cafe/Canteen,Westminster,W1F 9QJ,3,4,-0.1366104,51.5132607
+2026-11-04,rating_changed,1752387,The New Inn,Pub/bar/nightclub,Westminster,NW8 6LA,3,1,-0.166229,51.5354627
+2026-11-04,rating_changed,766885,Waitrose,Retailers - supermarkets/hypermarkets,Westminster,"",5,4,-0.14451094,51.51499798
+2026-11-04,rating_changed,411265,Westminster Grocery & General Store,Retailers - other,Westminster,SW1P 4HB,5,2,-0.1246184,51.5083753
