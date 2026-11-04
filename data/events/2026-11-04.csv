@@ -1,4 +1,26 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-04,new,2010829,Alamiyah Montessori,Caring Premises,Barking and Dagenham,RM8 2ES,,AwaitingInspection,,
+2026-11-04,new,2010828,Larissa Patisserie,Restaurant/Cafe/Canteen,Barking and Dagenham,RM10 8YL,,AwaitingInspection,,
+2026-11-04,new,2010747,A Fibre Story,Other catering premises,Kingston-Upon-Thames,KT3,,AwaitingInspection,,
+2026-11-04,new,2010753,Aarikas Kitchen,Other catering premises,Kingston-Upon-Thames,KT1,,AwaitingInspection,,
+2026-11-04,new,2010746,Al Amin,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 3NG,,AwaitingInspection,,
+2026-11-04,new,2010749,Dan Thai Food Solutions,Other catering premises,Kingston-Upon-Thames,KT3,,AwaitingInspection,,
+2026-11-04,new,2010751,Gathered Suppers,Other catering premises,Kingston-Upon-Thames,KT2,,AwaitingInspection,,
+2026-11-04,new,2010745,June's House Bakery,Other catering premises,Kingston-Upon-Thames,KT2,,AwaitingInspection,,
+2026-11-04,new,2010748,Krispy Kreme,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1TP,,AwaitingInspection,,
+2026-11-04,new,2010744,MelloWell,Other catering premises,Kingston-Upon-Thames,KT9,,AwaitingInspection,,
+2026-11-04,new,2010752,SAMO Cafe And Patisserie,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1PE,,AwaitingInspection,,
+2026-11-04,new,2010750,The London Chef Sisters,Other catering premises,Kingston-Upon-Thames,KT5,,AwaitingInspection,,
+2026-11-04,new,1845106,The Secret Garden,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 6RJ,,AwaitingInspection,,
+2026-11-04,new,1969182,Browns Honey,Other catering premises,Sutton,SM5,,Exempt,,
+2026-11-04,new,2010757,TaoTao Kitchen,Other catering premises,Sutton,SM6,,Exempt,,
+2026-11-04,new,2010755,The Little Coffee Shack,Mobile caterer,Sutton,SM5,,Exempt,,
+2026-11-04,new,2010754,Watashi Tea,Importers/Exporters,Sutton,SM6,,AwaitingInspection,,
+2026-11-04,new,2010756,Yaash Peri Peri,Takeaway/sandwich shop,Sutton,SM1 4JD,,AwaitingInspection,,
+2026-11-04,rating_changed,1436584,Brothers Cafe,Restaurant/Cafe/Canteen,Barking and Dagenham,IG11 0HZ,2,5,,
+2026-11-04,rating_changed,1732270,Marks Gate Relief Project,Other catering premises,Barking and Dagenham,RM6 5NJ,4,5,,
+2026-11-04,rating_changed,1977474,Pizza Hut Delivery,Takeaway/sandwich shop,Barking and Dagenham,RM8 3RA,AwaitingInspection,5,,
+2026-11-04,rating_changed,1993296,Urban Promise UK,Retailers - other,Barking and Dagenham,RM6 6JH,AwaitingInspection,5,,
 2026-11-04,rating_changed,965291,28 Church Row,Restaurant/Cafe/Canteen,Camden,NW3 6UP,5,3,-0.1787816,51.5554869
 2026-11-04,rating_changed,1592193,GERMAN DONER KEBAB,Restaurant/Cafe/Canteen,Camden,WC1B 5HA,5,4,-0.1208541,51.5179014
 2026-11-04,rating_changed,1716654,HUS LONDON,Restaurant/Cafe/Canteen,Camden,WC2A 3HP,AwaitingInspection,0,-0.119078,51.5172794
@@ -20,6 +42,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,1965657,Sushi Samurai,Restaurant/Cafe/Canteen,Islington,N7 6NJ,AwaitingInspection,1,-0.1144779,51.5546511
 2026-11-04,rating_changed,1979582,Collect 4 Retro,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 5JG,AwaitingInspection,4,-0.2960165,51.4189981
 2026-11-04,rating_changed,1385592,Momma's Kitchen,Mobile caterer,Kingston-Upon-Thames,KT1 1JS,2,0,-0.306264996528625,51.4097938537598
+2026-11-04,rating_changed,1864932,Schwa Honey,Other catering premises,Kingston-Upon-Thames,KT3,Exempt,5,,
 2026-11-04,rating_changed,484110,Gipsy Plaice Fish Bar,Takeaway/sandwich shop,Lambeth,SE27 9QY,4,1,-0.087906,51.427513
 2026-11-04,rating_changed,1599135,Acorn Children's Club,Caring Premises,Lewisham,SE23 1DL,4,1,-0.0427692,51.4474059
 2026-11-04,rating_changed,1600000,Diamond Club,Restaurant/Cafe/Canteen,Lewisham,SE6 2LD,4,3,-0.0135066,51.4425342
@@ -32,6 +55,9 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,1574853,Caterlink at St Marys C of E Primary school,School/college/university,Richmond-Upon-Thames,TW1 3HE,5,4,,
 2026-11-04,rating_changed,1575029,Woodville Centre,Caring Premises,Richmond-Upon-Thames,TW10 7QW,5,4,-0.3188637,51.4377339
 2026-11-04,rating_changed,1687233,Lucky dog,Takeaway/sandwich shop,Southwark,SE17 2DH,4,1,-0.092383,51.488898
+2026-11-04,rating_changed,1914519,Caffe Federico,Restaurant/Cafe/Canteen,Sutton,SM6 0LT,AwaitingInspection,5,,
+2026-11-04,rating_changed,571097,The Willows,Caring Premises,Sutton,SM2 5JX,3,5,,
+2026-11-04,rating_changed,1932129,With.,Mobile caterer,Sutton,SM1,AwaitingInspection,5,,
 2026-11-04,rating_changed,1993581,Nafsoor Somali Cuisine & Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6BT,AwaitingInspection,3,-0.014585,51.511734
 2026-11-04,rating_changed,515352,Horizon,Restaurant/Cafe/Canteen,Waltham Forest,E11 1HQ,3,1,0.0104791,51.5678271
 2026-11-04,rating_changed,1726666,J'Adore,Restaurant/Cafe/Canteen,Waltham Forest,E11 3AA,5,1,0.0110522,51.5680601
@@ -43,3 +69,13 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,1752387,The New Inn,Pub/bar/nightclub,Westminster,NW8 6LA,3,1,-0.166229,51.5354627
 2026-11-04,rating_changed,766885,Waitrose,Retailers - supermarkets/hypermarkets,Westminster,"",5,4,-0.14451094,51.51499798
 2026-11-04,rating_changed,411265,Westminster Grocery & General Store,Retailers - other,Westminster,SW1P 4HB,5,2,-0.1246184,51.5083753
+2026-11-04,removed,1987829,Cafe Brake,Restaurant/Cafe/Canteen,Barking and Dagenham,RM9 5QP,AwaitingInspection,,0.1308035,51.5513684
+2026-11-04,removed,1824639,Aarikas Kitchen,Other catering premises,Kingston-Upon-Thames,KT1,AwaitingInspection,,,
+2026-11-04,removed,1961528,Aboki Suya Grill,Mobile caterer,Kingston-Upon-Thames,KT2,AwaitingInspection,,,
+2026-11-04,removed,1386089,Al-Amin Tandoori Takeaway,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 3NG,4,,-0.289998,51.4100782
+2026-11-04,removed,1922432,Dua Naga,Other catering premises,Kingston-Upon-Thames,SW20,AwaitingInspection,,,
+2026-11-04,removed,1392694,Farm Fresh Burgers,Other catering premises,Kingston-Upon-Thames,KT1 2BZ,5,,-0.303826987743378,51.4049644470215
+2026-11-04,removed,1920477,Rajah Kingston,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 2HT,AwaitingInspection,,-0.3040491,51.4010738
+2026-11-04,removed,1028948,Park Lane News,Retailers - other,Sutton,SM5 3AE,4,,-0.159007,51.365658
+2026-11-04,removed,1728895,The Dining Room At No.6,Restaurant/Cafe/Canteen,Sutton,SM2 5AJ,5,,-0.190707,51.358149
+2026-11-04,removed,1550953,The Encanto Kitchen,Restaurant/Cafe/Canteen,Sutton,SM2 5AD,5,,-0.1910416,51.3588544
