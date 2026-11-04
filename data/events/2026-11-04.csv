@@ -1,6 +1,24 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
 2026-11-04,new,2010829,Alamiyah Montessori,Caring Premises,Barking and Dagenham,RM8 2ES,,AwaitingInspection,,
 2026-11-04,new,2010828,Larissa Patisserie,Restaurant/Cafe/Canteen,Barking and Dagenham,RM10 8YL,,AwaitingInspection,,
+2026-11-04,new,2010956,Abhilasha Chandak,Other catering premises,Bexley,DA7,,AwaitingInspection,,
+2026-11-04,new,2010951,Carrummble,Retailers - other,Bexley,SE2,,AwaitingInspection,,
+2026-11-04,new,2010958,DS Chicken Piri,Takeaway/sandwich shop,Bexley,DA8 1PP,,AwaitingInspection,,
+2026-11-04,new,2010949,Dibrung Bar And Restaurant,Restaurant/Cafe/Canteen,Bexley,DA14 6ND,,AwaitingInspection,,
+2026-11-04,new,2010947,Freya And Co,Retailers - other,Bexley,DA6,,AwaitingInspection,,
+2026-11-04,new,2010955,Golden Charcoal Mici,Mobile caterer,Bexley,DA7,,AwaitingInspection,,
+2026-11-04,new,2010950,Harry's Fish & Chips,Takeaway/sandwich shop,Bexley,DA7 6EJ,,AwaitingInspection,,
+2026-11-04,new,2010953,Hosannah's Sweet Delights,Retailers - other,Bexley,SE2,,AwaitingInspection,,
+2026-11-04,new,2010952,LP Bakes,Retailers - other,Bexley,DA7,,AwaitingInspection,,
+2026-11-04,new,2010948,Layer,Retailers - other,Bexley,DA7,,AwaitingInspection,,
+2026-11-04,new,2010957,Morley's Fried Chicken,Takeaway/sandwich shop,Bexley,DA15 7DB,,AwaitingInspection,,
+2026-11-04,new,2010954,Pizza Gogo,Takeaway/sandwich shop,Bexley,DA16 3QB,,AwaitingInspection,,
+2026-11-04,new,2010946,Tide Over Box,Retailers - other,Bexley,DA15,,AwaitingInspection,,
+2026-11-04,new,1987951,Vintage Lindy Lou,Restaurant/Cafe/Canteen,Bexley,DA1 4JJ,,AwaitingInspection,,
+2026-11-04,new,2010943,Best Western London Ariel Hotel,Hotel/bed & breakfast/guest house,Hillingdon,UB3 5AJ,,AwaitingInspection,,
+2026-11-04,new,1288963,Garma concept ltd,Mobile caterer,Hillingdon,UB7,,AwaitingInspection,,
+2026-11-04,new,2010941,Lap Jap Frozen Foods Ltd,Manufacturers/packers,Hillingdon,UB8 2SN,,Exempt,,
+2026-11-04,new,2010942,Orlando Pizza,Takeaway/sandwich shop,Hillingdon,UB3 4JA,,AwaitingInspection,,
 2026-11-04,new,2010747,A Fibre Story,Other catering premises,Kingston-Upon-Thames,KT3,,AwaitingInspection,,
 2026-11-04,new,2010753,Aarikas Kitchen,Other catering premises,Kingston-Upon-Thames,KT1,,AwaitingInspection,,
 2026-11-04,new,2010746,Al Amin,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 3NG,,AwaitingInspection,,
@@ -21,6 +39,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,1732270,Marks Gate Relief Project,Other catering premises,Barking and Dagenham,RM6 5NJ,4,5,,
 2026-11-04,rating_changed,1977474,Pizza Hut Delivery,Takeaway/sandwich shop,Barking and Dagenham,RM8 3RA,AwaitingInspection,5,,
 2026-11-04,rating_changed,1993296,Urban Promise UK,Retailers - other,Barking and Dagenham,RM6 6JH,AwaitingInspection,5,,
+2026-11-04,rating_changed,2001424,Romies Brasserie,Restaurant/Cafe/Canteen,Bexley,DA5 1LA,4,5,,
 2026-11-04,rating_changed,965291,28 Church Row,Restaurant/Cafe/Canteen,Camden,NW3 6UP,5,3,-0.1787816,51.5554869
 2026-11-04,rating_changed,1592193,GERMAN DONER KEBAB,Restaurant/Cafe/Canteen,Camden,WC1B 5HA,5,4,-0.1208541,51.5179014
 2026-11-04,rating_changed,1716654,HUS LONDON,Restaurant/Cafe/Canteen,Camden,WC2A 3HP,AwaitingInspection,0,-0.119078,51.5172794
@@ -39,6 +58,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,1914607,kichiya,Manufacturers/packers,Hackney,E8 3PH,AwaitingInspection,3,-0.0577,51.54114
 2026-11-04,rating_changed,1978577,Hi Harrow Bridge House,Other catering premises,Harrow,HA3 5AB,AwaitingInspection,4,-0.33392,51.59231
 2026-11-04,rating_changed,520422,Codfather Fish and Chips,Takeaway/sandwich shop,Hillingdon,UB7 9AE,2,3,-0.457992,51.504589
+2026-11-04,rating_changed,759975,SilverKris Lounge (Singapore Airlines),Restaurant/Cafe/Canteen,Hillingdon,"",4,5,,
 2026-11-04,rating_changed,1965657,Sushi Samurai,Restaurant/Cafe/Canteen,Islington,N7 6NJ,AwaitingInspection,1,-0.1144779,51.5546511
 2026-11-04,rating_changed,1979582,Collect 4 Retro,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 5JG,AwaitingInspection,4,-0.2960165,51.4189981
 2026-11-04,rating_changed,1385592,Momma's Kitchen,Mobile caterer,Kingston-Upon-Thames,KT1 1JS,2,0,-0.306264996528625,51.4097938537598
@@ -70,6 +90,20 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-04,rating_changed,766885,Waitrose,Retailers - supermarkets/hypermarkets,Westminster,"",5,4,-0.14451094,51.51499798
 2026-11-04,rating_changed,411265,Westminster Grocery & General Store,Retailers - other,Westminster,SW1P 4HB,5,2,-0.1246184,51.5083753
 2026-11-04,removed,1987829,Cafe Brake,Restaurant/Cafe/Canteen,Barking and Dagenham,RM9 5QP,AwaitingInspection,,0.1308035,51.5513684
+2026-11-04,removed,1408398,Hong Ma / Jai Wei,Mobile caterer,Bexley,DA16,5,,,
+2026-11-04,removed,1193377,Pizza GoGo,Takeaway/sandwich shop,Bexley,DA16 3QB,4,,0.102579,51.463442
+2026-11-04,removed,1424037,Uncle Beef,Retailers - other,Bexley,DA1 4HG,5,,0.1778753,51.4523455
+2026-11-04,removed,1435535,Uncle Beef Butcher's Block & Grill,Restaurant/Cafe/Canteen,Bexley,DA1 4HG,5,,0.1778753,51.4523455
+2026-11-04,removed,1804649,Rama Thai,Restaurant/Cafe/Canteen,Croydon,SW16 4RW,4,,-0.120345,51.4086852
+2026-11-04,removed,519712,Antalya Kebabs,Takeaway/sandwich shop,Hillingdon,HA4 0QP,5,,-0.381202,51.560817
+2026-11-04,removed,1975289,Are You Jerkin,Takeaway/sandwich shop,Hillingdon,UB8 2EN,AwaitingInspection,,-0.481235,51.52793
+2026-11-04,removed,1095938,Co-op,Retailers - supermarkets/hypermarkets,Hillingdon,HA4 8JB,5,,-0.4240321,51.5741252
+2026-11-04,removed,1413313,Love Desserts,Restaurant/Cafe/Canteen,Hillingdon,UB3 2AB,3,,-0.4191935,51.5072656
+2026-11-04,removed,1745002,"Lysander House - (McCarthy & Stone - Caterplus,)",Caring Premises,Hillingdon,UB10 8FB,5,,-0.4397899,51.5682603
+2026-11-04,removed,1176019,Mamma Rosa,Restaurant/Cafe/Canteen,Hillingdon,HA4 7AN,4,,-0.42653,51.575902
+2026-11-04,removed,519093,Northwood Health Foods,Retailers - other,Hillingdon,HA6 1AB,5,,-0.422943,51.61157
+2026-11-04,removed,1436927,Parkfield House Nursing Home,Caring Premises,Hillingdon,UB10 0BY,5,,-0.449882,51.534255
+2026-11-04,removed,1525598,The Woodman Pinner,Pub/bar/nightclub,Hillingdon,HA5 2PR,4,,,
 2026-11-04,removed,1824639,Aarikas Kitchen,Other catering premises,Kingston-Upon-Thames,KT1,AwaitingInspection,,,
 2026-11-04,removed,1961528,Aboki Suya Grill,Mobile caterer,Kingston-Upon-Thames,KT2,AwaitingInspection,,,
 2026-11-04,removed,1386089,Al-Amin Tandoori Takeaway,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 3NG,4,,-0.289998,51.4100782
