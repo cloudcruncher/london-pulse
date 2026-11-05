@@ -968,7 +968,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-11-05,Enfield,2434,1377,1281,257
 2026-11-05,Greenwich,2354,1309,1679,185
 2026-11-05,Hackney,2297,1483,1464,172
-2026-11-05,Hammersmith and Fulham,2014,1285,1425,134
+2026-11-05,Hammersmith and Fulham,2015,1286,1431,131
 2026-11-05,Haringey,1950,1082,1437,36
 2026-11-05,Harrow,1910,1075,976,287
 2026-11-05,Havering,2027,1010,1268,116
@@ -980,7 +980,7 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-11-05,Lambeth,2694,1807,1523,187
 2026-11-05,Lewisham,2465,1447,1310,332
 2026-11-05,Merton,1603,902,1055,252
-2026-11-05,Newham,2677,1487,1188,144
+2026-11-05,Newham,2650,1481,1215,137
 2026-11-05,Redbridge,2252,1351,1226,358
 2026-11-05,Richmond-Upon-Thames,1613,1025,1051,160
 2026-11-05,Southwark,3323,2071,2161,254
@@ -988,4 +988,4 @@ snapshot_date,authority,premises,eating_drinking,five_star,awaiting
 2026-11-05,Tower Hamlets,3199,2086,2037,207
 2026-11-05,Waltham Forest,1972,1010,941,56
 2026-11-05,Wandsworth,2944,1806,1921,377
-2026-11-05,Westminster,5785,4249,3758,140
+2026-11-05,Westminster,5795,4267,3757,178
