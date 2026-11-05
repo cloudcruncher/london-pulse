@@ -78,6 +78,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,rating_changed,2006912,Persian Palace,Restaurant/Cafe/Canteen,Ealing,W13 9AU,AwaitingInspection,1,-0.3158383,51.5113391
 2026-11-05,rating_changed,1959428,Pho & Grill Co,Takeaway/sandwich shop,Ealing,W3 7QE,AwaitingInspection,4,,
 2026-11-05,rating_changed,1274162,Bright Star Food & Wine Express,Retailers - other,Enfield,N11 1AA,3,1,-0.134815,51.615934
+2026-11-05,rating_changed,1965717,The Banc Brasserie,Restaurant/Cafe/Canteen,Enfield,EN1 1UY,2,4,,
 2026-11-05,rating_changed,931158,Fennec and Parsley,Restaurant/Cafe/Canteen,Hackney,N1 6SH,4,5,,
 2026-11-05,rating_changed,1904008,Impact Food Group @ Clapton Girls' Academy,Other catering premises,Hackney,E5 0RB,2,5,,
 2026-11-05,rating_changed,1156781,Muzzy's Cafe,Restaurant/Cafe/Canteen,Hackney,N1 6BT,3,5,,
@@ -104,40 +105,17 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,rating_changed,1853359,Saucey,Manufacturers/packers,Kensington and Chelsea,W11,5,4,,
 2026-11-05,rating_changed,333533,Tesco,Retailers - supermarkets/hypermarkets,Kensington and Chelsea,W11 3RB,5,4,-0.20657,51.507156
 2026-11-05,rating_changed,486428,Jovan Foods,Manufacturers/packers,Merton,CR4 2PA,2,3,-0.1629674,51.404684
-2026-11-05,rating_changed,805368,Akro Pharmacy,Retailers - other,Newham,E7 8NP,Exempt,5,0.036752,51.543461
-2026-11-05,rating_changed,805366,Blakeberry Ltd,Retailers - other,Newham,E6 3RL,Exempt,5,0.056028,51.527019
-2026-11-05,rating_changed,919666,Boots UK Ltd,Retailers - other,Newham,E13 9AP,Exempt,5,0.034529,51.536638
-2026-11-05,rating_changed,846598,Boots UK Ltd,Retailers - other,Newham,E6 2HT,Exempt,5,0.052302,51.536805
 2026-11-05,rating_changed,1991883,Brampton Primary School - Breakfast / After School Club,Other catering premises,Newham,E6 3LB,AwaitingInspection,1,,
-2026-11-05,rating_changed,805336,Card Factory,Retailers - other,Newham,E6 1HS,Exempt,5,0.053157,51.534335
-2026-11-05,rating_changed,846605,Day Lewis Pharmacy,Retailers - other,Newham,E16 2LL,Exempt,5,0.063522,51.501123
 2026-11-05,rating_changed,1977103,Eatactiv Canary Wharf,Takeaway/sandwich shop,Newham,E16 4TG,AwaitingInspection,5,,
 2026-11-05,rating_changed,1979774,Hydrabadi Mandi & Grill,Restaurant/Cafe/Canteen,Newham,E12 6PH,2,5,,
 2026-11-05,rating_changed,813705,Iceland Frozen Foods Plc,Retailers - supermarkets/hypermarkets,Newham,E13 8QB,4,5,,
 2026-11-05,rating_changed,1901078,Magazin Romanesc,Retailers - other,Newham,E6 1JB,0,4,0.05112,51.538094
 2026-11-05,rating_changed,852737,Maryland Supermarket,Retailers - other,Newham,E15 1JA,1,5,,
-2026-11-05,rating_changed,1862692,Merkur Slots,Retailers - other,Newham,E13 9AU,Exempt,5,0.0360589,51.5344722
-2026-11-05,rating_changed,1862691,Merkur Slots,Retailers - other,Newham,E13 8HL,Exempt,5,0.0220495,51.5219091
-2026-11-05,rating_changed,1860023,Merkur Slots,Retailers - other,Newham,E6 1JB,Exempt,AwaitingInspection,0.0513474,51.5377758
 2026-11-05,rating_changed,2001233,Milk Bar,Mobile caterer,Newham,E7 0NQ,AwaitingInspection,5,,
-2026-11-05,rating_changed,805329,Primark,Retailers - other,Newham,E6 1HZ,Exempt,5,0.0521556,51.5352257
 2026-11-05,rating_changed,1998615,Rayan Coffee,Restaurant/Cafe/Canteen,Newham,E6 2LT,AwaitingInspection,5,,
 2026-11-05,rating_changed,1977070,SHIN Matcha Club,Retailers - other,Newham,E16,AwaitingInspection,5,,
-2026-11-05,rating_changed,805325,Sai Pharmacy,Retailers - other,Newham,E6 2HT,Exempt,5,0.052302,51.536805
-2026-11-05,rating_changed,1042945,Savers Health & Beauty Ltd,Retailers - other,Newham,E6 1JB,Exempt,5,0.0509854,51.5383846
-2026-11-05,rating_changed,1754689,St Margarets Food Bank,Other catering premises,Newham,E16 4HB,Exempt,AwaitingInspection,0.0090300003066659,51.5165405273438
-2026-11-05,rating_changed,919664,Superdrug,Retailers - other,Newham,E13 9AR,Exempt,5,0.035125,51.536745
-2026-11-05,rating_changed,837088,Superdrug,Retailers - other,Newham,E7 9HA,Exempt,5,0.024182,51.546521
-2026-11-05,rating_changed,654122,Superdrug,Retailers - other,Newham,E15 1XQ,Exempt,5,0.000671,51.54187
-2026-11-05,rating_changed,640449,Superdrug Stores Plc,Retailers - other,Newham,E20 1EH,Exempt,5,-0.00634700013324618,51.5443344116211
-2026-11-05,rating_changed,765267,TK Maxx,Retailers - other,Newham,E20 1EN,Exempt,5,,
-2026-11-05,rating_changed,849276,TK Maxx,Retailers - other,Newham,E6 7ER,Exempt,5,0.0807879,51.5170954
-2026-11-05,rating_changed,1296083,The Caramel Tart Company,Manufacturers/packers,Newham,E16 2AU,Exempt,2,0.0234546,51.5019115
 2026-11-05,rating_changed,1857340,Tiny Town Daycare East Ham,Caring Premises,Newham,E6 6DQ,4,5,,
 2026-11-05,rating_changed,1987659,Transport For London - 10th Floor Staff Restaurant,Other catering premises,Newham,E20 1JN,AwaitingInspection,5,,
-2026-11-05,rating_changed,1740126,True Ambassadors,Takeaway/sandwich shop,Newham,E13 0PE,Exempt,4,0.0254623,51.5328753
-2026-11-05,rating_changed,919678,W H Smith Retail Ltd,Retailers - other,Newham,E6 1HZ,Exempt,5,0.0514625,51.5364878
-2026-11-05,rating_changed,919369,Zam Zam,Retailers - other,Newham,E13 9AP,Exempt,5,0.0348972,51.5355805
 2026-11-05,rating_changed,443327,Ray Lodge Primary School,School/college/university,Redbridge,IG8 7JQ,3,4,0.043787,51.607088
 2026-11-05,rating_changed,1574839,Makan- Makan,Takeaway/sandwich shop,Richmond-Upon-Thames,TW1 3AW,3,4,-0.3231655,51.4495215
 2026-11-05,rating_changed,731074,Funky Cellar,Retailers - other,Tower Hamlets,E1 6EA,4,2,-0.0754891,51.5200662
@@ -202,34 +180,14 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,removed,1831675,Rio,Retailers - other,Kensington and Chelsea,W8 6TA,AwaitingInspection,,-0.1930704,51.4999716
 2026-11-05,removed,912065,Sumosan,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW1X 9QB,5,,-0.159181,51.498778
 2026-11-05,removed,1739870,Taco Bell,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9QQ,5,,-0.195157,51.493654
-2026-11-05,removed,1680401,About Town Business Services,Retailers - other,Newham,E16 1XL,Exempt,,0.027108,51.50817
-2026-11-05,removed,805321,Barking Road Post Office,Retailers - other,Newham,E6 2LN,Exempt,,0.060262,51.533932
 2026-11-05,removed,1636977,Bo Bar Ltd,Restaurant/Cafe/Canteen,Newham,E13 8QQ,5,,0.0303464,51.5233933
-2026-11-05,removed,919391,Britannia Pharmacy,Retailers - other,Newham,E13 8QG,Exempt,,0.02951,51.525277
-2026-11-05,removed,1862686,Day Lewis Pharmacy,Retailers - other,Newham,E6 5JS,Exempt,,0.0563891,51.5155742
-2026-11-05,removed,1080825,Daystar Pharmacy,Retailers - other,Newham,E13 9HH,Exempt,,0.0246829,51.5296064
 2026-11-05,removed,1761912,Delights,Retailers - other,Newham,E6 3BA,4,,0.0527000017464161,51.5325088500977
-2026-11-05,removed,1843938,Duncans Dispensing Chemist,Retailers - other,Newham,E12 6PQ,Exempt,,0.049562,51.543867
-2026-11-05,removed,919639,Frank Mays Pharmacy,Retailers - other,Newham,E6 3BP,Exempt,,0.040326,51.530503
 2026-11-05,removed,1767024,Fresh Coconut & Drink,Retailers - other,Newham,E15 1XA,1,,,
 2026-11-05,removed,1993187,Fresh Fruits,Other catering premises,Newham,E12,AwaitingInspection,,,
 2026-11-05,removed,1960161,Harissa&Go,Other catering premises,Newham,E12,AwaitingInspection,,,
 2026-11-05,removed,1993189,Marchon Stratford,Restaurant/Cafe/Canteen,Newham,E15 2QR,AwaitingInspection,,-0.0086014,51.5318132
 2026-11-05,removed,1984404,Mei's Memo,Other catering premises,Newham,E15,AwaitingInspection,,,
-2026-11-05,removed,1862679,Osbon Pharmacy,Retailers - other,Newham,E16 4PZ,Exempt,,0.0115185,51.5197613
-2026-11-05,removed,1844768,Osbon Pharmacy,Retailers - other,Newham,E15 1XE,Exempt,,-0.000441,51.541835
-2026-11-05,removed,1857342,Plashet Pharmacy,Retailers - other,Newham,E6 1BX,Exempt,,0.042952,51.538605
-2026-11-05,removed,1079205,Pound Market,Retailers - other,Newham,E13 9AP,Exempt,,0.0338442,51.5375143
-2026-11-05,removed,1843937,Prime Pharmacy,Retailers - other,Newham,E12 6SB,Exempt,,0.050961,51.540974
-2026-11-05,removed,1853219,Rohpharm Pharmacy,Retailers - other,Newham,E13 0AL,Exempt,,0.01909,51.531194
-2026-11-05,removed,1849015,Shermans Chemist,Retailers - other,Newham,E7 0EW,Exempt,,0.0254,51.550896
-2026-11-05,removed,1130141,St Margaret Of Cotrona & All Saints,Caring Premises,Newham,E16 4HB,Exempt,,0.0090300003066659,51.5165405273438
-2026-11-05,removed,1737454,St Matthias Church,Other catering premises,Newham,E16 4NT,Exempt,,0.010964,51.522809
-2026-11-05,removed,1829403,The Entertainer,Retailers - other,Newham,E20 1EH,Exempt,,-0.0066118,51.5435957
-2026-11-05,removed,1843924,The Kiosk,Retailers - other,Newham,E6 2HJ,Exempt,,0.0531565,51.5350373
-2026-11-05,removed,1843939,Vape And Shisha City,Retailers - other,Newham,E12 6RH,Exempt,,0.049225,51.545978
 2026-11-05,removed,1670057,Waffle Heart Ltd,Restaurant/Cafe/Canteen,Newham,E6 3BA,5,,0.0515821,51.532412
-2026-11-05,removed,1847207,Yemi Pharmacy,Retailers - other,Newham,E15 1EN,Exempt,,0.004716,51.54466
 2026-11-05,removed,1584351,Ali Baba,Restaurant/Cafe/Canteen,Westminster,NW8 8PS,4,,-0.1733295,51.522705
 2026-11-05,removed,1553353,Ayash,Retailers - other,Westminster,W1W,5,,,
 2026-11-05,removed,1660534,BIBI'S,Restaurant/Cafe/Canteen,Westminster,W1F 9JG,5,,-0.1367155,51.5113918
