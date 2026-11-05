@@ -8,8 +8,16 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,new,2010995,The Roots,Pub/bar/nightclub,Hackney,N16 7XA,,AwaitingInspection,,
 2026-11-05,new,2010997,Wingerz Wingz,Restaurant/Cafe/Canteen,Hackney,E1 6GY,,AwaitingInspection,,
 2026-11-05,new,1743535,Mitchelle Creps and More,Takeaway/sandwich shop,Haringey,N8 7NX,,4,,
+2026-11-05,new,2011009,Atlantiques Fine Art,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-11-05,new,2011007,Cavea,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 2EH,,AwaitingInspection,,
+2026-11-05,new,2011008,Chef & Coach,Mobile caterer,Kensington and Chelsea,W14,,AwaitingInspection,,
+2026-11-05,new,2011003,Christ Church (Kensington),Other catering premises,Kensington and Chelsea,W8 5RQ,,5,,
+2026-11-05,new,2011004,KURO RAMEN,Takeaway/sandwich shop,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-11-05,new,2011005,The Pinsa Movement,Takeaway/sandwich shop,Kensington and Chelsea,SW3 3AP,,AwaitingInspection,,
+2026-11-05,new,2011006,ileOlawunmi,Takeaway/sandwich shop,Kensington and Chelsea,SW10,,AwaitingInspection,,
 2026-11-05,rating_changed,1844383,Barking Cost Cutter Limited,Retailers - other,Barking and Dagenham,IG11 8DN,AwaitingInspection,4,0.0804551,51.5382615
 2026-11-05,rating_changed,1935814,Pepper Tree Caribbean Cuisine,Other catering premises,Barking and Dagenham,RM8,AwaitingInspection,4,,
+2026-11-05,rating_changed,533823,Bun Burger Club / House of Biryani,Takeaway/sandwich shop,Brent,HA0 1JX,5,AwaitingInspection,,
 2026-11-05,rating_changed,358066,Chislehurst Caves,Restaurant/Cafe/Canteen,Bromley,BR7 5NB,4,3,0.0580481,51.4074957
 2026-11-05,rating_changed,983639,Laoma,Restaurant/Cafe/Canteen,Camden,WC1X 9BJ,1,3,-0.1161912,51.5295981
 2026-11-05,rating_changed,1314184,Lebanese Grill,Takeaway/sandwich shop,Camden,NW1 7JE,2,1,-0.1393913,51.5351931
@@ -39,10 +47,6 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,rating_changed,1025882,Umar Halal Meats,Retailers - other,Hillingdon,UB4 0RY,1,0,-0.412425994873047,51.5196533203125
 2026-11-05,rating_changed,951994,Euphorium Bakery,Restaurant/Cafe/Canteen,Islington,N1 1RQ,2,4,-0.1034,51.542845
 2026-11-05,rating_changed,1669474,SWAMI MAULI LTD@The Hercules,Other catering premises,Islington,N7 6JA,AwaitingInspection,3,,
-2026-11-05,rating_changed,1958463,Hanga,Takeaway/sandwich shop,Kensington and Chelsea,"",Exempt,AwaitingInspection,,
-2026-11-05,rating_changed,334652,Hotel Boka,Hotel/bed & breakfast/guest house,Kensington and Chelsea,SW5 9JT,Exempt,5,-0.195752,51.489545
-2026-11-05,rating_changed,1859207,Robert Dyas,Retailers - other,Kensington and Chelsea,SW5 9QG,Exempt,5,-0.1944592,51.4929474
-2026-11-05,rating_changed,1859208,Robert Dyas,Retailers - other,Kensington and Chelsea,W8 7RL,Exempt,5,-0.1948697,51.5005885
 2026-11-05,rating_changed,1853359,Saucey,Manufacturers/packers,Kensington and Chelsea,W11,5,4,,
 2026-11-05,rating_changed,333533,Tesco,Retailers - supermarkets/hypermarkets,Kensington and Chelsea,W11 3RB,5,4,-0.20657,51.507156
 2026-11-05,rating_changed,486428,Jovan Foods,Manufacturers/packers,Merton,CR4 2PA,2,3,-0.1629674,51.404684
@@ -87,19 +91,10 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-05,removed,469109,"St.Thomas, Church of England",Other catering premises,Hackney,E5 9AA,4,,,
 2026-11-05,removed,1759450,Tapasya’s Couture Cakes,Other catering premises,Hackney,N16,5,,,
 2026-11-05,removed,1864908,Tricia'S Onestop Kitchen,Other catering premises,Hackney,E9 6,AwaitingInspection,,,
-2026-11-05,removed,499790,Baywood Chemist,Retailers - other,Kensington and Chelsea,W11 2SE,Exempt,,-0.200383,51.514228
-2026-11-05,removed,759143,Bliss Pharmacy,Retailers - other,Kensington and Chelsea,SW7 4SS,Exempt,,-0.182125,51.494244
 2026-11-05,removed,1958456,GUGUGAGA,Mobile caterer,Kensington and Chelsea,SW3 2QF,AwaitingInspection,,-0.1630072,51.4944417
-2026-11-05,removed,1762235,Handford Wines,Retailers - other,Kensington and Chelsea,SW7 3LE,Exempt,,-0.1777504,51.4921357
-2026-11-05,removed,333577,Jeroboams,Retailers - other,Kensington and Chelsea,SW3 1RB,Exempt,,-0.16477,51.496303
-2026-11-05,removed,334613,Jeroboams,Retailers - other,Kensington and Chelsea,SW1X 9EL,Exempt,,-0.15682,51.497671
-2026-11-05,removed,1694435,Kensington Pharmacy,Retailers - other,Kensington and Chelsea,W8 6QD,Exempt,,-0.1925565,51.4965734
-2026-11-05,removed,668398,L'art Du Chocolat/Leonidas,Retailers - other,Kensington and Chelsea,W8 5SF,Exempt,,-0.192514,51.500753
 2026-11-05,removed,2008667,Libbys,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,,-0.1992966,51.5141678
 2026-11-05,removed,1959858,Olé Catering,Mobile caterer,Kensington and Chelsea,SW5,AwaitingInspection,,,
 2026-11-05,removed,1671869,Prairie Fire,Other catering premises,Kensington and Chelsea,SW10 0BH,5,,-0.179409,51.484679
 2026-11-05,removed,1831675,Rio,Retailers - other,Kensington and Chelsea,W8 6TA,AwaitingInspection,,-0.1930704,51.4999716
 2026-11-05,removed,912065,Sumosan,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW1X 9QB,5,,-0.159181,51.498778
 2026-11-05,removed,1739870,Taco Bell,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9QQ,5,,-0.195157,51.493654
-2026-11-05,removed,1998830,The Dining Collective,Mobile caterer,Kensington and Chelsea,SW10,Exempt,,,
-2026-11-05,removed,334773,Worlds End Tobacconists,Retailers - other,Kensington and Chelsea,SW10 0HE,Exempt,,-0.179883,51.481476
