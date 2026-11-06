@@ -1,4 +1,17 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-06,new,2011276,Anaar Fruit and Veg,Retailers - other,Harrow,HA1 3QN,,AwaitingInspection,,
+2026-11-06,new,2011280,Bahar Ice Cream,Restaurant/Cafe/Canteen,Harrow,HA3 5DL,,AwaitingInspection,,
+2026-11-06,new,2011287,Battels,Restaurant/Cafe/Canteen,Harrow,HA1 3LL,,AwaitingInspection,,
+2026-11-06,new,2011277,Dawat bar & kitchen 2,Restaurant/Cafe/Canteen,Harrow,HA3 8RP,,AwaitingInspection,,
+2026-11-06,new,2011279,Flatteino,Restaurant/Cafe/Canteen,Harrow,HA1 1JX,,AwaitingInspection,,
+2026-11-06,new,2011286,Honeyandwood,Retailers - other,Harrow,HA3,,AwaitingInspection,,
+2026-11-06,new,2011283,Kookie,Other catering premises,Harrow,HA7,,AwaitingInspection,,
+2026-11-06,new,2011281,L.Woozy,Other catering premises,Harrow,HA2,,AwaitingInspection,,
+2026-11-06,new,2011288,LiveXCare,Retailers - other,Harrow,HA2,,AwaitingInspection,,
+2026-11-06,new,2011284,Popeyes,Restaurant/Cafe/Canteen,Harrow,HA1 1JU,,AwaitingInspection,,
+2026-11-06,new,2011278,Premier Fruits,Retailers - other,Harrow,HA1 1FD,,5,,
+2026-11-06,new,2011285,Stillbrew.london,Mobile caterer,Harrow,HA1,,AwaitingInspection,,
+2026-11-06,new,2011282,VaishBakes,Other catering premises,Harrow,HA5,,AwaitingInspection,,
 2026-11-06,rating_changed,1977477,No Crumbs.co,Other catering premises,Barking and Dagenham,IG11,AwaitingInspection,1,,
 2026-11-06,rating_changed,1923777,A17 Food,Mobile caterer,Bexley,DA8,AwaitingInspection,4,,
 2026-11-06,rating_changed,1345315,Mega Saver,Retailers - supermarkets/hypermarkets,Bromley,SE20 7PF,3,4,-0.050906,51.413342
@@ -7,7 +20,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-06,rating_changed,1689553,Olive Dining At Norbury Manor High School For Girls,School/college/university,Croydon,CR7 8BT,5,4,,
 2026-11-06,rating_changed,977277,EaTurkish,Takeaway/sandwich shop,Greenwich,SE7 7RA,5,3,0.0202553,51.486607
 2026-11-06,rating_changed,694177,Food & Wine,Retailers - other,Greenwich,SE7 7AB,2,3,0.0325636,51.485477
+2026-11-06,rating_changed,1803274,Cake Inn,Other catering premises,Harrow,HA3 8DN,4,5,,
+2026-11-06,rating_changed,1966370,Deliciile Alinei Ltd,Other catering premises,Harrow,HA7 3NU,3,5,,
+2026-11-06,rating_changed,1250320,Fresh Vegan Meals Ltd,Other catering premises,Harrow,HA3,4,5,,
+2026-11-06,rating_changed,1878236,Kids Can Achieve,Caring Premises,Harrow,HA3 6QJ,3,5,,
 2026-11-06,rating_changed,1942852,Kwetu,Other catering premises,Harrow,HA1 2JN,AwaitingInspection,4,-0.3313175,51.5830407
+2026-11-06,rating_changed,1734875,SARAVANAA BHAVAN,Restaurant/Cafe/Canteen,Harrow,HA3 8DN,AwaitingInspection,5,,
 2026-11-06,rating_changed,1774791,The Hive - site canteen,Restaurant/Cafe/Canteen,Hillingdon,UB4 0JZ,2,3,-0.3939073,51.5104468
 2026-11-06,rating_changed,417262,M K Supermarket,Retailers - other,Islington,N4 2DW,4,1,-0.1036728,51.5640359
 2026-11-06,rating_changed,1982198,Pizza Lads,Takeaway/sandwich shop,Islington,N1 1DW,AwaitingInspection,3,,
@@ -26,3 +44,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-06,rating_changed,946324,Greenwoods Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1E 5LB,4,3,-0.1438067,51.4968173
 2026-11-06,rating_changed,1978201,Honi Poke,Takeaway/sandwich shop,Westminster,W1B 5PQ,5,2,-0.1388338,51.5124596
 2026-11-06,rating_changed,1988743,Suzette Garden,Restaurant/Cafe/Canteen,Westminster,SW1E 6AB,AwaitingInspection,4,-0.1370852,51.4980975
+2026-11-06,removed,1761245,Baharistan ice cream,Takeaway/sandwich shop,Harrow,HA3 5DL,0,,-0.3366706,51.597316
+2026-11-06,removed,771457,Battels,Takeaway/sandwich shop,Harrow,HA1 3LL,5,,-0.338837,51.571744
+2026-11-06,removed,1955985,HONEY G TRENDING LTD,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-11-06,removed,1987048,Jemini Parmar Cakes,Other catering premises,Harrow,HA3,AwaitingInspection,,,
+2026-11-06,removed,1863316,Kerala Tharavadu Kitchen,Other catering premises,Harrow,HA2,AwaitingInspection,,,
+2026-11-06,removed,1265288,MirelaFlavour,Other catering premises,Harrow,HA7,5,,,
+2026-11-06,removed,2005683,Moreish Chocolatier,Other catering premises,Harrow,HA8,AwaitingInspection,,,
+2026-11-06,removed,2005681,Nadia's kitchen also t/a Shaam London,Other catering premises,Harrow,HA7,AwaitingInspection,,,
+2026-11-06,removed,1833986,Original Souvlaki,Restaurant/Cafe/Canteen,Harrow,HA1 1JX,5,,-0.337517,51.581654
+2026-11-06,removed,1701586,Pepper Spice,Takeaway/sandwich shop,Harrow,HA1 1JX,5,,-0.337517,51.581654
+2026-11-06,removed,276308,Premier Fruits,Retailers - other,Harrow,HA1 1FD,5,,-0.336726,51.57978
+2026-11-06,removed,2005676,Yard Style Snacks,Retailers - other,Harrow,HA7,AwaitingInspection,,,
