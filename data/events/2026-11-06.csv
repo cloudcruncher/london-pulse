@@ -1,4 +1,29 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-06,new,2011807,Bongo's Kitchen,Other catering premises,Greenwich,SE2 0QS,,AwaitingInspection,,
+2026-11-06,new,2011815,Bricks & Brews Greenwich,Other catering premises,Greenwich,SE8 3FE,,AwaitingInspection,,
+2026-11-06,new,2011821,CHEFakaDUCKIEs,Other catering premises,Greenwich,SE18,,AwaitingInspection,,
+2026-11-06,new,2011808,Castella Bakery,Other catering premises,Greenwich,SE10,,AwaitingInspection,,
+2026-11-06,new,2011813,DFC,Other catering premises,Greenwich,SE12,,AwaitingInspection,,
+2026-11-06,new,2011817,Dave’s Hot Chicken,Restaurant/Cafe/Canteen,Greenwich,SE10 0BB,,AwaitingInspection,,
+2026-11-06,new,1223641,Disney Whip,Mobile caterer,Greenwich,SE9,,5,,
+2026-11-06,new,2011811,Ellis Butchers,Retailers - other,Greenwich,SE10 0RT,,AwaitingInspection,,
+2026-11-06,new,2011809,FBSWEETSENSATIONS,Other catering premises,Greenwich,SE2,,AwaitingInspection,,
+2026-11-06,new,2011816,Hollie Harwood,Mobile caterer,Greenwich,SE18 4QH,,AwaitingInspection,,
+2026-11-06,new,2011814,Holy Corn,Retailers - other,Greenwich,SE10 9HZ,,AwaitingInspection,,
+2026-11-06,new,1984294,Kiishaskookies,Other catering premises,Greenwich,SE8,,AwaitingInspection,,
+2026-11-06,new,2011805,Levy at Charlton Football Club,Other catering premises,Greenwich,SE9 2JR,,AwaitingInspection,,
+2026-11-06,new,694420,Lord Herbert,Pub/bar/nightclub,Greenwich,SE18 3SZ,,Exempt,,
+2026-11-06,new,2011810,Pho City,Restaurant/Cafe/Canteen,Greenwich,SE10 8NW,,AwaitingInspection,,
+2026-11-06,new,2011803,Radzhinder Legacies,Other catering premises,Greenwich,SE2,,AwaitingInspection,,
+2026-11-06,new,2011802,Ratdog Speciality Coffee,Other catering premises,Greenwich,SE28,,AwaitingInspection,,
+2026-11-06,new,1913777,Roli's Authentic Jollof Sauce ®,Other catering premises,Greenwich,SE10,,AwaitingInspection,,
+2026-11-06,new,2011806,TIP-THE ITALIAN PANTRY,Distributors/Transporters,Greenwich,SE7 7RU,,AwaitingInspection,,
+2026-11-06,new,2011804,Tamkoko,Other catering premises,Greenwich,SE18,,AwaitingInspection,,
+2026-11-06,new,2011812,The Whole affair,Other catering premises,Greenwich,SE28,,AwaitingInspection,,
+2026-11-06,new,2011818,Third Helpings,Other catering premises,Greenwich,SE28,,AwaitingInspection,,
+2026-11-06,new,2011820,Viva cafe bistro,Restaurant/Cafe/Canteen,Greenwich,SE10 9ER,,AwaitingInspection,,
+2026-11-06,new,2011819,Wilnabel's Lounge,Other catering premises,Greenwich,SE18 6AP,,AwaitingInspection,,
+2026-11-06,new,2011801,aaf.kitchen,Mobile caterer,Greenwich,SE3,,AwaitingInspection,,
 2026-11-06,new,2011276,Anaar Fruit and Veg,Retailers - other,Harrow,HA1 3QN,,AwaitingInspection,,
 2026-11-06,new,2011280,Bahar Ice Cream,Restaurant/Cafe/Canteen,Harrow,HA3 5DL,,AwaitingInspection,,
 2026-11-06,new,2011287,Battels,Restaurant/Cafe/Canteen,Harrow,HA1 3LL,,AwaitingInspection,,
@@ -12,14 +37,28 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-06,new,2011278,Premier Fruits,Retailers - other,Harrow,HA1 1FD,,5,,
 2026-11-06,new,2011285,Stillbrew.london,Mobile caterer,Harrow,HA1,,AwaitingInspection,,
 2026-11-06,new,2011282,VaishBakes,Other catering premises,Harrow,HA5,,AwaitingInspection,,
+2026-11-06,new,2011800,Casa Asado,Other catering premises,Tower Hamlets,E1 4UN,,AwaitingInspection,,
 2026-11-06,rating_changed,1977477,No Crumbs.co,Other catering premises,Barking and Dagenham,IG11,AwaitingInspection,1,,
 2026-11-06,rating_changed,1923777,A17 Food,Mobile caterer,Bexley,DA8,AwaitingInspection,4,,
 2026-11-06,rating_changed,1345315,Mega Saver,Retailers - supermarkets/hypermarkets,Bromley,SE20 7PF,3,4,-0.050906,51.413342
 2026-11-06,rating_changed,1411724,The Park Cafe,Restaurant/Cafe/Canteen,Bromley,BR6 8NN,1,3,0.0555772,51.3677374
 2026-11-06,rating_changed,1409460,Bar Douro,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 2PA,5,2,-0.084159,51.519789
 2026-11-06,rating_changed,1689553,Olive Dining At Norbury Manor High School For Girls,School/college/university,Croydon,CR7 8BT,5,4,,
+2026-11-06,rating_changed,1950505,Benny Vitality Boost,Other catering premises,Greenwich,SE28,AwaitingInspection,5,,
+2026-11-06,rating_changed,1985550,Bob's Your Uncle Coffee,Restaurant/Cafe/Canteen,Greenwich,"",AwaitingInspection,5,,
 2026-11-06,rating_changed,977277,EaTurkish,Takeaway/sandwich shop,Greenwich,SE7 7RA,5,3,0.0202553,51.486607
+2026-11-06,rating_changed,694176,FA Supermarket,Retailers - other,Greenwich,SE7 7AE,2,5,,
 2026-11-06,rating_changed,694177,Food & Wine,Retailers - other,Greenwich,SE7 7AB,2,3,0.0325636,51.485477
+2026-11-06,rating_changed,1991274,Ideal Espresso,Retailers - other,Greenwich,SE10 9HZ,AwaitingInspection,5,,
+2026-11-06,rating_changed,1938134,Metin's Original Kebab Ye,Takeaway/sandwich shop,Greenwich,SE18 5EF,AwaitingInspection,5,,
+2026-11-06,rating_changed,1983326,SAFA BITES trading as Caprinos Pizza,Takeaway/sandwich shop,Greenwich,SE10 9UW,AwaitingInspection,5,,
+2026-11-06,rating_changed,1610795,Sassy Snax @ The Cabin,Takeaway/sandwich shop,Greenwich,SE10 9BQ,4,5,,
+2026-11-06,rating_changed,1734832,Selcafe,Restaurant/Cafe/Canteen,Greenwich,SE7 7RJ,4,5,,
+2026-11-06,rating_changed,1635760,Sienna Cafe,Restaurant/Cafe/Canteen,Greenwich,"",AwaitingPublication,4,,
+2026-11-06,rating_changed,1985555,Sodexo TFL Pier Walk,Restaurant/Cafe/Canteen,Greenwich,SE10 0ES,AwaitingInspection,5,,
+2026-11-06,rating_changed,1938126,Tesco Express,Retailers - supermarkets/hypermarkets,Greenwich,SE28 0FX,AwaitingInspection,5,,
+2026-11-06,rating_changed,1956035,The Fish Basket,Restaurant/Cafe/Canteen,Greenwich,SE2 0NX,AwaitingInspection,5,,
+2026-11-06,rating_changed,1966439,The Quiet Cup,Restaurant/Cafe/Canteen,Greenwich,SE3 9DS,AwaitingInspection,5,,
 2026-11-06,rating_changed,1803274,Cake Inn,Other catering premises,Harrow,HA3 8DN,4,5,,
 2026-11-06,rating_changed,1966370,Deliciile Alinei Ltd,Other catering premises,Harrow,HA7 3NU,3,5,,
 2026-11-06,rating_changed,1250320,Fresh Vegan Meals Ltd,Other catering premises,Harrow,HA3,4,5,,
@@ -44,6 +83,29 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-06,rating_changed,946324,Greenwoods Restaurant,Restaurant/Cafe/Canteen,Westminster,SW1E 5LB,4,3,-0.1438067,51.4968173
 2026-11-06,rating_changed,1978201,Honi Poke,Takeaway/sandwich shop,Westminster,W1B 5PQ,5,2,-0.1388338,51.5124596
 2026-11-06,rating_changed,1988743,Suzette Garden,Restaurant/Cafe/Canteen,Westminster,SW1E 6AB,AwaitingInspection,4,-0.1370852,51.4980975
+2026-11-06,removed,1525999,Arawak Carribean Street Food,Restaurant/Cafe/Canteen,Greenwich,SE9 4TU,5,,0.0451929,51.4364622
+2026-11-06,removed,1645468,Bakeraphy,Other catering premises,Greenwich,SE10,5,,,
+2026-11-06,removed,1663935,Blossoms Mini Mart,Retailers - other,Greenwich,SE18 6JL,5,,0.0635484,51.4922108
+2026-11-06,removed,1131716,Bonnie & Rose Ltd,Other catering premises,Greenwich,SE18,5,,,
+2026-11-06,removed,1587875,Fluffy & Crunchy,Other catering premises,Greenwich,SE3,5,,,
+2026-11-06,removed,1724810,Fuzzyappl,Other catering premises,Greenwich,SE18,5,,,
+2026-11-06,removed,694836,GE African Foods Ltd,Retailers - other,Greenwich,"",4,,0.0695192,51.4894977
+2026-11-06,removed,1761327,LayTob,Takeaway/sandwich shop,Greenwich,SE28,4,,,
+2026-11-06,removed,1913774,LuneCoffeeBrew,Other catering premises,Greenwich,SE18,AwaitingInspection,,,
+2026-11-06,removed,1178817,MK Living,Retailers - other,Greenwich,SE18,5,,,
+2026-11-06,removed,1625792,Macchi Fry,Mobile caterer,Greenwich,SE10,5,,,
+2026-11-06,removed,1974191,Matcha Morrow,Other catering premises,Greenwich,SE18,AwaitingInspection,,,
+2026-11-06,removed,1650034,MyBobaKit,Retailers - other,Greenwich,SE28 0AX,5,,0.0964722,51.493504
+2026-11-06,removed,1755097,OrientEats,Other catering premises,Greenwich,SE18,5,,,
+2026-11-06,removed,919764,Rawviva,Mobile caterer,Greenwich,SE7 8PQ,Exempt,,0.044498,51.4779223
+2026-11-06,removed,1716812,RitaE's Kitchen,Mobile caterer,Greenwich,SE28,4,,,
+2026-11-06,removed,1650030,Sir Mosa,Other catering premises,Greenwich,SE18,5,,,
+2026-11-06,removed,1693089,Smoothie Bliss T/A Chai & Churros,Takeaway/sandwich shop,Greenwich,SE10,4,,,
+2026-11-06,removed,694401,Star Banquetting Star Express,Restaurant/Cafe/Canteen,Greenwich,SE18 6NE,5,,0.0634099990129471,51.4932022094727
+2026-11-06,removed,695541,Station Kebab House,Takeaway/sandwich shop,Greenwich,"",5,,0.0695752,51.4894607
+2026-11-06,removed,1711621,Viva Cafe Bistro,Restaurant/Cafe/Canteen,Greenwich,SE10 9ER,5,,0.0068776,51.485503
+2026-11-06,removed,1194722,Viva Luxee,Retailers - other,Greenwich,SE28,5,,,
+2026-11-06,removed,1933052,Zed2bites,Other catering premises,Greenwich,SE28,AwaitingInspection,,,
 2026-11-06,removed,1761245,Baharistan ice cream,Takeaway/sandwich shop,Harrow,HA3 5DL,0,,-0.3366706,51.597316
 2026-11-06,removed,771457,Battels,Takeaway/sandwich shop,Harrow,HA1 3LL,5,,-0.338837,51.571744
 2026-11-06,removed,1955985,HONEY G TRENDING LTD,Other catering premises,Harrow,HA3,AwaitingInspection,,,
