@@ -1,0 +1,15 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-07,new,853846,TSK Perfect Chicken,Restaurant/Cafe/Canteen,Hillingdon,UB4 9AX,,3,-0.398602,51.528333
+2026-11-07,new,1753474,Embankment Bistro Café,Restaurant/Cafe/Canteen,Westminster,WC2N 6PB,,0,,
+2026-11-07,rating_changed,1905000,AL AREZ,Restaurant/Cafe/Canteen,Camden,NW6 1LJ,AwaitingInspection,2,-0.1917235,51.5517933
+2026-11-07,rating_changed,1922633,HAVE AN AVO ATELIER,Restaurant/Cafe/Canteen,Camden,NW6 1UU,AwaitingInspection,4,-0.1910937,51.5505786
+2026-11-07,rating_changed,424666,The Wet Fish Cafe,Restaurant/Cafe/Canteen,Camden,NW6 1LG,3,0,-0.1913729,51.5511764
+2026-11-07,rating_changed,1032884,Marks & Spencer,Retailers - supermarkets/hypermarkets,Ealing,W5 5JW,5,2,-0.303973,51.5130207
+2026-11-07,rating_changed,1519671,Shamsin Bakery,Retailers - other,Ealing,NW10 6HJ,2,0,-0.2634907,51.528912
+2026-11-07,rating_changed,1752737,"DEVI DHABA#CURRY CAFE",Restaurant/Cafe/Canteen,Hackney,EC2A 4HU,AwaitingInspection,1,-0.0821124,51.5233263
+2026-11-07,rating_changed,372968,Blue Orchid,Restaurant/Cafe/Canteen,Havering,RM1 1DA,5,3,0.178324,51.580702
+2026-11-07,rating_changed,693607,Camino Kings Cross,Restaurant/Cafe/Canteen,Islington,N1 9FD,5,4,-0.1215047,51.5311581
+2026-11-07,rating_changed,1965645,Pizza Bun,Restaurant/Cafe/Canteen,Islington,N1 2XQ,AwaitingInspection,4,-0.1031183,51.5367884
+2026-11-07,rating_changed,1958429,Mt Everest momos,Distributors/Transporters,Kensington and Chelsea,W11 2DY,AwaitingInspection,2,-0.204074,51.514186
+2026-11-07,rating_changed,483508,Moonstar Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 6BU,5,4,-0.111762,51.480408
+2026-11-07,rating_changed,807352,Som Saa,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6BD,5,2,-0.0737648,51.5172492
