@@ -1,4 +1,20 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-08,new,2012014,Arora Basu Bari Bhojan,Other catering premises,Richmond-Upon-Thames,TW12,,AwaitingInspection,,
+2026-11-08,new,2012015,Beloved Bites,Retailers - other,Richmond-Upon-Thames,TW12,,AwaitingInspection,,
+2026-11-08,new,2012005,Dough & Deer,Mobile caterer,Richmond-Upon-Thames,TW2,,AwaitingInspection,,
+2026-11-08,new,2012012,Dough Wives,Mobile caterer,Richmond-Upon-Thames,TW12,,AwaitingInspection,,
+2026-11-08,new,2012018,Elior @ Marble Hill,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 2NL,,AwaitingInspection,,
+2026-11-08,new,2012006,Family Kitchen and Restaurant,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,,AwaitingInspection,,
+2026-11-08,new,2012010,GRANO PIZZA & BAKERY,Retailers - other,Richmond-Upon-Thames,TW9 2NQ,,AwaitingInspection,,
+2026-11-08,new,2012007,Green Bottle Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3EJ,,AwaitingInspection,,
+2026-11-08,new,1961936,Hart & Ground,Retailers - other,Richmond-Upon-Thames,"",,AwaitingInspection,,
+2026-11-08,new,2012016,Heathfield express,Retailers - other,Richmond-Upon-Thames,TW4 5NR,,AwaitingInspection,,
+2026-11-08,new,2012008,Nopalito,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 2PN,,AwaitingInspection,,
+2026-11-08,new,2012009,Rara Indian bistro,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3LU,,AwaitingInspection,,
+2026-11-08,new,2012013,Richmond Thai Kitchn,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW10 6UB,,AwaitingInspection,,
+2026-11-08,new,2012011,The Botanical Brasserie and bar,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,,AwaitingInspection,,
+2026-11-08,new,2012017,The Pavillion Bar and Grill,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,,AwaitingInspection,,
+2026-11-08,new,2012004,Victoria Gate,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,,AwaitingInspection,,
 2026-11-08,rating_changed,1998152,Nefis Mezze Grill,Takeaway/sandwich shop,Bexley,DA7 4EG,AwaitingInspection,1,0.132539,51.462829
 2026-11-08,rating_changed,1955590,House Of Raes,Other catering premises,Croydon,CR0,AwaitingInspection,4,,
 2026-11-08,rating_changed,1125627,Brew House and Kitchen - Hoxton,Restaurant/Cafe/Canteen,Hackney,E2 8HZ,4,2,,
@@ -11,6 +27,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-08,rating_changed,716758,Waitrose,Retailers - supermarkets/hypermarkets,Kensington and Chelsea,W11 3QG,5,4,-0.1991368,51.5089111
 2026-11-08,rating_changed,1107545,Okan,Restaurant/Cafe/Canteen,Lambeth,SE1 7PB,4,0,-0.119264,51.50283
 2026-11-08,rating_changed,444236,Chadwell Heath Premier,Retailers - other,Redbridge,RM6 4NP,4,1,0.125461,51.572841
+2026-11-08,rating_changed,1840501,Chennai Biryani,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW2 7LG,4,5,,
+2026-11-08,rating_changed,1970026,Elior @ London Wetlands Centre,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW13 9WT,AwaitingInspection,5,,
+2026-11-08,rating_changed,1574593,Jovanni's Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 1PD,4,5,,
+2026-11-08,rating_changed,1752642,Kathmandu Tandoori,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3JZ,4,5,,
+2026-11-08,rating_changed,1983137,Kerswell Nursery & Forest School,Caring Premises,Richmond-Upon-Thames,TW3 2JF,AwaitingInspection,5,,
+2026-11-08,rating_changed,1574496,Ruchi,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 2BJ,4,5,,
+2026-11-08,rating_changed,1788406,SEOUL TO GO,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 1EE,4,5,,
+2026-11-08,rating_changed,1574569,The Cavan Bakery Ltd,Retailers - other,Richmond-Upon-Thames,SW14 8AB,4,5,,
+2026-11-08,rating_changed,1684247,The Java Bistro,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW14 8AH,4,5,,
 2026-11-08,rating_changed,514980,Collins Stores,Retailers - other,Waltham Forest,E17 6PU,0,1,-0.030338,51.5879703
 2026-11-08,rating_changed,1994010,E17 Breakfast House/Griddle Yard,Restaurant/Cafe/Canteen,Waltham Forest,E17 7JY,AwaitingInspection,0,-0.0266179,51.5831959
 2026-11-08,rating_changed,1333670,Roosters Piri Piri,Takeaway/sandwich shop,Waltham Forest,E17 7JY,4,0,-0.0266179,51.5831959
@@ -18,3 +43,13 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-08,rating_changed,1863897,BLK Cab (Coffee & People),Restaurant/Cafe/Canteen,Westminster,W1U 1AX,4,2,-0.1500192,51.5152624
 2026-11-08,rating_changed,1777692,The Rochester Cafe,Restaurant/Cafe/Canteen,Westminster,SW1P 1LJ,3,2,-0.1374625,51.4930855
 2026-11-08,rating_changed,410798,Victoria Stanley House Hotel,Hotel/bed & breakfast/guest house,Westminster,SW1V 1RB,1,0,-0.1388744,51.5079279
+2026-11-08,removed,1938168,Brothblocs,Other catering premises,Richmond-Upon-Thames,SW13,AwaitingInspection,,,
+2026-11-08,removed,1798385,Bubluda Limited,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW13 0DQ,4,,-0.24041099,51.47503045
+2026-11-08,removed,1792670,Cafe Arora/Home Made Curries,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 2AW,5,,,
+2026-11-08,removed,1574694,Dough and Deer Limited,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW11,5,,,
+2026-11-08,removed,1575253,Holroyd Howe,School/college/university,Richmond-Upon-Thames,TW9 3HS,5,,-0.2881901,51.4788535
+2026-11-08,removed,1574162,Rara,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3LU,4,,-0.2864146,51.4743492
+2026-11-08,removed,2002025,SO FAR SO GOOD,Mobile caterer,Richmond-Upon-Thames,TW2,AwaitingInspection,,,
+2026-11-08,removed,1574571,Secret Recipe,Takeaway/sandwich shop,Richmond-Upon-Thames,SW14 8AD,0,,-0.2667077,51.4665779
+2026-11-08,removed,1574922,The Beech House,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 1NY,5,,,
+2026-11-08,removed,1575301,green bottle cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3EJ,5,,-0.3187628,51.4537928
