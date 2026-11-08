@@ -1,0 +1,20 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-08,rating_changed,1998152,Nefis Mezze Grill,Takeaway/sandwich shop,Bexley,DA7 4EG,AwaitingInspection,1,0.132539,51.462829
+2026-11-08,rating_changed,1955590,House Of Raes,Other catering premises,Croydon,CR0,AwaitingInspection,4,,
+2026-11-08,rating_changed,1125627,Brew House and Kitchen - Hoxton,Restaurant/Cafe/Canteen,Hackney,E2 8HZ,4,2,,
+2026-11-08,rating_changed,470182,Buns on Fire,Restaurant/Cafe/Canteen,Hackney,N4 2TG,3,1,-0.0951441,51.570642
+2026-11-08,rating_changed,470654,Gallo Nero Ii Del,Retailers - other,Hackney,N16 8EL,5,2,-0.0743965,51.559287
+2026-11-08,rating_changed,671479,Hai Cafe,Restaurant/Cafe/Canteen,Hackney,E5 0QR,5,1,-0.0534989,51.5540498
+2026-11-08,rating_changed,530918,Souvlakiland,Takeaway/sandwich shop,Hackney,E9 6BB,4,2,-0.038444,51.549222
+2026-11-08,rating_changed,2001164,Sai snacks,Other catering premises,Hillingdon,UB4,AwaitingInspection,4,,
+2026-11-08,rating_changed,334746,Notting Hill Grill Kebabs,Takeaway/sandwich shop,Kensington and Chelsea,W11 3HX,5,3,-0.194646,51.509527
+2026-11-08,rating_changed,716758,Waitrose,Retailers - supermarkets/hypermarkets,Kensington and Chelsea,W11 3QG,5,4,-0.1991368,51.5089111
+2026-11-08,rating_changed,1107545,Okan,Restaurant/Cafe/Canteen,Lambeth,SE1 7PB,4,0,-0.119264,51.50283
+2026-11-08,rating_changed,444236,Chadwell Heath Premier,Retailers - other,Redbridge,RM6 4NP,4,1,0.125461,51.572841
+2026-11-08,rating_changed,514980,Collins Stores,Retailers - other,Waltham Forest,E17 6PU,0,1,-0.030338,51.5879703
+2026-11-08,rating_changed,1994010,E17 Breakfast House/Griddle Yard,Restaurant/Cafe/Canteen,Waltham Forest,E17 7JY,AwaitingInspection,0,-0.0266179,51.5831959
+2026-11-08,rating_changed,1333670,Roosters Piri Piri,Takeaway/sandwich shop,Waltham Forest,E17 7JY,4,0,-0.0266179,51.5831959
+2026-11-08,rating_changed,641285,28-50 Wine Workshop and Kitchen,Restaurant/Cafe/Canteen,Westminster,W1U 2NE,5,2,-0.1504508,51.5163484
+2026-11-08,rating_changed,1863897,BLK Cab (Coffee & People),Restaurant/Cafe/Canteen,Westminster,W1U 1AX,4,2,-0.1500192,51.5152624
+2026-11-08,rating_changed,1777692,The Rochester Cafe,Restaurant/Cafe/Canteen,Westminster,SW1P 1LJ,3,2,-0.1374625,51.4930855
+2026-11-08,rating_changed,410798,Victoria Stanley House Hotel,Hotel/bed & breakfast/guest house,Westminster,SW1V 1RB,1,0,-0.1388744,51.5079279
