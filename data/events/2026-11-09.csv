@@ -1,3 +1,41 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-09,new,1848505,Ajoje Social House,Importers/Exporters,City of London Corporation,EC4M 7JN,,AwaitingInspection,,
+2026-11-09,new,2012159,Cocktail Machine,Importers/Exporters,City of London Corporation,EC2M 7AQ,,AwaitingInspection,,
+2026-11-09,new,2012158,JoyGlocal Ltd,Importers/Exporters,City of London Corporation,EC2M 5TU,,AwaitingInspection,,
+2026-11-09,new,2012164,Marrone,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7EJ,,AwaitingInspection,,
+2026-11-09,new,2012157,Naturalma S.r.l.,Importers/Exporters,City of London Corporation,EC4A 3AG,,AwaitingInspection,,
+2026-11-09,new,2012165,Pret A Manger (Europe) Ltd,Restaurant/Cafe/Canteen,City of London Corporation,EC3M 6BL,,AwaitingInspection,,
+2026-11-09,new,2012162,Ruben's Reubens,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 4AZ,,AwaitingInspection,,
+2026-11-09,new,2012156,Serpo Energy,Importers/Exporters,City of London Corporation,EC3V 9BQ,,AwaitingInspection,,
+2026-11-09,new,2012362,Adelia,Restaurant/Cafe/Canteen,Lambeth,SW4 9NG,,AwaitingInspection,,
+2026-11-09,new,2012363,Affineur,Retailers - other,Lambeth,SW9 8PS,,AwaitingInspection,,
+2026-11-09,new,2012368,Bonding School Nurseries,School/college/university,Lambeth,SE11 4QE,,AwaitingInspection,,
+2026-11-09,new,2012365,Eat To Live Not To Die,Retailers - other,Lambeth,SW9 7AW,,AwaitingInspection,,
+2026-11-09,new,2012364,FlavoursByFarii,Other catering premises,Lambeth,SW4,,AwaitingInspection,,
+2026-11-09,new,2012366,Imelda's Kitchen Papabi,Restaurant/Cafe/Canteen,Lambeth,SW9 9TQ,,AwaitingInspection,,
+2026-11-09,new,2012369,Smash N Kebab,Takeaway/sandwich shop,Lambeth,SW9 8RR,,AwaitingInspection,,
+2026-11-09,new,2012360,StockD,Retailers - other,Lambeth,SW9 9AE,,AwaitingInspection,,
+2026-11-09,new,1947752,Take A Bite And Smile,Manufacturers/packers,Lambeth,SW8,,4,,
+2026-11-09,new,2012367,The Carriage West Norwood,Takeaway/sandwich shop,Lambeth,SE27 0HS,,AwaitingInspection,,
+2026-11-09,new,1113404,Young People Matter - After School Club,Other catering premises,Lambeth,SW9 9BY,,5,,
+2026-11-09,rating_changed,1991668,Attendant Coffee Roasters,Restaurant/Cafe/Canteen,City of London Corporation,EC4N 7BL,AwaitingInspection,5,,
+2026-11-09,rating_changed,1999581,Bull & Hide,Pub/bar/nightclub,City of London Corporation,EC2M 4RH,AwaitingInspection,5,,
+2026-11-09,rating_changed,1974656,Jenki,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QP,AwaitingInspection,5,,
+2026-11-09,rating_changed,846233,Joe & The Juice,Restaurant/Cafe/Canteen,City of London Corporation,WC1V 7PX,4,5,,
+2026-11-09,rating_changed,1983547,Lexington @ Akin Gump LLP,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 3TQ,AwaitingInspection,5,,
+2026-11-09,rating_changed,1983548,Nova,Other catering premises,City of London Corporation,"",AwaitingInspection,5,,
 2026-11-09,rating_changed,1385651,Court Farm Cafe,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT4 7QH,3,4,-0.2735969,51.3764564
 2026-11-09,rating_changed,1385677,SCJ Bibimbap And Chimack,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4ES,5,0,-0.2552227,51.3992508
+2026-11-09,rating_changed,1748968,Bella Napoli,Takeaway/sandwich shop,Lambeth,SW4 7EY,2,5,,
+2026-11-09,rating_changed,1989394,Little Button Bears Childminding,Caring Premises,Lambeth,SW9,AwaitingInspection,5,,
+2026-11-09,rating_changed,1015227,Monkey Puzzle Day Nursery,Caring Premises,Lambeth,SE27 9DN,4,5,,
+2026-11-09,rating_changed,1229760,N Family Club,Other catering premises,Lambeth,SW2 2TN,3,5,,
+2026-11-09,rating_changed,1974312,Piece Of Velvet,Restaurant/Cafe/Canteen,Lambeth,SW9 8PS,AwaitingInspection,5,,
+2026-11-09,removed,1410529,Fusionend Spices,Takeaway/sandwich shop,City of London Corporation,EC2M 5TE,4,,-0.088126,51.516958
+2026-11-09,removed,1956326,Bask Street Boys,Restaurant/Cafe/Canteen,Lambeth,SW4 7EX,AwaitingInspection,,-0.131252,51.459858
+2026-11-09,removed,1747724,Bask Street Boys,Mobile caterer,Lambeth,SW9,5,,,
+2026-11-09,removed,482936,Costcutter,Retailers - other,Lambeth,SW2 5TU,4,,-0.125366,51.459458
+2026-11-09,removed,950578,Four Seasons Bistro,Restaurant/Cafe/Canteen,Lambeth,SW16 5SQ,5,,-0.139322,51.415382
+2026-11-09,removed,1935505,Isovita,Manufacturers/packers,Lambeth,SW16,AwaitingInspection,,,
+2026-11-09,removed,1960577,Milevva Marketing Limited,Importers/Exporters,Lambeth,SE27,AwaitingInspection,,,
+2026-11-09,removed,1840604,Old Town Tandoori Indian/Clapham Noodles Bar,Takeaway/sandwich shop,Lambeth,SW4 0HD,1,,-0.1426447,51.4669361
