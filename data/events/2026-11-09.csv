@@ -1,0 +1,3 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-09,rating_changed,1385651,Court Farm Cafe,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT4 7QH,3,4,-0.2735969,51.3764564
+2026-11-09,rating_changed,1385677,SCJ Bibimbap And Chimack,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 4ES,5,0,-0.2552227,51.3992508
