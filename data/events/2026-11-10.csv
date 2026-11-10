@@ -1,0 +1,22 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-10,rating_changed,1986164,Bird N Blossom,Restaurant/Cafe/Canteen,Bexley,DA7 6EB,AwaitingInspection,4,0.1567741,51.4590486
+2026-11-10,rating_changed,1199658,Happy Lamb Hot Pot Restaurant,Restaurant/Cafe/Canteen,Camden,WC1A 1AD,5,1,-0.1241778,51.517343
+2026-11-10,rating_changed,1631484,IT'S BAGELS LIMITED,Restaurant/Cafe/Canteen,Camden,NW1 8XD,1,3,-0.1576413,51.5410205
+2026-11-10,rating_changed,1469065,Baghdad Food Centre,Retailers - other,Ealing,W3 7RH,3,1,-0.2549593,51.50658039
+2026-11-10,rating_changed,1011781,Dena Supermarket,Retailers - other,Ealing,W5 3QS,3,2,-0.2919435,51.5290777
+2026-11-10,rating_changed,1970078,Khan's Chicken & Rice Halal,Mobile caterer,Ealing,W5 5AH,AwaitingInspection,1,-0.3067998,51.5125759
+2026-11-10,rating_changed,1963304,Kings Shawarma,Restaurant/Cafe/Canteen,Ealing,W13 0SR,AwaitingInspection,1,-0.320051,51.510986
+2026-11-10,rating_changed,694640,Continental Supermarket,Retailers - other,Greenwich,SE18 7BZ,4,3,0.0708811,51.4909395
+2026-11-10,rating_changed,1965626,Alfredo's 1920 Cafe,Restaurant/Cafe/Canteen,Islington,N1 8LN,AwaitingInspection,4,,
+2026-11-10,rating_changed,200202,Kentiss,Takeaway/sandwich shop,Merton,CR4 3NA,5,0,,
+2026-11-10,rating_changed,1797829,Bagel Town,Restaurant/Cafe/Canteen,Newham,E12 6AE,3,4,0.053313,51.548046
+2026-11-10,rating_changed,2001230,Ruchi,Takeaway/sandwich shop,Newham,E12 6SJ,AwaitingInspection,0,0.050334,51.541156
+2026-11-10,rating_changed,542882,After taste chinese restaurant,Restaurant/Cafe/Canteen,Southwark,SE1 6SF,5,3,-0.100612,51.492602
+2026-11-10,rating_changed,1993155,The Butterfly Patch,School/college/university,Sutton,SM6 9JN,AwaitingInspection,3,-0.130741998553276,51.352466583252
+2026-11-10,rating_changed,90597,Hotel in the Park Kitchen,Caring Premises,Tower Hamlets,E2 9HN,2,4,-0.051279,51.534013
+2026-11-10,rating_changed,2006950,Juice For Life,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6BD,AwaitingInspection,2,-0.073921,51.517499
+2026-11-10,rating_changed,1300827,Tonkotsu,Restaurant/Cafe/Canteen,Waltham Forest,E17 4BS,5,4,-0.019912,51.585376
+2026-11-10,rating_changed,1573357,Sweet Tooth Cafe,Restaurant/Cafe/Canteen,Wandsworth,SW15 6SP,1,4,-0.2261862,51.4627415
+2026-11-10,rating_changed,410994,Clos Maggiore,Restaurant/Cafe/Canteen,Westminster,WC2E 8JD,5,1,-0.1247702,51.5116961
+2026-11-10,rating_changed,1822230,Greedy Sheep,Restaurant/Cafe/Canteen,Westminster,WC2H 7JJ,4,1,-0.1291884,51.5118476
+2026-11-10,rating_changed,457652,Mele E Pere,Restaurant/Cafe/Canteen,Westminster,W1F 9TF,5,2,-0.1357133,51.5115827
