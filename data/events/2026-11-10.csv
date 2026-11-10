@@ -1,4 +1,7 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-10,new,2013177,Raw organic planet,Mobile caterer,Camden,NW3 4RL,,AwaitingInspection,,
+2026-11-10,new,2013176,Turan Mediterranean,Restaurant/Cafe/Canteen,Camden,EC1N 7TS,,AwaitingInspection,,
+2026-11-10,new,425624,Turan Mediterranean / King of Falafel,Takeaway/sandwich shop,Camden,EC1N 7TS,,AwaitingInspection,,
 2026-11-10,new,2012886,Bunmi's Pot,Other catering premises,Lewisham,SE6,,AwaitingInspection,,
 2026-11-10,new,2012880,Damascus food market ltd,Retailers - supermarkets/hypermarkets,Lewisham,SE13 6NZ,,AwaitingInspection,,
 2026-11-10,new,2012877,Fenn,Other catering premises,Lewisham,SE4,,AwaitingInspection,,
@@ -17,6 +20,26 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-10,new,2012882,Wing's of King's,Restaurant/Cafe/Canteen,Lewisham,SE4 2PJ,,AwaitingInspection,,
 2026-11-10,new,2012888,Your Sweet Flower,Other catering premises,Lewisham,BR1,,AwaitingInspection,,
 2026-11-10,new,2012884,Ziah De,Retailers - other,Lewisham,SE26,,AwaitingInspection,,
+2026-11-10,new,2013104,Ahmed's Kitchen,Restaurant/Cafe/Canteen,Merton,SW19 1EH,,AwaitingInspection,,
+2026-11-10,new,2013102,Authentic Jamaican Black Cake By Marcia ????,Other catering premises,Merton,CR4,,AwaitingInspection,,
+2026-11-10,new,2013103,Bargain.basket.store,Retailers - other,Merton,CR4,,AwaitingInspection,,
+2026-11-10,new,2013091,Brand Phoenix Ltd (Suite 10),Retailers - other,Merton,SW18 4RL,,AwaitingInspection,,
+2026-11-10,new,2013090,Charlie & Sons,Other catering premises,Merton,SW19 3UA,,AwaitingInspection,,
+2026-11-10,new,2013097,DALADALA REFRESH / DALADALA KITCHEN,Takeaway/sandwich shop,Merton,SW19,,AwaitingInspection,,
+2026-11-10,new,2013095,Kentiss,Restaurant/Cafe/Canteen,Merton,CR4 3NA,,0,,
+2026-11-10,new,2013093,Kingswood Daycare Nursery Miles Road,Caring Premises,Merton,CR4 3DA,,AwaitingInspection,,
+2026-11-10,new,2013094,Kingswood Early Years Nursery London Road,Caring Premises,Merton,CR4 2YR,,AwaitingInspection,,
+2026-11-10,new,2013099,NOORI-Nuts dry fruits & seeds,Retailers - other,Merton,SW20,,AwaitingInspection,,
+2026-11-10,new,2013098,Pawelek Fit Cake,Restaurant/Cafe/Canteen,Merton,CR4 4BE,,AwaitingInspection,,
+2026-11-10,new,2013101,Pick Me,Takeaway/sandwich shop,Merton,SW20 8BA,,AwaitingInspection,,
+2026-11-10,new,2013092,SKYZARS LIMITED,Retailers - other,Merton,CR4,,AwaitingInspection,,
+2026-11-10,new,2013100,The Sourdough Kitchen,Retailers - other,Merton,SM4,,AwaitingInspection,,
+2026-11-10,new,2013096,Uncle Louie's,Other catering premises,Merton,SM4,,AwaitingInspection,,
+2026-11-10,new,2013106,Wimbledon Grill,Restaurant/Cafe/Canteen,Merton,SW19 8JZ,,AwaitingInspection,,
+2026-11-10,new,2013105,Wimbledon mart,Retailers - other,Merton,SW20 8JX,,AwaitingInspection,,
+2026-11-10,new,1597620,Coppernose Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,KT8 9BN,,5,,
+2026-11-10,new,2013107,Craft and Crumb,Other catering premises,Richmond-Upon-Thames,TW12,,AwaitingInspection,,
+2026-11-10,new,1575656,Daniel Greek Olives,Other catering premises,Richmond-Upon-Thames,TW11,,4,,
 2026-11-10,new,2013022,Add a Slice,Manufacturers/packers,Wandsworth,SW11,,AwaitingInspection,,
 2026-11-10,new,2013012,All Week,Retailers - other,Wandsworth,SW8 5EL,,AwaitingInspection,,
 2026-11-10,new,2013030,Alladin grocery and halal meat,Retailers - other,Wandsworth,SW16 6NR,,AwaitingInspection,,
@@ -52,8 +75,29 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-10,new,1571411,Waitrose,Retailers - supermarkets/hypermarkets,Wandsworth,SW12 9BN,,5,,
 2026-11-10,new,2013036,You Me Sushi,Restaurant/Cafe/Canteen,Wandsworth,SW11 1NT,,AwaitingInspection,,
 2026-11-10,rating_changed,1986164,Bird N Blossom,Restaurant/Cafe/Canteen,Bexley,DA7 6EB,AwaitingInspection,4,0.1567741,51.4590486
+2026-11-10,rating_changed,1918521,Aux Pains de Papy,Restaurant/Cafe/Canteen,Camden,WC1X 8QF,AwaitingInspection,3,,
+2026-11-10,rating_changed,1989659,BENNETT HAY LTD,Restaurant/Cafe/Canteen,Camden,WC1X 8XZ,AwaitingInspection,5,,
+2026-11-10,rating_changed,1938697,Bagu,Takeaway/sandwich shop,Camden,NW1 8AF,AwaitingInspection,3,,
+2026-11-10,rating_changed,1934409,Beany Green - Regent's Place,Restaurant/Cafe/Canteen,Camden,NW1 3FG,AwaitingInspection,5,,
+2026-11-10,rating_changed,1960315,El Cenote,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,AwaitingInspection,1,,
+2026-11-10,rating_changed,1899848,FUNNY WEATHER BOOKS COFFEE,Restaurant/Cafe/Canteen,Camden,NW5 1PL,AwaitingInspection,5,,
+2026-11-10,rating_changed,759316,Globe Lawn Tennis Club Bar,Pub/bar/nightclub,Camden,NW3 2AL,3,5,,
 2026-11-10,rating_changed,1199658,Happy Lamb Hot Pot Restaurant,Restaurant/Cafe/Canteen,Camden,WC1A 1AD,5,1,-0.1241778,51.517343
+2026-11-10,rating_changed,1918489,Highgate Newtown Community partners,Restaurant/Cafe/Canteen,Camden,N19 5DQ,AwaitingInspection,5,,
 2026-11-10,rating_changed,1631484,IT'S BAGELS LIMITED,Restaurant/Cafe/Canteen,Camden,NW1 8XD,1,3,-0.1576413,51.5410205
+2026-11-10,rating_changed,1343710,La Creperie,Takeaway/sandwich shop,Camden,NW3 1RE,0,5,,
+2026-11-10,rating_changed,1918534,Mamak Don,Restaurant/Cafe/Canteen,Camden,NW1 1BA,AwaitingInspection,2,,
+2026-11-10,rating_changed,424322,Millman Street Community Centre,Other catering premises,Camden,WC1N 3EW,4,5,,
+2026-11-10,rating_changed,1934397,Mollica,Restaurant/Cafe/Canteen,Camden,N65JX,AwaitingInspection,4,,
+2026-11-10,rating_changed,1975777,My Tortellini,Restaurant/Cafe/Canteen,Camden,NW3 2AL,AwaitingInspection,5,,
+2026-11-10,rating_changed,1981215,Phoenix Camden,Hotel/bed & breakfast/guest house,Camden,NW1 0JH,AwaitingInspection,2,,
+2026-11-10,rating_changed,1998228,Royal Free Hospital Ward - Kitchen,Caring Premises,Camden,NW3 2QG,AwaitingInspection,0,,
+2026-11-10,rating_changed,1884341,SHEMED LIMITED,Retailers - other,Camden,NW1 3HP,AwaitingInspection,Exempt,,
+2026-11-10,rating_changed,1653953,TA'MINI LEBANESE BAKERY,Restaurant/Cafe/Canteen,Camden,WC1N 1AB,1,5,,
+2026-11-10,rating_changed,1998209,THE WET FISH,Restaurant/Cafe/Canteen,Camden,NW1 8LD,AwaitingInspection,5,,
+2026-11-10,rating_changed,1934412,The Coffee Hub,Restaurant/Cafe/Canteen,Camden,NW1 1BP,AwaitingInspection,1,,
+2026-11-10,rating_changed,424499,The Euston Flyer,Pub/bar/nightclub,Camden,NW1 2RA,4,5,,
+2026-11-10,rating_changed,426440,YMCA Indian Student Hostel,Hotel/bed & breakfast/guest house,Camden,W1T 6AQ,1,5,,
 2026-11-10,rating_changed,1469065,Baghdad Food Centre,Retailers - other,Ealing,W3 7RH,3,1,-0.2549593,51.50658039
 2026-11-10,rating_changed,1011781,Dena Supermarket,Retailers - other,Ealing,W5 3QS,3,2,-0.2919435,51.5290777
 2026-11-10,rating_changed,1970078,Khan's Chicken & Rice Halal,Mobile caterer,Ealing,W5 5AH,AwaitingInspection,1,-0.3067998,51.5125759
@@ -71,7 +115,13 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-10,rating_changed,1600117,Sapporo Ichiban,Restaurant/Cafe/Canteen,Lewisham,SE6 4SP,2,1,,
 2026-11-10,rating_changed,1976517,Serious Muffins,Restaurant/Cafe/Canteen,Lewisham,SE8 4SA,AwaitingInspection,5,,
 2026-11-10,rating_changed,1976525,Taylorshaw at Torridon Primary School,School/college/university,Lewisham,SE6 1TG,AwaitingInspection,5,,
-2026-11-10,rating_changed,200202,Kentiss,Takeaway/sandwich shop,Merton,CR4 3NA,5,0,,
+2026-11-10,rating_changed,1654922,Buteco do Duda 2,Restaurant/Cafe/Canteen,Merton,SW19 2RD,4,5,,
+2026-11-10,rating_changed,1937897,Crème De La Gem,Other catering premises,Merton,SM4,AwaitingInspection,5,,
+2026-11-10,rating_changed,1941383,Dee’s Saffa Shop,Other catering premises,Merton,SW17,AwaitingInspection,5,,
+2026-11-10,rating_changed,1836327,Glitterbells Bakery Ltd,Restaurant/Cafe/Canteen,Merton,CR4,AwaitingInspection,5,,
+2026-11-10,rating_changed,1854367,Odyssey Dining,Restaurant/Cafe/Canteen,Merton,SW19 2RL,Exempt,5,,
+2026-11-10,rating_changed,1965766,Reggae&Soul Kitchen,Other catering premises,Merton,CR4,AwaitingInspection,5,,
+2026-11-10,rating_changed,1965743,Wylde Market,Retailers - other,Merton,SW19 2RL,AwaitingInspection,5,,
 2026-11-10,rating_changed,1797829,Bagel Town,Restaurant/Cafe/Canteen,Newham,E12 6AE,3,4,0.053313,51.548046
 2026-11-10,rating_changed,2001230,Ruchi,Takeaway/sandwich shop,Newham,E12 6SJ,AwaitingInspection,0,0.050334,51.541156
 2026-11-10,rating_changed,542882,After taste chinese restaurant,Restaurant/Cafe/Canteen,Southwark,SE1 6SF,5,3,-0.100612,51.492602
@@ -97,6 +147,59 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-10,rating_changed,410994,Clos Maggiore,Restaurant/Cafe/Canteen,Westminster,WC2E 8JD,5,1,-0.1247702,51.5116961
 2026-11-10,rating_changed,1822230,Greedy Sheep,Restaurant/Cafe/Canteen,Westminster,WC2H 7JJ,4,1,-0.1291884,51.5118476
 2026-11-10,rating_changed,457652,Mele E Pere,Restaurant/Cafe/Canteen,Westminster,W1F 9TF,5,2,-0.1357133,51.5115827
+2026-11-10,removed,1612232,Anima e Cuore Geloto LTD,Restaurant/Cafe/Canteen,Camden,NW1 8PB,3,,-0.1417203,51.5445644
+2026-11-10,removed,1716652,BARTLETT MITCHELL LTD,Restaurant/Cafe/Canteen,Camden,WC1X 8WB,AwaitingInspection,,-0.1192531,51.5203757
+2026-11-10,removed,1975763,BEN & JERRY'S CAMDEN,Retailers - other,Camden,NW1 8AA,AwaitingInspection,,,
+2026-11-10,removed,1918503,BERKELEY BAKE HOUSE,Restaurant/Cafe/Canteen,Camden,NW1 7DB,5,,-0.1470655,51.5397299
+2026-11-10,removed,1998237,BRASILIA CAFE LIMITED,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,AwaitingInspection,,-0.144069,51.5396556
+2026-11-10,removed,1670095,BRAZILIAN DELIGHTS,Retailers - other,Camden,N7 0BL,3,,-0.1297257,51.5490231
+2026-11-10,removed,1938708,Bagel Atelier,Takeaway/sandwich shop,Camden,NW3 2BP,AwaitingInspection,,-0.1537074,51.5441511
+2026-11-10,removed,1824257,Better Pulled,Takeaway/sandwich shop,Camden,EC1N 7TJ,AwaitingInspection,,-0.109737001359463,51.5204467773438
+2026-11-10,removed,743816,Bumblebee Natural Foods - The Nut Shop,Retailers - other,Camden,N7 0BT,4,,-0.130705,51.549989
+2026-11-10,removed,424072,Bumblebee Natural Foods - The Veg Shop,Retailers - other,Camden,N7 0BT,4,,-0.1305034,51.5497549
+2026-11-10,removed,1390658,CAFE AT CAMDEN BOXING CLUB,Takeaway/sandwich shop,Camden,NW1 8NX,5,,-0.1422031,51.5419192
+2026-11-10,removed,1938698,CAMDEN MEDICALS,Retailers - other,Camden,NW1 7PG,AwaitingInspection,,-0.1428954,51.5387287
+2026-11-10,removed,1471675,CREPES A LA CARTE,Retailers - other,Camden,NW1 8QH,5,,-0.1440454,51.5422134
+2026-11-10,removed,973276,Carrots and Daikon,Restaurant/Cafe/Canteen,Camden,NW5 1NR,3,,-0.141436994075775,51.5521125793457
+2026-11-10,removed,1734698,Carter Jonas,Retailers - other,Camden,NW1 2DN,AwaitingInspection,,,
+2026-11-10,removed,425203,Costa,Restaurant/Cafe/Canteen,Camden,NW3 2AG,3,,-0.1652115,51.551076
+2026-11-10,removed,1934393,DISCOVERYCHAIN LTD,Retailers - other,Camden,NW1 0XJ,AwaitingInspection,,,
+2026-11-10,removed,1411780,DZRT,Restaurant/Cafe/Canteen,Camden,NW1 8AB,3,,,
+2026-11-10,removed,1884356,EUSTON COMMUNITY HUB,Retailers - other,Camden,NW1 2LY,AwaitingInspection,,-0.13690725,51.5264619
+2026-11-10,removed,1949660,Efua Romeo,Takeaway/sandwich shop,Camden,NW1,AwaitingInspection,,,
+2026-11-10,removed,1945689,Gin GNH Bar and Terrace,Restaurant/Cafe/Canteen,Camden,N1C 4TB,AwaitingInspection,,,
+2026-11-10,removed,1042617,Great Wall,Takeaway/sandwich shop,Camden,NW5 4DY,5,,-0.1511803,51.5499206
+2026-11-10,removed,1768453,Gure Cafe,Restaurant/Cafe/Canteen,Camden,NW5 4DY,3,,-0.1510754,51.5500178
+2026-11-10,removed,1850312,HOME MADE INDIAN CURRY,Takeaway/sandwich shop,Camden,NW1,0,,,
+2026-11-10,removed,1918462,JERKINNAYAAD LTD,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,AwaitingInspection,,-0.1443882,51.5396067
+2026-11-10,removed,1960312,KALENDAR,Restaurant/Cafe/Canteen,Camden,N6 6QX,AwaitingInspection,,-0.1497644,51.5620652
+2026-11-10,removed,1945686,Keiko Yamamoto,Takeaway/sandwich shop,Camden,NW6,AwaitingInspection,,,
+2026-11-10,removed,1960273,LEBANESE HUB,Takeaway/sandwich shop,Camden,W1D 5HA,AwaitingInspection,,,
+2026-11-10,removed,1888100,LUDESHENG,Takeaway/sandwich shop,Camden,WC1R 4PS,0,,-0.1170659,51.5195852
+2026-11-10,removed,1283327,Lil Moon Bakery,Retailers - other,Camden,NW3,5,,,
+2026-11-10,removed,1411754,MIKOS GYROS,Restaurant/Cafe/Canteen,Camden,NW1 8JZ,5,,-0.1447754,51.541716
+2026-11-10,removed,1960286,Ma Petite Jamaica,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,AwaitingInspection,,-0.1438207,51.5397326
+2026-11-10,removed,1251764,Ma Petite Jamaica,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,3,,-0.1438207,51.5397326
+2026-11-10,removed,1998229,Made in Brasil,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,1,,-0.144069,51.5396556
+2026-11-10,removed,1616561,Meat N6,Retailers - other,Camden,N6 6QX,4,,-0.1502608,51.5619201
+2026-11-10,removed,1981197,NBH Hampstead Senior,School/college/university,Camden,NW3 5UD,AwaitingInspection,,-0.1747257,51.5544617
+2026-11-10,removed,1938712,NOEL FOODS LTD,Retailers - other,Camden,WC1H 9BB,AwaitingInspection,,-0.1268977,51.5279799
+2026-11-10,removed,424371,North Bridge House Senior School,School/college/university,Camden,NW3 5UD,5,,-0.174725994467735,51.5544624328613
+2026-11-10,removed,1251636,Outtakes,Restaurant/Cafe/Canteen,Camden,WC1X 8XZ,5,,-0.114110000431538,51.5234413146973
+2026-11-10,removed,1788806,Pavona,Hotel/bed & breakfast/guest house,Camden,NW6 3AY,4,,-0.1900992,51.5465615
+2026-11-10,removed,1934389,RISTORANTE DIPOPOLO,Restaurant/Cafe/Canteen,Camden,NW3 1DN,AwaitingInspection,,-0.1781814,51.5575099
+2026-11-10,removed,1960278,RUM KITCHEN,Restaurant/Cafe/Canteen,Camden,NW1 7HJ,AwaitingInspection,,-0.1438939,51.5397068
+2026-11-10,removed,1267298,Ronis Swains Lane,Restaurant/Cafe/Canteen,Camden,N6 6QS,5,,-0.149812996387482,51.5615882873535
+2026-11-10,removed,1968647,SOFT LANDINGS,Takeaway/sandwich shop,Camden,NW1,AwaitingInspection,,,
+2026-11-10,removed,1989696,SOUTH MEDITERRANEAN,Retailers - other,Camden,NW6 1XZ,AwaitingInspection,,-0.1880206,51.5491463
+2026-11-10,removed,1640830,SUSHI POINT & SUSHI-MI,Takeaway/sandwich shop,Camden,NW1 2PB,5,,-0.137724,51.5265875
+2026-11-10,removed,1908973,SUSHI-MI,Takeaway/sandwich shop,Camden,NW1 2PB,AwaitingInspection,,-0.137724,51.5265875
+2026-11-10,removed,1934423,Say Matcha,Restaurant/Cafe/Canteen,Camden,WC1N 1AE,AwaitingInspection,,-0.1236554,51.5237375
+2026-11-10,removed,1798557,Suna Foods Centre,Retailers - other,Camden,NW1 8PD,0,,-0.1420405,51.5459094
+2026-11-10,removed,1798560,Taco Bros Ltd,Takeaway/sandwich shop,Camden,NW1 8QH,3,,-0.1439765,51.5418327
+2026-11-10,removed,1648443,The Cheese Wheel,Takeaway/sandwich shop,Camden,NW1 8NZ,4,,-0.1447754,51.541716
+2026-11-10,removed,1267267,The Wine Cellar,Pub/bar/nightclub,Camden,N6 6QX,4,,-0.149691998958588,51.5620803833008
+2026-11-10,removed,1970098,Inayat Haryanvi Sweets & Spice,Restaurant/Cafe/Canteen,Ealing,UB2 4BG,1,,-0.380916,51.503452
 2026-11-10,removed,1816130,All Week,Manufacturers/packers,Lewisham,SE8 5QA,4,,-0.0272923,51.479251
 2026-11-10,removed,1720406,CC Foundation Food Bank,Distributors/Transporters,Lewisham,SE12 8TF,4,,0.0125402,51.4559751
 2026-11-10,removed,1684610,Cake World,Retailers - other,Lewisham,SE14 6TJ,4,,-0.0264385,51.4746773
@@ -114,6 +217,22 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-10,removed,1897524,The Island Stove,Takeaway/sandwich shop,Lewisham,SE13 5PT,AwaitingInspection,,-0.0065143,51.4613455
 2026-11-10,removed,1914058,The Signature House,Restaurant/Cafe/Canteen,Lewisham,SE13 6NZ,AwaitingInspection,,-0.0164736,51.4511096
 2026-11-10,removed,1600789,Wings of Kings,Takeaway/sandwich shop,Lewisham,SE4 2PJ,5,,-0.038283,51.452916
+2026-11-10,removed,1991861,All Week,Retailers - other,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-10,removed,1991869,AmaiYoru_NoMori / AmaiYoru / AmaiMori,Retailers - other,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-10,removed,1931813,Amylicious Cakes & Desserts,Other catering premises,Merton,CR4,AwaitingInspection,,,
+2026-11-10,removed,585676,Aya,Restaurant/Cafe/Canteen,Merton,SW19 1RQ,5,,-0.2023414,51.4197187
+2026-11-10,removed,408453,Bright Horizons Raynes Park Day Nursery and Preschool,Caring Premises,Merton,SW20 0QP,5,,-0.2344048,51.4119349
+2026-11-10,removed,1988096,Chef Forbeees,Other catering premises,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-10,removed,1981429,Chicken Cottage Mitcham,Restaurant/Cafe/Canteen,Merton,CR4 3HA,AwaitingInspection,,-0.1630473,51.408873
+2026-11-10,removed,1129482,Colour House,Restaurant/Cafe/Canteen,Merton,SW19 2RD,5,,-0.1831823,51.4130171
+2026-11-10,removed,1780487,Good Fortune Club,Restaurant/Cafe/Canteen,Merton,SW19 5EG,5,,-0.2162581,51.4247944
+2026-11-10,removed,552914,Iddi Pizza,Restaurant/Cafe/Canteen,Merton,"",5,,-0.1829575,51.412881
+2026-11-10,removed,200202,Kentiss,Takeaway/sandwich shop,Merton,CR4 3NA,5,,,
+2026-11-10,removed,1984765,La Salteneria,Retailers - other,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-10,removed,2002009,Picklesisters Ltd,Manufacturers/packers,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-10,removed,1659273,Raj Pizza Restaurant,Restaurant/Cafe/Canteen,Merton,SW19 8DZ,3,,-0.1972142,51.4400073
+2026-11-10,removed,1666047,The Pickled Fork,Restaurant/Cafe/Canteen,Merton,SW19 3EP,5,,-0.1956073,51.4020888
+2026-11-10,removed,2012018,Elior @ Marble Hill,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 2NL,AwaitingInspection,,-0.3133071,51.4495149
 2026-11-10,removed,1947945,AV Cheesecakes,Retailers - other,Wandsworth,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
 2026-11-10,removed,1977125,BOSKE,Restaurant/Cafe/Canteen,Wandsworth,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
 2026-11-10,removed,1805704,Burger Nine,Restaurant/Cafe/Canteen,Wandsworth,SW17 0RJ,5,,-0.1665332,51.4283497
