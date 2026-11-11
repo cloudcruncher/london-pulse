@@ -1,13 +1,182 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-11,new,2013577,Jenkin Support Services,Caring Premises,Bexley,DA8 2AG,,AwaitingInspection,,
+2026-11-11,new,2013576,Kids Planet Bexleyheath,Caring Premises,Bexley,DA7 4RW,,AwaitingInspection,,
+2026-11-11,new,2013575,Kids Planet Crayford,Caring Premises,Bexley,DA1 3PY,,AwaitingInspection,,
+2026-11-11,new,2013574,Tipsy Tikka,Restaurant/Cafe/Canteen,Bexley,DA16 3DP,,AwaitingInspection,,
+2026-11-11,new,2013528,Anerley Station Grind,Takeaway/sandwich shop,Bromley,SE20 8PT,,AwaitingInspection,,
+2026-11-11,new,2013529,Big Big Bowl,Takeaway/sandwich shop,Bromley,BR5 1DQ,,AwaitingInspection,,
+2026-11-11,new,2013534,Brasileiro,Retailers - other,Bromley,SE20 7PF,,AwaitingInspection,,
+2026-11-11,new,2013537,DRIPBOT,Restaurant/Cafe/Canteen,Bromley,BR4 0EH,,AwaitingInspection,,
+2026-11-11,new,2013533,Hija Bakehouse,Other catering premises,Bromley,SE20,,AwaitingInspection,,
+2026-11-11,new,2013535,JDN Simple Goods,Retailers - other,Bromley,BR4 0QR,,AwaitingInspection,,
+2026-11-11,new,2013536,Jimbo’s Slice,Other catering premises,Bromley,SE19,,AwaitingInspection,,
+2026-11-11,new,2013539,Jude’s Lankan Junction - Mobile Catering Unit - Outside The Range,Mobile caterer,Bromley,"",,AwaitingInspection,,
+2026-11-11,new,2013526,Kiran’s Cookie Company,Other catering premises,Bromley,BR6,,AwaitingInspection,,
+2026-11-11,new,2013527,Krivi Ventures Ltd,Distributors/Transporters,Bromley,BR6,,AwaitingInspection,,
+2026-11-11,new,2013525,Mac’s Meal Prep,Other catering premises,Bromley,BR6,,AwaitingInspection,,
+2026-11-11,new,2013524,Metro’s Fried Chicken,Restaurant/Cafe/Canteen,Bromley,BR2 8AT,,AwaitingInspection,,
+2026-11-11,new,2013532,Naked Greens,Restaurant/Cafe/Canteen,Bromley,BR7 5AE,,AwaitingInspection,,
+2026-11-11,new,2013530,Parakeet Chocolate,Other catering premises,Bromley,BR2,,AwaitingInspection,,
+2026-11-11,new,2013538,Spice & Stories,Other catering premises,Bromley,BR3,,AwaitingInspection,,
+2026-11-11,new,2013531,TrulyFresh,Other catering premises,Bromley,BR3,,AwaitingInspection,,
+2026-11-11,new,2013564,A&M Sizzles,Restaurant/Cafe/Canteen,Ealing,W5 5AH,,5,,
+2026-11-11,new,2013573,Afghan Sheeryakh,Restaurant/Cafe/Canteen,Ealing,W7 3TH,,AwaitingInspection,,
+2026-11-11,new,2013558,Al Wadi,Restaurant/Cafe/Canteen,Ealing,W5 5AH,,AwaitingInspection,,
+2026-11-11,new,2013552,Andreeas,Other catering premises,Ealing,NW10 6HJ,,AwaitingInspection,,
+2026-11-11,new,2013563,Bamboo Restaurant,Restaurant/Cafe/Canteen,Ealing,NW10 7LT,,AwaitingInspection,,
+2026-11-11,new,1279240,Black George,Pub/bar/nightclub,Ealing,W13 9AA,,AwaitingInspection,,
+2026-11-11,new,2013549,Boxcafe,Mobile caterer,Ealing,W5 1DN,,AwaitingInspection,,
+2026-11-11,new,1841316,Crux BBQ,Manufacturers/packers,Ealing,W13,,4,,
+2026-11-11,new,1033377,Ealing PCT,Other catering premises,Ealing,UB2 4SA,,Exempt,,
+2026-11-11,new,2013547,Emily's Family,Mobile caterer,Ealing,W3 7,,AwaitingInspection,,
+2026-11-11,new,2013556,Franco Manca,Takeaway/sandwich shop,Ealing,W3 8DU,,AwaitingInspection,,
+2026-11-11,new,2013570,Fusion Spice Catering @ The Centre,Other catering premises,Ealing,UB2 4AU,,5,,
+2026-11-11,new,2013568,Khan's Chicken & Rice Halal,Takeaway/sandwich shop,Ealing,UB2 4DA,,AwaitingInspection,,
+2026-11-11,new,2013545,Lima Fuego,Other catering premises,Ealing,UB6,,AwaitingInspection,,
+2026-11-11,new,2013571,London Sangaki,Manufacturers/packers,Ealing,W13 9HH,,AwaitingInspection,,
+2026-11-11,new,2013572,Mini Mart Horn Lane,Retailers - other,Ealing,W3 9NJ,,AwaitingInspection,,
+2026-11-11,new,1603083,Morton Arms Acton,Pub/bar/nightclub,Ealing,W3 7DD,,5,,
+2026-11-11,new,2013562,MyKopitiam,Restaurant/Cafe/Canteen,Ealing,W5 2TD,,AwaitingInspection,,
+2026-11-11,new,1111615,Noormahal Sweets,Manufacturers/packers,Ealing,UB1 1JH,,1,,
+2026-11-11,new,2013559,Nosh,Takeaway/sandwich shop,Ealing,W5 5AH,,5,,
+2026-11-11,new,2013553,Pauls Plaice,Restaurant/Cafe/Canteen,Ealing,NW10 7HR,,AwaitingInspection,,
+2026-11-11,new,2013555,Poke Shack,Takeaway/sandwich shop,Ealing,W3 8DU,,AwaitingInspection,,
+2026-11-11,new,2013566,Rahma Restaurant,Restaurant/Cafe/Canteen,Ealing,UB2 5AB,,3,,
+2026-11-11,new,2013548,Royal Shawarma House,Mobile caterer,Ealing,UB1 1SQ,,AwaitingInspection,,
+2026-11-11,new,2013542,Saffron Spoon,Other catering premises,Ealing,UB2,,AwaitingInspection,,
+2026-11-11,new,2013544,Salad Girl Kitchen,Other catering premises,Ealing,W5 3,,AwaitingInspection,,
+2026-11-11,new,2013550,Shaam Truck,Mobile caterer,Ealing,NW10 7YQ,,AwaitingInspection,,
+2026-11-11,new,2013546,Shishbarak,Mobile caterer,Ealing,W3 7,,AwaitingInspection,,
+2026-11-11,new,2013551,Singhsbury's Local,Retailers - other,Ealing,UB2 5JT,,4,,
+2026-11-11,new,2013569,Singhsbury's Local,Retailers - other,Ealing,UB2 5JT,,AwaitingInspection,,
+2026-11-11,new,2013567,Sitos Cafe,Restaurant/Cafe/Canteen,Ealing,UB6 0HH,,AwaitingInspection,,
+2026-11-11,new,2013541,Slimming World,Retailers - other,Ealing,W13,,Exempt,,
+2026-11-11,new,2013560,Tapelia,Restaurant/Cafe/Canteen,Ealing,W13 9RT,,AwaitingInspection,,
+2026-11-11,new,1033748,Team Sport,Restaurant/Cafe/Canteen,Ealing,W3 0RQ,,5,,
+2026-11-11,new,2013554,Thai House Kitchen,Restaurant/Cafe/Canteen,Ealing,W5 4UB,,AwaitingInspection,,
+2026-11-11,new,2013565,The Grosvenor,Pub/bar/nightclub,Ealing,W7 2DT,,AwaitingInspection,,
+2026-11-11,new,2013557,Udderly Lush / Lush Puppy,Manufacturers/packers,Ealing,NW10 6HJ,,AwaitingInspection,,
+2026-11-11,new,2013543,White Lotus,Other catering premises,Ealing,W13,,AwaitingInspection,,
+2026-11-11,new,2013561,Wok House,Restaurant/Cafe/Canteen,Ealing,W5 5AH,,AwaitingInspection,,
+2026-11-11,new,1714524,Casa Cannoli,Retailers - other,Enfield,N18 3HU,,4,,
+2026-11-11,new,2013507,2017 Authentic Lebanese street food,Restaurant/Cafe/Canteen,Hackney,E2 8JL,,AwaitingInspection,,
+2026-11-11,new,2013502,Asase,Pub/bar/nightclub,Hackney,EC2A 3DU,,AwaitingInspection,,
+2026-11-11,new,2013489,Bad Boys Chocolate Factory,Retailers - other,Hackney,E8 2RE,,AwaitingInspection,,
+2026-11-11,new,2013505,Brewed Online,Restaurant/Cafe/Canteen,Hackney,N4 2UX,,AwaitingInspection,,
+2026-11-11,new,2013497,DUO Bike Workshop & Coffee Bar,Restaurant/Cafe/Canteen,Hackney,E8 3QE,,AwaitingInspection,,
+2026-11-11,new,2013509,Earthbeencoffee,Takeaway/sandwich shop,Hackney,E8 2NP,,AwaitingInspection,,
+2026-11-11,new,2013508,Green News,Retailers - other,Hackney,E5 9JZ,,AwaitingInspection,,
+2026-11-11,new,2013488,Homerton Butchers,Retailers - other,Hackney,E9 6AS,,AwaitingInspection,,
+2026-11-11,new,2013496,Island Tropics,Mobile caterer,Hackney,E9 6PR,,AwaitingInspection,,
+2026-11-11,new,2013506,Koya Studio,Restaurant/Cafe/Canteen,Hackney,E8 4QN,,AwaitingInspection,,
+2026-11-11,new,2013504,MOJU,Retailers - other,Hackney,N1 6DR,,AwaitingInspection,,
+2026-11-11,new,2013493,Maras,Restaurant/Cafe/Canteen,Hackney,N16 8AA,,AwaitingInspection,,
+2026-11-11,new,2013501,PerfectTed,Distributors/Transporters,Hackney,E1 6JJ,,AwaitingInspection,,
+2026-11-11,new,2013500,Pho Le,Restaurant/Cafe/Canteen,Hackney,E5 0RN,,AwaitingInspection,,
+2026-11-11,new,2013490,RUDYRUPIZZERIA,Manufacturers/packers,Hackney,N1 6NP,,AwaitingInspection,,
+2026-11-11,new,2013499,Sticky's,Mobile caterer,Hackney,E8 4AU,,AwaitingInspection,,
+2026-11-11,new,2013494,Sweet Tooth By Sanny,Other catering premises,Hackney,N1 5LY,,AwaitingInspection,,
+2026-11-11,new,2013491,THEGRILLSANDJOLLOF,Distributors/Transporters,Hackney,E5 0LS,,AwaitingInspection,,
+2026-11-11,new,2013503,Taste of Marrakech,Manufacturers/packers,Hackney,E8 2LX,,AwaitingInspection,,
+2026-11-11,new,2013492,The Batch Social,Manufacturers/packers,Hackney,E5 9AA,,AwaitingInspection,,
+2026-11-11,new,2013511,The Dusty Knuckle,Retailers - other,Hackney,N4 2JW,,AwaitingInspection,,
+2026-11-11,new,2013512,Tricia's Onestop Kitchen LTD,Takeaway/sandwich shop,Hackney,N16 7HU,,AwaitingInspection,,
+2026-11-11,new,2013510,Yolli’s Kitchen,Distributors/Transporters,Hackney,N16 0SG,,AwaitingInspection,,
+2026-11-11,new,2013498,itsu,Restaurant/Cafe/Canteen,Hackney,EC2A 3HP,,AwaitingInspection,,
+2026-11-11,new,2013241,Aromaclass UK,Other catering premises,Kensington and Chelsea,W8 5,,AwaitingInspection,,
+2026-11-11,new,2013240,Big Juicy Burgers Kensington Ltd,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-11-11,new,2013243,Ember Energy Lab,Other catering premises,Kensington and Chelsea,W11,,AwaitingInspection,,
+2026-11-11,new,2013650,Gail's Bakery,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9AP,,AwaitingInspection,,
+2026-11-11,new,2013242,House Jar,Other catering premises,Kensington and Chelsea,W10,,AwaitingInspection,,
+2026-11-11,new,2013245,Lucky Grill,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-11-11,new,2013239,Puffpizza,Distributors/Transporters,Kensington and Chelsea,W10,,AwaitingInspection,,
+2026-11-11,new,2013238,REEMIES CAKES,Restaurant/Cafe/Canteen,Kensington and Chelsea,W11 2AB,,AwaitingInspection,,
+2026-11-11,new,2013244,Roots kitchen,Other catering premises,Kensington and Chelsea,W10 6BN,,AwaitingInspection,,
+2026-11-11,new,2013649,The Marriott Hotel,Hotel/bed & breakfast/guest house,Kensington and Chelsea,SW5 0TH,,AwaitingInspection,,
+2026-11-11,new,2013345,Berrylands,Retailers - other,Kingston-Upon-Thames,KT5 8QX,,AwaitingInspection,,
+2026-11-11,new,2013352,Coffee+Chat,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT4 7NB,,AwaitingInspection,,
+2026-11-11,new,2013353,Fancy Vegan,Other catering premises,Kingston-Upon-Thames,KT6,,AwaitingInspection,,
+2026-11-11,new,2013350,Fried Fantasy,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 2HT,,AwaitingInspection,,
+2026-11-11,new,2013347,Orayaa Ltd,Importers/Exporters,Kingston-Upon-Thames,KT3,,AwaitingInspection,,
+2026-11-11,new,2013346,Pattys Tiney Home,Other catering premises,Kingston-Upon-Thames,KT3,,AwaitingInspection,,
+2026-11-11,new,2013348,Sai Smash,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 1PB,,AwaitingInspection,,
+2026-11-11,new,1944010,The Old Apothecary,Other catering premises,Kingston-Upon-Thames,KT5,,AwaitingInspection,,
+2026-11-11,new,2013351,Veerasamy Vilas,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7AQ,,AwaitingInspection,,
+2026-11-11,new,2013349,Wild Pitta,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1PB,,AwaitingInspection,,
+2026-11-11,new,2013344,Ellora,Retailers - other,Merton,SW19 8AQ,,AwaitingInspection,,
+2026-11-11,new,1993189,Marchon Stratford,Restaurant/Cafe/Canteen,Newham,E15 2QR,,5,,
+2026-11-11,new,1992170,Cherise's Daddy Kitchen,Mobile caterer,Sutton,CR0,,AwaitingInspection,,
+2026-11-11,new,2013354,Waqqas Mir,Retailers - other,Sutton,KT4,,AwaitingInspection,,
+2026-11-11,new,2013381,AliMo Fusion Kitchen,Retailers - other,Tower Hamlets,E3 2,,AwaitingInspection,,
+2026-11-11,new,913725,Bahara - Indian Kitchen and Culture,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6QL,,4,,
+2026-11-11,new,2013380,BiBi's Kitchen,Other catering premises,Tower Hamlets,E14,,AwaitingInspection,,
+2026-11-11,new,2013374,Bowl n Soul,Mobile caterer,Tower Hamlets,E14,,AwaitingInspection,,
+2026-11-11,new,2013375,Casa Asado,Other catering premises,Tower Hamlets,E1 4UN,,AwaitingInspection,,
+2026-11-11,new,2013371,Flat Whytes,Other catering premises,Tower Hamlets,E3 2,,5,,
+2026-11-11,new,2013376,Gather & Gather - UCL School of Management,Other catering premises,Tower Hamlets,E14 5AA,,AwaitingInspection,,
+2026-11-11,new,2013370,Houston & Hawkes,Restaurant/Cafe/Canteen,Tower Hamlets,E1 8BB,,AwaitingInspection,,
+2026-11-11,new,2013377,Isle & Origin,Retailers - other,Tower Hamlets,E14,,AwaitingInspection,,
+2026-11-11,new,1990706,Kapwa Cafe & Community Hub,Restaurant/Cafe/Canteen,Tower Hamlets,E2 5QJ,,AwaitingInspection,,
+2026-11-11,new,67447,Royal Asia Restaurant & Bar,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9RU,,5,,
+2026-11-11,new,1743823,Tattu,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,,AwaitingInspection,,
+2026-11-11,new,2013373,The Dream Of,Retailers - other,Tower Hamlets,E2 7LF,,5,,
+2026-11-11,new,2013378,The Female Glaze,Manufacturers/packers,Tower Hamlets,E1 7TD,,AwaitingInspection,,
+2026-11-11,new,2013372,The Gallipot Cafe @ Pill Box,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6GG,,AwaitingInspection,,
+2026-11-11,new,2013379,Xinjiang Pepper Chicken,Takeaway/sandwich shop,Tower Hamlets,E1 7TD,,AwaitingInspection,,
+2026-11-11,new,1999121,Zula Burger,Takeaway/sandwich shop,Tower Hamlets,E1 6EA,,AwaitingInspection,,
 2026-11-11,rating_changed,1876524,MedFlavors,Other catering premises,Barnet,NW4,AwaitingInspection,4,,
 2026-11-11,rating_changed,1921467,Penang Tiffin,Other catering premises,Barnet,NW9,AwaitingInspection,4,,
+2026-11-11,rating_changed,847037,Honeydale Farm Shop & Tea Room,Restaurant/Cafe/Canteen,Bexley,DA14 5AW,4,5,,
+2026-11-11,rating_changed,1998152,Nefis Mezze Grill,Takeaway/sandwich shop,Bexley,DA7 4EG,1,5,,
+2026-11-11,rating_changed,1903714,Crave Kitchen,Takeaway/sandwich shop,Brent,HA9 6AZ,AwaitingInspection,5,,
+2026-11-11,rating_changed,1956490,Achievetogether,Caring Premises,Bromley,SE20,AwaitingInspection,5,,
+2026-11-11,rating_changed,1978443,Blip/Konk,Restaurant/Cafe/Canteen,Bromley,BR2 7LD,AwaitingInspection,5,,
+2026-11-11,rating_changed,2009946,British Fried Chicken,Takeaway/sandwich shop,Bromley,BR3 3QP,AwaitingInspection,5,,
+2026-11-11,rating_changed,1985333,Crush & Cane,Manufacturers/packers,Bromley,BR6,AwaitingInspection,5,,
+2026-11-11,rating_changed,1274933,Icelandic Fish And Chips,Restaurant/Cafe/Canteen,Bromley,BR2 7EH,4,5,,
+2026-11-11,rating_changed,1990780,Jude’s Lankan Junction,Mobile caterer,Bromley,SE20,AwaitingInspection,5,,
+2026-11-11,rating_changed,358395,Londis,Retailers - other,Bromley,BR3 1AW,4,5,,
+2026-11-11,rating_changed,1224783,Ollie Polly Play Cafe,Restaurant/Cafe/Canteen,Bromley,BR4 0LP,AwaitingPublication,2,,
+2026-11-11,rating_changed,1534127,Open Doors Lunch Club,Other catering premises,Bromley,SE20 7LX,4,5,,
+2026-11-11,rating_changed,1671405,Umpy's Hot Sauce,Other catering premises,Bromley,BR2,4,5,,
+2026-11-11,rating_changed,358381,Warbank Social Club,Pub/bar/nightclub,Bromley,CR0 0AY,4,5,,
 2026-11-11,rating_changed,2009338,CAMDEN TANDOORI,Restaurant/Cafe/Canteen,Camden,NW1 9EE,AwaitingInspection,2,-0.1379593,51.5420138
 2026-11-11,rating_changed,1751424,Fig and Walnut Mediterranean Kitchen/Bar,Restaurant/Cafe/Canteen,Camden,WC1N 1AP,AwaitingInspection,4,-0.1255826,51.5255107
 2026-11-11,rating_changed,998780,Kimchee,Restaurant/Cafe/Canteen,Camden,N1C 4AG,1,2,-0.125043004751205,51.5334815979004
 2026-11-11,rating_changed,2006915,Acton Charcoal Grill,Restaurant/Cafe/Canteen,Ealing,W3 6NG,AwaitingInspection,3,-0.264527,51.5064
+2026-11-11,rating_changed,1033116,Al Jabal Bakeries,Manufacturers/packers,Ealing,NW10 6TD,4,5,,
+2026-11-11,rating_changed,1959426,Andreas Bajohra,Retailers - other,Ealing,NW10 6QN,AwaitingInspection,5,,
+2026-11-11,rating_changed,1543771,Aplomb Day Nursery And Preschool,Caring Premises,Ealing,UB6 8LN,4,5,,
+2026-11-11,rating_changed,1876547,Caterplus @ Minster Care - Sycamore Lodge,Caring Premises,Ealing,W3 8PH,4,5,,
+2026-11-11,rating_changed,1032569,Children's Corner Day Nursery,Caring Premises,Ealing,W13 8QH,4,5,,
+2026-11-11,rating_changed,1032879,Ealing Manor Nursing Home,Caring Premises,Ealing,W5 3PL,4,5,,
+2026-11-11,rating_changed,1981930,Em's Sourdough & Bakes / Em & Dora's Sourdough & Bakes,Retailers - other,Ealing,W3 6HU,AwaitingInspection,5,,
+2026-11-11,rating_changed,1621219,Heart And Soul Caribbean Food,Takeaway/sandwich shop,Ealing,W7 3SH,4,5,,
+2026-11-11,rating_changed,1631628,Hikaru,Restaurant/Cafe/Canteen,Ealing,W3 7HH,1,4,,
+2026-11-11,rating_changed,1406072,ISS Facility Services Education At Perivale Primary School,School/college/university,Ealing,UB6 7AP,4,5,,
+2026-11-11,rating_changed,1032827,Kamil Bakery,Restaurant/Cafe/Canteen,Ealing,NW10 6HJ,3,5,,
+2026-11-11,rating_changed,1985662,Madhan Superstore,Retailers - other,Ealing,UB2 4DA,AwaitingInspection,5,,
+2026-11-11,rating_changed,1985667,Mandoz Pizzeria,Takeaway/sandwich shop,Ealing,UB1 2HD,AwaitingInspection,5,,
 2026-11-11,rating_changed,1182081,Oscar's Off Licence,Retailers - other,Ealing,UB5 6LN,4,3,-0.3936954,51.5357212
+2026-11-11,rating_changed,1994434,Papa Johns Pizza,Restaurant/Cafe/Canteen,Ealing,UB5 5BJ,AwaitingInspection,5,,
+2026-11-11,rating_changed,1884977,Social Interest Group / Equinox Care,Caring Premises,Ealing,W13 9NG,5,Exempt,,
+2026-11-11,rating_changed,1884969,Somali Social Society,Restaurant/Cafe/Canteen,Ealing,NW10 6EU,2,Exempt,,
+2026-11-11,rating_changed,1994432,Station Kebab,Takeaway/sandwich shop,Ealing,W5 3LD,AwaitingInspection,5,,
+2026-11-11,rating_changed,1033149,The Station House,Pub/bar/nightclub,Ealing,W3 6BQ,4,5,,
+2026-11-11,rating_changed,1985644,Thomas Franks @ St Augustine's Priory School,School/college/university,Ealing,W5 2JL,AwaitingInspection,5,,
+2026-11-11,rating_changed,1648735,Tir Chonaill Gaels @ The Pavilion,Pub/bar/nightclub,Ealing,UB6 0NX,2,5,,
+2026-11-11,rating_changed,1934717,Vala Tastes Ltd,Manufacturers/packers,Ealing,UB6,AwaitingInspection,4,,
+2026-11-11,rating_changed,1994408,Vw Pineapple Cocktails,Mobile caterer,Ealing,W3 9,AwaitingInspection,5,,
+2026-11-11,rating_changed,653584,Oncu Food Centre,Retailers - other,Enfield,N9 8AA,3,5,,
 2026-11-11,rating_changed,695207,DUC TIEN CASH AND CARRY LTD,Retailers - supermarkets/hypermarkets,Greenwich,SE7 7SN,4,0,0.0291923,51.4912908
+2026-11-11,rating_changed,1927845,Dear Diana Cafe,Restaurant/Cafe/Canteen,Hackney,N4 2SB,2,5,,
+2026-11-11,rating_changed,470693,Dixy Fried Chicken,Takeaway/sandwich shop,Hackney,N16 6TU,2,5,,
+2026-11-11,rating_changed,1822635,Karv,Restaurant/Cafe/Canteen,Hackney,N16 7SR,4,5,,
 2026-11-11,rating_changed,1980683,Loves kitchen,Restaurant/Cafe/Canteen,Hackney,N1 7QP,AwaitingInspection,1,-0.0885331,51.5311019
+2026-11-11,rating_changed,1872298,Maeme's Piri piri,Restaurant/Cafe/Canteen,Hackney,E8 2PB,2,5,,
+2026-11-11,rating_changed,2008866,Mmm Drinks Limited,Manufacturers/packers,Hackney,E8 4,AwaitingInspection,5,,
+2026-11-11,rating_changed,469400,Parkwood Primary School,School/college/university,Hackney,N4 2HQ,AwaitingInspection,5,,
+2026-11-11,rating_changed,1993813,Stokey Cupcakes,Retailers - other,Hackney,N160NX,AwaitingInspection,5,,
 2026-11-11,rating_changed,1803256,Chatkaaz,Restaurant/Cafe/Canteen,Harrow,HA2 9TL,3,1,-0.3704732,51.5746796
 2026-11-11,rating_changed,1814683,GOKUL SWEETS & SAVOURIES LTD,Mobile caterer,Harrow,HA5,2,0,,
 2026-11-11,rating_changed,1637050,The Aviary Ltd,Restaurant/Cafe/Canteen,Havering,RM11 3XS,5,4,0.221458,51.561845
@@ -15,19 +184,59 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-11,rating_changed,417674,Candid Gallery Cafe,Restaurant/Cafe/Canteen,Islington,EC1V 1NQ,2,4,-0.10527,51.53217
 2026-11-11,rating_changed,1865817,Lupa,Restaurant/Cafe/Canteen,Islington,N5 1UA,AwaitingInspection,4,-0.0982742,51.5561339
 2026-11-11,rating_changed,583129,OA Com Tam,Takeaway/sandwich shop,Islington,N7 8DA,4,3,-0.111962,51.5527042
+2026-11-11,rating_changed,1975614,Glint Express (Dry Cleaning & Launderette),Retailers - other,Kensington and Chelsea,"",AwaitingInspection,5,,
+2026-11-11,rating_changed,1990286,Hometown,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
+2026-11-11,rating_changed,1958436,Maslow's Kensington,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,5,,
+2026-11-11,rating_changed,1990280,Prince Arthur Chelsea,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 3AD,AwaitingInspection,5,,
+2026-11-11,rating_changed,333488,Ranoush Juice,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 4SG,2,5,,
+2026-11-11,rating_changed,1990284,Smash'd,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
 2026-11-11,rating_changed,1703530,Anaaya Sri Lankan \& Indian Restaurant,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7BE,3,0,-0.2868274,51.3825415
+2026-11-11,rating_changed,1602096,Anar Kitchen \& Bubble T London,Takeaway/sandwich shop,Kingston-Upon-Thames,KT2 6QF,4,5,,
+2026-11-11,rating_changed,1385718,C For Cakes,Other catering premises,Kingston-Upon-Thames,KT3,4,5,,
+2026-11-11,rating_changed,2006239,Coombe Food And Wine,Retailers - other,Kingston-Upon-Thames,KT2 7AE,AwaitingInspection,4,,
 2026-11-11,rating_changed,2006230,Damyang Ltd T/A Treestone BBQ Restaurant,Mobile caterer,Kingston-Upon-Thames,"",AwaitingInspection,4,,
+2026-11-11,rating_changed,1385628,Tree Stone Butchers,Retailers - other,Kingston-Upon-Thames,KT3 4BT,0,2,,
+2026-11-11,rating_changed,1560271,Wacky Kingdom,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1TP,0,5,,
 2026-11-11,rating_changed,483414,Costa Coffee,Restaurant/Cafe/Canteen,Lambeth,SW12 9DY,5,4,-0.147199,51.452458
 2026-11-11,rating_changed,483087,Henry Cavendish Primary School,School/college/university,Lambeth,SW16 1AU,5,4,,
 2026-11-11,rating_changed,1781816,Tennessee Chicken,Takeaway/sandwich shop,Lambeth,SW8 3JH,4,3,-0.14843,51.466496
 2026-11-11,rating_changed,483975,The King & Co.,Pub/bar/nightclub,Lambeth,SW4 7BZ,3,2,-0.134028,51.459191
 2026-11-11,rating_changed,1929850,Jack's Kitchen,Restaurant/Cafe/Canteen,Lewisham,SE13 5PT,AwaitingInspection,4,-0.006552,51.461356
+2026-11-11,rating_changed,1493208,BabaBoom,Restaurant/Cafe/Canteen,Newham,E20 1GN,1,5,,
+2026-11-11,rating_changed,1721252,Bana Grocery & Cafe Ltd,Takeaway/sandwich shop,Newham,E15 1XQ,1,5,,
 2026-11-11,rating_changed,864048,Boleyn Supermarket,Retailers - other,Newham,E6 3BP,1,3,0.040326,51.530503
+2026-11-11,rating_changed,1991883,Brampton Primary School - Breakfast / After School Club,Other catering premises,Newham,E6 3LB,1,5,,
+2026-11-11,rating_changed,1453338,Burger King,Restaurant/Cafe/Canteen,Newham,E15 1XD,4,5,,
+2026-11-11,rating_changed,2001228,Familia Roasters Ltd,Takeaway/sandwich shop,Newham,E20 1DB,AwaitingInspection,5,,
+2026-11-11,rating_changed,1592312,Farm House,Retailers - other,Newham,E13 8HL,4,1,,
+2026-11-11,rating_changed,1977082,Food Point,Restaurant/Cafe/Canteen,Newham,E7 0NF,1,3,,
+2026-11-11,rating_changed,1914647,Hallsville East Primary School (Main),School/college/university,Newham,E16 1LN,2,5,,
+2026-11-11,rating_changed,1914648,Hallsville West Primary School,School/college/university,Newham,E16 1LN,2,5,,
+2026-11-11,rating_changed,1083375,Iceland Plc - Stratford,Retailers - supermarkets/hypermarkets,Newham,E15 1XQ,4,5,,
+2026-11-11,rating_changed,1984394,Lalaa,Other catering premises,Newham,E6 5,AwaitingInspection,5,,
+2026-11-11,rating_changed,1981504,Palm Tree Banqueting,Other catering premises,Newham,E7 9HA,AwaitingInspection,5,,
+2026-11-11,rating_changed,1987650,Yo To Go,Takeaway/sandwich shop,Newham,E6 7ER,AwaitingInspection,5,,
 2026-11-11,rating_changed,443814,Brilliant Restaurant Cafe,Restaurant/Cafe/Canteen,Redbridge,IG3 9PL,1,4,0.109579,51.558343
 2026-11-11,rating_changed,1574484,Bruce's Butchers,Retailers - other,Richmond-Upon-Thames,TW2 5AT,4,3,-0.361344,51.4395587
 2026-11-11,rating_changed,1960414,Blackfinger coffee roasters ltd,Restaurant/Cafe/Canteen,Southwark,SE5 9JN,AwaitingInspection,2,-0.0963047,51.4750957
 2026-11-11,rating_changed,363670,The co-operative food,Retailers - supermarkets/hypermarkets,Southwark,SE5 8RZ,5,4,-0.093556,51.473198
+2026-11-11,rating_changed,931333,Beddington Kebab And Pizza,Takeaway/sandwich shop,Sutton,CR0 4PJ,4,3,,
+2026-11-11,rating_changed,2001373,Clynt,Other catering premises,Sutton,SM3,Exempt,AwaitingInspection,,
+2026-11-11,rating_changed,2001375,"Leo Academy Trust, Foresters (WAC)",School/college/university,Sutton,SM6 9DP,AwaitingInspection,5,,
+2026-11-11,rating_changed,1970754,Nana Beattie's Treat Shed,Restaurant/Cafe/Canteen,Sutton,KT4,Exempt,5,,
+2026-11-11,rating_changed,1029746,Adana Turkish with Fusion,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6AH,2,3,,
+2026-11-11,rating_changed,679382,Artizian,Restaurant/Cafe/Canteen,Tower Hamlets,E1 8BB,5,AwaitingInspection,,
+2026-11-11,rating_changed,1589896,Beans & Beyond,Restaurant/Cafe/Canteen,Tower Hamlets,E14 7HG,2,5,,
+2026-11-11,rating_changed,362294,Best One,Retailers - other,Tower Hamlets,E3 3EW,5,3,,
 2026-11-11,rating_changed,98164,Bon Appetit,Restaurant/Cafe/Canteen,Tower Hamlets,E2 0PG,5,4,-0.049399,51.528388
+2026-11-11,rating_changed,1902524,"Bright Nook Ltd, Mininoms",Importers/Exporters,Tower Hamlets,E14 9XL,AwaitingInspection,Exempt,,
+2026-11-11,rating_changed,82680,Exit Bar,Pub/bar/nightclub,Tower Hamlets,E1 6RU,4,AwaitingInspection,,
+2026-11-11,rating_changed,1834441,Hesta Housing and Support Catering,Caring Premises,Tower Hamlets,E3 4LN,2,5,,
+2026-11-11,rating_changed,2001573,Jamuna Cash & Carry,Retailers - other,Tower Hamlets,E14 7RH,AwaitingInspection,4,,
+2026-11-11,rating_changed,98112,Lalbagh Halal Food Store,Retailers - other,Tower Hamlets,E14 6AH,4,5,,
+2026-11-11,rating_changed,1979337,OTE (Original Turkish Eatery),Other catering premises,Tower Hamlets,E2 0EJ,AwaitingInspection,5,,
+2026-11-11,rating_changed,634021,Spice Hut,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4TN,AwaitingInspection,5,,
+2026-11-11,rating_changed,1742406,Tasty Crousty Mile End Limited,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4PH,AwaitingInspection,5,,
 2026-11-11,rating_changed,1907074,Yulin Chinese Food,Other catering premises,Tower Hamlets,E2 0EJ,AwaitingInspection,1,-0.0563795,51.5263914
 2026-11-11,rating_changed,515024,HR Parsons,Retailers - other,Waltham Forest,E17 7BX,3,1,-0.0264148,51.5835522
 2026-11-11,rating_changed,1930001,Juniper Pursuits at Roger Ascham Primary School,School/college/university,Waltham Forest,E17 5HU,AwaitingInspection,4,-0.0268941,51.5981636
@@ -37,3 +246,101 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-11,rating_changed,412642,Dumplings Legend,Restaurant/Cafe/Canteen,Westminster,W1D 6JE,1,3,-0.1315677,51.5118135
 2026-11-11,rating_changed,1214663,Quo Vadis Resturant,Restaurant/Cafe/Canteen,Westminster,W1D 3RA,5,4,-0.1325852,51.5140689
 2026-11-11,rating_changed,1206513,Suvlaki,Restaurant/Cafe/Canteen,Westminster,W1D 3AL,5,3,-0.1314104,51.5142481
+2026-11-11,removed,1320345,BWP Bakes,Retailers - other,Bexley,DA8,5,,,
+2026-11-11,removed,1950809,Bright Lights And Party Delights,Mobile caterer,Bexley,DA14,AwaitingInspection,,,
+2026-11-11,removed,1755516,Eastern Curry,Restaurant/Cafe/Canteen,Bexley,DA16 3DP,3,,0.110095,51.466895
+2026-11-11,removed,1704720,Iro Sushi,Takeaway/sandwich shop,Bexley,DA14 6EN,5,,0.104689,51.4255253
+2026-11-11,removed,1630501,The Belvedere Health Hub,Restaurant/Cafe/Canteen,Bexley,DA17 6FH,5,,0.1560828,51.4975837
+2026-11-11,removed,707013,The Cottage Nursery,Caring Premises,Bexley,DA1 3PY,5,,0.177693,51.447529
+2026-11-11,removed,1350263,The Pickford Nursery,Caring Premises,Bexley,DA7 4RW,5,,0.1335299,51.4677746
+2026-11-11,removed,1731808,Tok's Kitchen,Other catering premises,Bexley,DA17,5,,,
+2026-11-11,removed,1937255,Tray'D By LG,Retailers - other,Bexley,DA8,AwaitingInspection,,,
+2026-11-11,removed,1295625,Brasileiro,Retailers - other,Bromley,SE20 7PF,5,,-0.0509752,51.4135225
+2026-11-11,removed,1973010,Gluten Free Heaven by Anna,Other catering premises,Bromley,BR1,AwaitingInspection,,,
+2026-11-11,removed,1681505,JDN Simple Goods,Retailers - other,Bromley,BR4 0QR,5,,-0.0149397,51.3798967
+2026-11-11,removed,2009950,Joanna Churchill - Childminder,Caring Premises,Bromley,BR5 1BA,Exempt,,0.0691058,51.3835873
+2026-11-11,removed,2002087,MMM FRIED CHICKEN,Takeaway/sandwich shop,Bromley,BR2 8AT,AwaitingInspection,,0.0506591,51.3901614
+2026-11-11,removed,1979472,Matt’s Chops,Other catering premises,Bromley,BR3,AwaitingInspection,,,
+2026-11-11,removed,1772364,Mount Masala,Takeaway/sandwich shop,Bromley,BR3 4PT,5,,-0.0407671,51.4087569
+2026-11-11,removed,1422875,Nutritionist In Kitchen,Other catering premises,Bromley,BR6,5,,,
+2026-11-11,removed,1965013,The Dough One,Mobile caterer,Bromley,BR5,AwaitingInspection,,,
+2026-11-11,removed,1994410,Bubble Chaii Lab,Restaurant/Cafe/Canteen,Ealing,UB1 1SW,AwaitingInspection,,-0.376097,51.509725
+2026-11-11,removed,1085204,Singhsbury's Local,Retailers - other,Ealing,UB2 5JT,4,,-0.394157,51.498148
+2026-11-11,removed,1245551,Accra Palace,Restaurant/Cafe/Canteen,Hackney,E5 9JZ,5,,-0.0587626,51.5639211
+2026-11-11,removed,1824373,Authentic Lebanese Street Food,Other catering premises,Hackney,E2 8JL,5,,-0.0737951,51.5304829
+2026-11-11,removed,1060980,Chef Restaurant,Restaurant/Cafe/Canteen,Hackney,E2 8AS,4,,-0.0771,51.5358787
+2026-11-11,removed,1418288,Hackney Butchers,Restaurant/Cafe/Canteen,Hackney,E9 6AS,5,,-0.0413441,51.5488657
+2026-11-11,removed,1973620,Hungry Leaf,Restaurant/Cafe/Canteen,Hackney,EC2A 4RJ,AwaitingInspection,,,
+2026-11-11,removed,1845137,Palettes and Pastries,Restaurant/Cafe/Canteen,Hackney,EC2A 4RJ,5,,-0.0837463,51.5232091
+2026-11-11,removed,1903919,Piece of Velvet,Distributors/Transporters,Hackney,EC2A 4RJ,AwaitingInspection,,,
+2026-11-11,removed,1834899,Roll Boys,Restaurant/Cafe/Canteen,Hackney,E20 3BS,5,,-0.0222684,51.5475229
+2026-11-11,removed,1827806,SIDO The Braised Shop,Takeaway/sandwich shop,Hackney,E8 4AH,5,,-0.0754441,51.5457343
+2026-11-11,removed,1527066,Shuk London,Restaurant/Cafe/Canteen,Hackney,N16 8BH,5,,-0.0753677,51.5509667
+2026-11-11,removed,1747416,Spoon Fed,Other catering premises,Hackney,N4 2,5,,,
+2026-11-11,removed,1822633,St Dominic's Catholic Primary School,Mobile caterer,Hackney,E9 5SR,AwaitingInspection,,,
+2026-11-11,removed,1927872,St.Best Jamaican Cuisine,Restaurant/Cafe/Canteen,Hackney,EC2A 4RJ,4,,-0.0837463,51.5232091
+2026-11-11,removed,469132,The Baxters Court,Pub/bar/nightclub,Hackney,E8 1HE,5,,-0.054939,51.5453058
+2026-11-11,removed,470650,The White Hart,Pub/bar/nightclub,Hackney,N16 8EL,5,,-0.0744909,51.5590997
+2026-11-11,removed,1916804,Trini Vibez,Restaurant/Cafe/Canteen,Hackney,E8 4AU,5,,-0.0762997,51.5442556
+2026-11-11,removed,1487474,WAFFLE AND MORE,Restaurant/Cafe/Canteen,Hackney,E5 0NP,5,,-0.0524483,51.551964
+2026-11-11,removed,1743972,leons boujee bouyon,Takeaway/sandwich shop,Hackney,N4 2,5,,,
+2026-11-11,removed,1958487,Chez Ella London,Other catering premises,Kensington and Chelsea,W10,AwaitingInspection,,,
+2026-11-11,removed,1958491,Irish and Travellers in Prison,Retailers - other,Kensington and Chelsea,SW3,AwaitingInspection,,,
+2026-11-11,removed,1984479,JARASHI,Other catering premises,Kensington and Chelsea,SW3 3RA,AwaitingInspection,,-0.1675745,51.4914475
+2026-11-11,removed,1230204,Lunchtime Company Ltd,School/college/university,Kensington and Chelsea,W11 1RQ,5,,-0.210386,51.51493
+2026-11-11,removed,1958507,MECA&CO,Other catering premises,Kensington and Chelsea,SW10,AwaitingInspection,,,
+2026-11-11,removed,1707874,Princess Louise,Restaurant/Cafe/Canteen,Kensington and Chelsea,W10 6DH,5,,,
+2026-11-11,removed,1958432,Rejina Pyo,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,,-0.2089414,51.5218063
+2026-11-11,removed,1038701,Rosso,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6NG,5,,,
+2026-11-11,removed,333775,The Botanist,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW1W 8EE,5,,-0.156658,51.493118
+2026-11-11,removed,333486,The Marriott Hotel,Hotel/bed & breakfast/guest house,Kensington and Chelsea,SW5 0TH,5,,-0.189811,51.494426
+2026-11-11,removed,1975610,Velita Dairy,Manufacturers/packers,Kensington and Chelsea,SW5,AwaitingInspection,,,
+2026-11-11,removed,1975617,WINK WONK INVENTIONS,Other catering premises,Kensington and Chelsea,SW7,AwaitingInspection,,,
+2026-11-11,removed,1918626,Burgers Stop,Takeaway/sandwich shop,Kingston-Upon-Thames,KT1 2HG,AwaitingInspection,,-0.3036291,51.4011576
+2026-11-11,removed,1979590,Chennai Dosa,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7AQ,AwaitingInspection,,-0.2937366,51.3845572
+2026-11-11,removed,1424188,Vita Bio UK Ltd,Distributors/Transporters,Kingston-Upon-Thames,KT2 7PW,5,,-0.2873384,51.4142846
+2026-11-11,removed,640527,Busaba,Restaurant/Cafe/Canteen,Newham,E20 1GL,3,,-0.0077701,51.5422604
+2026-11-11,removed,1942337,Chaat Chaska,Restaurant/Cafe/Canteen,Newham,E7 8LL,1,,0.032959,51.541836
+2026-11-11,removed,860744,Martins Newsagent,Retailers - other,Newham,E7 0LW,3,,0.033833,51.553691
+2026-11-11,removed,1420021,Tasty Samosa,Other catering premises,Newham,E6 2SA,3,,0.061449,51.533704
+2026-11-11,removed,1991887,Uly Uly,Other catering premises,Newham,E20,AwaitingInspection,,,
+2026-11-11,removed,1867324,Unon,Restaurant/Cafe/Canteen,Newham,E6 3BA,1,,0.0527,51.532509
+2026-11-11,removed,1965575,CHAYAN,Restaurant/Cafe/Canteen,Sutton,SM1 1LF,5,,,
+2026-11-11,removed,1038631,Lakshans,Retailers - other,Sutton,SM3 9HH,4,,-0.212803,51.384367
+2026-11-11,removed,1550956,Noodle-R Umen,Other catering premises,Sutton,SM1,5,,,
+2026-11-11,removed,1416289,Slate & Grain Brasserie & Bar - Coffee Lounge,Restaurant/Cafe/Canteen,Sutton,SM6 7GD,5,,-0.1556927,51.3781936
+2026-11-11,removed,1979593,Stanley Grill,Takeaway/sandwich shop,Sutton,SM5 4LE,AwaitingInspection,,-0.162288,51.353326
+2026-11-11,removed,98824,A&O Shearman LLP,Other catering premises,Tower Hamlets,E1 6AD,5,,-0.0768489,51.5197878
+2026-11-11,removed,1790965,Bahara - Indian Kitchen and Culture,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6QL,4,,-0.0719794,51.5202284
+2026-11-11,removed,1707609,Bombay Boy,Mobile caterer,Tower Hamlets,E14 9SN,4,,-0.0201043,51.5013378
+2026-11-11,removed,2010498,Bowl n Soul,Mobile caterer,Tower Hamlets,E14,AwaitingInspection,,,
+2026-11-11,removed,112359,Britannia International Hotel Restaurant,Hotel/bed & breakfast/guest house,Tower Hamlets,E14 9SJ,5,,-0.023896,51.502413
+2026-11-11,removed,1765686,Bun House Disco,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6DG,5,,-0.0719359,51.5246074
+2026-11-11,removed,2011800,Casa Asado,Other catering premises,Tower Hamlets,E1 4UN,AwaitingInspection,,-0.0519644,51.5200777
+2026-11-11,removed,1776633,Catalina's,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9QG,5,,-0.0134339,51.5021916
+2026-11-11,removed,148734,Columbia Market Nursery School Kitchen,Caring Premises,Tower Hamlets,E2 7PG,5,,-0.074254,51.528403
+2026-11-11,removed,1783160,"Cookies and Waffles, Bubble Treat",Takeaway/sandwich shop,Tower Hamlets,E1 2PG,5,,-0.0542112,51.5119942
+2026-11-11,removed,1763078,Cucina Bettina,Other catering premises,Tower Hamlets,E2 6DG,5,,-0.0705865,51.5252144
+2026-11-11,removed,1990692,Dough Dough,Manufacturers/packers,Tower Hamlets,E2 0AA,3,,-0.0676888,51.525895
+2026-11-11,removed,1704606,Du'aa Diner,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1DB,5,,-0.060978,51.519183
+2026-11-11,removed,750428,Foody's,Other catering premises,Tower Hamlets,E14 5AA,5,,-0.019462,51.504964
+2026-11-11,removed,1784906,Four Folk,Other catering premises,Tower Hamlets,E2 9DT,5,,-0.0585796,51.5332981
+2026-11-11,removed,1749904,Gwei.lo (The Foreign Devil),Other catering premises,Tower Hamlets,E14,5,,,
+2026-11-11,removed,1784667,Indegno,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6EA,5,,-0.0767011,51.5203779
+2026-11-11,removed,1697581,Kween Kream,Restaurant/Cafe/Canteen,Tower Hamlets,E2 9RF,5,,-0.056789,51.529887
+2026-11-11,removed,1737650,"MAE Canary Wharf, Mthr Canary Wharf",Restaurant/Cafe/Canteen,Tower Hamlets,E14 9YF,5,,-0.014845,51.4975752
+2026-11-11,removed,1675209,"Mamma Grazia Street Food, The Pirate Hub",Restaurant/Cafe/Canteen,Tower Hamlets,E3 2NT,5,,-0.0212193,51.5396436
+2026-11-11,removed,1764374,Meltdown Cheeseburgers,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9QG,5,,-0.0134339,51.5021916
+2026-11-11,removed,1893586,Noodle Bar,Mobile caterer,Tower Hamlets,E14 9SH,AwaitingInspection,,-0.0166099,51.5007256
+2026-11-11,removed,807336,Notes: Music & Coffee Ltd,Other catering premises,Tower Hamlets,E14 0JP,5,,0.000864,51.516021
+2026-11-11,removed,1002230,Oliver's,Takeaway/sandwich shop,Tower Hamlets,E1 6BD,5,,-0.073921,51.517499
+2026-11-11,removed,1064792,Pangea,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6LY,5,,-0.074131,51.5184292
+2026-11-11,removed,1863399,Quantapulse Ltd,Retailers - other,Tower Hamlets,E3 3LB,AwaitingInspection,,-0.01014864,51.52135498
+2026-11-11,removed,93046,Queen Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E1 4BU,5,,-0.044134,51.524757
+2026-11-11,removed,2006883,Royal Asia,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9RU,AwaitingInspection,,-0.0181415,51.5012911
+2026-11-11,removed,1676184,Sexy Buns,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5HD,5,,-0.0202962,51.5057611
+2026-11-11,removed,1852811,Spice,Takeaway/sandwich shop,Tower Hamlets,E14 0QX,AwaitingInspection,,-0.0097112,51.5128842
+2026-11-11,removed,1988769,Taste of Snow,Mobile caterer,Tower Hamlets,E14 3DU,AwaitingInspection,,-0.0054216,51.4919925
+2026-11-11,removed,2006881,Tattu Canary Wharf,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,AwaitingInspection,,-0.0143175,51.5030789
+2026-11-11,removed,1775891,The Bagel Guys,Takeaway/sandwich shop,Tower Hamlets,E14 5AB,5,,-0.0202962,51.5057611
+2026-11-11,removed,1495336,Tian Tian Oriental Store,Retailers - other,Tower Hamlets,E14 9JP,5,,-0.0195611,51.4978019
