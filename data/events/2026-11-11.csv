@@ -1,0 +1,39 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-11,rating_changed,1876524,MedFlavors,Other catering premises,Barnet,NW4,AwaitingInspection,4,,
+2026-11-11,rating_changed,1921467,Penang Tiffin,Other catering premises,Barnet,NW9,AwaitingInspection,4,,
+2026-11-11,rating_changed,2009338,CAMDEN TANDOORI,Restaurant/Cafe/Canteen,Camden,NW1 9EE,AwaitingInspection,2,-0.1379593,51.5420138
+2026-11-11,rating_changed,1751424,Fig and Walnut Mediterranean Kitchen/Bar,Restaurant/Cafe/Canteen,Camden,WC1N 1AP,AwaitingInspection,4,-0.1255826,51.5255107
+2026-11-11,rating_changed,998780,Kimchee,Restaurant/Cafe/Canteen,Camden,N1C 4AG,1,2,-0.125043004751205,51.5334815979004
+2026-11-11,rating_changed,2006915,Acton Charcoal Grill,Restaurant/Cafe/Canteen,Ealing,W3 6NG,AwaitingInspection,3,-0.264527,51.5064
+2026-11-11,rating_changed,1182081,Oscar's Off Licence,Retailers - other,Ealing,UB5 6LN,4,3,-0.3936954,51.5357212
+2026-11-11,rating_changed,695207,DUC TIEN CASH AND CARRY LTD,Retailers - supermarkets/hypermarkets,Greenwich,SE7 7SN,4,0,0.0291923,51.4912908
+2026-11-11,rating_changed,1980683,Loves kitchen,Restaurant/Cafe/Canteen,Hackney,N1 7QP,AwaitingInspection,1,-0.0885331,51.5311019
+2026-11-11,rating_changed,1803256,Chatkaaz,Restaurant/Cafe/Canteen,Harrow,HA2 9TL,3,1,-0.3704732,51.5746796
+2026-11-11,rating_changed,1814683,GOKUL SWEETS & SAVOURIES LTD,Mobile caterer,Harrow,HA5,2,0,,
+2026-11-11,rating_changed,1637050,The Aviary Ltd,Restaurant/Cafe/Canteen,Havering,RM11 3XS,5,4,0.221458,51.561845
+2026-11-11,rating_changed,910261,London Superstore,Retailers - other,Hillingdon,UB8 3JD,1,3,-0.445851,51.521774
+2026-11-11,rating_changed,417674,Candid Gallery Cafe,Restaurant/Cafe/Canteen,Islington,EC1V 1NQ,2,4,-0.10527,51.53217
+2026-11-11,rating_changed,1865817,Lupa,Restaurant/Cafe/Canteen,Islington,N5 1UA,AwaitingInspection,4,-0.0982742,51.5561339
+2026-11-11,rating_changed,583129,OA Com Tam,Takeaway/sandwich shop,Islington,N7 8DA,4,3,-0.111962,51.5527042
+2026-11-11,rating_changed,1703530,Anaaya Sri Lankan \& Indian Restaurant,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 7BE,3,0,-0.2868274,51.3825415
+2026-11-11,rating_changed,2006230,Damyang Ltd T/A Treestone BBQ Restaurant,Mobile caterer,Kingston-Upon-Thames,"",AwaitingInspection,4,,
+2026-11-11,rating_changed,483414,Costa Coffee,Restaurant/Cafe/Canteen,Lambeth,SW12 9DY,5,4,-0.147199,51.452458
+2026-11-11,rating_changed,483087,Henry Cavendish Primary School,School/college/university,Lambeth,SW16 1AU,5,4,,
+2026-11-11,rating_changed,1781816,Tennessee Chicken,Takeaway/sandwich shop,Lambeth,SW8 3JH,4,3,-0.14843,51.466496
+2026-11-11,rating_changed,483975,The King & Co.,Pub/bar/nightclub,Lambeth,SW4 7BZ,3,2,-0.134028,51.459191
+2026-11-11,rating_changed,1929850,Jack's Kitchen,Restaurant/Cafe/Canteen,Lewisham,SE13 5PT,AwaitingInspection,4,-0.006552,51.461356
+2026-11-11,rating_changed,864048,Boleyn Supermarket,Retailers - other,Newham,E6 3BP,1,3,0.040326,51.530503
+2026-11-11,rating_changed,443814,Brilliant Restaurant Cafe,Restaurant/Cafe/Canteen,Redbridge,IG3 9PL,1,4,0.109579,51.558343
+2026-11-11,rating_changed,1574484,Bruce's Butchers,Retailers - other,Richmond-Upon-Thames,TW2 5AT,4,3,-0.361344,51.4395587
+2026-11-11,rating_changed,1960414,Blackfinger coffee roasters ltd,Restaurant/Cafe/Canteen,Southwark,SE5 9JN,AwaitingInspection,2,-0.0963047,51.4750957
+2026-11-11,rating_changed,363670,The co-operative food,Retailers - supermarkets/hypermarkets,Southwark,SE5 8RZ,5,4,-0.093556,51.473198
+2026-11-11,rating_changed,98164,Bon Appetit,Restaurant/Cafe/Canteen,Tower Hamlets,E2 0PG,5,4,-0.049399,51.528388
+2026-11-11,rating_changed,1907074,Yulin Chinese Food,Other catering premises,Tower Hamlets,E2 0EJ,AwaitingInspection,1,-0.0563795,51.5263914
+2026-11-11,rating_changed,515024,HR Parsons,Retailers - other,Waltham Forest,E17 7BX,3,1,-0.0264148,51.5835522
+2026-11-11,rating_changed,1930001,Juniper Pursuits at Roger Ascham Primary School,School/college/university,Waltham Forest,E17 5HU,AwaitingInspection,4,-0.0268941,51.5981636
+2026-11-11,rating_changed,916927,Local Honey Man,Manufacturers/packers,Waltham Forest,E17 6BH,5,1,-0.038748,51.5918159
+2026-11-11,rating_changed,1908982,The Sona Space,Restaurant/Cafe/Canteen,Waltham Forest,E17 9PX,AwaitingInspection,1,-0.0186496,51.580211
+2026-11-11,rating_changed,1571689,Mirch Masala,Restaurant/Cafe/Canteen,Wandsworth,SW17 7TG,3,2,-0.1651544,51.43051
+2026-11-11,rating_changed,412642,Dumplings Legend,Restaurant/Cafe/Canteen,Westminster,W1D 6JE,1,3,-0.1315677,51.5118135
+2026-11-11,rating_changed,1214663,Quo Vadis Resturant,Restaurant/Cafe/Canteen,Westminster,W1D 3RA,5,4,-0.1325852,51.5140689
+2026-11-11,rating_changed,1206513,Suvlaki,Restaurant/Cafe/Canteen,Westminster,W1D 3AL,5,3,-0.1314104,51.5142481
