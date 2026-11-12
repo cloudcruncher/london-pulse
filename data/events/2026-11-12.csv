@@ -1,4 +1,6 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-12,new,1640830,SUSHI POINT & SUSHI-MI,Takeaway/sandwich shop,Camden,NW1 2PB,,5,,
+2026-11-12,new,2014040,The Wet Fish Cafe,Restaurant/Cafe/Canteen,Camden,NW6 1LG,,AwaitingInspection,,
 2026-11-12,new,1933981,Mattcup Roastery,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W12 7LH,,AwaitingInspection,,
 2026-11-12,new,2013998,ReMa Dumplings,Takeaway/sandwich shop,Hammersmith and Fulham,SW6 1NN,,5,,
 2026-11-12,new,2013725,1st Stepping Stones Nursery at Coppermill,Caring Premises,Waltham Forest,E17 6PB,,AwaitingInspection,,
@@ -35,8 +37,15 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,rating_changed,1762896,Sundaes Gelato,Other catering premises,Barnet,N3 2BJ,5,4,-0.1922801,51.6020319
 2026-11-12,rating_changed,329579,St Margaret's Residential Home,Caring Premises,Bexley,DA15 7HR,5,4,0.096119,51.43148
 2026-11-12,rating_changed,1644931,The Spritz Bar,Mobile caterer,Bromley,BR5,5,3,,
+2026-11-12,rating_changed,2009342,Alleyns Hampstead Senior School,Restaurant/Cafe/Canteen,Camden,NW3 5UD,AwaitingInspection,5,,
+2026-11-12,rating_changed,1975778,Apollo Brunswick,Restaurant/Cafe/Canteen,Camden,WC1N 1AW,AwaitingInspection,4,,
 2026-11-12,rating_changed,1960306,Crepe Bakery,Retailers - other,Camden,NW1 8AA,AwaitingInspection,2,,
+2026-11-12,rating_changed,2009307,Gordon Square Cafe,Restaurant/Cafe/Canteen,Camden,WC1H 0PN,AwaitingInspection,5,,
+2026-11-12,rating_changed,2009297,HOTEL CHOCOLAT LTD,Retailers - other,Camden,WC2H 9PA,AwaitingInspection,5,,
 2026-11-12,rating_changed,2009317,News food and wine,Retailers - other,Camden,NW5 1LJ,AwaitingInspection,1,-0.1464643,51.5562939
+2026-11-12,rating_changed,2009305,The Argyle,Restaurant/Cafe/Canteen,Camden,EC1N 8PQ,AwaitingInspection,5,,
+2026-11-12,rating_changed,1784215,West Hampstead Primary School,School/college/university,Camden,NW6 1QL,4,5,,
+2026-11-12,rating_changed,1960283,YARZIN-SELLA EUROPE LTD,Restaurant/Cafe/Canteen,Camden,NW1 3AR,AwaitingInspection,5,,
 2026-11-12,rating_changed,1981937,Aramark @ Drayton Manor High School,School/college/university,Ealing,W7 1EU,AwaitingInspection,1,-0.335752,51.515921
 2026-11-12,rating_changed,1172785,Grill Shack & Tiki Bar,Restaurant/Cafe/Canteen,Ealing,W3 7SH,0,1,-0.247043,51.506509
 2026-11-12,rating_changed,1985658,Lianggee,Restaurant/Cafe/Canteen,Ealing,W5 2PB,AwaitingInspection,3,-0.301791,51.516046
@@ -86,6 +95,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,rating_changed,414462,Barrafina,Restaurant/Cafe/Canteen,Westminster,WC2N 4HZ,4,5,,
 2026-11-12,rating_changed,414393,Brydges Place,Restaurant/Cafe/Canteen,Westminster,WC2N 4HP,4,5,,
 2026-11-12,rating_changed,412362,Cali Cafe,Restaurant/Cafe/Canteen,Westminster,NW8 8ES,1,4,,
+2026-11-12,rating_changed,410994,Clos Maggiore,Restaurant/Cafe/Canteen,Westminster,WC2E 8JD,1,AwaitingPublication,-0.1247702,51.5116961
 2026-11-12,rating_changed,413359,Continental Foods,Retailers - other,Westminster,W2 3PX,AwaitingInspection,1,,
 2026-11-12,rating_changed,413714,Cumberland Food And Wine,Retailers - other,Westminster,W1H 7LU,2,5,,
 2026-11-12,rating_changed,1991837,Dari's Dinners,Other catering premises,Westminster,W9 3,AwaitingInspection,5,,
@@ -103,6 +113,38 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,rating_changed,2000248,Steytler and co,Other catering premises,Westminster,W9 3,Exempt,5,,
 2026-11-12,rating_changed,2006610,Tokyo Onigiri,Restaurant/Cafe/Canteen,Westminster,SW1Y 4EA,AwaitingInspection,5,,
 2026-11-12,rating_changed,428139,Zizzi Restaurant,Restaurant/Cafe/Canteen,Westminster,WC2R 0DE,AwaitingInspection,5,,
+2026-11-12,removed,1803441,Alquds Falfil,Takeaway/sandwich shop,Camden,NW6 4JP,4,,-0.1979721,51.5422314
+2026-11-12,removed,1803442,Alquds Supermarket,Retailers - supermarkets/hypermarkets,Camden,NW6 4JP,3,,-0.1979721,51.5422314
+2026-11-12,removed,1942051,Alquds Supermarket,Retailers - supermarkets/hypermarkets,Camden,NW6 4JP,AwaitingInspection,,-0.1979721,51.5422314
+2026-11-12,removed,1398314,Americano,Takeaway/sandwich shop,Camden,NW1 8NZ,5,,,
+2026-11-12,removed,1567469,Argentinian Grill,Restaurant/Cafe/Canteen,Camden,NW1 8JZ,3,,-0.1447754,51.541716
+2026-11-12,removed,1420398,BAOZIINN,Takeaway/sandwich shop,Camden,NW1 8JZ,4,,,
+2026-11-12,removed,1471695,CACTUS NOODLE HOUSE,Restaurant/Cafe/Canteen,Camden,NW1 8JZ,4,,-0.1447754,51.541716
+2026-11-12,removed,1417940,Chingon Tacos,Takeaway/sandwich shop,Camden,NW1 8JZ,4,,-0.1447754,51.541716
+2026-11-12,removed,1708608,DAIFUKU BUBBLE TEA,Restaurant/Cafe/Canteen,Camden,NW6 4JD,3,,-0.1955577,51.5401979
+2026-11-12,removed,1722402,ELIA - GREEK STREET FOOD,Takeaway/sandwich shop,Camden,NW1 8JZ,4,,-0.1447754,51.541716
+2026-11-12,removed,1813673,Falacheese,Takeaway/sandwich shop,Camden,NW1 8JZ,4,,-0.1447754,51.541716
+2026-11-12,removed,1590006,For Fish Sake Ltd,Takeaway/sandwich shop,Camden,NW1 8RP,4,,-0.1453276,51.541684
+2026-11-12,removed,1891430,Grounded Burger Smash & Flame,Restaurant/Cafe/Canteen,Camden,NW1 8NH,2,,-0.1425385,51.5397033
+2026-11-12,removed,1403609,HOTBOX,Restaurant/Cafe/Canteen,Camden,NW1 8NZ,4,,-0.1447754,51.541716
+2026-11-12,removed,1411774,I LOVE BURGER,Retailers - other,Camden,NW1 8JZ,4,,,
+2026-11-12,removed,1417967,JUICE JUNKIEZ,Restaurant/Cafe/Canteen,Camden,NW1 8AA,5,,,
+2026-11-12,removed,1398311,KALAMAKI STREET GREEK,Restaurant/Cafe/Canteen,Camden,NW1 8JZ,5,,,
+2026-11-12,removed,1471690,KALEIDO,Takeaway/sandwich shop,Camden,N1C 4QL,5,,-0.1261217,51.5314298
+2026-11-12,removed,1653927,KUMBA,Retailers - other,Camden,WC2B 5BB,AwaitingInspection,,-0.1214877,51.5154655
+2026-11-12,removed,1945685,LAZIZ WRAP,Takeaway/sandwich shop,Camden,NW6 4JP,4,,-0.1979721,51.5422314
+2026-11-12,removed,1567453,La Galette,Takeaway/sandwich shop,Camden,NW1 8JZ,3,,-0.1447754,51.541716
+2026-11-12,removed,1390619,NANNY BILL'S,Restaurant/Cafe/Canteen,Camden,NW1 8BG,5,,-0.148434,51.5429619
+2026-11-12,removed,1278189,PRTZL LTD,Takeaway/sandwich shop,Camden,NW1 7BT,4,,-0.143289998173714,51.539234161377
+2026-11-12,removed,1357567,REMOLI,Takeaway/sandwich shop,Camden,N1C 4QP,5,,-0.1261217,51.5314298
+2026-11-12,removed,1934413,ROTI & BREW CAMDEN MARKET,Takeaway/sandwich shop,Camden,NW1 8JZ,0,,,
+2026-11-12,removed,1403597,SUGO HOLDINGS LIMITED,Restaurant/Cafe/Canteen,Camden,NW1 8NZ,5,,-0.1426491,51.5419442
+2026-11-12,removed,1539157,Streat Latin Arepas,Takeaway/sandwich shop,Camden,NW1 8JZ,5,,-0.1447754,51.541716
+2026-11-12,removed,1403591,TO HOME FROM LONDON,Restaurant/Cafe/Canteen,Camden,NW1 8NZ,5,,-0.1448412,51.5419429
+2026-11-12,removed,1251612,The Chesse Wheel,Takeaway/sandwich shop,Camden,NW1 8QX,3,,-0.1442864,51.5417543
+2026-11-12,removed,426041,The Chin Chin Club Ltd,Restaurant/Cafe/Canteen,Camden,NW1 8AF,3,,-0.146625995635986,51.541332244873
+2026-11-12,removed,2009298,The Gym Group London Euston Road,Retailers - other,Camden,NW1 3AN,AwaitingInspection,,,
+2026-11-12,removed,424666,The Wet Fish Cafe,Restaurant/Cafe/Canteen,Camden,NW6 1LG,0,,-0.1913729,51.5511764
 2026-11-12,removed,515100,Avenue Food & Wine,Retailers - other,Waltham Forest,E4 9LB,1,,0.0001735,51.6088739
 2026-11-12,removed,1933814,Fresh Fruits & Vegetables,Retailers - other,Waltham Forest,E11 4QS,0,,,
 2026-11-12,removed,2009240,Grove Green Supplements,Retailers - other,Waltham Forest,E11 4EA,AwaitingInspection,,0.0031718,51.5647329
@@ -114,8 +156,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,removed,1601446,Zaralicious,Takeaway/sandwich shop,Waltham Forest,E17 3HX,5,,-0.0044839,51.5886035
 2026-11-12,removed,1602060,BAHRI Moss,Retailers - other,Westminster,SW1V,5,,,
 2026-11-12,removed,412217,Be At One,Restaurant/Cafe/Canteen,Westminster,WC2E 7DA,5,,-0.1201987,51.5117668
-2026-11-12,removed,1036535,Benugo,Other catering premises,Westminster,SW1H 9EX,5,,-0.1359099,51.4990051
 2026-11-12,removed,412841,Benugo,Restaurant/Cafe/Canteen,Westminster,W1J 5HN,4,,-0.1471867,51.5069265
+2026-11-12,removed,1036535,Benugo,Other catering premises,Westminster,SW1H 9EX,5,,-0.1359099,51.4990051
 2026-11-12,removed,1502823,Boshang,Retailers - other,Westminster,W1U 6RT,5,,-0.1574972,51.5213873
 2026-11-12,removed,414542,Bridges,Retailers - other,Westminster,SW1X 7QA,5,,-0.1629042,51.5009418
 2026-11-12,removed,1711402,Candy Land,Retailers - other,Westminster,W2 1,5,,,
