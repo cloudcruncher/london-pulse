@@ -1,4 +1,34 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-12,new,1933981,Mattcup Roastery,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W12 7LH,,AwaitingInspection,,
+2026-11-12,new,2013998,ReMa Dumplings,Takeaway/sandwich shop,Hammersmith and Fulham,SW6 1NN,,5,,
+2026-11-12,new,2013725,1st Stepping Stones Nursery at Coppermill,Caring Premises,Waltham Forest,E17 6PB,,AwaitingInspection,,
+2026-11-12,new,2013727,Accent Catering at Leytonstone Secondary School,School/college/university,Waltham Forest,E11 1JD,,AwaitingInspection,,
+2026-11-12,new,1657515,Bev's Kitchen All Homemade,Retailers - other,Waltham Forest,E10,,4,,
+2026-11-12,new,2013726,Crop & Cleaver,Retailers - other,Waltham Forest,E10 6JP,,AwaitingInspection,,
+2026-11-12,new,1101892,Hanoi Ca Phe,Other catering premises,Waltham Forest,E10 7BT,,5,,
+2026-11-12,new,2013729,Jackson and Wilder,Retailers - other,Waltham Forest,E17 3LX,,AwaitingInspection,,
+2026-11-12,new,2013728,Juniper Pursuits at Henry Maynard Junior School,School/college/university,Waltham Forest,E17 9LT,,AwaitingInspection,,
+2026-11-12,new,2013723,Lakers Chicken (Walthamstow),Restaurant/Cafe/Canteen,Waltham Forest,E17 3AX,,AwaitingInspection,,
+2026-11-12,new,2013724,Mill Lane Local Express,Retailers - other,Waltham Forest,IG8 0UN,,AwaitingInspection,,
+2026-11-12,new,1613500,Moroccan Corner,Restaurant/Cafe/Canteen,Waltham Forest,E17 7LD,,5,,
+2026-11-12,new,2013731,Rodi Express,Retailers - other,Waltham Forest,E17 8PL,,AwaitingInspection,,
+2026-11-12,new,654309,Royal British Legion Club,Pub/bar/nightclub,Waltham Forest,E4 8HW,,5,,
+2026-11-12,new,1613495,Tesco,Retailers - other,Waltham Forest,E17 6ZJ,,5,,
+2026-11-12,new,1804592,The European,Pub/bar/nightclub,Waltham Forest,E10 7EQ,,0,,
+2026-11-12,new,2013730,Valley House Food and Wine/Valley Food Hub,Retailers - other,Waltham Forest,E4 7PA,,AwaitingInspection,,
+2026-11-12,new,1991836,Bartlett Mitchell Ltd c/o Colliers International,Other catering premises,Westminster,W1U 1FD,,AwaitingInspection,,
+2026-11-12,new,2001323,ERGON HOUSE LONDON,Hotel/bed & breakfast/guest house,Westminster,WC2E 8HN,,AwaitingInspection,,
+2026-11-12,new,2013695,Gucci,Retailers - other,Westminster,W1S 2TR,,Exempt,,
+2026-11-12,new,2000257,Hide and Greek,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,,AwaitingInspection,,
+2026-11-12,new,2000229,Jersey Mike's,Restaurant/Cafe/Canteen,Westminster,W1F 7TA,,AwaitingInspection,,
+2026-11-12,new,2011083,Kiss the Hippo,Restaurant/Cafe/Canteen,Westminster,W1U 3QR,,AwaitingInspection,,
+2026-11-12,new,2000265,Mello,Takeaway/sandwich shop,Westminster,W1A 1AB,,AwaitingInspection,,
+2026-11-12,new,2008924,Miles of Flavours,Manufacturers/packers,Westminster,NW1 4NU,,AwaitingInspection,,
+2026-11-12,new,2000237,Nebbia e Luce Ltd,Restaurant/Cafe/Canteen,Westminster,W1T 4JH,,AwaitingInspection,,
+2026-11-12,new,1864500,Pretty. Bakes . By Tasha,Other catering premises,Westminster,W9 3,,5,,
+2026-11-12,new,2001316,Shifa alyemen,Retailers - other,Westminster,W2 1DW,,AwaitingInspection,,
+2026-11-12,new,2000253,Sit with us,Restaurant/Cafe/Canteen,Westminster,W2 5BH,,AwaitingInspection,,
+2026-11-12,new,444719,The Lansdowne Club,Restaurant/Cafe/Canteen,Westminster,W1J 5JD,,5,,
 2026-11-12,rating_changed,810631,BG Zakuska,Retailers - other,Barking and Dagenham,IG11 8RT,1,4,0.083067,51.540427
 2026-11-12,rating_changed,1981324,Chek Chek Plug Uk,Other catering premises,Barking and Dagenham,RM8 2UA,AwaitingInspection,2,0.117096,51.553684
 2026-11-12,rating_changed,1027086,Japan Centre Express,Retailers - other,Barnet,N12 0DY,5,4,-0.175544,51.60848
@@ -19,6 +49,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,rating_changed,1405719,Lighthouse project,Restaurant/Cafe/Canteen,Hackney,E8 1FX,AwaitingInspection,3,-0.0541528,51.5490459
 2026-11-12,rating_changed,2002124,Urban Social Coffee,Restaurant/Cafe/Canteen,Hackney,E8 1HA,AwaitingInspection,4,-0.054897,51.546536
 2026-11-12,rating_changed,2002105,clockhouse childcare,Caring Premises,Hackney,N16 5LG,AwaitingInspection,4,-0.0729049,51.5741093
+2026-11-12,rating_changed,1012594,Pappa Ciccia Catering,Manufacturers/packers,Hammersmith and Fulham,SW6 5RG,4,5,,
 2026-11-12,rating_changed,1781177,Taj Al Sham Restaurant,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W3 7DA,4,3,-0.2488639,51.5144684
 2026-11-12,rating_changed,345717,The Pantry At Old Oak Primary School,School/college/university,Hammersmith and Fulham,W12 0AS,5,4,-0.246575,51.519442
 2026-11-12,rating_changed,1700665,Lunchtime Company Ltd @,School/college/university,Haringey,N8 0NU,5,3,-0.106201,51.585729
@@ -38,9 +69,65 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-12,rating_changed,92624,City Supermarket,Retailers - other,Tower Hamlets,E1 4UN,4,1,-0.0510454,51.5206555
 2026-11-12,rating_changed,42234,London Hospital Tavern,Pub/bar/nightclub,Tower Hamlets,E1 1BJ,5,1,-0.058925,51.5190866
 2026-11-12,rating_changed,1707603,PFC,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1BJ,4,1,-0.0566763,51.5194271
+2026-11-12,rating_changed,514237,Asda,Retailers - supermarkets/hypermarkets,Waltham Forest,E10 5NH,4,5,,
+2026-11-12,rating_changed,1930015,Butterfly17,Retailers - other,Waltham Forest,E4 7NB,AwaitingInspection,5,,
 2026-11-12,rating_changed,860598,Candan Food Centre,Retailers - other,Waltham Forest,E10 7HU,2,0,-0.02417,51.57051
 2026-11-12,rating_changed,1984332,Cannelle,Restaurant/Cafe/Canteen,Waltham Forest,E10 7HU,AwaitingInspection,4,-0.0236209,51.5707448
+2026-11-12,rating_changed,1357803,Figo Leyton,Restaurant/Cafe/Canteen,Waltham Forest,E10 5PW,4,5,,
+2026-11-12,rating_changed,1929995,Juniper Pursuits at Handsworth Primary School,School/college/university,Waltham Forest,E4 9PJ,AwaitingInspection,5,,
+2026-11-12,rating_changed,1930010,Juniper Pursuits at Newport Primary School,School/college/university,Waltham Forest,E10 6PJ,AwaitingInspection,5,,
 2026-11-12,rating_changed,1723360,Karya Bistro,Restaurant/Cafe/Canteen,Waltham Forest,E17 3HX,5,4,-0.0039128,51.5874698
+2026-11-12,rating_changed,1975807,Left and Right Play Cafe,Restaurant/Cafe/Canteen,Waltham Forest,E4 6LQ,AwaitingInspection,5,,
+2026-11-12,rating_changed,1989139,Lotus and Lantern,Restaurant/Cafe/Canteen,Waltham Forest,E4 8DB,AwaitingInspection,5,,
 2026-11-12,rating_changed,515139,Orient Supermarket,Retailers - other,Waltham Forest,E10 5PS,3,0,-0.0065329,51.5582617
+2026-11-12,rating_changed,916934,Uffizzi Pizzeria and Pasta Bar,Restaurant/Cafe/Canteen,Waltham Forest,E17 9DZ,0,4,,
 2026-11-12,rating_changed,1986210,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 1DA,AwaitingInspection,4,-0.1120007,51.5134517
 2026-11-12,rating_changed,1986219,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 0AP,AwaitingInspection,4,-0.1192796,51.5109877
+2026-11-12,rating_changed,414462,Barrafina,Restaurant/Cafe/Canteen,Westminster,WC2N 4HZ,4,5,,
+2026-11-12,rating_changed,414393,Brydges Place,Restaurant/Cafe/Canteen,Westminster,WC2N 4HP,4,5,,
+2026-11-12,rating_changed,412362,Cali Cafe,Restaurant/Cafe/Canteen,Westminster,NW8 8ES,1,4,,
+2026-11-12,rating_changed,413359,Continental Foods,Retailers - other,Westminster,W2 3PX,AwaitingInspection,1,,
+2026-11-12,rating_changed,413714,Cumberland Food And Wine,Retailers - other,Westminster,W1H 7LU,2,5,,
+2026-11-12,rating_changed,1991837,Dari's Dinners,Other catering premises,Westminster,W9 3,AwaitingInspection,5,,
+2026-11-12,rating_changed,412049,Domino's Pizza,Restaurant/Cafe/Canteen,Westminster,W2 5QL,4,AwaitingInspection,,
+2026-11-12,rating_changed,839683,Greggs,Takeaway/sandwich shop,Westminster,SW1H 0PH,5,AwaitingInspection,,
+2026-11-12,rating_changed,1375989,Hongdae Pocha,Restaurant/Cafe/Canteen,Westminster,W1D 5AJ,4,5,,
+2026-11-12,rating_changed,2001315,I AM A COFFEEHOLIC LTD,Restaurant/Cafe/Canteen,Westminster,W9 3EF,AwaitingInspection,AwaitingPublication,-0.2039707,51.5327283
+2026-11-12,rating_changed,2000230,London Laban,Takeaway/sandwich shop,Westminster,W2 1DH,AwaitingInspection,5,,
+2026-11-12,rating_changed,2000241,Market Place Victoria,Pub/bar/nightclub,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-11-12,rating_changed,2000245,Mother Focaccia,Takeaway/sandwich shop,Westminster,NW1,AwaitingInspection,5,,
+2026-11-12,rating_changed,1955289,Nessa,Restaurant/Cafe/Canteen,Westminster,W1B 5LR,3,5,,
+2026-11-12,rating_changed,1357880,Nomad Hotel,Hotel/bed & breakfast/guest house,Westminster,WC2E 7AW,4,5,,
+2026-11-12,rating_changed,412105,Peggy Porschen Cakes,Restaurant/Cafe/Canteen,Westminster,SW1W 9QQ,4,5,,
+2026-11-12,rating_changed,427808,Pret A Manger,Restaurant/Cafe/Canteen,Westminster,W1J 9ED,AwaitingInspection,5,,
+2026-11-12,rating_changed,2000248,Steytler and co,Other catering premises,Westminster,W9 3,Exempt,5,,
+2026-11-12,rating_changed,2006610,Tokyo Onigiri,Restaurant/Cafe/Canteen,Westminster,SW1Y 4EA,AwaitingInspection,5,,
+2026-11-12,rating_changed,428139,Zizzi Restaurant,Restaurant/Cafe/Canteen,Westminster,WC2R 0DE,AwaitingInspection,5,,
+2026-11-12,removed,515100,Avenue Food & Wine,Retailers - other,Waltham Forest,E4 9LB,1,,0.0001735,51.6088739
+2026-11-12,removed,1933814,Fresh Fruits & Vegetables,Retailers - other,Waltham Forest,E11 4QS,0,,,
+2026-11-12,removed,2009240,Grove Green Supplements,Retailers - other,Waltham Forest,E11 4EA,AwaitingInspection,,0.0031718,51.5647329
+2026-11-12,removed,1838466,Naked Chips,Takeaway/sandwich shop,Waltham Forest,E17 7JR,3,,-0.0241228,51.5838104
+2026-11-12,removed,1071114,Rodi Supermarket,Retailers - other,Waltham Forest,E17 8PL,1,,-0.0265131,51.5772771
+2026-11-12,removed,1888462,Taste Kitchen,Takeaway/sandwich shop,Waltham Forest,E17 7JR,4,,-0.0241228,51.5838104
+2026-11-12,removed,1726658,Valley House Food & Wine,Retailers - other,Waltham Forest,E4 7PA,3,,-0.0129265,51.6366313
+2026-11-12,removed,515605,WF Catering at Henry Maynard Junior School,School/college/university,Waltham Forest,E17 9LT,5,,,
+2026-11-12,removed,1601446,Zaralicious,Takeaway/sandwich shop,Waltham Forest,E17 3HX,5,,-0.0044839,51.5886035
+2026-11-12,removed,1602060,BAHRI Moss,Retailers - other,Westminster,SW1V,5,,,
+2026-11-12,removed,412217,Be At One,Restaurant/Cafe/Canteen,Westminster,WC2E 7DA,5,,-0.1201987,51.5117668
+2026-11-12,removed,1036535,Benugo,Other catering premises,Westminster,SW1H 9EX,5,,-0.1359099,51.4990051
+2026-11-12,removed,412841,Benugo,Restaurant/Cafe/Canteen,Westminster,W1J 5HN,4,,-0.1471867,51.5069265
+2026-11-12,removed,1502823,Boshang,Retailers - other,Westminster,W1U 6RT,5,,-0.1574972,51.5213873
+2026-11-12,removed,414542,Bridges,Retailers - other,Westminster,SW1X 7QA,5,,-0.1629042,51.5009418
+2026-11-12,removed,1711402,Candy Land,Retailers - other,Westminster,W2 1,5,,,
+2026-11-12,removed,1221038,Caravan Coffee Roasters,Restaurant/Cafe/Canteen,Westminster,WC2R 0EX,5,,-0.1208694,51.5105275
+2026-11-12,removed,412239,China White,Restaurant/Cafe/Canteen,Westminster,W1W 8HF,5,,-0.138241,51.5160383
+2026-11-12,removed,1413619,Convenience Local,Retailers - other,Westminster,W1H 6BS,5,,-0.1563059,51.5169801
+2026-11-12,removed,1036540,Crosstown,Takeaway/sandwich shop,Westminster,W1U 1BH,5,,-0.151354,51.5154004
+2026-11-12,removed,1366261,Goodness In A Box,Other catering premises,Westminster,NW8,5,,,
+2026-11-12,removed,1587813,Home Of Tiramisu,Other catering premises,Westminster,W1H,4,,,
+2026-11-12,removed,1396534,House Of Cinn,Manufacturers/packers,Westminster,W1H 1NT,4,,-0.16356,51.5204572
+2026-11-12,removed,1499830,Kenafeh Cupcake,Other catering premises,Westminster,SW1W,4,,,
+2026-11-12,removed,1650761,Linekela Confections,Other catering premises,Westminster,W10,4,,,
+2026-11-12,removed,1002126,Notes Coffee,Restaurant/Cafe/Canteen,Westminster,W1C 2JS,5,,-0.1495888,51.5137898
+2026-11-12,removed,1886366,Queen?s park Food Bank,Distributors/Transporters,Westminster,W10,Exempt,,,
+2026-11-12,removed,1413624,Seven Cookies,Other catering premises,Westminster,WC2H,5,,,
