@@ -1,0 +1,46 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-12,rating_changed,810631,BG Zakuska,Retailers - other,Barking and Dagenham,IG11 8RT,1,4,0.083067,51.540427
+2026-11-12,rating_changed,1981324,Chek Chek Plug Uk,Other catering premises,Barking and Dagenham,RM8 2UA,AwaitingInspection,2,0.117096,51.553684
+2026-11-12,rating_changed,1027086,Japan Centre Express,Retailers - other,Barnet,N12 0DY,5,4,-0.175544,51.60848
+2026-11-12,rating_changed,1762896,Sundaes Gelato,Other catering premises,Barnet,N3 2BJ,5,4,-0.1922801,51.6020319
+2026-11-12,rating_changed,329579,St Margaret's Residential Home,Caring Premises,Bexley,DA15 7HR,5,4,0.096119,51.43148
+2026-11-12,rating_changed,1644931,The Spritz Bar,Mobile caterer,Bromley,BR5,5,3,,
+2026-11-12,rating_changed,1960306,Crepe Bakery,Retailers - other,Camden,NW1 8AA,AwaitingInspection,2,,
+2026-11-12,rating_changed,2009317,News food and wine,Retailers - other,Camden,NW5 1LJ,AwaitingInspection,1,-0.1464643,51.5562939
+2026-11-12,rating_changed,1981937,Aramark @ Drayton Manor High School,School/college/university,Ealing,W7 1EU,AwaitingInspection,1,-0.335752,51.515921
+2026-11-12,rating_changed,1172785,Grill Shack & Tiki Bar,Restaurant/Cafe/Canteen,Ealing,W3 7SH,0,1,-0.247043,51.506509
+2026-11-12,rating_changed,1985658,Lianggee,Restaurant/Cafe/Canteen,Ealing,W5 2PB,AwaitingInspection,3,-0.301791,51.516046
+2026-11-12,rating_changed,1534944,Manjaros Restaurant,Restaurant/Cafe/Canteen,Ealing,UB1 1BA,5,4,-0.3792678,51.507134
+2026-11-12,rating_changed,2013550,Shaam Truck,Mobile caterer,Ealing,NW10 7YQ,AwaitingInspection,2,,
+2026-11-12,rating_changed,2013569,Singhsbury's Local,Retailers - other,Ealing,UB2 5JT,AwaitingInspection,2,-0.394157,51.498148
+2026-11-12,rating_changed,1972695,Clock and Fork LTD,Restaurant/Cafe/Canteen,Greenwich,SE10 9TX,AwaitingInspection,4,0.0021154,51.484508
+2026-11-12,rating_changed,1920757,EMIR AFRICAN CUISINE & LOUNGE,Restaurant/Cafe/Canteen,Hackney,E5 0LP,AwaitingInspection,3,-0.0438841,51.5521994
+2026-11-12,rating_changed,2002123,Hanimeli,Restaurant/Cafe/Canteen,Hackney,N16 8BJ,AwaitingInspection,4,-0.0752983,51.5515861
+2026-11-12,rating_changed,1405719,Lighthouse project,Restaurant/Cafe/Canteen,Hackney,E8 1FX,AwaitingInspection,3,-0.0541528,51.5490459
+2026-11-12,rating_changed,2002124,Urban Social Coffee,Restaurant/Cafe/Canteen,Hackney,E8 1HA,AwaitingInspection,4,-0.054897,51.546536
+2026-11-12,rating_changed,2002105,clockhouse childcare,Caring Premises,Hackney,N16 5LG,AwaitingInspection,4,-0.0729049,51.5741093
+2026-11-12,rating_changed,1781177,Taj Al Sham Restaurant,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W3 7DA,4,3,-0.2488639,51.5144684
+2026-11-12,rating_changed,345717,The Pantry At Old Oak Primary School,School/college/university,Hammersmith and Fulham,W12 0AS,5,4,-0.246575,51.519442
+2026-11-12,rating_changed,1700665,Lunchtime Company Ltd @,School/college/university,Haringey,N8 0NU,5,3,-0.106201,51.585729
+2026-11-12,rating_changed,1974216,8 Cookies,Other catering premises,Harrow,HA3,AwaitingInspection,4,,
+2026-11-12,rating_changed,1977730,Freshworld International,Retailers - other,Havering,RM5 3NP,AwaitingInspection,1,0.162444,51.598882
+2026-11-12,rating_changed,374016,Paul’s Traditional Ham & Bacon,Retailers - other,Havering,RM3 8ED,4,1,0.219137,51.606628
+2026-11-12,rating_changed,1360289,Amigos Burgers / Shakes,Takeaway/sandwich shop,Hillingdon,UB8 2RT,5,1,-0.4934373,51.5367843
+2026-11-12,rating_changed,518729,Cira,Retailers - other,Hillingdon,UB4 0RU,1,3,-0.414888,51.520587
+2026-11-12,rating_changed,1998693,Pizza Hut,Takeaway/sandwich shop,Hillingdon,UB7 7BD,AwaitingInspection,3,-0.473163,51.514122
+2026-11-12,rating_changed,1986527,Civico 105,Restaurant/Cafe/Canteen,Lambeth,SW2 1AA,AwaitingInspection,3,-0.119343,51.454703
+2026-11-12,rating_changed,576826,Roosters Piri Piri,Takeaway/sandwich shop,Lambeth,SW2 4RS,5,3,-0.12625,51.439994
+2026-11-12,rating_changed,1018813,Kuramoh Lounge,Restaurant/Cafe/Canteen,Newham,E6 3BA,4,3,0.0527,51.532509
+2026-11-12,rating_changed,1979772,Rflavours,Mobile caterer,Newham,E16 2ES,AwaitingInspection,4,0.056142,51.499139
+2026-11-12,rating_changed,1612272,Topaz Food And Wine,Retailers - other,Newham,E7 8QH,1,3,0.04284,51.542555
+2026-11-12,rating_changed,363158,Tesco,Retailers - supermarkets/hypermarkets,Southwark,SE5 7EJ,5,4,-0.082566,51.4781
+2026-11-12,rating_changed,1917005,Chai and Snacks,Manufacturers/packers,Tower Hamlets,E14 6AQ,AwaitingInspection,4,-0.0142157,51.5126627
+2026-11-12,rating_changed,92624,City Supermarket,Retailers - other,Tower Hamlets,E1 4UN,4,1,-0.0510454,51.5206555
+2026-11-12,rating_changed,42234,London Hospital Tavern,Pub/bar/nightclub,Tower Hamlets,E1 1BJ,5,1,-0.058925,51.5190866
+2026-11-12,rating_changed,1707603,PFC,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1BJ,4,1,-0.0566763,51.5194271
+2026-11-12,rating_changed,860598,Candan Food Centre,Retailers - other,Waltham Forest,E10 7HU,2,0,-0.02417,51.57051
+2026-11-12,rating_changed,1984332,Cannelle,Restaurant/Cafe/Canteen,Waltham Forest,E10 7HU,AwaitingInspection,4,-0.0236209,51.5707448
+2026-11-12,rating_changed,1723360,Karya Bistro,Restaurant/Cafe/Canteen,Waltham Forest,E17 3HX,5,4,-0.0039128,51.5874698
+2026-11-12,rating_changed,515139,Orient Supermarket,Retailers - other,Waltham Forest,E10 5PS,3,0,-0.0065329,51.5582617
+2026-11-12,rating_changed,1986210,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 1DA,AwaitingInspection,4,-0.1120007,51.5134517
+2026-11-12,rating_changed,1986219,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 0AP,AwaitingInspection,4,-0.1192796,51.5109877
