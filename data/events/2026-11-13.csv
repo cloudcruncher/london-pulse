@@ -1,0 +1,143 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-13,new,1919584,Amati Raw Juice,Mobile caterer,Croydon,CR0,,5,,
+2026-11-13,new,2014140,Baked By NE,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-13,new,2014145,Brazil Premium,Restaurant/Cafe/Canteen,Croydon,CR7 7AW,,AwaitingInspection,-0.0997529998421669,51.3974914550781
+2026-11-13,new,2014139,Costa Coffee,Restaurant/Cafe/Canteen,Croydon,CR8 2LP,,AwaitingInspection,-0.116553999483585,51.3391189575195
+2026-11-13,new,2014149,Dubpan Croydon,Restaurant/Cafe/Canteen,Croydon,CR0 1LD,,AwaitingInspection,-0.093697,51.3748917
+2026-11-13,new,2014135,EJ Bakes & Cupcakes,Other catering premises,Croydon,SE19,,AwaitingInspection,,
+2026-11-13,new,2014150,Edible Embers,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-13,new,2014137,Haji And Sons,Retailers - other,Croydon,CR0 2RL,,AwaitingInspection,-0.10818599909544,51.3833389282227
+2026-11-13,new,2014151,Home Sweet Bakes,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-13,new,2014163,Homegrown Chilli Co,Manufacturers/packers,Croydon,SE25,,AwaitingInspection,,
+2026-11-13,new,2014156,Honey And Fig,Mobile caterer,Croydon,CR8,,AwaitingInspection,,
+2026-11-13,new,1969311,Hot Birdies,Restaurant/Cafe/Canteen,Croydon,SW16 4AG,,AwaitingInspection,-0.1224772,51.409286
+2026-11-13,new,2014146,Jadiah Store,Retailers - other,Croydon,CR7 6BD,,AwaitingInspection,-0.1174591,51.3917864
+2026-11-13,new,2014162,Karma Kitchen LTD,Restaurant/Cafe/Canteen,Croydon,SE25 4UD,,AwaitingInspection,-0.0742399990558624,51.3994674682617
+2026-11-13,new,1824711,Kenneth Howlett,Mobile caterer,Croydon,"",,5,-0.1015341,51.3733552
+2026-11-13,new,2014138,Melissa De Prezzo,Mobile caterer,Croydon,SE25,,AwaitingInspection,,
+2026-11-13,new,2014159,Muffin Break,Restaurant/Cafe/Canteen,Croydon,CR0 1UD,,AwaitingInspection,-0.1020707,51.3777525
+2026-11-13,new,2001719,Noodles City Croydon,Restaurant/Cafe/Canteen,Croydon,CR0 2RF,,AwaitingInspection,-0.104585997760296,51.3796920776367
+2026-11-13,new,2014154,Quenchh,Other catering premises,Croydon,SE25,,AwaitingInspection,,
+2026-11-13,new,2014152,Saim Ahmed,Other catering premises,Croydon,SE25,,AwaitingInspection,,
+2026-11-13,new,1955604,Sankofa Restaurant,Restaurant/Cafe/Canteen,Croydon,CR0 1YB,,AwaitingInspection,-0.10062900185585,51.3725318908691
+2026-11-13,new,2014155,Spice's,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-13,new,2001720,Spring Lane Nursery,Caring Premises,Croydon,SE25 4SP,,AwaitingInspection,-0.0651419,51.388281
+2026-11-13,new,1634825,Test Business 3,Restaurant/Cafe/Canteen,Croydon,CR0 1EA,,3,-0.100065000355244,51.3715705871582
+2026-11-13,new,2014142,The Crescent Food Bank - From The Felix Projext Charity,Other catering premises,Croydon,CR0 2HN,,AwaitingInspection,-0.092618003487587,51.3903961181641
+2026-11-13,new,2014136,The Kingsmen,Pub/bar/nightclub,Croydon,CR0 9AS,,AwaitingInspection,-0.0391347,51.3511039
+2026-11-13,new,2014141,The Sweet Me Company,Other catering premises,Croydon,SW16,,AwaitingInspection,,
+2026-11-13,new,2014153,VSC Kitchen And Events,Mobile caterer,Croydon,CR0,,AwaitingInspection,,
+2026-11-13,new,2001696,W Lounge,Restaurant/Cafe/Canteen,Croydon,CR2 6PA,,4,-0.0978086,51.3633936
+2026-11-13,new,2014157,World Tables,Mobile caterer,Croydon,SE25,,AwaitingInspection,,
+2026-11-13,rating_changed,1950709,Fête And Happy,Other catering premises,Barnet,NW11,AwaitingInspection,4,,
+2026-11-13,rating_changed,1969536,The Vada Pav Club,Other catering premises,Bromley,BR6,AwaitingInspection,3,,
+2026-11-13,rating_changed,1654179,Accent Catering At Croydon High School,School/college/university,Croydon,CR2 8YB,4,5,-0.0617190003395081,51.3412551879883
+2026-11-13,rating_changed,1907741,Al Amora,Restaurant/Cafe/Canteen,Croydon,CR0 2XP,AwaitingInspection,5,-0.100952997803688,51.3851890563965
+2026-11-13,rating_changed,1964051,Bar Chord,Pub/bar/nightclub,Croydon,CR5 1EH,AwaitingInspection,5,-0.1201816,51.3070542
+2026-11-13,rating_changed,1654175,Burger Refreshments,Mobile caterer,Croydon,CR0 4YA,4,5,-0.126724,51.3813862
+2026-11-13,rating_changed,1700103,"Flame Bite, Eugreeka!,Bao&Bowls,choco Charm Dessert,LEB+NÖM",Takeaway/sandwich shop,Croydon,CR5 2NE,2,3,-0.138944000005722,51.3205108642578
+2026-11-13,rating_changed,1601,Kingfishers Day Nursery,Caring Premises,Croydon,CR7 7JL,5,4,-0.106757000088692,51.3960380554199
+2026-11-13,rating_changed,24958,Little Pumpkins Nursery,Caring Premises,Croydon,SE25 5QW,4,5,-0.0714013,51.3969994
+2026-11-13,rating_changed,963634,Mary's Home,Caring Premises,Croydon,CR2 6LB,4,5,-0.1072059,51.3626376
+2026-11-13,rating_changed,1835070,Mr Wongs Wok & Box Croydon,Restaurant/Cafe/Canteen,Croydon,CR0 1PA,1,5,-0.0994620025157928,51.3736534118652
+2026-11-13,rating_changed,849068,Ozzies Charcoal,Takeaway/sandwich shop,Croydon,CR2 6AN,2,4,-0.100722000002861,51.3498001098633
+2026-11-13,rating_changed,1534490,Peking Inn,Takeaway/sandwich shop,Croydon,CR0 0QF,1,3,-0.0180009994655848,51.352180480957
+2026-11-13,rating_changed,1846511,Pizza GoGo,Takeaway/sandwich shop,Croydon,CR8 4DA,3,5,-0.123152002692223,51.333309173584
+2026-11-13,rating_changed,1973958,Purley And Kenley Churches Together Food Hub,Distributors/Transporters,Croydon,CR8 2LN,AwaitingInspection,5,-0.115689001977444,51.3395652770996
+2026-11-13,rating_changed,1945050,Sadat Afghan Bakery,Retailers - other,Croydon,CR0 2JJ,AwaitingInspection,1,-0.0973991,51.3857612
+2026-11-13,rating_changed,1979518,Shah's Halal Food - Croydon,Restaurant/Cafe/Canteen,Croydon,CR0 1PB,AwaitingInspection,5,-0.0986452,51.3737221
+2026-11-13,rating_changed,1947280,Sushi By Boba Tigers / Boba Tigers Bubble Tea,Takeaway/sandwich shop,Croydon,CR7 7PA,AwaitingInspection,4,-0.1145042,51.3951293
+2026-11-13,rating_changed,1606,Thornton Lodge,Caring Premises,Croydon,CR7 7JL,5,4,-0.106757000088692,51.3960380554199
+2026-11-13,rating_changed,1051587,Villa Maria Private Nursing Home,Caring Premises,Croydon,CR2 7BD,4,AwaitingPublication,-0.090582,51.3616842
+2026-11-13,rating_changed,1138237,New Inn,Pub/bar/nightclub,Ealing,W5 5EX,2,4,-0.306373,51.504827
+2026-11-13,rating_changed,1993802,Afrobuka resturant,Restaurant/Cafe/Canteen,Hackney,E5 8QJ,AwaitingInspection,4,-0.0664602,51.5559189
+2026-11-13,rating_changed,2002109,The Greedy Indian,Restaurant/Cafe/Canteen,Hackney,E8 4RG,AwaitingInspection,3,,
+2026-11-13,rating_changed,423191,Barisal Ltd T/A Cigkoftem,Other catering premises,Haringey,N4 1EY,5,4,-0.099257,51.578485
+2026-11-13,rating_changed,1971814,Govenders,Other catering premises,Harrow,HA2,AwaitingInspection,4,,
+2026-11-13,rating_changed,1955990,Sam's Kitchen,Other catering premises,Harrow,HA5,AwaitingInspection,3,,
+2026-11-13,rating_changed,1742448,Vibes of Lahore,Restaurant/Cafe/Canteen,Hillingdon,UB7 7BY,3,0,-0.474237,51.509145
+2026-11-13,rating_changed,669101,Fig Tree Cafe,Restaurant/Cafe/Canteen,Islington,N1 2LJ,5,4,-0.098687,51.5469232
+2026-11-13,rating_changed,1766665,Stall t/a Chicken Shop,Mobile caterer,Islington,EC1Y 8JL,1,3,,
+2026-11-13,rating_changed,417776,Stall t/a Saladin,Mobile caterer,Islington,EC1Y 8JL,1,3,,
+2026-11-13,rating_changed,1088213,Sushi Daily@Waitrose,Takeaway/sandwich shop,Islington,N7 6PA,5,4,-0.1163843,51.5559947
+2026-11-13,rating_changed,1965647,Ustadz Kitchen,Takeaway/sandwich shop,Islington,N7 8XH,AwaitingInspection,4,-0.1145829,51.5433941
+2026-11-13,rating_changed,1279701,ADORA PIZZA,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 4PE,5,2,-0.190658,51.502515
+2026-11-13,rating_changed,1958453,PADI@LONDON,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,2,,
+2026-11-13,rating_changed,1870294,Taste Of Grill,Restaurant/Cafe/Canteen,Newham,E13 8HJ,2,0,0.024209,51.522752
+2026-11-13,rating_changed,1858000,Twickenham Grill & Desserts,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 1BJ,4,2,-0.3322904,51.4510905
+2026-11-13,rating_changed,364391,Wimpy,Restaurant/Cafe/Canteen,Southwark,SE16 3TS,5,4,-0.063173,51.492574
+2026-11-13,rating_changed,1068551,Buddha Store,Retailers - other,Sutton,SM5 1AF,3,4,-0.188142,51.383459
+2026-11-13,rating_changed,1150044,Sureyan Express,Retailers - other,Sutton,SM5 1AG,1,4,-0.188515,51.383114
+2026-11-13,rating_changed,1990693,Island Kebabs,Takeaway/sandwich shop,Tower Hamlets,E14 9TS,AwaitingInspection,3,,
+2026-11-13,rating_changed,1474739,"Miss Rice, Maopao Mini Hotpot, Master Malatang",Other catering premises,Tower Hamlets,E1 4UN,5,0,-0.0520078,51.52006
+2026-11-13,rating_changed,2007168,Staycity Aparthotel,Other catering premises,Tower Hamlets,E1 1RD,AwaitingInspection,4,-0.0649234,51.5149593
+2026-11-13,rating_changed,1613518,Green Area,Restaurant/Cafe/Canteen,Waltham Forest,E17 9PT,3,4,-0.0180788,51.5810557
+2026-11-13,rating_changed,1726662,N Family Club Walthamstow,Caring Premises,Waltham Forest,E17 9BY,5,4,-0.0108989,51.5788839
+2026-11-13,rating_changed,514381,YMCA,Restaurant/Cafe/Canteen,Waltham Forest,E17 3EF,1,4,-0.0118574,51.5896729
+2026-11-13,rating_changed,1573396,Buondi,Restaurant/Cafe/Canteen,Wandsworth,SW12 9AL,5,4,-0.1486158,51.4474534
+2026-11-13,rating_changed,1402100,Alexandra Hotel,Hotel/bed & breakfast/guest house,Westminster,W2 2RY,2,1,-0.1728136,51.5147115
+2026-11-13,rating_changed,1976080,BON BAO,Restaurant/Cafe/Canteen,Westminster,W1D 6BG,AwaitingInspection,2,-0.1334904,51.5123747
+2026-11-13,rating_changed,1823762,CLEO,Restaurant/Cafe/Canteen,Westminster,SW1W 9PB,5,3,-0.1512239,51.4940587
+2026-11-13,rating_changed,715227,Café At Foyles,Restaurant/Cafe/Canteen,Westminster,WC2H 0DT,1,4,-0.129856,51.514199
+2026-11-13,rating_changed,904587,Kiln,Restaurant/Cafe/Canteen,Westminster,W1F 9TL,5,4,-0.1360671,51.5113905
+2026-11-13,rating_changed,412721,Shishawi,Restaurant/Cafe/Canteen,Westminster,W2 2HZ,3,1,-0.16401312,51.5157084
+2026-11-13,removed,1416408,1885 Lounge,Pub/bar/nightclub,Croydon,SE25 6EZ,5,,-0.075312003493309,51.3992691040039
+2026-11-13,removed,1979510,Amma Samayal,Mobile caterer,Croydon,SE25,AwaitingInspection,,,
+2026-11-13,removed,1568524,Anny's Express,Takeaway/sandwich shop,Croydon,CR7 7AW,4,,-0.0997529998421669,51.3974914550781
+2026-11-13,removed,2001717,Atesh Restaurant,Restaurant/Cafe/Canteen,Croydon,CR0 1QR,AwaitingInspection,,-0.0989859998226166,51.3695182800293
+2026-11-13,removed,1333894,B & K Food And Wine,Retailers - other,Croydon,CR7 8JG,5,,-0.1006816,51.403656
+2026-11-13,removed,1399352,B & Q Croydon,Retailers - other,Croydon,CR0 4YA,5,,-0.1273886,51.3805965
+2026-11-13,removed,1407459,Balanced Afya,Manufacturers/packers,Croydon,SW16,4,,,
+2026-11-13,removed,1107981,Banana Island Bar And Restaurant,Restaurant/Cafe/Canteen,Croydon,SE25 6EB,3,,-0.0751790031790733,51.3990135192871
+2026-11-13,removed,1592147,CakesbyBookie,Other catering premises,Croydon,CR0,5,,,
+2026-11-13,removed,1720233,Calanit,Other catering premises,Croydon,SE19,5,,,
+2026-11-13,removed,1728012,Ceylon Cottage,Takeaway/sandwich shop,Croydon,CR0 4NX,5,,-0.118069000542164,51.3687324523926
+2026-11-13,removed,1987182,Countryside,Other catering premises,Croydon,SW16,AwaitingInspection,,,
+2026-11-13,removed,1045123,Degchee,Other catering premises,Croydon,CR0,5,,,
+2026-11-13,removed,1897023,Double Up,Other catering premises,Croydon,SE25,AwaitingInspection,,,
+2026-11-13,removed,1702131,Dub Pan - Jamaican Stylee,Restaurant/Cafe/Canteen,Croydon,CR0 1LD,5,,-0.093697,51.3748917
+2026-11-13,removed,1568519,E.M.P.I.R.E,Restaurant/Cafe/Canteen,Croydon,SE25 6XX,5,,-0.0788939,51.3972756
+2026-11-13,removed,1999273,Essentials24,Retailers - other,Croydon,CR8,AwaitingInspection,,,
+2026-11-13,removed,1771996,FlavourFlavour,Other catering premises,Croydon,CR0,4,,,
+2026-11-13,removed,1804663,Freckles At Smugglers Inn,Restaurant/Cafe/Canteen,Croydon,CR5 3BE,5,,-0.1505906,51.3190308
+2026-11-13,removed,1366092,Funmmies Sweet Treats,Other catering premises,Croydon,CR8,4,,,
+2026-11-13,removed,1945067,Good Times,Manufacturers/packers,Croydon,CR7,AwaitingInspection,,,
+2026-11-13,removed,1790987,Indira's Kitchen,Other catering premises,Croydon,CR7,AwaitingInspection,,,
+2026-11-13,removed,1979524,Jamjerk 876,Mobile caterer,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1947291,Janette's Bakery,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1212686,Jimmy's Chicken,Takeaway/sandwich shop,Croydon,CR0 3PA,3,,-0.1096946,51.3848809
+2026-11-13,removed,1883501,Juici Jerk Express,Mobile caterer,Croydon,CR0 2HN,AwaitingInspection,,-0.0930504,51.3907985
+2026-11-13,removed,1375907,Lulu's Best Cuisine,Other catering premises,Croydon,CR0,4,,,
+2026-11-13,removed,1966276,Lwo Cultural Group - Uganda Village Stall,Mobile caterer,Croydon,CR8,AwaitingInspection,,,
+2026-11-13,removed,1672138,Magic Masala,Restaurant/Cafe/Canteen,Croydon,CR0 2JH,5,,-0.0981408,51.3841635
+2026-11-13,removed,1383029,Medina Dates,Other catering premises,Croydon,SW16,5,,,
+2026-11-13,removed,1579715,Nature Always Wins,Other catering premises,Croydon,CR8,4,,,
+2026-11-13,removed,2001694,OneLove Bakery,Other catering premises,Croydon,SE25,AwaitingInspection,,,
+2026-11-13,removed,877551,Our Caribbean Shop,Retailers - other,Croydon,CR7 8JF,4,,-0.0999450013041496,51.4039611816406
+2026-11-13,removed,1962122,Papa's Jerk,Mobile caterer,Croydon,SE19,AwaitingInspection,,,
+2026-11-13,removed,1966272,Picositas.uk,Other catering premises,Croydon,CR7,AwaitingInspection,,,
+2026-11-13,removed,1835074,Ponte Nuovo,Restaurant/Cafe/Canteen,Croydon,CR0 1NA,AwaitingInspection,,-0.100656002759933,51.3711853027344
+2026-11-13,removed,1947288,Potion Pax,Other catering premises,Croydon,CR2,AwaitingInspection,,,
+2026-11-13,removed,1660041,Pound Redeemed,Retailers - other,Croydon,CR2 6PA,4,,-0.0971584,51.3627895
+2026-11-13,removed,1536331,Press Flavour Jerk & Juice,Other catering premises,Croydon,SW16,4,,,
+2026-11-13,removed,1639803,Rothna's Bakery,Other catering premises,Croydon,CR0,5,,,
+2026-11-13,removed,1990909,Serpil's Cake Shed,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1595417,Shirley News,Retailers - other,Croydon,CR0 5HA,5,,-0.0525761,51.3670295
+2026-11-13,removed,1984855,Sol Cooks,Mobile caterer,Croydon,SE19,AwaitingInspection,,,
+2026-11-13,removed,1284788,Somomo,Restaurant/Cafe/Canteen,Croydon,SW16 4DP,2,,-0.119037002325058,51.4036483764648
+2026-11-13,removed,1050811,Soul Vegan Restaurant,Other catering premises,Croydon,CR0,5,,,
+2026-11-13,removed,1603655,South End Market,Retailers - other,Croydon,CR0 1DN,4,,-0.0992947,51.3667091
+2026-11-13,removed,1862145,Sri Lankan In Your Kitchen,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1399354,St Andrews Church,Other catering premises,Croydon,CR0 1AG,5,,-0.101952999830246,51.367317199707
+2026-11-13,removed,1979520,Sweet Cinns,Mobile caterer,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1909721,Sweet Dreams,Mobile caterer,Croydon,CR0,AwaitingInspection,,,
+2026-11-13,removed,1655893,Taste Like Home,Mobile caterer,Croydon,CR0,5,,,
+2026-11-13,removed,1738220,Taste Max Pizza,Takeaway/sandwich shop,Croydon,CR0 1RJ,1,,-0.101098999381065,51.3729705810547
+2026-11-13,removed,1762313,The Juice Bar At The Gym Group,Takeaway/sandwich shop,Croydon,CR0 2RF,5,,-0.1052607,51.3808658
+2026-11-13,removed,1722312,The Kingsmen,Pub/bar/nightclub,Croydon,CR0 9AS,5,,-0.0391347,51.3511039
+2026-11-13,removed,1274901,The Mental Health Bakery,Other catering premises,Croydon,CR2,5,,,
+2026-11-13,removed,1785791,The Suya Club,Mobile caterer,Croydon,CR7 8RU,3,,-0.0939939990639687,51.3980445861816
+2026-11-13,removed,2467,The Two Brewers P.H.,Pub/bar/nightclub,Croydon,CR0 2DW,5,,-0.089867003262043,51.388069152832
+2026-11-13,removed,2001716,Veltramart Limited,Mobile caterer,Croydon,SW16,AwaitingInspection,,,
+2026-11-13,removed,1941090,Verai Foods,Takeaway/sandwich shop,Croydon,CR7,AwaitingInspection,,,
+2026-11-13,removed,1787497,Zen Lounge Ltd,Restaurant/Cafe/Canteen,Croydon,CR8 2PG,4,,-0.105761,51.3443768
