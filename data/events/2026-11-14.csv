@@ -1,0 +1,26 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-14,new,1774358,Greenford Supermarket,Retailers - other,Ealing,UB6 0HH,,0,-0.339402,51.549901
+2026-11-14,rating_changed,1928237,Status Bexleyheath,Pub/bar/nightclub,Bexley,DA6 7ES,AwaitingInspection,4,0.14083,51.45694
+2026-11-14,rating_changed,2009819,Topkapi,Takeaway/sandwich shop,Bexley,DA7 5QR,AwaitingInspection,4,0.126498,51.473784
+2026-11-14,rating_changed,1824252,CAFE EAST PHO,Restaurant/Cafe/Canteen,Camden,WC1A 2SA,AwaitingInspection,3,-0.1239435,51.517868
+2026-11-14,rating_changed,1403589,Cafebotanical Bakery,Takeaway/sandwich shop,Camden,WC1A 2TH,5,3,-0.1232925,51.5178415
+2026-11-14,rating_changed,1980859,Grabo The Convenience Store,Retailers - other,City of London Corporation,EC4V 6AF,AwaitingInspection,4,-0.104646,51.513098
+2026-11-14,rating_changed,1980857,Grabo The Convenience Store,Retailers - other,City of London Corporation,EC4Y 1JU,AwaitingInspection,2,-0.1085294,51.5140972
+2026-11-14,rating_changed,1981922,Figo 9,Restaurant/Cafe/Canteen,Ealing,UB6 7PP,AwaitingInspection,2,-0.3188386,51.5363002
+2026-11-14,rating_changed,1034141,Stanbury's,Restaurant/Cafe/Canteen,Ealing,UB5 6RA,5,3,-0.403126,51.5422974
+2026-11-14,rating_changed,2006917,The Hyde,Restaurant/Cafe/Canteen,Ealing,UB6 7PP,AwaitingInspection,2,-0.3188386,51.5363002
+2026-11-14,rating_changed,1973625,Corgi Cafe,Restaurant/Cafe/Canteen,Hackney,EC2A 3JL,AwaitingInspection,4,-0.0824592,51.525706
+2026-11-14,rating_changed,2002116,The Taco house,Takeaway/sandwich shop,Hackney,E1 6GY,AwaitingInspection,1,,
+2026-11-14,rating_changed,2001162,Amna?s Bakehouse,Mobile caterer,Hillingdon,UB10,AwaitingInspection,3,,
+2026-11-14,rating_changed,2006500,Roccos/Tasty Bun,Restaurant/Cafe/Canteen,Hillingdon,UB10 8QU,AwaitingInspection,4,-0.444774,51.561866
+2026-11-14,rating_changed,519947,Soncos,Retailers - other,Hillingdon,TW6 3QY,2,1,-0.469624,51.458863
+2026-11-14,rating_changed,334529,Miller of Kensington,Retailers - other,Kensington and Chelsea,W8 6QD,5,4,-0.192996,51.49658
+2026-11-14,rating_changed,1966036,Cafe Do Padrinho,Restaurant/Cafe/Canteen,Lambeth,SW8 3LT,AwaitingInspection,4,-0.1425413,51.4692041
+2026-11-14,rating_changed,1600540,Costsaver Supermarket,Retailers - supermarkets/hypermarkets,Lewisham,SE26 5QF,2,3,-0.051779,51.425947
+2026-11-14,rating_changed,1987364,Loaf & Lift,Other catering premises,Lewisham,SE6,AwaitingInspection,4,,
+2026-11-14,rating_changed,1690109,Marchetti,Restaurant/Cafe/Canteen,Lewisham,SE23 1JB,5,2,-0.035072,51.442548
+2026-11-14,rating_changed,1574238,St John's Superstore,Retailers - other,Richmond-Upon-Thames,TW12 2AX,1,4,-0.3671165,51.41527
+2026-11-14,rating_changed,79722,Sidney Street News,Retailers - other,Tower Hamlets,E1 2HH,3,1,-0.0554582,51.5162145
+2026-11-14,rating_changed,1963958,Spicy Chicken and Fish Pot,Other catering premises,Tower Hamlets,E14 3QA,AwaitingInspection,1,-0.025008,51.492342
+2026-11-14,rating_changed,1724888,BAM Karaoke Box,Restaurant/Cafe/Canteen,Westminster,SW1E 6SQ,4,2,-0.138442,51.4973277
+2026-11-14,rating_changed,411524,Yamabahce,Restaurant/Cafe/Canteen,Westminster,W1U 1EN,5,0,-0.1504996,51.5151441
