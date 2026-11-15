@@ -1,0 +1,17 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-15,rating_changed,2009698,Tocco D'Artista,Restaurant/Cafe/Canteen,Barnet,N12 0EY,AwaitingInspection,4,-0.178154,51.611821
+2026-11-15,rating_changed,424071,Star Fish Bar,Takeaway/sandwich shop,Camden,N7 0BL,3,4,-0.1301881,51.5493542
+2026-11-15,rating_changed,1559059,Charlton Athletic Training Ground (catering),Other catering premises,Greenwich,SE9 2JR,5,4,0.0709593,51.4449368
+2026-11-15,rating_changed,694889,Costcutter,Retailers - other,Greenwich,SE9 1UT,5,4,0.0593252,51.4576357
+2026-11-15,rating_changed,1031338,Eltham Local Supermarket,Retailers - other,Greenwich,SE9 1BW,5,1,0.0537388,51.4505574
+2026-11-15,rating_changed,694885,Fletchers,Retailers - other,Greenwich,SE9 1UT,5,4,0.0596623,51.4568114
+2026-11-15,rating_changed,1935136,Chunky Buddha,Restaurant/Cafe/Canteen,Hackney,E2 8DA,AwaitingInspection,3,-0.0778034,51.527743
+2026-11-15,rating_changed,1935125,Dallas Burger Joint,Restaurant/Cafe/Canteen,Hackney,E1 6JE,AwaitingInspection,4,-0.0782712,51.5262219
+2026-11-15,rating_changed,1942572,Fondyou,Takeaway/sandwich shop,Hackney,E2 8DA,AwaitingInspection,4,-0.0777363,51.527625
+2026-11-15,rating_changed,583534,Asafo Restaurant,Restaurant/Cafe/Canteen,Lambeth,SW2 4EG,1,4,-0.12505,51.44644
+2026-11-15,rating_changed,2005621,D & K Gambian Roast Chicken And Rice,Mobile caterer,Newham,E7 0NQ,AwaitingInspection,2,,
+2026-11-15,rating_changed,1990424,Moe's Grill,Takeaway/sandwich shop,Newham,E13 0AJ,AwaitingInspection,3,0.021878,51.530004
+2026-11-15,rating_changed,746152,Duos Lounge,Restaurant/Cafe/Canteen,Waltham Forest,E10 6AP,5,4,-0.0113763,51.5762122
+2026-11-15,rating_changed,1315136,Mediteranean Cafe,Restaurant/Cafe/Canteen,Waltham Forest,E17 8QP,4,1,-0.0223294,51.57923
+2026-11-15,rating_changed,958835,Pretty Decent Beer Co,Pub/bar/nightclub,Waltham Forest,E7 9EF,0,1,,
+2026-11-15,rating_changed,1883539,Simon Woodward Catering at The Flower Pot,Restaurant/Cafe/Canteen,Waltham Forest,E17 3HX,5,4,-0.0039073,51.5875956
