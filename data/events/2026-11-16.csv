@@ -1,10 +1,64 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-16,new,2014654,Aayyo Joy,Other catering premises,Bromley,BR3,,AwaitingInspection,,
+2026-11-16,new,2014656,Brunova Kitchen,Other catering premises,Bromley,BR6,,AwaitingInspection,,
+2026-11-16,new,2014658,D’OH BOYZ LDN,Other catering premises,Bromley,BR2,,AwaitingInspection,,
+2026-11-16,new,1981191,Grizzlys,Takeaway/sandwich shop,Bromley,SE20 7EZ,,5,,
+2026-11-16,new,2014660,Mekz Eats,Other catering premises,Bromley,TN16,,AwaitingInspection,,
+2026-11-16,new,2014657,Park Langley Delicatessen,Retailers - other,Bromley,BR3 6QH,,AwaitingInspection,,
+2026-11-16,new,2014655,SOL – Supporting Optimal Living,Other catering premises,Bromley,SE9,,AwaitingInspection,,
+2026-11-16,new,2014659,The Tang Club,Other catering premises,Bromley,BR3,,AwaitingInspection,,
+2026-11-16,new,2014653,Tropiganic Ltd,Distributors/Transporters,Bromley,SE20 8JY,,AwaitingInspection,,
+2026-11-16,new,2014762,Dovetail Bars Ltd,Pub/bar/nightclub,City of London Corporation,EC4A 1AN,,AwaitingInspection,,
+2026-11-16,new,2014639,Aha Cafe,Restaurant/Cafe/Canteen,Newham,E12 6TL,,AwaitingInspection,,
+2026-11-16,new,2014627,Al-Razzaq Halal Butchers Ltd,Retailers - other,Newham,E6 3BD,,AwaitingInspection,,
+2026-11-16,new,2014629,Bagel Hut,Other catering premises,Newham,E12 6BL,,AwaitingInspection,,
+2026-11-16,new,2014636,Baraka Cafe & Sweets,Restaurant/Cafe/Canteen,Newham,E12 6BU,,AwaitingInspection,,
+2026-11-16,new,2014621,Burning Brownie Ltd,Restaurant/Cafe/Canteen,Newham,E13 8QQ,,AwaitingInspection,,
+2026-11-16,new,2014632,Cards Candles And Gifts Ltd,Retailers - other,Newham,E13 8AQ,,AwaitingInspection,,
+2026-11-16,new,2014625,Change Grow Live,Other catering premises,Newham,E16 4PZ,,AwaitingInspection,,
+2026-11-16,new,2014634,Cinnamon Rollin,Other catering premises,Newham,E7 9,,AwaitingInspection,,
+2026-11-16,new,2014615,Dakshina House,Restaurant/Cafe/Canteen,Newham,E12,,AwaitingInspection,,
+2026-11-16,new,2014630,Deccan Bawarchi,Restaurant/Cafe/Canteen,Newham,E7 8NW,,AwaitingInspection,,
+2026-11-16,new,2014637,Eugenia Alina Budes,Mobile caterer,Newham,E7 9,,AwaitingInspection,,
+2026-11-16,new,2014616,Hing Wok,Takeaway/sandwich shop,Newham,E12 6HL,,AwaitingInspection,,
 2026-11-16,new,1875155,House Of Merroe,Retailers - other,Newham,E6 6,,AwaitingInspection,,
+2026-11-16,new,2014619,India Supper Club,Takeaway/sandwich shop,Newham,E16 2AA,,AwaitingInspection,,
+2026-11-16,new,2014628,Jhal Muri,Restaurant/Cafe/Canteen,Newham,E7 9QN,,AwaitingInspection,,
+2026-11-16,new,2014631,Kaffa 9,Restaurant/Cafe/Canteen,Newham,E7 8BF,,AwaitingInspection,,
+2026-11-16,new,2014617,Kongras,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-16,new,2014620,MS Bakes UK,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-16,new,2014635,Newham Eats,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-16,new,2014633,Nexora Finds,Other catering premises,Newham,E13,,AwaitingInspection,,
+2026-11-16,new,2014638,PG Patisserie,Other catering premises,Newham,E15,,AwaitingInspection,,
+2026-11-16,new,2014622,Popeyes,Takeaway/sandwich shop,Newham,E15 1NG,,AwaitingInspection,,
+2026-11-16,new,2014618,SZL Trading Ltd,Other catering premises,Newham,E15 3QJ,,AwaitingInspection,,
+2026-11-16,new,2014623,Shah's Halal Food,Restaurant/Cafe/Canteen,Newham,E16 1EN,,AwaitingInspection,,
 2026-11-16,new,1984406,Srubhi's Kitchen,Mobile caterer,Newham,E20,,AwaitingInspection,,
+2026-11-16,new,2014624,Thampus Cakes,Other catering premises,Newham,E6 5,,AwaitingInspection,,
+2026-11-16,new,2014626,Unapologetically Sweet,Other catering premises,Newham,E16,,AwaitingInspection,,
 2026-11-16,rating_changed,1986887,Waffle Drop,Mobile caterer,Barnet,HA8 7BD,AwaitingInspection,4,-0.27598,51.612885
+2026-11-16,rating_changed,1990787,Greenhaus,Retailers - other,Bromley,BR1 3AX,AwaitingInspection,Exempt,,
+2026-11-16,rating_changed,1981193,Padel Xtra Beckenham @ Club Langley,Restaurant/Cafe/Canteen,Bromley,BR3 3SR,AwaitingInspection,5,,
+2026-11-16,rating_changed,1933637,The Chelsfield,Pub/bar/nightclub,Bromley,BR6 6EY,AwaitingInspection,5,,
+2026-11-16,rating_changed,1974615,The Sushi Co,Restaurant/Cafe/Canteen,Bromley,BR1 1EG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1929765,Cloth Cornhill,Pub/bar/nightclub,City of London Corporation,EC3V 9DR,AwaitingInspection,5,,
+2026-11-16,rating_changed,1980860,Company of Cooks @ Apothecaries Hall,Restaurant/Cafe/Canteen,City of London Corporation,EC4V 6EJ,AwaitingInspection,5,,
+2026-11-16,rating_changed,1802071,"Eggslut, Unit 1, Boxhall",Takeaway/sandwich shop,City of London Corporation,EC2M 7PN,4,5,,
+2026-11-16,rating_changed,1964741,Greggs Plc,Takeaway/sandwich shop,City of London Corporation,EC4A 3BF,AwaitingInspection,5,,
+2026-11-16,rating_changed,1980858,Jenki St Pauls,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 7DX,AwaitingInspection,5,,
+2026-11-16,rating_changed,1805851,"Soft Serve Society, Boxhall",Takeaway/sandwich shop,City of London Corporation,EC2M 7PN,4,5,,
+2026-11-16,rating_changed,1966722,The Fairway Club,Restaurant/Cafe/Canteen,City of London Corporation,EC4R 1BE,AwaitingInspection,5,,
+2026-11-16,rating_changed,1987421,Two Dots Services Ltd,Other catering premises,City of London Corporation,EC4A 3BQ,AwaitingInspection,5,,
+2026-11-16,rating_changed,1975665,Eatnua Riverside Kingston,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1QN,0,2,,
 2026-11-16,rating_changed,1636092,Pantry,Retailers - other,Lewisham,SE23 2LD,3,1,-0.0520454,51.4397726
 2026-11-16,rating_changed,1574925,Sushi Manga,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW2 7LA,3,4,-0.3578109,51.4526199
 2026-11-16,rating_changed,1980703,JERK FLAMES,Restaurant/Cafe/Canteen,Sutton,SM6 8QG,AwaitingInspection,4,-0.148802,51.360111
+2026-11-16,removed,1973012,HeniiMerii,Other catering premises,Bromley,BR1,AwaitingInspection,,,
+2026-11-16,removed,358777,Orpington Golf Centre - Ruxley Clubhouse Bar,Restaurant/Cafe/Canteen,Bromley,BR5 3HY,5,,0.1225939,51.4055614
+2026-11-16,removed,1711716,Park Langley Delicatessen,Restaurant/Cafe/Canteen,Bromley,BR3 6QH,5,,-0.0186112,51.3997155
+2026-11-16,removed,1912402,Bewliehill,Takeaway/sandwich shop,City of London Corporation,EC4M 7DZ,1,,-0.098116,51.514863
+2026-11-16,removed,1738785,Bewliehill,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 4AH,4,,-0.0803859,51.5168431
+2026-11-16,removed,1926441,Rosslyn Coffee,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QT,AwaitingInspection,,-0.0830258,51.5173701
 2026-11-16,removed,640908,B J Wines,Retailers - other,Newham,E16 3AR,1,,0.02549,51.510689
 2026-11-16,removed,1604589,Bridgets Cafe,Restaurant/Cafe/Canteen,Newham,E20 1LF,5,,-0.0096445,51.5497733
 2026-11-16,removed,1704706,Brunch American Inspired / Pasta Paradiso,Restaurant/Cafe/Canteen,Newham,E15 3QJ,5,,0.013522,51.537001
@@ -12,3 +66,4 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-16,removed,1827631,Marine Fish Limited,Retailers - other,Newham,E12 6SB,1,,0.0509609989821911,51.5409736633301
 2026-11-16,removed,1260376,Subramanian Narayanaraja,Restaurant/Cafe/Canteen,Newham,E12 6SL,3,,0.049872,51.5428105
 2026-11-16,removed,1937491,Tasty Bitez 4 U,Takeaway/sandwich shop,Newham,E13 8AF,3,,0.023766,51.526726
+2026-11-16,removed,1975805,Chilli Flames,Takeaway/sandwich shop,Waltham Forest,E10 6AP,AwaitingInspection,,-0.0112675,51.5763902
