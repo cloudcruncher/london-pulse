@@ -1,4 +1,40 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-16,new,2015027,Andalusian Alcazar / Al Casr Al Andalusi,Other catering premises,Barnet,N12,,AwaitingInspection,,
+2026-11-16,new,2015041,Bangkok Fairways,Restaurant/Cafe/Canteen,Barnet,N20 0NL,,AwaitingInspection,,
+2026-11-16,new,2015040,Beaufort Hub,Restaurant/Cafe/Canteen,Barnet,NW9 5JH,,AwaitingInspection,,
+2026-11-16,new,2015044,Bell Lane Cafe,Restaurant/Cafe/Canteen,Barnet,NW4 2BP,,AwaitingInspection,,
+2026-11-16,new,2015039,Buffet Sao Paulo,Other catering premises,Barnet,NW2,,AwaitingInspection,,
+2026-11-16,new,2015031,Carousel Store,Other catering premises,Barnet,N2 0,,AwaitingInspection,,
+2026-11-16,new,2015050,Daily Delights,Mobile caterer,Barnet,N12,,AwaitingInspection,,
+2026-11-16,new,2015036,EM Bartender UK,Mobile caterer,Barnet,NW11,,AwaitingInspection,,
+2026-11-16,new,2015054,ErevEase,Mobile caterer,Barnet,NW4,,AwaitingInspection,,
+2026-11-16,new,1786340,Farmhouse Grill & Pizza,Takeaway/sandwich shop,Barnet,N11 3EU,,AwaitingInspection,,
+2026-11-16,new,2015053,Gateaux & Co,Other catering premises,Barnet,HA8,,AwaitingInspection,,
+2026-11-16,new,2015046,Genius Holiday Club Hendon,School/college/university,Barnet,NW4 2HP,,AwaitingInspection,,
+2026-11-16,new,2015042,Goya Baking Studio,Other catering premises,Barnet,EN4,,AwaitingInspection,,
+2026-11-16,new,2015028,Iondrfit,Retailers - other,Barnet,NW9,,AwaitingInspection,,
+2026-11-16,new,2015051,Jade Pharmacy,Retailers - other,Barnet,HA8 7JH,,Exempt,,
+2026-11-16,new,2015024,Joshi's Brasserie,Restaurant/Cafe/Canteen,Barnet,NW11 6XP,,AwaitingInspection,,
+2026-11-16,new,2015056,Julie Sweet Cake,Other catering premises,Barnet,EN5,,AwaitingInspection,,
+2026-11-16,new,2015034,JustMousse,Other catering premises,Barnet,N2 0,,AwaitingInspection,,
+2026-11-16,new,2015057,Kabul Korner Hendon Ltd,Restaurant/Cafe/Canteen,Barnet,NW4 4EB,,AwaitingInspection,,
+2026-11-16,new,2015023,Kani Shawarma,Restaurant/Cafe/Canteen,Barnet,N12 8LJ,,AwaitingInspection,,
+2026-11-16,new,2015030,Kosher Kingdom,Retailers - other,Barnet,NW11 9BY,,AwaitingInspection,,
+2026-11-16,new,2015033,La Tazzina,Restaurant/Cafe/Canteen,Barnet,EN5 5UJ,,AwaitingInspection,,
+2026-11-16,new,2015052,Lytton Food & Wine,Retailers - other,Barnet,EN5 5BX,,5,,
+2026-11-16,new,2015026,MEXICAN STREET - PAELLA STREET,Mobile caterer,Barnet,NW4,,AwaitingInspection,,
+2026-11-16,new,2015032,Off To Winnie's,Other catering premises,Barnet,N14,,AwaitingInspection,,
+2026-11-16,new,2015038,Peri Peri Original,Takeaway/sandwich shop,Barnet,NW4 2DY,,AwaitingInspection,,
+2026-11-16,new,2015025,Piccole Petit,Restaurant/Cafe/Canteen,Barnet,N2 9EB,,AwaitingInspection,,
+2026-11-16,new,2015055,ROYAL AFGHAN SUPERMARKET,Retailers - other,Barnet,NW9 7DY,,AwaitingInspection,,
+2026-11-16,new,2015043,Sashas Bakes,Other catering premises,Barnet,NW2,,AwaitingInspection,,
+2026-11-16,new,2015047,Sushi Haven,Takeaway/sandwich shop,Barnet,NW11 9BY,,AwaitingInspection,,
+2026-11-16,new,2015049,TOCHAL,Restaurant/Cafe/Canteen,Barnet,N20 9BH,,AwaitingInspection,,
+2026-11-16,new,2015035,Unity Food Kit,Other catering premises,Barnet,N2 9,,AwaitingInspection,,
+2026-11-16,new,2015045,Vyena,Other catering premises,Barnet,N12,,AwaitingInspection,,
+2026-11-16,new,2015048,Wok From Home,Other catering premises,Barnet,NW9,,AwaitingInspection,,
+2026-11-16,new,2015029,Wrangler Burger,Restaurant/Cafe/Canteen,Barnet,N14 5JN,,AwaitingInspection,,
+2026-11-16,new,2015037,Zaraah Cooking & Baking,Other catering premises,Barnet,NW2,,AwaitingInspection,,
 2026-11-16,new,2014654,Aayyo Joy,Other catering premises,Bromley,BR3,,AwaitingInspection,,
 2026-11-16,new,2014656,Brunova Kitchen,Other catering premises,Bromley,BR6,,AwaitingInspection,,
 2026-11-16,new,2014658,D’OH BOYZ LDN,Other catering premises,Bromley,BR2,,AwaitingInspection,,
@@ -9,6 +45,63 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-16,new,2014659,The Tang Club,Other catering premises,Bromley,BR3,,AwaitingInspection,,
 2026-11-16,new,2014653,Tropiganic Ltd,Distributors/Transporters,Bromley,SE20 8JY,,AwaitingInspection,,
 2026-11-16,new,2014762,Dovetail Bars Ltd,Pub/bar/nightclub,City of London Corporation,EC4A 1AN,,AwaitingInspection,,
+2026-11-16,new,2014920,Abdul Nafe,Restaurant/Cafe/Canteen,Enfield,N9 0TY,,AwaitingInspection,,
+2026-11-16,new,2014921,Albany Park Community Cafe,Restaurant/Cafe/Canteen,Enfield,EN3 5PA,,AwaitingInspection,,
+2026-11-16,new,2014933,Anita Bakery,Other catering premises,Enfield,N14,,5,,
+2026-11-16,new,2014908,Aura shz ltd,Restaurant/Cafe/Canteen,Enfield,N13 5TT,,1,,
+2026-11-16,new,2014922,Axe capital,Retailers - other,Enfield,N14,,AwaitingInspection,,
+2026-11-16,new,2014929,Ayya Vizhi Ltd c/o the petrol station,Retailers - other,Enfield,N9 7HL,,AwaitingInspection,,
+2026-11-16,new,2014928,Baklava Mate,Other catering premises,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014916,Blackstone Cola,Other catering premises,Enfield,N9 8,,AwaitingInspection,,
+2026-11-16,new,2014912,Building Bloqs,Restaurant/Cafe/Canteen,Enfield,N18 3JR,,4,,
+2026-11-16,new,2014923,C&K cook's for you,Other catering premises,Enfield,N9 7,,AwaitingInspection,,
+2026-11-16,new,2014925,C-O-N-F-E-C-T-I-O-N-A-R-Y ISLAND LTD,Other catering premises,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014907,Charcoal Grill,Restaurant/Cafe/Canteen,Enfield,N9 9BU,,AwaitingInspection,,
+2026-11-16,new,2014911,Delicious Tray,Takeaway/sandwich shop,Enfield,N9 0,,AwaitingInspection,,
+2026-11-16,new,2014939,EKC KITCHEN,Other catering premises,Enfield,N9 8,,AwaitingInspection,,
+2026-11-16,new,2014948,Ethiopian Origin Coffee,Other catering premises,Enfield,N9 0,,AwaitingInspection,,
+2026-11-16,new,2014927,Global impact International ministry,Other catering premises,Enfield,N13 5UU,,AwaitingInspection,,
+2026-11-16,new,2014924,Gold dynasty Asian Fusion Restaurant,Takeaway/sandwich shop,Enfield,EN1 3EF,,AwaitingInspection,,
+2026-11-16,new,2014940,Homecoming Eats,Other catering premises,Enfield,N21,,AwaitingInspection,,
+2026-11-16,new,2014943,Hoop,Other catering premises,Enfield,EN4,,AwaitingInspection,,
+2026-11-16,new,2014932,Jay's pie kitchen,Other catering premises,Enfield,N14,,AwaitingInspection,,
+2026-11-16,new,2014913,Juice Of Nature,Other catering premises,Enfield,EN1,,AwaitingInspection,,
+2026-11-16,new,2014935,Kay's Kitchen Jamaican Settin's,Other catering premises,Enfield,N9 7,,AwaitingInspection,,
+2026-11-16,new,2014944,La Porchetta,Restaurant/Cafe/Canteen,Enfield,EN4 0DB,,AwaitingInspection,,
+2026-11-16,new,2014917,"Leopard Coffee,",Restaurant/Cafe/Canteen,Enfield,N9 7EP,,AwaitingInspection,,
+2026-11-16,new,2014910,Liman Limited,Takeaway/sandwich shop,Enfield,N13 4TD,,AwaitingInspection,,
+2026-11-16,new,2014950,Little Ethiopia,Other catering premises,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014949,Lundor,Other catering premises,Enfield,EN2,,AwaitingInspection,,
+2026-11-16,new,2014914,Maison Artisanale Du Sud Ouest,Other catering premises,Enfield,EN1,,AwaitingInspection,,
+2026-11-16,new,2014905,Manhattan,Retailers - other,Enfield,N13 5UP,,AwaitingInspection,,
+2026-11-16,new,2014904,Moments Like This Events,Other catering premises,Enfield,EN3,,AwaitingInspection,,
+2026-11-16,new,2014906,Mother & daughter kitchen additional trading name: Ayas kitchen,Other catering premises,Enfield,N14,,AwaitingInspection,,
+2026-11-16,new,2014919,N18 food & wine,Retailers - other,Enfield,N18 2SS,,5,,
+2026-11-16,new,2014946,North.Treatss,Other catering premises,Enfield,N9 9,,AwaitingInspection,,
+2026-11-16,new,2014931,Peeya Lounge,Restaurant/Cafe/Canteen,Enfield,N18 3AH,,3,,
+2026-11-16,new,2014918,RH Seafood,Mobile caterer,Enfield,EN3,,AwaitingInspection,,
+2026-11-16,new,2014915,SHELL PALMERS GREEN,Retailers - other,Enfield,N13 5UN,,5,,
+2026-11-16,new,2014941,SORRENTO'S FOOD EXPERIENCE,Other catering premises,Enfield,N13,,AwaitingInspection,,
+2026-11-16,new,2014930,Sear,Other catering premises,Enfield,EN3,,AwaitingInspection,,
+2026-11-16,new,2014945,Te Baza,Restaurant/Cafe/Canteen,Enfield,EN3 5UQ,,AwaitingInspection,,
+2026-11-16,new,2014936,The Cheese Stall,Mobile caterer,Enfield,EN1,,AwaitingInspection,,
+2026-11-16,new,2014938,Tocu Health,Other catering premises,Enfield,EN4,,AwaitingInspection,,
+2026-11-16,new,2014909,Tom N Jerry's Burgers,Mobile caterer,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014934,TropiWave,Other catering premises,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014942,United Vision CIC,Distributors/Transporters,Enfield,EN1 4HS,,AwaitingInspection,,
+2026-11-16,new,2014947,Wings 15,Mobile caterer,Enfield,EN1,,AwaitingInspection,,
+2026-11-16,new,2014926,Zlatna,Importers/Exporters,Enfield,N18,,AwaitingInspection,,
+2026-11-16,new,2014901,Culture Cafe,Retailers - other,Kensington and Chelsea,"",,AwaitingInspection,,
+2026-11-16,new,2014903,GLO2,Retailers - other,Kensington and Chelsea,W11,,AwaitingInspection,,
+2026-11-16,new,1722633,Kensington Fresh,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6ED,,5,,
+2026-11-16,new,2014902,Kitchen By Butter,Other catering premises,Kensington and Chelsea,SW7,,AwaitingInspection,,
+2026-11-16,new,2014900,Little Quench,Retailers - other,Kensington and Chelsea,W8 6ND,,AwaitingInspection,,
+2026-11-16,new,2014989,Biryani Tree,Takeaway/sandwich shop,Lewisham,SE8 4EY,,AwaitingInspection,,
+2026-11-16,new,2014991,Nooshe Jan,Other catering premises,Lewisham,SE8,,AwaitingInspection,,
+2026-11-16,new,2014993,Sainsbury's,Retailers - supermarkets/hypermarkets,Lewisham,SE12 8PZ,,5,,
+2026-11-16,new,2014992,Salento Coffee & Pizza,Restaurant/Cafe/Canteen,Lewisham,SE6 2TS,,AwaitingInspection,,
+2026-11-16,new,2014990,Simple and Delicious,Other catering premises,Lewisham,BR1,,AwaitingInspection,,
+2026-11-16,new,2014988,Subway,Restaurant/Cafe/Canteen,Lewisham,SE13 5JX,,AwaitingInspection,,
 2026-11-16,new,2014639,Aha Cafe,Restaurant/Cafe/Canteen,Newham,E12 6TL,,AwaitingInspection,,
 2026-11-16,new,2014627,Al-Razzaq Halal Butchers Ltd,Retailers - other,Newham,E6 3BD,,AwaitingInspection,,
 2026-11-16,new,2014629,Bagel Hut,Other catering premises,Newham,E12 6BL,,AwaitingInspection,,
@@ -36,6 +129,43 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-16,new,1984406,Srubhi's Kitchen,Mobile caterer,Newham,E20,,AwaitingInspection,,
 2026-11-16,new,2014624,Thampus Cakes,Other catering premises,Newham,E6 5,,AwaitingInspection,,
 2026-11-16,new,2014626,Unapologetically Sweet,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-16,new,2014973,Bistique,Retailers - other,Wandsworth,SW8 5EL,,AwaitingInspection,,
+2026-11-16,new,2014974,Bombay Bento,Takeaway/sandwich shop,Wandsworth,SW18 4TF,,AwaitingInspection,,
+2026-11-16,new,1927645,Crunch,Restaurant/Cafe/Canteen,Wandsworth,SW8 5EL,,5,,
+2026-11-16,new,2014984,Créme,Takeaway/sandwich shop,Wandsworth,SW18 5JS,,AwaitingInspection,,
+2026-11-16,new,2014977,Ethio3000,Retailers - other,Wandsworth,SW17 8TA,,AwaitingInspection,,
+2026-11-16,new,2014982,Ghee’d up / Artisan scrumptious bakes,Other catering premises,Wandsworth,SW17,,AwaitingInspection,,
+2026-11-16,new,2014981,Jefferson's Ice Cream Wholesale Ltd (Unit 29),Manufacturers/packers,Wandsworth,SW8 3QR,,AwaitingInspection,,
+2026-11-16,new,2014986,Kass Haus,Other catering premises,Wandsworth,SW15,,AwaitingInspection,,
+2026-11-16,new,2014987,Little Four Seasons (Nine Elms),Restaurant/Cafe/Canteen,Wandsworth,SW8 5PD,,AwaitingInspection,,
+2026-11-16,new,2014985,Medirush Pharmacy,Retailers - other,Wandsworth,SW11 5BA,,AwaitingInspection,,
+2026-11-16,new,2014978,Natty's Jerk (Unit 12),Takeaway/sandwich shop,Wandsworth,SW8 4DE,,AwaitingInspection,,
+2026-11-16,new,2014980,PV&T,Manufacturers/packers,Wandsworth,SW15,,AwaitingInspection,,
+2026-11-16,new,2014983,Prepped Co,Manufacturers/packers,Wandsworth,SW8 5EL,,AwaitingInspection,,
+2026-11-16,new,2014975,Scrummy & Co,Restaurant/Cafe/Canteen,Wandsworth,SW8 5EL,,AwaitingInspection,,
+2026-11-16,new,2014979,Supernova,Takeaway/sandwich shop,Wandsworth,SW18 5JS,,AwaitingInspection,,
+2026-11-16,new,2014972,The Hive/Bubble Bees,Restaurant/Cafe/Canteen,Wandsworth,SW15 5PH,,AwaitingInspection,,
+2026-11-16,new,2014976,Tiffinsvala,Restaurant/Cafe/Canteen,Wandsworth,SW17 0PG,,AwaitingInspection,,
+2026-11-16,new,2014971,Zara’s kitchen & Bar,Restaurant/Cafe/Canteen,Wandsworth,SW8 3RE,,AwaitingInspection,,
+2026-11-16,rating_changed,1805723,Aksu Kebab - Fish & Chips,Takeaway/sandwich shop,Barnet,N20 0BA,4,5,,
+2026-11-16,rating_changed,1394201,Arkley Golf Club (The Arkley 9),Other catering premises,Barnet,EN5 3HL,4,5,,
+2026-11-16,rating_changed,1494736,Bakers + Baristas,Other catering premises,Barnet,"",4,5,,
+2026-11-16,rating_changed,1964545,Beit Nana Ltd.,Other catering premises,Barnet,N2 0,AwaitingInspection,5,,
+2026-11-16,rating_changed,756641,Brookhill Nursery School,School/college/university,Barnet,EN4 8SD,4,5,,
+2026-11-16,rating_changed,1884568,CREA,Other catering premises,Barnet,NW9,AwaitingInspection,5,,
+2026-11-16,rating_changed,1964548,Flair Flavours,Other catering premises,Barnet,EN4,AwaitingInspection,5,,
+2026-11-16,rating_changed,1999062,Henry Nihill Care Home ( White Oaks Catering),Caring Premises,Barnet,HA8 9PU,AwaitingInspection,5,,
+2026-11-16,rating_changed,1835002,Homestore Cafe,Restaurant/Cafe/Canteen,Barnet,NW9 5DS,4,5,,
+2026-11-16,rating_changed,1350049,L'Artista Restaurant,Takeaway/sandwich shop,Barnet,NW11 7PE,3,5,,
+2026-11-16,rating_changed,1986910,Mim's Kitchen,Other catering premises,Barnet,N20,AwaitingInspection,5,,
+2026-11-16,rating_changed,1884560,Non Stop Action - Breakfast & After School Club,Caring Premises,Barnet,NW7 1JF,4,5,,
+2026-11-16,rating_changed,2009716,Oliver Bonas,Retailers - other,Barnet,NW4 3FP,AwaitingInspection,Exempt,,
+2026-11-16,rating_changed,1876480,Once Upon A Parcel,Other catering premises,Barnet,EN5,AwaitingInspection,5,,
+2026-11-16,rating_changed,1895471,Rice Vibes,Other catering premises,Barnet,NW9,AwaitingInspection,5,,
+2026-11-16,rating_changed,1999087,Shahs Halal Food - High Barnet,Restaurant/Cafe/Canteen,Barnet,EN5 5SN,AwaitingInspection,5,,
+2026-11-16,rating_changed,756818,Sonesta Nursing Home,Caring Premises,Barnet,NW11 8DP,4,5,,
+2026-11-16,rating_changed,1999082,Subway,Other catering premises,Barnet,NW4 3AD,AwaitingInspection,5,,
+2026-11-16,rating_changed,1434390,Tops Fish Bar,Takeaway/sandwich shop,Barnet,EN4 8SX,4,5,,
 2026-11-16,rating_changed,1986887,Waffle Drop,Mobile caterer,Barnet,HA8 7BD,AwaitingInspection,4,-0.27598,51.612885
 2026-11-16,rating_changed,1990787,Greenhaus,Retailers - other,Bromley,BR1 3AX,AwaitingInspection,Exempt,,
 2026-11-16,rating_changed,1981193,Padel Xtra Beckenham @ Club Langley,Restaurant/Cafe/Canteen,Bromley,BR3 3SR,AwaitingInspection,5,,
@@ -49,16 +179,232 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-16,rating_changed,1805851,"Soft Serve Society, Boxhall",Takeaway/sandwich shop,City of London Corporation,EC2M 7PN,4,5,,
 2026-11-16,rating_changed,1966722,The Fairway Club,Restaurant/Cafe/Canteen,City of London Corporation,EC4R 1BE,AwaitingInspection,5,,
 2026-11-16,rating_changed,1987421,Two Dots Services Ltd,Other catering premises,City of London Corporation,EC4A 3BQ,AwaitingInspection,5,,
+2026-11-16,rating_changed,1849057,A+O,Mobile caterer,Enfield,EN3,AwaitingInspection,4,,
+2026-11-16,rating_changed,1609593,Amaar Coffee,Other catering premises,Enfield,N18 2QH,4,1,,
+2026-11-16,rating_changed,1628599,Aspen Services Ltd,School/college/university,Enfield,N18 2JQ,2,5,,
+2026-11-16,rating_changed,1628603,Aspens Services Ltd,School/college/university,Enfield,N18 2ES,5,4,,
+2026-11-16,rating_changed,1981740,Baked by Zara,Other catering premises,Enfield,N14,AwaitingInspection,5,,
+2026-11-16,rating_changed,317365,Bluez Convenience Store,Retailers - other,Enfield,N18 2EU,4,1,,
+2026-11-16,rating_changed,1998939,Borneo Bakery & Patisserie,Restaurant/Cafe/Canteen,Enfield,N21 1PG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1963820,Cakes Minus The Egg,Other catering premises,Enfield,N21,AwaitingInspection,5,,
+2026-11-16,rating_changed,1936735,Charlies Wingz,Restaurant/Cafe/Canteen,Enfield,N18 1UB,AwaitingInspection,5,,
+2026-11-16,rating_changed,317630,Choi's Slow Boat,Takeaway/sandwich shop,Enfield,EN3 5XH,1,3,,
+2026-11-16,rating_changed,1488234,Cobblers Cafe Ltd,Restaurant/Cafe/Canteen,Enfield,N18 2TY,5,4,,
+2026-11-16,rating_changed,1742414,Cockfosters News & Wine,Retailers - other,Enfield,EN4 0DB,2,4,,
+2026-11-16,rating_changed,1784867,Corba Dunyasi,Restaurant/Cafe/Canteen,Enfield,N9 7ES,2,4,,
+2026-11-16,rating_changed,1276864,Crave & Replenish C/o Island Fitness Centre,Restaurant/Cafe/Canteen,Enfield,EN3 6GS,3,5,,
+2026-11-16,rating_changed,1983334,D'MUMBAI STATION KITCHEN AND BAR,Restaurant/Cafe/Canteen,Enfield,N14 6PH,AwaitingInspection,2,,
+2026-11-16,rating_changed,1936758,Delicious Food Ltd,Other catering premises,Enfield,N13,AwaitingInspection,5,,
+2026-11-16,rating_changed,1596694,ECA Luncheon Club,Restaurant/Cafe/Canteen,Enfield,N9 0BU,5,4,,
+2026-11-16,rating_changed,316370,Eastbrook House Residential Home,Caring Premises,Enfield,N9 8DA,4,5,,
+2026-11-16,rating_changed,1936744,Eko Relish,Other catering premises,Enfield,EN4,AwaitingInspection,5,,
+2026-11-16,rating_changed,421619,Fios Food Centre,Retailers - other,Enfield,N14 5AA,5,4,,
+2026-11-16,rating_changed,1971247,Firepitt,Other catering premises,Enfield,N14 6PH,AwaitingInspection,5,,
+2026-11-16,rating_changed,316068,GREGGS OF ENFIELD,Retailers - other,Enfield,EN1 3LD,3,5,,
+2026-11-16,rating_changed,1755366,HCL @ Tottenhall Infants School,School/college/university,Enfield,N13 6HX,2,5,,
+2026-11-16,rating_changed,1802197,INDIAN DARBAR,Takeaway/sandwich shop,Enfield,N14 5AB,0,2,,
+2026-11-16,rating_changed,1974965,Impact Food Bidco Ltd,School/college/university,Enfield,EN4 0HT,AwaitingInspection,5,,
+2026-11-16,rating_changed,1974964,Impact Food Bidco Ltd,School/college/university,Enfield,EN1 4UF,AwaitingInspection,5,,
+2026-11-16,rating_changed,1656166,Infinity Noodles O/S,Mobile caterer,Enfield,N9 0TT,1,3,,
+2026-11-16,rating_changed,1974969,Integrated Fostering Services Ltd/ IFS Global Foundation,School/college/university,Enfield,EN3 7FJ,AwaitingInspection,5,,
+2026-11-16,rating_changed,1965719,Keys Meadow Primary School,School/college/university,Enfield,EN3 6FB,AwaitingInspection,5,,
+2026-11-16,rating_changed,687719,Kiva Coffee House,Restaurant/Cafe/Canteen,Enfield,N13 5TW,5,1,,
+2026-11-16,rating_changed,1639518,L'arte,Other catering premises,Enfield,EN4 0DW,4,5,,
+2026-11-16,rating_changed,1998940,Leapfrog Nursery School,Restaurant/Cafe/Canteen,Enfield,N14 4UE,AwaitingInspection,5,,
+2026-11-16,rating_changed,1971251,Life in the town,School/college/university,Enfield,EN3 4DX,AwaitingInspection,2,,
+2026-11-16,rating_changed,1591570,Lokma Patisserie,Restaurant/Cafe/Canteen,Enfield,N13 4JG,2,0,,
+2026-11-16,rating_changed,1836686,London Halal Butcher,Other catering premises,Enfield,N18 2JB,0,4,,
+2026-11-16,rating_changed,1413257,Marcus Kitchen & Bar,Restaurant/Cafe/Canteen,Enfield,EN2 6AE,4,5,,
+2026-11-16,rating_changed,1977340,Mug Shot,Restaurant/Cafe/Canteen,Enfield,N21 2HD,2,5,,
+2026-11-16,rating_changed,1990847,Nourish Contract Catering Ltd,School/college/university,Enfield,EN3 5UX,AwaitingInspection,5,,
+2026-11-16,rating_changed,318046,Nursery at Westgrove Primary School,School/college/university,Enfield,N14 4LR,5,4,,
+2026-11-16,rating_changed,1843770,O La Lah Pizza,Takeaway/sandwich shop,Enfield,N18 1AA,5,2,,
+2026-11-16,rating_changed,1894694,Oz Bakery,Other catering premises,Enfield,EN3 4LE,AwaitingInspection,0,,
+2026-11-16,rating_changed,317585,Oz International Supermarket,Retailers - other,Enfield,N18 1RG,3,1,,
+2026-11-16,rating_changed,732285,Pak Bewal Supermarket,Retailers - other,Enfield,N18 2TY,1,2,,
+2026-11-16,rating_changed,1985531,Patty Project,Other catering premises,Enfield,N9 9HF,AwaitingInspection,4,,
+2026-11-16,rating_changed,1971250,RAPID STRIKE CAFFE,Restaurant/Cafe/Canteen,Enfield,EN2 0JN,AwaitingInspection,3,,
+2026-11-16,rating_changed,1974971,Regal Cross Limited,Restaurant/Cafe/Canteen,Enfield,N18,AwaitingInspection,5,,
+2026-11-16,rating_changed,1992869,Rich Mind Oak Foods Ltd,Other catering premises,Enfield,N9 0,AwaitingInspection,5,,
+2026-11-16,rating_changed,1977212,STACKD,Restaurant/Cafe/Canteen,Enfield,EN2,AwaitingInspection,5,,
+2026-11-16,rating_changed,1723715,Stir Food,School/college/university,Enfield,N9 9TU,4,5,,
+2026-11-16,rating_changed,1938738,Sugar Tea Room,Other catering premises,Enfield,EN2,AwaitingInspection,5,,
+2026-11-16,rating_changed,317602,Tasty Inn,Restaurant/Cafe/Canteen,Enfield,N11 1AN,1,3,,
+2026-11-16,rating_changed,1981730,The Brunch Barn,Restaurant/Cafe/Canteen,Enfield,EN2 9BS,AwaitingInspection,2,,
+2026-11-16,rating_changed,316065,The Jolly Butchers,Pub/bar/nightclub,Enfield,EN1 3JS,4,5,,
+2026-11-16,rating_changed,1945129,Tina's Bespoke Treats,Other catering premises,Enfield,N9 7,AwaitingInspection,5,,
+2026-11-16,rating_changed,1981727,Velvet Cookie Haus,Other catering premises,Enfield,EN3,AwaitingInspection,5,,
+2026-11-16,rating_changed,1690869,Viet Chefs,Restaurant/Cafe/Canteen,Enfield,EN4 0DW,3,1,,
+2026-11-16,rating_changed,1979175,WKID Doner & Authentic Cypriot Grill,Restaurant/Cafe/Canteen,Enfield,N9 9JS,AwaitingInspection,3,,
+2026-11-16,rating_changed,1981735,b Real,Retailers - other,Enfield,EN1 3WX,AwaitingInspection,5,,
+2026-11-16,rating_changed,2008666,Chef Chang's Handmade Noodles,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7,AwaitingInspection,5,,
+2026-11-16,rating_changed,2006538,Chocofruit,Retailers - other,Kensington and Chelsea,SW1X 7XL,AwaitingInspection,5,,
+2026-11-16,rating_changed,1793725,Isra's Kitchen,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9HR,1,5,,
+2026-11-16,rating_changed,1990287,Kungfu Malatang,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1990289,Lea Tea,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1998832,Mello World,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,5,,
+2026-11-16,rating_changed,1977798,Mo1 Youths,Distributors/Transporters,Kensington and Chelsea,W11 1QS,AwaitingInspection,5,,
+2026-11-16,rating_changed,965532,Over Under Coffee,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9RD,4,5,,
+2026-11-16,rating_changed,1965810,Pizza Express,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW5 9QA,AwaitingInspection,5,,
+2026-11-16,rating_changed,2013244,Roots kitchen,Other catering premises,Kensington and Chelsea,W10 6BN,AwaitingInspection,5,,
+2026-11-16,rating_changed,1990283,Seoul Street,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1990285,Taste of Hong Kong,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
 2026-11-16,rating_changed,1975665,Eatnua Riverside Kingston,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1QN,0,2,,
+2026-11-16,rating_changed,1649339,Flower Sushi,Takeaway/sandwich shop,Lewisham,SE23 1HN,3,5,,
+2026-11-16,rating_changed,2006482,Lebanese Grill,Restaurant/Cafe/Canteen,Lewisham,SE13 6QA,AwaitingInspection,5,,
+2026-11-16,rating_changed,1599845,Mitco News,Retailers - other,Lewisham,SE13 7PA,4,5,,
 2026-11-16,rating_changed,1636092,Pantry,Retailers - other,Lewisham,SE23 2LD,3,1,-0.0520454,51.4397726
+2026-11-16,rating_changed,1600921,Shere Punjab,Restaurant/Cafe/Canteen,Lewisham,SE6 1LF,4,5,,
 2026-11-16,rating_changed,1574925,Sushi Manga,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW2 7LA,3,4,-0.3578109,51.4526199
 2026-11-16,rating_changed,1980703,JERK FLAMES,Restaurant/Cafe/Canteen,Sutton,SM6 8QG,AwaitingInspection,4,-0.148802,51.360111
+2026-11-16,rating_changed,1571709,Chicken 2 Go,Takeaway/sandwich shop,Wandsworth,SW11 3QA,1,4,,
+2026-11-16,rating_changed,1782274,Ciel Cafe,Restaurant/Cafe/Canteen,Wandsworth,SW17 9NJ,4,5,,
+2026-11-16,rating_changed,1930106,Erica’s Pastries,Other catering premises,Wandsworth,SW8 5EL,AwaitingInspection,5,,
+2026-11-16,rating_changed,1967244,Field To Fork Produce Ltd,Takeaway/sandwich shop,Wandsworth,SW8 5EQ,AwaitingInspection,5,,
+2026-11-16,rating_changed,2013040,Kings News,Retailers - other,Wandsworth,SW17 9LG,AwaitingInspection,5,,
+2026-11-16,rating_changed,1981410,Poutinie,Restaurant/Cafe/Canteen,Wandsworth,SW17 0RH,AwaitingInspection,5,,
+2026-11-16,rating_changed,1571681,Stag News,Retailers - other,Wandsworth,SW15 3EA,4,5,,
+2026-11-16,rating_changed,1572258,Suzette Ltd,Restaurant/Cafe/Canteen,Wandsworth,SW11 3RA,5,4,,
+2026-11-16,rating_changed,1962094,The Butchers Table,Retailers - other,Wandsworth,SW18 1TG,AwaitingInspection,5,,
+2026-11-16,removed,758189,Bell Lane Cafe,Restaurant/Cafe/Canteen,Barnet,NW4 2BP,4,,-0.219039,51.586811
+2026-11-16,removed,1670906,Cafe Anglais,Restaurant/Cafe/Canteen,Barnet,NW9 6RS,5,,-0.251565,51.588218
+2026-11-16,removed,1939885,Cake In House,Retailers - other,Barnet,NW2 3EJ,2,,-0.213173,51.555294
+2026-11-16,removed,1939919,Canamisu,Mobile caterer,Barnet,NW2,AwaitingInspection,,,
+2026-11-16,removed,897116,Deman Turkish Cuisine,Takeaway/sandwich shop,Barnet,EN5 1EU,3,,-0.186262,51.64609
+2026-11-16,removed,1434398,Global Kebab House,Takeaway/sandwich shop,Barnet,NW4 3AD,3,,-0.227494,51.583567
+2026-11-16,removed,1921435,Greek Boys/Greek Me/Shawarma Co/Casa Mexicana/Wow Taco,Takeaway/sandwich shop,Barnet,N20 0RA,4,,-0.174928,51.627076
+2026-11-16,removed,1790923,Haida Cafe,Restaurant/Cafe/Canteen,Barnet,N20 9BH,3,,-0.175577998161316,51.6335716247559
+2026-11-16,removed,1999077,Heaven Is A Cupcake,Mobile caterer,Barnet,NW4 3FN,AwaitingInspection,,-0.2237626,51.5764202
+2026-11-16,removed,758002,Hower Oriental Food,Retailers - other,Barnet,NW11 8RR,4,,-0.195711,51.571168
+2026-11-16,removed,1933000,LILY AND GOLD LONDON LIMITED,Retailers - other,Barnet,N12,AwaitingInspection,,,
+2026-11-16,removed,1796145,Mani & Nick's,Restaurant/Cafe/Canteen,Barnet,NW7 3LL,4,,-0.248186,51.614137
+2026-11-16,removed,1735171,Moody Foodie Limited,Mobile caterer,Barnet,NW9,4,,,
+2026-11-16,removed,1691739,Napolino,Mobile caterer,Barnet,N20,5,,,
+2026-11-16,removed,1842314,Peri Peri Original,Takeaway/sandwich shop,Barnet,NW4 2DY,3,,-0.22083,51.586776
+2026-11-16,removed,1828704,Pizza Amore,Takeaway/sandwich shop,Barnet,N12 0RG,3,,-0.174486,51.61216
+2026-11-16,removed,1986898,Pizza Army,Takeaway/sandwich shop,Barnet,N11 3EU,AwaitingInspection,,-0.1489447,51.6148331
+2026-11-16,removed,757101,RV Food And Wine,Retailers - other,Barnet,EN5 5BX,5,,-0.175779,51.650865
+2026-11-16,removed,1800974,Simba's Nursery School,School/college/university,Barnet,N3 1,4,,,
+2026-11-16,removed,1927244,Walli's Chicken,Takeaway/sandwich shop,Barnet,NW4 1RR,3,,-0.223112,51.590083
+2026-11-16,removed,1876508,Wrangler Burger,Restaurant/Cafe/Canteen,Barnet,N14 5JN,5,,-0.142653,51.632675
+2026-11-16,removed,1914214,YAKU MAMA,Other catering premises,Barnet,NW2,AwaitingInspection,,,
+2026-11-16,removed,1950694,Yaki Ya!,Other catering premises,Barnet,HA8,AwaitingInspection,,,
 2026-11-16,removed,1973012,HeniiMerii,Other catering premises,Bromley,BR1,AwaitingInspection,,,
 2026-11-16,removed,358777,Orpington Golf Centre - Ruxley Clubhouse Bar,Restaurant/Cafe/Canteen,Bromley,BR5 3HY,5,,0.1225939,51.4055614
 2026-11-16,removed,1711716,Park Langley Delicatessen,Restaurant/Cafe/Canteen,Bromley,BR3 6QH,5,,-0.0186112,51.3997155
-2026-11-16,removed,1912402,Bewliehill,Takeaway/sandwich shop,City of London Corporation,EC4M 7DZ,1,,-0.098116,51.514863
 2026-11-16,removed,1738785,Bewliehill,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 4AH,4,,-0.0803859,51.5168431
+2026-11-16,removed,1912402,Bewliehill,Takeaway/sandwich shop,City of London Corporation,EC4M 7DZ,1,,-0.098116,51.514863
 2026-11-16,removed,1926441,Rosslyn Coffee,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1QT,AwaitingInspection,,-0.0830258,51.5173701
+2026-11-16,removed,1257093,57Main.co.uk,Restaurant/Cafe/Canteen,Enfield,EN1 1DS,4,,-0.0641078,51.6448978
+2026-11-16,removed,493897,8th Enfield Scout Group,Other catering premises,Enfield,EN3 4DE,AwaitingInspection,,-0.046637,51.649076
+2026-11-16,removed,1894688,AKWA,Other catering premises,Enfield,N13,AwaitingInspection,,,
+2026-11-16,removed,1974966,ANYTIME CHILDCARE CIC/Bubbles & Smiles,Caring Premises,Enfield,N18 2JF,3,,-0.0619372,51.6138013
+2026-11-16,removed,878195,Addison House Care Home,Caring Premises,Enfield,EN3 5LA,AwaitingInspection,,-0.040443,51.662308
+2026-11-16,removed,316750,"Age UK Enfield, The Parker Centre",Caring Premises,Enfield,N9 7RA,4,,-0.05479,51.633546
+2026-11-16,removed,1990842,Alaya Bakery,Other catering premises,Enfield,EN2,AwaitingInspection,,,
+2026-11-16,removed,1737587,Alianza,Other catering premises,Enfield,EN1 2AG,5,,-0.0791472,51.650873
+2026-11-16,removed,1877292,Antephan,Takeaway/sandwich shop,Enfield,EN3 5BL,5,,-0.0475142,51.6583634
+2026-11-16,removed,1943635,BakedbyM,Other catering premises,Enfield,EN3,AwaitingInspection,,,
+2026-11-16,removed,983867,Bamboo Leaf,Takeaway/sandwich shop,Enfield,EN3 4ES,2,,-0.046994,51.643128
+2026-11-16,removed,1887553,Bombay Lanes,Mobile caterer,Enfield,N9 0,1,,,
+2026-11-16,removed,1544616,Boop The Boxes,Other catering premises,Enfield,N14,5,,,
+2026-11-16,removed,316603,Brimsdown School and Childcentre,School/college/university,Enfield,EN3 7NA,AwaitingInspection,,-0.035181,51.654936
+2026-11-16,removed,1796589,Building Bloqs,Restaurant/Cafe/Canteen,Enfield,N18 3QT,4,,-0.039778,51.608351
+2026-11-16,removed,1779989,Bullsmoor Lodge,Caring Premises,Enfield,EN3 6TE,5,,-0.035732,51.680618
+2026-11-16,removed,1845859,Cafe Relax,Restaurant/Cafe/Canteen,Enfield,N13 5TT,4,,-0.107201,51.618954
+2026-11-16,removed,1247002,Cake Box,Retailers - other,Enfield,N14 5BU,2,,-0.1312943,51.6331813
+2026-11-16,removed,318117,Christ the King,Other catering premises,Enfield,N14 4HD,5,,-0.139906,51.645437
+2026-11-16,removed,1760614,Co.Boba,Takeaway/sandwich shop,Enfield,N18 2TY,5,,-0.064032,51.6168484
+2026-11-16,removed,316792,Community of Christ Church Hall,Other catering premises,Enfield,EN2 0BS,AwaitingInspection,,-0.078401,51.663637
+2026-11-16,removed,1873561,D BAR AND COFFEE,Restaurant/Cafe/Canteen,Enfield,EN1 2AA,4,,-0.07977,51.6518723
+2026-11-16,removed,1777777,DELIZIA SCURA @ dark kitchen of,Takeaway/sandwich shop,Enfield,N14 5PA,5,,-0.1289,51.63297
+2026-11-16,removed,316242,DSO BOROUGH CATERING,School/college/university,Enfield,N14 4HN,AwaitingInspection,,-0.1461369,51.6430475
+2026-11-16,removed,1380022,Delisino Brasserie,Restaurant/Cafe/Canteen,Enfield,N14 5HD,5,,-0.134348,51.634351
+2026-11-16,removed,1396294,Diora's Cafe & Lounge,Restaurant/Cafe/Canteen,Enfield,EN3 5UQ,1,,-0.041043,51.66953
+2026-11-16,removed,316723,Elgon Dispensing,Retailers - other,Enfield,EN3 4DN,5,,-0.0461569,51.6479003
+2026-11-16,removed,316629,Enfield Highway Comm Centre,Pub/bar/nightclub,Enfield,EN3 5JF,AwaitingInspection,,-0.047182,51.656575
+2026-11-16,removed,317578,Enfield LGBT Network,Other catering premises,Enfield,EN2 0BU,AwaitingInspection,,-0.0687898,51.6126373
+2026-11-16,removed,1579441,Enfood Dugdale Centre Catering Unit only,Restaurant/Cafe/Canteen,Enfield,EN2 6DS,5,,-0.080751,51.649782
+2026-11-16,removed,316253,Eversley Primary School,School/college/university,Enfield,N21 1PD,5,,-0.112804,51.643386
+2026-11-16,removed,2010292,Firepitt,Other catering premises,Enfield,N14 6PH,5,,-0.126628,51.632322
+2026-11-16,removed,1705795,Forty Hill Food & Wine,Retailers - other,Enfield,EN2 9HT,1,,-0.071127,51.666719
+2026-11-16,removed,316474,Freston Hall,Other catering premises,Enfield,EN4 9LX,AwaitingInspection,,-0.149256,51.646916
+2026-11-16,removed,1525489,Gastroly Ltd,Takeaway/sandwich shop,Enfield,N9 0PD,4,,-0.0625988,51.6203139
+2026-11-16,removed,1936684,Golden Hive UK,Other catering premises,Enfield,EN3,AwaitingInspection,,,
+2026-11-16,removed,1945131,Hayat,Other catering premises,Enfield,EN3,AwaitingInspection,,,
+2026-11-16,removed,316404,Highlands Village Hall,Other catering premises,Enfield,N21 1UJ,AwaitingInspection,,-0.1106,51.646327
+2026-11-16,removed,1695519,His Express,Retailers - other,Enfield,EN3 5SD,4,,-0.043526,51.666604
+2026-11-16,removed,317437,Holtwhites Hotel,Hotel/bed & breakfast/guest house,Enfield,EN2 0QN,5,,-0.087603,51.660073
+2026-11-16,removed,1796597,Jamaican Dutchpot Kitchen (Kitchen 20),Takeaway/sandwich shop,Enfield,N18 1UB,4,,-0.0746735,51.6094428
+2026-11-16,removed,1873558,KOREAN BBQ HOUSE,Restaurant/Cafe/Canteen,Enfield,EN1 2AA,4,,-0.07977,51.6518723
+2026-11-16,removed,316771,Kempe Hall Community Association,Pub/bar/nightclub,Enfield,EN1 4QS,AwaitingInspection,,-0.048845,51.676764
+2026-11-16,removed,1936692,Kendeas,Other catering premises,Enfield,N21,AwaitingInspection,,,
+2026-11-16,removed,1735801,L'CHAMA- Kitchen 2,Takeaway/sandwich shop,Enfield,N18 1UB,5,,-0.0742712,51.6100747
+2026-11-16,removed,1758303,La Petite Auberge,Restaurant/Cafe/Canteen,Enfield,EN4 0DB,4,,-0.147641,51.647529
+2026-11-16,removed,1419979,Lava Lifestyle,Retailers - other,Enfield,N11,5,,,
+2026-11-16,removed,317352,Lobo Fisheries,Retailers - other,Enfield,N18 2QD,1,,-0.063625,51.616427
+2026-11-16,removed,831749,Luncheon Club,Caring Premises,Enfield,N14 4AZ,AwaitingInspection,,-0.1365617,51.6449821
+2026-11-16,removed,1981728,Ma'r Ranna,Other catering premises,Enfield,EN1,AwaitingInspection,,,
+2026-11-16,removed,1838838,Mama Spud,Mobile caterer,Enfield,EN2,4,,,
+2026-11-16,removed,1787120,Minchenden Lodge,Caring Premises,Enfield,N14 6DD,5,,-0.1299579,51.6291404
+2026-11-16,removed,1737577,N.Joy Catering Limited,Takeaway/sandwich shop,Enfield,EN1 1SP,2,,-0.0582179,51.6454029
+2026-11-16,removed,1268304,N18 Food and Wine,Retailers - other,Enfield,N18 2SS,4,,-0.0657905,51.6098002
+2026-11-16,removed,317558,New River Croyland Church,Other catering premises,Enfield,N9 7BE,AwaitingInspection,,-0.062579,51.630483
+2026-11-16,removed,316287,North London Clinic,Caring Premises,Enfield,N9 9DY,5,,-0.0631211,51.6259909
+2026-11-16,removed,458926,North London Hospice,Other catering premises,Enfield,N21 3AY,AwaitingInspection,,-0.094369,51.625625
+2026-11-16,removed,1707278,North Middlesex University Hospital Staff Restaurant,Restaurant/Cafe/Canteen,Enfield,N18 1QX,4,,-0.074353,51.613132
+2026-11-16,removed,1591561,Nursery,School/college/university,Enfield,EN1 3PU,4,,-0.054449,51.65737
+2026-11-16,removed,316768,Our Lady Of Walsingham,Other catering premises,Enfield,EN2 8HG,AwaitingInspection,,-0.097989,51.661699
+2026-11-16,removed,316274,Ponders End Smallholders Assoc,Pub/bar/nightclub,Enfield,EN3 4NU,AwaitingInspection,,-0.043113,51.641967
+2026-11-16,removed,634337,Ponders End Youth Centre,Pub/bar/nightclub,Enfield,EN3 4PX,3,,-0.038407,51.6425
+2026-11-16,removed,1676976,Pralin Patisserie,Retailers - other,Enfield,EN1 3EE,1,,-0.0808721,51.6524749
+2026-11-16,removed,1131907,Punto Italian Restaurant,Restaurant/Cafe/Canteen,Enfield,N21 2RT,5,,-0.093763,51.634554
+2026-11-16,removed,317363,Queen Ann Care Supported Living,Caring Premises,Enfield,N13 4RE,AwaitingInspection,,-0.11032,51.620011
+2026-11-16,removed,1883394,Quore Dolce (food stall),Restaurant/Cafe/Canteen,Enfield,EN1 2AA,4,,-0.07977,51.6518723
+2026-11-16,removed,1936740,Ritania Seasonings,Other catering premises,Enfield,EN3,AwaitingInspection,,,
+2026-11-16,removed,316734,Royal Mail Sorting Office,Restaurant/Cafe/Canteen,Enfield,N14 6BW,AwaitingInspection,,-0.128318,51.630614
+2026-11-16,removed,431096,Scoffs C/O Selco,Restaurant/Cafe/Canteen,Enfield,EN1 1TX,5,,-0.053956,51.651679
+2026-11-16,removed,316549,Shell Palmers Green,Retailers - other,Enfield,N13 5UN,AwaitingInspection,,-0.109437,51.61417
+2026-11-16,removed,930372,Silver Street PO,Retailers - other,Enfield,N18 1RG,4,,-0.074902,51.616189
+2026-11-16,removed,1963822,Slice Shack,Other catering premises,Enfield,EN3,AwaitingInspection,,,
+2026-11-16,removed,317245,Southgate Old Scholars Association,Pub/bar/nightclub,Enfield,EN4 9JG,AwaitingInspection,,-0.152519,51.652696
+2026-11-16,removed,317131,Southgate School,Restaurant/Cafe/Canteen,Enfield,EN4 0BL,5,,-0.140760004520416,51.6469459533691
+2026-11-16,removed,316666,St George's Hall,Other catering premises,Enfield,EN3 6NR,AwaitingInspection,,-0.038696,51.673969
+2026-11-16,removed,316371,St Helier Hall,Pub/bar/nightclub,Enfield,EN3 5XF,AwaitingInspection,,-0.040907,51.667316
+2026-11-16,removed,595370,St John of God Hospitaller Services,Caring Premises,Enfield,N9 8NZ,Exempt,,-0.052035,51.633428
+2026-11-16,removed,317138,St Johns C Of E Primary School,School/college/university,Enfield,EN2 9BD,3,,-0.096369,51.674468
+2026-11-16,removed,316499,St Johns Methodist Church/Comm Ctre,Other catering premises,Enfield,EN1 4QA,AwaitingInspection,,-0.05124,51.67487
+2026-11-16,removed,316365,St Marys Rc Primary School,School/college/university,Enfield,EN3 7DE,5,,-0.040182,51.648258
+2026-11-16,removed,316490,St Michaels & All Angels Church Hall,Other catering premises,Enfield,EN2 0QP,AwaitingInspection,,-0.088833,51.661757
+2026-11-16,removed,1963827,Street flame,Other catering premises,Enfield,N14,AwaitingInspection,,,
+2026-11-16,removed,1782016,TacoLoco,Takeaway/sandwich shop,Enfield,N21 2RT,2,,-0.0937586,51.63443
+2026-11-16,removed,1379437,The Cafe at Chickenshed,Restaurant/Cafe/Canteen,Enfield,N14 4PE,5,,-0.145442,51.644392
+2026-11-16,removed,2010291,The Loaded Box,Other catering premises,Enfield,N14 6BT,3,,-0.1268994,51.6308317
+2026-11-16,removed,1897660,The Woodman,Pub/bar/nightclub,Enfield,N13 4BD,5,,-0.116939,51.628696
+2026-11-16,removed,316517,Theatre Bar,Other catering premises,Enfield,N13 4DH,AwaitingInspection,,-0.1028424,51.624191
+2026-11-16,removed,316133,Trent Park Golf Club,Pub/bar/nightclub,Enfield,N14 4UW,AwaitingInspection,,-0.131149,51.649264
+2026-11-16,removed,1802200,Turkish Street Food O/S,Takeaway/sandwich shop,Enfield,EN3,1,,,
+2026-11-16,removed,1435771,UCKG Edmonton,Other catering premises,Enfield,N18 2XZ,5,,-0.0652024,51.6142589
+2026-11-16,removed,1735803,V Maxy Chick & Shakes,Restaurant/Cafe/Canteen,Enfield,EN3 6PR,1,,-0.037674,51.674869
+2026-11-16,removed,1022459,Voyage 1 Ltd,Caring Premises,Enfield,N14 4UB,AwaitingInspection,,-0.127177,51.644623
+2026-11-16,removed,316304,WILLIAM HILL,Retailers - other,Enfield,EN4 0BX,AwaitingInspection,,,
+2026-11-16,removed,316052,WRVS DEAN HOUSE TROLLEY SHOP,Caring Premises,Enfield,EN3 5AT,5,,-0.0479357,51.6562932
+2026-11-16,removed,316585,Walker Pharmacy,Retailers - other,Enfield,N13 5XG,AwaitingInspection,,-0.105061,51.622139
+2026-11-16,removed,1416868,West Lea School,School/college/university,Enfield,"",3,,-0.1369362,51.6140004
+2026-11-16,removed,316528,William Hill,Retailers - other,Enfield,N21 3SA,AwaitingInspection,,-0.095947,51.631757
+2026-11-16,removed,316179,William Hill,Retailers - other,Enfield,EN1 2HB,AwaitingInspection,,-0.080801,51.636951
+2026-11-16,removed,317494,William Hill,Retailers - other,Enfield,N9 0TZ,AwaitingInspection,,-0.058178,51.624259
+2026-11-16,removed,1853310,barakah kitchen,Takeaway/sandwich shop,Enfield,EN1 4QT,0,,-0.048186,51.6763773
+2026-11-16,removed,1984472,IFE OBDEIJN,Manufacturers/packers,Kensington and Chelsea,SW7,AwaitingInspection,,,
+2026-11-16,removed,1958477,IT'S A Date,Other catering premises,Kensington and Chelsea,W11 1WQ,AwaitingInspection,,-0.2161171,51.5133996
+2026-11-16,removed,1990288,Lahore to London,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,,-0.197052,51.500023
+2026-11-16,removed,1993344,Olive Dining Ltd,Other catering premises,Kensington and Chelsea,W10 6EL,AwaitingInspection,,-0.21424899995327,51.5209884643555
+2026-11-16,removed,333521,Starbucks Coffee Company (UK) Limited,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 4PL,5,,-0.1834991,51.4979083
+2026-11-16,removed,1600678,CATERLINK - All Saints Primary School,School/college/university,Lewisham,SE3 0TX,5,,,
+2026-11-16,removed,1832959,"Grovehill Coffee Morning, Phoenix Community Housing",Restaurant/Cafe/Canteen,Lewisham,BR1 4JP,AwaitingInspection,,0.0046821,51.4198413
+2026-11-16,removed,817435,House of Flavourz,Restaurant/Cafe/Canteen,Lewisham,SE23 2AR,4,,-0.0526011,51.4392243
+2026-11-16,removed,1598603,J Sainsbury plc,Retailers - supermarkets/hypermarkets,Lewisham,SE12 8PZ,5,,0.0101157,51.4561606
+2026-11-16,removed,1599453,North over Fruit Tree Day Nursery,Caring Premises,Lewisham,BR1 5JR,5,,0.0115401,51.4309201
 2026-11-16,removed,640908,B J Wines,Retailers - other,Newham,E16 3AR,1,,0.02549,51.510689
 2026-11-16,removed,1604589,Bridgets Cafe,Restaurant/Cafe/Canteen,Newham,E20 1LF,5,,-0.0096445,51.5497733
 2026-11-16,removed,1704706,Brunch American Inspired / Pasta Paradiso,Restaurant/Cafe/Canteen,Newham,E15 3QJ,5,,0.013522,51.537001
@@ -67,3 +413,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-16,removed,1260376,Subramanian Narayanaraja,Restaurant/Cafe/Canteen,Newham,E12 6SL,3,,0.049872,51.5428105
 2026-11-16,removed,1937491,Tasty Bitez 4 U,Takeaway/sandwich shop,Newham,E13 8AF,3,,0.023766,51.526726
 2026-11-16,removed,1975805,Chilli Flames,Takeaway/sandwich shop,Waltham Forest,E10 6AP,AwaitingInspection,,-0.0112675,51.5763902
+2026-11-16,removed,1930102,Cowboy Cafe,Other catering premises,Wandsworth,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-16,removed,1573462,Creamor Mobile Bicycle,Mobile caterer,Wandsworth,SW8 4BU,5,,-0.1462872,51.477066
+2026-11-16,removed,1712478,Fatti di Impasto,Restaurant/Cafe/Canteen,Wandsworth,SW18 1SH,5,,-0.1917065,51.4593408
+2026-11-16,removed,1868155,Green up Daily,Distributors/Transporters,Wandsworth,SW11,AwaitingInspection,,,
+2026-11-16,removed,1967237,La tavola it ltd,Takeaway/sandwich shop,Wandsworth,SW18 4DX,AwaitingInspection,,-0.1890488,51.4469156
