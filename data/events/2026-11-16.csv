@@ -1,0 +1,14 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-16,new,1875155,House Of Merroe,Retailers - other,Newham,E6 6,,AwaitingInspection,,
+2026-11-16,new,1984406,Srubhi's Kitchen,Mobile caterer,Newham,E20,,AwaitingInspection,,
+2026-11-16,rating_changed,1986887,Waffle Drop,Mobile caterer,Barnet,HA8 7BD,AwaitingInspection,4,-0.27598,51.612885
+2026-11-16,rating_changed,1636092,Pantry,Retailers - other,Lewisham,SE23 2LD,3,1,-0.0520454,51.4397726
+2026-11-16,rating_changed,1574925,Sushi Manga,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW2 7LA,3,4,-0.3578109,51.4526199
+2026-11-16,rating_changed,1980703,JERK FLAMES,Restaurant/Cafe/Canteen,Sutton,SM6 8QG,AwaitingInspection,4,-0.148802,51.360111
+2026-11-16,removed,640908,B J Wines,Retailers - other,Newham,E16 3AR,1,,0.02549,51.510689
+2026-11-16,removed,1604589,Bridgets Cafe,Restaurant/Cafe/Canteen,Newham,E20 1LF,5,,-0.0096445,51.5497733
+2026-11-16,removed,1704706,Brunch American Inspired / Pasta Paradiso,Restaurant/Cafe/Canteen,Newham,E15 3QJ,5,,0.013522,51.537001
+2026-11-16,removed,1964374,Hungry Bird,Restaurant/Cafe/Canteen,Newham,E7 8NW,AwaitingInspection,,0.0385455,51.5413329
+2026-11-16,removed,1827631,Marine Fish Limited,Retailers - other,Newham,E12 6SB,1,,0.0509609989821911,51.5409736633301
+2026-11-16,removed,1260376,Subramanian Narayanaraja,Restaurant/Cafe/Canteen,Newham,E12 6SL,3,,0.049872,51.5428105
+2026-11-16,removed,1937491,Tasty Bitez 4 U,Takeaway/sandwich shop,Newham,E13 8AF,3,,0.023766,51.526726
