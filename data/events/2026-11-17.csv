@@ -1,0 +1,36 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-17,rating_changed,628418,Ark Day Care Nursery,Caring Premises,Barking and Dagenham,RM8 1NL,4,1,0.147058,51.564425
+2026-11-17,rating_changed,1962437,Celestrial Church of Christ Avonmide Parish,Other catering premises,Barking and Dagenham,RM8 1HJ,AwaitingInspection,1,0.1429593,51.5681617
+2026-11-17,rating_changed,1945690,BIRD & BLEND TEA LTD,Retailers - other,Camden,NW1 8AA,AwaitingInspection,3,-0.1466,51.5418
+2026-11-17,rating_changed,1989653,CASA BAT'BOUT,Restaurant/Cafe/Canteen,Camden,NW1 8QP,AwaitingInspection,1,-0.1432318,51.540029
+2026-11-17,rating_changed,1981201,SOKA,Restaurant/Cafe/Canteen,Camden,NW1 8QP,AwaitingInspection,1,-0.1432318,51.540029
+2026-11-17,rating_changed,293859,Vivat Bacchus,Restaurant/Cafe/Canteen,City of London Corporation,EC4A 4LL,5,4,-0.105746,51.517846
+2026-11-17,rating_changed,1407476,Amo La Pasta,Takeaway/sandwich shop,Croydon,CR0 1LD,0,4,-0.0951249971985817,51.3746376037598
+2026-11-17,rating_changed,1950760,Cloud Brew Coffee,Retailers - other,Ealing,W5 5,AwaitingInspection,4,,
+2026-11-17,rating_changed,1981938,Your Local Hub Food And Wine,Retailers - other,Ealing,W3 7RQ,AwaitingInspection,2,-0.254035,51.506443
+2026-11-17,rating_changed,1676978,Gina's Bakery,Other catering premises,Enfield,N11 1AH,3,1,-0.135646,51.616451
+2026-11-17,rating_changed,1988030,Kiya's Local,Retailers - other,Enfield,N13 4RU,AwaitingInspection,2,-0.1179877,51.6122143
+2026-11-17,rating_changed,2001823,Little Heath Supermarket,Retailers - other,Greenwich,SE7 8HA,AwaitingInspection,3,0.0503029,51.485697
+2026-11-17,rating_changed,1910933,Common Ground,Restaurant/Cafe/Canteen,Hackney,N1 4EN,2,4,-0.0800864,51.5419057
+2026-11-17,rating_changed,1991447,Nourish Contract Catering Ltd,School/college/university,Harrow,HA3 5RQ,AwaitingInspection,4,,
+2026-11-17,rating_changed,520182,Jinli Chinese Restaurant,Restaurant/Cafe/Canteen,Hillingdon,UB8 3NJ,1,0,-0.458535999059677,51.5260429382324
+2026-11-17,rating_changed,1719557,Lovely Peri Peri,Takeaway/sandwich shop,Hillingdon,UB4 0JH,4,1,-0.395077,51.515004
+2026-11-17,rating_changed,1493417,Yeading Junior School,School/college/university,Hillingdon,UB4 0NR,5,4,-0.3977112,51.5215504
+2026-11-17,rating_changed,483005,Blessed Take Away,Takeaway/sandwich shop,Lambeth,SW9 8RZ,3,0,-0.101158998906612,51.4662818908691
+2026-11-17,rating_changed,1598886,Broadway Cafe,Restaurant/Cafe/Canteen,Lewisham,SE6 4SP,4,1,-0.022484,51.445124
+2026-11-17,rating_changed,1599826,Resta Coffee Bar,Restaurant/Cafe/Canteen,Lewisham,SE12 0DZ,0,4,0.0215638,51.4308377
+2026-11-17,rating_changed,1252761,Flourish,Restaurant/Cafe/Canteen,Merton,SW19,5,3,,
+2026-11-17,rating_changed,1683509,Bunsik,Restaurant/Cafe/Canteen,Newham,E20 1EH,2,4,-0.0067131,51.5434432
+2026-11-17,rating_changed,1396728,Tariq Halal Meats Stratford,Retailers - other,Newham,E15 1XE,4,1,0.0001417,51.5417094
+2026-11-17,rating_changed,1217985,The Stratford - Manhattan Loft Gardens,Hotel/bed & breakfast/guest house,Newham,E20 1FD,5,3,-0.0080161,51.5452572
+2026-11-17,rating_changed,729154,Bolu kebab restaurant,Takeaway/sandwich shop,Southwark,SE5 8TR,5,4,-0.089604,51.47406
+2026-11-17,rating_changed,1856502,Lao yu food t/a mr yu bentos,Takeaway/sandwich shop,Southwark,SE17 2DN,1,3,-0.093948,51.487979
+2026-11-17,rating_changed,467684,Mini treasures children centre,Caring Premises,Southwark,SE5 0XG,5,3,-0.0976350009441376,51.4793968200684
+2026-11-17,rating_changed,67452,Cafe Marrone,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2QD,3,1,-0.056192,51.511739
+2026-11-17,rating_changed,2006886,J's Burgers,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2PH,AwaitingInspection,4,-0.0569227,51.5117337
+2026-11-17,rating_changed,1979325,Tigermilk,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6AG,AwaitingInspection,4,-0.0761029,51.5188393
+2026-11-17,rating_changed,1744338,Forest Road Food & Wine,Retailers - other,Waltham Forest,E17 6HE,4,1,-0.0360048,51.5877955
+2026-11-17,rating_changed,1300826,Hugs & Mugs Food and Wine,Restaurant/Cafe/Canteen,Waltham Forest,E4 6SH,4,1,-0.0185252,51.6172575
+2026-11-17,rating_changed,1789560,Love falafel,Restaurant/Cafe/Canteen,Westminster,W1T 3LY,4,3,-0.1373579,51.5186052
+2026-11-17,rating_changed,1991823,MARCHON Victoria,Retailers - other,Westminster,SW1V 1TS,AwaitingInspection,4,-0.1421604,51.4926924
+2026-11-17,rating_changed,1966153,RONI'S MARYLEBONE,Takeaway/sandwich shop,Westminster,W1U 3JU,AwaitingInspection,4,-0.1515,51.51716
