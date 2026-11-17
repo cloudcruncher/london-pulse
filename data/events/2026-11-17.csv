@@ -1,4 +1,31 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-17,new,2015097,Shell - Waitrose Holloway,Retailers - other,Islington,N7 8JE,,5,,
+2026-11-17,new,2015166,Habibi Have It,Other catering premises,Merton,SW20,,AwaitingInspection,,
+2026-11-17,new,2015168,Home taste bakery,Other catering premises,Merton,SM4,,AwaitingInspection,,
+2026-11-17,new,2015167,Jana’s Bakery,Other catering premises,Merton,SW19,,AwaitingInspection,,
+2026-11-17,new,2015165,Kenitos Piri Piri Colliers Wood,Takeaway/sandwich shop,Merton,SW19 2NX,,AwaitingInspection,,
+2026-11-17,new,1875664,Moments & Memories,Restaurant/Cafe/Canteen,Merton,SW20,,5,,
+2026-11-17,new,1704706,Brunch American Inspired / Pasta Paradiso,Restaurant/Cafe/Canteen,Newham,E15 3QJ,,5,,
+2026-11-17,new,2014608,Casa Di Due,Mobile caterer,Newham,E13,,AwaitingInspection,,
+2026-11-17,new,1964380,DJ Wing & Cheese,Mobile caterer,Newham,E16,,AwaitingInspection,,
+2026-11-17,new,2013219,Indian Masalas,Mobile caterer,Newham,E7 8,,AwaitingInspection,,
+2026-11-17,new,2014612,KBFC,Restaurant/Cafe/Canteen,Newham,E13 8AF,,AwaitingInspection,,
+2026-11-17,new,2014613,Kaandhal Restaurant,Restaurant/Cafe/Canteen,Newham,E6 1JG,,AwaitingInspection,,
+2026-11-17,new,2014610,Mama's Kitchen,Other catering premises,Newham,E15,,AwaitingInspection,,
+2026-11-17,new,2014606,Meenas Dinein,Restaurant/Cafe/Canteen,Newham,E6 1HU,,AwaitingInspection,,
+2026-11-17,new,2014611,Orhans,Other catering premises,Newham,E16 2AA,,AwaitingInspection,,
+2026-11-17,new,2014609,Peri Spot,Takeaway/sandwich shop,Newham,E6 1AE,,AwaitingInspection,,
+2026-11-17,new,2014614,Soleli,Other catering premises,Newham,E20,,AwaitingInspection,,
+2026-11-17,new,2014607,Tribeca Deli LTD,Mobile caterer,Newham,E16,,AwaitingInspection,,
+2026-11-17,new,2015154,Asian Foodoole / Smash Crave,Takeaway/sandwich shop,Richmond-Upon-Thames,SW14,,AwaitingInspection,,
+2026-11-17,new,2015152,Hampton Rangers Football Club,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,"",,AwaitingInspection,,
+2026-11-17,new,2015153,Iro sushi,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3SD,,AwaitingInspection,,
+2026-11-17,new,2015150,KAFKAS WILDFLOWER TRADING LTD,Distributors/Transporters,Richmond-Upon-Thames,TW11 0JR,,AwaitingInspection,,
+2026-11-17,new,2015148,Pizza Napoli,Takeaway/sandwich shop,Richmond-Upon-Thames,TW2,,AwaitingInspection,,
+2026-11-17,new,2015147,Stop & Sip,Takeaway/sandwich shop,Richmond-Upon-Thames,SW11 1PA,,AwaitingInspection,,
+2026-11-17,new,2015149,Taylorshaw @ LIFT Richmond Park,School/college/university,Richmond-Upon-Thames,"",,AwaitingInspection,,
+2026-11-17,new,2015151,husc,Distributors/Transporters,Richmond-Upon-Thames,TW9,,AwaitingInspection,,
+2026-11-17,new,2015328,Limin,Takeaway/sandwich shop,Tower Hamlets,E1 6EA,,AwaitingInspection,,
 2026-11-17,rating_changed,628418,Ark Day Care Nursery,Caring Premises,Barking and Dagenham,RM8 1NL,4,1,0.147058,51.564425
 2026-11-17,rating_changed,1962437,Celestrial Church of Christ Avonmide Parish,Other catering premises,Barking and Dagenham,RM8 1HJ,AwaitingInspection,1,0.1429593,51.5681617
 2026-11-17,rating_changed,1945690,BIRD & BLEND TEA LTD,Retailers - other,Camden,NW1 8AA,AwaitingInspection,3,-0.1466,51.5418
@@ -16,21 +43,72 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-17,rating_changed,520182,Jinli Chinese Restaurant,Restaurant/Cafe/Canteen,Hillingdon,UB8 3NJ,1,0,-0.458535999059677,51.5260429382324
 2026-11-17,rating_changed,1719557,Lovely Peri Peri,Takeaway/sandwich shop,Hillingdon,UB4 0JH,4,1,-0.395077,51.515004
 2026-11-17,rating_changed,1493417,Yeading Junior School,School/college/university,Hillingdon,UB4 0NR,5,4,-0.3977112,51.5215504
+2026-11-17,rating_changed,1004635,ETM Group @ The Montcalm,Restaurant/Cafe/Canteen,Islington,EC2A 1DS,4,3,,
 2026-11-17,rating_changed,483005,Blessed Take Away,Takeaway/sandwich shop,Lambeth,SW9 8RZ,3,0,-0.101158998906612,51.4662818908691
 2026-11-17,rating_changed,1598886,Broadway Cafe,Restaurant/Cafe/Canteen,Lewisham,SE6 4SP,4,1,-0.022484,51.445124
 2026-11-17,rating_changed,1599826,Resta Coffee Bar,Restaurant/Cafe/Canteen,Lewisham,SE12 0DZ,0,4,0.0215638,51.4308377
+2026-11-17,rating_changed,480218,Aya Restaurant,Restaurant/Cafe/Canteen,Merton,"",5,3,,
+2026-11-17,rating_changed,779660,Curry Leaves,Restaurant/Cafe/Canteen,Merton,KT3 4NL,4,5,,
 2026-11-17,rating_changed,1252761,Flourish,Restaurant/Cafe/Canteen,Merton,SW19,5,3,,
 2026-11-17,rating_changed,1683509,Bunsik,Restaurant/Cafe/Canteen,Newham,E20 1EH,2,4,-0.0067131,51.5434432
 2026-11-17,rating_changed,1396728,Tariq Halal Meats Stratford,Retailers - other,Newham,E15 1XE,4,1,0.0001417,51.5417094
 2026-11-17,rating_changed,1217985,The Stratford - Manhattan Loft Gardens,Hotel/bed & breakfast/guest house,Newham,E20 1FD,5,3,-0.0080161,51.5452572
+2026-11-17,rating_changed,1704071,Harlequins RFC,Pub/bar/nightclub,Richmond-Upon-Thames,TW2 7SX,4,5,,
+2026-11-17,rating_changed,1574898,Rich Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 2EF,4,5,,
+2026-11-17,rating_changed,1704074,Sebastians Italian,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,"",1,5,,
+2026-11-17,rating_changed,1575563,Spicy Rooster,Takeaway/sandwich shop,Richmond-Upon-Thames,TW4 5NP,4,5,,
+2026-11-17,rating_changed,1574120,Tsaretta Spice,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3NR,4,5,,
+2026-11-17,rating_changed,1574902,Twickenham Guest House,Hotel/bed & breakfast/guest house,Richmond-Upon-Thames,TW2 7QT,1,5,,
+2026-11-17,rating_changed,1796403,Aoki,Takeaway/sandwich shop,Southwark,SE15 1TF,4,5,,
+2026-11-17,rating_changed,1979976,Bandidos tacos,Takeaway/sandwich shop,Southwark,SE1 0NJ,AwaitingInspection,5,,
 2026-11-17,rating_changed,729154,Bolu kebab restaurant,Takeaway/sandwich shop,Southwark,SE5 8TR,5,4,-0.089604,51.47406
+2026-11-17,rating_changed,1965207,Bottlehouse dulwich,Retailers - other,Southwark,SE22 8EP,AwaitingInspection,5,,
+2026-11-17,rating_changed,2010188,Dishoom borough,Restaurant/Cafe/Canteen,Southwark,SE1 1TY,AwaitingInspection,5,,
+2026-11-17,rating_changed,363456,Elliots borough market,Restaurant/Cafe/Canteen,Southwark,SE1 9AD,4,5,,
+2026-11-17,rating_changed,1381499,Francesco sourdough pizza,Takeaway/sandwich shop,Southwark,SE5 8TR,4,5,,
 2026-11-17,rating_changed,1856502,Lao yu food t/a mr yu bentos,Takeaway/sandwich shop,Southwark,SE17 2DN,1,3,-0.093948,51.487979
+2026-11-17,rating_changed,1960426,Lexington @ lewis silkin,Restaurant/Cafe/Canteen,Southwark,"",AwaitingInspection,5,,
+2026-11-17,rating_changed,362931,Londis,Retailers - other,Southwark,SE1 1SG,4,5,,
 2026-11-17,rating_changed,467684,Mini treasures children centre,Caring Premises,Southwark,SE5 0XG,5,3,-0.0976350009441376,51.4793968200684
+2026-11-17,rating_changed,1979963,Rukky's african kitchen,Takeaway/sandwich shop,Southwark,SE17 2SB,AwaitingInspection,5,,
+2026-11-17,rating_changed,1979986,Sawaros thai,Restaurant/Cafe/Canteen,Southwark,SE1 6EY,AwaitingInspection,5,,
+2026-11-17,rating_changed,364924,Silka restaurant,Restaurant/Cafe/Canteen,Southwark,SE1 1TL,0,5,,
+2026-11-17,rating_changed,1796386,The albert arms,Pub/bar/nightclub,Southwark,SE1 6EY,4,5,,
+2026-11-17,rating_changed,364223,The mayflower,Pub/bar/nightclub,Southwark,SE16 4NF,4,5,,
+2026-11-17,rating_changed,1983623,Turning point,Caring Premises,Southwark,SE5 7HQ,AwaitingInspection,5,,
+2026-11-17,rating_changed,1979989,Weirdough bakery,Takeaway/sandwich shop,Southwark,SE16 7LL,AwaitingInspection,5,,
 2026-11-17,rating_changed,67452,Cafe Marrone,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2QD,3,1,-0.056192,51.511739
 2026-11-17,rating_changed,2006886,J's Burgers,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2PH,AwaitingInspection,4,-0.0569227,51.5117337
 2026-11-17,rating_changed,1979325,Tigermilk,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6AG,AwaitingInspection,4,-0.0761029,51.5188393
 2026-11-17,rating_changed,1744338,Forest Road Food & Wine,Retailers - other,Waltham Forest,E17 6HE,4,1,-0.0360048,51.5877955
 2026-11-17,rating_changed,1300826,Hugs & Mugs Food and Wine,Restaurant/Cafe/Canteen,Waltham Forest,E4 6SH,4,1,-0.0185252,51.6172575
+2026-11-17,rating_changed,1986210,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 1DA,4,AwaitingPublication,-0.1120007,51.5134517
+2026-11-17,rating_changed,1986219,B Kitchen,Takeaway/sandwich shop,Westminster,WC2R 0AP,4,AwaitingPublication,-0.1192796,51.5109877
 2026-11-17,rating_changed,1789560,Love falafel,Restaurant/Cafe/Canteen,Westminster,W1T 3LY,4,3,-0.1373579,51.5186052
 2026-11-17,rating_changed,1991823,MARCHON Victoria,Retailers - other,Westminster,SW1V 1TS,AwaitingInspection,4,-0.1421604,51.4926924
 2026-11-17,rating_changed,1966153,RONI'S MARYLEBONE,Takeaway/sandwich shop,Westminster,W1U 3JU,AwaitingInspection,4,-0.1515,51.51716
+2026-11-17,removed,1977061,MOJU SPICE,Restaurant/Cafe/Canteen,Merton,SW19 1AU,AwaitingInspection,,-0.1920844,51.4157592
+2026-11-17,removed,1988109,Nure Bibi,Mobile caterer,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-17,removed,200131,Spice of Raj,Restaurant/Cafe/Canteen,Merton,SW19 2NX,2,,,
+2026-11-17,removed,1981417,The Bake Edit,Other catering premises,Merton,CR4,AwaitingInspection,,,
+2026-11-17,removed,1984756,Wild Petal Bakes,Other catering premises,Merton,SW19,AwaitingInspection,,,
+2026-11-17,removed,1758981,Fatima's Kitchen,Takeaway/sandwich shop,Newham,E7 0QH,1,,0.0251544,51.5486893
+2026-11-17,removed,1948864,Flaming Grill Burgers / Rahman's Golden Oven,Other catering premises,Newham,E15 3QJ,4,,0.013522,51.537001
+2026-11-17,removed,1991902,Prova Nutrition Ltd,Other catering premises,Newham,E15,AwaitingInspection,,,
+2026-11-17,removed,1806133,Company Of Cooks by Compass Group UK,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,5,,,
+2026-11-17,removed,1806135,Company Of Cooks by Compass Group UK,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,5,,-0.2950917,51.4833964
+2026-11-17,removed,1806136,Company Of Cooks by Compass Group UK,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,5,,,
+2026-11-17,removed,1806132,Company of Cooks by Compass - Botanical Brasserie,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AE,5,,-0.2950917,51.4833964
+2026-11-17,removed,1988126,Drummer Smash Burger,Retailers - other,Richmond-Upon-Thames,TW1 1BZ,AwaitingInspection,,-0.3363369,51.4534051
+2026-11-17,removed,1970008,PONY&IVY BAKERY,Other catering premises,Richmond-Upon-Thames,TW11 0DH,Exempt,,-0.326075,51.420347
+2026-11-17,removed,1592322,The Coppernose,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,KT8 9BN,4,,-0.3421115,51.404847
+2026-11-17,removed,1353786,Apka fine foods t/a peepal uk,Other catering premises,Southwark,SE15 1NP,5,,-0.0535641,51.4815429
+2026-11-17,removed,1965213,Common pizza,Restaurant/Cafe/Canteen,Southwark,SE22 8HU,AwaitingInspection,,-0.0751221,51.4576453
+2026-11-17,removed,364576,Corner fish bar,Takeaway/sandwich shop,Southwark,SE15 1BD,3,,-0.063505,51.479981
+2026-11-17,removed,1402460,Four hundred rabbits,Restaurant/Cafe/Canteen,Southwark,SE17 1GQ,5,,-0.0955865,51.4935007
+2026-11-17,removed,1792997,Loop back,Other catering premises,Southwark,SE1 6EY,AwaitingInspection,,-0.1039652,51.4973329
+2026-11-17,removed,1913543,Master cao malatang,Takeaway/sandwich shop,Southwark,SE16 3RA,5,,-0.0725265,51.4977196
+2026-11-17,removed,363646,Rotherhithe village,Retailers - other,Southwark,SE16 4LD,4,,-0.052375,51.500875
+2026-11-17,removed,1960403,Sarah saigon,Takeaway/sandwich shop,Southwark,SE15 3AF,AwaitingInspection,,-0.052284,51.457394
+2026-11-17,removed,1150035,Star one supermarket,Retailers - other,Southwark,SE17 2AQ,2,,-0.087441,51.488593
+2026-11-17,removed,1681597,Zaitoon food market,Retailers - supermarkets/hypermarkets,Southwark,SE1 5UB,2,,-0.079175,51.489213
