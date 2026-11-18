@@ -2,6 +2,33 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-18,new,1903919,Piece of Velvet,Distributors/Transporters,Hackney,EC2A 4RJ,,AwaitingInspection,,
 2026-11-18,new,2016208,S gelato,Mobile caterer,Hackney,E2 8AG,,AwaitingInspection,,
 2026-11-18,new,2016209,Spice Hut,Restaurant/Cafe/Canteen,Hackney,E8 2NP,,AwaitingInspection,,
+2026-11-18,new,2016222,Discover London,Retailers - other,Hillingdon,TW6 1EW,,5,,
+2026-11-18,new,2016221,Fresh & Halal Meat Ltd,Retailers - other,Hillingdon,UB4 0RY,,AwaitingInspection,,
+2026-11-18,new,2016231,G N DESI GHEE BISCUITS LTD,Retailers - other,Hillingdon,UB4 8JB,,AwaitingInspection,,
+2026-11-18,new,2016228,Holy Trinity CofE Primary School Before & After School Club,School/college/university,Hillingdon,HA6 2RH,,AwaitingInspection,,
+2026-11-18,new,2016224,Istanbul Meze Grill,Restaurant/Cafe/Canteen,Hillingdon,HA4 9BH,,5,,
+2026-11-18,new,2016223,Miniso,Retailers - other,Hillingdon,TW6 2GA,,5,,
+2026-11-18,new,2016230,Munch Monkey,Retailers - other,Hillingdon,HA4 9BN,,AwaitingInspection,,
+2026-11-18,new,2016227,Omnis Catering Union Park,Restaurant/Cafe/Canteen,Hillingdon,UB3 4QR,,AwaitingInspection,,
+2026-11-18,new,2016226,Paji da Dhaba (event),Mobile caterer,Hillingdon,UB10,,AwaitingInspection,,
+2026-11-18,new,2016220,Shree Shyam Tiffin Service,Other catering premises,Hillingdon,UB10,,AwaitingInspection,,
+2026-11-18,new,2016232,Soldiers Return 1828,Pub/bar/nightclub,Hillingdon,UB10 8LG,,AwaitingInspection,,
+2026-11-18,new,2016225,The Alpine Drop ltd,Retailers - other,Hillingdon,HA4 6NG,,AwaitingInspection,,
+2026-11-18,new,2016229,Yummy cup corn & more,Takeaway/sandwich shop,Hillingdon,UB8 1GA,,AwaitingInspection,,
+2026-11-18,new,2016326,Akai Nori,Takeaway/sandwich shop,Tower Hamlets,E14 0EA,,AwaitingInspection,,
+2026-11-18,new,2016329,Avara,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6BD,,AwaitingInspection,,
+2026-11-18,new,654255,Black Cab Coffee Co,Takeaway/sandwich shop,Tower Hamlets,E1 6QL,,AwaitingInspection,,
+2026-11-18,new,2016322,Drinks Madness,Mobile caterer,Tower Hamlets,E3 3BU,,AwaitingInspection,,
+2026-11-18,new,2016324,Fraser Place Canary Wharf,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5SF,,5,,
+2026-11-18,new,2016321,Gift Box Britain,Retailers - other,Tower Hamlets,EC3N 4DR,,4,,
+2026-11-18,new,2016323,In Residence,Retailers - other,Tower Hamlets,E2 9FP,,AwaitingInspection,,
+2026-11-18,new,2016327,Mudir Dokan UK,Retailers - other,Tower Hamlets,E1 0BZ,,AwaitingInspection,,
+2026-11-18,new,2016318,Ong Lai Kopitiam,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9QH,,4,,
+2026-11-18,new,2016320,Pankaco,Other catering premises,Tower Hamlets,E14,,AwaitingInspection,,
+2026-11-18,new,2016319,Pavilion Bakery,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7RG,,AwaitingInspection,,
+2026-11-18,new,2016325,Sharma Nashta Dhaba,Other catering premises,Tower Hamlets,E14 5GX,,AwaitingInspection,,
+2026-11-18,new,1988774,Snack&Roll,Mobile caterer,Tower Hamlets,E1 7,,AwaitingInspection,,
+2026-11-18,new,2016328,The Organ Factory,Pub/bar/nightclub,Tower Hamlets,E2 7AF,,AwaitingInspection,,
 2026-11-18,rating_changed,1972616,Crispy Caves,Restaurant/Cafe/Canteen,Barking and Dagenham,RM6 6LS,AwaitingInspection,3,0.141192,51.571934
 2026-11-18,rating_changed,1732255,Kennysmenu,Other catering premises,Barking and Dagenham,IG11 7FX,1,3,0.0790591,51.5369634
 2026-11-18,rating_changed,1993299,Peri Peri Flame,Restaurant/Cafe/Canteen,Barking and Dagenham,IG11 7NY,AwaitingInspection,4,0.082208,51.535838
@@ -27,10 +54,17 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-18,rating_changed,1993801,Urbanist,Restaurant/Cafe/Canteen,Hackney,N1 6RA,AwaitingInspection,1,-0.0803774,51.5323535
 2026-11-18,rating_changed,1597065,Matt's Cafe,Restaurant/Cafe/Canteen,Hammersmith and Fulham,SW6 5HA,3,4,-0.203929,51.476469
 2026-11-18,rating_changed,1604029,Diamond Cakes LTD,Other catering premises,Harrow,HA3 5AB,5,0,-0.334264,51.592604
+2026-11-18,rating_changed,1960812,B'S Indian Food,Other catering premises,Hillingdon,UB10,AwaitingInspection,5,,
 2026-11-18,rating_changed,2010943,Best Western London Ariel Hotel,Hotel/bed & breakfast/guest house,Hillingdon,UB3 5AJ,AwaitingInspection,2,-0.4336355,51.4811025
+2026-11-18,rating_changed,1807513,Chicken Cottage Ruislip - Urban Flame Kitchen,Takeaway/sandwich shop,Hillingdon,HA4 7AA,3,5,,
+2026-11-18,rating_changed,519319,Costcutter,Retailers - other,Hillingdon,UB10 8DQ,1,5,,
+2026-11-18,rating_changed,1288963,Garma concept ltd,Mobile caterer,Hillingdon,UB7,AwaitingInspection,5,,
+2026-11-18,rating_changed,1989220,General Mills Staff canteen,Other catering premises,Hillingdon,UB8 1QQ,AwaitingInspection,5,,
 2026-11-18,rating_changed,1897285,Millennium Tandoori,Restaurant/Cafe/Canteen,Hillingdon,UB4 9AD,1,4,-0.399689,51.527341
 2026-11-18,rating_changed,2010942,Orlando Pizza,Takeaway/sandwich shop,Hillingdon,UB3 4JA,AwaitingInspection,1,-0.423896,51.50098
+2026-11-18,rating_changed,520087,Shepherds Hill Nursery,Caring Premises,Hillingdon,UB9 6PT,4,5,,
 2026-11-18,rating_changed,1989216,Tesco Stores Limited,Retailers - supermarkets/hypermarkets,Hillingdon,UB7 7DD,AwaitingInspection,4,-0.4739584,51.5087285
+2026-11-18,rating_changed,519990,Woodys Takeout,Takeaway/sandwich shop,Hillingdon,UB7 7BD,1,5,,
 2026-11-18,rating_changed,710503,Banh Mi 108,Takeaway/sandwich shop,Hounslow,TW13 4HE,5,4,-0.412764,51.4421744
 2026-11-18,rating_changed,490856,Beijing Chef,Takeaway/sandwich shop,Hounslow,TW13 6QA,5,4,-0.3919657,51.4358223
 2026-11-18,rating_changed,491053,Regents Food & Wine,Retailers - other,Hounslow,TW13 6QA,3,2,-0.391902,51.4359333
@@ -38,8 +72,24 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-18,rating_changed,765300,Best Turkish Kebab,Takeaway/sandwich shop,Newham,E6 3BA,4,3,0.0527,51.532509
 2026-11-18,rating_changed,1575363,Nemo Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW12 2HU,3,4,,
 2026-11-18,rating_changed,862730,Golden grill,Takeaway/sandwich shop,Southwark,SE16 3QT,5,4,-0.072147,51.495662
+2026-11-18,rating_changed,1986043,"44cook82cook, Kokio",Restaurant/Cafe/Canteen,Tower Hamlets,E9 5EN,AwaitingInspection,5,,
+2026-11-18,rating_changed,1930328,Atlantic Seafood Europe Ltd,Retailers - other,Tower Hamlets,E14 5ST,AwaitingInspection,5,,
 2026-11-18,rating_changed,42331,Bigland Grocers & Meat,Retailers - other,Tower Hamlets,E1 2ND,3,1,-0.058588,51.512687
+2026-11-18,rating_changed,829458,Canababes Food Co Ltd,Other catering premises,Tower Hamlets,E9 5EN,5,AwaitingInspection,,
+2026-11-18,rating_changed,81129,"Indian Greedy Cow, Burger & Kebabs",Restaurant/Cafe/Canteen,Tower Hamlets,E2 7SJ,5,4,,
+2026-11-18,rating_changed,1999590,Jade Pavilion,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7TD,AwaitingInspection,5,,
+2026-11-18,rating_changed,80611,Mad Cats,Other catering premises,Tower Hamlets,E2 7DL,1,5,,
+2026-11-18,rating_changed,1907068,New Grillfellaz,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6LG,AwaitingInspection,5,,
+2026-11-18,rating_changed,78783,Oriental House & US Way Pizza,Takeaway/sandwich shop,Tower Hamlets,E2 7QL,3,2,,
+2026-11-18,rating_changed,67357,Pearly Queen,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6LT,5,AwaitingInspection,,
+2026-11-18,rating_changed,44795,Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0ED,1,5,,
 2026-11-18,rating_changed,1979222,Pitch Wharf,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5EU,AwaitingInspection,3,-0.0150661,51.5037571
+2026-11-18,rating_changed,2001881,Rice Gang,Restaurant/Cafe/Canteen,Tower Hamlets,E9 5EN,AwaitingInspection,5,,
+2026-11-18,rating_changed,84850,Shamim's Perfect Fried Chicken,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EG,AwaitingPublication,2,,
+2026-11-18,rating_changed,1987969,Supershakes,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9QP,AwaitingInspection,5,,
+2026-11-18,rating_changed,1743823,Tattu,Restaurant/Cafe/Canteen,Tower Hamlets,E14 5GX,AwaitingInspection,5,,
+2026-11-18,rating_changed,1933845,Wa Wa Wings Hackney,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7SJ,AwaitingInspection,2,,
+2026-11-18,rating_changed,1999121,Zula Burger,Takeaway/sandwich shop,Tower Hamlets,E1 6EA,AwaitingInspection,5,,
 2026-11-18,rating_changed,1097286,Bottle & Basket,Retailers - other,Waltham Forest,E7 0AS,3,1,0.0167441,51.5535381
 2026-11-18,rating_changed,735393,Caribbean Eatery,Restaurant/Cafe/Canteen,Waltham Forest,E17 5QJ,3,0,-0.0428361,51.5910928
 2026-11-18,rating_changed,1046676,Comfort Angelz Daycare,Caring Premises,Waltham Forest,E17 4EZ,5,4,-0.0053605,51.5933124
@@ -75,3 +125,33 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-18,removed,738790,Turkish Cypriot Cultural Assoc,Other catering premises,Hackney,E8 1BZ,5,,-0.0678931,51.5459247
 2026-11-18,removed,632985,Well St. Butchers,Retailers - other,Hackney,E9 7JA,4,,-0.0495905,51.5408646
 2026-11-18,removed,1973631,the leaside trust,Retailers - other,Hackney,E5 9HQ,AwaitingInspection,,-0.055411,51.569773
+2026-11-18,removed,520300,Breakspear Crematorium,Retailers - other,Hillingdon,HA4 7SJ,Exempt,,-0.4399,51.588346
+2026-11-18,removed,1763229,Greek Boys; Korean Crunch; Longhorn Burger,Takeaway/sandwich shop,Hillingdon,HA5 1QG,3,,-0.3996753,51.5802607
+2026-11-18,removed,1998692,Grill & go,Mobile caterer,Hillingdon,UB8,AwaitingInspection,,,
+2026-11-18,removed,1978869,Hunger Grill & Steaks,Restaurant/Cafe/Canteen,Hillingdon,UB10 8PB,AwaitingInspection,,-0.443716,51.562841
+2026-11-18,removed,518813,Istanbul Turkish Grill,Restaurant/Cafe/Canteen,Hillingdon,HA4 9BH,3,,-0.411594,51.571735
+2026-11-18,removed,1998690,Kings Cafe,Restaurant/Cafe/Canteen,Hillingdon,UB7 7QL,AwaitingInspection,,-0.47359,51.513848
+2026-11-18,removed,520180,Moorcroft School (Eden Academy),School/college/university,Hillingdon,UB8 3BF,4,,-0.460291,51.521462
+2026-11-18,removed,1955049,Naga Smokehouse,Restaurant/Cafe/Canteen,Hillingdon,UB3 3NB,AwaitingInspection,,,
+2026-11-18,removed,1607806,Thai Spice,Restaurant/Cafe/Canteen,Hillingdon,UB8 3LH,1,,-0.452755,51.520535
+2026-11-18,removed,1965441,The Protien Hub,Mobile caterer,Hillingdon,UB4,AwaitingInspection,,,
+2026-11-18,removed,519930,Thomas Franks @ General Mills Ltd,Restaurant/Cafe/Canteen,Hillingdon,UB8 1QQ,5,,-0.477113991975784,51.5464630126953
+2026-11-18,removed,2006891,ALMA Gifting,Retailers - other,Tower Hamlets,E3 2JG,AwaitingInspection,,-0.0244841,51.5368478
+2026-11-18,removed,1893593,Altimate Nutrition,Retailers - other,Tower Hamlets,E14 9FY,Exempt,,,
+2026-11-18,removed,1884630,Aqua Seafood Limited,Retailers - other,Tower Hamlets,E14 5ST,5,,-0.0133403,51.5063269
+2026-11-18,removed,1990700,Arancino of Sicily,Retailers - other,Tower Hamlets,E14 5AJ,2,,-0.019475,51.504344
+2026-11-18,removed,1675214,"Bow Far East Kitchen,Bow Spice,Dessert Love,Halal Pizza",Other catering premises,Tower Hamlets,E3 4UR,5,,-0.023056,51.524134
+2026-11-18,removed,1676539,Desilicious,Other catering premises,Tower Hamlets,E3 3,5,,,
+2026-11-18,removed,1901206,Eggspress,Other catering premises,Tower Hamlets,E2 0EJ,AwaitingInspection,,-0.0567,51.526548
+2026-11-18,removed,1950273,GreekMe/Shawarma Co/Bombay Bento/DelhiCacies/Eggreeka/A.L.K,Other catering premises,Tower Hamlets,E1 6PU,AwaitingInspection,,-0.071429,51.51815
+2026-11-18,removed,70104,Grillfellaz Peri Peri,Takeaway/sandwich shop,Tower Hamlets,E2 6LG,5,,-0.062656,51.526863
+2026-11-18,removed,1930332,Grocery Lane,Retailers - other,Tower Hamlets,E1 5JQ,0,,-0.0689769797722317,51.5200005142627
+2026-11-18,removed,1977486,Ong Lai Kopitiam,Restaurant/Cafe/Canteen,Tower Hamlets,E14 9QH,4,,-0.0105912,51.5022873
+2026-11-18,removed,1659239,Origin Oils,Retailers - other,Tower Hamlets,E1W 1YW,4,,-0.0672001,51.5074843
+2026-11-18,removed,1815372,Pao Men Shi Jia Hot Pot,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7AL,4,,-0.0740383,51.5167943
+2026-11-18,removed,1676176,Pooboo Bakes,Other catering premises,Tower Hamlets,E14,5,,,
+2026-11-18,removed,1988768,Revitalize by PK Ltd.,Retailers - other,Tower Hamlets,E3 3,AwaitingInspection,,,
+2026-11-18,removed,761693,Roman Pound Plus,Retailers - other,Tower Hamlets,E3 5ES,5,,-0.030357,51.532665
+2026-11-18,removed,1719930,Tea Revolution,Restaurant/Cafe/Canteen,Tower Hamlets,E1 2JY,5,,-0.0614478,51.5145977
+2026-11-18,removed,1827447,The Wise Store Ltd,Takeaway/sandwich shop,Tower Hamlets,E1 0SG,5,,-0.0503804,51.5146284
+2026-11-18,removed,977459,US Way Pizza,Takeaway/sandwich shop,Tower Hamlets,E2 7QL,3,,-0.07278,51.530519
