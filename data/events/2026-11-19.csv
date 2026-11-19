@@ -1,14 +1,37 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-19,new,2016669,Athina's,Other catering premises,Enfield,N9 9,,AwaitingInspection,,
+2026-11-19,new,2016666,Charlotta Ekman,Other catering premises,Enfield,N18,,AwaitingInspection,,
+2026-11-19,new,1777777,DELIZIA SCURA @ separate kitchen  of Creams Cafe,Other catering premises,Enfield,N14 5PA,,5,,
+2026-11-19,new,1380022,Delisino Brasserie,Other catering premises,Enfield,N14 5HD,,5,,
+2026-11-19,new,2016671,Elizabeth's,Other catering premises,Enfield,N21,,AwaitingInspection,,
+2026-11-19,new,2016670,Enablement Hub,Other catering premises,Enfield,EN1 2HL,,AwaitingInspection,,
+2026-11-19,new,2016667,Epico Foods,Retailers - other,Enfield,EN1 3WX,,AwaitingInspection,,
+2026-11-19,new,2016664,GECE Butchers,Retailers - other,Enfield,EN3 7BB,,AwaitingInspection,,
+2026-11-19,new,2016665,Greta's bakery,Other catering premises,Enfield,N11,,AwaitingInspection,,
+2026-11-19,new,2016668,Noosh-e Jaan,Other catering premises,Enfield,N13,,AwaitingInspection,,
 2026-11-19,new,2016616,Aunty Riv's,Other catering premises,Kensington and Chelsea,SW10,,AwaitingInspection,,
 2026-11-19,new,2016617,Cafe de Nata,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 2NA,,AwaitingInspection,,
 2026-11-19,new,2016614,Dolci DaMaria,Other catering premises,Kensington and Chelsea,"",,Exempt,,
 2026-11-19,new,1318755,Franklin's Wines,Pub/bar/nightclub,Kensington and Chelsea,W11 2QA,,5,,
 2026-11-19,new,2016615,Ixchel,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 4LX,,AwaitingInspection,,
 2026-11-19,new,2016618,Rozolute,Retailers - other,Kensington and Chelsea,SW10,,AwaitingInspection,,
+2026-11-19,new,2016706,Sylhet Fried Chicken (SFC),Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EG,,AwaitingInspection,,
+2026-11-19,new,1991805,14 Clubs,Restaurant/Cafe/Canteen,Westminster,W2 4BD,,AwaitingInspection,,
+2026-11-19,new,2000227,Aramark @ The Leaky Cauldron Cafe,Restaurant/Cafe/Canteen,Westminster,W1D 1LU,,AwaitingInspection,,
+2026-11-19,new,2000224,Kai and Co Coffee,Restaurant/Cafe/Canteen,Westminster,W2 2BS,,5,,
+2026-11-19,new,2016776,MBS Centre,Retailers - other,Westminster,NW8 8UP,,Exempt,,
+2026-11-19,new,1474150,Mercato Metropolitano,Pub/bar/nightclub,Westminster,W1K 6ZA,,AwaitingInspection,,
+2026-11-19,new,2016773,Olive&Om,Restaurant/Cafe/Canteen,Westminster,SW1V 2LZ,,5,,
+2026-11-19,new,1968804,Piccadilly Hall,Pub/bar/nightclub,Westminster,W1D 7EJ,,AwaitingInspection,,
+2026-11-19,new,2000238,Secret Layers,Takeaway/sandwich shop,Westminster,W1U 8AZ,,AwaitingInspection,,
+2026-11-19,new,2006621,Soor Lebanese cuisine,Distributors/Transporters,Westminster,W1F 8EX,,AwaitingInspection,,
+2026-11-19,new,2008931,Turmeric Kitchen - Hyde Park,Restaurant/Cafe/Canteen,Westminster,W2 3LD,,5,,
 2026-11-19,rating_changed,1866569,Kala Collaborative Ltd,Mobile caterer,Barnet,N3 1,AwaitingInspection,4,,
 2026-11-19,rating_changed,1950704,Stockfleths Ltd,Mobile caterer,Barnet,N2 8,AwaitingInspection,2,,
+2026-11-19,rating_changed,1950701,Ways Of Wagyu,Other catering premises,Barnet,EN4,AwaitingInspection,AwaitingPublication,,
 2026-11-19,rating_changed,1829921,Old China,Takeaway/sandwich shop,Bexley,DA1 4HH,3,1,0.17736,51.452319
 2026-11-19,rating_changed,2010954,Pizza Gogo,Takeaway/sandwich shop,Bexley,DA16 3QB,AwaitingInspection,3,0.102579,51.463442
+2026-11-19,rating_changed,1498467,MMV,Restaurant/Cafe/Canteen,Brent,HA0 4BD,AwaitingInspection,5,,
 2026-11-19,rating_changed,358216,Caffe Nero,Restaurant/Cafe/Canteen,Bromley,BR1 1DD,5,4,0.0166076,51.4038902
 2026-11-19,rating_changed,1251781,FEAST WITH US,Restaurant/Cafe/Canteen,Camden,NW6 4PG,3,4,-0.193330004811287,51.5403709411621
 2026-11-19,rating_changed,1653966,FEAST With Us,Restaurant/Cafe/Canteen,Camden,WC1X 9BN,3,4,-0.1175462,51.5303033
@@ -22,8 +45,12 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-19,rating_changed,2006909,Ovenly Corner,Restaurant/Cafe/Canteen,Ealing,W5 5AH,AwaitingInspection,3,-0.3067998,51.5125759
 2026-11-19,rating_changed,1994420,Red Box,Restaurant/Cafe/Canteen,Ealing,W5 5RG,AwaitingInspection,2,-0.304594,51.505395
 2026-11-19,rating_changed,1878661,Sam Food,Takeaway/sandwich shop,Ealing,NW10 7JW,1,4,-0.2674167,51.5268928
+2026-11-19,rating_changed,1990844,Arihant Trader,Other catering premises,Enfield,N21,AwaitingInspection,5,,
+2026-11-19,rating_changed,1988039,Baalbek Kitchen,Other catering premises,Enfield,N13,AwaitingInspection,5,,
+2026-11-19,rating_changed,2014934,TropiWave,Other catering premises,Enfield,N18,AwaitingInspection,5,,
 2026-11-19,rating_changed,1903994,SZS Chicken & Pizza,Takeaway/sandwich shop,Hackney,E5 0LH,5,2,-0.0452199,51.5536784
 2026-11-19,rating_changed,519785,Quality Wines,Retailers - other,Hillingdon,UB8 1LE,3,4,-0.474078,51.544077
+2026-11-19,rating_changed,1949563,Slim Chickens,Restaurant/Cafe/Canteen,Hillingdon,TW6 1QG,3,5,,
 2026-11-19,rating_changed,490133,Golden Fry,Takeaway/sandwich shop,Hounslow,TW13 6PE,4,3,-0.3861973,51.4329805
 2026-11-19,rating_changed,1986667,Patty & Bun @ The Star of Kings,Restaurant/Cafe/Canteen,Islington,N1 0AX,AwaitingInspection,3,,
 2026-11-19,rating_changed,333432,Brinkleys Garden,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW10 9HX,3,5,,
@@ -37,18 +64,93 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-19,rating_changed,1707098,Dub pan,Retailers - other,Southwark,SE1 6DR,5,3,-0.0983716,51.4984564
 2026-11-19,rating_changed,1667016,Masters,Restaurant/Cafe/Canteen,Southwark,SE1 8HW,4,3,-0.105055,51.5012456
 2026-11-19,rating_changed,2010196,The salmon youth centre,School/college/university,Southwark,SE16 4TE,AwaitingInspection,4,,
+2026-11-19,rating_changed,1714292,Popeyes,Other catering premises,Tower Hamlets,E1 4UT,2,5,,
 2026-11-19,rating_changed,83670,Rogues,Restaurant/Cafe/Canteen,Tower Hamlets,E2 9EG,5,2,-0.0588868,51.5321791
 2026-11-19,rating_changed,1320783,Supreme,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6QL,5,4,-0.0719748,51.5196528
 2026-11-19,rating_changed,55806,The Market Coffee House,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6AG,5,2,-0.0765452,51.5189455
 2026-11-19,rating_changed,1796344,Cloud Tech,Retailers - other,Wandsworth,SW19 6NW,3,1,-0.206819,51.4443166
 2026-11-19,rating_changed,1782264,Turo Turo,Restaurant/Cafe/Canteen,Wandsworth,SW17 0RR,5,4,-0.1698157,51.4265451
+2026-11-19,rating_changed,941360,76 Dean Street,Restaurant/Cafe/Canteen,Westminster,W1D 3SQ,3,5,,
+2026-11-19,rating_changed,1976089,Aafaq Bookstore,Restaurant/Cafe/Canteen,Westminster,W2 2HR,AwaitingInspection,5,,
+2026-11-19,rating_changed,1768932,AngloThai,Restaurant/Cafe/Canteen,Westminster,W1H 7NL,2,5,,
+2026-11-19,rating_changed,1991809,Argentinian Grill,Takeaway/sandwich shop,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-11-19,rating_changed,1920931,Astha?s,Restaurant/Cafe/Canteen,Westminster,NW8 0QY,AwaitingInspection,5,,
+2026-11-19,rating_changed,2000240,B Kitchen,Takeaway/sandwich shop,Westminster,W1W 6XH,AwaitingInspection,5,,
+2026-11-19,rating_changed,1988747,Bar Douro Soho,Restaurant/Cafe/Canteen,Westminster,W1D 4DH,AwaitingInspection,5,,
+2026-11-19,rating_changed,1843263,Bobabot,Takeaway/sandwich shop,Westminster,NW1 5LA,AwaitingInspection,5,,
+2026-11-19,rating_changed,1982133,Bubala Covent Garden,Restaurant/Cafe/Canteen,Westminster,WC2E 9BJ,AwaitingInspection,5,,
 2026-11-19,rating_changed,1876960,Coffee Date,Restaurant/Cafe/Canteen,Westminster,W1H 1SW,2,4,-0.1606295,51.5209238
+2026-11-19,rating_changed,1939735,Darcie & May Green,Restaurant/Cafe/Canteen,Westminster,W2 1LF,2,5,,
+2026-11-19,rating_changed,2000261,Fusion treats,Mobile caterer,Westminster,W2 6AE,AwaitingInspection,5,,
+2026-11-19,rating_changed,2000271,Gather & Gather @ The Royal Society,Other catering premises,Westminster,SW1Y 5AG,AwaitingInspection,5,,
+2026-11-19,rating_changed,839683,Greggs,Takeaway/sandwich shop,Westminster,SW1H 0PH,AwaitingInspection,5,,
+2026-11-19,rating_changed,2006606,Homebar,Restaurant/Cafe/Canteen,Westminster,W1U 1LP,AwaitingInspection,5,,
 2026-11-19,rating_changed,1991792,"Hyde & Seek, London Hyde Park Hotel",Hotel/bed & breakfast/guest house,Westminster,W2 3LG,AwaitingInspection,2,-0.1774623,51.5116274
+2026-11-19,rating_changed,2006611,LDN Eats,Restaurant/Cafe/Canteen,Westminster,W9 3AZ,Exempt,AwaitingInspection,,
+2026-11-19,rating_changed,1991829,LIMIN,Takeaway/sandwich shop,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-11-19,rating_changed,1991822,MATCHADO,Restaurant/Cafe/Canteen,Westminster,W1U 8AZ,AwaitingInspection,5,,
+2026-11-19,rating_changed,1982125,Mils London,Retailers - other,Westminster,W1D,AwaitingInspection,5,,
+2026-11-19,rating_changed,427869,Nando's,Restaurant/Cafe/Canteen,Westminster,W1T 1TH,5,AwaitingInspection,,
 2026-11-19,rating_changed,1411857,Ozuki,Restaurant/Cafe/Canteen,Westminster,W2 3QD,2,3,-0.178946,51.5127295
+2026-11-19,rating_changed,1988744,PCA Booster Club,Restaurant/Cafe/Canteen,Westminster,NW8 0NP,AwaitingInspection,5,,
+2026-11-19,rating_changed,2000267,PETITES JOIES,Restaurant/Cafe/Canteen,Westminster,WC2R 0DE,AwaitingInspection,5,,
+2026-11-19,rating_changed,2001328,Prezzo Italian,Restaurant/Cafe/Canteen,Westminster,WC2R 0NR,AwaitingInspection,5,,
+2026-11-19,rating_changed,2000272,SABA,Restaurant/Cafe/Canteen,Westminster,SW1W 9SJ,AwaitingInspection,5,,
+2026-11-19,rating_changed,2006616,Saffron Soho,Restaurant/Cafe/Canteen,Westminster,W1D 6HT,AwaitingInspection,2,,
+2026-11-19,rating_changed,1966149,Smatcha,Takeaway/sandwich shop,Westminster,W1B 2LB,AwaitingInspection,5,,
+2026-11-19,rating_changed,1957709,Snowfall,Retailers - other,Westminster,W1U 7EA,AwaitingInspection,5,,
+2026-11-19,rating_changed,1359691,Soho House 180 The Strand,Restaurant/Cafe/Canteen,Westminster,WC2R 1EA,3,5,,
+2026-11-19,rating_changed,2011088,Streat Latin Food,Restaurant/Cafe/Canteen,Westminster,WC2H 7JX,AwaitingInspection,5,,
+2026-11-19,rating_changed,1982103,Sumi Marylebone,Restaurant/Cafe/Canteen,Westminster,W1G 6PN,AwaitingInspection,5,,
+2026-11-19,rating_changed,1982110,Tachbrook Youth and Social Centre,Retailers - other,Westminster,SW1V 3RP,AwaitingInspection,Exempt,,
+2026-11-19,rating_changed,1007351,The Club At The Ivy,Restaurant/Cafe/Canteen,Westminster,WC2H 9NE,4,5,,
 2026-11-19,rating_changed,1136232,The Crystal Maze Live Experience,Restaurant/Cafe/Canteen,Westminster,W1D 7EJ,4,2,-0.1335517,51.5108739
+2026-11-19,rating_changed,1976108,Torino,Restaurant/Cafe/Canteen,Westminster,W2 1DL,AwaitingInspection,5,,
+2026-11-19,rating_changed,1983600,Urban Baristas,Restaurant/Cafe/Canteen,Westminster,W9 1NJ,AwaitingInspection,5,,
+2026-11-19,rating_changed,1957728,YDUN,Restaurant/Cafe/Canteen,Westminster,W1W 6QD,AwaitingInspection,5,,
+2026-11-19,removed,1831386,(Kitchen 3)Mac'n'Cheese/DutchieExpress/RotiJerkNTingz/Shrimp&SeafoodBoil/lJamaicaLoveJerkCentre,Other catering premises,Enfield,N18 1UB,4,,-0.0742712,51.6100747
+2026-11-19,removed,1908665,Alessandra Malacarne,Other catering premises,Enfield,N13,1,,,
+2026-11-19,removed,1435768,Champs Chicken and Pizza,Restaurant/Cafe/Canteen,Enfield,EN2 6BA,2,,-0.084269,51.652052
+2026-11-19,removed,1936670,Dropd Ltd,Other catering premises,Enfield,N13,AwaitingInspection,,,
+2026-11-19,removed,1963814,Ma Kee Dessert Bar,Takeaway/sandwich shop,Enfield,EN1,AwaitingInspection,,,
+2026-11-19,removed,1998961,Milestone Nursery,School/college/university,Enfield,N13 6BY,AwaitingInspection,,-0.0909111,51.6145104
+2026-11-19,removed,1732122,Parks Community Programme CIC,School/college/university,Enfield,EN3 4SA,AwaitingInspection,,-0.0494609996676445,51.6469268798828
+2026-11-19,removed,944986,"Play, Giggle and Grow",School/college/university,Enfield,N9 0RT,5,,-0.051942,51.623796
+2026-11-19,removed,1887554,Thriiv,Other catering premises,Enfield,N13,AwaitingInspection,,,
 2026-11-19,removed,1689319,20 Minutes Alcohol & Vapes,Retailers - other,Kensington and Chelsea,SW10 9HJ,5,,-0.1875392,51.4858072
 2026-11-19,removed,1630549,50 Celsius,Other catering premises,Kensington and Chelsea,W8 6,5,,,
 2026-11-19,removed,1958486,Dee-lish Bakes,Other catering premises,Kensington and Chelsea,W11,AwaitingInspection,,,
 2026-11-19,removed,1387478,Kensington Quarter,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6HS,2,,,
 2026-11-19,removed,1855164,The Curve House Ltd,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1HY,AwaitingInspection,,-0.166028,51.498706
 2026-11-19,removed,1760595,Vatavaran,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1NQ,5,,-0.164784,51.49776
+2026-11-19,removed,412517,Cecconi'S Pizza Bar,Restaurant/Cafe/Canteen,Westminster,W1D 5JJ,5,,-0.1307311,51.513239
+2026-11-19,removed,414018,Central Park Hotel,Hotel/bed & breakfast/guest house,Westminster,W2 3SY,5,,-0.1854885,51.5112932
+2026-11-19,removed,1073477,Costa Coffee,Restaurant/Cafe/Canteen,Westminster,W1D 1LT,5,,-0.1363958,51.516045
+2026-11-19,removed,411641,Crosstown Doughnuts,Restaurant/Cafe/Canteen,Westminster,W1J 9HT,5,,-0.1342325,51.5097337
+2026-11-19,removed,1335543,Emi Deli Restaurant Ltd,Restaurant/Cafe/Canteen,Westminster,SW1V 2LZ,5,,-0.1380693,51.4919801
+2026-11-19,removed,413353,Euro Food And Wine,Retailers - other,Westminster,W2 3PX,5,,-0.1769197,51.5151081
+2026-11-19,removed,1455836,Exit 9 American Candy,Retailers - other,Westminster,W1C 1LN,5,,-0.1572315,51.5140451
+2026-11-19,removed,1320477,Gozato Groceries,Manufacturers/packers,Westminster,NW1 6XX,5,,-0.1625873,51.5259994
+2026-11-19,removed,1435811,Hefaure,Restaurant/Cafe/Canteen,Westminster,SW1E 5DJ,5,,-0.1433864,51.4972099
+2026-11-19,removed,2001315,I AM A COFFEEHOLIC LTD,Restaurant/Cafe/Canteen,Westminster,W9 3EF,AwaitingPublication,,-0.2039707,51.5327283
+2026-11-19,removed,1427802,Juice Land,Takeaway/sandwich shop,Westminster,W2 4QJ,4,,-0.1873758,51.5109447
+2026-11-19,removed,1455834,Kingdom Of Sweets,Retailers - other,Westminster,W1C 1DT,4,,-0.1440942,51.5152947
+2026-11-19,removed,1053907,Kobox,Restaurant/Cafe/Canteen,Westminster,W1U 3HS,5,,-0.1550259,51.5172657
+2026-11-19,removed,1370178,Koox,Takeaway/sandwich shop,Westminster,W2 3BX,5,,-0.178958,51.5135121
+2026-11-19,removed,1540580,Lablabi,Takeaway/sandwich shop,Westminster,W2 2HX,5,,-0.1647351,51.5159702
+2026-11-19,removed,1246210,Laurents,Retailers - other,Westminster,W2 3BX,5,,-0.1791049,51.5134424
+2026-11-19,removed,412372,Lord High Admiral Public House,Restaurant/Cafe/Canteen,Westminster,NW8 8EY,5,,-0.1712021,51.5225549
+2026-11-19,removed,412729,Marble Arch Food & Wine,Retailers - other,Westminster,W2 2HZ,5,,-0.1641312,51.5155741
+2026-11-19,removed,413869,Milfords,Restaurant/Cafe/Canteen,Westminster,WC2R 3LL,5,,-0.1135269,51.5127928
+2026-11-19,removed,1453037,Millies Cookies,Restaurant/Cafe/Canteen,Westminster,SW1V 1PB,5,,-0.1450222,51.4910381
+2026-11-19,removed,1435817,Nano Vapes Paddington,Retailers - other,Westminster,W2 1NT,Exempt,,-0.1723066,51.5172935
+2026-11-19,removed,1221015,Navdruga Kiosk,Retailers - other,Westminster,W1W 7LG,5,,-0.1417424,51.5174787
+2026-11-19,removed,1392200,Neutra Kitchen,Restaurant/Cafe/Canteen,Westminster,W1K 5LH,5,,-0.1478856,51.5138529
+2026-11-19,removed,1499825,Oddbins,Retailers - other,Westminster,NW1 6AG,5,,-0.1594499,51.5226499
+2026-11-19,removed,1873492,Silk Noodle,Restaurant/Cafe/Canteen,Westminster,WC2H 7AU,3,,-0.1290427,51.5097769
+2026-11-19,removed,1518673,Square Bubbles,Restaurant/Cafe/Canteen,Westminster,W2 1DH,5,,-0.1677529,51.5187062
+2026-11-19,removed,411671,St Mungos - Harrow Road,Restaurant/Cafe/Canteen,Westminster,W2 5XQ,5,,-0.1912332,51.5201587
+2026-11-19,removed,427850,Starbucks Coffee Company,Restaurant/Cafe/Canteen,Westminster,W1W 5PA,5,,-0.143507,51.5213951
+2026-11-19,removed,411042,Superdrug Stores Plc,Retailers - other,Westminster,W1C 2JS,5,,-0.1495888,51.5137898
+2026-11-19,removed,413131,Superdrug Stores Plc,Retailers - other,Westminster,SW1V 1JT,5,,-0.1443294,51.4949749
+2026-11-19,removed,411300,The Vestry Playgroup,Restaurant/Cafe/Canteen,Westminster,NW8 9YD,5,,,
