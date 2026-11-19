@@ -1,0 +1,54 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-19,new,2016616,Aunty Riv's,Other catering premises,Kensington and Chelsea,SW10,,AwaitingInspection,,
+2026-11-19,new,2016617,Cafe de Nata,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 2NA,,AwaitingInspection,,
+2026-11-19,new,2016614,Dolci DaMaria,Other catering premises,Kensington and Chelsea,"",,Exempt,,
+2026-11-19,new,1318755,Franklin's Wines,Pub/bar/nightclub,Kensington and Chelsea,W11 2QA,,5,,
+2026-11-19,new,2016615,Ixchel,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 4LX,,AwaitingInspection,,
+2026-11-19,new,2016618,Rozolute,Retailers - other,Kensington and Chelsea,SW10,,AwaitingInspection,,
+2026-11-19,rating_changed,1866569,Kala Collaborative Ltd,Mobile caterer,Barnet,N3 1,AwaitingInspection,4,,
+2026-11-19,rating_changed,1950704,Stockfleths Ltd,Mobile caterer,Barnet,N2 8,AwaitingInspection,2,,
+2026-11-19,rating_changed,1829921,Old China,Takeaway/sandwich shop,Bexley,DA1 4HH,3,1,0.17736,51.452319
+2026-11-19,rating_changed,2010954,Pizza Gogo,Takeaway/sandwich shop,Bexley,DA16 3QB,AwaitingInspection,3,0.102579,51.463442
+2026-11-19,rating_changed,358216,Caffe Nero,Restaurant/Cafe/Canteen,Bromley,BR1 1DD,5,4,0.0166076,51.4038902
+2026-11-19,rating_changed,1251781,FEAST WITH US,Restaurant/Cafe/Canteen,Camden,NW6 4PG,3,4,-0.193330004811287,51.5403709411621
+2026-11-19,rating_changed,1653966,FEAST With Us,Restaurant/Cafe/Canteen,Camden,WC1X 9BN,3,4,-0.1175462,51.5303033
+2026-11-19,rating_changed,2009347,IRO Sushi,Restaurant/Cafe/Canteen,Camden,NW1 8NH,AwaitingInspection,2,-0.1424746,51.5398552
+2026-11-19,rating_changed,1934431,STOP THE PRESS CRAFT SERVICES LIMITED,Retailers - other,Camden,NW1 0SR,AwaitingInspection,2,,
+2026-11-19,rating_changed,1975779,THE SUSHI CO,Restaurant/Cafe/Canteen,Camden,NW6 1SD,AwaitingInspection,2,-0.190854,51.5489832
+2026-11-19,rating_changed,1431384,Werewolf Beer Ltd,Manufacturers/packers,Camden,NW1 0SR,4,2,-0.1371503,51.5416952
+2026-11-19,rating_changed,2006905,Al Fingane,Restaurant/Cafe/Canteen,Ealing,W5 5AH,AwaitingInspection,4,-0.3067998,51.5125759
+2026-11-19,rating_changed,1994423,Chickadoo,Restaurant/Cafe/Canteen,Ealing,W5 5AH,AwaitingInspection,4,-0.3067998,51.5125759
+2026-11-19,rating_changed,1657762,Lebanese Food Hall,Retailers - other,Ealing,NW10 7JW,1,4,-0.2674167,51.5268928
+2026-11-19,rating_changed,2006909,Ovenly Corner,Restaurant/Cafe/Canteen,Ealing,W5 5AH,AwaitingInspection,3,-0.3067998,51.5125759
+2026-11-19,rating_changed,1994420,Red Box,Restaurant/Cafe/Canteen,Ealing,W5 5RG,AwaitingInspection,2,-0.304594,51.505395
+2026-11-19,rating_changed,1878661,Sam Food,Takeaway/sandwich shop,Ealing,NW10 7JW,1,4,-0.2674167,51.5268928
+2026-11-19,rating_changed,1903994,SZS Chicken & Pizza,Takeaway/sandwich shop,Hackney,E5 0LH,5,2,-0.0452199,51.5536784
+2026-11-19,rating_changed,519785,Quality Wines,Retailers - other,Hillingdon,UB8 1LE,3,4,-0.474078,51.544077
+2026-11-19,rating_changed,490133,Golden Fry,Takeaway/sandwich shop,Hounslow,TW13 6PE,4,3,-0.3861973,51.4329805
+2026-11-19,rating_changed,1986667,Patty & Bun @ The Star of Kings,Restaurant/Cafe/Canteen,Islington,N1 0AX,AwaitingInspection,3,,
+2026-11-19,rating_changed,333432,Brinkleys Garden,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW10 9HX,3,5,,
+2026-11-19,rating_changed,1979785,KARVE LTD,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 7RG,AwaitingInspection,5,,
+2026-11-19,rating_changed,1958524,Over Under,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6NA,AwaitingInspection,5,,
+2026-11-19,rating_changed,1877943,Chicken Treat,Takeaway/sandwich shop,Lambeth,SW2 4UN,1,3,-0.125495,51.448588
+2026-11-19,rating_changed,1840436,B&K Low Cost Mini Market,Retailers - other,Lewisham,BR1 4JX,2,1,-0.001692,51.420994
+2026-11-19,rating_changed,1599060,Cafe Treat,Restaurant/Cafe/Canteen,Lewisham,BR1 4PH,4,1,-0.0038149,51.4248695
+2026-11-19,rating_changed,1598868,MONSOON,Restaurant/Cafe/Canteen,Lewisham,SE6 1AE,4,1,-0.004143,51.44529
+2026-11-19,rating_changed,1796009,Navaruchi,Restaurant/Cafe/Canteen,Redbridge,IG1 1BH,3,4,0.0722407,51.5579679
+2026-11-19,rating_changed,1707098,Dub pan,Retailers - other,Southwark,SE1 6DR,5,3,-0.0983716,51.4984564
+2026-11-19,rating_changed,1667016,Masters,Restaurant/Cafe/Canteen,Southwark,SE1 8HW,4,3,-0.105055,51.5012456
+2026-11-19,rating_changed,2010196,The salmon youth centre,School/college/university,Southwark,SE16 4TE,AwaitingInspection,4,,
+2026-11-19,rating_changed,83670,Rogues,Restaurant/Cafe/Canteen,Tower Hamlets,E2 9EG,5,2,-0.0588868,51.5321791
+2026-11-19,rating_changed,1320783,Supreme,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6QL,5,4,-0.0719748,51.5196528
+2026-11-19,rating_changed,55806,The Market Coffee House,Restaurant/Cafe/Canteen,Tower Hamlets,E1 6AG,5,2,-0.0765452,51.5189455
+2026-11-19,rating_changed,1796344,Cloud Tech,Retailers - other,Wandsworth,SW19 6NW,3,1,-0.206819,51.4443166
+2026-11-19,rating_changed,1782264,Turo Turo,Restaurant/Cafe/Canteen,Wandsworth,SW17 0RR,5,4,-0.1698157,51.4265451
+2026-11-19,rating_changed,1876960,Coffee Date,Restaurant/Cafe/Canteen,Westminster,W1H 1SW,2,4,-0.1606295,51.5209238
+2026-11-19,rating_changed,1991792,"Hyde & Seek, London Hyde Park Hotel",Hotel/bed & breakfast/guest house,Westminster,W2 3LG,AwaitingInspection,2,-0.1774623,51.5116274
+2026-11-19,rating_changed,1411857,Ozuki,Restaurant/Cafe/Canteen,Westminster,W2 3QD,2,3,-0.178946,51.5127295
+2026-11-19,rating_changed,1136232,The Crystal Maze Live Experience,Restaurant/Cafe/Canteen,Westminster,W1D 7EJ,4,2,-0.1335517,51.5108739
+2026-11-19,removed,1689319,20 Minutes Alcohol & Vapes,Retailers - other,Kensington and Chelsea,SW10 9HJ,5,,-0.1875392,51.4858072
+2026-11-19,removed,1630549,50 Celsius,Other catering premises,Kensington and Chelsea,W8 6,5,,,
+2026-11-19,removed,1958486,Dee-lish Bakes,Other catering premises,Kensington and Chelsea,W11,AwaitingInspection,,,
+2026-11-19,removed,1387478,Kensington Quarter,Restaurant/Cafe/Canteen,Kensington and Chelsea,W8 6HS,2,,,
+2026-11-19,removed,1855164,The Curve House Ltd,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1HY,AwaitingInspection,,-0.166028,51.498706
+2026-11-19,removed,1760595,Vatavaran,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW3 1NQ,5,,-0.164784,51.49776
