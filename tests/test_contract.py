@@ -159,7 +159,7 @@ def test_operators_has_what_the_insights_tab_reads():
 @pytest.mark.parametrize(
     "name,budget_kb",
     [("venues.json", 3000), ("brands.json", 900), ("hex.geojson", 650), ("crime.json", 450), ("areas.json", 900), ("environment.json", 550), ("summary.json", 40),
-     ("character.json", 450), ("operators.json", 150), ("report.json", 150), ("prices.json", 300)],
+     ("character.json", 450), ("operators.json", 150), ("report.json", 150), ("prices.json", 300), ("pubs.json", 1500)],
 )
 # raw (uncompressed) sizes with ~30% headroom; Pages serves these gzipped, so downloads are far smaller
 def test_size_budgets(name, budget_kb):
@@ -169,12 +169,12 @@ def test_size_budgets(name, budget_kb):
     assert p.stat().st_size <= budget_kb * KB, f"{name} is {p.stat().st_size // KB} KB, budget {budget_kb} KB"
 
 
-MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.json", "environment.json"}
+MONTHLY_FILES = {"companies.json", "operators.json", "stations.json", "crime.json", "environment.json", "pubs.json"}
 
 
 @pytest.mark.parametrize("name", ["summary.json", "boroughs.json", "events.json", "history.json", "venues.json", "brands.json",
                                   "character.json", "hex.geojson", "companies.json", "operators.json", "stations.json", "crime.json",
-                                  "areas.json", "environment.json", "report.json", "prices.json", "status.json"])
+                                  "areas.json", "environment.json", "pubs.json", "report.json", "prices.json", "status.json"])
 def test_provenance_fields(name):
     if name in MONTHLY_FILES and not MONTHLY:
         pytest.skip("written by the monthly context workflow; checked there")
@@ -223,3 +223,27 @@ def test_prices_json_meta_and_plausibility():
         for f in ("all", "one_bed", "two_bed", "three_bed"):
             assert x[f] is None or 500 <= x[f] <= 6000, (x["name"], f, x[f])
     assert sum(1 for x in b.values() if x["two_bed"]) >= 30
+
+
+def test_pubs_json_shape_and_plausibility():
+    if not MONTHLY:
+        pytest.skip("written by the monthly context workflow; checked there")
+    d = load("pubs.json")
+    assert {"schema_version", "as_of", "generated", "licence", "source", "method", "sources", "categories", "groups", "fields", "pubs",
+            "counts"} <= set(d)
+    assert "ODbL" in d["licence"] and "OGL" in d["licence"]
+    f = d["fields"]
+    assert f == ["name", "lon", "lat", "postcode", "borough", "fhrsid", "osm", "group", "category", "confidence", "evidence", "cask",
+                 "craft", "website"]
+    rows = [dict(zip(f, r)) for r in d["pubs"]]
+    c = d["counts"]
+    assert c["total"] == len(rows) >= 2500 and c["cask"] > 0 and 0 < c["on_fsa"] <= c["total"]
+    assert all(len(r) == len(f) for r in d["pubs"][:500])
+    gids = {g["id"] for g in d["groups"]}
+    assert all(LONDON[0] <= r["lon"] <= LONDON[1] and LONDON[2] <= r["lat"] <= LONDON[3] for r in rows)
+    assert all(r["category"] in d["categories"] and (r["group"] is None or r["group"] in gids) for r in rows)
+    assert all(r["confidence"] in (None, "likely", "confirmed") and (r["confidence"] is None) == (r["category"] == "unknown") for r in rows)
+    assert all(r["osm"][0] in "nwr" and r["osm"][1:].isdigit() and r["borough"] for r in rows)
+    assert sum(c["by_category"].values()) == c["total"] and sum(1 for r in rows if r["group"]) == sum(c["by_group"].values())
+    assert len({r["osm"] for r in rows}) == len(rows)
+    assert {s["id"] for s in d["sources"]} >= {"osm", "fsa"} and all(g["src"].startswith("https://") for g in d["groups"])

@@ -4,12 +4,13 @@
 London Pulse puts London's public data in one place, in plain English: check a postcode before you move (prices, rents, who lives there, recorded crime, flood, noise and parks), watch your high street change daily, and spot which areas are heating up. Free, no sign-up, built only from open data. Live site: https://cloudcruncher.github.io/london-pulse/
 
 ## What the site shows
-Tabs: Overview, Insights, Map, Area guide, Report card, Changes, Boroughs, Brands, Craft drinks, SQL lab, About.
+Tabs: Overview, Insights, Map, Area guide, Report card, Changes, Boroughs, Brands, Pubs, Craft drinks, SQL lab, About.
 
 - **Map and Insights:** every food and drink premises, H3 hexagon layers, and plain-English stories from the data.
 - **Area guide** (postcode in, client side): nearby food and drink, brands, nearest stations, recorded crime, and who lives nearby (council tenure, income, deprivation). **Environment nearby** adds flood zones (rivers and sea) and surface-water flood risk from the Environment Agency, road, rail and aircraft noise from Defra (round 4) and green space with distance to a park from OS Open Greenspace.
 - **Report card:** a postcode placed against London on crime, deprivation, venues, walking time to a station, income, sale prices (Land Registry) and rents (ONS).
 - **Changes, Boroughs, Brands, Craft drinks:** day-over-day openings, removals and re-ratings; per-borough tables; brand tracker; Companies House formation of roasters, breweries, distilleries, pubs and bars.
+- **Pubs:** who owns London's pubs. About 3,100 pubs from OpenStreetMap, each labelled PE / investor-owned, corporate group, family brewer, likely independent, or "no group link found", from OSM operator and brand tags, Camden's licensing register and a hand-checked table of pub groups (`src/london_pulse/pub_groups.py`, each with a source link). Filter by cask ale, find independents near a postcode, and suggest corrections via a prefilled GitHub issue (reviewed corrections go in `data/pubs_overrides.csv`). There is no open data on keg lines.
 - **SQL lab:** DuckDB-WASM over the published Parquet.
 
 Signals, not verdicts: the site never labels an area safe or unsafe, shows tenure and crime as separate facts, and flood zones are modelled ignoring defences such as the Thames Barrier.
@@ -26,7 +27,7 @@ Data is served as a versioned static JSON API under `site/api/v1/` (see `docs/AP
 Run locally: `PYTHONPATH=src uv run python -m london_pulse.run [--prev previous.parquet]`. Tests: `PYTHONPATH=src uv run pytest` (browser smoke tests in `tests/smoke` need Playwright and `SMOKE_URL`).
 
 ## Data and licences
-No dataset ships without a confirmed open licence and attribution. FSA hygiene ratings, Companies House, ONS (Census 2021, income estimates, PIPR rents), MHCLG (IMD 2025), data.police.uk, HM Land Registry, Environment Agency, Defra and OS Open Greenspace are Open Government Licence v3.0; each file lists its sources and attribution. TfL station data is under the TfL open data licence ("Powered by TfL Open Data"). Air quality (LAEI) is deliberately not included: the London Datastore lists its licence as "Not Specified".
+No dataset ships without a confirmed open licence and attribution. FSA hygiene ratings, Companies House, ONS (Census 2021, income estimates, PIPR rents), MHCLG (IMD 2025), data.police.uk, HM Land Registry, Environment Agency, Defra and OS Open Greenspace are Open Government Licence v3.0; each file lists its sources and attribution. `pubs.json` contains OpenStreetMap data and is published under the ODbL 1.0 (© OpenStreetMap contributors). Pub-company websites, CAMRA WhatPub and SIBA's indiebeer.uk are not used because they have no open licence. TfL station data is under the TfL open data licence ("Powered by TfL Open Data"). Air quality (LAEI) is deliberately not included: the London Datastore lists its licence as "Not Specified".
 
 ## Caveats
 A premises disappearing from the FSA register can be a closure, a change of owner or an administrative removal. "Awaiting inspection" includes recent openings but is not a count of them. Crime, tenure, income, flood, noise and green-space figures describe neighbourhoods (LSOAs of about 1,700 residents), not addresses or people, and are modelled or recorded values, not surveys. Licensing applications are planned. An evaluation of Overture Maps places found it unusable for closures in the 2026-09-23 release (3 of 496,244 London places marked permanently closed, the rest null).

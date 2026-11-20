@@ -73,8 +73,21 @@ jobs:
             git checkout -- site/api/v1/environment.json
           fi
 
+      - name: Build pubs.json (OpenStreetMap pubs, FSA and Camden licences, group table)
+        timeout-minutes: 15
+        continue-on-error: true
+        run: PYTHONPATH=src uv run --locked python -m london_pulse.pubs
+
+      - name: Keep last month's pubs.json if the build failed or looks short
+        # an Overpass outage or a truncated download must not replace the committed file
+        run: |
+          if ! python3 -c "import json,sys; d=json.load(open('site/api/v1/pubs.json')); sys.exit(1 if d['counts']['total']<2500 else 0)"; then
+            echo "::warning::pubs build failed or incomplete; keeping the committed pubs.json"
+            git checkout -- site/api/v1/pubs.json 2>/dev/null || rm -f site/api/v1/pubs.json
+          fi
+
       - name: Contract tests (areas and the rest of the API)
-        run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py tests/test_prices.py tests/test_environment.py tests/test_flood.py tests/test_noise.py tests/test_green.py -q
+        run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py tests/test_prices.py tests/test_environment.py tests/test_flood.py tests/test_noise.py tests/test_green.py tests/test_pubs.py -q
 
       - name: Drop the large Price Paid files so they are not saved into the cache
         if: always()
@@ -84,9 +97,9 @@ jobs:
         run: |
           git config user.name "london-pulse-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json site/api/v1/environment.json
+          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json site/api/v1/environment.json site/api/v1/pubs.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
-          git commit -m "data: stations, crime and areas $(date -u +%F)"
+          git commit -m "data: stations, crime, areas and pubs $(date -u +%F)"
           for i in 1 2 3; do
             git pull --rebase -X theirs -q && git push && break
             [ "$i" = 3 ] && { echo "::error::could not push"; exit 1; }

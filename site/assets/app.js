@@ -27,6 +27,7 @@ const TYPE_SHORT = { 'Restaurant/Cafe/Canteen': 'Restaurants & cafés', 'Takeawa
     const next = dark ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     try { localStorage.setItem('lp-theme', next); } catch { /* private mode */ }
+    if (current === 'pubs') pubsMod?.then(m => m.redraw()).catch(() => {});
     if (current === 'map') { mapRedraw(); import('./mapbox.js').then(m => m.restyleGl()); }
   };
 })();
@@ -44,7 +45,7 @@ function countUp(el, to, suffix = '') {
 }
 
 // ---------- router ----------
-const VIEWS = ['overview', 'insights', 'map', 'area', 'report', 'changes', 'boroughs', 'brands', 'craft', 'sql', 'about'];
+const VIEWS = ['overview', 'insights', 'map', 'area', 'report', 'changes', 'boroughs', 'brands', 'pubs', 'craft', 'sql', 'about'];
 const inited = {};
 let current = null;
 let tryApply = null;   // set by the overview story panel
@@ -63,9 +64,11 @@ function route() {
   if (view === 'brands' && inited.brandsReady) brandOpen(arg);
   if (view === 'area' && inited.areaReady) areaOpen((arg || '').split('/'));
   if (view === 'map' && arg?.startsWith('q=')) { mapSearch(dec(arg.slice(2))); }
+  if (view === 'pubs') pubsMod?.then(m => m.onShow(arg)).catch(() => {});
   if (view === 'report') reportMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view === 'sql' && arg) sqlMod?.then(m => m.openArg(arg)).catch(() => {});
   if (view !== 'boroughs') closeDrawer();
+  if (view !== 'pubs') $('pb-drawer').hidden = true;
   window.scrollTo({ top: 0 });
 }
 addEventListener('hashchange', route);
@@ -693,8 +696,9 @@ function mapSearch(text) {   // used by brand links: prefill the map search once
   go();
 }
 
-let sqlMod, reportMod;
+let sqlMod, reportMod, pubsMod;
 init.report = () => { reportMod = import('./report.js').then(m => { m.initReport(); return m; }); reportMod.catch(e => { $('rpout').innerHTML = '<p class="note">Could not load the report card: ' + esc(e.message) + '</p>'; }); };
+init.pubs = () => { pubsMod = import('./pubs.js').then(m => { m.initPubs(); return m; }); pubsMod.catch(e => { $('pb-status').textContent = 'Could not load the pubs tab: ' + e.message; }); };
 init.sql = () => { sqlMod = import('./sql.js').then(m => { m.initSql(); return m; }); sqlMod.catch(e => { $('sqlstat').textContent = 'Could not load the SQL lab: ' + e.message; }); };
 
 // ---------- map ----------

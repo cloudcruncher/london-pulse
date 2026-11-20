@@ -1,7 +1,7 @@
 # Static JSON API (v1)
 
 Everything the website shows is served as static JSON under `/api/v1/`. Each file carries `schema_version`, `as_of`, `generated` (ISO date of the run), `source` and `licence`; derived files also carry a `method` sentence. Exceptions: `status.json` uses `generated_at` (UTC timestamp) and `environment.json` has no `as_of` (its sources carry a `vintage`).
-`stations.json` is under the TfL open data licence ("Powered by TfL Open Data"), not the OGL. `environment.json` is mixed (each entry in `sources` carries its licence and the attribution wording to show). Every other file is OGL v3.0.
+`pubs.json` is ODbL 1.0 (© OpenStreetMap contributors). `stations.json` is under the TfL open data licence ("Powered by TfL Open Data"), not the OGL. `environment.json` is mixed (each entry in `sources` carries its licence and the attribution wording to show). Every other file is OGL v3.0.
 Changes within v1 are additive only; a breaking change ships as `/api/v2/` alongside v1.
 
 | File | Contents | Updated |
@@ -21,6 +21,7 @@ Changes within v1 are additive only; a breaking change ships as `/api/v2/` along
 | `areas.json` | One record per London LSOA: council-rented share of households, deprivation, small-area income, recent recorded crime by category, food-premises count; plus an `analysis` block | monthly |
 | `environment.json` | One record per London LSOA: flood (rivers and sea, surface water), road/rail/aircraft noise, green space and park distance | monthly |
 | `brands.json` | Brand tracker: curated roasters, breweries and chains plus auto-detected repeated names, with every matched site | daily |
+| `pubs.json` | London pubs (OpenStreetMap) with ownership: `fields` names the row columns `[name, lon, lat, postcode, borough, fhrsid, osm, group, category, confidence, evidence, cask, craft, website]`; `groups` holds owner, model (managed / tenanted / mixed), note and source per group; `categories` the labels. `category` `unknown` means no group link was found, not that the pub is independent. ODbL 1.0 (contains OpenStreetMap data) plus OGL (FSA, Camden) | monthly |
 | `hex.geojson` | H3 hexagons for the map (density, hygiene, new openings, coffee, specialty, chains, takeaways); `resolution` names the H3 level | daily |
 | `status.json` | Run metadata: `generated_at`, `as_of`, `rows`, `previous_rows`, `changes`; drives the stale-data banner | daily |
 | `*.parquet` | `venues`, `venues-geo` (GeoParquet), `events`, `history` for the SQL lab and analysts. `venues.json` and the venue Parquet files are produced by the daily run and not committed | daily |

@@ -7,14 +7,16 @@ a query and refuses outside reads, shared links never auto-run, the Mapbox map d
 and the page does not scroll sideways on a phone.
 """
 
+import json
 import os
+from pathlib import Path
 
 import pytest
 
 pw = pytest.importorskip("playwright.sync_api")
 URL = os.environ.get("SMOKE_URL", "").rstrip("/") + "/"
 pytestmark = pytest.mark.skipif(not os.environ.get("SMOKE_URL"), reason="SMOKE_URL not set")
-TABS = ["overview", "insights", "map", "area", "changes", "boroughs", "brands", "craft", "report", "sql", "about"]
+TABS = ["overview", "insights", "map", "area", "changes", "boroughs", "brands", "pubs", "craft", "report", "sql", "about"]
 
 
 @pytest.fixture(scope="module")
@@ -91,7 +93,7 @@ def test_map_draws_with_mapbox(page):
 def test_no_sideways_scroll_on_phone(browser):
     ctx = browser.new_context(viewport={"width": 390, "height": 800}, service_workers="block")
     pg = ctx.new_page()
-    for tab in ["overview", "area", "brands", "report", "sql", "about"]:
+    for tab in ["overview", "area", "brands", "pubs", "report", "sql", "about"]:
         pg.goto(f"{URL}?smoke=1#{tab}", wait_until="domcontentloaded")
         pg.wait_for_selector(f"#v-{tab}:not([hidden])", timeout=15000)
         pg.wait_for_timeout(1200)
@@ -199,3 +201,66 @@ def test_report_without_prices_omits_lines(page):
     page.wait_for_selector("#rpout .rc-row", timeout=30000)
     assert page.locator(".rc-sub").count() == 0
     assert not [e for e in page.errors if "prices" not in str(e)], page.errors
+
+
+# ---------- pubs tab ----------
+PUBS_FIXTURE = Path(__file__).resolve().parents[1] / "fixtures" / "pubs_sample.json"
+
+
+def mock_pubs(page, missing=False):
+    body = PUBS_FIXTURE.read_text()
+    page.route("**/api/v1/pubs.json", lambda r: r.fulfill(status=404, body="") if missing else r.fulfill(status=200, content_type="application/json", body=body))
+
+
+def test_pubs_missing_data_is_friendly(page):
+    mock_pubs(page, missing=True)
+    open_tab(page, "pubs")
+    page.wait_for_function("document.getElementById('pb-status').textContent.includes('not available')", timeout=15000)
+    assert not page.errors, page.errors
+
+
+def test_pubs_filters_list_and_detail(page):
+    mock_pubs(page)
+    n = len(json.loads(PUBS_FIXTURE.read_text())["pubs"])
+    open_tab(page, "pubs")
+    page.wait_for_selector("#pb-list button", timeout=15000)
+    assert page.locator("#pb-counts button").count() == 5
+    assert "No group link found" in page.inner_text("#pb-counts")
+    assert page.inner_text("#pb-count").startswith(f"{n} pubs")
+    page.click('#pb-counts button[data-cat="indie"]')
+    assert page.locator('#pb-counts button[aria-pressed="true"]').count() == 1
+    assert page.locator("#pb-list button").count() == 10
+    page.click('#pb-counts button[data-cat="indie"]')
+    page.check("#pb-cask")
+    assert 0 < page.locator("#pb-list button").count() < n
+    page.uncheck("#pb-cask")
+    page.select_option("#pb-borough", "Hackney")
+    assert page.locator("#pb-list button").count() == n // 5
+    page.select_option("#pb-borough", "")
+    page.fill("#pb-q", "Test Pub 03")
+    page.wait_for_function("document.querySelectorAll('#pb-list button').length === 1")
+    page.click("#pb-list button")
+    d = page.inner_text("#pb-drawer")
+    assert "Test Pub 03" in d and "Keg lines: no open data yet" in d and "Suggest a correction" in d
+    assert "openstreetmap.org/" in page.locator("#pb-drawer a.pb-chip").first.get_attribute("href")
+    href = page.locator("#pb-drawer a.btn").get_attribute("href")
+    assert href.startswith("https://github.com/cloudcruncher/london-pulse/issues/new?title=Pub%20ownership") and "OSM%20id" in href
+    assert not page.errors, page.errors
+
+
+def test_pubs_postcode_sorts_by_distance_and_map_tap(page):
+    mock_pc(page)
+    mock_pubs(page)
+    open_tab(page, "pubs")
+    page.wait_for_selector("#pb-list button", timeout=15000)
+    page.fill("#pb-pc", "E8 3QW")
+    page.click("#pb-go")
+    page.wait_for_selector("#pb-list .pb-dist", timeout=15000)
+    first = page.locator("#pb-list li").first
+    assert "Independent" in first.inner_text()
+    assert page.locator("#pb-clear:not([hidden])").count() == 1
+    box = page.locator("#pb-map").bounding_box()
+    assert box and box["width"] > 100
+    # tapping the map must not raise, whether or not it hits a pub
+    page.mouse.click(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+    assert not page.errors, page.errors

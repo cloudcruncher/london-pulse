@@ -24,6 +24,7 @@
       <a href="#changes" data-tab="changes"><i>⇄</i><span>Changes</span></a>
       <a href="#boroughs" data-tab="boroughs"><i>▤</i><span>Boroughs</span></a>
       <a href="#brands" data-tab="brands"><i>⌂</i><span>Brands</span></a>
+      <a href="#pubs" data-tab="pubs"><i>⬢</i><span>Pubs</span></a>
       <a href="#craft" data-tab="craft"><i>☕</i><span>Craft drinks</span></a>
       <a href="#sql" data-tab="sql"><i>⌗</i><span>SQL lab</span></a>
       <a href="#about" data-tab="about"><i>ⓘ</i><span>About</span></a>
@@ -222,6 +223,38 @@
     <div class="drawer" id="drawer" hidden></div>
   </section>
 
+  <section class="view" id="v-pubs" hidden>
+    <h2 class="first">Who owns London's pubs?</h2>
+    <p class="lead">Find an independent one near you, and see which belong to big groups.</p>
+    <div class="pb-counts" id="pb-counts" role="group" aria-label="Filter by ownership type"></div>
+    <div class="pb-filters">
+      <input id="pb-q" type="search" placeholder="Search a pub name" autocomplete="off" aria-label="Search pub name">
+      <select id="pb-borough" aria-label="Borough"><option value="">All boroughs</option></select>
+      <label class="chip evtoggle"><input type="checkbox" id="pb-cask"> Cask ale</label>
+    </div>
+    <div class="pb-filters">
+      <input id="pb-pc" type="search" placeholder="Postcode, e.g. E8 3QW" autocomplete="off" aria-label="Your postcode">
+      <button class="btn primary" id="pb-go" type="button">Find near me</button>
+      <button class="btn" id="pb-geo" type="button">Use my location</button>
+      <select id="pb-sort" aria-label="Sort order" hidden><option value="indie">Independents first</option><option value="near">Nearest first</option></select>
+      <button class="chip" id="pb-clear" type="button" hidden>Clear location</button>
+    </div>
+    <p class="note" id="pb-status" role="status" aria-live="polite"></p>
+    <div class="pb-main">
+      <div class="pb-mapwrap">
+        <canvas id="pb-map" aria-label="Map of London pubs coloured by owner type. Use the list for keyboard access."></canvas>
+        <div class="tip" id="pb-tip" hidden></div>
+        <div class="zoom"><button id="pb-zin" aria-label="Zoom in">+</button><button id="pb-zout" aria-label="Zoom out">−</button><button id="pb-zreset" aria-label="Reset view">⌂</button></div>
+      </div>
+      <div class="pb-listwrap">
+        <div class="count" id="pb-count"></div>
+        <ul class="pb-list" id="pb-list"></ul>
+        <button class="btn" id="pb-more" type="button" hidden>Show more</button>
+      </div>
+    </div>
+    <p class="note pb-foot" id="pb-foot">Pub locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (ODbL). Contains OGL data: FSA, London Borough of Camden.</p>
+  </section>
+
   <section class="view" id="v-craft" hidden>
     <h2 class="first">Craft drinks</h2>
     <p class="note">New company formation in London, from Companies House. A signal of who may be about to open: companies can precede an FSA registration by months. Districts on the London edge (e.g. KT, EN, RM, TW, CR) include companies outside Greater London.</p>
@@ -245,6 +278,7 @@
       <li><b>Food Standards Agency</b> hygiene ratings, snapshotted twice a day (about 06:17 and 12:17 UTC, because some days the data lands after the first run) for all 33 London local authorities (32 boroughs and the City). New and removed premises are found by comparing consecutive days.</li>
       <li><b>Companies House</b> monthly company data for London postcode districts: new craft-drinks companies, and company formation across food and drink, craft makers, creative, wellness, retail and tech.</li>
       <li><b>Transport for London</b> stations and lines, and <b>police-recorded crime</b> (counts only, grouped into map cells), refreshed monthly for the Area guide. <b>Who lives nearby</b> combines Census 2021 tenure (ONS), the 2025 Indices of Deprivation (MHCLG) and ONS small-area household income estimates. <b>Environment nearby</b> adds flood zones for rivers and the sea and surface-water flood risk (Environment Agency), road, rail and aircraft noise (Defra, round 4 noise maps) and green space and distance to the nearest park (Ordnance Survey Open Greenspace). Air quality is left out for now because its licence is not confirmed as open.</li>
+      <li><b>Pubs</b> (Pubs tab): locations and any operator, brand and cask-ale tags are from <b>OpenStreetMap</b> (© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL), linked to the FSA register and, for Camden, the <b>London Borough of Camden</b> licensing register (OGL v3.0), then matched to a short, hand-sourced table of pub groups. Ownership labels are best-effort: "no group link found" is not a claim that a pub is independent.</li>
       <li><b>HM Land Registry</b> sale prices and <b>ONS</b> private rents feed the postcode report card.</li>
     </ul>
     <h3>How to read the environment layer</h3>
@@ -267,6 +301,7 @@
   </section>
 </main>
 
+<div class="drawer" id="pb-drawer" hidden role="dialog" aria-label="Pub details"></div>
 <div class="toast" id="toast" hidden></div>
 <script src="config.js"></script>
 <script src="assets/app.js" defer></script>

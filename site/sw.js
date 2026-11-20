@@ -1,6 +1,6 @@
 // Offline shell + stale-while-revalidate for data. Bump VERSION when shell files change.
-const VERSION = 'lp-v27';
-const SHELL = ['./', 'index.html', 'assets/app.css', 'assets/app.js', 'assets/sql.js', 'assets/report.js', 'assets/mapbox.js', 'config.js', 'assets/icon.svg', 'manifest.webmanifest'];
+const VERSION = 'lp-v28';
+const SHELL = ['./', 'index.html', 'assets/app.css', 'assets/app.js', 'assets/sql.js', 'assets/report.js', 'assets/mapbox.js', 'assets/pubs.js', 'config.js', 'assets/icon.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(
