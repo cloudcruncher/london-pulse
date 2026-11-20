@@ -207,9 +207,14 @@ def test_report_without_prices_omits_lines(page):
 PUBS_FIXTURE = Path(__file__).resolve().parents[1] / "fixtures" / "pubs_sample.json"
 
 
-def mock_pubs(page, missing=False):
+PUBS_INSIGHTS_FIXTURE = PUBS_FIXTURE.with_name("pubs_insights_sample.json")
+
+
+def mock_pubs(page, missing=False, insights=True):
     body = PUBS_FIXTURE.read_text()
+    ins = PUBS_INSIGHTS_FIXTURE.read_text()
     page.route("**/api/v1/pubs.json", lambda r: r.fulfill(status=404, body="") if missing else r.fulfill(status=200, content_type="application/json", body=body))
+    page.route("**/api/v1/pubs-insights.json", lambda r: r.fulfill(status=200, content_type="application/json", body=ins) if insights else r.fulfill(status=404, body=""))
 
 
 def test_pubs_missing_data_is_friendly(page):
@@ -263,4 +268,96 @@ def test_pubs_postcode_sorts_by_distance_and_map_tap(page):
     assert box and box["width"] > 100
     # tapping the map must not raise, whether or not it hits a pub
     page.mouse.click(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+    assert not page.errors, page.errors
+
+
+def test_pubs_insights_render_from_fixture(page):
+    mock_pubs(page)
+    open_tab(page, "pubs", "?mode=insights")
+    page.wait_for_selector("#pb-s-league tbody tr", timeout=15000)
+    assert page.locator("#pb-insights:not([hidden])").count() == 1
+    assert page.locator("#pb-explore[hidden]").count() == 1
+    assert page.locator(".pb-hero").count() == 1
+    for sec in ("league", "boroughs", "cmp", "dep", "churn"):
+        assert page.locator(f"#pb-s-{sec}").count() == 1, sec
+    assert page.locator("#pb-s-league tbody tr").count() == 3
+    assert page.locator("#pb-s-boroughs svg").count() >= 1
+    page.select_option("#pb-cmp-a", "Camden")
+    page.select_option("#pb-cmp-b", "Hackney")
+    assert "Camden" in page.inner_text("#pb-s-cmp") and "Hackney" in page.inner_text("#pb-s-cmp")
+    assert page.locator(".pb-calcnote").count() == 0
+    # league row drills into the group in the explore view
+    page.locator('#pb-s-league [data-g="testpe"]').first.click()
+    page.wait_for_selector("#pb-group:not([hidden])", timeout=5000)
+    assert "g=testpe" in page.evaluate("location.hash")
+    assert not page.errors, page.errors
+
+
+def test_pubs_group_drilldown_filters(page):
+    mock_pubs(page)
+    open_tab(page, "pubs", "?g=testpe")
+    page.wait_for_selector("#pb-group:not([hidden])", timeout=15000)
+    page.wait_for_function("document.querySelectorAll('#pb-list button').length === 7", timeout=5000)
+    assert page.locator("#pb-gsel").input_value() == "testpe"
+    page.click("#pb-group .pb-back")
+    page.wait_for_function("document.querySelectorAll('#pb-list button').length === 40", timeout=5000)
+    assert "g=" not in page.evaluate("location.hash")
+    assert not page.errors, page.errors
+
+
+def test_pubs_url_state_round_trip(page):
+    mock_pubs(page)
+    open_tab(page, "pubs", "?cat=indie&b=Hackney&q=Test")
+    page.wait_for_selector("#pb-list button", timeout=15000)
+    assert page.locator("#pb-borough").input_value() == "Hackney"
+    assert page.locator("#pb-q").input_value() == "Test"
+    assert page.locator('#pb-counts button[data-cat="indie"][aria-pressed="true"]').count() == 1
+    page.select_option("#pb-borough", "Camden")
+    page.wait_for_function("location.hash.includes('b=Camden')", timeout=5000)
+    h = page.evaluate("location.hash")
+    assert "cat=indie" in h and "q=Test" in h
+    page.goto(f"{URL}?smoke=1{h}", wait_until="domcontentloaded")
+    page.wait_for_selector("#pb-list button", timeout=15000)
+    assert page.locator("#pb-borough").input_value() == "Camden"
+    assert not page.errors, page.errors
+
+
+def test_pubs_insights_404_falls_back_to_computed(page):
+    mock_pubs(page, insights=False)
+    open_tab(page, "pubs", "?mode=insights")
+    page.wait_for_selector("#pb-s-league tbody tr", timeout=15000)
+    assert page.locator(".pb-calcnote").count() == 1
+    assert page.locator("#pb-s-dep").count() == 0 and page.locator("#pb-s-churn").count() == 0
+    assert "Camden" in page.inner_text(".pb-notes")  # core caveats are built in, not only in the file
+    page.click("#pb-tab-explore")
+    page.wait_for_selector("#pb-list button", timeout=5000)
+    assert not page.errors, page.errors
+
+
+def test_pubs_stale_insights_file_is_ignored(page):
+    mock_pubs(page)
+    stale = json.loads(PUBS_INSIGHTS_FIXTURE.read_text())
+    stale["as_of"] = "2000-01-01"
+    page.route("**/api/v1/pubs-insights.json", lambda r: r.fulfill(status=200, content_type="application/json", body=json.dumps(stale)))
+    open_tab(page, "pubs", "?mode=insights")
+    page.wait_for_selector("#pb-s-league tbody tr", timeout=15000)
+    assert page.locator(".pb-calcnote").count() == 1
+    assert page.locator("#pb-s-dep").count() == 0
+    assert not page.errors, page.errors
+
+
+def test_pubs_postcode_never_in_url_or_auto_queried(page):
+    calls = []
+    mock_pc(page)
+    page.on("request", lambda r: calls.append(r.url) if "postcodes.io" in r.url else None)
+    mock_pubs(page)
+    open_tab(page, "pubs", "?pc=E83QW&b=Hackney")
+    page.wait_for_selector("#pb-list button", timeout=15000)
+    page.wait_for_timeout(500)
+    assert not calls, calls  # a shared link must not send the postcode anywhere by itself
+    assert page.locator("#pb-pc").input_value() == "E83QW"
+    assert "pc=" not in page.evaluate("location.hash")
+    page.click("#pb-go")
+    page.wait_for_selector("#pb-list .pb-dist", timeout=15000)
+    assert calls and "pc=" not in page.evaluate("location.hash")
     assert not page.errors, page.errors

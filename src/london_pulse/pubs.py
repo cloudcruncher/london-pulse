@@ -15,9 +15,16 @@ Method in short:
     independent source families agree on a group (OSM tags or name, and the Camden licensee) or a reviewed override
     says so; tags on the same OSM object, however many, give "likely". Conflicting groups: licensee (the current legal
     holder) beats operator beats brand beats the rest.
+  * Extra open signals (v2): the OSM website domain on a group's own domain ("osm:website"), an OSM `brewery` tag
+    naming one family/regional brewer ("osm:brewery", a tied-house signal), the FSA business name when it differs
+    from OSM's ("fsa:name"), and Wikidata (CC0) ownership: P127/P137/P749 and reverse P1830, followed up to 4 hops
+    from the pub's own `wikidata` item ("wikidata:owner", its own family) or from its `brand:wikidata` /
+    `operator:wikidata` tags ("osm:wikidata-owner", OSM family: it only resolves the mapper's claim) to a group QID.
+    Source families for "confirmed": osm (incl. website/brewery), camden, fsa, wikidata, override.
   * Independent ("indie", "likely"): no group matched and the OSM operator or Camden licensee is a name that appears
-    on <= 3 London pubs (or the operator is literally "Free House"). Everything else is "unknown": not a claim of
-    independence.
+    on <= 3 London pubs (or the operator is literally "Free House"), or the pub's website domain is shared by 2-3
+    pubs at different places with no group link (a small group). A shared domain on more than 3 pubs that is not a
+    verified group blocks indie. Everything else is "unknown": not a claim of independence.
 """
 
 import argparse
@@ -43,6 +50,18 @@ OVERPASS_QUERY = '[out:json][timeout:100][bbox:51.28,-0.52,51.70,0.34];nwr["amen
 CAMDEN = "https://opendata.camden.gov.uk/resource/rv9z-rsui.json"
 OSM_CACHE = "osm_pubs.json"
 CAMDEN_CACHE = "camden_licences.json"
+WIKIDATA = "https://query.wikidata.org/sparql"
+WIKIDATA_CACHE = "wikidata_pubs.json"
+WIKIDATA_HOPS = 4
+WIKIDATA_PROPS = ("P127", "P137", "P749")  # owned by, operator, parent organization (+ reverse P1830 owner of)
+# QIDs never followed as owners: Wikidata's "Punch Pubs" item still links pubs from before the 2017 split of Punch
+# between Heineken (Star Pubs) and Patron (today's Punch), so it cannot tell which of the two owns a pub now
+WIKIDATA_AMBIGUOUS = {"Q2118336"}
+WIKIDATA_CACHE_VERSION = 2
+# reference properties that do not make an ownership statement checkable: Pubs Galore ID (the 2019 bulk import),
+# retrieved date, "imported from Wikimedia project" and its URL, based on heuristic. A statement whose references
+# use only these (or that has none) is "weak": it never counts as its own family and is never sole evidence.
+WIKIDATA_WEAK_REFS = {"P7411", "P813", "P143", "P4656", "P887", "P1932"}
 CACHE_DAYS = 7
 
 FSA_PUB_TYPE = "Pub/bar/nightclub"
@@ -54,12 +73,33 @@ INDIE_MAX = 3  # an operator/licensee on at most this many London pubs reads as 
 NOT_INDIE = re.compile(
     r"charles wells|\bwells (&|and) co|courage|wadworth|generator|british waterways|\bantic\b|castle pubs"
     r"|brunning|holiday inn|\bssp\b|heritage pubs|company secretary|^freehold$"
-    r"|students? union|\bsu\b",
+    r"|students? union|\bsu\b"
+    r"|publove|whelan",  # multi-site operators whose landlord/owner we could not verify (Whelan's leases from Star Pubs)
+    re.IGNORECASE,
+)
+DOMAIN_MIN_SPREAD_M = 150  # two OSM objects on one domain closer than this are the same pub mapped twice, not a group
+# hosting/social/listing platforms: a shared one says nothing about ownership
+GENERIC_DOMAINS = re.compile(
+    r"(^|\.)(facebook|instagram|twitter|x|tiktok|linktr|linkin|wixsite|wix|squarespace|google|goo|business\.site|"
+    r"beerintheevening|edan|tripadvisor|yelp|opentable|designmynight|resdiary|sevenrooms|untappd|whatpub|camra|"
+    r"wordpress|blogspot|weebly|godaddysites|webflow|carrd|bit|tinyurl|ueniweb|mailchimpsites|site123|jimdosite|"
+    r"square|toasttab|uber|deliveroo|justeat|just-eat|wikipedia|wikidata|openstreetmap|youtube)\.[a-z.]+$",
     re.IGNORECASE,
 )
 MIN_TOTAL = 2500  # sanity floor for the published file (the workflow guard uses the same number)
 
-EVIDENCE_RANK = ["camden:licensee", "osm:operator", "osm:brand", "osm:wikidata", "name"]
+EVIDENCE_RANK = [
+    "camden:licensee",
+    "osm:operator",
+    "osm:brand",
+    "osm:wikidata",
+    "osm:website",
+    "name",
+    "fsa:name",
+    "osm:brewery",
+    "wikidata:owner",
+    "osm:wikidata-owner",
+]
 
 SOURCES = [
     {
@@ -87,6 +127,14 @@ SOURCES = [
         "url": "https://opendata.camden.gov.uk/resource/rv9z-rsui",
     },
     {
+        "id": "wikidata",
+        "name": "Wikidata ownership statements (owned by, operator, parent organization)",
+        "publisher": "Wikidata contributors",
+        "licence": "CC0 1.0",
+        "attribution": "Wikidata",
+        "url": "https://www.wikidata.org/",
+    },
+    {
         "id": "groups",
         "name": "Curated pub group table",
         "publisher": "London Pulse",
@@ -110,6 +158,8 @@ FIELDS = [
     "cask",
     "craft",
     "website",
+    "rating",
+    "rating_date",
 ]
 
 # ---------------------------------------------------------------- text helpers
@@ -180,6 +230,32 @@ def find_postcode(s) -> str:
 def fmt_postcode(pc: str) -> str:
     pc = norm_postcode(pc)
     return f"{pc[:-3]} {pc[-3:]}" if len(pc) > 3 else pc
+
+
+_SLD = {"co", "org", "ac", "gov", "me", "ltd", "plc", "net", "sch"}
+
+
+def site_domain(url) -> str:
+    """Registrable domain of a website tag ("https://www.x.co.uk/a" -> "x.co.uk"); "" if none."""
+    u = str(url or "").strip().split(";")[0].strip()
+    if not u:
+        return ""
+    if "//" not in u:
+        u = "http://" + u
+    try:
+        host = (urllib.parse.urlsplit(u).hostname or "").lower().rstrip(".")
+    except ValueError:
+        return ""
+    parts = [x for x in host.split(".") if x]
+    if len(parts) < 2:
+        return ""
+    n = 3 if len(parts) >= 3 and parts[-1] == "uk" and parts[-2] in _SLD else 2
+    return ".".join(parts[-n:])
+
+
+def brewery_values(v) -> list[str]:
+    """OSM brewery tag -> normalised values ("Sam_Smith's;various" -> ["sam smith's", "various"])."""
+    return [" ".join(x.replace("_", " ").lower().split()) for x in str(v or "").replace("’", "'").split(";") if x.strip()]
 
 
 def cask_flag(v) -> int | None:
@@ -315,6 +391,106 @@ def fetch_camden(ref_dir: Path, refresh: bool = False) -> list[dict]:
     return rows
 
 
+def _sparql(query: str) -> list[dict]:
+    body = urllib.parse.urlencode({"query": query, "format": "json"}).encode()
+    err: Exception | None = None
+    for i in range(3):
+        try:
+            req = urllib.request.Request(
+                WIKIDATA,
+                data=body,
+                headers={"User-Agent": OVERPASS_UA, "Accept": "application/sparql-results+json"},
+            )
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return json.load(r)["results"]["bindings"]
+        except Exception as e:  # noqa: BLE001 - WDQS rate limits and times out
+            err = e
+            time.sleep(5 * (i + 1))
+    raise RuntimeError("Wikidata query failed") from err
+
+
+def _qid(uri: str) -> str:
+    return uri.rsplit("/", 1)[-1]
+
+
+def fetch_wikidata(ref_dir: Path, qids, refresh: bool = False, batch: int = 200) -> dict:
+    """Current ownership statements for the given QIDs and their owners, up to WIKIDATA_HOPS, plus English labels.
+
+    Returns {"edges": {qid: [[owner_qid, strong], ...]}, "labels": {qid: label}}. Only statements without an end time
+    (pq:P582) and not deprecated are kept; `strong` is True when some reference uses a property outside
+    WIKIDATA_WEAK_REFS (e.g. a reference URL). Cached in work/reference/wikidata_pubs.json for CACHE_DAYS; a fresh
+    cache is topped up with new QIDs only, and a cache from an older format is refetched.
+    """
+    p = ref_dir / WIKIDATA_CACHE
+    cache = json.loads(p.read_text()) if _fresh(p, refresh) else {}
+    if cache.get("version") != WIKIDATA_CACHE_VERSION:
+        cache = {"edges": {}, "labels": {}, "queried": []}
+    strong: dict[tuple[str, str], bool] = {(k, o): bool(st) for k, v in cache["edges"].items() for o, st in v}
+    labels: dict[str, str] = dict(cache["labels"])
+    queried = set(cache["queried"])
+    frontier = {q for q in qids if re.fullmatch(r"Q\d+", q)}
+    pairs = " ".join(f"(p:{x} ps:{x})" for x in WIKIDATA_PROPS)
+    current = "FILTER NOT EXISTS { ?st pq:P582 [] } FILTER NOT EXISTS { ?st wikibase:rank wikibase:DeprecatedRank }"
+
+    def nexts(qs):
+        return {o for (q, o) in strong if q in qs}
+
+    for _ in range(WIKIDATA_HOPS):
+        todo = sorted(frontier - queried)
+        for i in range(0, len(todo), batch):
+            vals = " ".join("wd:" + q for q in todo[i : i + batch])
+            rows = _sparql(
+                f"SELECT ?i ?o ?rp WHERE {{ VALUES ?i {{ {vals} }} "
+                f"{{ VALUES (?p ?ps) {{ {pairs} }} ?i ?p ?st . ?st ?ps ?o . }} "
+                f"UNION {{ ?o p:P1830 ?st . ?st ps:P1830 ?i . }} "
+                f"FILTER(isIRI(?o)) {current} "
+                f"OPTIONAL {{ ?st prov:wasDerivedFrom ?ref . ?ref ?rp ?rv . }} }}"
+            )
+            for b in rows:
+                key = (_qid(b["i"]["value"]), _qid(b["o"]["value"]))
+                ref_prop = b.get("rp", {}).get("value", "")
+                ok = "/prop/reference/" in ref_prop and _qid(ref_prop) not in WIKIDATA_WEAK_REFS
+                strong[key] = strong.get(key, False) or ok
+            for b in _sparql(
+                f'SELECT ?i ?l WHERE {{ VALUES ?i {{ {vals} }} ?i rdfs:label ?l FILTER(lang(?l) = "en") }}'
+            ):
+                labels[_qid(b["i"]["value"])] = b["l"]["value"]
+        queried |= set(todo)
+        frontier = nexts(frontier)
+    edges: dict[str, list] = defaultdict(list)
+    for (q, o), st in sorted(strong.items()):
+        edges[q].append([o, st])
+    ref_dir.mkdir(parents=True, exist_ok=True)
+    out = {"edges": dict(edges), "labels": labels}
+    p.write_text(json.dumps({"version": WIKIDATA_CACHE_VERSION, **out, "queried": sorted(queried)}, separators=(",", ":")))
+    return out
+
+
+def wikidata_owner_groups(qids, edges: dict, group_qids: dict[str, set[str]]) -> dict[str, bool]:
+    """Groups reached from the pub's QIDs by following current ownership edges -> {group: strong}.
+
+    The nearest hop with a group QID wins; a path is strong only if every edge on it is. Hop 0 (the tags themselves)
+    is the plain osm:wikidata match and is skipped here. Edges are [owner, strong] pairs.
+    """
+    seen = set(qids)
+    level = {q: True for q in qids}
+    for _ in range(WIKIDATA_HOPS):
+        nxt: dict[str, bool] = {}
+        for q, ok in level.items():
+            for o, st in edges.get(q, ()):
+                if o in seen or o in WIKIDATA_AMBIGUOUS:
+                    continue
+                nxt[o] = nxt.get(o, False) or (ok and bool(st))
+        if not nxt:
+            return {}
+        seen |= set(nxt)
+        level = nxt
+        hit = {gid: any(level[q] for q in qs & level.keys()) for gid, qs in group_qids.items() if qs & level.keys()}
+        if hit:
+            return hit
+    return {}
+
+
 def load_fsa(parquet: Path) -> list[dict]:
     cols = "fhrsid,name,business_type,address,postcode,rating,rating_date,authority,lon,lat"
     con = duckdb.connect()
@@ -350,6 +526,8 @@ def osm_points(osm: dict) -> list[dict]:
             for w in str(t.get(k, "")).split(";")
             if w.strip()
         ]
+        own = [w.strip() for w in str(t.get("wikidata", "")).split(";") if w.strip()]
+        website = t.get("website") or t.get("contact:website") or ""
         pubs.append(
             {
                 "osm": f"{e['type'][0]}{e['id']}",
@@ -362,7 +540,10 @@ def osm_points(osm: dict) -> list[dict]:
                 "brand": t.get("brand", ""),
                 "wikidata": wd,
                 "postcode": t.get("addr:postcode", ""),
-                "website": t.get("website") or t.get("contact:website") or "",
+                "website": website,
+                "domain": site_domain(website),
+                "qids": [q for q in dict.fromkeys(own + wd) if re.fullmatch(r"Q\d+", q)],
+                "own_qids": [q for q in dict.fromkeys(own) if re.fullmatch(r"Q\d+", q)],
             }
         )
     return pubs
@@ -450,8 +631,59 @@ def _winner(matches: list[tuple[str, str]]) -> tuple[str, list[str]] | None:
     )
 
 
+# evidence that may support a group but never stands alone ("wikidata:weak": an unreferenced or bulk-import statement)
+WEAK_EVIDENCE = {"wikidata:weak"}
+
+
+def _family(e: str) -> str | None:
+    """Source family of an evidence code. fsa:name is the same trading name as OSM's, so it is OSM family;
+    weak Wikidata statements belong to no family (they can never help reach "confirmed")."""
+    if e in WEAK_EVIDENCE:
+        return None
+    head = e.split(":", 1)[0]
+    return head if head in ("camden", "wikidata", "override") else "osm"
+
+
+def _families(ev) -> set[str]:
+    return {f for f in map(_family, ev) if f}
+
+
+def extra_matches(p: dict, groups: list[dict], match_group, wd: dict | None) -> list[tuple[str, str]]:
+    """v2 signals beyond match_group: website domain, brewery tag, FSA business name, Wikidata ownership.
+
+    wd is fetch_wikidata()'s {"edges", "labels"}. A chain from the pub's own item counts as Wikidata evidence only if
+    every statement on it is referenced (else "wikidata:weak") and the item's label still matches the OSM name (an
+    item for a renamed or replaced pub is dropped). A chain from brand:/operator:wikidata resolves the OSM mapper's
+    claim, so it is OSM family ("osm:wikidata-owner"), or "wikidata:weak" if any statement on it is unreferenced.
+    """
+    out = []
+    dom = p.get("domain") or ""
+    brew = brewery_values(p["tags"].get("brewery"))
+    group_qids = {}
+    for g in groups:
+        m = g.get("match") or {}
+        if dom and any(dom == d or dom.endswith("." + d) for d in m.get("domain") or ()):
+            out.append((g["id"], "osm:website"))
+        rx = m.get("brewery")
+        if rx and len(brew) == 1 and re.fullmatch(rx, brew[0], re.IGNORECASE):
+            out.append((g["id"], "osm:brewery"))
+        if m.get("wikidata"):
+            group_qids[g["id"]] = set(m["wikidata"])
+    fsa_name = (p["fsa"] or {}).get("name") or ""
+    if fsa_name and norm(fsa_name) != norm(p["name"]):
+        out += [(gid, "fsa:name") for gid, e in match_group(None, None, None, fsa_name, ()) if e == "name"]
+    if wd and p.get("qids"):
+        edges, labels = wd.get("edges") or {}, wd.get("labels") or {}
+        own = [q for q in p.get("own_qids", []) if q in p["qids"] and names_match(labels.get(q, ""), p["name"])]
+        tagged = [q for q in p["qids"] if q not in p.get("own_qids", [])]
+        for qs, code in ((own, "wikidata:owner"), (tagged, "osm:wikidata-owner")):
+            if qs:
+                out += [(gid, code if ok else "wikidata:weak") for gid, ok in sorted(wikidata_owner_groups(qs, edges, group_qids).items())]
+    return out
+
+
 def classify(
-    pubs: list[dict], groups: list[dict], match_group, overrides: list[dict]
+    pubs: list[dict], groups: list[dict], match_group, overrides: list[dict], wd: dict | None = None
 ) -> None:
     """Sets group, category, confidence, evidence on every pub."""
     cat_of = {g["id"]: g["category"] for g in groups}
@@ -459,14 +691,57 @@ def classify(
     ov_fhrs = {int(o["fhrsid"]): o for o in overrides if o.get("fhrsid", "").isdigit()}
     op_count = Counter(norm(p["operator"]) for p in pubs if norm(p["operator"]))
     lic_count = Counter(norm(p["licensee"]) for p in pubs if norm(p["licensee"]))
+    group_domains = {g["id"]: tuple((g.get("match") or {}).get("domain") or ()) for g in groups}
+
+    def usable(p: dict, matches: list[tuple[str, str]]) -> list[tuple[str, str]]:
+        """Drop groups backed only by evidence that may never stand alone: a weak Wikidata statement, or a brewery
+        tag on a pub whose own website is not the group's (a free house can sell a brewer's beer)."""
+        by: dict[str, set[str]] = defaultdict(set)
+        for gid, e in matches:
+            by[gid].add(e)
+        dom = p.get("domain") or ""
+        own_site = lambda gid: bool(dom) and not any(dom == d or dom.endswith("." + d) for d in group_domains.get(gid, ()))
+
+        def alone(gid: str) -> bool:
+            ev = by[gid] - WEAK_EVIDENCE
+            return not ev or (ev == {"osm:brewery"} and own_site(gid))
+
+        return [(gid, e) for gid, e in matches if not alone(gid)]
+
     won = {
         p["osm"]: _winner(
-            list(match_group(p["operator"], p["brand"], p["licensee"], p["name"], p["wikidata"]))
+            usable(
+                p,
+                list(match_group(p["operator"], p["brand"], p["licensee"], p["name"], p["wikidata"]))
+                + extra_matches(p, groups, match_group, wd),
+            )
         )
         for p in pubs
     }
+    # Wikidata ownership can be stale (e.g. a pub sold on with its old item unchanged): a Wikidata-only hit yields to a
+    # current OSM operator or Camden licensee that names someone else
+    wd_only = {"wikidata:owner", "osm:wikidata-owner"} | WEAK_EVIDENCE
+    for p in pubs:
+        w = won[p["osm"]]
+        if w and set(w[1]) <= wd_only and (norm(p["operator"]) or norm(p["licensee"])):
+            won[p["osm"]] = None
     # operator/licensee names seen on any group pub (e.g. a holding company or a placeholder) are never an indie signal
     grouped = {n for p in pubs if won[p["osm"]] for n in (norm(p["operator"]), norm(p["licensee"])) if n}
+    # website domains: a domain shared by 2-3 pubs at different places with no group link reads as a small group;
+    # one on more than INDIE_MAX pubs that is not a verified group blocks indie altogether
+    on_domain: dict[str, list[dict]] = defaultdict(list)
+    for p in pubs:
+        if p.get("domain") and not GENERIC_DOMAINS.search(p["domain"]):
+            on_domain[p["domain"]].append(p)
+    big_domain = {d for d, ps in on_domain.items() if len(ps) > INDIE_MAX and not any(won[q["osm"]] for q in ps)}
+
+    def small_domain(d: str) -> bool:
+        ps = on_domain.get(d) or []
+        if not 2 <= len(ps) <= INDIE_MAX or NOT_INDIE.search(d) or any(won[q["osm"]] for q in ps):
+            return False
+        pts = [xy(q["lon"], q["lat"]) for q in ps]
+        return any(math.dist(a, b) >= DOMAIN_MIN_SPREAD_M for i, a in enumerate(pts) for b in pts[i + 1 :])
+
     for p in pubs:
         p["group"], p["category"], p["confidence"], p["evidence"] = (
             None,
@@ -480,29 +755,29 @@ def classify(
             p["group"] = o.get("group") or None
             p["category"] = o.get("category") or cat_of.get(p["group"], "unknown")
             p["evidence"] = ["override"]
-            p["confidence"] = None if p["category"] == "unknown" else "confirmed"
+            p["confidence"] = None if p["category"] == "unknown" else "likely" if p["category"] == "indie" else "confirmed"
             continue
         w = won[p["osm"]]
         if w:
             gid, ev = w
             p["group"], p["category"] = gid, cat_of.get(gid, "unknown")
-            families = {"camden" if e.startswith("camden:") else "osm" for e in ev}
-            p["confidence"] = "confirmed" if len(families) >= 2 else "likely"
+            # "Independent" is always "likely" (spec): independence is an absence of ties, never confirmed
+            p["confidence"] = "confirmed" if len(_families(ev)) >= 2 and p["category"] != "indie" else "likely"
             p["evidence"] = ev
+            continue
+        if p.get("domain") in big_domain:
             continue
         op, lic = norm(p["operator"]), norm(p["licensee"])
         free_house = op in ("free house", "freehouse") and op not in grouped
         small = lambda n, c: bool(n) and c[n] <= INDIE_MAX and n not in grouped and not NOT_INDIE.search(n)
-        if free_house or small(op, op_count) or small(lic, lic_count):
+        signals = (
+            ("osm:operator", free_house or small(op, op_count)),
+            ("camden:licensee", small(lic, lic_count)),
+            ("osm:website", bool(p.get("domain")) and small_domain(p["domain"])),
+        )
+        if any(ok for _, ok in signals):
             p["category"], p["confidence"] = "indie", "likely"
-            p["evidence"] = [
-                e
-                for e, ok in (
-                    ("osm:operator", free_house or small(op, op_count)),
-                    ("camden:licensee", small(lic, lic_count)),
-                )
-                if ok
-            ]
+            p["evidence"] = [e for e, ok in signals if ok]
 
 
 def apply_overrides_tags(pubs: list[dict], overrides: list[dict]) -> None:
@@ -541,6 +816,7 @@ def build(
     overrides: list[dict] | None = None,
     as_of: str | None = None,
     categories: dict | None = None,
+    wd: dict | None = None,
 ) -> tuple[dict, list[dict]]:
     """Pure function from the data sets plus the group table to (pubs.json document, classified pubs)."""
     if categories is None:
@@ -553,7 +829,7 @@ def build(
     for p in pubs:
         t = p["tags"]
         p["cask"], p["craft"] = cask_flag(t.get("real_ale")), craft_flag(t)
-    classify(pubs, groups, match_group, overrides)
+    classify(pubs, groups, match_group, overrides, wd)
     apply_overrides_tags(pubs, overrides)
     pubs.sort(key=lambda p: (p["near"]["authority"], p["name"].lower(), p["osm"]))
     rows = []
@@ -575,6 +851,8 @@ def build(
                 p["cask"],
                 p["craft"],
                 p["website"] or None,
+                (p["fsa"] or {}).get("rating") or None,
+                _iso((p["fsa"] or {}).get("rating_date")),
             ]
         )
     ix = {f: i for i, f in enumerate(FIELDS)}
@@ -584,9 +862,11 @@ def build(
         "as_of": as_of or date.today().isoformat(),
         "generated": date.today().isoformat(),
         "licence": "ODbL 1.0 (contains OpenStreetMap data) and OGL v3.0",
-        "source": "OpenStreetMap contributors (ODbL); Food Standards Agency and Camden Council (OGL v3.0); curated group table",
+        "source": "OpenStreetMap contributors (ODbL); Food Standards Agency and Camden Council (OGL v3.0); Wikidata (CC0); "
+        "curated group table",
         "method": "OSM pubs inside London, linked to the FSA register and Camden licences, matched to a curated group table "
-        "on operator, brand, licensee and name; two agreeing sources = confirmed, one = likely.",
+        "on operator, brand, licensee, name, website domain, brewery tag, FSA name and Wikidata ownership; "
+        "two agreeing source families = confirmed, one = likely.",
         "sources": SOURCES,
         "categories": categories,
         "groups": [
@@ -609,6 +889,15 @@ def build(
     return doc, pubs
 
 
+def _iso(d) -> str | None:
+    if not d:
+        return None
+    if hasattr(d, "isoformat"):
+        return d.isoformat()[:10]
+    s = str(d)[:10]
+    return s if re.fullmatch(r"\d{4}-\d{2}-\d{2}", s) else None
+
+
 _COMPANY = re.compile(r"\b(ltd|limited|plc|llp)\b", re.IGNORECASE)
 
 
@@ -627,7 +916,7 @@ def main(argv=None) -> int:
     ap.add_argument(
         "--refresh",
         action="store_true",
-        help="ignore the cached OSM and Camden downloads",
+        help="ignore the cached OSM, Camden and Wikidata downloads",
     )
     args = ap.parse_args(argv)
     root = Path(__file__).resolve().parents[2]
@@ -647,6 +936,12 @@ def main(argv=None) -> int:
     except Exception as e:  # noqa: BLE001
         print(f"pubs: Camden licensing skipped: {e}", file=sys.stderr)
         camden, skipped = None, [{"source": "camden", "reason": str(e)[:200]}]
+    qids = sorted({q for p in osm_points(osm) for q in p["qids"]})
+    try:
+        wd = fetch_wikidata(ref, qids, args.refresh)
+    except Exception as e:  # noqa: BLE001
+        print(f"pubs: Wikidata skipped: {e}", file=sys.stderr)
+        wd, skipped = None, skipped + [{"source": "wikidata", "reason": str(e)[:200]}]
     fsa = load_fsa(root / "work" / "latest.parquet")
     ts = (osm.get("osm3s") or {}).get("timestamp_osm_base", "")[:10]
     as_of = (
@@ -664,6 +959,7 @@ def main(argv=None) -> int:
         match_group,
         load_overrides(root / "data" / "pubs_overrides.csv"),
         as_of,
+        wd=wd,
     )
     doc["skipped"] = skipped
     api.mkdir(parents=True, exist_ok=True)

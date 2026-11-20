@@ -224,34 +224,61 @@
   </section>
 
   <section class="view" id="v-pubs" hidden>
-    <h2 class="first">Who owns London's pubs?</h2>
-    <p class="lead">Find an independent one near you, and see which belong to big groups.</p>
-    <div class="pb-counts" id="pb-counts" role="group" aria-label="Filter by ownership type"></div>
-    <div class="pb-filters">
-      <input id="pb-q" type="search" placeholder="Search a pub name" autocomplete="off" aria-label="Search pub name">
-      <select id="pb-borough" aria-label="Borough"><option value="">All boroughs</option></select>
-      <label class="chip evtoggle"><input type="checkbox" id="pb-cask"> Cask ale</label>
-    </div>
-    <div class="pb-filters">
-      <input id="pb-pc" type="search" placeholder="Postcode, e.g. E8 3QW" autocomplete="off" aria-label="Your postcode">
-      <button class="btn primary" id="pb-go" type="button">Find near me</button>
-      <button class="btn" id="pb-geo" type="button">Use my location</button>
-      <select id="pb-sort" aria-label="Sort order" hidden><option value="indie">Independents first</option><option value="near">Nearest first</option></select>
-      <button class="chip" id="pb-clear" type="button" hidden>Clear location</button>
-    </div>
-    <p class="note" id="pb-status" role="status" aria-live="polite"></p>
-    <div class="pb-main">
-      <div class="pb-mapwrap">
-        <canvas id="pb-map" aria-label="Map of London pubs coloured by owner type. Use the list for keyboard access."></canvas>
-        <div class="tip" id="pb-tip" hidden></div>
-        <div class="zoom"><button id="pb-zin" aria-label="Zoom in">+</button><button id="pb-zout" aria-label="Zoom out">−</button><button id="pb-zreset" aria-label="Reset view">⌂</button></div>
+    <div class="pb-head">
+      <div>
+        <h2 class="first">Who owns London's pubs?</h2>
+        <p class="lead">Find an independent one near you, see which belong to big groups, and how ownership differs across the city.</p>
       </div>
-      <div class="pb-listwrap">
-        <div class="count" id="pb-count"></div>
-        <ul class="pb-list" id="pb-list"></ul>
-        <button class="btn" id="pb-more" type="button" hidden>Show more</button>
+      <div class="pb-bar">
+        <div class="pb-modes" role="tablist" aria-label="Pubs view">
+          <button type="button" role="tab" id="pb-tab-explore" class="on" aria-controls="pb-explore" aria-selected="true" data-mode="explore">Map and list</button>
+          <button type="button" role="tab" id="pb-tab-insights" aria-controls="pb-insights" aria-selected="false" tabindex="-1" data-mode="insights">Insights</button>
+        </div>
+        <button type="button" class="chip pb-share" id="pb-share" aria-label="Copy a link to this view">Copy link</button>
       </div>
     </div>
+    <div id="pb-explore" role="tabpanel" aria-labelledby="pb-tab-explore">
+      <div class="pb-group" id="pb-group" hidden aria-labelledby="pb-gtitle"></div>
+      <div class="pb-overview">
+        <div class="pb-mix" id="pb-mix" aria-hidden="true"></div>
+        <div class="pb-counts" id="pb-counts" role="group" aria-label="Filter by ownership type"><div class="pb-skel"></div><div class="pb-skel"></div><div class="pb-skel"></div><div class="pb-skel"></div><div class="pb-skel"></div></div>
+      </div>
+      <div class="pb-filters">
+        <input id="pb-q" type="search" placeholder="Search a pub name or postcode" autocomplete="off" aria-label="Search pub name or postcode">
+        <select id="pb-borough" aria-label="Borough"><option value="">All boroughs</option></select>
+        <select id="pb-gsel" aria-label="Owner group"><option value="">All owners</option></select>
+        <label class="chip evtoggle"><input type="checkbox" id="pb-cask"> Cask ale</label>
+      </div>
+      <div class="pb-filters">
+        <input id="pb-pc" type="search" placeholder="Postcode, e.g. E8 3QW" autocomplete="off" aria-label="Your postcode">
+        <button class="btn primary" id="pb-go" type="button">Find near me</button>
+        <button class="btn" id="pb-geo" type="button">Use my location</button>
+        <select id="pb-sort" aria-label="Sort order" hidden><option value="indie">Independents first</option><option value="near">Nearest first</option></select>
+        <button class="chip" id="pb-clear" type="button" hidden>Clear location</button>
+      </div>
+      <p class="note" id="pb-status" role="status" aria-live="polite"></p>
+      <div class="pb-active" id="pb-active" aria-label="Active filters"></div>
+      <div class="pb-main">
+        <div class="pb-mapcol">
+          <div class="pb-mapwrap">
+            <canvas id="pb-map" tabindex="0" aria-label="Map of London pubs, shaped and coloured by owner type. Arrow keys pan, plus and minus zoom, 0 resets. The list beside it has every pub on the map."></canvas>
+            <p class="pb-maphint" id="pb-maphint">Loading pubs…</p>
+            <div class="tip" id="pb-tip" hidden></div>
+            <div class="zoom"><button id="pb-zin" type="button" aria-label="Zoom in">+</button><button id="pb-zout" type="button" aria-label="Zoom out">−</button><button id="pb-zreset" type="button" aria-label="Reset view">⌂</button></div>
+          </div>
+          <div class="pb-legend" id="pb-legend" aria-label="Map key"></div>
+        </div>
+        <div class="pb-listwrap">
+          <div class="count" id="pb-count" aria-live="polite"></div>
+          <ul class="pb-list" id="pb-list"></ul>
+          <button class="btn" id="pb-more" type="button" hidden>Show more</button>
+        </div>
+      </div>
+    </div>
+    <div id="pb-insights" role="tabpanel" aria-labelledby="pb-tab-insights" aria-busy="true" hidden>
+      <div class="pb-skel pb-skel-hero"></div><div class="pb-skel pb-skel-card"></div>
+    </div>
+    <div class="pb-itip" id="pb-itip" role="tooltip" hidden></div>
     <p class="note pb-foot" id="pb-foot">Pub locations: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> (ODbL). Contains OGL data: FSA, London Borough of Camden.</p>
   </section>
 

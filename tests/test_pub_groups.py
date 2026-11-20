@@ -17,8 +17,10 @@ def test_schema():
         assert g["src"].startswith("https://")
         assert g["owner"] and g["note"].strip()
         m = g["match"]
-        assert set(m) == {"operator", "brand", "licensee", "name", "wikidata"}
-        for k in ("operator", "brand", "licensee", "name"):
+        assert set(m) == {"operator", "brand", "licensee", "name", "wikidata", "domain", "brewery"}
+        for d in m["domain"]:
+            assert re.fullmatch(r"[a-z0-9-]+(\.[a-z0-9-]+)+", d), d
+        for k in ("operator", "brand", "licensee", "name", "brewery"):
             if m[k]:
                 re.compile(m[k], re.IGNORECASE)
         assert any(
@@ -142,3 +144,28 @@ def test_names_wikidata():
 def test_no_match(text):
     assert match_group(operator=text, brand=text, licensee=text, name=text) == []
     assert match_group() == []
+
+
+def test_brewery_rules_only_for_family_and_regional_brewers():
+    # family/regional brewers whose beer is (almost) only sold in their own pubs; never global lager brands, and not
+    # Young's or Fuller's, whose beers are widely sold in the free trade
+    with_brewery = {g["id"] for g in GROUPS if g["match"]["brewery"]}
+    assert with_brewery == {"shepherd-neame", "samuel-smith", "mcmullen"}
+
+
+def test_no_group_claims_a_generic_platform_domain():
+    from london_pulse.pubs import GENERIC_DOMAINS
+
+    for g in GROUPS:
+        for d in g["match"]["domain"]:
+            assert not GENERIC_DOMAINS.search(d), (g["id"], d)
+
+
+def test_new_groups_match():
+    assert ("craft-beer-co", "osm:brand") in match_group(brand="The Craft Beer Co.")
+    assert ("craft-beer-co", "name") in match_group(name="Craft Beer Co. Brixton")
+    assert ("bohem", "osm:operator") in match_group(operator="Bohem Brewery")
+    assert ("stonegate", "osm:operator") in match_group(operator="Heritage Pubs")
+    assert ("stonegate", "osm:brand") in match_group(brand="Social Pub & Kitchen")
+    assert ("greene-king", "osm:wikidata") in match_group(wikidata=["Q7577905"])  # Spirit Pub Company
+    assert not [m for m in match_group(name="Crafty Beer Company House") if m[0] == "craft-beer-co"]

@@ -85,3 +85,56 @@ Field meanings:
   cloudcruncher/london-pulse (title "Pub ownership: <name>", body with osm id, fhrsid, fields to fill). No backend.
 - Framing: "No group link found" is not a claim of independence; independent labels say "likely". Attribution line "© OpenStreetMap contributors (ODbL)" visible.
 - Light/dark, phone width, matches existing app.css tokens.
+
+---
+# v2 (2026-11-20): coverage, insights, interactivity
+
+The v1 rules above still hold: open licences only, "Independent" is always "likely", "No group link found" is never a claim of independence, and Camden licensee names of individuals are never published or logged.
+
+## A. Coverage worker (owns `pub_groups.py`, `pubs.py`, `tests/test_pubs.py`, `tests/test_pub_groups.py`, `data/pubs_overrides.csv`)
+Goal: cut `unknown` (2,163 of 3,140 in v1) as far as honest evidence allows, and report before/after counts by category.
+Open signals, in order of value:
+1. **Website domain.** OSM `website` / `contact:website` (ODbL). Add `domain=` to `_g(...)` for groups with a verified group-wide domain, giving evidence `osm:website`.
+   Examples to verify: geronimo-inns.co.uk (Young's), brunningandprice.co.uk (Mitchells & Butlers), craftunionpubs.com (Stonegate), greatukpubs.co.uk, urbanpubsandbars.com, frontierpubs.co.uk, whelanspubs.co.uk, feeneyspubs.com, thechaptercollection.co.uk, publove.co.uk, bohembrewery.com, thecraftbeerco.com, mcmullens.co.uk.
+   A shared non-group domain across two or more pubs is a "small group" signal for indie (with three or fewer pubs and not on NOT_INDIE).
+2. **Wikidata (CC0).** Pubs carry `wikidata` (328 of the unknown), `brand:wikidata` and `operator:wikidata`. Run a batched SPARQL query against https://query.wikidata.org/sparql with a User-Agent, following P127 (owned by), P137 (operator), P749 (parent organization) and P1830 (owner of) up to the known group QIDs. Cache the result in `work/reference/wikidata_pubs.json` and give evidence `wikidata:owner`. Map only to groups already in GROUPS; otherwise ignore.
+3. **New verified groups.** Research these and add each with a working public source URL (Wikipedia, the company's own about page, Companies House, or the trade press): Interpub, Etive Pubs, Golden Brick Pubs, Four Acres Taverns, Big Smoke Inns (Big Smoke Brew Co), Bohem, Portobello Brewery, Signature Brew, Husk, Wildman Project, El Vino (Davy's?), Urban Leisure, Alliance Pub Co, Laine Pub Co (Brewdog), Geronimo, Frontier, Whelan's, Feeney's, Chapter Collection, Publove, Craft Union, Great UK Pubs, Truman's, Hippo Inns, London Village Inns, Livelyhood, Draft House (BrewDog?), Faucet Inn, Cubitt House, Three Cheers Pub Co, Salt Beer Factory, Mother Kelly's, Gipsy Hill, Brick, Battersea Brew and Rusty Bike (London Village Inns?).
+   Never guess. If a source can't be checked, leave the group out and list it in the report.
+4. **Brewery tag.** A pub whose OSM `brewery` names a single family or regional brewer (Shepherd Neame, Samuel Smith/sam_smiths, Young's, Fuller's, Greene King, McMullen) is a "tied house" signal that maps to that group with evidence `osm:brewery`. A plain "various" value is a free-house hint for indie, with the usual guards.
+5. **FSA business name** (OGL): when FSA's name differs from OSM's and contains a group/brand pattern, use evidence `fsa:name`.
+6. **Companies House** (OGL; `companies.py`, `work/co_london.parquet` SIC 56302): use only if it gives a clean, testable link. Optional.
+Confidence: "confirmed" still needs two different source families (osm, camden, wikidata, fsa, override). `osm:website`, `osm:brewery` and `osm:operator` all belong to the OSM family.
+Add these fields to the end of `fields` (append only; existing order unchanged):
+`"rating"` (the FSA rating string for the linked fhrsid, e.g. "5" or "Exempt", else null) and `"rating_date"` ("YYYY-MM-DD" or null).
+Keep `pubs.json` under 1,500 KB.
+
+## B. Insights worker (owns the new `src/london_pulse/pubs_insights.py`, `tests/test_pubs_insights.py`, the context.yml pubs step, the test_contract entry, and README/API docs)
+Output: `site/api/v1/pubs-insights.json`. It is built from pubs.json plus FSA latest/history/events plus areas.json, is a pure function, and runs right after pubs.json in context.yml. Use the same guard: keep the committed file on failure.
+```json
+{ "schema_version": 1, "as_of": "...", "generated": "...", "licence": "ODbL 1.0 (contains OpenStreetMap data) and OGL v3.0", "method": "...",
+  "notes": ["plain-English caveats, e.g. 'unknown' is not 'independent'"],
+  "london": {"total": n, "by_category": {cat: n}, "known": n, "group_share": 0.0, "indie_share_of_known": 0.0, "cask": n,
+             "top_groups": [{"id": "...", "n": n, "share": 0.0}], "hhi": 0.0, "top5_share": 0.0},
+  "boroughs": [{"borough": "...", "total": n, "by_category": {}, "group_share": 0.0, "indie_n": n, "cask_n": n,
+               "top_group": "id|null", "top_group_n": n, "hhi": 0.0, "groups": {"id": n},
+               "imd_decile_avg": x|null, "income_avg": x|null, "rating_avg": x|null, "rating_n": n, "pubs_per_km2": x|null}],
+  "groups": [{"id": "...", "n": n, "boroughs": n, "cask_n": n, "cask_known": n, "rating_avg": x|null, "rating_n": n,
+              "rating_dist": {"5": n, "4": n, "3": n, "2": n, "1": n, "0": n}, "top_boroughs": [["borough", n]]}],
+  "by_category": {cat: {"n": n, "cask_n": n, "cask_known": n, "rating_avg": x|null, "rating_n": n, "rating_dist": {}, "imd_decile_avg": x|null}},
+  "deprivation": [{"decile": 1, "total": n, "by_category": {cat: n}}],   // IMD decile of the pub's LSOA (point-in-polygon, or the nearest LSOA centroid if there are no polygons), 1 = most deprived
+  "churn": {"window_days": n, "by_category": {cat: {"new": n, "removed": n}}} | null   // FSA new/removed events for fhrsids linked to pubs; null if not defensible
+}
+```
+Categories are always the pubs.json category keys. Shares are 0 to 1, rounded to 3 decimal places. Drop any metric whose input data is missing (use null; never invent).
+
+## C. Frontend worker (owns `site/assets/pubs.js`, the `/* Pubs */` block in `app.css`, the `#v-pubs` and `pb-*` markup in `index.html`, `sw.js` VERSION/SHELL, and the Pubs tests in `tests/smoke/test_site.py` plus fixtures)
+Reads pubs.json (required) and pubs-insights.json (optional; when it is missing, compute what it can client-side or hide that section). Vanilla JS, no build step, no new dependencies, inline SVG charts.
+Must have:
+- Two modes: **Explore** (map and list, as now) and **Insights** (analysis).
+- **Insights:** a London headline (share of known pubs held by groups, top-5 share, HHI in plain words); a group league table (sortable; tap a row to filter the map to that group); stacked bars per borough by category (sortable by group share or by independent count); a cask share by owner type chart; an FSA hygiene rating by owner type chart; deprivation decile against ownership mix; churn if present. Every chart needs a one-line takeaway and a caveat.
+- **Borough compare:** pick two boroughs and see them side by side.
+- **Group drill-down:** a group page with its owner, model, note and source, count, the boroughs it is in, a map of its pubs only, and the list.
+- **Better map:** density/cluster at low zoom, category shapes, a selected-pub highlight, a legend, and smooth pan/zoom (keep the custom canvas; use mapbox.js only if the Map tab already uses it and it's free to reuse).
+- **Shareable URL state:** `#pubs?cat=indie&b=Hackney&g=stonegate&q=...&mode=insights&pc=E83QW` restores the view.
+- **Polish:** loading skeleton, empty states, keyboard access, aria labels, phone width at 360 px, light/dark, no layout shift, and copy that keeps the framing rules. Show the FSA rating in the drawer when present.
+- Smoke tests: insights render from a fixture; group drill-down filters; URL state round-trip; it still works when insights 404.

@@ -6,6 +6,10 @@ ownership changes often, so re-check before relying on a row.
 
 Matching is done on normalised text (lower-case, curly quotes straightened).
 Regexes are applied case-insensitively. Generic pub names are never matched.
+
+`domain`: website domains the group itself runs (its own name, or a brand page that names it as owner); a pub whose
+OSM website is on one of them gets evidence "osm:website". `brewery`: regex that must match the whole OSM `brewery`
+value when it names a single brewer; only family/regional brewers whose own beer marks a tied house have one.
 """
 
 from __future__ import annotations
@@ -35,6 +39,8 @@ def _g(
     licensee=None,
     name_re=None,
     wikidata=(),
+    domain=(),
+    brewery=None,
 ):
     return {
         "id": id,
@@ -50,13 +56,15 @@ def _g(
             "licensee": licensee,
             "name": name_re,
             "wikidata": list(wikidata),
+            "domain": list(domain),
+            "brewery": brewery,
         },
     }
 
 
 _STONEGATE_BRANDS = (
     r"slug (&|and) lettuce|be at one|walkabout|yates|popworld|"
-    r"pitcher (&|and) piano|craft union"
+    r"pitcher (&|and) piano|craft union|social pub (&|and) kitchen|chapter collection|heritage pubs"
 )
 
 GROUPS = [
@@ -69,11 +77,16 @@ GROUPS = [
         "Owned by private equity firm TDR Capital; runs managed brands such as Slug & Lettuce, Be At One "
         "and Walkabout, and bought Ei Group and its leased pubs for £1.27bn in 2020.",
         "https://en.wikipedia.org/wiki/Stonegate_Pub_Company",
-        operator=r"stonegate|enterprise inns?|ei publican|\bei group\b",
+        operator=r"stonegate|enterprise inns?|ei publican|\bei group\b|heritage pubs|frontier pubs|chapter collection",
         brand=_STONEGATE_BRANDS,
         licensee=r"stonegate|enterprise inns?",
         name_re=r"^(slug (&|and) lettuce|be at one|walkabout|popworld|pitcher (&|and) piano)\b",
-        wikidata=["Q7619176"],
+        wikidata=["Q7619176", "Q124956771"],  # Stonegate, Craft Union Pub Company
+        # own domains, plus brands on its managed-estate page (stonegategroup.co.uk/our-businesses/managed-estate/:
+        # The Chapter Collection, Heritage Pubs), Social Pub & Kitchen (morningadvertiser.co.uk, 2024-10-04) and
+        # Frontier Pubs (fully owned since July 2025: morningadvertiser.co.uk/Article/2025/07/16/stonegate-takes-over-frontier-pubs/)
+        domain=["stonegategroup.co.uk", "stonegatepubs.com", "craftunionpubs.com", "slugandlettuce.co.uk",
+                "thechaptercollection.co.uk", "heritagepubs.co.uk", "socialpubandkitchen.co.uk", "frontierpubs.co.uk"],
     ),
     _g(
         "star-pubs",
@@ -106,7 +119,11 @@ GROUPS = [
         ),
         licensee=r"greene king|spirit pub",
         name_re=r"^(hungry horse|flaming grill)\b",
-        wikidata=["Q5564162"],
+        wikidata=["Q5564162", "Q7577905"],  # Greene King, Spirit Pub Company (bought by Greene King in 2015)
+        # capitalpubcompany.com: Capital Pub Company, bought by Greene King in 2011
+        # (morningadvertiser.co.uk/Article/2011/07/19/Greene-King-to-buy-Capital-for-93m)
+        domain=["greeneking.co.uk", "greeneking-pubs.co.uk", "chefandbrewer.com", "hungryhorse.co.uk",
+                "capitalpubcompany.com"],
     ),
     _g(
         "mitchells-butlers",
@@ -126,6 +143,8 @@ GROUPS = [
         licensee=r"mitchells (&|and) butlers",
         name_re=r"^(all bar one|o'neill'?s|nicholson'?s|toby carvery|harvester)\b",
         wikidata=["Q1939537"],
+        domain=["mbplc.com", "nicholsonspubs.co.uk", "emberinns.co.uk", "vintageinn.co.uk", "oneills.co.uk",
+                "sizzlingpubs.co.uk", "stonehouserestaurants.co.uk", "allbarone.co.uk", "tobycarvery.co.uk"],
     ),
     _g(
         "wetherspoon",
@@ -141,6 +160,7 @@ GROUPS = [
         licensee=r"wetherspoon",
         name_re=r"wetherspoon|^lloyds no\.? ?1",
         wikidata=["Q6109362"],
+        domain=["jdwetherspoon.com", "jdwetherspoon.co.uk"],
     ),
     _g(
         "punch",
@@ -183,6 +203,7 @@ GROUPS = [
         brand=r"marston'?s",
         licensee=r"marston'?s",
         wikidata=["Q6773982"],
+        domain=["marstons.co.uk"],
     ),
     _g(
         "youngs",
@@ -197,6 +218,9 @@ GROUPS = [
         brand=r"young'?s|geronimo|cubitt house",
         licensee=r"young (&|and) co",
         name_re=None,
+        wikidata=["Q8057802"],
+        # Geronimo Inns is a Young's subsidiary (en.wikipedia.org/wiki/The_Half_Moon,_Putney); Cubitt House per the src above
+        domain=["youngs.co.uk", "geronimo-inns.co.uk", "cubitthouse.co.uk"],
     ),
     _g(
         "fullers",
@@ -211,6 +235,7 @@ GROUPS = [
         brand=r"fuller'?s",
         licensee=r"fuller,? smith",
         wikidata=["Q90901784"],
+        domain=["fullers.co.uk"],
     ),
     _g(
         "shepherd-neame",
@@ -224,6 +249,8 @@ GROUPS = [
         operator=r"shepherd neame",
         brand=r"shepherd neame",
         licensee=r"shepherd neame",
+        domain=["shepherdneame.co.uk"],
+        brewery=r"shepherd neame",
     ),
     _g(
         "samuel-smith",
@@ -236,6 +263,9 @@ GROUPS = [
         operator=r"samuel smith|sam smith",
         brand=r"samuel smith|sam smith",
         licensee=r"samuel smith (old brewery|southern)|^samuel smith$",
+        wikidata=["Q7412675"],
+        domain=["samuelsmithsbrewery.co.uk"],
+        brewery=r"samuel smith'?s?( old brewery)?|sam smith'?s?",
     ),
     _g(
         "hall-woodhouse",
@@ -248,6 +278,7 @@ GROUPS = [
         operator=r"hall (&|and) woodhouse",
         brand=r"hall (&|and) woodhouse|^badger$",
         licensee=r"hall (&|and) woodhouse",
+        wikidata=["Q5642555"],
     ),
     _g(
         "mcmullen",
@@ -261,6 +292,9 @@ GROUPS = [
         operator=r"mcmullen",
         brand=r"mcmullen",
         licensee=r"mcmullen (&|and) sons",
+        wikidata=["Q6802411"],
+        domain=["mcmullens.co.uk"],
+        brewery=r"mcmullen'?s?",
     ),
     _g(
         "amber-taverns",
@@ -285,6 +319,7 @@ GROUPS = [
         operator=r"brewdog",
         brand=r"brewdog",
         name_re=r"^brewdog\b",
+        domain=["brewdog.com"],
     ),
     _g(
         "camden-town-brewery",
@@ -322,14 +357,17 @@ GROUPS = [
     _g(
         "urban-pubs-bars",
         "Urban Pubs & Bars",
-        "indie",
-        "Independent London group (founded 2014)",
+        "pe",
+        "Joint venture with investors Davidson Kempner and Global Mutual (since 2021)",
         "managed",
-        "Described by trade press as London's largest independent pub group, with about 65 sites; founded "
-        "in 2014 by Nick Pring and Malcolm Heap.",
-        "https://www.morningadvertiser.co.uk/Article/2026/01/30/urban-pubs-bars-multi-million-pound-investment-into-london-pubs",
+        "London group of about 65 sites founded in 2014 by Nick Pring and Malcolm Heap. Since a 2021 joint venture "
+        "with asset manager Davidson Kempner and real-estate/private-equity firm Global Mutual it is owned through "
+        "Urban Pubs & Bars Topco Limited (Jersey); its accounts say no single party controls it, and the founders "
+        "ceased to hold over 25% each on 29 August 2021 (Companies House 08774738).",
+        "https://www.morningadvertiser.co.uk/Article/2021/09/01/What-is-happening-at-Urban-Pubs-Bars",
         operator=r"urban pubs (&|and) bars",
         brand=r"urban pubs (&|and) bars",
+        domain=["urbanpubsandbars.com"],
     ),
     _g(
         "remarkable-pubs",
@@ -343,6 +381,35 @@ GROUPS = [
         brand=r"remarkable pubs",
         licensee=r"remarkable pubs",
     ),
+    _g(
+        "craft-beer-co",
+        "The Craft Beer Co.",
+        "indie",
+        "Founders Martin Hayes and Peter Slezak (private)",
+        "managed",
+        "London craft beer pub group started in Clerkenwell in 2011 by two school friends; it describes itself "
+        "as an independent family business.",
+        "https://thecraftbeerco.com/our-story",
+        operator=r"craft beer co\b",
+        brand=r"craft beer co\b",
+        name_re=r"^(the )?craft beer co\b",
+        wikidata=["Q111517437"],
+        domain=["thecraftbeerco.com"],
+    ),
+    _g(
+        "bohem",
+        "Bohem Brewery",
+        "indie",
+        "Bohem Brewery (Tottenham brewer founded in 2017)",
+        "managed",
+        "Czech-style lager brewer in Tottenham that runs several London bars, including its Bowes Park tap room "
+        "and the Nicholas Nickleby (lease taken on in 2024).",
+        "https://www.foodmanufacture.co.uk/Article/2024/07/08/bohem-brewery-opens-second-london-bar/",
+        operator=r"bohem brewery",
+        brand=r"bohem brewery",
+        wikidata=["Q141597662"],
+        domain=["bohembrewery.com"],
+    ),
 ]
 
 _FLAGS = re.IGNORECASE
@@ -350,7 +417,7 @@ _COMPILED = {
     g["id"]: {
         k: (re.compile(v, _FLAGS) if isinstance(v, str) else None)
         for k, v in g["match"].items()
-        if k != "wikidata"
+        if k not in ("wikidata", "domain")
     }
     for g in GROUPS
 }

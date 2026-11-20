@@ -52,7 +52,9 @@ let tryApply = null;   // set by the overview story panel
 const initialTry = (location.hash.match(/^#overview\/(.+)$/) || [])[1];
 
 function route() {
-  const [name, ...rest] = (location.hash.replace('#', '') || 'overview').split('/'), arg = rest.join('/') || undefined;
+  // "#view/arg" or "#view?query" (the Pubs tab keeps its state as a query, e.g. #pubs?cat=indie&b=Hackney)
+  const h = location.hash.replace('#', '') || 'overview', cut = h.search(/[/?]/);
+  const name = cut < 0 ? h : h.slice(0, cut), arg = cut < 0 ? undefined : (h[cut] === '?' ? h.slice(cut) : h.slice(cut + 1)) || undefined;
   const view = VIEWS.includes(name) ? name : 'overview';
   VIEWS.forEach(v => { $('v-' + v).hidden = v !== view; });
   document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === view));

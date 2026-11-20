@@ -86,8 +86,37 @@ jobs:
             git checkout -- site/api/v1/pubs.json 2>/dev/null || rm -f site/api/v1/pubs.json
           fi
 
+      - name: Build pubs-insights.json (ownership shares, ratings and deprivation by owner type)
+        timeout-minutes: 5
+        continue-on-error: true
+        run: PYTHONPATH=src uv run --locked python -m london_pulse.pubs_insights
+
+      - name: Keep pubs.json and pubs-insights.json in step
+        # insights must describe the pubs.json being committed; retry once without the LSOA lookup, else keep last month's pair
+        run: |
+          check() {
+            python3 -c "import json,sys; p=json.load(open('site/api/v1/pubs.json')); d=json.load(open('site/api/v1/pubs-insights.json')); sys.exit(0 if d['as_of']==p['as_of'] and d['london']['total']==p['counts']['total']>=2500 else 1)" 2>/dev/null
+          }
+          if ! check; then
+            echo "::warning::pubs-insights.json missing or out of step with pubs.json; retrying without the LSOA lookup"
+            timeout 300 env PYTHONPATH=src uv run --locked python -m london_pulse.pubs_insights --no-geo || true
+          fi
+          if ! check; then
+            echo "::warning::pubs-insights.json still out of step; keeping last month's pubs.json and pubs-insights.json"
+            git checkout -- site/api/v1/pubs.json || true
+            git checkout -- site/api/v1/pubs-insights.json 2>/dev/null || rm -f site/api/v1/pubs-insights.json
+          fi
+
       - name: Contract tests (areas and the rest of the API)
-        run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py tests/test_prices.py tests/test_environment.py tests/test_flood.py tests/test_noise.py tests/test_green.py tests/test_pubs.py -q
+        run: MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_neighbourhoods.py tests/test_prices.py tests/test_environment.py tests/test_flood.py tests/test_noise.py tests/test_green.py tests/test_pubs.py -q -k "not (pubs and insights)"
+
+      - name: Contract tests for pubs-insights.json (a failure keeps last month's pair instead of blocking the commit)
+        run: |
+          if ! MONTHLY_CONTRACT=1 API_DIR=site/api/v1 PYTHONPATH=src uv run --locked pytest tests/test_contract.py tests/test_pubs_insights.py -q -k "pubs and insights or test_pubs_insights"; then
+            echo "::warning::pubs-insights.json failed its contract; keeping last month's pubs.json and pubs-insights.json"
+            git checkout -- site/api/v1/pubs.json || true
+            git checkout -- site/api/v1/pubs-insights.json 2>/dev/null || rm -f site/api/v1/pubs-insights.json
+          fi
 
       - name: Drop the large Price Paid files so they are not saved into the cache
         if: always()
@@ -97,7 +126,7 @@ jobs:
         run: |
           git config user.name "london-pulse-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json site/api/v1/environment.json site/api/v1/pubs.json
+          git add site/api/v1/stations.json site/api/v1/crime.json site/api/v1/areas.json site/api/v1/prices.json site/api/v1/environment.json site/api/v1/pubs.json site/api/v1/pubs-insights.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "data: stations, crime, areas and pubs $(date -u +%F)"
           for i in 1 2 3; do
