@@ -1,0 +1,34 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-20,rating_changed,1993295,Chicken & Chillz,Restaurant/Cafe/Canteen,Barking and Dagenham,RM8 1YT,AwaitingInspection,1,0.123053,51.562039
+2026-11-20,rating_changed,1949664,MAYALITA,Restaurant/Cafe/Canteen,Camden,WC1H 0JJ,AwaitingInspection,2,-0.1292383,51.5268033
+2026-11-20,rating_changed,294906,Bread Street Kitchen & Bar / Street Pizza,Restaurant/Cafe/Canteen,City of London Corporation,EC4M 9AJ,5,4,-0.09523,51.513548
+2026-11-20,rating_changed,859752,Foods And Wine,Retailers - other,Croydon,CR7 8LE,5,4,-0.0935859978199005,51.3981819152832
+2026-11-20,rating_changed,1581612,PJ News,Retailers - other,Ealing,W7 1LJ,3,4,-0.3371248,51.514871
+2026-11-20,rating_changed,1990274,George's Fish Bar,Takeaway/sandwich shop,Enfield,N13 5XG,AwaitingInspection,3,-0.105061,51.622139
+2026-11-20,rating_changed,1998954,MS JUICERY,Other catering premises,Enfield,N13 4SE,AwaitingInspection,1,-0.1212482,51.6126532
+2026-11-20,rating_changed,1992872,Nourish Contract Catering,School/college/university,Enfield,N14 4AD,AwaitingInspection,3,-0.1410985,51.643921
+2026-11-20,rating_changed,399156,Onur Kebab House,Takeaway/sandwich shop,Enfield,N18 2QD,4,2,-0.063625,51.616427
+2026-11-20,rating_changed,316574,Rimini  Restaurant,Restaurant/Cafe/Canteen,Enfield,N13 5TJ,4,1,-0.106206,51.620305
+2026-11-20,rating_changed,1945399,Funnery House,Restaurant/Cafe/Canteen,Greenwich,SE18 6SW,AwaitingInspection,4,0.0739989,51.4922421
+2026-11-20,rating_changed,1945398,The Yard - Kitchen & Bar,Restaurant/Cafe/Canteen,Greenwich,SE18 6SW,AwaitingInspection,3,0.0739989,51.4922421
+2026-11-20,rating_changed,345801,ARC Bentworth Primary Academy,School/college/university,Hammersmith and Fulham,W12 7AJ,5,4,-0.231859,51.515355
+2026-11-20,rating_changed,1774297,Smaz Burger Box,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W12 0BJ,1,3,-0.246669,51.515523
+2026-11-20,rating_changed,2006416,Royal Korean Food / Seoul Korea / Korean Street Food / Prime,Restaurant/Cafe/Canteen,Islington,N1 9HA,AwaitingInspection,3,-0.1089814,51.5337986
+2026-11-20,rating_changed,1412330,Tia Rosa,Restaurant/Cafe/Canteen,Islington,WC1X 9DS,4,3,-0.1162092,51.5302099
+2026-11-20,rating_changed,1958521,SOUL,Restaurant/Cafe/Canteen,Kensington and Chelsea,"",AwaitingInspection,3,,
+2026-11-20,rating_changed,1345462,Avenida Brasil,Restaurant/Cafe/Canteen,Lambeth,SW8 2DQ,4,3,-0.1250906,51.4747501
+2026-11-20,rating_changed,1747721,Veg And Tings,Restaurant/Cafe/Canteen,Lambeth,SW9 8PR,5,3,-0.111819,51.46263
+2026-11-20,rating_changed,1599185,The Cafe at No1,Restaurant/Cafe/Canteen,Lewisham,SE23 1HG,AwaitingInspection,1,-0.051678,51.440864
+2026-11-20,rating_changed,919686,Six Star Supermarket,Retailers - other,Newham,E15 3JF,5,1,0.007148,51.533072
+2026-11-20,rating_changed,1796011,Caffe Milano,Restaurant/Cafe/Canteen,Redbridge,IG1 1QF,3,0,0.078252,51.559775
+2026-11-20,rating_changed,1791957,Chai Point,Restaurant/Cafe/Canteen,Redbridge,IG1 1TH,2,4,0.0841261,51.5613164
+2026-11-20,rating_changed,765693,Monal Restaurant London,Takeaway/sandwich shop,Redbridge,IG1 2SN,4,3,0.076824,51.546499
+2026-11-20,rating_changed,1466492,Peaches Bobba and Cakes,Restaurant/Cafe/Canteen,Redbridge,IG3 8RG,3,4,0.0979692,51.5644601
+2026-11-20,rating_changed,1575160,A&M Sugarcraft Ltd,Retailers - other,Richmond-Upon-Thames,SW14 8DS,4,3,-0.2596727,51.4653047
+2026-11-20,rating_changed,1692092,Blue Balloon Bakery,Other catering premises,Sutton,SM5,AwaitingInspection,4,,
+2026-11-20,rating_changed,77934,Asia Villa,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EG,5,3,-0.0093072,51.5115734
+2026-11-20,rating_changed,707747,The Wild Goose Bakery,Restaurant/Cafe/Canteen,Waltham Forest,E11 3AA,5,3,0.0112523,51.5683444
+2026-11-20,rating_changed,2007432,Shawarma stop tooting,Retailers - other,Wandsworth,SW17 0RH,AwaitingInspection,0,-0.1662964,51.4289362
+2026-11-20,rating_changed,1666245,Benihana Covent Garden,Restaurant/Cafe/Canteen,Westminster,WC2E 7JS,5,4,-0.1234555,51.5107218
+2026-11-20,rating_changed,411569,Cafe Pacifico,Restaurant/Cafe/Canteen,Westminster,WC2H 9JA,4,3,-0.1249689,51.5131741
+2026-11-20,rating_changed,1968791,Olive Dining Ltd,School/college/university,Westminster,W9 1RB,AwaitingInspection,3,,
