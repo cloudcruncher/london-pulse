@@ -112,6 +112,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-20,rating_changed,1575160,A&M Sugarcraft Ltd,Retailers - other,Richmond-Upon-Thames,SW14 8DS,4,3,-0.2596727,51.4653047
 2026-11-20,rating_changed,1692092,Blue Balloon Bakery,Other catering premises,Sutton,SM5,AwaitingInspection,4,,
 2026-11-20,rating_changed,77934,Asia Villa,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0EG,5,3,-0.0093072,51.5115734
+2026-11-20,rating_changed,1999116,Las locas de Mexico,Other catering premises,Tower Hamlets,E14,AwaitingInspection,4,,
 2026-11-20,rating_changed,1994010,E17 Breakfast House/Griddle Yard,Restaurant/Cafe/Canteen,Waltham Forest,E17 7JY,0,3,,
 2026-11-20,rating_changed,515430,Indiano Pizza,Takeaway/sandwich shop,Waltham Forest,E10 6AJ,0,3,,
 2026-11-20,rating_changed,1668872,Junglees Burgers Leyton,Restaurant/Cafe/Canteen,Waltham Forest,E10 6AE,0,4,,
