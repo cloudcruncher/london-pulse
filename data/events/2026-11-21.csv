@@ -1,0 +1,30 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-21,rating_changed,1204690,Aahar Vegetarian Restaurant,Restaurant/Cafe/Canteen,Ealing,UB1 1PS,5,2,-0.375713,51.5114641
+2026-11-21,rating_changed,1279240,Black George,Pub/bar/nightclub,Ealing,W13 9AA,AwaitingInspection,2,-0.318004,51.510992
+2026-11-21,rating_changed,1774364,Patiala Off Licence,Retailers - other,Ealing,UB1 2LF,4,2,-0.371404,51.516853
+2026-11-21,rating_changed,1998944,Hevi Brasserie,Restaurant/Cafe/Canteen,Enfield,N13 5PD,AwaitingInspection,4,-0.105646,51.621267
+2026-11-21,rating_changed,1974962,The Best Turkish Kebab,Other catering premises,Enfield,N9 0NR,4,2,-0.06178,51.622448
+2026-11-21,rating_changed,468986,Abraco Dalston,Restaurant/Cafe/Canteen,Hackney,N16 8BJ,5,2,-0.0753795,51.5517133
+2026-11-21,rating_changed,469773,Lee How,Takeaway/sandwich shop,Hackney,N16 8EL,3,4,-0.074395,51.5593229
+2026-11-21,rating_changed,469774,Mangal ll,Restaurant/Cafe/Canteen,Hackney,N16 7XN,5,1,-0.0748412,51.5507962
+2026-11-21,rating_changed,1606116,Pisco's,Restaurant/Cafe/Canteen,Hackney,N16 7XN,3,1,-0.0748003,51.5510833
+2026-11-21,rating_changed,1852663,Wingbay,Takeaway/sandwich shop,Hackney,N16 8BP,3,4,-0.074707,51.5574112
+2026-11-21,rating_changed,867441,Chicken Cottage,Takeaway/sandwich shop,Hammersmith and Fulham,W14 9ES,5,3,-0.207061,51.4906
+2026-11-21,rating_changed,489868,Fooks House,Takeaway/sandwich shop,Hounslow,TW14 0JS,5,4,-0.4095908,51.4572688
+2026-11-21,rating_changed,490336,West Kebab & Burger,Takeaway/sandwich shop,Hounslow,TW14 0JG,5,3,-0.4096296,51.4564135
+2026-11-21,rating_changed,745733,Merkato Cafe & Restaurant,Restaurant/Cafe/Canteen,Islington,N1 0SQ,3,4,-0.1163858,51.5364087
+2026-11-21,rating_changed,334630,Oriental Canteen,Restaurant/Cafe/Canteen,Kensington and Chelsea,SW7 2HF,3,2,-0.173194,51.49496
+2026-11-21,rating_changed,1974330,3Fs,Takeaway/sandwich shop,Lambeth,SE27 9NH,AwaitingInspection,3,-0.1008085,51.428352
+2026-11-21,rating_changed,1663465,Amira Kitchen,Restaurant/Cafe/Canteen,Lambeth,SW2 4UN,2,4,-0.1251474,51.448762
+2026-11-21,rating_changed,1989397,Taste Of Brazil,Other catering premises,Lambeth,SW16,AwaitingInspection,4,,
+2026-11-21,rating_changed,256564,Payless,Retailers - other,Lewisham,SE8 3HS,3,4,-0.026487,51.481792
+2026-11-21,rating_changed,1662769,Pizza Roma,Takeaway/sandwich shop,Lewisham,SE6 1AE,4,1,-0.0045076,51.4452951
+2026-11-21,rating_changed,1276042,Bow Brew,Restaurant/Cafe/Canteen,Tower Hamlets,E3 4AJ,5,4,-0.025986,51.518383
+2026-11-21,rating_changed,100361,Favourite Chicken Ribs,Restaurant/Cafe/Canteen,Tower Hamlets,E2 6AH,5,4,-0.0663944,51.5264175
+2026-11-21,rating_changed,148352,Ruby House,Takeaway/sandwich shop,Tower Hamlets,E2 0AA,5,4,-0.0662523,51.5261439
+2026-11-21,rating_changed,1344378,Fat Bites,Restaurant/Cafe/Canteen,Waltham Forest,E10 5PW,3,1,-0.007835,51.5594979
+2026-11-21,rating_changed,1064453,Meat Love Butcher,Retailers - other,Waltham Forest,E15 2BX,4,1,-0.0051077,51.5552249
+2026-11-21,rating_changed,1977136,Tacos Mx,Retailers - other,Wandsworth,SW12 9AG,AwaitingInspection,3,-0.1498627,51.4462703
+2026-11-21,rating_changed,411858,Dorchester Hotel,Hotel/bed & breakfast/guest house,Westminster,W1K 1QA,5,4,-0.1524703,51.5074055
+2026-11-21,rating_changed,1246213,Jumak 39,Restaurant/Cafe/Canteen,Westminster,SW1Y 4EA,4,3,-0.132064,51.5095463
+2026-11-21,rating_changed,1991811,Londis - The Vale,Retailers - other,Westminster,W2 1BT,5,4,-0.1745807,51.5227784
