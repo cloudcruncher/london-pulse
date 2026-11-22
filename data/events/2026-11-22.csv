@@ -1,0 +1,35 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-22,rating_changed,2013177,Raw organic planet,Mobile caterer,Camden,NW3 4RL,AwaitingInspection,1,-0.1588502,51.5467948
+2026-11-22,rating_changed,1959989,Achayathis Catering,Other catering premises,Croydon,CR0,AwaitingInspection,4,,
+2026-11-22,rating_changed,1923655,Copeland's Restaurant & Lounge Limited,Restaurant/Cafe/Canteen,Croydon,SE19 1RX,AwaitingInspection,4,-0.081445999443531,51.4196472167969
+2026-11-22,rating_changed,1971626,The Grill 3,Takeaway/sandwich shop,Croydon,SE25 6HA,AwaitingInspection,3,-0.0742179974913597,51.3999862670898
+2026-11-22,rating_changed,1755109,Sun Ya Chinese Restaurant,Restaurant/Cafe/Canteen,Greenwich,SE3 7SX,5,2,0.0194788,51.4768632
+2026-11-22,rating_changed,1999918,TANNY,Other catering premises,Greenwich,SE28,AwaitingInspection,4,,
+2026-11-22,rating_changed,469523,19 Numara Bos Cirrik 2,Restaurant/Cafe/Canteen,Hackney,N16 7JD,2,4,-0.0733342,51.5622371
+2026-11-22,rating_changed,1079696,Fabrique Bakery Ltd,Other catering premises,Hackney,E2 8HZ,4,2,,
+2026-11-22,rating_changed,469279,Hanoi Cafe,Restaurant/Cafe/Canteen,Hackney,E2 8DP,2,1,-0.077063,51.5299161
+2026-11-22,rating_changed,470519,Long White Cloud,Other catering premises,Hackney,E2 8JL,5,2,-0.073692,51.5305351
+2026-11-22,rating_changed,469317,Shoreditch Chicken & Cod,Takeaway/sandwich shop,Hackney,E2 8EB,3,1,-0.076712,51.5348202
+2026-11-22,rating_changed,469384,Song Que Restaurant & Cafe,Restaurant/Cafe/Canteen,Hackney,E2 8DY,4,2,-0.0768826,51.5307764
+2026-11-22,rating_changed,469539,Tay Do Cafe,Restaurant/Cafe/Canteen,Hackney,E2 8AG,4,1,-0.0777182,51.529765
+2026-11-22,rating_changed,469581,The Premises Cafe and Bistro,Restaurant/Cafe/Canteen,Hackney,E2 8JL,4,1,-0.0716008,51.5312291
+2026-11-22,rating_changed,469694,The Three Crowns,Restaurant/Cafe/Canteen,Hackney,N16 0LH,5,4,-0.073832,51.5620654
+2026-11-22,rating_changed,518931,Sunny News,Retailers - other,Hillingdon,HA4 0QP,5,4,-0.381202,51.560817
+2026-11-22,rating_changed,855087,Bedfont Cafe,Restaurant/Cafe/Canteen,Hounslow,TW14 8BL,4,3,-0.4278842,51.4536199
+2026-11-22,rating_changed,1285531,Hydrabad Express,Takeaway/sandwich shop,Hounslow,TW14 9BP,5,3,-0.4124031,51.4484351
+2026-11-22,rating_changed,1607823,Restaurant On 3,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1TX,3,4,-0.305014997720718,51.4117164611816
+2026-11-22,rating_changed,1985786,Serve,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 5EL,AwaitingInspection,4,-0.3008537,51.4155327
+2026-11-22,rating_changed,1966759,Bite Box,Mobile caterer,Newham,E7 8JT,AwaitingInspection,3,0.0324158,51.5420265
+2026-11-22,rating_changed,1942341,Dubai Grill House,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,3,0.0360016,51.5368296
+2026-11-22,rating_changed,1991900,Hyderabadi Niloufer,Takeaway/sandwich shop,Newham,E6 1AE,AwaitingInspection,1,0.0360016,51.5368296
+2026-11-22,rating_changed,1984400,Made Well,Other catering premises,Newham,E13,AwaitingInspection,4,,
+2026-11-22,rating_changed,1955710,Sadiqi Butcher And Groceries,Retailers - other,Newham,E13 0JW,AwaitingInspection,4,0.019754,51.533485
+2026-11-22,rating_changed,974196,Mr bao,Restaurant/Cafe/Canteen,Southwark,SE15 4UA,5,3,-0.0658147,51.4657341
+2026-11-22,rating_changed,1744339,Daanyaal Halal Meat & Food Store,Retailers - other,Waltham Forest,E10 7LA,1,3,-0.0237963,51.5710265
+2026-11-22,rating_changed,1320203,Miami Local,Retailers - other,Waltham Forest,E10 6AP,0,1,-0.0124035,51.5754922
+2026-11-22,rating_changed,2001633,Rewayat Restaurant,Restaurant/Cafe/Canteen,Waltham Forest,E17 9AP,AwaitingInspection,1,-0.014977,51.5763811
+2026-11-22,rating_changed,1779463,Smoke and Bones,Takeaway/sandwich shop,Waltham Forest,E17 4PY,4,3,-0.0203867,51.5907344
+2026-11-22,rating_changed,1839472,COFFEE ISLAND,Restaurant/Cafe/Canteen,Westminster,W2 1DS,4,2,-0.1685091,51.5192576
+2026-11-22,rating_changed,641292,Farah,Restaurant/Cafe/Canteen,Westminster,W2 1ED,2,1,-0.1729121,51.5223298
+2026-11-22,rating_changed,412474,Good Friend,Restaurant/Cafe/Canteen,Westminster,WC2H 7JJ,3,2,-0.1288017,51.5117874
+2026-11-22,rating_changed,412982,Imperial China,Restaurant/Cafe/Canteen,Westminster,WC2H 7BA,4,2,-0.1301127,51.5117993
