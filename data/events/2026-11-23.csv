@@ -1,0 +1,72 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-23,new,2018135,Brass Dove - Chancery Lane,Pub/bar/nightclub,City of London Corporation,EC4A 1AN,,AwaitingInspection,,
+2026-11-23,new,2018017,BLUE,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-11-23,new,2018022,Crisis Skylight Croydon,Other catering premises,Croydon,CR0 1RZ,,AwaitingInspection,,
+2026-11-23,new,2018026,Crystal Oasis Luncheon Club C.I.C,Other catering premises,Croydon,SE25 4JD,,AwaitingInspection,,
+2026-11-23,new,1973954,Fifi's Catering,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-23,new,2513,Gingerbread Corner Children's Centre,Caring Premises,Croydon,CR0 2EG,,5,,
+2026-11-23,new,2018003,Iberia Market,Retailers - other,Croydon,CR0,,AwaitingInspection,,
+2026-11-23,new,2018025,Lolly Tots Day Nursery Ltd,Caring Premises,Croydon,CR7 6EL,,AwaitingInspection,,
+2026-11-23,new,2018002,Matchali,Mobile caterer,Croydon,CR0,,AwaitingInspection,,
+2026-11-23,new,2018019,Mocktini,Other catering premises,Croydon,CR0,,AwaitingInspection,,
+2026-11-23,new,2018006,Momo Chowmein,Other catering premises,Croydon,CR7,,AwaitingInspection,,
+2026-11-23,new,2018007,Piri Piri Chicken Bites,Restaurant/Cafe/Canteen,Croydon,CR0 7ER,,AwaitingInspection,,
+2026-11-23,new,1979528,Queenkakes,Mobile caterer,Croydon,CR8,,AwaitingInspection,,
+2026-11-23,new,2018021,Saveur,Other catering premises,Croydon,CR7,,AwaitingInspection,,
+2026-11-23,new,2018005,Scrumptiously Gluten Free Bakes By Amy,Other catering premises,Croydon,CR8,,AwaitingInspection,,
+2026-11-23,new,2018004,Sweet Occasions,Other catering premises,Croydon,SW16,,AwaitingInspection,,
+2026-11-23,new,2018024,T8k-Out,Restaurant/Cafe/Canteen,Croydon,CR5 3BE,,AwaitingInspection,,
+2026-11-23,new,2014164,Taste Max Pizza,Takeaway/sandwich shop,Croydon,CR0 1RJ,,AwaitingInspection,,
+2026-11-23,new,2018020,The Apple Tree By Bohus,Pub/bar/nightclub,Croydon,CR0 8NG,,AwaitingInspection,,
+2026-11-23,new,2018015,The Little Dodo,Other catering premises,Croydon,CR2,,AwaitingInspection,,
+2026-11-23,new,2018115,Food Bazar Whitechapel,Retailers - supermarkets/hypermarkets,Tower Hamlets,E1 1DN,,AwaitingInspection,,
+2026-11-23,rating_changed,1985259,Sodexo Ltd,Restaurant/Cafe/Canteen,City of London Corporation,EC1A 4HT,AwaitingInspection,5,,
+2026-11-23,rating_changed,293772,The Nuance Group (UK) Limited (Aelia),Retailers - other,City of London Corporation,E16 2PX,5,Exempt,,
+2026-11-23,rating_changed,1962120,Amoreira Bakery,Other catering premises,Croydon,CR7,AwaitingInspection,5,,
+2026-11-23,rating_changed,1988936,Aspens Service Ltd At Chestnut Park Primary,School/college/university,Croydon,CR0 2UR,AwaitingInspection,5,,
+2026-11-23,rating_changed,1984857,Charsi Grill Fish,Restaurant/Cafe/Canteen,Croydon,CR0 2SB,AwaitingInspection,5,,
+2026-11-23,rating_changed,1001670,Claret & Ale,Pub/bar/nightclub,Croydon,CR0 7AA,4,5,,
+2026-11-23,rating_changed,1846527,Collette's Nursery,Caring Premises,Croydon,CR0 9BA,AwaitingInspection,5,,
+2026-11-23,rating_changed,1204906,Daffodils Day Nursery,Caring Premises,Croydon,CR7 8LY,4,5,,
+2026-11-23,rating_changed,1994093,Hazelwood Bakery,Other catering premises,Croydon,CR2,AwaitingInspection,5,,
+2026-11-23,rating_changed,1559244,Kids-Joy Nursery,Caring Premises,Croydon,CR0 3EX,4,5,,
+2026-11-23,rating_changed,1955599,Labakez,Other catering premises,Croydon,CR0,AwaitingInspection,5,,
+2026-11-23,rating_changed,1761,Morland Road Londis Store,Retailers - other,Croydon,CR0 6HD,4,5,,
+2026-11-23,rating_changed,1919578,Nikki's Bakes,Other catering premises,Croydon,CR2,AwaitingInspection,5,,
+2026-11-23,rating_changed,2008897,Petit Flan,Other catering premises,Croydon,CR2,AwaitingInspection,5,,
+2026-11-23,rating_changed,1947276,Planet Marley,Other catering premises,Croydon,SE25,AwaitingInspection,5,,
+2026-11-23,rating_changed,1959984,Saravanaa Bhavan,Restaurant/Cafe/Canteen,Croydon,CR0 1BF,AwaitingInspection,5,,
+2026-11-23,rating_changed,1994095,Southern Soul At Whelan's,Hotel/bed & breakfast/guest house,Croydon,CR2 6PW,AwaitingInspection,5,,
+2026-11-23,rating_changed,2001708,Sugar&Sall,Mobile caterer,Croydon,SW16,AwaitingInspection,5,,
+2026-11-23,rating_changed,490961,Elux Superstore Ltd,Retailers - other,Hounslow,TW5 0QU,3,4,-0.3726232,51.4842838
+2026-11-23,rating_changed,1380712,Tropical Food and Wine,Retailers - other,Hounslow,TW5 0DZ,2,3,-0.3807999,51.4837856
+2026-11-23,rating_changed,1845106,The Secret Garden,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT2 6RJ,AwaitingInspection,3,-0.2966479,51.4118387
+2026-11-23,rating_changed,1993156,Cerrado Cafe & Kitchen,Restaurant/Cafe/Canteen,Sutton,SM6 0BW,AwaitingInspection,1,-0.153063,51.366662
+2026-11-23,removed,2014762,Dovetail Bars Ltd,Pub/bar/nightclub,City of London Corporation,EC4A 1AN,AwaitingInspection,,-0.107822,51.516782
+2026-11-23,removed,1991673,Dr Johnson's House,Retailers - other,City of London Corporation,EC4A 3DE,AwaitingInspection,,-0.1081591,51.5150355
+2026-11-23,removed,1514936,LBLL Liverpool Street,Restaurant/Cafe/Canteen,City of London Corporation,EC2M 1NH,5,,-0.083866,51.517167
+2026-11-23,removed,293727,MV London Belle,Other catering premises,City of London Corporation,"",5,,,
+2026-11-23,removed,294482,"Pret A Manger, Unit C",Takeaway/sandwich shop,City of London Corporation,EC3M 5DJ,5,,-0.0817028,51.5118089
+2026-11-23,removed,730163,"Vacherin, Lloyds Banking",Restaurant/Cafe/Canteen,City of London Corporation,EC2Y 5AS,5,,-0.093975,51.517736
+2026-11-23,removed,1748780,AFC Chicken & Cafe,Restaurant/Cafe/Canteen,Croydon,CR0 3RA,5,,-0.106881000101566,51.3770027160645
+2026-11-23,removed,1927458,Bociea's Vending,Retailers - other,Croydon,CR2 6PL,AwaitingInspection,,-0.0933021,51.3549839
+2026-11-23,removed,2001703,Bun That,Other catering premises,Croydon,CR7,AwaitingInspection,,,
+2026-11-23,removed,1434956,Eslene Brathwaite,Other catering premises,Croydon,"",Exempt,,,
+2026-11-23,removed,1777192,Fairchildes Primary School,School/college/university,Croydon,CR0 0AH,AwaitingInspection,,-0.0025462,51.3341111
+2026-11-23,removed,1675974,House Of KiKi The Bakery,Other catering premises,Croydon,CR0,4,,,
+2026-11-23,removed,1101191,Jo's Kitchen,Mobile caterer,Croydon,CR7,5,,,
+2026-11-23,removed,1755627,Love Churros London,Takeaway/sandwich shop,Croydon,CR0 1LD,5,,-0.093697,51.3748917
+2026-11-23,removed,2001710,Neumuscle,Retailers - other,Croydon,CR0,AwaitingInspection,,,
+2026-11-23,removed,2001698,Nightingale House,Caring Premises,Croydon,CR2,AwaitingInspection,,,
+2026-11-23,removed,1595400,Oodles,Restaurant/Cafe/Canteen,Croydon,CR0 1LD,5,,-0.0951249971985817,51.3746376037598
+2026-11-23,removed,2014154,Quenchh,Other catering premises,Croydon,SE25,AwaitingInspection,,,
+2026-11-23,removed,2001724,Rose & Crumb,Other catering premises,Croydon,CR2,AwaitingInspection,,,
+2026-11-23,removed,1648673,Slimming World Franchise,Retailers - other,Croydon,CR0,5,,,
+2026-11-23,removed,1994094,Talking River,Takeaway/sandwich shop,Croydon,SW16 4DG,AwaitingInspection,,-0.121592000126839,51.4083290100098
+2026-11-23,removed,2001695,The Bakehouse Edit,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-11-23,removed,859719,Thomas Franks Ltd At Cumnor Boys Nursery,Caring Premises,Croydon,CR2 6DH,5,,-0.11135,51.3470929
+2026-11-23,removed,1570180,Triumphant Outreach Ministries International,Retailers - other,Croydon,CR0 2BQ,5,,-0.0924927,51.3845124
+2026-11-23,removed,1979537,Tuck Blends,Other catering premises,Croydon,CR0,AwaitingInspection,,,
+2026-11-23,removed,1710039,Tuel Food And Spices,Mobile caterer,Croydon,CR2,AwaitingInspection,,,
+2026-11-23,removed,1609050,Whitgift Sports Club,Other catering premises,Croydon,CR2 7BG,5,,-0.0853499993681908,51.3595962524414
+2026-11-23,removed,7141,Yufa Perfect Food,Takeaway/sandwich shop,Croydon,CR0 2JJ,4,,-0.09740299731493,51.3858795166016
