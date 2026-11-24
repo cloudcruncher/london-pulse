@@ -1,0 +1,40 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-24,rating_changed,1619481,Rose Bruford International,School/college/university,Bexley,DA15 9DF,5,4,0.1072729,51.439347
+2026-11-24,rating_changed,1998201,BABABOOM,Restaurant/Cafe/Canteen,Camden,NW1 8AA,AwaitingInspection,2,,
+2026-11-24,rating_changed,1960279,SOBE BURGER,Restaurant/Cafe/Canteen,Camden,NW5 2AD,AwaitingInspection,3,-0.140968,51.5481585
+2026-11-24,rating_changed,1972403,Riverside Cafe & Bar,Restaurant/Cafe/Canteen,City of London Corporation,SE1 7SG,AwaitingInspection,1,,
+2026-11-24,rating_changed,1159962,Green Lane Food Store,Retailers - other,Croydon,CR7 8BA,1,4,-0.1051761,51.4079642
+2026-11-24,rating_changed,1994424,Café Zee,Restaurant/Cafe/Canteen,Ealing,W5 5AW,AwaitingInspection,3,-0.305484,51.512853
+2026-11-24,rating_changed,1070853,Haldiram Overseas,Manufacturers/packers,Ealing,UB2 5FB,0,4,-0.3988324,51.502469
+2026-11-24,rating_changed,1033365,Jas Food & Wine,Retailers - other,Ealing,UB2 4DQ,2,4,-0.382748,51.500537
+2026-11-24,rating_changed,1023440,Pizza Hut,Takeaway/sandwich shop,Ealing,UB1 1RQ,4,2,-0.377238,51.509255
+2026-11-24,rating_changed,1070843,Sam's Peri Peri Chicken,Restaurant/Cafe/Canteen,Ealing,W13 9DA,5,2,-0.3226526,51.5102228
+2026-11-24,rating_changed,2013567,Sitos Cafe,Restaurant/Cafe/Canteen,Ealing,UB6 0HH,AwaitingInspection,2,-0.339402,51.549901
+2026-11-24,rating_changed,1998959,Lemon Pizza & Grill Chicken,Restaurant/Cafe/Canteen,Enfield,N18 1ND,AwaitingInspection,1,-0.0854592,51.6167236
+2026-11-24,rating_changed,1988033,Medis BBQ,Takeaway/sandwich shop,Enfield,EN2 0JT,AwaitingInspection,0,-0.084608,51.663891
+2026-11-24,rating_changed,517105,Real Peri Peri,Takeaway/sandwich shop,Enfield,N13 4PJ,5,4,-0.109504,51.61811
+2026-11-24,rating_changed,1978843,Afrikana Restaurant O2,Restaurant/Cafe/Canteen,Greenwich,SE10 0DX,AwaitingInspection,1,0.0042762,51.5037303
+2026-11-24,rating_changed,1623127,Haidilao,Restaurant/Cafe/Canteen,Greenwich,SE10 0DX,5,3,0.0016041,51.5036175
+2026-11-24,rating_changed,469111,Royal Meats,Retailers - other,Hackney,N16 6QX,4,2,-0.0722423,51.5723718
+2026-11-24,rating_changed,469990,Satmar Meats & Poultry,Retailers - other,Hackney,N16 6XZ,4,3,-0.0727832,51.5643503
+2026-11-24,rating_changed,469052,The Egg Stores,Retailers - other,Hackney,N16 6XZ,3,0,-0.0727832,51.5643503
+2026-11-24,rating_changed,1604054,Spice Delight Sweets and Snacks Ltd,Takeaway/sandwich shop,Harrow,HA8 7DB,4,1,-0.280614,51.611424
+2026-11-24,rating_changed,1987034,Swastik Restaurant Ltd,Restaurant/Cafe/Canteen,Harrow,HA7 1JJ,AwaitingInspection,2,-0.295103,51.596322
+2026-11-24,rating_changed,2000477,Morleys,Restaurant/Cafe/Canteen,Havering,RM12 4RW,AwaitingInspection,4,0.198827,51.550329
+2026-11-24,rating_changed,1985974,Harlington School - Culinera catering,School/college/university,Hillingdon,UB3 1PB,AwaitingInspection,4,-0.4347332,51.4964875
+2026-11-24,rating_changed,1875617,Coffee Shop,Restaurant/Cafe/Canteen,Lambeth,SW9 8JZ,AwaitingInspection,1,-0.1143158,51.4619066
+2026-11-24,rating_changed,1990867,Sara Coffee Juice Bar,Takeaway/sandwich shop,Lambeth,SW9 8PS,AwaitingInspection,3,-0.111818999052048,51.4626312255859
+2026-11-24,rating_changed,1967033,Sputnick,Retailers - other,Lewisham,SE13 5PT,AwaitingInspection,4,-0.0062196,51.4611696
+2026-11-24,rating_changed,992956,Appetite London,Retailers - other,Newham,E20 1DH,5,4,-0.0104823,51.5470144
+2026-11-24,rating_changed,1777352,Fish At Queens,Retailers - other,Newham,E13 9BA,3,4,0.0339938,51.5347239
+2026-11-24,rating_changed,570063,Noori Halal Butchers,Retailers - other,Redbridge,IG1 2RZ,1,3,0.074347,51.551624
+2026-11-24,rating_changed,853318,Lolak afrique restaurant,Restaurant/Cafe/Canteen,Southwark,SE15 4SE,1,0,-0.068554,51.468193
+2026-11-24,rating_changed,1315139,Gourmet House,Takeaway/sandwich shop,Waltham Forest,E4 9PB,3,4,0.0011789,51.6071032
+2026-11-24,rating_changed,1930017,Juniper Pursuits at Parkside Primary School,School/college/university,Waltham Forest,E4 6RE,AwaitingInspection,4,-0.0142466,51.6249365
+2026-11-24,rating_changed,1930019,Juniper Pursuits at St Mary’s Catholic Primary School,School/college/university,Waltham Forest,E4 7BJ,AwaitingInspection,4,0.002103,51.6307288
+2026-11-24,rating_changed,1751653,Sustainable Wine Solutions/Blackhorse Wines E17 Taproom,Pub/bar/nightclub,Waltham Forest,E17 5QJ,AwaitingInspection,4,-0.0428361,51.5910928
+2026-11-24,rating_changed,1970703,Double A,Retailers - other,Wandsworth,SW18 4JB,AwaitingInspection,4,-0.1963301,51.4571542
+2026-11-24,rating_changed,1967240,Grilandia,Takeaway/sandwich shop,Wandsworth,SW11 3SS,AwaitingInspection,4,-0.1777124,51.4692309
+2026-11-24,rating_changed,1849328,Carbone,Restaurant/Cafe/Canteen,Westminster,W1K 6AN,3,2,-0.1531533,51.5111842
+2026-11-24,rating_changed,772648,Osteria Dell'Angolo,Restaurant/Cafe/Canteen,Westminster,SW1P 3DR,4,2,-0.1285133,51.4959736
+2026-11-24,rating_changed,1231214,Swans Bar / Maison Assouline,Other catering premises,Westminster,W1J 9DY,4,2,-0.1372702,51.5087478
