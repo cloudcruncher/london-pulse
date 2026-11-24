@@ -34,6 +34,11 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-24,new,2018684,Scarlet Road,Manufacturers/packers,Barking and Dagenham,IG11,,AwaitingInspection,,
 2026-11-24,new,2018680,Shazan Foods Ltd,Retailers - other,Barking and Dagenham,IG11 7BS,,AwaitingInspection,,
 2026-11-24,new,2018674,Sweet Delights,Takeaway/sandwich shop,Barking and Dagenham,RM8 2NT,,AwaitingInspection,,
+2026-11-24,new,1965574,Authentic Srilankan Food,Other catering premises,Kingston-Upon-Thames,KT6,,AwaitingInspection,,
+2026-11-24,new,2018870,T&D Ice Cream,Other catering premises,Kingston-Upon-Thames,KT6,,AwaitingInspection,,
+2026-11-24,new,2018872,Gao Restaurant,Restaurant/Cafe/Canteen,Sutton,SM2 5AJ,,AwaitingInspection,,
+2026-11-24,new,2018873,Meadow Lodge,School/college/university,Sutton,SM5 2SG,,AwaitingInspection,,
+2026-11-24,new,2018871,Old Dhaka,Other catering premises,Sutton,SM6,,AwaitingInspection,,
 2026-11-24,rating_changed,1964663,Fresh Start Children's Home,Caring Premises,Barking and Dagenham,RM10,AwaitingInspection,5,,
 2026-11-24,rating_changed,1927332,Impact Food Group T/A Dolce,School/college/university,Barking and Dagenham,RM9 5TB,AwaitingInspection,5,,
 2026-11-24,rating_changed,1972608,Smoke and Spice by 13.11 Kitchen,Other catering premises,Barking and Dagenham,IG11 0ZG,AwaitingInspection,5,,
@@ -62,6 +67,10 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-24,rating_changed,1987034,Swastik Restaurant Ltd,Restaurant/Cafe/Canteen,Harrow,HA7 1JJ,AwaitingInspection,2,-0.295103,51.596322
 2026-11-24,rating_changed,2000477,Morleys,Restaurant/Cafe/Canteen,Havering,RM12 4RW,AwaitingInspection,4,0.198827,51.550329
 2026-11-24,rating_changed,1985974,Harlington School - Culinera catering,School/college/university,Hillingdon,UB3 1PB,AwaitingInspection,4,-0.4347332,51.4964875
+2026-11-24,rating_changed,1998801,Nourish Contract Catering Ltd @ Dysart School,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT6 6HL,AwaitingInspection,5,,
+2026-11-24,rating_changed,1998797,Olive Pizza,Takeaway/sandwich shop,Kingston-Upon-Thames,KT6 6HA,AwaitingInspection,5,,
+2026-11-24,rating_changed,1646129,Save The World Club,Mobile caterer,Kingston-Upon-Thames,KT1 2EH,2,4,,
+2026-11-24,rating_changed,1977277,Signature at Surbiton,Caring Premises,Kingston-Upon-Thames,KT6 6AP,AwaitingInspection,5,,
 2026-11-24,rating_changed,1875617,Coffee Shop,Restaurant/Cafe/Canteen,Lambeth,SW9 8JZ,AwaitingInspection,1,-0.1143158,51.4619066
 2026-11-24,rating_changed,1990867,Sara Coffee Juice Bar,Takeaway/sandwich shop,Lambeth,SW9 8PS,AwaitingInspection,3,-0.111818999052048,51.4626312255859
 2026-11-24,rating_changed,1967033,Sputnick,Retailers - other,Lewisham,SE13 5PT,AwaitingInspection,4,-0.0062196,51.4611696
@@ -69,6 +78,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-24,rating_changed,1777352,Fish At Queens,Retailers - other,Newham,E13 9BA,3,4,0.0339938,51.5347239
 2026-11-24,rating_changed,570063,Noori Halal Butchers,Retailers - other,Redbridge,IG1 2RZ,1,3,0.074347,51.551624
 2026-11-24,rating_changed,853318,Lolak afrique restaurant,Restaurant/Cafe/Canteen,Southwark,SE15 4SE,1,0,-0.068554,51.468193
+2026-11-24,rating_changed,1963627,The Bake Drop,Other catering premises,Sutton,KT4,Exempt,5,,
 2026-11-24,rating_changed,1990702,Fillings,Takeaway/sandwich shop,Tower Hamlets,E3 3QX,AwaitingInspection,5,,
 2026-11-24,rating_changed,1780176,Yume Sushi,Restaurant/Cafe/Canteen,Tower Hamlets,E14 6HP,2,5,,
 2026-11-24,rating_changed,1315139,Gourmet House,Takeaway/sandwich shop,Waltham Forest,E4 9PB,3,4,0.0011789,51.6071032
@@ -96,3 +106,7 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-24,removed,1987828,Sash Foods LTD,Other catering premises,Barking and Dagenham,IG11 0JP,AwaitingInspection,,0.1036108,51.5253575
 2026-11-24,removed,1923966,The Truffle Box,Other catering premises,Barking and Dagenham,IG11,AwaitingInspection,,,
 2026-11-24,removed,1914674,Twerk 'N' Jerk,Restaurant/Cafe/Canteen,Barking and Dagenham,RM10 7XL,AwaitingInspection,,0.1620346,51.54752595
+2026-11-24,removed,811652,Caterlink Ltd At Rushy Meadow Primary School,Other catering premises,Sutton,SM5 2SG,5,,-0.173081994056702,51.3737640380859
+2026-11-24,removed,1556939,Come And Play,Caring Premises,Sutton,SM5 2SG,4,,-0.173081994056702,51.3737640380859
+2026-11-24,removed,1756572,Locokusa,Other catering premises,Sutton,SM5,5,,,
+2026-11-24,removed,1666755,Stir Food Ltd,School/college/university,Sutton,SM6 7NH,5,,-0.139190003275871,51.3719367980957
