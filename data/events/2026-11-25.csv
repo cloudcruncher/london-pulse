@@ -1,0 +1,42 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-25,new,1804649,Rama Thai,Restaurant/Cafe/Canteen,Croydon,SW16 4RW,,0,-0.120345,51.4086852
+2026-11-25,rating_changed,2018671,Global Fresh Bazaar,Retailers - other,Barking and Dagenham,RM8 1UU,AwaitingInspection,1,0.122608,51.562479
+2026-11-25,rating_changed,1993306,MNM Pizza & Grill Takeaway,Takeaway/sandwich shop,Barking and Dagenham,RM10 9HX,AwaitingInspection,4,0.151302,51.534807
+2026-11-25,rating_changed,1973008,Gayle's Cuisine,Other catering premises,Bromley,BR4,AwaitingInspection,2,,
+2026-11-25,rating_changed,1809058,Gather & Gather Limited,Restaurant/Cafe/Canteen,Camden,W1T 5HB,AwaitingInspection,2,-0.1385517,51.522554
+2026-11-25,rating_changed,1420601,Baller's Pot Of Paradise,Restaurant/Cafe/Canteen,Croydon,SE25 4UY,2,4,-0.0671224,51.3944918
+2026-11-25,rating_changed,1537795,Chicken Guys,Takeaway/sandwich shop,Croydon,CR0 6PT,5,4,-0.0829420015215874,51.3797607421875
+2026-11-25,rating_changed,1787526,Beirut Grill,Restaurant/Cafe/Canteen,Ealing,W3 6ND,4,2,-0.265792,51.506473
+2026-11-25,rating_changed,1970104,Ealing Express,Takeaway/sandwich shop,Ealing,W5 3LD,AwaitingInspection,1,-0.287078,51.510239
+2026-11-25,rating_changed,1970090,Hot Birdies,Restaurant/Cafe/Canteen,Ealing,UB1 1QN,1,4,-0.3826781,51.5121538
+2026-11-25,rating_changed,1033074,Kindred Hanwell,Caring Premises,Ealing,W7 2DT,5,4,-0.329174,51.506233
+2026-11-25,rating_changed,1981933,STRONG Pilates Ealing,Restaurant/Cafe/Canteen,Ealing,W5 5FA,AwaitingInspection,3,-0.306583,51.5122041
+2026-11-25,rating_changed,1032450,Twinkle Totz,Caring Premises,Ealing,UB1 1NW,5,4,-0.3835006,51.5129385
+2026-11-25,rating_changed,1990271,Alxas community centre,Other catering premises,Enfield,N18 1SX,AwaitingInspection,1,,
+2026-11-25,rating_changed,1990275,Damak Ocakbasi,Restaurant/Cafe/Canteen,Enfield,EN3 5AZ,AwaitingInspection,4,-0.047658,51.656952
+2026-11-25,rating_changed,1734845,Woolwich Polytechnic School for Boys,School/college/university,Greenwich,SE28 8AT,5,4,0.108387999236584,51.5035552978516
+2026-11-25,rating_changed,469456,Britannia Restaurant,Restaurant/Cafe/Canteen,Hackney,E8 1EJ,2,3,-0.0554622,51.54589
+2026-11-25,rating_changed,470626,Cafe De Coin,Restaurant/Cafe/Canteen,Hackney,N16 5AG,AwaitingInspection,4,-0.0768594,51.574444
+2026-11-25,rating_changed,1633632,Dagims Deli,Restaurant/Cafe/Canteen,Hackney,N16 5HT,4,1,-0.0791656,51.5703992
+2026-11-25,rating_changed,469912,Super Glatt Fresh Meat,Retailers - other,Hackney,N16 5HT,5,4,-0.0787463,51.5704193
+2026-11-25,rating_changed,1288754,Crazy For Coffee,Restaurant/Cafe/Canteen,Hammersmith and Fulham,W14 9NL,3,4,-0.2060073,51.4897387
+2026-11-25,rating_changed,1682800,Dee's Tiney home nursery,Restaurant/Cafe/Canteen,Harrow,HA3,2,4,,
+2026-11-25,rating_changed,547256,South Harrow Halal Meat,Retailers - other,Harrow,HA2 8DY,2,1,-0.354848,51.563922
+2026-11-25,rating_changed,1830284,Tiger Dragon,Restaurant/Cafe/Canteen,Harrow,HA3 5EQ,3,2,-0.33976,51.60385
+2026-11-25,rating_changed,1949579,Chixys Grill,Restaurant/Cafe/Canteen,Hillingdon,UB3 1AX,1,3,-0.421061,51.504628
+2026-11-25,rating_changed,490125,Adam  Meat House Ltd,Retailers - other,Hounslow,TW4 7DN,2,3,-0.3864867,51.4727861
+2026-11-25,rating_changed,577132,Buenos Aires Restaurant,Restaurant/Cafe/Canteen,Hounslow,W4 1QP,4,2,-0.2547729,51.4935867
+2026-11-25,rating_changed,1486703,Delights Cafe & Restaurant,Restaurant/Cafe/Canteen,Hounslow,TW4 7DJ,2,3,-0.3852541,51.4724478
+2026-11-25,rating_changed,1056828,Steve Hatt,Retailers - other,Islington,N1 8LU,5,3,-0.0988941,51.5385005
+2026-11-25,rating_changed,1385970,Aroma,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT3 3PA,4,3,-0.2632626,51.4002209
+2026-11-25,rating_changed,1385806,Cham Kimbap & Dosirak,Takeaway/sandwich shop,Kingston-Upon-Thames,KT3 3NX,1,4,-0.264712,51.4007496
+2026-11-25,rating_changed,1544019,Ocean Basket Kingston,Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1HN,5,2,-0.3080922,51.4072295
+2026-11-25,rating_changed,1864603,Beeyond,Restaurant/Cafe/Canteen,Lambeth,SE1 7DP,4,2,-0.112829,51.498509
+2026-11-25,rating_changed,1907929,Chouxru London ltd,Restaurant/Cafe/Canteen,Redbridge,IG3,AwaitingInspection,4,,
+2026-11-25,rating_changed,1574561,Hanana,Takeaway/sandwich shop,Richmond-Upon-Thames,TW9 2NQ,3,1,-0.3011581,51.4643121
+2026-11-25,rating_changed,1575402,The Rose and Crown,Pub/bar/nightclub,Richmond-Upon-Thames,TW9 3AH,3,1,-0.2885173,51.4855039
+2026-11-25,rating_changed,66087,Han Restaurant,Restaurant/Cafe/Canteen,Tower Hamlets,E14 0ED,4,2,-0.0117344,51.5114347
+2026-11-25,rating_changed,1932679,The People's Letters,Other catering premises,Tower Hamlets,E2 9RA,AwaitingInspection,4,-0.0565609,51.5305939
+2026-11-25,rating_changed,1042188,Magura,Retailers - other,Waltham Forest,E10 6QE,5,4,-0.0101502,51.5619832
+2026-11-25,rating_changed,1788203,Biryani Waala Ltd,Restaurant/Cafe/Canteen,Wandsworth,SW17 7AA,2,4,-0.1592176,51.4361185
+2026-11-25,rating_changed,413758,Sergio's,Restaurant/Cafe/Canteen,Westminster,W1W 7QY,3,4,-0.1406257,51.5190617
