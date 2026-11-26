@@ -1,0 +1,52 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-26,rating_changed,1751345,Nakd Flame,Restaurant/Cafe/Canteen,Barking and Dagenham,IG11 8EA,3,2,0.081616,51.539293
+2026-11-26,rating_changed,1828729,Andalus House Of Cake,Retailers - other,Barnet,N3 2PA,2,1,-0.18816,51.604998
+2026-11-26,rating_changed,1800970,Chicken Land,Restaurant/Cafe/Canteen,Barnet,EN5 5SJ,3,4,-0.1991346,51.6529351
+2026-11-26,rating_changed,1980920,Els Coffee,Restaurant/Cafe/Canteen,Barnet,N2 9AS,AwaitingInspection,4,-0.165498,51.591859
+2026-11-26,rating_changed,2015023,Kani Shawarma,Restaurant/Cafe/Canteen,Barnet,N12 8LJ,AwaitingInspection,3,-0.1770445,51.6142867
+2026-11-26,rating_changed,565374,F & D's Cafe,Restaurant/Cafe/Canteen,Bexley,DA16 2RE,2,4,0.094872,51.463967
+2026-11-26,rating_changed,745415,Robin Hood & Little John,Pub/bar/nightclub,Bexley,DA6 8PF,5,4,0.135926,51.454575
+2026-11-26,rating_changed,329391,Shahi Spice Also T/A Ozman Doner And Grill,Takeaway/sandwich shop,Bexley,DA7 5HD,5,3,0.141334,51.473235
+2026-11-26,rating_changed,1660831,BONZAI LONDON,Restaurant/Cafe/Canteen,Camden,NW1 3RD,4,3,-0.1412085,51.5302309
+2026-11-26,rating_changed,426135,Crown Cafe,Restaurant/Cafe/Canteen,Camden,NW1 1TT,4,3,-0.1341573,51.5355416
+2026-11-26,rating_changed,1934372,DACHA,Retailers - other,Camden,NW1 7AH,AwaitingInspection,4,,
+2026-11-26,rating_changed,1059180,Sushi Gourmet,Takeaway/sandwich shop,Camden,NW1 9LJ,5,4,-0.1407747,51.5405207
+2026-11-26,rating_changed,1752502,Banme - Vietnamese Street Eat,Takeaway/sandwich shop,Croydon,CR0 1LD,5,4,-0.0951249971985817,51.3746376037598
+2026-11-26,rating_changed,1766912,Amisa Lounge,Takeaway/sandwich shop,Ealing,W3 9NU,2,4,-0.272339,51.509384
+2026-11-26,rating_changed,1073458,Mumbai Avenue,Restaurant/Cafe/Canteen,Ealing,W13 8JR,1,3,-0.319951,51.515274
+2026-11-26,rating_changed,695637,Great Wall,Takeaway/sandwich shop,Greenwich,SE3 8RP,5,4,0.0346683,51.4745143
+2026-11-26,rating_changed,1523313,The Cakery,Manufacturers/packers,Greenwich,SE18 1SJ,1,4,0.0910684,51.4875866
+2026-11-26,rating_changed,345662,Emilia's Delicatessen,Retailers - other,Hammersmith and Fulham,SW6 4LU,3,4,-0.202824,51.472343
+2026-11-26,rating_changed,588762,Harris & Hoole,Restaurant/Cafe/Canteen,Hammersmith and Fulham,SW6 2FG,4,3,-0.1829463,51.4741232
+2026-11-26,rating_changed,1672056,CakeCo,Retailers - other,Harrow,HA1 3QN,5,4,-0.3356795,51.5577886
+2026-11-26,rating_changed,1989446,Spice Village,Restaurant/Cafe/Canteen,Harrow,HA1 2TR,AwaitingInspection,4,-0.3326348,51.5860899
+2026-11-26,rating_changed,1986018,Imperial Romford Limited,Restaurant/Cafe/Canteen,Havering,RM1 1DL,AwaitingInspection,4,0.177205,51.581748
+2026-11-26,rating_changed,1269761,Udaya Foods Ltd,Manufacturers/packers,Havering,RM7 0HL,5,2,0.1674456,51.570133
+2026-11-26,rating_changed,1533833,Karma Lounge,Restaurant/Cafe/Canteen,Hillingdon,UB8 2EW,1,3,,
+2026-11-26,rating_changed,1287386,Dim Sum Duck,Restaurant/Cafe/Canteen,Islington,WC1X 9DS,2,3,-0.1164095,51.5302491
+2026-11-26,rating_changed,1759098,Dosamaa@The Junction,Mobile caterer,Islington,N7 7QP,5,3,-0.1153004,51.5602308
+2026-11-26,rating_changed,416734,Earl Of Essex Public House,Pub/bar/nightclub,Islington,N1 8LE,5,2,-0.0997945,51.5338479
+2026-11-26,rating_changed,981374,Papa's Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 8AF,4,3,-0.120021998882294,51.4641036987305
+2026-11-26,rating_changed,665349,Savannah Caribbean Takeaway,Takeaway/sandwich shop,Lambeth,SW4 7UT,5,3,-0.130436,51.465042
+2026-11-26,rating_changed,484087,Zana Food Centre,Retailers - other,Lambeth,SW9 8JP,1,3,-0.11312,51.462166
+2026-11-26,rating_changed,585670,Little Vietnam,Restaurant/Cafe/Canteen,Merton,SW19 1JX,4,3,-0.1929484,51.4158435
+2026-11-26,rating_changed,1830673,Ardealu,Retailers - other,Newham,E6 2LW,4,3,0.063259,51.534203
+2026-11-26,rating_changed,1977090,Arya Bhavan,Restaurant/Cafe/Canteen,Newham,E12 6SA,3,0,0.050357,51.542613
+2026-11-26,rating_changed,1844764,Asian Grocery Point,Retailers - supermarkets/hypermarkets,Newham,E12 6RH,1,3,0.0492249988019466,51.5459785461426
+2026-11-26,rating_changed,864076,Green Stop,Retailers - other,Newham,E6 2LN,3,4,0.060262,51.533932
+2026-11-26,rating_changed,799754,Londis,Retailers - other,Newham,E12 6HL,4,1,0.0602768,51.5487074
+2026-11-26,rating_changed,1006751,Oriental Kitchen,Takeaway/sandwich shop,Newham,E13 9PJ,4,3,0.036771,51.529999
+2026-11-26,rating_changed,1783594,Prince Regent Lane Post Office,Retailers - other,Newham,E13 8RY,1,4,0.032104,51.520718
+2026-11-26,rating_changed,1078117,R D Dabeli,Retailers - other,Newham,E13 0QU,2,0,0.0331498,51.5377871
+2026-11-26,rating_changed,1026807,TTS Meat Bazaar Ltd,Retailers - other,Newham,E12 6AF,3,1,0.05546,51.548323
+2026-11-26,rating_changed,1593259,The Best Kebab,Takeaway/sandwich shop,Newham,E13 9PJ,4,1,0.0365809,51.5299808
+2026-11-26,rating_changed,1803376,Gelato&Cafeteria,Takeaway/sandwich shop,Redbridge,IG3 8TG,4,1,0.109942,51.566807
+2026-11-26,rating_changed,363160,Lebanese grill,Restaurant/Cafe/Canteen,Southwark,SE1 4AG,5,3,-0.091824,51.494357
+2026-11-26,rating_changed,1377321,Mikos ecuadorian and spanish restaurant,Restaurant/Cafe/Canteen,Southwark,SE17 1FH,5,4,-0.0970084,51.4920177
+2026-11-26,rating_changed,1582224,The Place,Restaurant/Cafe/Canteen,Sutton,SM1 1JU,5,0,-0.194143,51.3651513
+2026-11-26,rating_changed,1437125,Dauns,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7TD,5,3,-0.0738028,51.516985
+2026-11-26,rating_changed,1834225,De Nadas Empanadas,Manufacturers/packers,Tower Hamlets,E2 9RF,3,4,-0.05675,51.5298776
+2026-11-26,rating_changed,1947657,Dorothy's Deli,Takeaway/sandwich shop,Tower Hamlets,E2 9RF,AwaitingInspection,1,-0.056789,51.529887
+2026-11-26,rating_changed,67420,Nora Cafe,Restaurant/Cafe/Canteen,Tower Hamlets,E1 7TB,5,4,-0.076079,51.516572
+2026-11-26,rating_changed,99691,Rochelle Canteen,Restaurant/Cafe/Canteen,Tower Hamlets,E2 7FA,1,2,-0.0741193,51.5257797
+2026-11-26,rating_changed,411252,Ippudo,Restaurant/Cafe/Canteen,Westminster,WC2N 6ND,3,2,-0.1236055,51.5081253
