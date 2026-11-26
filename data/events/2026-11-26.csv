@@ -1,4 +1,9 @@
 event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-26,new,2019622,Joia's Kitchen,Restaurant/Cafe/Canteen,Barking and Dagenham,RM6 6LS,,AwaitingInspection,,
+2026-11-26,new,2019620,Nieda Energy Pouches,Retailers - other,Barking and Dagenham,RM6 6AX,,AwaitingInspection,,
+2026-11-26,new,2019623,Olive Dining Ltd,School/college/university,Barking and Dagenham,RM9 5QT,,AwaitingInspection,,
+2026-11-26,new,2019624,Virsa,Restaurant/Cafe/Canteen,Barking and Dagenham,RM8 1AB,,AwaitingInspection,,
+2026-11-26,new,2019621,angeline'sKAHITANOcafe,Other catering premises,Barking and Dagenham,RM9,,AwaitingInspection,,
 2026-11-26,new,2019324,A Whisk Worth Taking,Other catering premises,Bromley,BR5,,AwaitingInspection,,
 2026-11-26,new,2019321,Avina Care Group,Caring Premises,Bromley,BR6 7AG,,AwaitingInspection,,
 2026-11-26,new,1628280,Brownie Bakehouse,Other catering premises,Bromley,BR7,,AwaitingInspection,,
@@ -48,6 +53,56 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-26,new,2019451,The Maid's Kitchen / Momo Lads,Other catering premises,Islington,N7 9NH,,AwaitingInspection,,
 2026-11-26,new,2019448,Vittorio Ristorante Pizzeria,Restaurant/Cafe/Canteen,Islington,EC1Y 8QP,,AwaitingInspection,,
 2026-11-26,new,2019507,Sandman UK One Limited,Manufacturers/packers,Kingston-Upon-Thames,KT1 2BA,,AwaitingInspection,,
+2026-11-26,new,2019594,B Kitchen,Takeaway/sandwich shop,Lambeth,SE11 5QU,,AwaitingInspection,,
+2026-11-26,new,2019595,Calia,Restaurant/Cafe/Canteen,Lambeth,SW16 1DB,,AwaitingInspection,,
+2026-11-26,new,2019592,Carnegie Cafe,Restaurant/Cafe/Canteen,Lambeth,SE24 0DG,,AwaitingInspection,,
+2026-11-26,new,2019597,Clauds&Co Cookie,Other catering premises,Lambeth,SE11,,AwaitingInspection,,
+2026-11-26,new,2019599,Fire And Fromage,Restaurant/Cafe/Canteen,Lambeth,SE1 8XX,,AwaitingInspection,,
+2026-11-26,new,2019596,Muhiim,Restaurant/Cafe/Canteen,Lambeth,SW16 6HH,,AwaitingInspection,,
+2026-11-26,new,1999733,Norigami Sushi,Restaurant/Cafe/Canteen,Lambeth,SW4 7BG,,AwaitingInspection,,
+2026-11-26,new,2019598,Professional Project Catering,Other catering premises,Lambeth,SE1 9LT,,AwaitingInspection,,
+2026-11-26,new,1974323,Tacos Mx,Restaurant/Cafe/Canteen,Lambeth,SW8 2LA,,AwaitingInspection,,
+2026-11-26,new,2019638,Agincare Enable Ltd,Caring Premises,Newham,E6 6WJ,,AwaitingInspection,,
+2026-11-26,new,2019637,Agincare Enable Ltd,Caring Premises,Newham,E6 6WJ,,AwaitingInspection,,
+2026-11-26,new,2014605,B J Wines,Retailers - other,Newham,E16 3AR,,AwaitingInspection,,
+2026-11-26,new,2019633,Bad Bird,Takeaway/sandwich shop,Newham,E6 1HU,,AwaitingInspection,,
+2026-11-26,new,2019658,Bagel Town - East Ham,Restaurant/Cafe/Canteen,Newham,E6 2LW,,AwaitingInspection,,
+2026-11-26,new,2019626,Balloon Museum - Balloon Bar,Restaurant/Cafe/Canteen,Newham,E16 1XL,,AwaitingInspection,,
+2026-11-26,new,2019654,Bayusufs,Restaurant/Cafe/Canteen,Newham,E7 8JE,,AwaitingInspection,,
+2026-11-26,new,2019660,Bhelpuriwala,Other catering premises,Newham,E6 1AE,,AwaitingInspection,,
+2026-11-26,new,2019647,Big Bite Dumplings,Other catering premises,Newham,E13,,AwaitingInspection,,
+2026-11-26,new,2019628,Bonheur De Lea,Mobile caterer,Newham,E16 1XL,,AwaitingInspection,,
+2026-11-26,new,2019639,Bread A Porter,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-26,new,2019655,Central Caribbean Pelican Kitchen,Restaurant/Cafe/Canteen,Newham,E16 4LF,,AwaitingInspection,,
+2026-11-26,new,2019645,Chinese Cuisine,Mobile caterer,Newham,E7 0NQ,,AwaitingInspection,,
+2026-11-26,new,2019659,Cooking With Fresh / CWF,Other catering premises,Newham,E12,,AwaitingInspection,,
+2026-11-26,new,2019635,Crepreme,Mobile caterer,Newham,E12,,AwaitingInspection,,
+2026-11-26,new,2019650,Daana Paani Restaurant,Takeaway/sandwich shop,Newham,E6 1AD,,AwaitingInspection,,
+2026-11-26,new,1977095,Deshi Wala,Takeaway/sandwich shop,Newham,E6 1AE,,3,,
+2026-11-26,new,2019649,Feelhome Foods,Other catering premises,Newham,E6 2,,AwaitingInspection,,
+2026-11-26,new,2019632,Fireaway Pizza,Mobile caterer,Newham,E20 1DB,,AwaitingInspection,,
+2026-11-26,new,2019625,Forest Gate Food And Wine,Retailers - other,Newham,E7 0EW,,AwaitingInspection,,
+2026-11-26,new,2019630,Grandma's Recipe,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-26,new,1937491,KBFC,Takeaway/sandwich shop,Newham,E13 8AF,,3,,
+2026-11-26,new,1519924,Khans Fishmongers,Retailers - other,Newham,E7 8BA,,1,,
+2026-11-26,new,2019652,Kulan Somali Organisation - HAF Programme,Other catering premises,Newham,E6 2SG,,AwaitingInspection,,
+2026-11-26,new,2019651,Lime Mezze & Flame,Restaurant/Cafe/Canteen,Newham,E15 4ES,,AwaitingInspection,,
+2026-11-26,new,2019636,Mama Kim Kopitiam,Restaurant/Cafe/Canteen,Newham,E15 1XQ,,AwaitingInspection,,
+2026-11-26,new,2019641,Mansi's Spice Box,Other catering premises,Newham,E13,,AwaitingInspection,,
+2026-11-26,new,2013218,Martins Newsagents,Retailers - other,Newham,E7 0LW,,AwaitingInspection,,
+2026-11-26,new,2019627,Nando's,Restaurant/Cafe/Canteen,Newham,E16 1DT,,AwaitingInspection,,
+2026-11-26,new,2019648,Nawaabzgokulchatuk,Takeaway/sandwich shop,Newham,E7 9QN,,AwaitingInspection,,
+2026-11-26,new,1910796,Nisha's Kitchen,Takeaway/sandwich shop,Newham,E6 1AE,,2,,
+2026-11-26,new,2019640,Novarock Commodities Ltd,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-26,new,2019646,Pick N Halal,Other catering premises,Newham,E16,,AwaitingInspection,,
+2026-11-26,new,2019629,Rabia's Kitchen,Other catering premises,Newham,E6 2,,AwaitingInspection,,
+2026-11-26,new,2019657,Sainsbury's Supermarkets Ltd,Retailers - supermarkets/hypermarkets,Newham,E16 4BH,,AwaitingInspection,,
+2026-11-26,new,2019643,Shawarma Stars,Takeaway/sandwich shop,Newham,E6 1JB,,AwaitingInspection,,
+2026-11-26,new,2019656,Shawon Food Gate,Restaurant/Cafe/Canteen,Newham,E7 9BB,,AwaitingInspection,,
+2026-11-26,new,2019653,Star Kebab & Pizza,Takeaway/sandwich shop,Newham,E7 9HA,,AwaitingInspection,,
+2026-11-26,new,2019634,The Boxing Baker,Other catering premises,Newham,E13,,AwaitingInspection,,
+2026-11-26,new,2019631,The Delish Dish,Takeaway/sandwich shop,Newham,E7 9QN,,AwaitingInspection,,
+2026-11-26,new,1991887,Uly Uly,Other catering premises,Newham,E20,,AwaitingInspection,,
 2026-11-26,new,2019301,Tasty Palace,Takeaway/sandwich shop,Tower Hamlets,E2 0DJ,,AwaitingInspection,,
 2026-11-26,new,2019400,2 Chestnut Grove,Retailers - other,Wandsworth,SW12 8JD,,AwaitingInspection,,
 2026-11-26,new,2019416,Aqua Amore Ltd,Distributors/Transporters,Wandsworth,SW18,,AwaitingInspection,,
@@ -77,6 +132,8 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-26,new,2019409,The Hero's Return,Pub/bar/nightclub,Wandsworth,SW11 8EZ,,AwaitingInspection,,
 2026-11-26,new,2019402,Vasilikos,Retailers - other,Wandsworth,SW11,,AwaitingInspection,,
 2026-11-26,new,2019398,Yabai / TKD foods,Mobile caterer,Wandsworth,SW8 5EL,,AwaitingInspection,,
+2026-11-26,rating_changed,1993302,Cafe Brake,Other catering premises,Barking and Dagenham,RM9,AwaitingInspection,5,,
+2026-11-26,rating_changed,1852995,Double Four Cafe,Restaurant/Cafe/Canteen,Barking and Dagenham,IG11 7SQ,2,1,,
 2026-11-26,rating_changed,1751345,Nakd Flame,Restaurant/Cafe/Canteen,Barking and Dagenham,IG11 8EA,3,2,0.081616,51.539293
 2026-11-26,rating_changed,1828729,Andalus House Of Cake,Retailers - other,Barnet,N3 2PA,2,1,-0.18816,51.604998
 2026-11-26,rating_changed,1800970,Chicken Land,Restaurant/Cafe/Canteen,Barnet,EN5 5SJ,3,4,-0.1991346,51.6529351
@@ -137,18 +194,32 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-26,rating_changed,417629,The Stapleton Tavern,Restaurant/Cafe/Canteen,Islington,N4 4AU,3,5,,
 2026-11-26,rating_changed,417812,Wolkite,Restaurant/Cafe/Canteen,Islington,N7 7NN,4,5,,
 2026-11-26,rating_changed,2017230,Partner's Dining Room (by Benugo At John Lewis),Restaurant/Cafe/Canteen,Kingston-Upon-Thames,KT1 1TE,0,5,,
+2026-11-26,rating_changed,1760598,Crispin At Studio Voltaire,Other catering premises,Lambeth,SW4 7JR,4,5,,
+2026-11-26,rating_changed,1628262,F. Mondays Coffee,Restaurant/Cafe/Canteen,Lambeth,SW9 8FN,AwaitingInspection,5,,
+2026-11-26,rating_changed,1524799,Fireaway Clapham,Restaurant/Cafe/Canteen,Lambeth,SW4 7UL,4,5,,
+2026-11-26,rating_changed,483996,Glenbrook Junior School,School/college/university,Lambeth,SW4 8LD,4,5,,
 2026-11-26,rating_changed,981374,Papa's Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 8AF,4,3,-0.120021998882294,51.4641036987305
 2026-11-26,rating_changed,665349,Savannah Caribbean Takeaway,Takeaway/sandwich shop,Lambeth,SW4 7UT,5,3,-0.130436,51.465042
+2026-11-26,rating_changed,484625,Ten Thanks,Takeaway/sandwich shop,Lambeth,SW2 2SD,1,5,,
+2026-11-26,rating_changed,1986529,The Fire Station,Pub/bar/nightclub,Lambeth,SE1 8SB,AwaitingInspection,5,,
+2026-11-26,rating_changed,1999729,The Seychelles Kitchen Ltd,Other catering premises,Lambeth,SW9 8BP,AwaitingInspection,5,,
 2026-11-26,rating_changed,484087,Zana Food Centre,Retailers - other,Lambeth,SW9 8JP,1,3,-0.11312,51.462166
 2026-11-26,rating_changed,585670,Little Vietnam,Restaurant/Cafe/Canteen,Merton,SW19 1JX,4,3,-0.1929484,51.4158435
 2026-11-26,rating_changed,1830673,Ardealu,Retailers - other,Newham,E6 2LW,4,3,0.063259,51.534203
 2026-11-26,rating_changed,1977090,Arya Bhavan,Restaurant/Cafe/Canteen,Newham,E12 6SA,3,0,0.050357,51.542613
 2026-11-26,rating_changed,1844764,Asian Grocery Point,Retailers - supermarkets/hypermarkets,Newham,E12 6RH,1,3,0.0492249988019466,51.5459785461426
+2026-11-26,rating_changed,1977072,Bims,Takeaway/sandwich shop,Newham,E15 1NS,AwaitingInspection,5,,
 2026-11-26,rating_changed,864076,Green Stop,Retailers - other,Newham,E6 2LN,3,4,0.060262,51.533932
+2026-11-26,rating_changed,2005616,Inny's Grill,Takeaway/sandwich shop,Newham,E13 9EZ,AwaitingInspection,5,,
 2026-11-26,rating_changed,799754,Londis,Retailers - other,Newham,E12 6HL,4,1,0.0602768,51.5487074
+2026-11-26,rating_changed,1987668,Mairi's Kitchen,Other catering premises,Newham,E15,AwaitingInspection,5,,
+2026-11-26,rating_changed,1973522,Mystic City Ltd - Unit 15,Retailers - other,Newham,E15 1XF,AwaitingInspection,Exempt,,
 2026-11-26,rating_changed,1006751,Oriental Kitchen,Takeaway/sandwich shop,Newham,E13 9PJ,4,3,0.036771,51.529999
+2026-11-26,rating_changed,1750254,Oz Istanbul Food Centre,Retailers - other,Newham,E12 5AW,0,5,,
 2026-11-26,rating_changed,1783594,Prince Regent Lane Post Office,Retailers - other,Newham,E13 8RY,1,4,0.032104,51.520718
-2026-11-26,rating_changed,1078117,R D Dabeli,Retailers - other,Newham,E13 0QU,2,0,0.0331498,51.5377871
+2026-11-26,rating_changed,1078117,R D Dabeli,Takeaway/sandwich shop,Newham,E13 0QU,2,0,,
+2026-11-26,rating_changed,1209850,Rising Stars Daycare,Caring Premises,Newham,E16 3RU,4,5,,
+2026-11-26,rating_changed,1931450,Sushidog,Takeaway/sandwich shop,Newham,E20 1EP,4,5,,
 2026-11-26,rating_changed,1026807,TTS Meat Bazaar Ltd,Retailers - other,Newham,E12 6AF,3,1,0.05546,51.548323
 2026-11-26,rating_changed,1593259,The Best Kebab,Takeaway/sandwich shop,Newham,E13 9PJ,4,1,0.0365809,51.5299808
 2026-11-26,rating_changed,1803376,Gelato&Cafeteria,Takeaway/sandwich shop,Redbridge,IG3 8TG,4,1,0.109942,51.566807
@@ -214,6 +285,36 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-26,removed,1839069,The Mad Hatter,Pub/bar/nightclub,Islington,EC1V 9AQ,5,,-0.09633,51.5239268
 2026-11-26,removed,2010118,VomFASS Islington (City Road),Retailers - other,Islington,EC1V 2AN,AwaitingInspection,,-0.0951506,51.52835
 2026-11-26,removed,1840155,Ye Enatye,Retailers - other,Islington,N1 0SQ,2,,-0.1163178,51.5366594
+2026-11-26,removed,2017586,Brumla Bakes,Other catering premises,Lambeth,SW4,AwaitingInspection,,,
+2026-11-26,removed,2007094,Maison Abbeville,Retailers - other,Lambeth,SW4 9LA,AwaitingInspection,,-0.141211,51.453541
+2026-11-26,removed,534968,"Mamanja Afro Caribbean Foods,Groceries & Veg",Retailers - other,Lambeth,SE5 9QH,4,,-0.100113,51.46719
+2026-11-26,removed,1987669,Amie's Kitchen,Other catering premises,Newham,E12,AwaitingInspection,,,
+2026-11-26,removed,1990432,Aroma-Zone UK,Retailers - other,Newham,E20 1EH,AwaitingInspection,,,
+2026-11-26,removed,1991891,Bunz,Takeaway/sandwich shop,Newham,E15 1NS,AwaitingInspection,,0.00403399998322129,51.5442314147949
+2026-11-26,removed,1931440,Chotpotiwala,Restaurant/Cafe/Canteen,Newham,E6 1AD,4,,0.0360704,51.5372655
+2026-11-26,removed,2007377,Cravings,Restaurant/Cafe/Canteen,Newham,E12 6TJ,AwaitingInspection,,0.0484824,51.5472584
+2026-11-26,removed,1987663,Esther's Treehouse Spa,Other catering premises,Newham,E16,AwaitingInspection,,,
+2026-11-26,removed,849287,Forest Gate Food And Wine,Retailers - other,Newham,E7 0EW,3,,0.0254,51.550896
+2026-11-26,removed,1942338,Hing Wok,Takeaway/sandwich shop,Newham,E12 6HL,1,,0.061826,51.549075
+2026-11-26,removed,1771547,Jerk City,Restaurant/Cafe/Canteen,Newham,E16 4LF,5,,0.012355,51.520357
+2026-11-26,removed,2014612,KBFC,Restaurant/Cafe/Canteen,Newham,E13 8AF,AwaitingInspection,,0.023766,51.526726
+2026-11-26,removed,2014610,Mama's Kitchen,Other catering premises,Newham,E15,AwaitingInspection,,,
+2026-11-26,removed,2007389,Meet Me Continental Food Ltd,Mobile caterer,Newham,E7 9,AwaitingInspection,,,
+2026-11-26,removed,1998620,Mei Wei Congee,Mobile caterer,Newham,E15,AwaitingInspection,,,
+2026-11-26,removed,1670061,Mooboo Stratford,Takeaway/sandwich shop,Newham,E15 4QS,5,,-0.000101,51.5401219
+2026-11-26,removed,1514914,My Little Kitchen,Other catering premises,Newham,E13,5,,,
+2026-11-26,removed,1973531,New Yorker,Restaurant/Cafe/Canteen,Newham,E6 2LN,AwaitingInspection,,0.060262,51.533932
+2026-11-26,removed,2014633,Nexora Finds,Other catering premises,Newham,E13,AwaitingInspection,,,
+2026-11-26,removed,2005620,Pepper's Corner,Other catering premises,Newham,E16,AwaitingInspection,,,
+2026-11-26,removed,2001243,Primo Padel Club,Restaurant/Cafe/Canteen,Newham,E6 6LA,AwaitingInspection,,0.0614395,51.5169784
+2026-11-26,removed,1942333,Priya Restaurant,Restaurant/Cafe/Canteen,Newham,E6 1JG,1,,0.050713,51.53963
+2026-11-26,removed,1931444,Rais Bite Bar Ltd,Restaurant/Cafe/Canteen,Newham,E6 1HU,1,,,
+2026-11-26,removed,1984409,Sarhad Junction,Other catering premises,Newham,E15,AwaitingInspection,,,
+2026-11-26,removed,2014623,Shah's Halal Food,Restaurant/Cafe/Canteen,Newham,E16 1EN,AwaitingInspection,,0.012417,51.517515
+2026-11-26,removed,1987651,Snax Zone,Retailers - other,Newham,E15,AwaitingInspection,,,
+2026-11-26,removed,1991899,Sweet Giggle,Other catering premises,Newham,E7 0,AwaitingInspection,,,
+2026-11-26,removed,2007387,Tamu,Other catering premises,Newham,E6 1,AwaitingInspection,,,
+2026-11-26,removed,1065229,Xix Nineteen,Restaurant/Cafe/Canteen,Newham,E15 4QZ,2,,0.000118999996630009,51.5394859313965
 2026-11-26,removed,1958394,Amina'S Table,Mobile caterer,Wandsworth,SW11,AwaitingInspection,,,
 2026-11-26,removed,1905569,Bill Cafe Ltd,Restaurant/Cafe/Canteen,Wandsworth,SW11,AwaitingInspection,,,
 2026-11-26,removed,1987130,Bluewater (UK & Ireland) Ltd,Manufacturers/packers,Wandsworth,SW11 8BZ,AwaitingInspection,,-0.145443,51.4815083
