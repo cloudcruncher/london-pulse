@@ -47,6 +47,49 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-27,new,1931571,Yellow Chilli,Restaurant/Cafe/Canteen,Ealing,UB2 5DZ,,0,-0.3876275,51.5005499
 2026-11-27,new,2019686,Zafat Cake,Retailers - other,Ealing,NW10 6JP,,AwaitingInspection,-0.2636589,51.5260857
 2026-11-27,new,1672779,Zahid Foods,Retailers - other,Ealing,UB2 4DG,,0,-0.382361,51.501314
+2026-11-27,new,2020046,Breakfast & Burger,Takeaway/sandwich shop,Harrow,HA1 1LA,,AwaitingInspection,,
+2026-11-27,new,2020042,Brew Your Future,Restaurant/Cafe/Canteen,Harrow,HA2 6PJ,,AwaitingInspection,,
+2026-11-27,new,2020045,Bright Basket Distribution Ltd,Retailers - other,Harrow,HA3 8AZ,,AwaitingInspection,,
+2026-11-27,new,2020047,Chemist Warehouse,Retailers - other,Harrow,HA1 1LA,,Exempt,,
+2026-11-27,new,2020044,Cookie Cloud London,Other catering premises,Harrow,HA5,,AwaitingInspection,,
+2026-11-27,new,2020049,Desi biryani,Takeaway/sandwich shop,Harrow,HA2 8DU,,AwaitingInspection,,
+2026-11-27,new,2020043,Gastro Bistro,Restaurant/Cafe/Canteen,Harrow,HA2 7SJ,,AwaitingInspection,,
+2026-11-27,new,2020048,POMe-CO,Retailers - other,Harrow,HA3,,AwaitingInspection,,
+2026-11-27,new,2020041,The Taco House,Takeaway/sandwich shop,Harrow,HA1 1JX,,AwaitingInspection,,
+2026-11-27,new,2020040,VARNI IMPEX LIMITED,Retailers - other,Harrow,HA3,,AwaitingInspection,,
+2026-11-27,new,2019817,Amicable Technologies Limited,Retailers - other,Hillingdon,UB8,,5,,
+2026-11-27,new,2019808,Beneath the Burn,Restaurant/Cafe/Canteen,Hillingdon,UB3 3NB,,AwaitingInspection,,
+2026-11-27,new,2019809,China Express,Takeaway/sandwich shop,Hillingdon,UB8 2LT,,AwaitingInspection,,
+2026-11-27,new,2019805,Clip ?n Climb Uxbridge,Restaurant/Cafe/Canteen,Hillingdon,UB8 1LN,,AwaitingInspection,,
+2026-11-27,new,2019807,Costa Coffee,Restaurant/Cafe/Canteen,Hillingdon,TW6 3XA,,AwaitingInspection,,
+2026-11-27,new,2019806,EMPORIUM RETAILERS LTD,Retailers - other,Hillingdon,UB4 0RX,,AwaitingInspection,,
+2026-11-27,new,2019815,Hayes news and booze,Retailers - other,Hillingdon,UB4 0RS,,AwaitingInspection,,
+2026-11-27,new,2019814,JBS Global UK Ltd,Importers/Exporters,Hillingdon,UB8 1HE,,AwaitingInspection,,
+2026-11-27,new,2019810,McDonald?s,Restaurant/Cafe/Canteen,Hillingdon,UB8 1JT,,AwaitingInspection,,
+2026-11-27,new,2019811,McDonald?s,Restaurant/Cafe/Canteen,Hillingdon,UB8 1GA,,AwaitingInspection,,
+2026-11-27,new,2019813,PENASUL UK UXBRIDGE,Importers/Exporters,Hillingdon,UB8 1HE,,AwaitingInspection,,
+2026-11-27,new,2019816,Palestinian Street Kitchen,Mobile caterer,Hillingdon,UB4,,AwaitingInspection,,
+2026-11-27,new,2019803,Tasty MoMo,Other catering premises,Hillingdon,UB8,,AwaitingInspection,,
+2026-11-27,new,2019818,Vale & Flour,Other catering premises,Hillingdon,HA4,,AwaitingInspection,,
+2026-11-27,new,2019804,Yumchi,Takeaway/sandwich shop,Hillingdon,UB10 0NS,,AwaitingInspection,,
+2026-11-27,new,2019812,london empire hotel,Other catering premises,Hillingdon,UB8 1LE,,AwaitingInspection,,
+2026-11-27,new,2019927,Mockingbird Golf London,Restaurant/Cafe/Canteen,Newham,E16 2SQ,,AwaitingInspection,,
+2026-11-27,new,1725083,Remedy Kitchen,Other catering premises,Newham,E16 4TG,,5,,
+2026-11-27,new,1574359,Adorable Food and Wine,Retailers - other,Richmond-Upon-Thames,TW1 4BW,,AwaitingInspection,,
+2026-11-27,new,2020104,Buttercups Nursery Kew,School/college/university,Richmond-Upon-Thames,TW9 4HQ,,AwaitingInspection,,
+2026-11-27,new,2020099,Department of coffee and social affairs,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,"",,AwaitingInspection,,
+2026-11-27,new,2020105,Lidia,Other catering premises,Richmond-Upon-Thames,TW9,,AwaitingInspection,,
+2026-11-27,new,2020100,Londis,Retailers - supermarkets/hypermarkets,Richmond-Upon-Thames,SW14 8AG,,AwaitingInspection,,
+2026-11-27,new,2020098,Richmond peri peri,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 4LX,,AwaitingInspection,,
+2026-11-27,new,2020101,Shiuli,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 4BN,,AwaitingInspection,,
+2026-11-27,new,2020096,The Heron,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3AB,,AwaitingInspection,,
+2026-11-27,new,2020102,The Orangery,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3AB,,AwaitingInspection,,
+2026-11-27,new,2020103,The kew herbalist,Retailers - other,Richmond-Upon-Thames,TW9,,AwaitingInspection,,
+2026-11-27,new,2020097,Zafron,Other catering premises,Richmond-Upon-Thames,TW2,,AwaitingInspection,,
+2026-11-27,new,2020093,Force Twelve,Manufacturers/packers,Wandsworth,SW15,,AwaitingInspection,,
+2026-11-27,new,2020092,Kuya Ric's,Manufacturers/packers,Wandsworth,SW8 5EL,,AwaitingInspection,,
+2026-11-27,new,2020095,Scooperb Tooting,Other catering premises,Wandsworth,SW17 0RR,,AwaitingInspection,,
+2026-11-27,new,2020094,Supreme Salads Limited,Manufacturers/packers,Wandsworth,SW8 5EQ,,AwaitingInspection,,
 2026-11-27,rating_changed,757223,Aran Supermarket,Retailers - other,Barnet,HA8 0LT,1,2,-0.265378,51.601524
 2026-11-27,rating_changed,1998153,Saffron & Olive,Restaurant/Cafe/Canteen,Bexley,DA15 7AA,AwaitingInspection,4,0.1020472,51.4350334
 2026-11-27,rating_changed,908551,Afters,Restaurant/Cafe/Canteen,Bromley,BR3 1AH,3,4,-0.0303265,51.4064417
@@ -99,10 +142,26 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-27,rating_changed,991634,CourtHouse Hotel Shoreditch,Hotel/bed & breakfast/guest house,Hackney,EC1V 9LL,5,4,-0.0796202,51.5273951
 2026-11-27,rating_changed,469714,The Princess Of Shoreditch,Pub/bar/nightclub,Hackney,EC2A 4NE,5,1,,
 2026-11-27,rating_changed,1987045,CAKEYIT LTD,Other catering premises,Harrow,HA3,AwaitingInspection,4,,
+2026-11-27,rating_changed,2005674,Caffe Pascucci,Restaurant/Cafe/Canteen,Harrow,HA5 4JR,AwaitingInspection,5,,
+2026-11-27,rating_changed,943452,Caffe Pascucci (Brothers Caffe Ltd),Restaurant/Cafe/Canteen,Harrow,HA5 4JN,4,5,,
+2026-11-27,rating_changed,2014384,Coressy,Restaurant/Cafe/Canteen,Harrow,HA1 1JX,AwaitingInspection,5,,
+2026-11-27,rating_changed,1282707,Jasmine house,Caring Premises,Harrow,HA3,4,5,,
 2026-11-27,rating_changed,1976543,Pizza Hut Delivery,Restaurant/Cafe/Canteen,Harrow,HA1 3QN,AwaitingInspection,4,-0.335752,51.557816
 2026-11-27,rating_changed,1151655,Pizzeria Di Napoli,Restaurant/Cafe/Canteen,Havering,RM1 2JH,4,3,0.1855015,51.5744188
 2026-11-27,rating_changed,1026384,Sapphire Ice & Leisure Centre,Restaurant/Cafe/Canteen,Havering,RM1 3JT,5,4,0.183826997876167,51.5768508911133
 2026-11-27,rating_changed,1590127,Sushi Boom,Restaurant/Cafe/Canteen,Havering,RM1 3JT,5,4,0.183826997876167,51.5768508911133
+2026-11-27,rating_changed,1760838,Almys Naan Shop / Foody Grill,Takeaway/sandwich shop,Hillingdon,UB10 0PQ,5,3,,
+2026-11-27,rating_changed,1985969,Bishop Ramsey C of E School - Stir Food Ltd,School/college/university,Hillingdon,HA4 8EE,AwaitingInspection,5,,
+2026-11-27,rating_changed,1985971,Cheatmeals,Restaurant/Cafe/Canteen,Hillingdon,UB8 1LE,AwaitingInspection,5,,
+2026-11-27,rating_changed,1978877,GB SRS Brundavan,Other catering premises,Hillingdon,UB8 2DZ,AwaitingInspection,5,,
+2026-11-27,rating_changed,1978878,Home Bargains,Retailers - other,Hillingdon,UB8 1JS,AwaitingInspection,5,,
+2026-11-27,rating_changed,1985968,Hooked Fish and Chips,Takeaway/sandwich shop,Hillingdon,UB7 8EY,AwaitingInspection,5,,
+2026-11-27,rating_changed,1975291,James Catering and Events,Mobile caterer,Hillingdon,UB9,AwaitingInspection,5,,
+2026-11-27,rating_changed,1980758,Loaf and Load,Other catering premises,Hillingdon,UB8,AwaitingInspection,4,,
+2026-11-27,rating_changed,1193834,My Grill,Takeaway/sandwich shop,Hillingdon,HA4 0HG,4,5,,
+2026-11-27,rating_changed,1742446,Radisson Blu London Heathrow,Hotel/bed & breakfast/guest house,Hillingdon,UB3 5AW,3,5,,
+2026-11-27,rating_changed,1959571,Rebecca's Slimming World Group,Restaurant/Cafe/Canteen,Hillingdon,UB10 8DG,AwaitingInspection,5,,
+2026-11-27,rating_changed,1989222,SLV Catering Ltd at the Hut,Restaurant/Cafe/Canteen,Hillingdon,UB8 3LH,AwaitingInspection,5,,
 2026-11-27,rating_changed,490933,O Bhatkar,Takeaway/sandwich shop,Hounslow,TW13 4BU,5,3,-0.4110297,51.4448827
 2026-11-27,rating_changed,491163,The Cottage,Hotel/bed & breakfast/guest house,Hounslow,TW5 9WB,5,4,-0.4061569,51.4859405
 2026-11-27,rating_changed,1159768,Asia Village,Other catering premises,Islington,N1 2SN,5,3,-0.0970988,51.5400541
@@ -111,15 +170,49 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-27,rating_changed,484002,Henry Fawcett Primary School,School/college/university,Lambeth,SE11 5BZ,5,4,-0.111887998878956,51.4847183227539
 2026-11-27,rating_changed,484643,Walnut Tree Primary School,School/college/university,Lambeth,SE11 6DS,5,4,-0.113349,51.493949
 2026-11-27,rating_changed,1599462,Arlo & Moe,Restaurant/Cafe/Canteen,Lewisham,SE13 6SN,5,4,-0.000825,51.450745
+2026-11-27,rating_changed,1969964,Cats Protection,Retailers - other,Merton,SM4 5BQ,Exempt,AwaitingInspection,-0.1924986,51.4032687
+2026-11-27,rating_changed,1697021,Early Nurture,Caring Premises,Merton,CR4,5,4,,
 2026-11-27,rating_changed,730186,Saucer & Cup,Restaurant/Cafe/Canteen,Merton,SW19 8AD,3,4,-0.1986999,51.434904
 2026-11-27,rating_changed,1780802,Convenience Store,Retailers - other,Newham,E6 5UX,3,4,0.044799,51.516748
 2026-11-27,rating_changed,1871671,Hyderabad To London Ltd,Takeaway/sandwich shop,Newham,E7 0EL,1,0,0.02442,51.548944
 2026-11-27,rating_changed,1966847,Ekota Cafe,Restaurant/Cafe/Canteen,Redbridge,"",AwaitingInspection,3,0.1141315,51.55886
 2026-11-27,rating_changed,1791958,Ilford Kaspas desserts,Retailers - other,Redbridge,IG3 9TL,4,3,0.0983167,51.5610366
 2026-11-27,rating_changed,700810,Melih BBQ Restaurant,Restaurant/Cafe/Canteen,Redbridge,RM6 4AL,3,1,0.128749,51.570632
+2026-11-27,rating_changed,1575419,1910 Coffee House,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,KT1 4BY,4,5,,
+2026-11-27,rating_changed,1981453,Broomfeild / Thomas Franks,School/college/university,Richmond-Upon-Thames,TW9 3HS,AwaitingInspection,5,,
+2026-11-27,rating_changed,1574666,Caterlink,School/college/university,Richmond-Upon-Thames,SW13 9AE,5,2,,
+2026-11-27,rating_changed,1616388,Chicken Cottage,Other catering premises,Richmond-Upon-Thames,TW11 8LX,4,5,,
+2026-11-27,rating_changed,1575339,Curry Bae,Takeaway/sandwich shop,Richmond-Upon-Thames,TW9 3LU,3,5,,
+2026-11-27,rating_changed,1575355,Double Deli LTD,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 4AW,4,5,,
+2026-11-27,rating_changed,2012005,Dough & Deer / The Food Truck Agency,Mobile caterer,Richmond-Upon-Thames,TW2,AwaitingInspection,5,,
+2026-11-27,rating_changed,1716993,GAYATHRI NEWS BOX LIMITED,Retailers - other,Richmond-Upon-Thames,KT2 5QU,4,5,,
+2026-11-27,rating_changed,1902184,Gardener Nurseries Group Ltd,Other catering premises,Richmond-Upon-Thames,TW9 3AH,5,4,,
+2026-11-27,rating_changed,1574543,Great Fish & Chips,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,KT2 5QX,4,5,,
+2026-11-27,rating_changed,2012007,Green Bottle Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3EJ,AwaitingInspection,5,,
+2026-11-27,rating_changed,1574537,Hansel & Pretzel,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW10 7HW,4,5,,
+2026-11-27,rating_changed,1574126,Icon Coffee,Other catering premises,Richmond-Upon-Thames,TW12 1NJ,4,5,,
+2026-11-27,rating_changed,1981448,Isaac's Coffee,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 1RG,AwaitingInspection,5,,
+2026-11-27,rating_changed,1704075,JoJo's Peri Peri,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 2ND,5,2,,
+2026-11-27,rating_changed,1988121,Karabatak Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 2EJ,AwaitingInspection,5,,
+2026-11-27,rating_changed,1574471,Mangal Kebab Restaurant,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW4 5NP,4,5,,
+2026-11-27,rating_changed,1956050,Namiya Ltd/Rikyu UK,Importers/Exporters,Richmond-Upon-Thames,TW12,AwaitingInspection,5,,
+2026-11-27,rating_changed,2012008,Nopalito,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 2PN,AwaitingInspection,5,,
+2026-11-27,rating_changed,1956052,Paris Baguette,Retailers - other,Richmond-Upon-Thames,TW9 1HY,AwaitingInspection,5,,
+2026-11-27,rating_changed,2012009,Rara Indian bistro,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 3LU,AwaitingInspection,5,,
+2026-11-27,rating_changed,1574467,Robsons Butcher & Deli,Retailers - other,Richmond-Upon-Thames,TW12 1NL,4,5,,
+2026-11-27,rating_changed,1984731,TWICKENHAM bakery,Retailers - other,Richmond-Upon-Thames,TW1 3SX,AwaitingInspection,5,,
+2026-11-27,rating_changed,1988118,Tesco Stores Limited,Retailers - supermarkets/hypermarkets,Richmond-Upon-Thames,TW1 1BJ,AwaitingInspection,5,,
+2026-11-27,rating_changed,1654953,The White Swan,Pub/bar/nightclub,Richmond-Upon-Thames,TW9 1PG,5,1,,
+2026-11-27,rating_changed,1574802,Tide Tables Cafe,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 1TH,5,1,,
+2026-11-27,rating_changed,1784040,Trindle Stores,Retailers - other,Richmond-Upon-Thames,TW9 3PZ,3,5,,
+2026-11-27,rating_changed,1682452,Universal Food & Wine,Retailers - other,Richmond-Upon-Thames,TW12 2LJ,4,5,,
+2026-11-27,rating_changed,2002027,Village Pizza,Takeaway/sandwich shop,Richmond-Upon-Thames,TW1 3SZ,AwaitingInspection,5,,
+2026-11-27,rating_changed,1981461,[fee-ka],Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 4LB,AwaitingInspection,5,,
 2026-11-27,rating_changed,2010200,Jacks coffee,Restaurant/Cafe/Canteen,Southwark,SE1 5NA,AwaitingInspection,2,-0.081018,51.490951
+2026-11-27,rating_changed,94641,Baraka Eatery,Restaurant/Cafe/Canteen,Tower Hamlets,E1 1JX,1,4,,
 2026-11-27,rating_changed,148894,Elizabeth Selby Nursery/Infants Kitchen,School/college/university,Tower Hamlets,E2 6PP,2,4,-0.062925,51.528675
 2026-11-27,rating_changed,1990706,Kapwa Cafe & Community Hub,Restaurant/Cafe/Canteen,Tower Hamlets,E2 5QJ,AwaitingInspection,4,-0.0546454,51.5241234
+2026-11-27,rating_changed,1970702,EMPANADAS TUCUMANAS LIMITED,Restaurant/Cafe/Canteen,Wandsworth,SW11 8BJ,AwaitingInspection,5,,
 2026-11-27,rating_changed,411221,Colosseo,Restaurant/Cafe/Canteen,Westminster,SW1H 0HW,4,1,-0.1348551,51.4973156
 2026-11-27,rating_changed,2006599,Joe Blake?s,Restaurant/Cafe/Canteen,Westminster,WC2N 6NQ,AwaitingInspection,4,-0.1242772,51.508262
 2026-11-27,rating_changed,1243398,Kolamba,Restaurant/Cafe/Canteen,Westminster,W1B 5QA,4,2,-0.1395604,51.5130197
@@ -130,3 +223,115 @@ event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rat
 2026-11-27,removed,1349316,Foodstars Chiswick,Retailers - other,Ealing,W3 8DU,5,,-0.272415,51.4984421
 2026-11-27,removed,1709266,Grill Daily,Takeaway/sandwich shop,Ealing,W3 8DU,5,,-0.272415,51.4984421
 2026-11-27,removed,1032563,Support For Living,Caring Premises,Ealing,UB6 8EL,5,,-0.335027,51.53305
+2026-11-27,removed,1971820,Conplete Sports Ltd ? Welldon Park Academy,Caring Premises,Harrow,HA2 8LS,AwaitingInspection,,,
+2026-11-27,removed,1991448,HAMPER BUDDY,Retailers - other,Harrow,HA3,AwaitingInspection,,,
+2026-11-27,removed,1835928,Littlemeads childcare,Other catering premises,Harrow,HA5,AwaitingInspection,,,
+2026-11-27,removed,1806986,Pabulum Limited,Other catering premises,Harrow,HA5 3RA,5,,-0.3969885,51.6028228
+2026-11-27,removed,1823222,Pakiza Ice Cream & Mr Boba,Other catering premises,Harrow,HA2 6PJ,3,,-0.3467717,51.5923398
+2026-11-27,removed,1999822,Trivira,Retailers - other,Harrow,HA3,AwaitingInspection,,,
+2026-11-27,removed,1966369,Wow India by Pradip,Restaurant/Cafe/Canteen,Harrow,HA3 8AZ,AwaitingInspection,,-0.315726,51.5831149
+2026-11-27,removed,1833208,China Express,Takeaway/sandwich shop,Hillingdon,UB8 2LT,3,,-0.481278,51.543119
+2026-11-27,removed,1985959,GreenTo Bar,Takeaway/sandwich shop,Hillingdon,UB8 1GA,1,,-0.4766662,51.5455647
+2026-11-27,removed,520253,Hot Spot,Takeaway/sandwich shop,Hillingdon,UB3 5DU,3,,-0.43493,51.485463
+2026-11-27,removed,520182,Jinli Chinese Restaurant,Restaurant/Cafe/Canteen,Hillingdon,UB8 3NJ,0,,-0.458535999059677,51.5260429382324
+2026-11-27,removed,1801869,Kabul Supermarket,Retailers - other,Hillingdon,UB3 3HL,3,,-0.414769,51.509462
+2026-11-27,removed,519876,Mcdonalds,Restaurant/Cafe/Canteen,Hillingdon,UB8 1JT,5,,-0.481028,51.548439
+2026-11-27,removed,519188,Mcdonalds,Restaurant/Cafe/Canteen,Hillingdon,UB8 1GA,5,,-0.476819,51.545363
+2026-11-27,removed,1852568,Novotel London Heathrow Airport M4 J4,Hotel/bed & breakfast/guest house,Hillingdon,UB7 9HJ,5,,-0.455912,51.497494
+2026-11-27,removed,1992976,Pani popper,Mobile caterer,Hillingdon,UB4,AwaitingInspection,,,
+2026-11-27,removed,1992982,SlurpPopNCandy Ltd,Mobile caterer,Hillingdon,HA4,AwaitingInspection,,,
+2026-11-27,removed,518987,The Burroughs,Caring Premises,Hillingdon,UB7 7EH,5,,-0.481107,51.501015
+2026-11-27,removed,1493413,The Hall School,School/college/university,Hillingdon,HA6 2RB,5,,-0.4333693,51.6127107
+2026-11-27,removed,1799394,Tikka Nation,Restaurant/Cafe/Canteen,Hillingdon,HA4 0AL,5,,-0.411752,51.570928
+2026-11-27,removed,801004,AP Chemists Ltd,Retailers - other,Merton,SW19 2HR,Exempt,,,
+2026-11-27,removed,706869,Alzheimers Society,Other catering premises,Merton,CR4 4AB,Exempt,,-0.1639086,51.401472
+2026-11-27,removed,1368589,Ariana Foods Ltd,Importers/Exporters,Merton,SM4 5HP,Exempt,,-0.1960979,51.4003661
+2026-11-27,removed,1620079,Astrum Wine Cellars,Distributors/Transporters,Merton,CR4 4FG,Exempt,,-0.1636201,51.3937772
+2026-11-27,removed,1355202,Barkers Chemists,Retailers - other,Merton,SW20 0AX,Exempt,,-0.2323484,51.4095707
+2026-11-27,removed,1211603,Basilico,Retailers - other,Merton,SW19 8JZ,5,,-0.1906201,51.4264543
+2026-11-27,removed,860674,Boots,Retailers - other,Merton,"",Exempt,,-0.1920459,51.4042375
+2026-11-27,removed,764040,Boots UK Ltd,Retailers - other,Merton,SW20 8ND,Exempt,,-0.2296615,51.4097187
+2026-11-27,removed,745110,Boots UK Ltd.,Retailers - other,Merton,SM4 5BE,Exempt,,-0.1940492,51.4027573
+2026-11-27,removed,836741,Building Bridges Ltd,Distributors/Transporters,Merton,SW19 2TJ,Exempt,,-0.1851145,51.4113937
+2026-11-27,removed,1038904,COSPHARM LTD,Retailers - other,Merton,SW17 9JQ,Exempt,,-0.1605703,51.4210676
+2026-11-27,removed,745129,Canons Leisure Centre,Retailers - other,Merton,CR4 4HD,Exempt,,-0.1630634,51.400495
+2026-11-27,removed,764036,Chemco Pharmacy,Retailers - other,Merton,"",Exempt,,-0.1942087,51.4197286
+2026-11-27,removed,1926606,Common Water,Distributors/Transporters,Merton,SW19 5PH,Exempt,,,
+2026-11-27,removed,764033,D PARRY PHARMACY,Retailers - other,Merton,SW19 8AA,Exempt,,-0.1990536,51.4346567
+2026-11-27,removed,764074,Day Lewis Pharmacy,Retailers - other,Merton,SM4 6RS,Exempt,,-0.1900261,51.3896814
+2026-11-27,removed,764070,Eagle Pharmacy,Retailers - other,Merton,SW16 4TR,Exempt,,-0.1364895,51.4041677
+2026-11-27,removed,1057422,FULLSTOP CATERING,Other catering premises,Merton,SW19 2RD,5,,-0.1835083,51.4128935
+2026-11-27,removed,764057,Fairgreen Pharmacy,Retailers - other,Merton,CR4 3NA,Exempt,,-0.1667,51.4029
+2026-11-27,removed,764051,Fairlight Chemist,Retailers - other,Merton,SW16 5HX,Exempt,,-0.140517,51.4107374
+2026-11-27,removed,1712469,Fettle Fields,School/college/university,Merton,SW20,Exempt,,,
+2026-11-27,removed,1945532,GET OVER IT SUPPLEMENTS LTD,Retailers - other,Merton,SW19,Exempt,,,
+2026-11-27,removed,1926610,Gudness,Retailers - other,Merton,SW20 0RN,Exempt,,-0.2473904,51.4161164
+2026-11-27,removed,2015166,Habibi Have It,Other catering premises,Merton,SW20,AwaitingInspection,,,
+2026-11-27,removed,1028490,Haria Pharmacy,Retailers - other,Merton,"",Exempt,,-0.24905214,51.41487347
+2026-11-27,removed,764038,Harland Chemist,Retailers - other,Merton,SM4 5RP,Exempt,,-0.1900318,51.3972817
+2026-11-27,removed,764046,Haydon's Pharmacy,Retailers - other,Merton,SW19 1AE,Exempt,,-0.1875344,51.4208221
+2026-11-27,removed,764044,Hilton Pharmacy,Retailers - other,Merton,SW20 9NQ,Exempt,,-0.2226914,51.3919129
+2026-11-27,removed,1252752,Hipcrate,Retailers - other,Merton,SW19 8UH,Exempt,,-0.1923866,51.431207
+2026-11-27,removed,1466417,Hobbycraft Trading Limited,Retailers - other,Merton,SW17 0BW,Exempt,,-0.1843957,51.430985
+2026-11-27,removed,1650714,Indian Take Away,Restaurant/Cafe/Canteen,Merton,SW19 1QD,5,,,
+2026-11-27,removed,1625227,Inessa Wellness,Importers/Exporters,Merton,SW19 7HP,Exempt,,-0.2005068,51.4343768
+2026-11-27,removed,1857992,JD.COM,Distributors/Transporters,Merton,CR4 4FG,Exempt,,-0.1636201,51.3937772
+2026-11-27,removed,1965752,JUBILEE LODGE,Other catering premises,Merton,SM4 5AD,Exempt,,-0.200612,51.3998547
+2026-11-27,removed,1620085,Jackietastethedifference,Restaurant/Cafe/Canteen,Merton,CR4 1RB,4,,-0.1330354,51.3998466
+2026-11-27,removed,706863,Jewson,Retailers - other,Merton,CR4 4HU,Exempt,,-0.1600211,51.3890543
+2026-11-27,removed,706870,Jewson,Retailers - other,Merton,SW19 8UH,Exempt,,-0.1923866,51.431207
+2026-11-27,removed,999498,Jhoots,Retailers - other,Merton,CR4 4DH,Exempt,,-0.1784551,51.3985466
+2026-11-27,removed,1811000,KITCHENDOC,Restaurant/Cafe/Canteen,Merton,SW19 8UG,AwaitingInspection,,-0.1911352,51.4323525
+2026-11-27,removed,764067,Kamsons Pharmacy,Retailers - other,Merton,CR4 3PR,Exempt,,-0.1816543,51.4073407
+2026-11-27,removed,1701657,Kervan Gida UK Ltd,Importers/Exporters,Merton,SW19 4JS,Exempt,,-0.2095236,51.4218773
+2026-11-27,removed,1735828,Korea Foods Co Ltd,Manufacturers/packers,Merton,CR4 2JA,Exempt,,-0.1614636,51.4094222
+2026-11-27,removed,1961730,Kyoto Grill Kitchen,Takeaway/sandwich shop,Merton,SW20 8JS,4,,-0.2158235,51.4088503
+2026-11-27,removed,1684223,Lasagna Workshop,Restaurant/Cafe/Canteen,Merton,SW19 8UG,5,,-0.1911352,51.4323525
+2026-11-27,removed,1926635,Lolo Investment Ltd,Retailers - other,Merton,CR4 3JN,Exempt,,-0.1641666,51.4165621
+2026-11-27,removed,849407,London Apron/Well & Wild,Manufacturers/packers,Merton,SW19 3EP,Exempt,,-0.1956073,51.4020888
+2026-11-27,removed,745125,Majestic Wine Warehouse Ltd,Retailers - other,Merton,SW19 1NE,Exempt,,-0.1981743,51.4188433
+2026-11-27,removed,1676939,McDonald's Restaurants,Restaurant/Cafe/Canteen,Merton,SW19 8UG,5,,-0.1911352,51.4323525
+2026-11-27,removed,764055,Medipharcy Pharmacy,Retailers - other,Merton,KT3 6JF,Exempt,,-0.2382079,51.3949585
+2026-11-27,removed,1538759,Merton Rugby Football Club Limited,Restaurant/Cafe/Canteen,Merton,SM4 6RE,Exempt,,-0.1938514,51.3908209
+2026-11-27,removed,1574085,Merton's Community Fridge,Retailers - other,Merton,SM4 5DX,Exempt,,-0.1962785,51.4012838
+2026-11-27,removed,1611545,Natural Fitness Food,Manufacturers/packers,Merton,CR4 3TD,Exempt,,-0.175845,51.4053666
+2026-11-27,removed,1294558,Nick's Thai Kitchen,Restaurant/Cafe/Canteen,Merton,SW19 1AY,5,,-0.1897147,51.4158698
+2026-11-27,removed,1926612,OXFAM,Retailers - other,Merton,SM4 5HT,Exempt,,-0.1930155,51.4025525
+2026-11-27,removed,779657,Oxfam,Retailers - other,Merton,SW19 1RE,Exempt,,-0.2037797,51.4201723
+2026-11-27,removed,745131,Ridgway Pharmacy,Retailers - other,Merton,"",Exempt,,-0.2194859,51.4214048
+2026-11-27,removed,764053,Rowlands Pharmacy,Retailers - other,Merton,SM4 6HY,Exempt,,-0.1862418,51.3977554
+2026-11-27,removed,1984764,Ruby Kitchen,Manufacturers/packers,Merton,SW8 5EL,AwaitingInspection,,-0.1325742,51.479311
+2026-11-27,removed,1833017,STRVLUE,Restaurant/Cafe/Canteen,Merton,SW17,Exempt,,,
+2026-11-27,removed,706865,SUTTON ASSOCIATES LTD.,Retailers - other,Merton,CR4 2JB,Exempt,,-0.1628692,51.4083309
+2026-11-27,removed,1768342,Shake Shack,Manufacturers/packers,Merton,SW19 8UG,5,,-0.1911352,51.4323525
+2026-11-27,removed,1466415,Slimming World,Retailers - other,Merton,SW19,Exempt,,,
+2026-11-27,removed,1488979,Slimming World,Retailers - other,Merton,CR4,Exempt,,,
+2026-11-27,removed,1684225,Solitaire UK Ltd,Manufacturers/packers,Merton,SW20 0FT,Exempt,,,
+2026-11-27,removed,801001,Superdrug,Retailers - other,Merton,SM4 5HT,Exempt,,-0.1937882,51.402286
+2026-11-27,removed,200055,T K Maxx,Retailers - other,Merton,SW19 1QD,Exempt,,-0.2032772,51.4195764
+2026-11-27,removed,764068,TK MAXX,Retailers - other,Merton,SW19 2TY,Exempt,,-0.1781042,51.4135312
+2026-11-27,removed,764069,Tele Chem Pharmacy,Retailers - other,Merton,"",Exempt,,-0.1445223,51.4003615
+2026-11-27,removed,1758678,The Pizza Pro Ltd,Restaurant/Cafe/Canteen,Merton,SW19 3JS,5,,-0.1992472,51.4079898
+2026-11-27,removed,801013,The Wimbledon Brewery / Wimbledon Tap,Manufacturers/packers,Merton,SW19 2PT,Exempt,,-0.1737474,51.4137429
+2026-11-27,removed,706862,Thomas James Dispensing Chemist,Retailers - other,Merton,SW19 8EF,Exempt,,-0.1969923,51.4388905
+2026-11-27,removed,1768340,Tiney To Ten,Caring Premises,Merton,SW20,5,,,
+2026-11-27,removed,703973,Trident Pharmacy,Retailers - other,Merton,"",Exempt,,-0.2295493,51.4106133
+2026-11-27,removed,1926609,Vitamunex,Retailers - other,Merton,CR4,Exempt,,,
+2026-11-27,removed,1666046,Yo To Go,Restaurant/Cafe/Canteen,Merton,KT3 4PJ,5,,-0.2403057,51.4023634
+2026-11-27,removed,1575122,Avocado and Lemon,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 3RR,3,,-0.3282721,51.4472295
+2026-11-27,removed,1574613,Best Kebab Hampton Hill LTD,Takeaway/sandwich shop,Richmond-Upon-Thames,TW12 1JW,4,,-0.3536772,51.4290921
+2026-11-27,removed,1574652,Black Salt Sheen,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,SW14 7DE,3,,-0.2739109,51.464082
+2026-11-27,removed,1729160,Blind Tiger,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 1NJ,5,,,
+2026-11-27,removed,1981457,Cassie Kins,Caring Premises,Richmond-Upon-Thames,TW2,AwaitingInspection,,,
+2026-11-27,removed,1574759,Greenacres Day Nursery School,Caring Premises,Richmond-Upon-Thames,TW12 1NJ,5,,-0.3563516,51.4267197
+2026-11-27,removed,1862670,Petal & Pastry,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW10,AwaitingInspection,,,
+2026-11-27,removed,1574143,Pret A Manger,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW9 1HY,5,,-0.3035163,51.4608931
+2026-11-27,removed,1574886,Shiuli,Restaurant/Cafe/Canteen,Richmond-Upon-Thames,TW1 4BN,5,,-0.3359737,51.4455856
+2026-11-27,removed,1574252,Supersave,Retailers - other,Richmond-Upon-Thames,SW14 8AG,4,,-0.2664265,51.4648838
+2026-11-27,removed,1704070,The Royal Oak,Pub/bar/nightclub,Richmond-Upon-Thames,TW1 3AB,5,,-0.3250118,51.4486217
+2026-11-27,removed,1574616,W H Smith,Retailers - other,Richmond-Upon-Thames,SW14 8AG,5,,-0.2670927,51.4648549
+2026-11-27,removed,1693323,W H Smith,Retailers - other,Richmond-Upon-Thames,TW9 2NA,5,,-0.3017165,51.4632321
+2026-11-27,removed,1574246,W H Smith,Retailers - other,Richmond-Upon-Thames,TW1 3SH,Exempt,,-0.3294995,51.4459341
+2026-11-27,removed,1805679,CASUAL LEOPARD,Other catering premises,Wandsworth,SW12 8QX,5,,,
+2026-11-27,removed,1688633,Freak Scene,Restaurant/Cafe/Canteen,Wandsworth,SW12 8QX,0,,-0.1521764,51.4446901
+2026-11-27,removed,1643212,Scooperb Tooting,Other catering premises,Wandsworth,SW17 0RR,3,,,
