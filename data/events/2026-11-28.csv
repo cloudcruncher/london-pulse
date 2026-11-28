@@ -1,0 +1,25 @@
+event_date,event,fhrsid,name,business_type,authority,postcode,old_rating,new_rating,lon,lat
+2026-11-28,rating_changed,2015024,Joshi's Brasserie,Restaurant/Cafe/Canteen,Barnet,NW11 6XP,AwaitingInspection,4,-0.199529,51.583726
+2026-11-28,rating_changed,2010958,DS Chicken Piri,Takeaway/sandwich shop,Bexley,DA8 1PP,AwaitingInspection,2,0.165868,51.483801
+2026-11-28,rating_changed,2013534,Brasileiro,Retailers - other,Bromley,SE20 7PF,AwaitingInspection,3,-0.0509752,51.4135225
+2026-11-28,rating_changed,357555,The Manor At Bickley,Hotel/bed & breakfast/guest house,Bromley,BR1 2LW,5,4,0.0590149,51.3966785
+2026-11-28,rating_changed,10014,Flame & Fried,Takeaway/sandwich shop,Croydon,CR0 1RB,5,4,-0.103110000491142,51.3736801147461
+2026-11-28,rating_changed,1941083,Maison De Bakery,Other catering premises,Croydon,CR0,AwaitingInspection,4,,
+2026-11-28,rating_changed,1722317,Saffron Indian Restaurant,Restaurant/Cafe/Canteen,Croydon,CR2 6EG,5,3,-0.097521997988224,51.3563232421875
+2026-11-28,rating_changed,1994438,Saffron D'or,Restaurant/Cafe/Canteen,Ealing,UB1 2QB,AwaitingInspection,3,-0.373612,51.527711
+2026-11-28,rating_changed,1495655,PizzaLuxe,Restaurant/Cafe/Canteen,Hackney,EC2A 2FA,5,2,,
+2026-11-28,rating_changed,1975295,Silky Brew Cart,Mobile caterer,Hillingdon,UB3,AwaitingInspection,4,,
+2026-11-28,rating_changed,926802,Ambar Fish Resh @ Best Foods Supermarket,Retailers - other,Hounslow,TW4 7HT,3,1,-0.3890971,51.4734848
+2026-11-28,rating_changed,783612,Ukai,Restaurant/Cafe/Canteen,Kensington and Chelsea,W11 1LL,5,4,-0.206449,51.517918
+2026-11-28,rating_changed,1952476,Brixton Cooks,Restaurant/Cafe/Canteen,Lambeth,SW9 8GL,AwaitingInspection,4,-0.1110633,51.4619236
+2026-11-28,rating_changed,1831576,Pizzaverse,Takeaway/sandwich shop,Lambeth,SW8 2JH,4,3,-0.131361,51.475156
+2026-11-28,rating_changed,484481,Quality Cafe,Restaurant/Cafe/Canteen,Lambeth,SW9 9SJ,3,1,-0.115729,51.46558
+2026-11-28,rating_changed,2009116,Rajan News,Retailers - other,Lambeth,SW9 8BA,AwaitingInspection,3,-0.116242997348309,51.4639320373535
+2026-11-28,rating_changed,1771511,Costcutter,Retailers - other,Lewisham,SE6 1UZ,3,1,-0.00043,51.438716
+2026-11-28,rating_changed,1910826,FLAVOUR CROSS,Other catering premises,Lewisham,SE8,AwaitingInspection,4,,
+2026-11-28,rating_changed,1965224,Greekos gyros,Takeaway/sandwich shop,Southwark,SE16 3JU,AwaitingInspection,4,-0.056388,51.488181
+2026-11-28,rating_changed,1150019,Upland cafe,Restaurant/Cafe/Canteen,Southwark,SE22 9EE,5,4,-0.070042,51.45749
+2026-11-28,rating_changed,726296,Premier Inn London City (Aldgate),Hotel/bed & breakfast/guest house,Tower Hamlets,E1 8PX,5,4,-0.0697508,51.5139597
+2026-11-28,rating_changed,87271,Prince Regent,Pub/bar/nightclub,Tower Hamlets,E14 7PR,3,4,-0.036572,51.514226
+2026-11-28,rating_changed,1756202,Dalton Lodge Care Home,Caring Premises,Waltham Forest,E17 3QY,3,4,0.0030318,51.5904537
+2026-11-28,rating_changed,411432,Flavors Of India,Restaurant/Cafe/Canteen,Westminster,W2 3HH,4,3,-0.1785303,51.5141169
